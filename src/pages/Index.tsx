@@ -17,6 +17,7 @@ import {
   skills,
   type AttributeName,
 } from "@/data/characterData";
+import { subAttributeMap } from "@/data/subAttributes";
 
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
@@ -34,6 +35,16 @@ const Index = () => {
         number
       >
   );
+
+  // Sub-attributes (initialized to main attribute values)
+  const [subAttributes, setSubAttributes] = useState<Record<string, number>>(() => {
+    const init: Record<string, number> = {};
+    subAttributeMap.forEach((def) => {
+      init[def.sub1] = 8;
+      init[def.sub2] = 8;
+    });
+    return init;
+  });
 
   // Character points
   const [selectedRace, setSelectedRace] = useState("Humano");
@@ -87,6 +98,10 @@ const Index = () => {
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
     setAttributes((prev) => ({ ...prev, [attr]: value }));
+  };
+
+  const handleSubAttributeChange = (subAttr: string, value: number) => {
+    setSubAttributes((prev) => ({ ...prev, [subAttr]: value }));
   };
 
   const handleAdvantageToggle = (name: string) => {
@@ -169,7 +184,9 @@ const Index = () => {
           <div className="lg:col-span-1 p-4 rounded-lg bg-card/80 border border-border">
             <AttributePanel
               attributes={attributes}
+              subAttributes={subAttributes}
               onChange={handleAttributeChange}
+              onSubChange={handleSubAttributeChange}
             />
           </div>
 
