@@ -17,7 +17,7 @@ import {
   skills,
   type AttributeName,
 } from "@/data/characterData";
-import { subAttributeMap, type SubAttributes } from "@/data/subAttributes";
+import { subAttributeMap } from "@/data/subAttributes";
 
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
