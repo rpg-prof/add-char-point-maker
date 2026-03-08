@@ -184,7 +184,9 @@ const Index = () => {
           <div className="lg:col-span-1 p-4 rounded-lg bg-card/80 border border-border">
             <AttributePanel
               attributes={attributes}
+              subAttributes={subAttributes}
               onChange={handleAttributeChange}
+              onSubChange={handleSubAttributeChange}
             />
           </div>
 
