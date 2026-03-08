@@ -36,6 +36,16 @@ const Index = () => {
       >
   );
 
+  // Sub-attributes (initialized to main attribute values)
+  const [subAttributes, setSubAttributes] = useState<Record<string, number>>(() => {
+    const init: Record<string, number> = {};
+    subAttributeMap.forEach((def) => {
+      init[def.sub1] = 8;
+      init[def.sub2] = 8;
+    });
+    return init;
+  });
+
   // Character points
   const [selectedRace, setSelectedRace] = useState("Humano");
   const [selectedClass, setSelectedClass] = useState("Sem Classe");
