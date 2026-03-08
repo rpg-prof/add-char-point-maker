@@ -100,6 +100,10 @@ const Index = () => {
     setAttributes((prev) => ({ ...prev, [attr]: value }));
   };
 
+  const handleSubAttributeChange = (subAttr: string, value: number) => {
+    setSubAttributes((prev) => ({ ...prev, [subAttr]: value }));
+  };
+
   const handleAdvantageToggle = (name: string) => {
     setSelectedAdvantages((prev) =>
       prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
