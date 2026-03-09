@@ -281,6 +281,7 @@ const Index = () => {
                   selectedSocialClass={selectedSocialClass}
                   attributes={attributes}
                   selectedAdvantages={selectedAdvantages}
+                  selectedRaceClassAdv={selectedRaceClassAdv}
                   selectedSkills={selectedSkills}
                   attributePointsSpent={attributePointsSpent}
                   characterPointsSpent={characterPointsSpent}
