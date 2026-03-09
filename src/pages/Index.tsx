@@ -18,6 +18,7 @@ import {
   type AttributeName,
 } from "@/data/characterData";
 import { subAttributeMap } from "@/data/subAttributes";
+import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
