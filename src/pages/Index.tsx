@@ -18,6 +18,7 @@ import {
   type AttributeName,
 } from "@/data/characterData";
 import { subAttributeMap } from "@/data/subAttributes";
+import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
@@ -51,6 +52,7 @@ const Index = () => {
   const [selectedClass, setSelectedClass] = useState("Sem Classe");
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
   const [selectedAdvantages, setSelectedAdvantages] = useState<string[]>([]);
+  const [selectedRaceClassAdv, setSelectedRaceClassAdv] = useState<string[]>([]);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
   // Calculate attribute points spent
@@ -75,6 +77,16 @@ const Index = () => {
       return sum + (item?.cost ?? 0);
     }, 0);
 
+    // Race/class-specific advantages cost
+    const rcAdvCost = selectedRaceClassAdv.reduce((sum, name) => {
+      const item = raceClassAdvantages.find((a) => a.name === name);
+      if (!item) return sum;
+      const matchesRace = item.applicableRaces?.includes(selectedRace);
+      const matchesClass = item.applicableClasses?.includes(selectedClass);
+      if (matchesRace || matchesClass) return sum + item.cost;
+      return sum + (item.costOthers ?? item.cost);
+    }, 0);
+
     const isClassSkill = (skillGroup: string) => {
       if (skillGroup === "Geral") return true;
       const classMap: Record<string, string[]> = {
@@ -93,8 +105,8 @@ const Index = () => {
       return sum + cost;
     }, 0);
 
-    return raceCost + classCost + socialCost + advCost + skillCost;
-  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedSkills]);
+    return raceCost + classCost + socialCost + advCost + rcAdvCost + skillCost;
+  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills]);
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
     setAttributes((prev) => ({ ...prev, [attr]: value }));
@@ -106,6 +118,12 @@ const Index = () => {
 
   const handleAdvantageToggle = (name: string) => {
     setSelectedAdvantages((prev) =>
+      prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
+    );
+  };
+
+  const handleRaceClassAdvToggle = (name: string) => {
+    setSelectedRaceClassAdv((prev) =>
       prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
     );
   };
@@ -239,6 +257,10 @@ const Index = () => {
                 <AdvantagesPanel
                   selected={selectedAdvantages}
                   onToggle={handleAdvantageToggle}
+                  selectedRaceClassAdvantages={selectedRaceClassAdv}
+                  onRaceClassToggle={handleRaceClassAdvToggle}
+                  selectedRace={selectedRace}
+                  selectedClass={selectedClass}
                 />
               </TabsContent>
 
@@ -259,6 +281,7 @@ const Index = () => {
                   selectedSocialClass={selectedSocialClass}
                   attributes={attributes}
                   selectedAdvantages={selectedAdvantages}
+                  selectedRaceClassAdv={selectedRaceClassAdv}
                   selectedSkills={selectedSkills}
                   attributePointsSpent={attributePointsSpent}
                   characterPointsSpent={characterPointsSpent}
@@ -281,6 +304,7 @@ interface SummaryPanelProps {
   selectedSocialClass: string;
   attributes: Record<AttributeName, number>;
   selectedAdvantages: string[];
+  selectedRaceClassAdv: string[];
   selectedSkills: string[];
   attributePointsSpent: number;
   characterPointsSpent: number;
@@ -294,6 +318,7 @@ const SummaryPanel = ({
   selectedSocialClass,
   attributes,
   selectedAdvantages,
+  selectedRaceClassAdv,
   selectedSkills,
   attributePointsSpent,
   characterPointsSpent,
@@ -364,7 +389,37 @@ const SummaryPanel = ({
         </div>
       )}
 
-      {/* Skills */}
+      {/* Race/Class Advantages */}
+      {selectedRaceClassAdv.length > 0 && (
+        <div className="rounded-lg border border-border p-3">
+          <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
+            Vantagens por Raça/Classe
+          </h4>
+          <div className="flex flex-wrap gap-1.5">
+            {selectedRaceClassAdv.map((name) => {
+              const item = raceClassAdvantages.find((a) => a.name === name);
+              const isAdv = item?.type === "advantage";
+              const matchesRace = item?.applicableRaces?.includes(selectedRace);
+              const matchesClass = item?.applicableClasses?.includes(selectedClass);
+              const cost = (matchesRace || matchesClass) ? item?.cost : (item?.costOthers ?? item?.cost);
+              return (
+                <span
+                  key={name}
+                  className={`px-2 py-0.5 rounded text-xs font-body border ${
+                    isAdv
+                      ? "bg-gold/10 border-gold/30 text-gold-dark"
+                      : "bg-blood/10 border-blood/30 text-blood"
+                  }`}
+                >
+                  {name} ({cost})
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+
       {selectedSkills.length > 0 && (
         <div className="rounded-lg border border-border p-3">
           <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
