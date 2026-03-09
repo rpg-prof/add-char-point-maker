@@ -52,6 +52,7 @@ const Index = () => {
   const [selectedClass, setSelectedClass] = useState("Sem Classe");
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
   const [selectedAdvantages, setSelectedAdvantages] = useState<string[]>([]);
+  const [selectedRaceClassAdv, setSelectedRaceClassAdv] = useState<string[]>([]);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
 
   // Calculate attribute points spent
