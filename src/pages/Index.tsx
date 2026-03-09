@@ -389,7 +389,37 @@ const SummaryPanel = ({
         </div>
       )}
 
-      {/* Skills */}
+      {/* Race/Class Advantages */}
+      {selectedRaceClassAdv.length > 0 && (
+        <div className="rounded-lg border border-border p-3">
+          <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
+            Vantagens por Raça/Classe
+          </h4>
+          <div className="flex flex-wrap gap-1.5">
+            {selectedRaceClassAdv.map((name) => {
+              const item = raceClassAdvantages.find((a) => a.name === name);
+              const isAdv = item?.type === "advantage";
+              const matchesRace = item?.applicableRaces?.includes(selectedRace);
+              const matchesClass = item?.applicableClasses?.includes(selectedClass);
+              const cost = (matchesRace || matchesClass) ? item?.cost : (item?.costOthers ?? item?.cost);
+              return (
+                <span
+                  key={name}
+                  className={`px-2 py-0.5 rounded text-xs font-body border ${
+                    isAdv
+                      ? "bg-gold/10 border-gold/30 text-gold-dark"
+                      : "bg-blood/10 border-blood/30 text-blood"
+                  }`}
+                >
+                  {name} ({cost})
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+
       {selectedSkills.length > 0 && (
         <div className="rounded-lg border border-border p-3">
           <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
