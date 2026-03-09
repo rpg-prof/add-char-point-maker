@@ -122,6 +122,12 @@ const Index = () => {
     );
   };
 
+  const handleRaceClassAdvToggle = (name: string) => {
+    setSelectedRaceClassAdv((prev) =>
+      prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
+    );
+  };
+
   const handleSkillToggle = (name: string) => {
     setSelectedSkills((prev) =>
       prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
