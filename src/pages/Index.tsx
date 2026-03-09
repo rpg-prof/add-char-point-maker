@@ -304,6 +304,7 @@ interface SummaryPanelProps {
   selectedSocialClass: string;
   attributes: Record<AttributeName, number>;
   selectedAdvantages: string[];
+  selectedRaceClassAdv: string[];
   selectedSkills: string[];
   attributePointsSpent: number;
   characterPointsSpent: number;
@@ -317,6 +318,7 @@ const SummaryPanel = ({
   selectedSocialClass,
   attributes,
   selectedAdvantages,
+  selectedRaceClassAdv,
   selectedSkills,
   attributePointsSpent,
   characterPointsSpent,
