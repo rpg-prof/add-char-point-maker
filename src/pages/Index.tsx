@@ -77,6 +77,16 @@ const Index = () => {
       return sum + (item?.cost ?? 0);
     }, 0);
 
+    // Race/class-specific advantages cost
+    const rcAdvCost = selectedRaceClassAdv.reduce((sum, name) => {
+      const item = raceClassAdvantages.find((a) => a.name === name);
+      if (!item) return sum;
+      const matchesRace = item.applicableRaces?.includes(selectedRace);
+      const matchesClass = item.applicableClasses?.includes(selectedClass);
+      if (matchesRace || matchesClass) return sum + item.cost;
+      return sum + (item.costOthers ?? item.cost);
+    }, 0);
+
     const isClassSkill = (skillGroup: string) => {
       if (skillGroup === "Geral") return true;
       const classMap: Record<string, string[]> = {
@@ -95,8 +105,8 @@ const Index = () => {
       return sum + cost;
     }, 0);
 
-    return raceCost + classCost + socialCost + advCost + skillCost;
-  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedSkills]);
+    return raceCost + classCost + socialCost + advCost + rcAdvCost + skillCost;
+  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills]);
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
     setAttributes((prev) => ({ ...prev, [attr]: value }));
