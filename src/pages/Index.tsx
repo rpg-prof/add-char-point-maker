@@ -257,6 +257,10 @@ const Index = () => {
                 <AdvantagesPanel
                   selected={selectedAdvantages}
                   onToggle={handleAdvantageToggle}
+                  selectedRaceClassAdvantages={selectedRaceClassAdv}
+                  onRaceClassToggle={handleRaceClassAdvToggle}
+                  selectedRace={selectedRace}
+                  selectedClass={selectedClass}
                 />
               </TabsContent>
 
