@@ -3,6 +3,7 @@ import { useState } from "react";
 import { generalAdvantages, generalDisadvantages, type AdvantageOption } from "@/data/characterData";
 import { raceClassAdvantages, categoryLabels, type RaceClassAdvantage } from "@/data/raceClassAdvantages";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface AdvantagesPanelProps {
   selected: string[];
