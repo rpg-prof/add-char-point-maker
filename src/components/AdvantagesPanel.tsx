@@ -93,43 +93,48 @@ const AdvantagesPanel = ({
     if (!available) return null;
 
     return (
-      <button
-        key={item.name}
-        onClick={() => onRaceClassToggle(item.name, cost)}
-        title={item.description}
-        className={`flex items-center gap-2 px-2.5 py-1.5 rounded text-sm font-body border transition-all text-left ${
-          isSelected
-            ? isAdv
-              ? "bg-gold/20 border-gold text-foreground"
-              : "bg-blood/15 border-blood/50 text-foreground"
-            : !isNative
-            ? "bg-card/20 border-border/50 hover:bg-card/60 text-muted-foreground/70"
-            : "bg-card/40 border-border hover:bg-card/80 text-muted-foreground"
-        }`}
-      >
-        <span
-          className={`w-4 h-4 rounded-sm border flex items-center justify-center flex-shrink-0 ${
-            isSelected
-              ? isAdv
-                ? "bg-gold border-gold"
-                : "bg-blood border-blood"
-              : "border-border"
-          }`}
-        >
-          {isSelected && <Check className="w-3 h-3 text-primary-foreground" />}
-        </span>
-        <span className="flex-1 truncate text-xs">{item.name}</span>
-        {!isNative && (
-          <span className="text-[10px] text-muted-foreground/50 font-display">2x</span>
-        )}
-        <span
-          className={`text-xs font-display ${
-            cost > 0 ? "text-gold-dark" : "text-blood"
-          }`}
-        >
-          {cost > 0 ? `+${cost}` : cost}
-        </span>
-      </button>
+      <Tooltip key={item.name}>
+        <TooltipTrigger asChild>
+          <button
+            onClick={() => onRaceClassToggle(item.name, cost)}
+            className={`flex items-center gap-2 px-2.5 py-1.5 rounded text-sm font-body border transition-all text-left ${
+              isSelected
+                ? isAdv
+                  ? "bg-gold/20 border-gold text-foreground"
+                  : "bg-blood/15 border-blood/50 text-foreground"
+                : !isNative
+                ? "bg-card/20 border-border/50 hover:bg-card/60 text-muted-foreground/70"
+                : "bg-card/40 border-border hover:bg-card/80 text-muted-foreground"
+            }`}
+          >
+            <span
+              className={`w-4 h-4 rounded-sm border flex items-center justify-center flex-shrink-0 ${
+                isSelected
+                  ? isAdv
+                    ? "bg-gold border-gold"
+                    : "bg-blood border-blood"
+                  : "border-border"
+              }`}
+            >
+              {isSelected && <Check className="w-3 h-3 text-primary-foreground" />}
+            </span>
+            <span className="flex-1 truncate text-xs">{item.name}</span>
+            {!isNative && (
+              <span className="text-[10px] text-muted-foreground/50 font-display">2x</span>
+            )}
+            <span
+              className={`text-xs font-display ${
+                cost > 0 ? "text-gold-dark" : "text-blood"
+              }`}
+            >
+              {cost > 0 ? `+${cost}` : cost}
+            </span>
+          </button>
+        </TooltipTrigger>
+        <TooltipContent side="top" className="max-w-xs text-xs font-body">
+          {item.description}
+        </TooltipContent>
+      </Tooltip>
     );
   };
 
