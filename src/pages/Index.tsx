@@ -28,10 +28,10 @@ const Index = () => {
   const [charName, setCharName] = useState("");
   const [playerName, setPlayerName] = useState("");
 
-  // Attributes (default 8)
+  // Attributes (default 10)
   const [attributes, setAttributes] = useState<Record<AttributeName, number>>(
     () =>
-      Object.fromEntries(attributeNames.map((a) => [a, 8])) as Record<
+      Object.fromEntries(attributeNames.map((a) => [a, 10])) as Record<
         AttributeName,
         number
       >
