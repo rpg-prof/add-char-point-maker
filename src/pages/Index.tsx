@@ -28,10 +28,10 @@ const Index = () => {
   const [charName, setCharName] = useState("");
   const [playerName, setPlayerName] = useState("");
 
-  // Attributes (default 8)
+  // Attributes (default 10)
   const [attributes, setAttributes] = useState<Record<AttributeName, number>>(
     () =>
-      Object.fromEntries(attributeNames.map((a) => [a, 8])) as Record<
+      Object.fromEntries(attributeNames.map((a) => [a, 10])) as Record<
         AttributeName,
         number
       >
@@ -41,8 +41,8 @@ const Index = () => {
   const [subAttributes, setSubAttributes] = useState<Record<string, number>>(() => {
     const init: Record<string, number> = {};
     subAttributeMap.forEach((def) => {
-      init[def.sub1] = 8;
-      init[def.sub2] = 8;
+      init[def.sub1] = 10;
+      init[def.sub2] = 10;
     });
     return init;
   });
@@ -59,7 +59,7 @@ const Index = () => {
   const attributePointsSpent = useMemo(
     () =>
       Object.values(attributes).reduce(
-        (sum, val) => sum + (attributeCosts[val] ?? 0),
+        (sum, val) => sum + val,
         0
       ),
     [attributes]

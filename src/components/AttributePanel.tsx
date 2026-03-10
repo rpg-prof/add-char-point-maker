@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Minus, Plus, ChevronDown, ChevronUp } from "lucide-react";
-import { attributeNames, attributeCosts, type AttributeName } from "@/data/characterData";
+import { attributeNames, type AttributeName } from "@/data/characterData";
 import {
   subAttributeMap,
   getSubAttributeBonuses,
@@ -20,7 +20,7 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
   const [expandedAttr, setExpandedAttr] = useState<string | null>(null);
 
   const totalCost = Object.entries(attributes).reduce(
-    (sum, [, val]) => sum + (attributeCosts[val] ?? 0),
+    (sum, [, val]) => sum + val,
     0
   );
 
@@ -92,7 +92,7 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
       <div className="grid gap-2">
         {attributeNames.map((attr) => {
           const value = attributes[attr];
-          const cost = attributeCosts[value] ?? 0;
+          const cost = value;
           const def = subAttributeMap.find((d) => d.main === attr)!;
           const isExpanded = expandedAttr === attr;
 
