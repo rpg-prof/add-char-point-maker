@@ -142,6 +142,7 @@ const AdvantagesPanel = ({
   const categories = ["ofensivo", "defensivo", "resistencia", "magica", "outros", "aversao", "poder", "antecedente"] as const;
 
   return (
+    <TooltipProvider delayDuration={200}>
     <div className="space-y-4">
       {/* General Advantages */}
       <div>
