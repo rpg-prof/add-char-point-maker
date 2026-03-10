@@ -323,6 +323,17 @@ const Index = () => {
                 />
               </TabsContent>
 
+              <TabsContent value="weapons" className="mt-4 max-h-[60vh] overflow-y-auto pr-2">
+                <WeaponProficiencyPanel
+                  selectedWeapons={selectedWeapons}
+                  selectedGroups={selectedWeaponGroups}
+                  selectedShields={selectedShields}
+                  onWeaponToggle={handleWeaponToggle}
+                  onGroupToggle={handleWeaponGroupToggle}
+                  onShieldToggle={handleShieldToggle}
+                />
+              </TabsContent>
+
               <TabsContent value="summary" className="mt-4">
                 <SummaryPanel
                   charName={charName}
