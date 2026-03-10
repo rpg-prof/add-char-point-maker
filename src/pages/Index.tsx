@@ -41,8 +41,8 @@ const Index = () => {
   const [subAttributes, setSubAttributes] = useState<Record<string, number>>(() => {
     const init: Record<string, number> = {};
     subAttributeMap.forEach((def) => {
-      init[def.sub1] = 8;
-      init[def.sub2] = 8;
+      init[def.sub1] = 10;
+      init[def.sub2] = 10;
     });
     return init;
   });
