@@ -92,7 +92,7 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
       <div className="grid gap-2">
         {attributeNames.map((attr) => {
           const value = attributes[attr];
-          const cost = attributeCosts[value] ?? 0;
+          const cost = value;
           const def = subAttributeMap.find((d) => d.main === attr)!;
           const isExpanded = expandedAttr === attr;
 

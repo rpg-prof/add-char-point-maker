@@ -59,7 +59,7 @@ const Index = () => {
   const attributePointsSpent = useMemo(
     () =>
       Object.values(attributes).reduce(
-        (sum, val) => sum + (attributeCosts[val] ?? 0),
+        (sum, val) => sum + val,
         0
       ),
     [attributes]
