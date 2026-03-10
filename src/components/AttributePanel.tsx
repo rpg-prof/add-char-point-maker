@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Minus, Plus, ChevronDown, ChevronUp } from "lucide-react";
-import { attributeNames, attributeCosts, type AttributeName } from "@/data/characterData";
+import { attributeNames, type AttributeName } from "@/data/characterData";
 import {
   subAttributeMap,
   getSubAttributeBonuses,
