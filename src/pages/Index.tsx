@@ -1,11 +1,12 @@
 import { useState, useMemo } from "react";
-import { Shield, Swords, Scroll, BookOpen, User } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
 import RaceClassPanel from "@/components/RaceClassPanel";
 import AdvantagesPanel from "@/components/AdvantagesPanel";
 import SkillsPanel from "@/components/SkillsPanel";
+import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import {
   attributeCosts,
   attributeNames,
@@ -17,6 +18,7 @@ import {
   skills,
   type AttributeName,
 } from "@/data/characterData";
+import { weaponGroups, shieldProficiencies } from "@/data/weaponProficiencies";
 import { subAttributeMap } from "@/data/subAttributes";
 import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 
@@ -54,6 +56,9 @@ const Index = () => {
   const [selectedAdvantages, setSelectedAdvantages] = useState<string[]>([]);
   const [selectedRaceClassAdv, setSelectedRaceClassAdv] = useState<string[]>([]);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
+  const [selectedWeapons, setSelectedWeapons] = useState<string[]>([]);
+  const [selectedWeaponGroups, setSelectedWeaponGroups] = useState<string[]>([]);
+  const [selectedShields, setSelectedShields] = useState<string[]>([]);
 
   // Calculate attribute points spent
   const attributePointsSpent = useMemo(
@@ -105,8 +110,29 @@ const Index = () => {
       return sum + cost;
     }, 0);
 
-    return raceCost + classCost + socialCost + advCost + rcAdvCost + skillCost;
-  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills]);
+    // Weapon proficiency costs
+    const weaponGroupCost = selectedWeaponGroups.reduce((sum, groupName) => {
+      const group = weaponGroups.find((g) => g.name === groupName);
+      return sum + (group?.costGroup ?? 0);
+    }, 0);
+
+    const weaponIndividualCost = selectedWeapons.reduce((sum, weaponKey) => {
+      const [groupName] = weaponKey.split("::");
+      // Skip if the whole group is already selected
+      if (selectedWeaponGroups.includes(groupName)) return sum;
+      const group = weaponGroups.find((g) => g.name === groupName);
+      return sum + (group?.costPerWeapon ?? 0);
+    }, 0);
+
+    const shieldCost = selectedShields.reduce((sum, name) => {
+      // If "Todos os Escudos" is selected, only count that
+      if (selectedShields.includes("Todos os Escudos") && name !== "Todos os Escudos") return sum;
+      const shield = shieldProficiencies.find((s) => s.name === name);
+      return sum + (shield?.cost ?? 0);
+    }, 0);
+
+    return raceCost + classCost + socialCost + advCost + rcAdvCost + skillCost + weaponGroupCost + weaponIndividualCost + shieldCost;
+  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields]);
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
     setAttributes((prev) => ({ ...prev, [attr]: value }));
@@ -131,6 +157,24 @@ const Index = () => {
   const handleSkillToggle = (name: string) => {
     setSelectedSkills((prev) =>
       prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
+    );
+  };
+
+  const handleWeaponToggle = (weaponKey: string) => {
+    setSelectedWeapons((prev) =>
+      prev.includes(weaponKey) ? prev.filter((n) => n !== weaponKey) : [...prev, weaponKey]
+    );
+  };
+
+  const handleWeaponGroupToggle = (groupName: string) => {
+    setSelectedWeaponGroups((prev) =>
+      prev.includes(groupName) ? prev.filter((n) => n !== groupName) : [...prev, groupName]
+    );
+  };
+
+  const handleShieldToggle = (shieldName: string) => {
+    setSelectedShields((prev) =>
+      prev.includes(shieldName) ? prev.filter((n) => n !== shieldName) : [...prev, shieldName]
     );
   };
 
@@ -211,7 +255,7 @@ const Index = () => {
           {/* Character Points - Right Column */}
           <div className="lg:col-span-2 p-4 rounded-lg bg-card/80 border border-border">
             <Tabs defaultValue="race" className="w-full">
-              <TabsList className="w-full grid grid-cols-4 bg-parchment-dark/10 border border-border rounded-lg h-auto p-1">
+              <TabsList className="w-full grid grid-cols-5 bg-parchment-dark/10 border border-border rounded-lg h-auto p-1">
                 <TabsTrigger
                   value="race"
                   className="font-display text-xs tracking-wider data-[state=active]:bg-gold/20 data-[state=active]:text-foreground data-[state=active]:border-gold py-2 rounded border border-transparent"
@@ -232,6 +276,13 @@ const Index = () => {
                 >
                   <BookOpen className="w-3.5 h-3.5 mr-1.5 hidden sm:inline" />
                   Perícias
+                </TabsTrigger>
+                <TabsTrigger
+                  value="weapons"
+                  className="font-display text-xs tracking-wider data-[state=active]:bg-gold/20 data-[state=active]:text-foreground data-[state=active]:border-gold py-2 rounded border border-transparent"
+                >
+                  <Crosshair className="w-3.5 h-3.5 mr-1.5 hidden sm:inline" />
+                  Armas
                 </TabsTrigger>
                 <TabsTrigger
                   value="summary"
@@ -269,6 +320,17 @@ const Index = () => {
                   selected={selectedSkills}
                   onToggle={handleSkillToggle}
                   characterClass={selectedClass}
+                />
+              </TabsContent>
+
+              <TabsContent value="weapons" className="mt-4 max-h-[60vh] overflow-y-auto pr-2">
+                <WeaponProficiencyPanel
+                  selectedWeapons={selectedWeapons}
+                  selectedGroups={selectedWeaponGroups}
+                  selectedShields={selectedShields}
+                  onWeaponToggle={handleWeaponToggle}
+                  onGroupToggle={handleWeaponGroupToggle}
+                  onShieldToggle={handleShieldToggle}
                 />
               </TabsContent>
 
