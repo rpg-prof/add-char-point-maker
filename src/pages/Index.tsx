@@ -110,8 +110,29 @@ const Index = () => {
       return sum + cost;
     }, 0);
 
-    return raceCost + classCost + socialCost + advCost + rcAdvCost + skillCost;
-  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills]);
+    // Weapon proficiency costs
+    const weaponGroupCost = selectedWeaponGroups.reduce((sum, groupName) => {
+      const group = weaponGroups.find((g) => g.name === groupName);
+      return sum + (group?.costGroup ?? 0);
+    }, 0);
+
+    const weaponIndividualCost = selectedWeapons.reduce((sum, weaponKey) => {
+      const [groupName] = weaponKey.split("::");
+      // Skip if the whole group is already selected
+      if (selectedWeaponGroups.includes(groupName)) return sum;
+      const group = weaponGroups.find((g) => g.name === groupName);
+      return sum + (group?.costPerWeapon ?? 0);
+    }, 0);
+
+    const shieldCost = selectedShields.reduce((sum, name) => {
+      // If "Todos os Escudos" is selected, only count that
+      if (selectedShields.includes("Todos os Escudos") && name !== "Todos os Escudos") return sum;
+      const shield = shieldProficiencies.find((s) => s.name === name);
+      return sum + (shield?.cost ?? 0);
+    }, 0);
+
+    return raceCost + classCost + socialCost + advCost + rcAdvCost + skillCost + weaponGroupCost + weaponIndividualCost + shieldCost;
+  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields]);
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
     setAttributes((prev) => ({ ...prev, [attr]: value }));
