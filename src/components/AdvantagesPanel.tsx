@@ -217,6 +217,7 @@ const AdvantagesPanel = ({
         </div>
       </div>
     </div>
+    </TooltipProvider>
   );
 };
 
