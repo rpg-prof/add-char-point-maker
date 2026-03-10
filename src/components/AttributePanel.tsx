@@ -20,7 +20,7 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
   const [expandedAttr, setExpandedAttr] = useState<string | null>(null);
 
   const totalCost = Object.entries(attributes).reduce(
-    (sum, [, val]) => sum + (attributeCosts[val] ?? 0),
+    (sum, [, val]) => sum + val,
     0
   );
 
