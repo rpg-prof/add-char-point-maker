@@ -255,7 +255,7 @@ const Index = () => {
           {/* Character Points - Right Column */}
           <div className="lg:col-span-2 p-4 rounded-lg bg-card/80 border border-border">
             <Tabs defaultValue="race" className="w-full">
-              <TabsList className="w-full grid grid-cols-4 bg-parchment-dark/10 border border-border rounded-lg h-auto p-1">
+              <TabsList className="w-full grid grid-cols-5 bg-parchment-dark/10 border border-border rounded-lg h-auto p-1">
                 <TabsTrigger
                   value="race"
                   className="font-display text-xs tracking-wider data-[state=active]:bg-gold/20 data-[state=active]:text-foreground data-[state=active]:border-gold py-2 rounded border border-transparent"
@@ -276,6 +276,13 @@ const Index = () => {
                 >
                   <BookOpen className="w-3.5 h-3.5 mr-1.5 hidden sm:inline" />
                   Perícias
+                </TabsTrigger>
+                <TabsTrigger
+                  value="weapons"
+                  className="font-display text-xs tracking-wider data-[state=active]:bg-gold/20 data-[state=active]:text-foreground data-[state=active]:border-gold py-2 rounded border border-transparent"
+                >
+                  <Crosshair className="w-3.5 h-3.5 mr-1.5 hidden sm:inline" />
+                  Armas
                 </TabsTrigger>
                 <TabsTrigger
                   value="summary"
