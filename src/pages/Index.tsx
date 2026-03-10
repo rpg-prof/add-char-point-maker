@@ -1,11 +1,12 @@
 import { useState, useMemo } from "react";
-import { Shield, Swords, Scroll, BookOpen, User } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
 import RaceClassPanel from "@/components/RaceClassPanel";
 import AdvantagesPanel from "@/components/AdvantagesPanel";
 import SkillsPanel from "@/components/SkillsPanel";
+import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import {
   attributeCosts,
   attributeNames,
@@ -17,6 +18,7 @@ import {
   skills,
   type AttributeName,
 } from "@/data/characterData";
+import { weaponGroups, shieldProficiencies } from "@/data/weaponProficiencies";
 import { subAttributeMap } from "@/data/subAttributes";
 import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 
