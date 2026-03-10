@@ -160,6 +160,24 @@ const Index = () => {
     );
   };
 
+  const handleWeaponToggle = (weaponKey: string) => {
+    setSelectedWeapons((prev) =>
+      prev.includes(weaponKey) ? prev.filter((n) => n !== weaponKey) : [...prev, weaponKey]
+    );
+  };
+
+  const handleWeaponGroupToggle = (groupName: string) => {
+    setSelectedWeaponGroups((prev) =>
+      prev.includes(groupName) ? prev.filter((n) => n !== groupName) : [...prev, groupName]
+    );
+  };
+
+  const handleShieldToggle = (shieldName: string) => {
+    setSelectedShields((prev) =>
+      prev.includes(shieldName) ? prev.filter((n) => n !== shieldName) : [...prev, shieldName]
+    );
+  };
+
   return (
     <div className="min-h-screen parchment-bg">
       {/* Header */}
