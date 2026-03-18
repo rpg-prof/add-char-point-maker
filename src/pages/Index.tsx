@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, HelpCircle, ChevronRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import PointTracker from "@/components/PointTracker";
