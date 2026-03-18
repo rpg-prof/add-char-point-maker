@@ -2,6 +2,13 @@ import { useState, useMemo, useRef, useCallback } from "react";
 import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, HelpCircle, ChevronRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
 import RaceClassPanel from "@/components/RaceClassPanel";
