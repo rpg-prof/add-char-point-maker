@@ -105,16 +105,15 @@ const Index = () => {
     }, 0);
 
     const weaponCost = selectedWeapons.reduce((sum, weaponKey) => {
-      const [groupName, weaponName] = weaponKey.split("::");
+      const [groupName] = weaponKey.split("::");
       if (selectedWeaponGroups.includes(groupName)) return sum;
       const group = weaponGroups.find((g) => g.name === groupName);
-      const weapon = group?.weapons.find((w) => w.name === weaponName);
-      return sum + (weapon?.individualCost ?? 0);
+      return sum + (group?.costPerWeapon ?? 0);
     }, 0);
 
     const groupCost = selectedWeaponGroups.reduce((sum, groupName) => {
       const group = weaponGroups.find((g) => g.name === groupName);
-      return sum + (group?.groupCost ?? 0);
+      return sum + (group?.costGroup ?? 0);
     }, 0);
 
     const shieldCost = selectedShields.reduce((sum, name) => {
