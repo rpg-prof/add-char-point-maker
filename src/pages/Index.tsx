@@ -230,15 +230,44 @@ const Index = () => {
       {/* Header */}
       <header className="dark-panel border-b border-gold/30">
         <div className="container max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center gap-3">
-            <Shield className="w-8 h-8 text-gold" />
-            <div>
-              <h1 className="font-display text-xl md:text-2xl tracking-widest text-parchment">
-                AD&D Ficha de Pontos
-              </h1>
-              <p className="text-sm text-parchment/60 font-body">
-                Sistema de Pontos por Personagem v0.7
-              </p>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Shield className="w-8 h-8 text-gold" />
+              <div>
+                <h1 className="font-display text-xl md:text-2xl tracking-widest text-parchment">
+                  AD&D Ficha de Pontos
+                </h1>
+                <p className="text-sm text-parchment/60 font-body">
+                  Sistema de Pontos por Personagem v0.7
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept=".json"
+                onChange={handleLoad}
+                className="hidden"
+              />
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => fileInputRef.current?.click()}
+                className="border-gold/40 text-parchment hover:bg-gold/20"
+              >
+                <Upload className="w-4 h-4 mr-1" />
+                Carregar
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleSave}
+                className="border-gold/40 text-parchment hover:bg-gold/20"
+              >
+                <Save className="w-4 h-4 mr-1" />
+                Salvar
+              </Button>
             </div>
           </div>
         </div>
