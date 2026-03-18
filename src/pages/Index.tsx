@@ -1,6 +1,7 @@
-import { useState, useMemo } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair } from "lucide-react";
+import { useState, useMemo, useRef, useCallback } from "react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
 import RaceClassPanel from "@/components/RaceClassPanel";
@@ -178,20 +179,95 @@ const Index = () => {
     );
   };
 
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleSave = useCallback(() => {
+    const data = {
+      charName, playerName, attributes, subAttributes,
+      selectedRace, selectedClass, selectedSocialClass,
+      selectedAdvantages, selectedRaceClassAdv, selectedSkills,
+      selectedWeapons, selectedWeaponGroups, selectedShields,
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${charName || "personagem"}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields]);
+
+  const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const data = JSON.parse(ev.target?.result as string);
+        if (data.charName !== undefined) setCharName(data.charName);
+        if (data.playerName !== undefined) setPlayerName(data.playerName);
+        if (data.attributes) setAttributes(data.attributes);
+        if (data.subAttributes) setSubAttributes(data.subAttributes);
+        if (data.selectedRace) setSelectedRace(data.selectedRace);
+        if (data.selectedClass) setSelectedClass(data.selectedClass);
+        if (data.selectedSocialClass) setSelectedSocialClass(data.selectedSocialClass);
+        if (data.selectedAdvantages) setSelectedAdvantages(data.selectedAdvantages);
+        if (data.selectedRaceClassAdv) setSelectedRaceClassAdv(data.selectedRaceClassAdv);
+        if (data.selectedSkills) setSelectedSkills(data.selectedSkills);
+        if (data.selectedWeapons) setSelectedWeapons(data.selectedWeapons);
+        if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
+        if (data.selectedShields) setSelectedShields(data.selectedShields);
+      } catch {
+        alert("Arquivo JSON inválido.");
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  }, []);
+
   return (
     <div className="min-h-screen parchment-bg">
       {/* Header */}
       <header className="dark-panel border-b border-gold/30">
         <div className="container max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center gap-3">
-            <Shield className="w-8 h-8 text-gold" />
-            <div>
-              <h1 className="font-display text-xl md:text-2xl tracking-widest text-parchment">
-                AD&D Ficha de Pontos
-              </h1>
-              <p className="text-sm text-parchment/60 font-body">
-                Sistema de Pontos por Personagem v0.7
-              </p>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <Shield className="w-8 h-8 text-gold" />
+              <div>
+                <h1 className="font-display text-xl md:text-2xl tracking-widest text-parchment">
+                  AD&D Ficha de Pontos
+                </h1>
+                <p className="text-sm text-parchment/60 font-body">
+                  Sistema de Pontos por Personagem v0.7
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept=".json"
+                onChange={handleLoad}
+                className="hidden"
+              />
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => fileInputRef.current?.click()}
+                className="border-gold/40 text-parchment hover:bg-gold/20"
+              >
+                <Upload className="w-4 h-4 mr-1" />
+                Carregar
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleSave}
+                className="border-gold/40 text-parchment hover:bg-gold/20"
+              >
+                <Save className="w-4 h-4 mr-1" />
+                Salvar
+              </Button>
             </div>
           </div>
         </div>
