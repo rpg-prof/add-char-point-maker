@@ -1,7 +1,14 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, HelpCircle, ChevronRight } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
 import RaceClassPanel from "@/components/RaceClassPanel";
@@ -250,20 +257,58 @@ const Index = () => {
                 onChange={handleLoad}
                 className="hidden"
               />
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button
+                    size="sm"
+                    className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
+                  >
+                    <HelpCircle className="w-4 h-4 mr-1" />
+                    Guia
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="parchment-bg border-gold/40 max-w-lg max-h-[80vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="font-display text-lg text-foreground tracking-wider flex items-center gap-2">
+                      <Scroll className="w-5 h-5 text-gold" />
+                      Passo a Passo — Criação de Personagem
+                    </DialogTitle>
+                  </DialogHeader>
+                  <ol className="space-y-4 font-body text-sm text-foreground/90">
+                    {[
+                      { step: "1", title: "Distribua os Pontos de Atributos", desc: "Você tem 75 pontos para distribuir entre Força, Inteligência, Sabedoria, Destreza, Constituição e Carisma. Cada atributo começa em 10." },
+                      { step: "2", title: "Ajuste os Sub-Atributos", desc: "Cada atributo se divide em dois sub-atributos. Você pode redistribuir os pontos do atributo principal entre eles." },
+                      { step: "3", title: "Escolha Raça e Classe", desc: "Na aba Raça/Classe, selecione a raça, classe e classe social do personagem. Cada opção tem um custo em pontos de personagem." },
+                      { step: "4", title: "Selecione Vantagens e Desvantagens", desc: "Na aba Vantagens, escolha vantagens (custam pontos) e desvantagens (devolvem pontos). Vantagens raciais/de classe também estão disponíveis." },
+                      { step: "5", title: "Escolha as Perícias", desc: "Na aba Perícias, selecione as habilidades que seu personagem domina. Cada perícia tem um custo específico." },
+                      { step: "6", title: "Defina Proficiências com Armas", desc: "Na aba Armas, escolha proficiências individuais ou grupos inteiros de armas. Escudos também estão disponíveis." },
+                      { step: "7", title: "Salve seu Personagem", desc: "Use o botão Salvar para exportar a ficha como JSON. Você pode carregá-la depois com o botão Carregar." },
+                    ].map((item) => (
+                      <li key={item.step} className="flex gap-3">
+                        <span className="flex-shrink-0 w-7 h-7 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center font-display text-xs text-gold-dark font-bold">
+                          {item.step}
+                        </span>
+                        <div>
+                          <p className="font-display text-sm font-semibold text-foreground">{item.title}</p>
+                          <p className="text-muted-foreground text-xs mt-0.5">{item.desc}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </DialogContent>
+              </Dialog>
               <Button
-                variant="outline"
                 size="sm"
                 onClick={() => fileInputRef.current?.click()}
-                className="border-gold/40 text-parchment hover:bg-gold/20"
+                className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider"
               >
                 <Upload className="w-4 h-4 mr-1" />
                 Carregar
               </Button>
               <Button
-                variant="outline"
                 size="sm"
                 onClick={handleSave}
-                className="border-gold/40 text-parchment hover:bg-gold/20"
+                className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider"
               >
                 <Save className="w-4 h-4 mr-1" />
                 Salvar
