@@ -1,14 +1,6 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, HelpCircle, ChevronRight } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
 import RaceClassPanel from "@/components/RaceClassPanel";
@@ -33,7 +25,19 @@ import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
 
+const STEPS = [
+  { label: "Identificação", icon: User, desc: "Nome e dados básicos" },
+  { label: "Atributos", icon: Shield, desc: "Distribua 75 pontos" },
+  { label: "Raça & Classe", icon: User, desc: "Escolha raça, classe e nível social" },
+  { label: "Vantagens", icon: Swords, desc: "Vantagens e desvantagens" },
+  { label: "Perícias", icon: BookOpen, desc: "Habilidades do personagem" },
+  { label: "Armas", icon: Crosshair, desc: "Proficiências com armas e escudos" },
+  { label: "Resumo", icon: Scroll, desc: "Revisão final" },
+];
+
 const Index = () => {
+  const [currentStep, setCurrentStep] = useState(0);
+
   // Basic info
   const [charName, setCharName] = useState("");
   const [playerName, setPlayerName] = useState("");
@@ -47,7 +51,7 @@ const Index = () => {
       >
   );
 
-  // Sub-attributes (initialized to main attribute values)
+  // Sub-attributes
   const [subAttributes, setSubAttributes] = useState<Record<string, number>>(() => {
     const init: Record<string, number> = {};
     subAttributeMap.forEach((def) => {
@@ -70,11 +74,7 @@ const Index = () => {
 
   // Calculate attribute points spent
   const attributePointsSpent = useMemo(
-    () =>
-      Object.values(attributes).reduce(
-        (sum, val) => sum + val,
-        0
-      ),
+    () => Object.values(attributes).reduce((sum, val) => sum + val, 0),
     [attributes]
   );
 
@@ -90,60 +90,44 @@ const Index = () => {
       return sum + (item?.cost ?? 0);
     }, 0);
 
-    // Race/class-specific advantages cost
-    const rcAdvCost = selectedRaceClassAdv.reduce((sum, name) => {
+    const raceClassAdvCost = selectedRaceClassAdv.reduce((sum, name) => {
       const item = raceClassAdvantages.find((a) => a.name === name);
       if (!item) return sum;
       const matchesRace = item.applicableRaces?.includes(selectedRace);
       const matchesClass = item.applicableClasses?.includes(selectedClass);
-      if (matchesRace || matchesClass) return sum + item.cost;
-      return sum + (item.costOthers ?? item.cost);
-    }, 0);
-
-    const isClassSkill = (skillGroup: string) => {
-      if (skillGroup === "Geral") return true;
-      const classMap: Record<string, string[]> = {
-        Guerreiro: ["Guerreiro", "Paladino", "Ranger"],
-        "Ladrão/Bardo": ["Ladrão", "Bardo"],
-        Sacerdote: ["Sacerdote"],
-        Mago: ["Arcano"],
-      };
-      return classMap[skillGroup]?.includes(selectedClass) ?? false;
-    };
-
-    const skillCost = selectedSkills.reduce((sum, name) => {
-      const skill = skills.find((s) => s.name === name);
-      if (!skill) return sum;
-      const cost = isClassSkill(skill.group) ? skill.cost : skill.cost * 2;
+      const cost = (matchesRace || matchesClass) ? item.cost : (item.costOthers ?? item.cost);
       return sum + cost;
     }, 0);
 
-    // Weapon proficiency costs
-    const weaponGroupCost = selectedWeaponGroups.reduce((sum, groupName) => {
-      const group = weaponGroups.find((g) => g.name === groupName);
-      return sum + (group?.costGroup ?? 0);
+    const skillCost = selectedSkills.reduce((sum, name) => {
+      const skill = skills.find((s) => s.name === name);
+      return sum + (skill?.cost ?? 0);
     }, 0);
 
-    const weaponIndividualCost = selectedWeapons.reduce((sum, weaponKey) => {
-      const [groupName] = weaponKey.split("::");
-      // Skip if the whole group is already selected
+    const weaponCost = selectedWeapons.reduce((sum, weaponKey) => {
+      const [groupName, weaponName] = weaponKey.split("::");
       if (selectedWeaponGroups.includes(groupName)) return sum;
       const group = weaponGroups.find((g) => g.name === groupName);
-      return sum + (group?.costPerWeapon ?? 0);
+      const weapon = group?.weapons.find((w) => w.name === weaponName);
+      return sum + (weapon?.individualCost ?? 0);
+    }, 0);
+
+    const groupCost = selectedWeaponGroups.reduce((sum, groupName) => {
+      const group = weaponGroups.find((g) => g.name === groupName);
+      return sum + (group?.groupCost ?? 0);
     }, 0);
 
     const shieldCost = selectedShields.reduce((sum, name) => {
-      // If "Todos os Escudos" is selected, only count that
-      if (selectedShields.includes("Todos os Escudos") && name !== "Todos os Escudos") return sum;
       const shield = shieldProficiencies.find((s) => s.name === name);
       return sum + (shield?.cost ?? 0);
     }, 0);
 
-    return raceCost + classCost + socialCost + advCost + rcAdvCost + skillCost + weaponGroupCost + weaponIndividualCost + shieldCost;
+    return raceCost + classCost + socialCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost;
   }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields]);
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
-    setAttributes((prev) => ({ ...prev, [attr]: value }));
+    const newVal = Math.max(3, Math.min(18, value));
+    setAttributes((prev) => ({ ...prev, [attr]: newVal }));
   };
 
   const handleSubAttributeChange = (subAttr: string, value: number) => {
@@ -224,6 +208,7 @@ const Index = () => {
         if (data.selectedWeapons) setSelectedWeapons(data.selectedWeapons);
         if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
         if (data.selectedShields) setSelectedShields(data.selectedShields);
+        setCurrentStep(0);
       } catch {
         alert("Arquivo JSON inválido.");
       }
@@ -231,6 +216,141 @@ const Index = () => {
     reader.readAsText(file);
     e.target.value = "";
   }, []);
+
+  const goNext = () => setCurrentStep((s) => Math.min(STEPS.length - 1, s + 1));
+  const goPrev = () => setCurrentStep((s) => Math.max(0, s - 1));
+
+  const renderStepContent = () => {
+    switch (currentStep) {
+      case 0:
+        return (
+          <div className="space-y-6">
+            <p className="font-body text-muted-foreground text-sm">
+              Comece dando um nome ao seu personagem e identificando o jogador.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
+                  Nome do Personagem
+                </label>
+                <input
+                  type="text"
+                  value={charName}
+                  onChange={(e) => setCharName(e.target.value)}
+                  placeholder="Ex: Thorin Escudo-de-Carvalho"
+                  className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold"
+                />
+              </div>
+              <div>
+                <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
+                  Nome do Jogador
+                </label>
+                <input
+                  type="text"
+                  value={playerName}
+                  onChange={(e) => setPlayerName(e.target.value)}
+                  placeholder="Seu nome"
+                  className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold"
+                />
+              </div>
+            </div>
+          </div>
+        );
+      case 1:
+        return (
+          <div className="space-y-4">
+            <p className="font-body text-muted-foreground text-sm">
+              Distribua {ATTRIBUTE_POINTS} pontos entre os atributos. Cada um começa em 10.
+            </p>
+            <AttributePanel
+              attributes={attributes}
+              subAttributes={subAttributes}
+              onChange={handleAttributeChange}
+              onSubChange={handleSubAttributeChange}
+            />
+          </div>
+        );
+      case 2:
+        return (
+          <div className="space-y-4">
+            <p className="font-body text-muted-foreground text-sm">
+              Escolha a raça, classe e nível social do personagem. Cada opção consome pontos de personagem.
+            </p>
+            <RaceClassPanel
+              selectedRace={selectedRace}
+              selectedClass={selectedClass}
+              selectedSocialClass={selectedSocialClass}
+              onRaceChange={setSelectedRace}
+              onClassChange={setSelectedClass}
+              onSocialClassChange={setSelectedSocialClass}
+            />
+          </div>
+        );
+      case 3:
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Selecione vantagens (custam pontos) e desvantagens (devolvem pontos).
+            </p>
+            <AdvantagesPanel
+              selected={selectedAdvantages}
+              onToggle={handleAdvantageToggle}
+              selectedRaceClassAdvantages={selectedRaceClassAdv}
+              onRaceClassToggle={handleRaceClassAdvToggle}
+              selectedRace={selectedRace}
+              selectedClass={selectedClass}
+            />
+          </div>
+        );
+      case 4:
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Selecione as perícias que o personagem domina.
+            </p>
+            <SkillsPanel
+              selected={selectedSkills}
+              onToggle={handleSkillToggle}
+              characterClass={selectedClass}
+            />
+          </div>
+        );
+      case 5:
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Escolha proficiências com armas individuais, grupos inteiros e escudos.
+            </p>
+            <WeaponProficiencyPanel
+              selectedWeapons={selectedWeapons}
+              selectedGroups={selectedWeaponGroups}
+              selectedShields={selectedShields}
+              onWeaponToggle={handleWeaponToggle}
+              onGroupToggle={handleWeaponGroupToggle}
+              onShieldToggle={handleShieldToggle}
+            />
+          </div>
+        );
+      case 6:
+        return (
+          <SummaryPanel
+            charName={charName}
+            playerName={playerName}
+            selectedRace={selectedRace}
+            selectedClass={selectedClass}
+            selectedSocialClass={selectedSocialClass}
+            attributes={attributes}
+            selectedAdvantages={selectedAdvantages}
+            selectedRaceClassAdv={selectedRaceClassAdv}
+            selectedSkills={selectedSkills}
+            attributePointsSpent={attributePointsSpent}
+            characterPointsSpent={characterPointsSpent}
+          />
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
     <div className="min-h-screen parchment-bg">
@@ -257,46 +377,6 @@ const Index = () => {
                 onChange={handleLoad}
                 className="hidden"
               />
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button
-                    size="sm"
-                    className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
-                  >
-                    <HelpCircle className="w-4 h-4 mr-1" />
-                    Guia
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="parchment-bg border-gold/40 max-w-lg max-h-[80vh] overflow-y-auto">
-                  <DialogHeader>
-                    <DialogTitle className="font-display text-lg text-foreground tracking-wider flex items-center gap-2">
-                      <Scroll className="w-5 h-5 text-gold" />
-                      Passo a Passo — Criação de Personagem
-                    </DialogTitle>
-                  </DialogHeader>
-                  <ol className="space-y-4 font-body text-sm text-foreground/90">
-                    {[
-                      { step: "1", title: "Distribua os Pontos de Atributos", desc: "Você tem 75 pontos para distribuir entre Força, Inteligência, Sabedoria, Destreza, Constituição e Carisma. Cada atributo começa em 10." },
-                      { step: "2", title: "Ajuste os Sub-Atributos", desc: "Cada atributo se divide em dois sub-atributos. Você pode redistribuir os pontos do atributo principal entre eles." },
-                      { step: "3", title: "Escolha Raça e Classe", desc: "Na aba Raça/Classe, selecione a raça, classe e classe social do personagem. Cada opção tem um custo em pontos de personagem." },
-                      { step: "4", title: "Selecione Vantagens e Desvantagens", desc: "Na aba Vantagens, escolha vantagens (custam pontos) e desvantagens (devolvem pontos). Vantagens raciais/de classe também estão disponíveis." },
-                      { step: "5", title: "Escolha as Perícias", desc: "Na aba Perícias, selecione as habilidades que seu personagem domina. Cada perícia tem um custo específico." },
-                      { step: "6", title: "Defina Proficiências com Armas", desc: "Na aba Armas, escolha proficiências individuais ou grupos inteiros de armas. Escudos também estão disponíveis." },
-                      { step: "7", title: "Salve seu Personagem", desc: "Use o botão Salvar para exportar a ficha como JSON. Você pode carregá-la depois com o botão Carregar." },
-                    ].map((item) => (
-                      <li key={item.step} className="flex gap-3">
-                        <span className="flex-shrink-0 w-7 h-7 rounded-full bg-gold/20 border border-gold/40 flex items-center justify-center font-display text-xs text-gold-dark font-bold">
-                          {item.step}
-                        </span>
-                        <div>
-                          <p className="font-display text-sm font-semibold text-foreground">{item.title}</p>
-                          <p className="text-muted-foreground text-xs mt-0.5">{item.desc}</p>
-                        </div>
-                      </li>
-                    ))}
-                  </ol>
-                </DialogContent>
-              </Dialog>
               <Button
                 size="sm"
                 onClick={() => fileInputRef.current?.click()}
@@ -333,144 +413,99 @@ const Index = () => {
           />
         </div>
 
-        {/* Character Name */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg bg-card/80 border border-border">
-          <div>
-            <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
-              Nome do Personagem
-            </label>
-            <input
-              type="text"
-              value={charName}
-              onChange={(e) => setCharName(e.target.value)}
-              placeholder="Ex: Thorin Escudo-de-Carvalho"
-              className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold"
-            />
-          </div>
-          <div>
-            <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
-              Nome do Jogador
-            </label>
-            <input
-              type="text"
-              value={playerName}
-              onChange={(e) => setPlayerName(e.target.value)}
-              placeholder="Seu nome"
-              className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold"
-            />
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Attributes - Left Column */}
-          <div className="lg:col-span-1 p-4 rounded-lg bg-card/80 border border-border">
-            <AttributePanel
-              attributes={attributes}
-              subAttributes={subAttributes}
-              onChange={handleAttributeChange}
-              onSubChange={handleSubAttributeChange}
-            />
+        {/* Wizard Stepper */}
+        <div className="rounded-lg bg-card/80 border border-border shadow-sm overflow-hidden">
+          {/* Step Indicators */}
+          <div className="dark-panel border-b border-gold/20 px-4 py-3">
+            <div className="flex items-center justify-between gap-1 overflow-x-auto">
+              {STEPS.map((step, i) => {
+                const StepIcon = step.icon;
+                const isActive = i === currentStep;
+                const isDone = i < currentStep;
+                return (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentStep(i)}
+                    className={`flex items-center gap-1.5 px-2 py-1.5 rounded transition-all text-xs font-display tracking-wider whitespace-nowrap ${
+                      isActive
+                        ? "bg-gold/20 text-gold border border-gold/40"
+                        : isDone
+                        ? "text-gold/70 hover:text-gold hover:bg-gold/10 border border-transparent"
+                        : "text-parchment/40 hover:text-parchment/60 hover:bg-parchment/5 border border-transparent"
+                    }`}
+                  >
+                    <span className={`flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-bold ${
+                      isActive
+                        ? "bg-gold text-parchment-dark"
+                        : isDone
+                        ? "bg-gold/30 text-gold"
+                        : "bg-parchment/10 text-parchment/40"
+                    }`}>
+                      {isDone ? <Check className="w-3 h-3" /> : i + 1}
+                    </span>
+                    <span className="hidden md:inline">{step.label}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
-          {/* Character Points - Right Column */}
-          <div className="lg:col-span-2 p-4 rounded-lg bg-card/80 border border-border">
-            <Tabs defaultValue="race" className="w-full">
-              <TabsList className="w-full grid grid-cols-5 bg-parchment-dark/10 border border-border rounded-lg h-auto p-1">
-                <TabsTrigger
-                  value="race"
-                  className="font-display text-xs tracking-wider data-[state=active]:bg-gold/20 data-[state=active]:text-foreground data-[state=active]:border-gold py-2 rounded border border-transparent"
-                >
-                  <User className="w-3.5 h-3.5 mr-1.5 hidden sm:inline" />
-                  Raça & Classe
-                </TabsTrigger>
-                <TabsTrigger
-                  value="advantages"
-                  className="font-display text-xs tracking-wider data-[state=active]:bg-gold/20 data-[state=active]:text-foreground data-[state=active]:border-gold py-2 rounded border border-transparent"
-                >
-                  <Swords className="w-3.5 h-3.5 mr-1.5 hidden sm:inline" />
-                  Vant./Desv.
-                </TabsTrigger>
-                <TabsTrigger
-                  value="skills"
-                  className="font-display text-xs tracking-wider data-[state=active]:bg-gold/20 data-[state=active]:text-foreground data-[state=active]:border-gold py-2 rounded border border-transparent"
-                >
-                  <BookOpen className="w-3.5 h-3.5 mr-1.5 hidden sm:inline" />
-                  Perícias
-                </TabsTrigger>
-                <TabsTrigger
-                  value="weapons"
-                  className="font-display text-xs tracking-wider data-[state=active]:bg-gold/20 data-[state=active]:text-foreground data-[state=active]:border-gold py-2 rounded border border-transparent"
-                >
-                  <Crosshair className="w-3.5 h-3.5 mr-1.5 hidden sm:inline" />
-                  Armas
-                </TabsTrigger>
-                <TabsTrigger
-                  value="summary"
-                  className="font-display text-xs tracking-wider data-[state=active]:bg-gold/20 data-[state=active]:text-foreground data-[state=active]:border-gold py-2 rounded border border-transparent"
-                >
-                  <Scroll className="w-3.5 h-3.5 mr-1.5 hidden sm:inline" />
-                  Resumo
-                </TabsTrigger>
-              </TabsList>
+          {/* Step Header */}
+          <div className="px-6 pt-5 pb-2 border-b border-border/50">
+            <div className="flex items-center gap-2">
+              {(() => {
+                const StepIcon = STEPS[currentStep].icon;
+                return <StepIcon className="w-5 h-5 text-gold" />;
+              })()}
+              <h2 className="font-display text-lg tracking-wider text-foreground">
+                {STEPS[currentStep].label}
+              </h2>
+            </div>
+            <p className="text-xs text-muted-foreground font-body mt-1 ml-7">
+              Passo {currentStep + 1} de {STEPS.length} — {STEPS[currentStep].desc}
+            </p>
+          </div>
 
-              <TabsContent value="race" className="mt-4">
-                <RaceClassPanel
-                  selectedRace={selectedRace}
-                  selectedClass={selectedClass}
-                  selectedSocialClass={selectedSocialClass}
-                  onRaceChange={setSelectedRace}
-                  onClassChange={setSelectedClass}
-                  onSocialClassChange={setSelectedSocialClass}
-                />
-              </TabsContent>
+          {/* Step Content */}
+          <div className="p-6">
+            {renderStepContent()}
+          </div>
 
-              <TabsContent value="advantages" className="mt-4 max-h-[60vh] overflow-y-auto pr-2">
-                <AdvantagesPanel
-                  selected={selectedAdvantages}
-                  onToggle={handleAdvantageToggle}
-                  selectedRaceClassAdvantages={selectedRaceClassAdv}
-                  onRaceClassToggle={handleRaceClassAdvToggle}
-                  selectedRace={selectedRace}
-                  selectedClass={selectedClass}
-                />
-              </TabsContent>
+          {/* Navigation */}
+          <div className="px-6 py-4 border-t border-border/50 flex items-center justify-between">
+            <Button
+              size="sm"
+              onClick={goPrev}
+              disabled={currentStep === 0}
+              className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider disabled:opacity-30"
+            >
+              <ChevronLeft className="w-4 h-4 mr-1" />
+              Anterior
+            </Button>
 
-              <TabsContent value="skills" className="mt-4 max-h-[60vh] overflow-y-auto pr-2">
-                <SkillsPanel
-                  selected={selectedSkills}
-                  onToggle={handleSkillToggle}
-                  characterClass={selectedClass}
-                />
-              </TabsContent>
+            <span className="text-xs text-muted-foreground font-display">
+              {currentStep + 1} / {STEPS.length}
+            </span>
 
-              <TabsContent value="weapons" className="mt-4 max-h-[60vh] overflow-y-auto pr-2">
-                <WeaponProficiencyPanel
-                  selectedWeapons={selectedWeapons}
-                  selectedGroups={selectedWeaponGroups}
-                  selectedShields={selectedShields}
-                  onWeaponToggle={handleWeaponToggle}
-                  onGroupToggle={handleWeaponGroupToggle}
-                  onShieldToggle={handleShieldToggle}
-                />
-              </TabsContent>
-
-              <TabsContent value="summary" className="mt-4">
-                <SummaryPanel
-                  charName={charName}
-                  playerName={playerName}
-                  selectedRace={selectedRace}
-                  selectedClass={selectedClass}
-                  selectedSocialClass={selectedSocialClass}
-                  attributes={attributes}
-                  selectedAdvantages={selectedAdvantages}
-                  selectedRaceClassAdv={selectedRaceClassAdv}
-                  selectedSkills={selectedSkills}
-                  attributePointsSpent={attributePointsSpent}
-                  characterPointsSpent={characterPointsSpent}
-                />
-              </TabsContent>
-            </Tabs>
+            {currentStep < STEPS.length - 1 ? (
+              <Button
+                size="sm"
+                onClick={goNext}
+                className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
+              >
+                Próximo
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            ) : (
+              <Button
+                size="sm"
+                onClick={handleSave}
+                className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
+              >
+                <Save className="w-4 h-4 mr-1" />
+                Salvar Personagem
+              </Button>
+            )}
           </div>
         </div>
       </main>
@@ -530,7 +565,6 @@ const SummaryPanel = ({
         </div>
       </div>
 
-      {/* Attributes Summary */}
       <div className="rounded-lg border border-border p-3">
         <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
           Atributos ({attributePointsSpent}/75 pts)
@@ -545,7 +579,6 @@ const SummaryPanel = ({
         </div>
       </div>
 
-      {/* Advantages */}
       {selectedAdvantages.length > 0 && (
         <div className="rounded-lg border border-border p-3">
           <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
@@ -572,7 +605,6 @@ const SummaryPanel = ({
         </div>
       )}
 
-      {/* Race/Class Advantages */}
       {selectedRaceClassAdv.length > 0 && (
         <div className="rounded-lg border border-border p-3">
           <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
@@ -602,7 +634,6 @@ const SummaryPanel = ({
         </div>
       )}
 
-
       {selectedSkills.length > 0 && (
         <div className="rounded-lg border border-border p-3">
           <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
@@ -621,7 +652,6 @@ const SummaryPanel = ({
         </div>
       )}
 
-      {/* Totals */}
       <div className="rounded-lg border-2 border-gold/40 p-3 bg-gold/5">
         <h4 className="font-display text-sm tracking-wider uppercase text-gold mb-2">
           Total de Pontos
