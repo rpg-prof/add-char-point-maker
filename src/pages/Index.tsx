@@ -179,6 +179,52 @@ const Index = () => {
     );
   };
 
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleSave = useCallback(() => {
+    const data = {
+      charName, playerName, attributes, subAttributes,
+      selectedRace, selectedClass, selectedSocialClass,
+      selectedAdvantages, selectedRaceClassAdv, selectedSkills,
+      selectedWeapons, selectedWeaponGroups, selectedShields,
+    };
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${charName || "personagem"}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields]);
+
+  const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const data = JSON.parse(ev.target?.result as string);
+        if (data.charName !== undefined) setCharName(data.charName);
+        if (data.playerName !== undefined) setPlayerName(data.playerName);
+        if (data.attributes) setAttributes(data.attributes);
+        if (data.subAttributes) setSubAttributes(data.subAttributes);
+        if (data.selectedRace) setSelectedRace(data.selectedRace);
+        if (data.selectedClass) setSelectedClass(data.selectedClass);
+        if (data.selectedSocialClass) setSelectedSocialClass(data.selectedSocialClass);
+        if (data.selectedAdvantages) setSelectedAdvantages(data.selectedAdvantages);
+        if (data.selectedRaceClassAdv) setSelectedRaceClassAdv(data.selectedRaceClassAdv);
+        if (data.selectedSkills) setSelectedSkills(data.selectedSkills);
+        if (data.selectedWeapons) setSelectedWeapons(data.selectedWeapons);
+        if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
+        if (data.selectedShields) setSelectedShields(data.selectedShields);
+      } catch {
+        alert("Arquivo JSON inválido.");
+      }
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  }, []);
+
   return (
     <div className="min-h-screen parchment-bg">
       {/* Header */}
