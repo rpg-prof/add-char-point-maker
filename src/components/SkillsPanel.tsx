@@ -1,4 +1,4 @@
-import { Check, ChevronDown, ChevronRight } from "lucide-react";
+import { Check, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import { skills, type SkillOption } from "@/data/characterData";
 
@@ -63,13 +63,9 @@ const SkillsPanel = ({ selected, onToggle, characterClass }: SkillsPanelProps) =
                       {skill.description && (
                         <button
                           onClick={() => toggleExpand(skill.name)}
-                          className="p-0.5 text-muted-foreground hover:text-gold transition-colors flex-shrink-0"
+                          className="w-5 h-5 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors flex-shrink-0"
                         >
-                          {isExpanded ? (
-                            <ChevronDown className="w-3.5 h-3.5" />
-                          ) : (
-                            <ChevronRight className="w-3.5 h-3.5" />
-                          )}
+                          {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                         </button>
                       )}
                       <button
