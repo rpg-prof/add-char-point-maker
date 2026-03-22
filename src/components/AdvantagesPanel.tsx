@@ -32,7 +32,7 @@ const AdvantagesPanel = ({
     const isSelected = selected.includes(item.name);
     const isAdv = item.type === "advantage";
 
-    return (
+    const button = (
       <button
         key={item.name}
         onClick={() => onToggle(item.name, item.cost)}
@@ -65,6 +65,19 @@ const AdvantagesPanel = ({
         </span>
       </button>
     );
+
+    if (item.description) {
+      return (
+        <Tooltip key={item.name}>
+          <TooltipTrigger asChild>{button}</TooltipTrigger>
+          <TooltipContent side="top" className="max-w-xs text-xs font-body">
+            {item.description}
+          </TooltipContent>
+        </Tooltip>
+      );
+    }
+
+    return button;
   };
 
   const getItemCost = (item: RaceClassAdvantage): number => {
