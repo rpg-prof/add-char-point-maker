@@ -52,6 +52,7 @@ export interface AdvantageOption {
   cost: number;
   type: "advantage" | "disadvantage";
   severity?: "moderate" | "severe";
+  description?: string;
 }
 
 export const generalAdvantages: AdvantageOption[] = [
