@@ -1,4 +1,4 @@
-import { Check, ChevronDown, ChevronRight } from "lucide-react";
+import { Check, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import { skills, type SkillOption } from "@/data/characterData";
 
