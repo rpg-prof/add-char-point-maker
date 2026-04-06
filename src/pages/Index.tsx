@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
@@ -7,6 +7,8 @@ import RaceClassPanel from "@/components/RaceClassPanel";
 import AdvantagesPanel from "@/components/AdvantagesPanel";
 import SkillsPanel from "@/components/SkillsPanel";
 import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
+import MagicPanel from "@/components/MagicPanel";
+import { spellcastingClasses } from "@/data/spells";
 import {
   attributeCosts,
   attributeNames,
@@ -25,15 +27,17 @@ import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
 
-const STEPS = [
+const BASE_STEPS = [
   { label: "Identificação", icon: User, desc: "Nome e dados básicos" },
   { label: "Atributos", icon: Shield, desc: "Distribua 75 pontos" },
   { label: "Raça & Classe", icon: User, desc: "Escolha raça, classe e nível social" },
   { label: "Vantagens", icon: Swords, desc: "Vantagens e desvantagens" },
   { label: "Perícias", icon: BookOpen, desc: "Habilidades do personagem" },
   { label: "Armas", icon: Crosshair, desc: "Proficiências com armas e escudos" },
-  { label: "Resumo", icon: Scroll, desc: "Revisão final" },
 ];
+
+const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório de magias" };
+const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
 
 const Index = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -64,6 +68,14 @@ const Index = () => {
   // Character points
   const [selectedRace, setSelectedRace] = useState("Humano");
   const [selectedClass, setSelectedClass] = useState("Sem Classe");
+
+  const hasMagic = spellcastingClasses.includes(selectedClass);
+  const STEPS = useMemo(() => {
+    const steps = [...BASE_STEPS];
+    if (hasMagic) steps.push(MAGIC_STEP);
+    steps.push(SUMMARY_STEP);
+    return steps;
+  }, [hasMagic]);
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
   const [selectedAdvantages, setSelectedAdvantages] = useState<string[]>([]);
   const [selectedRaceClassAdv, setSelectedRaceClassAdv] = useState<string[]>([]);
@@ -220,8 +232,11 @@ const Index = () => {
   const goPrev = () => setCurrentStep((s) => Math.max(0, s - 1));
 
   const renderStepContent = () => {
-    switch (currentStep) {
-      case 0:
+    const step = STEPS[currentStep];
+    if (!step) return null;
+
+    switch (step.label) {
+      case "Identificação":
         return (
           <div className="space-y-6">
             <p className="font-body text-muted-foreground text-sm">
@@ -255,7 +270,7 @@ const Index = () => {
             </div>
           </div>
         );
-      case 1:
+      case "Atributos":
         return (
           <div className="space-y-4">
             <p className="font-body text-muted-foreground text-sm">
@@ -269,7 +284,7 @@ const Index = () => {
             />
           </div>
         );
-      case 2:
+      case "Raça & Classe":
         return (
           <div className="space-y-4">
             <p className="font-body text-muted-foreground text-sm">
@@ -285,7 +300,7 @@ const Index = () => {
             />
           </div>
         );
-      case 3:
+      case "Vantagens":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
@@ -301,7 +316,7 @@ const Index = () => {
             />
           </div>
         );
-      case 4:
+      case "Perícias":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
@@ -314,7 +329,7 @@ const Index = () => {
             />
           </div>
         );
-      case 5:
+      case "Armas":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
@@ -330,7 +345,16 @@ const Index = () => {
             />
           </div>
         );
-      case 6:
+      case "Magia":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Grimório de referência para a classe <span className="text-foreground font-semibold">{selectedClass}</span>.
+            </p>
+            <MagicPanel selectedClass={selectedClass} />
+          </div>
+        );
+      case "Resumo":
         return (
           <SummaryPanel
             charName={charName}
