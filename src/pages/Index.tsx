@@ -7,6 +7,8 @@ import RaceClassPanel from "@/components/RaceClassPanel";
 import AdvantagesPanel from "@/components/AdvantagesPanel";
 import SkillsPanel from "@/components/SkillsPanel";
 import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
+import MagicPanel from "@/components/MagicPanel";
+import { spellcastingClasses } from "@/data/spells";
 import {
   attributeCosts,
   attributeNames,
