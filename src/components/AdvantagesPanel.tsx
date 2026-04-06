@@ -133,7 +133,7 @@ const AdvantagesPanel = ({
             </span>
             <span className="flex-1 truncate text-xs">{item.name}</span>
             {!isNative && (
-              <span className="text-[10px] text-muted-foreground/50 font-display">2x</span>
+              <span className="text-[10px] text-muted-foreground/50 font-display">*</span>
             )}
             <span
               className={`text-xs font-display ${
@@ -144,8 +144,22 @@ const AdvantagesPanel = ({
             </span>
           </button>
         </TooltipTrigger>
-        <TooltipContent side="top" className="max-w-xs text-xs font-body">
-          {item.description}
+        <TooltipContent side="top" className="max-w-sm text-xs font-body space-y-1">
+          <p className="font-semibold text-foreground">{item.name}</p>
+          {(item.applicableRaces?.length || item.applicableClasses?.length) && (
+            <p className="text-muted-foreground">
+              {item.applicableRaces?.length ? `Raças: ${item.applicableRaces.join(", ")}` : ""}
+              {item.applicableRaces?.length && item.applicableClasses?.length ? " · " : ""}
+              {item.applicableClasses?.length ? `Classes: ${item.applicableClasses.join(", ")}` : ""}
+            </p>
+          )}
+          <p className="text-muted-foreground">
+            Custo p/ Classe/Raça: <span className="text-foreground font-semibold">{item.cost > 0 ? `+${item.cost}` : item.cost}</span>
+            {item.costOthers !== null && (
+              <> · Demais: <span className="text-foreground font-semibold">{item.costOthers > 0 ? `+${item.costOthers}` : item.costOthers}</span></>
+            )}
+          </p>
+          {item.description && <p className="pt-1 border-t border-border/50">{item.description}</p>}
         </TooltipContent>
       </Tooltip>
     );
@@ -184,7 +198,7 @@ const AdvantagesPanel = ({
         </h3>
         <p className="text-xs text-muted-foreground mb-3 font-body">
           Raça: <span className="text-foreground font-semibold">{selectedRace}</span> · Classe: <span className="text-foreground font-semibold">{selectedClass}</span>
-          <span className="ml-2 text-muted-foreground/60">(itens com <span className="font-display">2x</span> = custo para outras raças/classes)</span>
+          <span className="ml-2 text-muted-foreground/60">(<span className="font-display">*</span> = custo diferente para outras raças/classes)</span>
         </p>
 
         <div className="space-y-1">
