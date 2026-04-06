@@ -232,8 +232,11 @@ const Index = () => {
   const goPrev = () => setCurrentStep((s) => Math.max(0, s - 1));
 
   const renderStepContent = () => {
-    switch (currentStep) {
-      case 0:
+    const step = STEPS[currentStep];
+    if (!step) return null;
+
+    switch (step.label) {
+      case "Identificação":
         return (
           <div className="space-y-6">
             <p className="font-body text-muted-foreground text-sm">
@@ -267,7 +270,7 @@ const Index = () => {
             </div>
           </div>
         );
-      case 1:
+      case "Atributos":
         return (
           <div className="space-y-4">
             <p className="font-body text-muted-foreground text-sm">
@@ -281,7 +284,7 @@ const Index = () => {
             />
           </div>
         );
-      case 2:
+      case "Raça & Classe":
         return (
           <div className="space-y-4">
             <p className="font-body text-muted-foreground text-sm">
@@ -297,7 +300,7 @@ const Index = () => {
             />
           </div>
         );
-      case 3:
+      case "Vantagens":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
@@ -313,7 +316,7 @@ const Index = () => {
             />
           </div>
         );
-      case 4:
+      case "Perícias":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
@@ -326,7 +329,7 @@ const Index = () => {
             />
           </div>
         );
-      case 5:
+      case "Armas":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
@@ -342,7 +345,16 @@ const Index = () => {
             />
           </div>
         );
-      case 6:
+      case "Magia":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Grimório de referência para a classe <span className="text-foreground font-semibold">{selectedClass}</span>.
+            </p>
+            <MagicPanel selectedClass={selectedClass} />
+          </div>
+        );
+      case "Resumo":
         return (
           <SummaryPanel
             charName={charName}
