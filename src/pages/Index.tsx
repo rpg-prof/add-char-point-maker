@@ -68,6 +68,14 @@ const Index = () => {
   // Character points
   const [selectedRace, setSelectedRace] = useState("Humano");
   const [selectedClass, setSelectedClass] = useState("Sem Classe");
+
+  const hasMagic = spellcastingClasses.includes(selectedClass);
+  const STEPS = useMemo(() => {
+    const steps = [...BASE_STEPS];
+    if (hasMagic) steps.push(MAGIC_STEP);
+    steps.push(SUMMARY_STEP);
+    return steps;
+  }, [hasMagic]);
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
   const [selectedAdvantages, setSelectedAdvantages] = useState<string[]>([]);
   const [selectedRaceClassAdv, setSelectedRaceClassAdv] = useState<string[]>([]);
