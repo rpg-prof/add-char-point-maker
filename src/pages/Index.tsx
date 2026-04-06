@@ -27,15 +27,17 @@ import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
 
-const STEPS = [
+const BASE_STEPS = [
   { label: "Identificação", icon: User, desc: "Nome e dados básicos" },
   { label: "Atributos", icon: Shield, desc: "Distribua 75 pontos" },
   { label: "Raça & Classe", icon: User, desc: "Escolha raça, classe e nível social" },
   { label: "Vantagens", icon: Swords, desc: "Vantagens e desvantagens" },
   { label: "Perícias", icon: BookOpen, desc: "Habilidades do personagem" },
   { label: "Armas", icon: Crosshair, desc: "Proficiências com armas e escudos" },
-  { label: "Resumo", icon: Scroll, desc: "Revisão final" },
 ];
+
+const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório de magias" };
+const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
 
 const Index = () => {
   const [currentStep, setCurrentStep] = useState(0);
