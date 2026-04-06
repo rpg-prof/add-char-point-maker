@@ -198,7 +198,7 @@ const AdvantagesPanel = ({
         </h3>
         <p className="text-xs text-muted-foreground mb-3 font-body">
           Raça: <span className="text-foreground font-semibold">{selectedRace}</span> · Classe: <span className="text-foreground font-semibold">{selectedClass}</span>
-          <span className="ml-2 text-muted-foreground/60">(itens com <span className="font-display">2x</span> = custo para outras raças/classes)</span>
+          <span className="ml-2 text-muted-foreground/60">(<span className="font-display">*</span> = custo diferente para outras raças/classes)</span>
         </p>
 
         <div className="space-y-1">
