@@ -20,19 +20,18 @@ const SkillsPanel = ({ selected, onToggle, characterClass }: SkillsPanelProps) =
 
   const isClassSkill = (skill: SkillOption) => {
     if (skill.group === "Geral") return true;
-    const classMap: Record<string, string[]> = {
+    const allGroups = [skill.group, ...(skill.additionalGroups || [])];
+    const classToGroups: Record<string, string[]> = {
       Guerreiro: ["Guerreiro"],
-      "Ladrão/Bardo": ["Ladrão", "Bardo"],
-      Sacerdote: ["Sacerdote"],
-      Mago: ["Arcano"],
       Paladino: ["Guerreiro"],
       Ranger: ["Guerreiro"],
+      Ladrão: ["Ladrão/Bardo"],
+      Bardo: ["Ladrão/Bardo"],
+      Sacerdote: ["Sacerdote"],
+      Arcano: ["Mago"],
     };
-    for (const [group, classList] of Object.entries(classMap)) {
-      if (skill.group === group && classList.includes(characterClass)) return true;
-    }
-    if (skill.group === "Guerreiro" && ["Paladino", "Ranger"].includes(characterClass)) return true;
-    return false;
+    const matchGroups = classToGroups[characterClass] || [];
+    return allGroups.some((g) => matchGroups.includes(g));
   };
 
   const toggleExpand = (name: string) => {
