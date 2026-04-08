@@ -25,10 +25,11 @@ const SpellItem = ({ spell }: { spell: Spell }) => {
       {expanded && (
         <div className="ml-5 mt-1 mb-1 px-3 py-2 text-xs font-body text-muted-foreground bg-card/60 border border-border/50 rounded space-y-1">
           <div className="grid grid-cols-2 gap-x-4 gap-y-0.5">
-            <span><span className="text-foreground font-semibold">Alcance:</span> {spell.range}</span>
-            <span><span className="text-foreground font-semibold">Duração:</span> {spell.duration}</span>
-            <span><span className="text-foreground font-semibold">Tempo:</span> {spell.castingTime}</span>
-            <span><span className="text-foreground font-semibold">Componentes:</span> {spell.components}</span>
+            {spell.range && <span><span className="text-foreground font-semibold">Alcance:</span> {spell.range}</span>}
+            {spell.duration && <span><span className="text-foreground font-semibold">Duração:</span> {spell.duration}</span>}
+            {spell.castingTime && <span><span className="text-foreground font-semibold">Tempo:</span> {spell.castingTime}</span>}
+            {spell.components && <span><span className="text-foreground font-semibold">Componentes:</span> {spell.components}</span>}
+            {spell.area && <span><span className="text-foreground font-semibold">Área:</span> {spell.area}</span>}
           </div>
           <p className="pt-1 border-t border-border/50">{spell.description}</p>
         </div>
