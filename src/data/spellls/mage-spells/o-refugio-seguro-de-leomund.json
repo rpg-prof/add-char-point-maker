@@ -1,0 +1,10 @@
+{
+    "name": "O Refúgio seguro de Leomund",
+    "level": 4,
+    "school": "Alteração, Encantamento",
+    "castingTime": "4",
+    "duration": "1d4+1 horas + 1 hora/nível",
+    "range": "20 metros",
+    "area": "10 metros/nível",
+    "description": "Essa magia permite ao mago criar uma cabana feita de material comum na área: pedra, madeira, ou, na pior das hipóteses, sapé. A área construída da cabana tem 10 metros quadrados por nível do mago e o chão é plano, seco e limpo. Em todos os aspectos, a cabana criada parece uma cabana normal, com uma porta resistente, duas ou mais janelas com trancas e uma lareira. Embora a cabana resista a ventos de até 120 quilômetros por hora, a cabana em si não possui nenhuma fonte de calor ou frio, e precisa ser aquecida normalmente: um calor extremo afeta adversamente os seus ocupantes. A cabana, entretanto, oferece uma segurança considerável, pois não importa o material de que ela é constituída, a estrutura sempre resiste como se fosse de pedra, inclusive à chamas, e não é afetada por projeteis normais, excluindo-se armas pesadas como catapultas, balistas ou pedras lançadas por gigantes. As portas, janelas, e até mesmo a chaminé, são seguras contra intrusos, sendo que as duas primeiras estão sob eleito de Fechadura Arcana e a chaminé é protegida por uma grade de ferro no teto, além de ser bastante estreita. Cada uma das entradas é protegida por Alarme, e um Servo invisível é convocado para servir ao mago. O interior da cabana contém os móveis rústicos desejados pelo mago: até oito beliches, uma mesa apoiada em cavaletes e bancos, até quatro cadeiras ou oito banquinhos, e uma escrivaninha. Os componentes materiais são um pedaço quadrado de pedra, pó de cal, alguns grãos de areia, algumas gotas de água, e várias lascas de madeira. Deve-se adicionar os componentes materiais do Alarme e do Servo Invisível se estes benefícios são desejados: barbante, fio de prata e um pequeno sino."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Inviabilidade Melhorada",
+    "level": 4,
+    "school": "Ilusão/Visão",
+    "castingTime": "1 turno",
+    "duration": "4 rodadas + 1 rodada/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Essa magia é similar à Invisibilidade, mas esta versão permite que a criatura que a recebe ataque e lance magias normalmente e continue invisível. Entretanto, alguns sinais, como um brilho ou pequena talha, podem fazer com que criaturas observadoras percebam e ataquem o ser invisível. Estes traços só podem ser percebidos quando especificamente procurados, ou seja, depois que a criatura invisível fez sua presença ser conhecida. Ataques contra a criatura invisível sofrem uma penalidade de -4 e os testes de resistência feitos pela criatura invisível têm um bônus de +4. Criaturas que tenham mais de dez níveis ou dados de vida podem tentar ver a criatura invisível. Para tanto, elas testam sua resistência à magia como se tivessem dois níveis a menos."
+}

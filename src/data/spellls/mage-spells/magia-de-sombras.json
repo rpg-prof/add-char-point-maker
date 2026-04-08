@@ -1,0 +1,10 @@
+{
+    "name": "Magia de Sombras",
+    "level": 5,
+    "school": "Ilusão/Visão",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
+    "range": "50 metros + 10 metros/nível",
+    "area": "Especial",
+    "description": "Magia de Sombras permite ao mago canalizar energia do Piano das Sombras para produzir um simulacro quase real de uma magia de Evocação de 1º a 3º círculo. Por exemplo, pode-se simular um Dardos Místicos, Bola de Fogo, Relâmpago, e assim por diante. Esses efeitos funcionam normalmente sobre criaturas na área de efeito, que falhem em seus testes de resistência contra magias. Portanto, uma criatura que falhe um teste contra uma Bola de Fogo produzida por Magia de Sombras deve fazer um novo teste, sofrendo metade do dano se obtiver êxito, e dano total se falhar. Se a criatura passar no primeiro teste, a ilusão é detectada e apenas 20% do dano obtido nos dados é recebido (arredondando para baixo frações menores que 0,4 e para cima frações de 0,4 ou maiores)."
+}

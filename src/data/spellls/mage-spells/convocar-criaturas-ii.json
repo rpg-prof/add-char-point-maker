@@ -1,0 +1,10 @@
+{
+    "name": "Convocar Criaturas II",
+    "level": 4,
+    "school": "Conjuração/Convocação",
+    "castingTime": "4",
+    "duration": "3 rodadas +1 rodada/nível",
+    "range": "40 metros",
+    "area": "Especial",
+    "description": "Essa magia é muito semelhante à magia de 3º nível Convocar Criaturas I, embora Convocar Criaturas II convoque 1d6 monstros de 2º nível. Os monstros aparecem na área de alcance da magia, em qualquer posição determinada pelo mago. Eles atacam os oponentes do mago da melhor maneira que puderem, até que lhes seja ordenado o contrário, a duração da magia expire, ou os monstros morram. Essas criaturas não fazem teste de moral, e desaparecem quando mortas. Se não houver oponentes para combater, executam outros serviços para o mago, se ele puder se comunicar eficientemente e as ordem forem executáveis. Os componentes materiais são uma sacola pequena, e uma minúscula vela, que não precisa estar acesa."
+}

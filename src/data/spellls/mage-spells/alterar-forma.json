@@ -1,0 +1,10 @@
+{
+    "name": "Alterar Forma",
+    "level": 9,
+    "school": "Alteração",
+    "castingTime": "9",
+    "duration": "1 turno/nível",
+    "range": "0",
+    "area": "O mago",
+    "description": "Com essa magia, o mago pode assumir a forma de qualquer criatura com status inferior ao de semideus. Essa restrição significa que o mago não pode reproduzir a aparência de divindades, monstros únicos, e seres similares. O mago transforma-se numa réplica perfeita da criatura que desejar, mas não ganha poderes que dependam da Inteligência da criatura, e nem proteção à magia: habilidades mágicas inatas também não são duplicadas, uma vez que o mago consegue manter sua mente ao assumir a forma desejada. O mago pode transformar-se num grifo e voar, num efreeti e atravessar chamas, num titã e levantar uma casa, etc. Essas criaturas têm o mesmo número de pontos de vida que o mago no momento em que a magia foi executada. Cada alteração de forma é quase instantânea, levando menos de um segundo. Não é necessário um teste de colapso. Exemplo: Um mago está num combate e assume a forma de um fogo- fátuo; quando essa forma deixa de ser útil, ele se transforma num golem de ferro e abandona o local. Perseguido, o mago transforma-se numa pulga e esconde-se num cavalo, saltando dele e convertendo-se num arbusto. Um personagem sob uma determinada forma adota também as fraquezas dessa forma. Se o mago transformar-se em um espectro, ele fica sem poder à luz do dia. e está sujeito a ser controlado ou destruído por clérigos. Ao contrário de efeitos similares, nesse caso o mago não volta à sua forma original se for morto, o que pode dificultar certos tipos de ressurreição. O componente material é um diadema de jade, que custa pelo menos 5.000 po. e é destruído ao final da magia. Dependendo da forma assumida, o mago pode não conseguir mantê-lo preso ao seu corpo. Se o diadema for destruído antes do tempo, o efeito termina. O fato do personagem ser separado do diadema em nada altera o funcionamento da magia."
+}

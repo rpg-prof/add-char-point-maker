@@ -1,0 +1,10 @@
+{
+    "name": "Armadura Arcana",
+    "level": 1,
+    "school": "Conjuração",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "1 criatura",
+    "description": "Através dessa magia, o mago cria um campo de força etéreo equivalente a vestir uma brunea (CA 6) e esta não tem efeito algum sobre uma criatura que já tenha CA 6 ou melhor, Não é cumulativa com o Escudo Arcano, mas é cumulativa com a Destreza, e com guerreiros/magos que possuam o bônus de escudo. Armadura Arcana não atrapalha o movimento, não pesa, não sobrecarrega a criatura nem atrapalha a utilização de magias. Ela dura até ser desfeita com Dissipar Magia ou magia similar, ou até que seu usuário sofra dano suficiente para perder 8 pontos de vida +1 ponto de vida por nível do mago, cumulativamente. É importante notar que o dano não é absorvido pela magia; esta simplesmente dificulta o acerto do oponente, mas seu usuário ainda sofre o dano dos ataques bem-sucedidos. Por exemplo, um mago de 2º nível, ao acordar, utiliza a magia em si mesmo. Horas mais tarde, é atacado por um ladrão que lhe tira 6 pontos de vida com um ataque. O mago vence o ladrão na batalha e é curado. Algum tempo depois, sofre outro ataque que lhe custa mais 7 pontos de vida. Quando este ataque é definido nos dados, ele acontece com a Armadura Arcana ainda protegendo o mago. Ao receber o dano, a Armadura Arcana desfaz- se. Até que isso aconteça, todos os benefícios da CA são recebidos por quem a veste. O componente material é um pedaço de couro finamente curtido que tenha sido benzido por um clérigo."
+}

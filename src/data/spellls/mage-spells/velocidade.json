@@ -1,0 +1,10 @@
+{
+    "name": "Velocidade",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "3",
+    "duration": "3 rodadas + 1 rodada/nível",
+    "range": "60 metros",
+    "area": "Cubo de 12 metros de aresta,",
+    "description": "1 criatura/nível Quando uma criatura recebe essa magia, ela fica com o dobro da velocidade e de ataques por rodada. Uma criatura sob este efeito tem um bônus de iniciativa de -2. Um receptor com Taxa de Movimentação 6 e um ataque por rodada, portanto, passaria a ter Taxa de Movimentação 12 e dois ataques por rodada. A utilização de magia e de efeitos mágicos não é alterada. O mago afeta uma criatura por nível de experiência, sendo que as criaturas mais próximas da área de efeito são afetadas primeiro. Todas as criaturas precisam estar dentro da área de efeito, um cubo com 12 metros de aresta, para serem afetadas. Essa magia anula os efeitos de Lentidão. Adicionalmente, torna os receptores um ano mais velhos, devido ao aumento de seus processos metabólicos. Essa magia não é cumulativa consigo mesma, ou com efeitos mágicos similares. O componente material é um corte de raiz de alcaçuz."
+}

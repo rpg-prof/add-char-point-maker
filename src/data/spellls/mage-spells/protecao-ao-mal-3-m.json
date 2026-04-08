@@ -1,0 +1,10 @@
+{
+    "name": "Proteção ao Mal, 3 m",
+    "level": 3,
+    "school": "Abjuração",
+    "castingTime": "3",
+    "duration": "2 rodadas/nível",
+    "range": "Toque",
+    "area": "Esfera de 3 metros de raio em torno da criatura tocada",
+    "description": "O globo de proteção gerado por essa magia é idêntico em todos os aspectos à magia Proteção ao Mal, embora Proteção ao Mal, 3 m encampe uma área maior e tenha duração mais longa. O efeito é centrado na criatura tocada pelo mago, e move-se com ela. Qualquer criatura beneficiada por ela pode quebrar a aura de proteção contra monstros enfeitiçados ou convocados, entrando voluntariamente em combate com eles. Se uma determinada criatura for grande demais para ser contida na área desta magia. Proteção ao Mal, 3 m, funciona como Proteção ao Mal comum, mas apenas para esta criatura. Para completar essa magia, o mago precisa traçar no chão um círculo de 6 metros de diâmetro com pó de prata. A magia reversa utiliza pó de ferro."
+}

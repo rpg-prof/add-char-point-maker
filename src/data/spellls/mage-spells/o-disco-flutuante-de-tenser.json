@@ -1,0 +1,10 @@
+{
+    "name": "O Disco Flutuante de Tenser",
+    "level": 1,
+    "school": "Evocação",
+    "castingTime": "1",
+    "duration": "3 turnos + 1 turno/nível",
+    "range": "20 metros",
+    "area": "Especial",
+    "description": "Com essa magia, o mago cria um campo de força mágica, ligeiramente côncavo, conhecido como O Disco Flutuante de Tenser (que recebeu este nome graças ao famoso mago, cuja ganância e talento para encontrar tesouros tornaram-se conhecidos). O disco tem 1 metro de diâmetro e suporta 50 quilos por nível de experiência do mago. O disco flutua a 1 metro do chão e mantém-se sempre na horizontal. Ele voa a comando do mago, contanto que o mago não se afaste dele mais que 20 metros, e o disco seguirá a uma movimentação de no máximo 6. Senão for guiado pelo mago, o disco trata de segui-lo, mantendo uma distância constante de 2 metros. Se o mago move-se para além de 20 metros do disco, seja por mover-se rapidamente, voar, teleportar-se ou a duração da magia acabar, o disco desaparece, e os objetos sobre ele caem. O componente material é 1 gota de mercúrio."
+}

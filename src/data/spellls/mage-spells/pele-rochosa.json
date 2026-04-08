@@ -1,0 +1,10 @@
+{
+    "name": "Pele Rochosa",
+    "level": 4,
+    "school": "Alteração",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Uma criatura",
+    "description": "Quando essa magia é utilizada, ela confere ao receptor uma imunidade quase total a ataques físicos, sejam armas, garras, dentes, projéteis — tanto faz. Mesmo uma Espada Cortante não pode afetar uma criatura que esteja sob eleito dessa magia, nem uma pedra lançada por um gigante, nem uma mordida de cobra, etc. Entretanto, ataques mágicos como Bola de Fogo, Dardos Místicos, Relâmpago e similares, funcionam normalmente sobre o receptor. Essa magia bloqueia 1d4 ataques, mais um ataque para cada dois níveis de experiência que o mago que lançou a magia possua. Por ataque entende-se qualquer ataque sofrido pela criatura, não importando se a acertou, nem se foi físico ou mágico. Por exemplo, Pele Rochosa lançado por um mago de 9º nível protegeria o receptor de 1d4 + 4 ataques. Um grifo que atacasse o receptor reduziria a proteção em três a cada rodada. Quatro dardos criados pela magia Dardos Místicos cancelariam quatro proteções concedidas pela Pele Rochosa, além de causarem dano normalmente. Os componentes materiais são pó de diamante e granito aspergidos sobre a pele do receptor. Componentes: V, G, M Resistência: Nenhuma"
+}

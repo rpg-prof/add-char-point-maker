@@ -1,0 +1,10 @@
+{
+    "name": "Apagar",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "Permanente",
+    "range": "30 metros",
+    "area": "1 pergaminho ou 2 pág.",
+    "description": "Apagar remove o texto, mágico ou mundano, de um pergaminho ou de uma ou duas páginas de papel, papiro ou superfícies similares. Ela remove Runas Explosivas, Símbolo de Proteção, O Selo da Serpente Sépia, mas não remove Escrita Ilusória ou Símbolo (veja estas magias.) Escritas não-mágicas são imediatamente apagadas se o mago as estiver tocando. Se ele não estiver tocando na escrita, a chance de apagá-la é de 90%. Escritas mágicas precisam ser tocadas para serem apagadas e a chance de apagá-las é de 30% mais 5% por nível do mago, até o máximo de 90%. Por exemplo, um mago de 1º nível tem 35% de chance e um de 2º nível tem 40%."
+}

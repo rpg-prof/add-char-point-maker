@@ -1,0 +1,10 @@
+{
+    "name": "Aprisionamento",
+    "level": 9,
+    "school": "Abjuração",
+    "castingTime": "7",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "1 criatura",
+    "description": "Uma pessoa tocada por um mago que executou essa magia será mantida num estado de animação suspensa muito semelhante ao gerado por uma Êxtase Temporal, numa esfera muito abaixo da superfície da terra. A vítima fica presa nessa esfera até que o reverso desse efeito, que requer o nome e a história da criatura, seja utilizado para libertá-la. Procurar através de efeitos de adivinhação, geralmente não revela que um ser foi aprisionado com essa magia. Esse efeito funciona apenas se o nome da criatura e sua história forem conhecidos pelo mago. O reverso, Libertação, lançado sobre o local onde a vítima foi aprisionada e afundou na terra, faz com que ela reapareça. Se o mago não disser corretamente o nome e a história da criatura que deseja libertar, há 10% de chance que uma a cem outras criaturas sejam soltas simultaneamente. Nota: Os detalhes exatos dessas criaturas libertadas ficam a critério do Mestre. Um método aleatório consiste em jogar o d1OO duas vezes. Os resultados devem ser multiplicados entre si, divididos por 100 e arredondados para o número inteiro mais próximo. Cada criatura libertada tem apenas 10% de chance de estar na área do mago. Se os monstros estão sendo gerados aleatoriamente, jogue 1d20 para determinar o nível do monstro, sendo que um resultado de 9 ou mais indica um monstro de 9º nível. Os monstros exatos devem ser determinados nas tabelas do Mestre. Exemplo: Os resultados dos dados foram 22 e 60.0 número de monstros libertados é 22 x 60 - 1.320 :100 = 13. Treze monstros são libertados. Como cada um tem 10% de chance de estar na área do mago, ele provavelmente encontrará apenas um ou dois deles."
+}

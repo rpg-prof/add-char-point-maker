@@ -1,0 +1,10 @@
+{
+    "name": "Clarividência",
+    "level": 3,
+    "school": "Adivinhação",
+    "castingTime": "3",
+    "duration": "1 rodada/nível",
+    "range": "Especial",
+    "area": "Especial",
+    "description": "Clarividência permite ao mago concentrar-se em um certo local, e enxergar qualquer imagem que seria visível no ponto em que a magia foi focalizada. A distância entre o mago e o foco da magia não importa, mas o lugar deve ser conhecido (seu quarto, laboratório, etc.) ou óbvio (atrás de uma porta, sobre uma árvore, etc.). A luz também importa, já que a magia não permite o uso de Infravisão ou de magias que melhorem a visão. Se a área está sob escuridão mágica, apenas esta escuridão é vista. Se a área está sob escuridão natural, o alcance da visão fornecida pela magia cai para apenas 3 metros do ponto focal. Caso a área esteja iluminada, o mago pode ver normalmente, de acordo com as regras para luz e visão. Folhas de chumbo ou proteções mágicas impedem seu funcionamento, e o mago recebe uma indicação de que a magia falhou. Clarividência funciona apenas no mesmo plano de existência do mago. A magia cria um sensor invisível que pode ser desfeito pela Dissipar Magia. O componente material é uma glândula pineal pulverizada."
+}

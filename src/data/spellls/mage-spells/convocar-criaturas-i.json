@@ -1,0 +1,10 @@
+{
+    "name": "Convocar Criaturas I",
+    "level": 3,
+    "school": "Conjuração/Convocação",
+    "castingTime": "3",
+    "duration": "2 rodadas +1 rodada/nível",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "Uma rodada depois da utilização dessa magia, são conjuradas pelo mago 2d4 criaturas de 1º nível, escolhidas ou sorteadas pelo Mestre em sua própria tabela de encontros, ou na tabela fornecida pelo Livro dos Monstros. Os monstros aparecem na área determinada pelo alcance da magia, em qualquer posição determinada pelo mago. Eles atacam os oponentes do mago da melhor maneira que puderem, até que lhes seja ordenado o contrário, a duração da magia expire, ou os monstros morram. Essas criaturas não precisam fazer teste de moral, e desaparecem quando mortas. Se não houver oponentes para lutar, essas criaturas podem executar outros serviços para o mago, desde que ele possa se comunicar eficientemente com elas, e se as criaturas puderem executar as ordens. Há raras histórias de aventureiros que desapareceram, convocados por magos poderosos, através dessa magia. As criaturas assim convocadas lembram-se de todos os detalhes de sua viagem. Os componentes materiais são uma sacola pequena e uma minúscula vela, que não precisa estar acesa."
+}

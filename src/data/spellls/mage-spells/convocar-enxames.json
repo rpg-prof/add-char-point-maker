@@ -1,0 +1,10 @@
+{
+    "name": "Convocar Enxames",
+    "level": 2,
+    "school": "Conjuração/Convocação",
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "60 metros",
+    "area": "Cubo de 3 metros de aresta",
+    "description": "O enxame de criaturas (definido pelos dados segundo a tabela abaixo, ou escolhido pelo Mestre) chamado pela magia Convocar Enxames, vai atacar violentamente todas as criaturas na área escolhida pelo mago. Criaturas defendendo-se ativamente contra o Enxame, e privando-se de todas as outras ações, perdem 1 ponto de vida para cada rodada que permanecerem dentro dele. Aquelas fazendo outras coisas, inclusive tentando deixar a área do Enxame, sofrem a perda de 1d4 pontos de vida + 1 ponto a cada três níveis do mago. Obviamente é impossível lançar magias de dentro do Enxame. Força obtida 1d6 pontos 1d6 pontos 1d8 pontos 1d4 pontos Resultado no d100 Tipo de Enxame 01-40 Ratos 41-70 Morcegos 71-80 Aranhas 81-90 Centopéias/Besouros 91-100 Insetos Voadores O Enxame não pode ser combatido efetivamente com armas, mas fogo e efeitos de área podem forçá-lo a dissipar-se. Ele se dissipa ao sofrer 2 pontos de dano por nível do mago que o criou, ou seja, 10 pontos de dano, se o mago que o criou era de 5º nível. Proteção ao Mal mantém o Enxame à distância, e alguns efeitos de área, como Lufada de Vento ou Névoa Fétida o dissipam imediatamente, se apropriados (Lufada de Vento, por exemplo, só dispersa Enxames de criaturas voadoras). O mago precisa ficar concentrado para manter o Enxame coeso. Se ele se desconcentrar, a magia se dissipará em duas rodadas. O Enxame não se move, uma vez conjurado. O componente material é um pedaço de pano vermelho."
+}

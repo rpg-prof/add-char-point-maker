@@ -1,0 +1,10 @@
+{
+    "name": "Claraudiência",
+    "level": 3,
+    "school": "Adivinhação",
+    "castingTime": "3",
+    "duration": "1 rodada/nível",
+    "range": "Especial",
+    "area": "Especial",
+    "description": "Claraudiência permite ao mago concentrar-se em um certo local, e ouvir em sua mente qualquer som que esteja a até 20 metros de distância desse ponto. A distância entre o mago e o ponto focal da magia não importa, mas o lugar deve ser conhecido (seu quarto, seu laboratório, etc.) ou óbvio (atrás de uma poria, sobre uma árvore, etc.). Apenas sons normalmente detectados pelo mago podem ser percebidos por essa magia. Folhas de chumbo ou proteções mágicas impedem seu funcionamento, e o mago recebe uma indicação de que ela falhou. A magia funciona apenas no mesmo plano de existência do mago e cria um sensor invisível que pode ser desfeito por Dissipar Magia. O componente material é um chifre de pelo menos 100 po de valor."
+}

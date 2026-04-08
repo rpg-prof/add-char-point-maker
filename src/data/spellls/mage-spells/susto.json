@@ -1,0 +1,10 @@
+{
+    "name": "Susto",
+    "level": 1,
+    "school": "Ilusão/Visão",
+    "castingTime": "1",
+    "duration": "Especial",
+    "range": "0",
+    "area": "1 criatura a até 10 metros de distância",
+    "description": "Susto permite ao mago manipular os temores naturais de uma criatura, fazendo com que ela pense que o personagem é algo (ou alguém) muito temido. Apesar de não saber qual é o medo da criatura, o mago avança sobre ela, e se a vítima não obtiver sucesso em um teste de resistência à magia, ela fugirá do mago com a máxima velocidade, sem soltar os objetos que está carregando. A criatura tem uma penalidade de -1 para cada dois níveis do mago, para um máximo de -6 se o mago for de 12º nível ou maior. Neste teste, um 20 natural tem sempre sucesso, não importando os modificadores. Embora o mago não persiga a criatura, um espectro da própria mente da vítima a persegue, e ela deve testar a sua resistência à magia toda rodada, sem penalidades, a partir do primeiro teste, só parando de fugir ao obter um sucesso. Essa magia só funciona em criaturas com Inteligência maior que 2, e não funciona em mortos-vivos."
+}

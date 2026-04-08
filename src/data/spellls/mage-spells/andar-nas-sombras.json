@@ -1,0 +1,10 @@
+{
+    "name": "Andar nas Sombras",
+    "level": 7,
+    "school": "Ilusão, Encantamento",
+    "castingTime": "de 1 a 4 dias",
+    "duration": "6 turnos/nível",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Para utilizar essa magia, o mago deve estar em uma área extremamente sombria. O mago e qualquer criatura que ele toque serão transportados para a borda do plano Material Primário, na fronteira do Plano das Sombras. Nessa região, o mago pode se mover a até 7 quilômetros por turno, movendo-se normalmente nas bordas do Plano das Sombras, mas muito rápido em relação ao plano Material Primário. Quando atingir o local desejado (esse momento é pressentido), o mago só precisa sair da fronteira com o Plano das Sombras e voltar ao seu próprio plano para atingir a destinação desejada. Essa é uma forma muito rápida de se viajar. Andar nas Sombras também pode ser utilizada para atingir outros planos que tangenciem o Plano das Sombras, mas isso requer um viagem potencialmente perigosa. Qualquer criatura tocada pelo mago quando o efeito é lançado também faz a transição para a Fronteira do Plano das Sombras, e pode optar entre seguir o mago, vagar pela Terra da Sombra ou voltar ao plano Material Primário (50% de chance para cada resultado caso ela se perca ou seja abandonada). Criaturas que não desejam fazer a transição recebem um teste de resistência à magia. Se passarem, o efeito é anulado."
+}

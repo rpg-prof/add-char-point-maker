@@ -1,0 +1,10 @@
+{
+    "name": "Lufada de Vento",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "3",
+    "duration": "1 rodada",
+    "range": "0",
+    "area": "3 metros de largura, 10 metros /nível de comprimento",
+    "description": "Quando essa magia é utilizada, uma forte lufada de vento surge a partir do mago e se move na direção em que ele está voltado. A força deste vento (de aproximadamente 50 quilômetros/hora) é suficiente para apagar velas, tochas e chamas desprotegidas. Chamas protegidas têm 5% de chance por nível do mago de serem apagadas. A magia também faz com que chamas, como as de fogueiras, propaguem-se na direção do vento por 1d4 x 50 centímetros. Esta lufada de ar joga pequenas criaturas voadoras para trás a 1d6 x 10 metros, e impede que criaturas voadoras de tamanho médio movam-se contra o vento. O efeito deixa criaturas maiores que isso com metade da velocidade de vôo por uma rodada. Além disso, objetos soltos são arremessados, vapores e nuvens são dispersos e criaturas levitando são jogadas para trás. Sua área de efeito tem 3 metros de largura e TO metros de comprimento por nível do mago, ou seja, com um mago de 8º nível teria uma área de 3 metros de largura e 80 metros de comprimento. O componente material é a semente de algum legume."
+}

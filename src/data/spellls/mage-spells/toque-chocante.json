@@ -1,0 +1,10 @@
+{
+    "name": "Toque Chocante",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Quando utiliza essa magia, o mago cria em sua mão uma poderosa carga elétrica que é descarregada na criatura tocada. Dura uma rodada por nível do mago ou até ser descarregada quando ele toca uma criatura. A magia causa a perda de 1d8 pontos de vida, mais 1 ponto de dano por nível de experiência do mago, ou seja, um mago de 5º nível causará um dano de 1d8+5 pontos de vida. O mago precisa tocar a criatura para que ela seja afetada, ou tocar um condutor elétrico, como uma barra de ferro, que, por sua vez, esteja em contato com a criatura a ser afetada. Um toque de uma criatura no mago não descarrega a magia."
+}

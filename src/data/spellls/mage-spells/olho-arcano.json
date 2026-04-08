@@ -1,0 +1,10 @@
+{
+    "name": "Olho Arcano",
+    "level": 4,
+    "school": "Alteração",
+    "castingTime": "1 turno",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "Especial",
+    "description": "Quando essa magia é lançada, o mago cria um olho invisível que lhe transmitirá informações visuais. O olho viaja a uma velocidade de 10 metros por rodada, observando a área da mesma forma que um humano observaria, olhando primariamente para o chão, ou viaja a 3 metros por rodada, caso examine o teto e as paredes além do chão. O olho pode ver com Infravisão a até 3 metros de distância, e com visão normal a até 20 metros em áreas claramente iluminadas. O olho pode viajar em qualquer direção enquanto a magia durar; tem substância e uma forma que pode ser detectada magicamente (Detectar invisibilidade, por exemplo). Barreiras sólidas impedem a passagem do Olho Arcano, embora ele possa passar por frestas de até 3 centímetros de diâmetro. Enxergar usando o Olho Arcano requer concentração da parte do mago. Se ele perder a concentração, a magia não é cancelada. O Olho simplesmente fica inerte, até que o mago concentre-se novamente, caso a duração da magia o permita. Os poderes do Olho não podem ser melhorados por magias. O mago está sujeito a ataques visuais dirigidos ao Olho. Dissipar Magia, usada no Olho ou no mago, pode cancelar essa magia normalmente. Com respeito à escuridão e cegueira, o Olho Arcano é considerado um órgão extra-sensorial do mago. O componente material é um punhado de pêlos de morcego. ## Magias Arcanas do 5º Círculo"
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Projetar Imagem",
+    "level": 6,
+    "school": "Alteração, Ilusão/Visão",
+    "castingTime": "6",
+    "duration": "1 rodada/nível",
+    "range": "10 metros /nível",
+    "area": "Especial",
+    "description": "Através dessa magia, o mago cria uma duplicata imaterial de si mesmo, projetando-a em qualquer ponto dentro do alcance do efeito. Essa imagem reproduz as ações realizadas pelo mago original. Para fazê-la agir de outro modo, o mago deve concentrar-se (sua movimentação cai pela metade e ele está impedido de fazer ataques). A imagem pode-ser desfeita apenas através de Dissipar Magia, ou por um comando do mago; ataques passam diretamente através dela, e não a afetam. A imagem deve permanecer visível para o mago durante todo o tempo; se a visão do mago for obstruída, a magia termina. Note que, se o mago estiver invisível quando criar a imagem, ele estará produzindo uma réplica invisível ao menos enquanto durar o efeito da magia de invisibilidade (o mago pode lançar Detectar invisibilidade para ver a imagem, se quiser). Se o mago fizer uso de Poria Dimensional, Teleportação, Mudança de Plano ou qualquer efeito similar que quebre sua linha de visão, a magia terminará. O componente material é uma pequena réplica (boneco) do mago."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Runas Explosivas",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "3 metros de raio",
+    "description": "ou ½ Ao escrever Runas Explosivas sobre um livro, mapa ou qualquer objeto que possa conter informações escritas, o mago impede que tais informações sejam lidas por pessoas não-autorizadas. É muito difícil detectar a armadilha que Runas Explosivas escondem: se o personagem praticar magia, ele tem 5% de chance em cada nível, enquanto um ladrão tem somente 5%. Magias e itens mágicos, que detectam armadilhas, sempre percebem o efeito escondido nas Runas Explosivas. Quando lidas, Runas Explosivas explodem causando a perda de 6d4 + 6 pontos de vida, e o personagem não tem direito ao teste de resistência. Todas as criaturas que estejam a até 3 metros da área de efeito sofrem o mesmo dano, ou metade, se passarem nos seus testes de resistência. O mago responsável pela armadilha, ou qualquer outra pessoa a quem ele instrua, pode ler Runas Explosivas sem perigo de detoná- las. O mago que escreveu pode removê-las quando quiser. Outros só podem removê-las com Dissipar Magia ou Apagar. O item onde Runas Explosivas foram escritas é normalmente destruído na explosão, a não ser que seja feito de uma substância imune ao dano causado por fogo (veja a resistência dos itens no Livro do Mestre)."
+}

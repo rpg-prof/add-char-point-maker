@@ -1,0 +1,10 @@
+{
+    "name": "Cristalização",
+    "level": 9,
+    "school": "Alteração",
+    "castingTime": "",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "60 centímetros cúbicos/nível",
+    "description": "Essa magia faz com que um metal de qualquer tipo seja sólido como adamantite ou maleável como ouro se transforme em uma substância quebradiça, semelhante ao cristal. Dessa forma, uma espada, um escudo, uma armadura de metal ou até um golem de ferro podem ser convertidos em objetos de cristal delicado. Essa magia não pode ser revertida por menos que um Desejo, um Dissipar Magia não terá eleito. O mago precisa tocar o receptor fisicamente. Se o receptor for um inimigo ou estiver sendo carregado por um inimigo, o mago deve entrar em combate corpo a corpo e acertar um ataque para conseguir tocá-lo. Um único item de metal pode ser afetado por essa magia. Então, se uma armadura for transformada em cristal, o escudo não será. Todos os itens mágicos têm direito a um teste de resistência a essa magia, igual a 5% vezes seu bônus mágico. Uma armadura +5 tem 25% de chance de resistir. Uma espada +1/+3 tem 10% de chance, calculada pela média dos dois bônus. Um golem de ferro tem uma chance de 15%, por ser afetado apenas por armas de encantamento +3 ou melhor. Artefatos e relíquias compostos de melai podem ser afetados a critério do Mestre, mas é pouco provável que isso aconteça. Itens afetados devem ser protegidos imediatamente, ou correm o risco de serem destroçados e permanentemente destruídos, caso sejam golpeados por armas de metal, ou por qualquer objeto pesado, mesmo um cajado de madeira."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Respirar na Água",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "1 turno",
+    "duration": "1 hora/nível + 1d4 horas",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "O receptor de Respirar na Água adquire a capacidade de respirar na água livremente enquanto a magia durar. O mago pode tocar mais de uma criatura ao utilizar a magia, mas nesse caso a duração da magia é dividida pelo número de criaturas tocadas. O reverso dessa magia, Respirar no Ar, funciona de maneira similar, mas permite que criaturas que respirem água passem a respirar ar. O componente material é um pedaço de cana, bambu ou palha."
+}

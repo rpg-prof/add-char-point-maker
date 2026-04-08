@@ -1,0 +1,10 @@
+{
+    "name": "Padrão Hipnótico",
+    "level": 2,
+    "school": "Ilusão/Visão",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "30 metros",
+    "area": "Cubo de 10 metros de aresta",
+    "description": "Quando essa magia é lançada, o mago cria um caleidoscópio de cores no ar. Este caleidoscópio faz com que qualquer criatura que o observe, e que falhe em um teste de resistência à magia, seja cativada pelas cores ondulantes. Uma vez cativadas, as criaturas não conseguem realizar nenhuma ação além de olhar, hipnotizadas, o caleidoscópio, e só voltam a poder agir quando o caleidoscópio desaparecer, o que acontece duas rodadas depois do mago deixar de se concentrar para mantê-lo. O mago pode manter o caleidoscópio enquanto quiser se concentrar para tal. A magia consegue cativar um limite máximo de 24 dados de vida, e todas as criaturas cativadas precisam estar dentro da área de efeito. Um ataque que cause dano a uma criatura cativada a liberta da magia imediatamente. O mago não precisa pronunciar nenhuma palavra para lançar esta magia, mas deve fazer os gestos mágicos apropriados enquanto segura um incenso aceso ou um cetro transparente de cristal, com material brilhantes."
+}

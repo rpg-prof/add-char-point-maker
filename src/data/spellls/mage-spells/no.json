@@ -1,0 +1,10 @@
+{
+    "name": "Nó",
+    "level": 2,
+    "school": "Encantamento",
+    "castingTime": "2",
+    "duration": "1 rodada/nível",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "Quando essa magia é utilizada, o mago pode comandar qualquer objeto inanimado semelhante a uma corda, incluindo correntes, arames, cordões, até um cabo. A magia afeta uma corda de até 15 metros (3 centímetros de diâmetro), mais 1,5 metro por nível. Este comprimento será reduzido em 50% para cada 3 centímetros a mais na espessura, e aumentará em 50% para cada 1,5 centímetro a menos na espessura. Os comandos possíveis são Enrolar (enrolar para ser guardada), Enrolar & Fazer Nó, Fazer Voltas, Formar um Laço, Amarrar & Fazer Nó, e o reverso destas ordens (desenrolar, etc.). Somente um comando poderá ser dado a cada rodada. A corda só poderá envolver ou prender uma criatura ou objeto que esteja a até 30 centímetros de distância — ela não irá serpentear seguindo um alvo — portanto a corda deverá ser atirada para perto do alvo desejado. Note que a corda ou qualquer nó feito por ela não são mágicos. Uma corda normal terá CA 6 e irá romper-se ao levar 4 ou mais pontos de dano. A corda não provocará dano a criaturas ou objetos a ela presos, mas poderá ser utilizada para fazer criaturas tropeçarem ou para prender um oponente que falhar no teste de resistência à magia."
+}

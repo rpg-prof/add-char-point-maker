@@ -1,0 +1,10 @@
+{
+    "name": "Detectar Mortos-Vivos",
+    "level": 1,
+    "school": "Adivinhação",
+    "castingTime": "1",
+    "duration": "3 turnos",
+    "range": "0",
+    "area": "20 metros+3 metros/nível",
+    "description": "Essa magia permite detectar todos os mortos-vivos que estejam dentro da área de efeito à partir da direção em que o mago estiver olhando. A área de eleito tem 3 metros de largura e 20 metros de comprimento, sendo que o comprimento aumenta em 3 metros para cada nível de experiência que o mago possuir. (Um mago de 7º nível pode revelar mortos-vivos em uma área de 3 metros de largura e 41 metros de comprimento.) Procurar em uma direção demora uma rodada, e o mago deve estar imóvel. Embora a magia indique a direção. ela não indica a localização específica ou a distância. A magia consegue perceber mortos-vivos atrás de obstáculos, mesmo paredes, mas é bloqueada por 30 centímetros de pedra. 1 metro de terra ou madeira, ou por uma placa de metal. A magia não determina o tipo de morto-vivo presente, apenas a sua presença. Seu componente material é um pouco de terra de um túmulo."
+}

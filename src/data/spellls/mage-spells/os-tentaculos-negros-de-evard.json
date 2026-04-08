@@ -1,0 +1,10 @@
+{
+    "name": "Os Tentáculos Negros de Evard",
+    "level": 4,
+    "school": "Conjuração/Convocação",
+    "castingTime": "4 turnos",
+    "duration": "1 hora/nível",
+    "range": "30 metros",
+    "area": "10 m quadrados/nível",
+    "description": "Essa magia cria diversos tentáculos negros e pegajosos. Esses tentáculos parecem sair da terra, chão, ou qualquer substância sob os pés das criaturas na área de efeito, incluindo água. Cada tentáculo tem 3 metros de comprimento, CA 4 e tantos pontos de vida quanto o mago que os criou tem níveis de experiência. São criados 1d4 desses tentáculos, mais um por nível de experiência do mago. Qualquer criatura que esteja ao alcance dos tentáculos está sujeita a receber um ataque. O alvo desse ataque deve testar sua resistência à magia. Se obtiver sucesso, o alvo sofre 1d4 pontos de dano pelo contato com o tentáculo, que é destruído. Se falhar, o alvo recebe 2d4 pontos de dano e o tentáculo enrola-se nele. O dano será de 3d4 nas rodadas subseqüentes. Esses tentáculos não possuem Inteligência, portanto há a possibilidade de que ataquem árvores, pilares, o mago que criou a magia, ou de que continuem a apertar uma criatura já morta. Se o tentáculo conseguiu prender uma criatura, ele a soltará apenas ao final da magia, ou se for destruído. O componente material é um tentáculo de um polvo ou de uma lula gigante."
+}

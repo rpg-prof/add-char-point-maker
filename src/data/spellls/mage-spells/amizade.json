@@ -1,0 +1,10 @@
+{
+    "name": "Amizade",
+    "level": 1,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "1",
+    "duration": "1d4 rod + 1 rod/nível",
+    "range": "0",
+    "area": "20 metros de raio",
+    "description": "Essa magia faz com que o mago ganhe imediatamente 2d4 pontos de Carisma. Criaturas inteligentes, que estejam dentro da área de efeito, precisam fazer imediatamente novos testes de reação, baseados no novo Carisma do mago. Aqueles que obtiverem resultados favoráveis tendem a ficar muito impressionados com ele e se esforçarem para agradá-lo e/ou ajudá-lo, no que for mais apropriado para a situação. Burocratas passam a ser rápidos e solícitos, guardas passam a ser atenciosos, criaturas que estejam atacando podem poupar a vida do mago, capturando-o. Quando a duração acaba, as criaturas percebem que foram influenciadas, e suas reações devem ser determinadas pelo Mestre. Os componentes materiais são: giz (ou farinha branca), fuligem e cinabre, que são aplicados ao rosto do mago antes que ele complete a magia."
+}

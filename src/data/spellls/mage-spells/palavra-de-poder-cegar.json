@@ -1,0 +1,10 @@
+{
+    "name": "Palavra de Poder, Cegar",
+    "level": 8,
+    "school": "Conjuração/Convocação",
+    "castingTime": "1",
+    "duration": "Especial",
+    "range": "5 metros/nível",
+    "area": "Esfera de 5",
+    "description": "metros de raio Essa magia faz com que uma ou mais criaturas que estejam dentro da área de efeito fiquem cegas. O mago escolhe uma criatura para ser o centro do efeito, que se espalha de dentro para fora, afetando primeiro as criaturas que estiverem com menos pontos de vida. Alternativamente, a magia pode ser utilizada apenas sobre uma vítima. Criaturas que no momento da execução dessa magia estejam com 100 pontos de vida, ou mais, não são atingidas pela cegueira, mas também não entram no cálculo de pontos de vida afetados. Essa magia afeta um máximo de 100 pontos de vida em criaturas, mas a sua duração depende do número de pontos de vida afetados. Se 25 pontos de vida ou menos forem afetados, a magia é permanente. De 26 a 50 pontos de vida, dura 1d4 + 1 turnos, e de 51 a 100 pontos de vida a duração é de 1d4 +1 rodada. Uma criatura não pode ser parcialmente afetada. Ou ela fica cega, se todos os seus pontos de vida puderem ser afetados, ou não. Essa forma de cegueira pode ser removida por um Curar Cegueira ou por Dissipar Magia."
+}

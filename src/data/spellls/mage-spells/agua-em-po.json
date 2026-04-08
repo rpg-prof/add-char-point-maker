@@ -1,0 +1,10 @@
+{
+    "name": "Água em Pó",
+    "level": 6,
+    "school": "Alteração",
+    "castingTime": "8",
+    "duration": "Permanente",
+    "range": "60 metros",
+    "area": "Um cubo de 3 metros/nível",
+    "description": "Quando essa magia é lançada, a área atingida transforma-se de líquido em pó. Note que, se a água já estiver lamacenta, a área de efeito é dobrada. Se o material a ser transformado for lama úmida, a área é quadruplicada. Se, após a transmutação, ainda houver água em contato com o pó, as duas substâncias irão se misturar normalmente. Apenas o líquido realmente compreendido pela área de efeito no momento da execução é afetado. Lançada sobre misturas, essa magia só afetará a água presente na solução. Poções que contenham água são inutilizadas. Criaturas vivas não são afetadas, exceto as que forem nativas do plano elemental da água. Tais seres devem fazer um teste de resistência à magia. Se falharem, receberão 1d6 pontos de dano por nível do mago. Se obtiverem êxito, receberão apenas metade do dano. Apenas uma criatura pode ser afetada cada vez que esse efeito for executado, a despeito do tamanho da vítima ou da área de efeito da magia. O inverso desse efeito é apenas uma versão mais poderosa de Criar Água, e que requer um punhado de pó como componente adicional. Para qualquer uma das versões, outros componentes necessários são o pó de um diamante que valha pelo menos 500 po e uma concha."
+}

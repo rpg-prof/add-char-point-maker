@@ -1,0 +1,10 @@
+{
+    "name": "Conjurar Animais",
+    "level": 6,
+    "school": "Conjuração/Convocação",
+    "castingTime": "6",
+    "duration": "1 rodada/nível",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "Esse efeito permite ao mago criar magicamente um ou mais mamíferos para atacar seus oponentes. O total de dados de vida dos animais não pode exceder o dobro do nível do mago, se os animais forem determinados aleatoriamente, ou do nível, caso ele requisite um animal específico (veja o Livro do Mestre). Por exemplo, um mago de 12º nível poderia conjurar aleatoriamente dois mamíferos de 12 DV, 4 com 6 DV cada, 6 com 4 DV, 8 com 3 DV, 12 com 2 DV ou 24 com 1 DV. Conte cada bônus de +1 ponto de vida como 1/4 de dado de vida. Os animais conjurados permanecem uma rodada para cada nível de experiência do mago, ou até serem destruídos. Eles seguem o comando verbal do mago, e não hesitarão em atacar eventuais adversários, mas resistem a outras tarefas."
+}

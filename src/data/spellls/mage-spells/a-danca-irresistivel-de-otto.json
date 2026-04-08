@@ -1,0 +1,10 @@
+{
+    "name": "A Dança Irresistível de Otto",
+    "level": 8,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "",
+    "duration": "1d4 + 1 rodadas",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Quando essa magia é lançada sobre uma criatura, o receptor começa a dançar, inclusive arrastando os pés e sapateando. A criatura se vê impossibilitada de fazer qualquer outra coisa que não seja saltitar e girar, o que piora sua CA em 4, anula qualquer utilização de escudo e impede que o receptor obtenha sucesso num teste de resistência, a não ser que tire um 20. Note que o receptor precisa ser tocado, o que exige uma jogada de ataque bem sucedida por parte do mago."
+}

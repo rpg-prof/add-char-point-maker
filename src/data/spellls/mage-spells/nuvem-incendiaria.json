@@ -1,0 +1,10 @@
+{
+    "name": "Nuvem Incendiária",
+    "level": 8,
+    "school": "Alteração, Evocação",
+    "castingTime": "",
+    "duration": "4 rodadas + 1d6 rodadas",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "Esse efeito lembra a nuvem de fumaça produzida pela Pirotecnia, com a exceção de que as dimensões mínimas de uma Nuvem Incendiária são de 3 metros de altura e 6 metros de largura e comprimento. O vapor se move para a frente, e em sua terceira rodada de existência ele irrompe em chamas, causando 1d2 pontos de dano por nível do mago. Na quarta rodada, esse dano passa para 1d4 pontos de dano por nível, e na quinta rodada volta a ser de 1d2 pontos de dano por nível, pois as chamas já estarão se apagando. Nas rodadas subseqüentes, a nuvem pára de pegar fogo, tornando-se uma fumaça inofensiva, que obscurece a visão. Um único teste de resistência bem-sucedido reduz todo o dano causado pela nuvem à metade. Por exemplo: na terceira rodada, todas as criaturas devem testar suas resistências. As que passarem sofrerão metade do dano na terceira, quarta e quinta rodadas, se permanecerem na nuvem. As que falharem sofrerão dano integral na terceira rodada, e na quarta devem testar novamente a resistência. Se passarem, sofrerão metade do dano na quarta e na quinta rodadas. Se falharem, sofrem dano completo na quarta rodada, e na quinta testarão a resistência novamente, e assim por diante. Os componentes materiais dessa magia são uma chama (como na Pirotecnia), um punhado de poeira, e uma raspa da parte inferior de uma pilha de esterco seco."
+}

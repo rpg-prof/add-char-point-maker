@@ -1,0 +1,10 @@
+{
+    "name": "Porta Dimensional",
+    "level": 4,
+    "school": "Alteração",
+    "castingTime": "1 turno",
+    "duration": "Instantânea",
+    "range": "0",
+    "area": "O mago",
+    "description": "Através dessa magia, o mago pode percorrer instantaneamente 30 metros por nível de experiência que possuir. Esta forma especial de teleportação não talha, e o mago sempre chega exatamente ao ponto desejado — seja visualizando a área, ou determinando uma distância e direção, como por exemplo, “300 metros para o norte” ou “Noroeste, 45” para cima, 420 metros de distância”. Se o mago determinar uma localização já ocupada por um corpo sólido, ele fica preso no Plano Astral. Se determinar uma localização onde não possa apoiar seus pés sobre uma superfície sólida - por exemplo, no meio do ar — o mago cairá e sofrerá o dano da queda, a não ser que possa evitá-lo de alguma maneira. Tudo o que o mago veste e carrega, até um máximo de 250 quilos de material não vivo, ou 125 quilos de material vivo, será teleportado com ele. Recuperar-se da utilização da Porta Dimensional leva uma rodada."
+}

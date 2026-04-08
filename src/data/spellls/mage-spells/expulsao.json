@@ -1,0 +1,10 @@
+{
+    "name": "Expulsão",
+    "level": 5,
+    "school": "Abjuração",
+    "castingTime": "1 rodada",
+    "duration": "Permanente",
+    "range": "10 metros",
+    "area": "1 criatura",
+    "description": "Através desse efeito, um mago do Plano Material Primário busca obrigar, ou ajudar, uma criatura de outro plano de existência a retornar. Proteção à magia, se houver, é verificada quando o mago tenta forçar a criatura a voltar ao seu plano. Se a proteção falhar, o nível do mago é comparado ao nível da criatura ou aos seus dados de vida. Se o nível do mago for maior, a diferença deve ser subtraída do teste de resistência à magia da criatura. Se o nível da criatura ou seus dados de vida forem maiores, então a diferença é somada ao teste. Se a criatura deseja ser mandada de volta ao seu plano original, nenhum teste de resistência é necessário (ela escolhe falhar no teste). Se a magia obtiver sucesso, a criatura será instantaneamente enviada. No entanto, a magia tem uma chance de 20% de mandar a criatura afetada para o plano errado. Chance de Chance de Chance de O componente material é qualquer item que seja desagradável à Insanidade Conhecimento Veracidade** criatura. 20% 55% (90%) 62% (75%) 25% 60% 65%"
+}

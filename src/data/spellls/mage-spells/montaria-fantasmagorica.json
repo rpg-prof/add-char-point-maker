@@ -1,0 +1,10 @@
+{
+    "name": "Montaria Fantasmagórica",
+    "level": 3,
+    "school": "Conjuração, Visão",
+    "castingTime": "3",
+    "duration": "1 hora/nível",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Com essa magia, o mago pode criar uma criatura quase real, semelhante a um cavalo. Esse cavalo pode ser montado apenas pelo mago que o criou, ou pela criatura tocada no momento em que ele lança a magia. Montaria Fantasmagórica tem o corpo e a cabeça negros, a crina e o rabo acinzentados, e cascos espectrais, cor de fumaça, que não fazem som. Ele não luta, mas animais normais afastam-se dele, temerosos, e apenas monstros têm coragem de atacá-lo. Montaria Fantasmagórica tem uma CA 2 e 7 pontos de vida, mais 1 ponto de vida por nível do mago que o criou. Se perder todos os seus pontos de vida, Montaria Fantasmagórica desaparece. Montaria Fantasmagórica tem uma movimentação de 4 por nível de experiência do mago que lançou a magia, até uma Movimentação máxima de 48. Ele tem o que parece ser uma sela, freios e rédeas. Montaria Fantasmagórica consegue sustentar o peso de seu cavaleiro, mais 5 quilos por nível do mago que o conjurou. Essa montaria ganha certos poderes de acordo com o nível do mago que lança a magia: 8º Nível: A capacidade de passar por terrenos lamacentos ou mesmo pantanosos sem dificuldade alguma. 10º Nível: A capacidade de cavalgar sobre a água como se tosse terra firme. 12º Nível: A capacidade de cavalgar sobre o ar como se fosse terra firme. Isso não permite que Montaria Fantasmagórica decole e voe. Ele pode cruzar abismos ou armadilhas, contanto que mantenha aproximadamente a mesma altitude. 14º Nível: A capacidade de voar como se fosse um pégasso. Ele voa com uma Movimentação de 48, quando comandado. Note que as habilidades recebidas pela montaria incluem as dos níveis anteriores. No 14º nível, o mago cria Montaria Fantasmagórica que voa, cavalga sobre o ar, a água e o terreno pantanoso."
+}

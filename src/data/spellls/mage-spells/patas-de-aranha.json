@@ -1,0 +1,10 @@
+{
+    "name": "Patas de Aranha",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "3 rodadas + 1 rodada/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Patas de Aranha faz com que o receptor da magia possa subir paredes, ou andar de ponta cabeça pelo teto. Criaturas que não queiram ser afetadas pela magia têm direito a uma jogada de resistência à magia e, se obtiverem sucesso, anulam o efeito. A criatura afetada tem que estar com as mãos livres e os pés descalços para subir, desta maneira, com uma movimentação de 6 (ou 3, se estiver com carga máxima). Enquanto a magia durar, o receptor não pode manusear objetos que pesem mais que uma adaga (cerca de meio quilo), porque tais objetos grudam em suas mãos, o que tornaria muito difícil para um mago lançar uma magia, especialmente com componentes materiais. Pode-se arrancar o receptor da parede, ou do teto, puxando-o com força. O Mestre pode permitir uma jogada de resistência ao receptor que queira evitar ser arrancado. A decisão sobre qual das resistências utilizar, deve ser baseada nas circunstâncias, na Força, etc. Por exemplo, uma criatura de Força 12 pode arrancar o receptor se ele talhar em uma jogada de resistência a veneno (que é moderadamente difícil). O mago que lançou esta magia pode removê-la com uma simples palavra. Os componentes materiais são uma gota de betume e uma aranha viva, e ambos precisam ser engolidos pelo receptor da magia."
+}

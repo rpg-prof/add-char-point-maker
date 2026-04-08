@@ -1,0 +1,10 @@
+{
+    "name": "A Espada de Mordenkainen",
+    "level": 7,
+    "school": "Evocação",
+    "castingTime": "1 rodada",
+    "duration": "1 rodada /nível",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "Através dessa magia, o mago materializa um plano tremeluzente de energia, similar à uma espada. Ele pode controlar mentalmente essa arma (mas nesse meio-tempo o mago não pode fazer mais nada, além de se mover), fazendo-a flutuar e atacar como se estivesse sendo usada por um guerreiro com metade do nível do mago, isto é, um mago de 14º nível usará a espada como um guerreiro de 7º nível (use a tabela de guerreiro para calcular as jogadas de ataque). A espada não possui bônus mágico de ataque, mas pode atingir quase todo tipo de oponente, incluindo aqueles que só podem ser feridos por armas +3, adversários astrais, etéreos ou fora de fase. Ela atinge qualquer Categoria de Armadura em um resultado de 1º ou 20 no 1d20 e faz 5d4 pontos de dano em inimigos de tamanho humano ou menor, e 5d6 pontos em oponentes de tamanho maior que o humano. A espada existe até que expire a duração da magia, ou até que o mago a dispense. O componente é uma espada de platina em miniatura, com empunhadura e guarda feitos de cobre e zinco. A miniatura custa 500 po para se construir, e desaparece quando a magia se completa."
+}

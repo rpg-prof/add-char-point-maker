@@ -1,0 +1,10 @@
+{
+    "name": "Parar o Tempo",
+    "level": 9,
+    "school": "Alteração",
+    "castingTime": "",
+    "duration": "Especial",
+    "range": "0",
+    "area": "Esfera de 5 metros de raio",
+    "description": "Quando o mago utiliza esse efeito, ele consegue parar o tempo por uma rodada dentro da área de efeito. Enquanto essa rodada passa para os observadores externos a esfera de efeito, que parece brilhar por um instante, o mago tem 1d3 rodadas para fazer o que quiser, mas todas as outras criaturas que estejam dentro da região afetada (a não ser criaturas únicas, ou divindades) ficam paralisadas, realmente congeladas no tempo entre um momento e o seguinte. Nada pode penetrar a área sem ficar congelado no tempo e, se o mago deixar a esfera, o efeito é cancelado automaticamente. Quando a duração expira, o mago volta a atuar dentro do tempo normal. Nota: É recomendável que o Mestre use um cronômetro ou conte silenciosamente o tempo enquanto esse efeito é utilizado. Se o mago não conseguir realizar o que quer antes que a magia acabe, ele provavelmente será pego em uma situação embaraçosa. A utilização de uma Teleportação antes do efeito terminar é aceitável."
+}

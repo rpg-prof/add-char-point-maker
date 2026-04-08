@@ -1,0 +1,10 @@
+{
+    "name": "Crânio Flutuante",
+    "level": 3,
+    "school": "Necromancia",
+    "castingTime": "4",
+    "duration": "2 rodadas/nível",
+    "range": "Especial",
+    "area": "Especial",
+    "description": "Esta magia cria um crânio humano brilhante com mandíbulas afiadas. O crânio é posicionado a 30 cm acima do ombro do mago; quando o mago se move, o crânio o acompanha. Se o mago parar de se movimentar e se con- centrar, pode comandar mentalmente o Crânio Flutuante em qualquer sentido num raio de 10 metros. O mago pode ver através dos olhos do crânio como se fossem os seus próprios; por exemplo, o Crânio Flutuante poderia ser comandado para investigar uma caverna escura ou espiar ao longo de um muro alto. Além disso, o mago pode comandar o Crânio Flutuante para atacar vítimas com seus dentes afiados. Se a concentração do mago for interrompida enquanto ele estava controlando o crânio, o crânio imediatamente cai ao solo (mas não sofre nenhum dano). Se o mago retoma a concentração, ele pode continuar comandando o crânio. O Crânio Flutuante tem as mesmas estatísticas que o mago, exceto que o crânio tem 3 pontos de vida e inflige 1d6 pontos de dano com sua mordida. Ataques dirigidos contra o crânio não prejudicam o mago, nem danos diri- gidos a este afetam o crânio. O componente material para esta magia é o dente de um crânio humano."
+}

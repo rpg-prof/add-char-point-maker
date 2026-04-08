@@ -1,0 +1,10 @@
+{
+    "name": "Dedo da Morte",
+    "level": 7,
+    "school": "Necromancia",
+    "castingTime": "8",
+    "duration": "Permanente",
+    "range": "60 metros",
+    "area": "1 criatura",
+    "description": "Dedo da Morte suga a energia vital de sua vítima. Se a magia funcionar, o alvo não poderá ser ressuscitado ou revivido. Além disso, se aplicada em vítimas humanas, a magia inicia uma série de mudanças no cadáver. Passados 3 dias, essas mudanças permitem que o mago anime o corpo como um zumbi vudu, sob seu controle. A criação do zumbi se dá através de um ritual que custa pelo menos 1.000 po, mais 500 peças para cada vítima. As mudanças podem ser revertidas antes do ritual através de um Desejo Restrito ou magia similar, lançada diretamente sobre o corpo. Um Desejo será capaz de trazer o corpo de volta à vida. O mago recita a fórmula do Dedo da Morte e aponta o seu dedo indicador para a vítima. Se ela não passar em um teste de resistência à magia, a morte é instantânea. Se passar, o alvo, ainda assim, sofre 2d8 +1 ponto de dano. Se o alvo morrer devido a esse dano, nenhuma mudança interna ocorre, e a vítima pode ser ressuscitada normalmente."
+}

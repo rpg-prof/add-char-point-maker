@@ -1,0 +1,10 @@
+{
+    "name": "Pirotecnia",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "120 metros",
+    "area": "Chama (especial)",
+    "description": "Pirotecnia drena uma chama para produzir um dos dois efeitos seguintes, à escolha do mago. No primeiro, surgem como um show pirotécnico e duram por uma rodada. As luzes criadas, são mais brilhantes que os fogos de artifício normais, e cegam todas as criaturas que estejam a até 40 metros de distância do efeito e consigam vê-lo. As criaturas afetadas têm direito a um teste de resistência à magia para evitar a cegueira; se o teste falhar, a perda da visão dura por 1d4+1 rodadas. Os fogos de artifício preenchem um volume dez vezes maior que o da chama drenada. O segundo efeito também apaga a chama, mas cria uma fumaça espessa, que dura uma rodada para cada nível de experiência do mago. Ela cobre um volume vagamente esférico, que cresce do chão, ou espaço no qual está contido, por exemplo, enchendo uma sala. A fumaça impede a visão além de 1/2 metro e preenche um volume cem vezes maior que a chama drenada. Todas as criaturas dentro da nuvem testam suas resistências contra magia, e, se não passarem, terão uma penalidade de -2 em todas as jogadas de ataque e terão a Classe de Armadura piorada em 2. A magia usa uma chama que esteja dentro de um cubo de 6 metros de aresta, e é imediatamente apagada. Um fogo extremamente grande pode ser apenas parcialmente apagado. Uma criatura da categoria de um elemental do fogo, pode ser utilizada para gerar os efeitos, mas isso causa a ela 1 ponto de dano por nível do mago."
+}

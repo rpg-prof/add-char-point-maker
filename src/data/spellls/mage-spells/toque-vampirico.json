@@ -1,0 +1,10 @@
+{
+    "name": "Toque Vampírico",
+    "level": 3,
+    "school": "Necromancia",
+    "castingTime": "4",
+    "duration": "Um toque",
+    "range": "0",
+    "area": "O mago",
+    "description": "Quando o mago está sob efeito dessa magia e consegue tocar um oponente em corpo a corpo — graças a uma jogada de ataque bem- sucedida —, o adversário perde 1d6 pontos de vida para cada dois níveis do mago, num máximo de 6d6 no 12º nível. A magia expira quando um toque é realizado com sucesso ou depois de um turno. Os pontos de vida perdidos pelo oponente são somados aos do mago, com qualquer quantia que exceda o total normal de pontos de vida do mago, sendo tratada como pontos adicionais temporários. Qualquer dano feito ao mago é subtraído dos pontos temporários, se existirem Depois de uma hora, qualquer quantia de pontos de vida acima do total normal do mago é perdida. A criatura que perdeu os pontos de vida através dessa magia pode recuperá-los fazendo uso de curas mágicas ou normais, ou seja, o seu total normal de pontos não é reduzido. Mortos-vivos não são afetados por esta magia."
+}

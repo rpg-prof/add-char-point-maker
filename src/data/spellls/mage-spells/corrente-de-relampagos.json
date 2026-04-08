@@ -1,0 +1,10 @@
+{
+    "name": "Corrente de Relâmpagos",
+    "level": 6,
+    "school": "Evocação",
+    "castingTime": "6",
+    "duration": "Instantânea",
+    "range": "40 metros + 5 metros por nível",
+    "area": "Especial",
+    "description": "Essa magia cria uma descarga elétrica que começa com um único relâmpago, de 50 centímetros de largura, a partir das pontas dos dedos do mago Com funcionamento diferente do Relâmpago, a Corrente de Relâmpagos atinge inicialmente um objeto ou criatura, e então dirige-se a uma série de outros objetos ou criaturas dentro do alcance, perdendo energia a cada salto A Corrente de Relâmpagos causa inicialmente 1d6 pontos de dano por nível do mago, até um máximo de 12d6 (metade do dano se o objeto ou criatura passar em um teste de resistência contra magia). Depois do primeiro ataque, salta para a criatura ou objeto mais próximo. Cada salto reduz a potência em 1d6 Cada criatura ou objeto mágico atingido passa por um teste de resistência contra magia para receber apenas metade do dano total Corrente de Relâmpagos pode atacar por um número de vezes equivalente ao número de níveis do mago. mas cada vítima pode ser atacada apenas uma vez. Por exemplo, um efeito lançado por um mago de 12º nível pode atacar até doze vezes, causando menos dano a cada impacto O relâmpago continua a atacar até que tenha atingido o número apropriado de vítimas, até que atinja um objeto que o aterre (barras de ferro interconectadas de uma grande cela ou gaiola, uma grande quantidade de líquido, etc.) ou até que não haja mais criaturas ou objetos para atingir. Direção não é um fator determinante para os arcos do relâmpago, mas a distância é. Cada salto não pode exceder o alcance da magia. Se o único arco possível for maior que o alcance, o efeito se dissipa. Criaturas imunes a ataques elétricos podem ser atingidas, embora não recebam dano. Note que é possível para a Corrente de Relâmpagos saltar de volta para o mago! Os componentes materiais são alguns pêlos, um pedaço de âmbar, um bastão de vidro ou cristal e um alfinete de prata por nível do mago."
+}

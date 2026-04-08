@@ -1,0 +1,10 @@
+{
+    "name": "Caçador Invisível",
+    "level": 6,
+    "school": "Conjuração/Convocação",
+    "castingTime": "3-4",
+    "duration": "Especial",
+    "range": "10 metros",
+    "area": "Especial",
+    "description": "Essa magia convoca um Caçador Invisível do plano elemental do Ar. O monstro tem 8 dados de vida, e serve ao mago, cumprindo qualquer tipo de tarefa. O Caçador é um rastreador implacável, e pode encontrar pistas em um local que tenha sido visitado pela presa até 24 horas antes. Ele seguirá as instruções do mago, mesmo que elas o levem a centenas de milhares de quilômetros de distância. Uma vez recebida uma ordem, o monstro a obedecerá até que a tarefa seja completada. Entretanto, a criatura serve por obrigação, e não lealdade. Por isso, Caçadores dificilmente apreciam missões prolongadas ou complexas, e tentam perverter convenientemente as instruções quando se deparam com trabalhos desse tipo. Os componentes materiais são incenso e um chifre esculpido na forma de um crescente."
+}

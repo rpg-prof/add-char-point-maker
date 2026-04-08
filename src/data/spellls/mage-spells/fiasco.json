@@ -1,0 +1,10 @@
+{
+    "name": "Fiasco",
+    "level": 4,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "4",
+    "duration": "1 rodada/nível",
+    "range": "10 metros/nível",
+    "area": "Cubo de 10 m/ aresta",
+    "description": "Essa magia cria uma área onde todas as criaturas ficam repentinamente atrapalhadas e desajeitadas. Criaturas que correm, tropeçam e caem, as que pegam um item, deixam-no cair, aquelas manuseando armas também as perdem desajeitadamente. Recuperar-se da queda, ou recuperar os itens perdidos, leva geralmente uma rodada. Itens frágeis podem se quebrar ao cair. Se uma criatura consegue resistir à magia, ela age normalmente até o final da rodada, mas, se permanecer dentro da área de efeito da magia, a criatura deverá testar sua resistência à cada rodada. Alternativamente, essa magia pode ser lançada sobre uma única criatura. Se a vitima falhar no seu teste de resistência, ela sofre seus efeitos até que a duração expire. Se a criatura obtiver sucesso, ela ficará mais lenta, como se afetada por Lentidão. O componente material é um pedaço de nata solidificada."
+}

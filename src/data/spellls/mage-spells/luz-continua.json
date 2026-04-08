@@ -1,0 +1,10 @@
+{
+    "name": "Luz Contínua",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "1 turno",
+    "duration": "Permanente",
+    "range": "60 metros",
+    "area": "18 metros de raio",
+    "description": "Essa magia é similar a magia Luz, com as seguintes diferenças: ela cria um brilho tão forte quanto o da luz do dia, e dura até que seja anulada por uma escuridão mágica ou pela Dissipar Magia. Criaturas que têm penalidades por causa da claridade também sofrem estas penalidades dentro de sua área de efeito. Como a magia Luz, essa magia pode ter como receptor o ar, um objeto ou uma criatura, A criatura tem direito a testar sua resistência à magia, ou ficará cega enquanto a magia durar. Caso ela passe no teste, terá efeito 30 centímetros atrás da criatura. Se esta foi atingida e ficou cega, passará a ter penalidades de -4 em suas jogadas de ataque e resistência, e terá sua CA piorada em 4. Se a magia for utilizada em um objeto, e este for colocado sob uma cobertura que impeça a passagem da luz, os efeitos da magia serão anulados até que a cobertura seja removida. Luz Contínua, se trazido para uma área de escuridão mágica (ou vice- versa) será temporariamente anulado. Desta forma, a iluminação será a que existiria no local caso nenhuma das magias houvesse sido utilizada. A utilização direta de Luz Contínua contra uma magia de escuridão, mais fraca ou similar, cancela ambas. A magia consome lentamente o material utilizado, mas o processo geralmente leva mais tempo que uma campanha normal. Materiais extremamente duros e caros podem durar centenas ou milhares de anos."
+}

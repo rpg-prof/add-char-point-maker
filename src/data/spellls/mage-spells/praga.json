@@ -1,0 +1,10 @@
+{
+    "name": "Praga",
+    "level": 4,
+    "school": "Necromancia",
+    "castingTime": "4",
+    "duration": "Permanente",
+    "range": "30 metros",
+    "area": "1 criatura",
+    "description": "Essa magia provoca forte doença e grande fraqueza em uma criatura. O indivíduo afligido peia doença é imediatamente acometido por sintomas dolorosos e incômodos: bolhas, pústulas, lesões, feridas, etc. A Força, a Destreza e o Carisma são reduzidos em 2. As jogadas de ataque têm uma penalidade de -2. Os efeitos persistem até que Curar Doenças seja utilizada sobre a criatura, ou que a criatura passe 1d3 semanas recuperando-se Personagens que decidam ignorar a doença por mais de um dia são suscetíveis a doenças piores, a critério do Mestre."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Esfera Flamejante",
+    "level": 2,
+    "school": "Evocação",
+    "castingTime": "2",
+    "duration": "1 rodada/nível",
+    "range": "10 metros",
+    "area": "Esfera de 1 metro de raio",
+    "description": "Esta magia cria um globo de fogo a até 10 metros de distância do mago. A esfera rola em qualquer direção que o mago apontar, a uma velocidade de 10 metros por rodada. Ela não é detida por barreiras com menos de 1 metro de altura, como móveis ou parapeitos: a esfera passa sobre esses obstáculos. A esfera põe fogo em qualquer objeto inflamável com que entrar em contato. Criaturas em contato com a esfera sofrem 2d4 pontos de dano, se não resistirem à magia com sucesso. Criaturas que estejam a menos de 2 metros da esfera sofrem 1d4 pontos de dano, por causa do calor gerado peias chamas. Estas criaturas também têm direito a testar sua resistência à magia para evitar o dano. Um sucesso no teste sempre significa que a criatura conseguiu saltar para longe da esfera, evitando assim as queimaduras. O Mestre pode atribuir penalidades aos testes de resistência se houver pouco espaço para onde a criatura possa se desviar. A esfera se move enquanto o mago lhe der uma direção. Caso o mago não a direcione, ela apenas ficará parada, queimando. A esfera pode ser apagada do mesmo modo que um fogo normal de mesmo tamanho. A superfície da esfera tem uma consistência esponjosa, mole, que não causa dano a não ser por sua chama. Por isso, a esfera não pode ser utilizada para empurrar criaturas que queiram ficar no caminho. Os componentes materiais são sebo e um punhado de enxofre cobertos por uma pilada de limalha de ferro."
+}

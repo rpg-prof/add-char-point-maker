@@ -1,0 +1,10 @@
+{
+    "name": "Morte Aparente",
+    "level": 3,
+    "school": "Necromancia",
+    "castingTime": "1",
+    "duration": "1 hora + 1 turno/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Através dessa magia o mago ou qualquer criatura tocada por ele e que não o supere em dados de vida ou níveis, pode ser colocado num estado de coma semelhante à morte. Embora a criatura sob os efeitos dessa magia possa ouvir, sentir cheiros e perceber o que acontece à sua volta, nenhuma percepção táctil ou visual é possível. Portanto, ela não sente ferimentos em seu corpo e sofre apenas ½ do dano. Além disso, paralisia, veneno ou Drenar Energia não podem afetar o receptor dessa magia. Veneno injetado ou introduzido no corpo de um ser sob efeito da Morte Aparente faz efeito assim que a magia acaba, mas a criatura ainda tem direito a testar sua resistência a venenos. Essa magia não pode afetar criaturas que não sejam voluntárias. O mago que lançou Morte Aparente pode removê-la a qualquer momento, mas é preciso uma rodada inteira para que as funções corporais voltem a funcionar novamente."
+}

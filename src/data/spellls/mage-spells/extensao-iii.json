@@ -1,0 +1,10 @@
+{
+    "name": "Extensão III",
+    "level": 6,
+    "school": "Alteração",
+    "castingTime": "7",
+    "duration": "Especial",
+    "range": "0",
+    "area": "Especial",
+    "description": "Essa magia é semelhante ao efeito da Extensão I. mas dobrará a duração de magias do 1º ao 3º círculos, e aumentará a duração de magias do 4º ou 5º círculos em 50%."
+}

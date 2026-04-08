@@ -1,0 +1,10 @@
+{
+    "name": "Manipular Chamas",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "2 rodadas/nível",
+    "range": "5 metros/nível",
+    "area": "3 metros de raio",
+    "description": "Essa magia permite ao mago alterar quaisquer chamas, pequenas ou grandes, que estejam dentro de sua área de efeito, extinguindo-as até que restem apenas brasas, ou torna-las brilhantes como a luz do dia, dobrando seu alcance de iluminação. Enquanto a magia estiver em ação, basta um simples gesto do mago para alterar novamente a sua intensidade. A magia não altera o consumo de combustível ou o dano causado pelo fogo, persistindo até que o mago a cancele, sua duração máxima seja atingida ou todo o combustível seja consumido. O mago também pode apagar todas as chamas da área de efeito, o que cancela a magia imediatamente. Esta magia não consegue afetar elementais do fogo ou criaturas similares"
+}

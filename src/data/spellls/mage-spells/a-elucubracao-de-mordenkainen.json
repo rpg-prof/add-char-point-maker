@@ -1,0 +1,10 @@
+{
+    "name": "A Elucubração de Mordenkainen",
+    "level": 6,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "Instantânea",
+    "range": "0",
+    "area": "O mago",
+    "description": "Essa magia permite que o mago relembre instantaneamente uma magia de 4º a 5º círculos que ele tenha utilizado nas últimas 24 horas. O efeito deve ter sido memorizado e usado nesse período. A Elucubração de Mordenkainen permite a recuperação de apenas uma magia. Se o efeito lembrado exigir componentes materiais, eles devem ser providenciados pelo mago. A magia relembrada não é utilizável até que os componentes estejam disponíveis."
+}

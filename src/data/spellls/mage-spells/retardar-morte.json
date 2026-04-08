@@ -1,0 +1,10 @@
+{
+    "name": "Retardar Morte",
+    "level": 3,
+    "school": "Encantamento/ Necromancia",
+    "castingTime": "1 rodada",
+    "duration": "1 turno/nível",
+    "range": "30 metros",
+    "area": "uma criatura",
+    "description": "Esta magia permite a uma pessoa ou criatura adiar a morte. Se Retardar Morte for realizada antes que a criatu- ra indicada ou pessoa atinja 0 pontos de vida, ela é capaz de lutar, lançar magias, comunicar e tomar todas as outras ações normais até atingir –10 pontos de vida. No entanto, desde o momento em que ele atinge 0 pontos de vida até a redução para –10 pontos de vida, a criatura faz todas as jogadas de ataque e testes de resistência com a penalidade de –2 e seu movimento é reduzido pela metade. Quando o sujeito atinge –10 pontos de vida, ele está morto e Retardar Morte não está mais em efeito. Observe que a magia tem uma duração limitada; se a magia expirar após o alvo afetado atingir 0 pontos de vida mas antes ele havia sido reduzido para –10 pontos de vida, o alvo morre instantaneamente. Um personagem morto anteriormente sob o efeito de Retardar Morte pode ser ressuscitado normalmente por magias como Reviver Mortos e similares. O componente material para esta magia é um pedaço de pedra de uma lápide ou uma lasca de madeira de um caixão."
+}

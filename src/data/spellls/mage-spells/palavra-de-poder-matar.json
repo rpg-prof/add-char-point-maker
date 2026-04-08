@@ -1,0 +1,10 @@
+{
+    "name": "Palavra de Poder, Matar",
+    "level": 9,
+    "school": "Conjuração/Convocação",
+    "castingTime": "1",
+    "duration": "Permanente",
+    "range": "5 metros a cada dois níveis",
+    "area": "3 metros de raio",
+    "description": "Essa magia mata instantaneamente uma ou mais criaturas de qualquer tipo. O efeito elimina uma criatura que tenha menos de 60 pontos de vida, ou duas ou mais criaturas com 10 ou menos pontos de vida. até um máximo de 120 pontos. A opção de atacar uma criatura ou múltiplas vítimas deve ser pronunciada juntamente com o alcance e o centro da área de efeito. Os pontos de vida utilizados são os que a criatura possui no momento em que é atingida pela magia, não o máximo."
+}

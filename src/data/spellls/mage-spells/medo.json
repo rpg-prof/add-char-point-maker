@@ -1,0 +1,10 @@
+{
+    "name": "Medo",
+    "level": 4,
+    "school": "Ilusão/Visão",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "0",
+    "area": "Cone de 20 metros de comprimento, 10 metros de diâmetro no final, 2 metros no começo.",
+    "description": "Quando essa magia é utilizada, o mago lança um cone invisível de terror que faz com que todas as criaturas que estejam na sua área de efeito lhe dêem as costas e fujam em pânico. Criaturas afetadas por essa magia provavelmente largarão o que quer que estejam carregando: a chance e de 60%, se a criatura afetada é de 1º nível ou tem um dado de vida, caindo 5% para cada nível ou dado de vida que a criatura possua acima do 1°. Logo, uma criatura de 10 DV tem apenas 15% de chance, e um personagem de 13º nível jamais soltará seus itens. Criaturas afligidas pelo medo fogem rapidamente por um número de rodadas igual ao nível de experiência do mago que lançou a magia. Mortos-vivos e criaturas que obtenham sucesso em seus testes de resistência não são afetados. O componente material é o coração de um pombo, ou uma pena branca."
+}

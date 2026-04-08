@@ -1,0 +1,10 @@
+{
+    "name": "Mover Terra",
+    "level": 6,
+    "school": "Alteração",
+    "castingTime": "7",
+    "duration": "Permanente",
+    "range": "10 metros/nível",
+    "area": "Especial",
+    "description": "Quando lançado, esse efeito desloca terra (argila, barro, areia) e os seus outros componentes. Com essa magia, aterros podem ser derrubados, pequenas colinas podem ser deslocadas e dunas, trocadas de lugar. Entretanto, saliências rochosas jamais podem ser derrubadas ou movidas. A área afetada determina o tempo de execução: para cada área de 40 metros x 40 metros e 3 metros de profundidade, um turno é necessário. A área máxima que pode ser afetada é de 240 metros x 240 metros, o que leva 2 horas. Se as características do terreno também tiverem que ser movidas — em comparação com simples escavações em bancos de areia ou barrancos —, é necessário que um elemental da terra seja convocado para ajudar. Toda a execução ou convocação deve estar completa para que qualquer eleito se manifeste. Como qualquer elemental da terra fará a maior parte do seu trabalho sob o solo, é improvável que ele seja interceptado ou interrompido. Caso isso ocorra, entretanto, o trabalho terá que ser interrompido até que o ser esteja novamente disponível. Se o elemental for destruído ou dispensado, a tarefa terá que se restringir a derrubar bancos de areia ou barrancos. Esse efeito não pode ser utilizado para cavar túneis e, em geral, é muito lento para prender ou soterrar criaturas; ele é utilizado na maioria dos casos para cavar ou preencher fossos, ou para ajustar os contornos do terreno antes de uma batalha. Os componentes materiais são uma mistura de solos (argila, barro, areia) em um saquinho, e uma lâmina de ferro. Nota: Essa magia não quebra violentamente a superfície do solo. Ela faz com que a terra ondule suavemente e se adapte, até que o resultado desejado seja atingido. Árvores, casas e outras estruturas são pouco afetadas, salvo em casos de mudança na elevação e na topografia relativa."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Repulsão",
+    "level": 5,
+    "school": "Abjuração, Alteração",
+    "castingTime": "5",
+    "duration": "Permanente, até ser dissipada",
+    "range": "10 metros",
+    "area": "No máximo um cubo de 3 metros de lado",
+    "description": "Através dessa magia, o mago produz uma repulsão natural entre o objeto afetado e todos os outros seres vivos, exceto ele mesmo. Qualquer criatura tentando tocar o objeto afetado é repelida (não consegue se aproximar mais que meio metro), ou repele o item. dependendo da massa relativa dos dois (um halfling tentando tocar um baú de ferro seria arremessado para trás, mas o baú seria repelido por uma criatura gigantesca). O componente material é uma agulha magnetizada. A magia não pode ser lançada sobre seres vivos; qualquer tentativa de usar Repulsão sobre os trajes ou posses de um ser vivo lhe dá direito a um teste de resistência à magia. O inverso. Atração, usa o mesmo componente material, e provoca urna atração natural entre o objeto afetado e todas as coisas vivas. Uma criatura é puxada em direção ao objeto se for menor que ele, ou o objeto desliza na direção da criatura se ela for maior. Um teste de dobrar barras deve ser feito com sucesso para remover o objeto encantado, uma vez que ele tenha aderido a outro item ou criatura."
+}

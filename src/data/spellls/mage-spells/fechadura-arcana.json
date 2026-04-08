@@ -1,0 +1,10 @@
+{
+    "name": "Fechadura Arcana",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "3",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "10 metros quadrados/nível",
+    "description": "Fechadura Arcana utilizada sobre um portal, porta, arca ou baú fornece uma tranca mágica. O mago que lançou a magia pode abrir e fechar a tranca sem removê-la. De outra forma, a tranca precisa ser removida pela Dissipar Magia, Arrombar, ou por um mago que tenha, pelo menos, quatro níveis a mais do que aquele que lançou Fechadura Arcana. Os últimos dois métodos não removem de fato Fechadura Arcana, apenas neutralizam-na por um curto intervalo de tempo. Criaturas de outros planos não podem arrombar Fechadura Arcana, da mesma forma que poderiam arrombar uma porta em que foi utilizado o Cerrar Portas. ## Magias Arcanas do 3° Círculo"
+}

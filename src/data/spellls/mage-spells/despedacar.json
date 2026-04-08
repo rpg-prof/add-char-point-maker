@@ -1,0 +1,10 @@
+{
+    "name": "Despedaçar",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "2",
+    "duration": "Instantânea",
+    "range": "30 metros+ 10 metros /nível",
+    "area": "Círculo de 1 metro de raio",
+    "description": "A magia Despedaçar é um ataque baseado no som que afeta objetos não-mágicos de cristal, vidro, cerâmica ou porcelana, como óculos, frascos, janelas, potes, vasos, etc. Todos os objetos desse tipo, que estejam a 1 metro do local onde a magia foi centrada, são despedaçados por ela. Objetos que pesem mais de meio quilo por nível do mago não são afetados, mas Iodos os outros devem fazer um teste de resistência contra esmagamento ou serão despedaçados. Alternativamente, a magia pode ser lançada em um único objeto que não pese mais de 5 quilos por nível do mago. Criaturas cristalinas sofrem 1d6 pontos de dano por nível do mago, até um máximo de 6d6, e têm direito a um teste de resistência à magia para sofrerem apenas metade do dano. O componente material é um punhado de mica."
+}

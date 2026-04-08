@@ -1,0 +1,10 @@
+{
+    "name": "Terreno Ilusório",
+    "level": 4,
+    "school": "Ilusão/Visão",
+    "castingTime": "4",
+    "duration": "1 hora/nível",
+    "range": "20 metros/nível",
+    "area": "Cubo de no máximo 10 metros de aresta/nível",
+    "description": "Através dessa magia o mago cria uma ilusão que disfarça o terreno dentro da área de efeito. Desta forma, uma estrada ou planície pode parecer um pântano, um monte, um abismo Um lago pode parecer uma planície, um precipício pode parecer um rio, ou um vale pode parecer uma estrada. Essa magia persiste até que Dissipar Magia seja utilizada sobre a área, ou até que a duração da magia expire. Mesmo que indivíduos possam perceber a ilusão, o efeito não desaparece, e criaturas que não a percebam são afetadas por ela. Se a ilusão envolve apenas uma pequena alteração nas condições do terreno, por exemplo, tornar uma floresta mais escura, ou uma encosta mais íngreme, os efeitos podem não ser notados pelas pessoas que estão no meio do efeito: se o resultado for drástico, como um platô ilusionário cobrindo a boca de um vulcão, a ilusão será notada tão logo uma criatura seja afetada (no caso. caindo no vulcão). Quanto maior o nível de experiência do mago, maiores serão as dimensões afetadas. Por exemplo, um mago de 12º nível pode afetar um volume de 120 metros x 120 metros x 120 metros. Os componentes materiais são uma pedra, um galho, e um planta — uma folha de árvore ou um pouco de grama."
+}

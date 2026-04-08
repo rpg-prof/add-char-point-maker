@@ -1,0 +1,10 @@
+{
+    "name": "Bola de Fogo",
+    "level": 3,
+    "school": "Evocação",
+    "castingTime": "3",
+    "duration": "Instantânea",
+    "range": "10 metros+ 10 metros /nível",
+    "area": "6 metros de raio",
+    "description": "Bola de Fogo é uma explosão de fogo, que detona com um ruído grave e faz dano proporcional ao nível do mago que a lançou — 1d6 por nível do mago, até o máximo de 10d6. A explosão gerada por essa magia produz pouca pressão, e geralmente adapta-se às formas da área onde foi lançada, preenchendo um volume igual ao da sua forma esférica — aproximadamente 900 metros cúbicos, ou 33 cubos de 3 metros de aresta. Se for lançada num corredor, ela preenche o volume descrito acima, sempre começando do centro e se expandindo. Além de causar o dano normal, Bola de Fogo ainda ateia fogo todos os materiais inflamáveis da área, e seu calor é suficiente para derreter metais maleáveis, como ouro, prata ou cobre. Objetos expostos a essa explosão precisam de testes de resistência a fogo mágico, bem como os itens carregados por criaturas que sejam malsucedidas em seus testes de resistência. Os equipamentos carregados por criaturas bem- sucedidas em seus testes não são afetados. O mago aponta o dedo e fala a distância e altura em que deseja que as Bola de Fogo sejam detonadas. Uma linha de chamas sai do seu dedo, e, a não ser que se choque com algum corpo ou barreira, detona Bola de Fogo na distância prescrita. Caso esta linha se choque com algo antes do determinado, Bola de Fogo detona no local do choque. Criaturas que não passem em seus testes de resistência à magia sofrem todo o dano da Bola de Fogo. Criaturas que tenham sucesso em seus testes conseguem saltar, deitar, cobrir-se, e recebem metade do dano. O Mestre deve jogar o dano uma vez, e cada criatura recebe o dano total, ou a metade (arredonde para baixo), dependendo dos resultados dos testes de resistência. O componente material é uma pequena bola de guano de morcego e enxofre."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Controlar o Clima",
+    "level": 6,
+    "school": "Alteração",
+    "castingTime": "6",
+    "duration": "4d6 horas",
+    "range": "0",
+    "area": "4d4 quilômetros quadrados",
+    "description": "A magia Controlar o Clima permite a um mago modificar as condições climáticas da área em que se encontra. A magia afeta o clima por 4d6 horas em uma área de 4d4 quilômetros quadrados. Ela leva um turno para ser formulada, e mais 1d4 turnos para que os efeitos desejados surjam. As condições do tempo atuais são definidas pelo Mestre, dependendo do clima e da estação. Tais condições têm três componentes: precipitação, temperatura e vento. A magia pode mudar essas condições, conforme explicado na tabela seguinte. As palavras em maiúsculas são as condições atuais, e as em minúsculas são as novas condições que o mago pode provocar. Além disso, o mago pode controlar a direção do vento. Por exemplo, um dia claro e quente com vento moderado pode tornar-se nublado, morno e calmo. Contradições não são possíveis — nevoeiro e vento forte, por exemplo. Múltiplas magias Controlar o Clima podem ser usadas apenas em sucessão, e nunca simultaneamente. Precipitação CÉU CLARO Muito claro Nuvens leves ou neblina PARCIALMENTE NUBLADO Céu claro nublado Névoa/chuva leve/granizo leve Chuva com neve/pouca neve NUBLADO Parcialmente nublado Nuvens pesadas Cerração Chuva pesada/granizo forte Chuva com neve muito forte/neve pesada Furacão/Tufão Os componentes materiais são incenso e pedaços de madeira e terra, misturados na água. Obviamente, essa magia funciona apenas em áreas onde existam as condições climáticas adequadas."
+}

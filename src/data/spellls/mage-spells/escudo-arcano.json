@@ -1,0 +1,10 @@
+{
+    "name": "Escudo Arcano",
+    "level": 1,
+    "school": "Evocação",
+    "castingTime": "1",
+    "duration": "5 rodadas/nível",
+    "range": "0",
+    "area": "Especial",
+    "description": "Quando essa magia é executada, uma barreira invisível surge diante do mago. Esse escudo anula totalmente os ataques de projéteis criados magicamente. Ele também fornece proteção equivalente a CA 2 contra armas arremessadas manualmente (machados, dardos, azagaias, lanças, etc.), CA 3 contra pequenas armas disparadas mecanicamente (flechas, quadrelos, dardos, espinhos de manticore, pedras de funda, etc.) e CA 4 contra outras formas de ataque. O escudo também oferece ao mago um bônus de +1 nos testes de resistência contra ataques que sejam basicamente frontais. Perceba que todos esses benefícios aplicam-se apenas se o mago sofrer ataques frontais."
+}

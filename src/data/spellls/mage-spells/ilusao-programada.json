@@ -1,0 +1,10 @@
+{
+    "name": "Ilusão Programada",
+    "level": 6,
+    "school": "Ilusão/Visão",
+    "castingTime": "7",
+    "duration": "Permanente",
+    "range": "10 metros/nível",
+    "area": "Cubo de 6 metros + cubo de 3 metros/nível",
+    "description": "Essa magia cria um Força Espectral que se ativa com um comando, ou quando ocorre um evento específico. A ilusão tem elementos sonoros, olfativos, visuais e térmicos, e pode reproduzir qualquer objeto. criatura ou Força, desde que a imagem permaneça nos limites da área de efeito. O evento que detona o início do efeito poderá ser tão genérico ou detalhado quanto o mago desejar, Por exemplo: “Comece apenas quando uma mulher humana idosa carregando um saco de biscoitos, sentar-se de pernas cruzadas a 30 centímetros desse ponto”. Esses gatilhos visuais podem reagir a uma personagem utilizando a perícia Disfarce. A distância de comando é de 5 metros por nível do mago. Por exemplo, um mago de 12º nível, poderia definir um gatilho a, no máximo, 60 metros da ilusão. A magia não pode distinguir criaturas invisíveis, nem tendência, nível, dados de vida ou classe, exceto através da aparência externa. Se desejado, o efeito pode ser ativado por uma palavra ou ruído específico. A magia dura até que a ilusão seja ativada. Uma vez que isso ocorra, o efeito ilusório durará uma rodada por nível do mago. Criaturas que tentem duvidar da ilusão ganham direito a um teste de resistência à magia. Se forem bem-sucedidas, elas verão a verdade e, se puderem comunicar o fato a seus associados, esses receberão um bônus de +4 em seus testes. Criaturas que não estejam sentindo os efeitos da magia (seres cegos, surdos, etc.) não serão afetados, até que o percebam de alguma forma. A ilusão está sujeita a Dissipar Magia. O componente material é um pouco de lã."
+}

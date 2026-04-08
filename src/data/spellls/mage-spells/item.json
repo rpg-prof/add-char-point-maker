@@ -1,0 +1,10 @@
+{
+    "name": "Item",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "1 turno",
+    "duration": "4 horas/nível",
+    "range": "Toque",
+    "area": "60 cm/nível",
+    "description": "Através dessa magia, o mago é capaz de fazer com que um objeto comum encolha para 1/12 do seu tamanho. Opcionalmente, o mago também pode transformar os materiais desta miniatura em pano. Um objeto sob posse de outra criatura não é automaticamente transformado: a criatura que o carrega tem direito a fazer um teste de resistência à magia para evitar o efeito. Objetos reduzidos e/ou transformados podem voltar aos seus tamanhos e composições normais, com um simples comando do mago que os transformou, ou então sendo jogados sobre uma superfície sólida. Note que até uma fogueira acesa e seu combustível podem ser encolhidos, e opcionalmente transformados em pano por esta magia."
+}

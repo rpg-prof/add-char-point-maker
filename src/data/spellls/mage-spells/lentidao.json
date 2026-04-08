@@ -1,0 +1,10 @@
+{
+    "name": "Lentidão",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "4",
+    "duration": "3 rodadas +1 rodada/nível",
+    "range": "90 metros +10 metros/nível",
+    "area": "",
+    "description": "Área de Eleito: Cubo de 6 metros de aresta, uma criatura/nível Lentidão faz com que as criaturas afetadas ataquem e movam-se à metade da razão normal. Essa magia anula Velocidade ou equivalente, mas não afeta criaturas que estejam sobre outros efeitos de rapidez ou lentidão Criaturas afetadas por essa magia tem uma penalidade de +4 em suas CAs, uma penalidade de -4 nas jogadas de ataque, e todos os bônus de combate devidos a Destreza são neutralizados. A magia afeta um número de criaturas igual ao nível do mago que a lançou, contanto que elas estejam dentro da área de efeito determinada pelo mago: um cubo de 6 metros de aresta. As criaturas são afetadas do centro do cubo para fora. Testes de resistência contra essa magia têm penalidade de -4. O componente material é uma gota de melaço."
+}

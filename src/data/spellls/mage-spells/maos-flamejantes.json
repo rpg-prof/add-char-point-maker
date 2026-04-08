@@ -1,0 +1,10 @@
+{
+    "name": "Mãos Flamejantes",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "Instantânea",
+    "range": "0",
+    "area": "O mago",
+    "description": "Ao utilizar essa magia, um jato de chamas irrompe das pontas dos dedos do mago. Suas mãos devem estar dispostas de forma a mandar um leque de chamas; os polegares devem tocar-se e os outros dedos devem estar abertos. Jatos de chama saltam de suas mãos e cobrem um arco horizontal de 120°, alcançando até 2 metros à frente do mago. Qualquer criatura na área das chamas sofre dano de 1d3 pontos de vida, mais 2 pontos de vida por nível de experiência, até o máximo de 1d3 + 20 pontos perdidos. As criaturas que obtiverem sucesso em um teste de resistência à magia, sofrem apenas a metade do dano. Materiais facilmente inflamáveis (roupas, papel, madeira seca) tocados pelo fogo queimam imediatamente. O fogo nestes materiais pode ser apagado na rodada seguinte, se nenhuma outra ação for feita."
+}

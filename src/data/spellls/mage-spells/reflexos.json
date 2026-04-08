@@ -1,0 +1,10 @@
+{
+    "name": "Reflexos",
+    "level": 2,
+    "school": "Ilusão/Visão",
+    "castingTime": "2",
+    "duration": "3 rodadas/nível",
+    "range": "0",
+    "area": "2 metros de raio",
+    "description": "Quando evoca Reflexos, o mago cria de duas a oito duplicatas exatas de si que aparecem ao seu redor. Essas imagens fazem exatamente o que o mago faz. Já que a magia causa borrões e distorções nas imagens, é impossível para os oponentes “marcarem” a imagem do mago durante o lançamento da magia. Quando uma imagem é atingida por um ataque ou por magia, ela desaparece, mas as outras permanecem intactas até serem atingidas. As imagens parecem trocar de posição de rodada em rodada. Assim, se o mago verdadeiro for atingido em determinada rodada, isso não significa que será mais fácil atingi-lo depois, já que não adianta “marcar” uma imagem. Para determinar o número de imagens que aparecem, lança-se 1d4 e adiciona-se 1 ao resultado para cada três níveis de experiência do mago, até um máximo de oito imagens. No 6º nível, o mago pode ter de três a seis cópias de sua imagem. Extinta a duração da magia, todas as imagens desaparecem."
+}

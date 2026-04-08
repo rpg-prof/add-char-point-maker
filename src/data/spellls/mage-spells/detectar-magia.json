@@ -1,0 +1,10 @@
+{
+    "name": "Detectar Magia",
+    "level": 1,
+    "school": "Adivinhação",
+    "castingTime": "1 rodada",
+    "duration": "2 rodadas/nível",
+    "range": "0",
+    "area": "20 metros de comprimento, 3 metros de largura",
+    "description": "Detectar Magia é utilizada para detectar radiações mágicas numa área de 3 metros de largura e 20 metros de comprimento, na direção em que o mago estiver olhando, A intensidade da magia (vaga, fraca, moderada, forte, intensa) pode ser determinada, e o mago tem 10% de chance, cumulativa por nível, de determinar as escolas de magia presentes no objeto ou na área analisada, de forma que um mago de 8º nível terá 80% de chance. O mago pode mudar a direção, analisando um arco de 60° por rodada. Uma parede com mais de 30 centímetros de espessura, feita de pedra, ou com mais de 1 metro, feita de madeira, bloqueia a magia. Áreas mágicas, variados tipos de magia ou emanações locais muito fortes de magia podem confundir ou esconder radiações mais fracas. Essa magia não revela a presença do bem ou do mal, nem tendências. Criaturas de outros planos não são necessariamente mágicas."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Cegueira",
+    "level": 2,
+    "school": "Ilusão/Visão",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "30 metros + 10 metros por nível",
+    "area": "Uma",
+    "description": "Criatura A magia Cegueira tez com que a vítima fique cega, enxergando apenas um borrão cinza diante de seus olhos. As magias de cura não são capazes de remover esse efeito, e só a Dissipar Magia ou o mago que usou a magia podem remover a cegueira, caso a criatura falhe em seu teste de resistência à magia. Uma criatura cega tem uma penalidade de -4 para as suas jogadas de ataque e resistência, e seus oponentes têm um bônus de +4 para suas jogadas de ataque contra a vítima."
+}

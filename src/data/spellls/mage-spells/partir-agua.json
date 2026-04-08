@@ -1,0 +1,10 @@
+{
+    "name": "Partir Água",
+    "level": 6,
+    "school": "Alteração",
+    "castingTime": "Especial",
+    "duration": "5 rodadas/nível",
+    "range": "10 metros/nível",
+    "area": "Especial",
+    "description": "Essa magia dá ao mago a capacidade de fazer com que a água, ou outros líquidos similares, se abram à sua frente, formando uma passagem de 5 metros de largura. A profundidade e a extensão do corredor dependem do nível do mago, sendo que a cada nível é criado um corredor de 1 metro de profundidade por 10 metros de comprimento. A magia funciona até que sua duração expire, ou até que o mago decida encerrá- la. Se lançado embaixo d’água, o efeito cria um cilindro de ar com diâmetro e comprimento apropriados. Se utilizado diretamente sobre um elemental da água ou outra criatura com corpo baseado em água, a vítima receberá 4d8 pontos de dano e deverá passar em um teste de resistência à magia, ou fugirá em pânico por 3d4 rodadas. Os componentes materiais são duas pequenas lâminas de vidro ou cristal."
+}

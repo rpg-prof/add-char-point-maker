@@ -1,0 +1,10 @@
+{
+    "name": "Aura de Fogo",
+    "level": 4,
+    "school": "Abjuração",
+    "castingTime": "4",
+    "duration": "2 rodadas/nível",
+    "range": "0",
+    "area": "o mago",
+    "description": "Por meio desta magia, o mago cir- cunda seu corpo com uma aura de fogo verde mágico. A aura de fogo estende- -se a 1 pé do corpo do mago e fornece iluminação em um raio de 3 metros. A aura de fogo fornece imunidade comple- ta a todas as formas de fogo, natural e mágico; as chamas se extinguem ape- nas por Dissipar Magia ou magia seme- lhante. Aqueles que tocarem a aura de fogo sofrem 2d4 pontos de dano; além disso, se a vítima tocada falhar no teste de resistência, o seu corpo é incendiado com as chamas verdes. As chamas persistem por 2d4 roda- das e só podem ser extintas por Dis- sipar Magia ou magia semelhante. A cada rodada que a vítima for coberta pelas chamas, ela sofre um adicional de 1d6 pontos de dano; as jogadas de ataque da vítima são feitas com uma penalidade de –2 durante este tempo. Os componentes materiais para esta magia são um pedaço de papel e um pedaço de pedra."
+}

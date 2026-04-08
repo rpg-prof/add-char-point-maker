@@ -1,0 +1,10 @@
+{
+    "name": "Abandono",
+    "level": 4,
+    "school": "Alteração, Ilusão/Visão",
+    "castingTime": "1 rodada",
+    "duration": "Uma hora/nível",
+    "range": "10 metros/nível",
+    "area": "3 metros de raio/nível",
+    "description": "Ao utilizar essa magia, o mago faz com que a área de efeito pareça ter sido abandonada há tempos. Aqueles que observam a área vêem pó no chão, teias de aranha, sujeira e outras características típicas de um local abandonado há anos. Se entrarem na área de efeito, as vítimas parecem deixar pegadas, arrancar teias de aranha, etc. A não ser que elas entrem em contato com um objeto escondido pela magia, o lugar continuará parecendo vazio. Apenas esbarrar num objeto tornado invisível não faz com que a magia Abandono seja perturbada. Apenas um contato direto com um objeto dá uma chance de perceber que as coisas não são o que parecem. Se um contato desse tipo acontecer, as criaturas pensarão primeiro que o objeto está invisível. Apenas diversos contatos desse tipo permitem uma chance de anular a magia. Nesse caso, as criaturas tem direito a um teste de resistência à magia. Um sucesso cancela a magia e uma falha faz com que as criaturas pensem que os objetos foram tornados invisíveis. Dissipar Magia cancela a magia de forma que a área toda possa ser vista. Visão da Verdade, Gema da Visão e efeitos similares conseguem penetrar a ilusão, mas Detectar Invisibilidade não consegue. Embora essa magia seja uma combinação muito poderosa de Invisibilidade com ilusão, ela não funciona em criaturas vivas. Seres vivos não são tornados invisíveis, mas sua presença também não interfere com a magia. O mago precisa ter um pedaço de seda negra da melhor qualidade para lançar essa magia, que deve valer pelo menos 100 po e é consumido por ela."
+}

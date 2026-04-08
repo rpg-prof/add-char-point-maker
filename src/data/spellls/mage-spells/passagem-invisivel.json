@@ -1,0 +1,10 @@
+{
+    "name": "Passagem Invisível",
+    "level": 7,
+    "school": "Alteração",
+    "castingTime": "9",
+    "duration": "1 uso para cada dois níveis",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Quando essa magia é lançada, o mago sintoniza o seu corpo com uma seção da parede, que é afetada de modo similar ao que seria pelo Criar Passagem. A passagem é invisível para todas as criaturas, exceto o mago, e apenas ele pode utilizá-la, desaparecendo quando entra na “porta”. Se ele desejar, uma criatura de tamanho humano ou menor pode ser levada através da passagem, mas isso conta como um uso adicional da magia. Pela porta não passam luz, som ou efeitos mágicos, e o mago não pode ver através dela sem usá-la. Essa magia pode providenciar uma boa rota de fuga, embora certas criaturas, como as aranhas interplanares, possam segui-lo com facilidade. Uma Gema da Visão da Verdade ou magia similar pode revelar a presença da porta, mas não permite o seu uso. A passagem pode ser anulada apenas se um mago de nível superior ao do executor da magia empregar um Dissipar Magia, ou se diversos magos de nível mais baixo (mas cuja soma de níveis de experiência seja maior que o dobro do nível do mago que criou a porta) utilizarem Dissipar Magia em conjunto (esse é o único caso em que é possível combinar os efeitos dessa magia). Há rumores de que essa magia tenha sido adaptada por um certo mago poderoso (ou magos) para criar portais renováveis (ou permanentes) que podem (ou não) ser sintonizados a indivíduos específicos (aliados) ou itens (como anéis)."
+}

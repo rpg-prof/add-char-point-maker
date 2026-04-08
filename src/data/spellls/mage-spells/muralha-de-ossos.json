@@ -1,0 +1,10 @@
+{
+    "name": "Muralha de Ossos",
+    "level": 5,
+    "school": "Conjuração/ Necromancia",
+    "castingTime": "1 rodada",
+    "duration": "1 turno",
+    "range": "20 m",
+    "area": "3 m² por nível; 2,5 m de espessura por nível",
+    "description": "Esta magia faz com que uma muralha de ossos irrompa da terra em qualquer forma que o mago desejar, dentro dos limites da área de efeito. A muralha é uma construção aleatória de ossos de muitos tipos de criaturas. A muralha não precisa ser vertical, mas deve ca- ber mediante uma base firme ou ela irá cair. Uma vez que a muralha tem muitas pequenas aberturas e lacunas, ela fornece apenas 50% de cobertura. Projéteis podem facilmente ser dispa- rados por trás da parede e criaturas de tamanho pequeno (menos de 1 metro de altura) podem contorcer-se através das aberturas na parede à taxa de 3 m por rodada. No entanto, a muralha tem muitas arestas afiadas, criaturas que se arrastarem por ela sofrem 1d8 pontos de dano para cada 3 m viajados. Se a magia for conjurada em uma área ocupada por criaturas, a muralha de ossos aparece em todos os lados exceto onde as criaturas estiverem. Criaturas na área afetada sofrem imediatamente 2d8 pontos de dano quando a muralha surge. A muralha pode ser esmagada por criaturas portando armas contun- dentes, com Força 18 ou superior. Cada 10 pontos de dano infligidos derruba uma sessão de 1,5 m x 1,5 m x 15 cm da muralha. A Muralha de Ossos não é afetada por animar os mortos. O componente material para esta magia é o ramo de uma árvore seca retirado de um cemitério."
+}

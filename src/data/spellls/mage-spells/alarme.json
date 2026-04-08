@@ -1,0 +1,10 @@
+{
+    "name": "Alarme",
+    "level": 1,
+    "school": "Abjuração, Evocação",
+    "castingTime": "1 rodada",
+    "duration": "4 horas + ½ hora por nível",
+    "range": "10 metros",
+    "area": "Cubo de 6 metros de lado (máx.)",
+    "description": "Ao utilizar Alarme, a área determinada pelo mago emitirá sons de sinos quando invadida por qualquer criatura maior que um rato normal — qualquer criatura com mais de 15 centímetros cúbicos ou que pese pouco mais de um grilo. A área protegida pode ser um portal, escadas, chão, etc. Se uma criatura entrar, ou tocar, a área protegida sem pronunciar uma senha, determinada pelo mago, o barulho de sinos será ouvido claramente num raio de 20 metros. (Reduza o raio em 3 metros para cada porta no caminho e em 6 metros a cada parede.) O som dura uma rodada e então cessa. Criaturas que estejam no plano etéreo, ou projeções astrais de criaturas, não ativam Alarme, mas criaturas voando ou levitando, invisíveis, em forma gasosa, ou incorpóreas, sim. O mago que utilizou a magia pode removê-la com uma só palavra. Os componentes materiais são um pequeno sino e um pedaço de fio de prata."
+}

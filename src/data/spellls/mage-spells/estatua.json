@@ -1,0 +1,10 @@
+{
+    "name": "Estátua",
+    "level": 7,
+    "school": "Alteração",
+    "castingTime": "9",
+    "duration": "1 hora por nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Quando uma Estátua é lançada, o mago ou a criatura tocada são aparentemente transformados em pedra, junto com suas roupas e equipamentos. A transformação inicial de carne e osso em pedra leva uma rodada completa depois da execução da fórmula. Durante essa metamorfose, o ser afetado deve fazer um teste de resistência, obtendo 82% ou menos no d100. Cada ponto de Constituição reduz em 1 ponto o resultado dos dados. Se falhar no teste, a pessoa morre. Passado esse perigo inicial, o receptor da magia torna-se idêntico a uma estátua de pedra, e o disfarce resiste a qualquer inspeção, embora uma leve aura mágica possa ser detectada, se isso for verificado. Apesar de sua condição, o indivíduo afetado pode ver, ouvir e cheirar normalmente. Outras sensações são limitadas àquelas que afetariam uma substância dura como granito ou seja, se uma lasca for arrancada da pedra, isso irá significai um ferimento leve; se um braço da estátua for quebrado, o ferimento passa a ser sério. Alguém sob o efeito da Estátua pode instantaneamente voltar ao seu estado normal, executar ações e então voltar ao estado de estátua, se o desejar, pela duração da magia. Os componentes materiais são limo, areia e uma gota d’água agitada por uma barra de ferro."
+}

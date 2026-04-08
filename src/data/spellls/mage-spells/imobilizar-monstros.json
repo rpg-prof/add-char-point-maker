@@ -1,0 +1,10 @@
+{
+    "name": "Imobilizar Monstros",
+    "level": 5,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "6",
+    "duration": "1 rodada/nível",
+    "range": "5 metros/nível",
+    "area": "1-4 criaturas em um cubo de 12 metros de aresta",
+    "description": "Esse efeito imobiliza de uma a quatro criaturas, de qualquer tipo, que estejam dentro do alcance da magia e no campo de visão do mago. O mago pode optar por imobilizar apenas uma, duas, três ou todas as quatro criaturas. Se três ou quatro forem atacadas, cada teste de Componentes: V, G, M Resistência: Nenhuma Ajuste da Resistência +1 -4 -2 resistência ocorre normalmente. Se somente duas forem atacadas, cada teste sofre uma penalidade de -1; se apenas uma for atacada, a penalidade será de -3. O componente material é uma pequena barra ou bastão de metal para cada monstro a ser paralisado. O bastão pode ser tão pequeno quanto uma moeda, se desejado."
+}

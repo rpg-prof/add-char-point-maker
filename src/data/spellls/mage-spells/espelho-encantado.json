@@ -1,0 +1,10 @@
+{
+    "name": "Espelho Encantado",
+    "level": 4,
+    "school": "Encantamento, Adivinhação",
+    "castingTime": "4",
+    "duration": "1 rodada/nível",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Através dessa magia, o mago pode transformar um espelho em um instrumento de observação semelhante a uma bola de cristal. Os detalhes sobre o uso deste instrumento estão descritos no Livro do Mestre sob a descrição do item mágico bola de cristal. O espelho utilizado deve ser bem trabalhado, de prata de alta qualidade, muito bem polida, e custa no mínimo 1.000 po. Esse espelho não é consumido pela magia, mas os outros componentes materiais — um olho de uma ave de rapina, ácido nítrico, cobre e zinco — são consumidos. As seguintes magias podem ser utilizadas através de Espelho Encantado: Compreensão da Linguagem (sem a necessidade do toque), Ler Magia, Idiomas, e Infravisão. As seguintes magias tem 5% de chance por nível do mago que as utiliza de funcionarem corretamente: Detectar Magia, Detectar Maldade (ou Detectar Bondade), e Mensagem. As chances de uma criatura perceber que está sendo observada são as mesmas da bola de cristal, e estão descritas no Livro do Mestre."
+}

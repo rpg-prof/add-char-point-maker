@@ -1,0 +1,10 @@
+{
+    "name": "O Cão Fiel de Mordenkainen",
+    "level": 5,
+    "school": "Conjuração/Convocação",
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "10 metros",
+    "area": "Especial",
+    "description": "Através desse efeito, o mago convoca um cão de guarda fantasma que só ele pode ver. O mago pode ordenar à criatura que atue como guardião de uma passagem, sala. porta ou qualquer espaço ou portal similar. O cão de guarda começa imediatamente a latir alto se qualquer criatura maior do que um gato se aproximar do local sob sua responsabilidade. A criatura é capaz de detectar seres invisíveis e proteger contra a aproximação de formas etéreas. Ele não reage a ilusões que não sejam ao menos quase reais. Um intruso que fique de costas para o cão de guarda etéreo receberá um ataque. O cão ataca como se fosse um monstro com 10 dados de vida, provocando 3d6 pontos de dano. O cão pode atingir oponentes de todos os tipos, mesmo aqueles vulneráveis apenas à armas mágicas de bônus +3 ou maior. Criaturas sem costas não são atacadas (gosmas, por exemplo). O Cão de Guarda não pode ser atacado, mas pode ser dissipado. A magia dura por um máximo de 1 hora, mais meia hora por nível do mago; mas, uma vez ativada por um intruso, ela dura apenas uma rodada por nível. Se o mago se afastar mais de 30 metros da área protegida pelo cão, o efeito cessa. Os componentes materiais são um pequeno apito de prata, um pedaço de osso e um fio."
+}

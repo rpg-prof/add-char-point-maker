@@ -1,0 +1,10 @@
+{
+    "name": "Criar Itens Temporários",
+    "level": 5,
+    "school": "Ilusão/Visão",
+    "castingTime": "1 turno",
+    "duration": "Especial",
+    "range": "10 metros",
+    "area": "Especial",
+    "description": "Como Criar Itens Efêmeros, Criar Itens Temporários permite ao mago obter pedaços de material do Plano das Sombras para criar um item de natureza não-viva ou vegetal — corda, madeira, etc. O mago também pode criar objetos minerais — pedra, cristal, metal, etc. O item criado não pode exceder 30 centímetros cúbicos em volume por nível do mago. A duração do item varia com a sua dureza relativa e raridade do material. Matéria vegetal 2 horas por nível Pedra ou cristal 1 hora por nível Metais preciosos 2 turnos por nível Gemas 1 turno por nível Mithral* 2 rodadas por nível Adamantite 1 rodada por nível * inclui outros metais raros Tentar utilizar qualquer um dos materiais criados como componente material de uma magia, fara com que ela falhe. O mago deve possuir ao menos uma pequena porção de material idêntico ao do item a ser criado — um pouco de cânhamo para criar uma corda, uma lasca de pedra para criar uma rocha, e assim por diante."
+}

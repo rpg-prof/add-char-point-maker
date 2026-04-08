@@ -1,0 +1,10 @@
+{
+    "name": "A Flecha Ácida de Melf",
+    "level": 2,
+    "school": "Conjuração",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
+    "range": "180 metros",
+    "area": "1 alvo",
+    "description": "Através dessa conjuração, o mago cria uma flecha mágica que voa na direção do alvo, como se atirada por um guerreiro do mesmo nível que o seu. Modificadores de distância, falta de perícia ou especialização não são utilizados. A Flecha não tem modificadores de dano ou ataque, e inflige 2d4 pontos de dano por ácido. Os objetos atingidos devem testar suas resistências a ácido, ou sofrer as conseqüências determinadas pelo Mestre. Não há dano nas criaturas próximas ao alvo, pois o ácido não espirra longe. A cada três níveis do mago, a magia dura uma rodada extra, e provoca mais 2d4 de dano se não for neutralizada. Dessa forma, a flecha criada por um mago de 3º a 5º nível dura duas rodadas, por um de 6º a 8º nível dura três rodadas, etc. Os componentes materiais são um dardo, uma folha de ruibarbo pulverizada e o estômago de uma serpente."
+}

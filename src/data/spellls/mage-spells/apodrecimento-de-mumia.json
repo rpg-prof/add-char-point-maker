@@ -1,0 +1,10 @@
+{
+    "name": "Apodrecimento de Múmia",
+    "level": 5,
+    "school": "Necromancia",
+    "castingTime": "5",
+    "duration": "1 rodada/nível",
+    "range": "Toque",
+    "area": "uma vítima",
+    "description": "Esta magia permite ao mago atacar com um toque de podridão semelhante ao de um múmia. Se o mago tocar um humano, semi-humano ou humanoide, a vítima imediatamente perde 2d6 pon- tos de vida e estará infectada com uma doença de podridão que é fatal em 1-6 meses. Para cada mês do andamento de podridão, a vítima perde 2 pontos do carisma permanentemente. Embora infectado, a vítima recupera os pontos de vida perdidos em 10% de sua taxa normal. A doença da podridão pode ser cura- da apenas com uma magia de Curar Doença; Cura Ferimentos não tem efei- to. A magia Regeneração irá restaurar o dano sofrido, mas não irá afetar o curso da doença. Se uma vítima for bem-sucedida no teste de resistência, ele não está infectado, mas ele ainda sofre 2d6 pontos de danos. Os componentes materiais para esta magia são uma peça de fruta podre e um pedaço de pano da roupa de uma múmia."
+}

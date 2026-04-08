@@ -1,0 +1,10 @@
+{
+    "name": "Confundir Detecção",
+    "level": 2,
+    "school": "Ilusão/Visão",
+    "castingTime": "2",
+    "duration": "8 horas",
+    "range": "30 metros",
+    "area": "1 criatura ou objeto",
+    "description": "Através dessa magia, o mago pode desorientar uma magia de detecção (Detectar Magia, Detectar Maldade, Detectar Feitiço, Detectar Armadilhas, Detectar Invisibilidade). Embora a magia afetada funcione, ela indicará a área, criatura ou informação errada. Por exemplo, Detectar Mentiras pode passar a trocar as mentiras por verdades; Detectar Magia acusar magia em itens mundanos; uma criatura com más intenções parecerá ter boas, no caso de Detectar Maldade. O mago lança Confundir Detecção sobre um determinado objeto; outro mago, que queira utilizar uma magia de detecção neste objeto, deve testar sua resistência à magia para evitar que a sua detecção seja desorientada. Esse teste deve ser feito pelo Mestre. Outros tipos de adivinhação (Revelar Tendência, Augúrio, Percepção Extrasensorial, etc.) não são afetadas por esta magia."
+}

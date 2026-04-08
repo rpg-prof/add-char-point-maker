@@ -1,0 +1,10 @@
+{
+    "name": "Chuva de Meteoros",
+    "level": 9,
+    "school": "Evocação",
+    "castingTime": "",
+    "duration": "Instantânea",
+    "range": "40 metros + 10 metros/nível",
+    "area": "Especial",
+    "description": "Chuva de Meteoros é uma magia espetacular muito poderosa, bem semelhante à Bola de Fogo em vários aspectos. Quando esse efeito é lançado, quatro esferas de 60 centímetros de diâmetro, ou oito esferas de 30 centímetros de diâmetro partem, em fila, da mão estendida do mago, e disparam numa linha reta pela distância determinada pelo mago, até o máximo definido no alcance. Qualquer criatura que esteja no caminho dos meteoros recebem o dano total do projétil, ou projéteis, sem o benefício de um teste de resistência. Os projéteis-meteoros deixam um rastro flamejante de faíscas, e cada um explode numa bola de fogo. As esferas maiores causam 10d4 pontos de dano, explodindo num padrão que lembra um diamante, ou um paralelepípedo. Cada uma delas tem uma área de efeito de 10 metros de diâmetro, e as esferas mantêm distâncias de 6 metros entre si, ao longo das arestas do padrão, de forma que existem regiões onde as áreas de efeito se sobrepõem, e o centro sofrerá o impacto de todas as quatro explosões. As esferas menores têm metade do diâmetro (5 metros) e metade do dano potencial (5d4). Elas explodem no padrão de um diamante dentro de um paralelepípedo, ou vice-versa, sendo que os lados da figura externa têm 6 metros de comprimento. Note que o contorno da figura terá quatro áreas de efeito sobrepostas. Um teste de resistência para cada área de efeito irá definir se as vítimas sofrem meio dano ou dano completo dentro de cada região, além do dano já causado peio impacto dos projéteis."
+}

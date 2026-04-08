@@ -1,0 +1,10 @@
+{
+    "name": "Flecha de Chamas",
+    "level": 3,
+    "school": "Conjuração/Convocação",
+    "castingTime": "3",
+    "duration": "1 rodada",
+    "range": "30 metros+ 10 metros /nível",
+    "area": "Especial",
+    "description": "Essa magia tem dois efeitos: no primeiro, o mago pode transformar flechas ou setas normais em flechas ou setas mágicas e flamejantes por uma rodada. As flechas ou setas precisam ser preparadas para atirar ao fim da conjuração e, se não forem lançadas dentro de uma rodada, são consumidas pelas chamas. Para cada cinco níveis do mago, até dez flechas ou setas podem ser afetadas. As flechas ou setas fazem o dano normal com um bônus de +1 devido às chamas, e podem incendiar materiais inflamáveis. Esta versão da magia é usualmente utilizada em batalhas de grande escala, A segunda versão desta magia permite ao mago lançar setas feitas de fogo em oponentes que estejam dentro do alcance. Cada seta faz 1d6 de dano por perfuração e mais 4d6 de dano por fogo. Caso a vítima passe no teste de resistência à magia, ela pode evitar metade do dano causado pelo fogo. O mago recebe uma seta para cada cinco níveis de experiência - por exemplo, do 10º ao 14º nível recebe duas setas, do 15º ao 1º recebe três setas, etc. As setas precisam ser usadas em criaturas que estejam na frente do mago, e no máximo a 20 metros de distância umas das outras. Os componentes materiais são uma gota de óleo e um pequeno pedaço de pederneira."
+}

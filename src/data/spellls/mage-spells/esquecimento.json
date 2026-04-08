@@ -1,0 +1,10 @@
+{
+    "name": "Esquecimento",
+    "level": 2,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "2",
+    "duration": "Permanente",
+    "range": "30 metros",
+    "area": "Cubo de 6 metros de aresta",
+    "description": "Através dessa magia, o mago pode fazer com que as criaturas que estejam dentro da área de efeito esqueçam os acontecimentos da rodada anterior (o minuto anterior à utilização da magia). Para cada 3 níveis de experiência do mago, outro minuto é esquecido. Esta magia não consegue anular o efeito de Enfeitiçar Pessoas, Tarefa, Sugestão, Missão, ou magias similares, mas a criatura que as lançou pode ser esquecida. Uma a quatro criaturas podem ser afetadas, de acordo com a vontade do mago. Caso a magia seja utilizada em apenas uma criatura, ela tem uma penalidade de -2 no seu teste de resistência à magia. Caso seja utilizada em duas criaturas, cada uma delas tem uma penalidade de -1 no teste. Se utilizada em três ou quatro criaturas, elas fazem seus testes normalmente. Todos os testes de resistência feitos são ajustados de acordo com a Sabedoria dos receptores. As memórias apagadas podem ser recobradas pelas magias divinas Cura Completa e Restauração, quando utilizadas especificamente para este propósito, bem como por um Desejo ou um Desejo Restrito, mas esses são os únicos meios."
+}

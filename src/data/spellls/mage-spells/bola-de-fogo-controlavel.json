@@ -1,0 +1,10 @@
+{
+    "name": "Bola de Fogo Controlável",
+    "level": 7,
+    "school": "Evocação",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "100 metros +10 metros/nível",
+    "area": "Globo com 5 metros de raio",
+    "description": "Essa magia cria Bola de Fogo especial, com um bônus de +1 em cada dado de dano, e que pode explodir imediatamente, ou em até cinco rodadas depois de lançada, de acordo com o desejo do mago. Em outros aspectos, é exatamente igual ao efeito de Bola de Fogo."
+}

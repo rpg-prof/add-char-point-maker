@@ -1,0 +1,10 @@
+{
+    "name": "Neblina Mortal",
+    "level": 6,
+    "school": "Alteração, Evocação",
+    "castingTime": "6",
+    "duration": "1d4 rodadas + 1 rodada por nível",
+    "range": "30 metros",
+    "area": "2 cubos de 3 metros/nível",
+    "description": "Essa magia cria um nevoeiro denso, que tem a propriedade adicional de ser altamente ácido. Os vapores são mortais para as criaturas vivas, de forma que qualquer vegetação exposta morrerá grama e plantas pequenas em uma rodada, arbustos e similares em quatro, pequenas árvores em oito e árvores grandes em dezesseis. Vida animal sem imunidade ao ácido sofre dano de acordo com o tempo de exposição à nuvem: 1ª rodada 1 ponto 2ª rodada 2 pontos 3ª rodada 4 pontos Componentes: V, G, M 4ª rodada e seguintes: 8 pontos Tempo de Execução: 1 turno Resistência: Nenhuma Neblina Mortal lembra em muitos aspectos a Névoa: vapores ondulantes que podem ser removidos apenas por um vento muito forte. Qualquer criatura que tente atravessar a Neblina Mortal se move a um máximo de 30 centímetros por unidade de sua taxa de movimentação normal. Lufada de Vento não pode afetar a nuvem. As magias Bola de Fogo, Coluna de Chamas ou Muralha de Fogo podem consumir a Neblina em uma rodada. Os componentes materiais são um punhado de ervilhas secas e moídas, casco de animais em pó e um ácido forte de qualquer tipo (incluindo vinagre altamente destilado e cristais ácidos), que deve ser adquirido de um alquimista."
+}

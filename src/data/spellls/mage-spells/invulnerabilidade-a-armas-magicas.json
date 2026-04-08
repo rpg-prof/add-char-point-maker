@@ -1,0 +1,10 @@
+{
+    "name": "Invulnerabilidade a Armas Mágicas",
+    "level": 6,
+    "school": "Abjuração",
+    "castingTime": "3",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "1,5 de raio",
+    "description": "Essa magia cria uma esfera mágica levemente cintilante, imóvel em volta do conjurador que não pode ser pene- trada por armas mágicas contundentes, cortantes ou armas de arremesso; todas essas armas são desviadas (armas de projéteis golpeiam a esfera, caindo ime- diatamente ao chão) inofensivamente. Porém, a esfera não oferece nenhuma proteção contra criaturas criadas ma- gicamente (como golems) ou de cria- turas cujos ataques são baseados em magia (como o olhar de uma medusa). A magia não confere proteção alguma contra Dardos Místicos ou magias que simulem efeitos de armas. O lançador pode usar essas armas dentro da esfera e atacar oponentes normalmente. Magias podem ser con- juradas de dentro da esfera. A magia não nega os efeitos de Dissipar Magias. O componente material para esta magia é o pedaço de uma arma mágica quebrada."
+}

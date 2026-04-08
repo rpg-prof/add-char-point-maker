@@ -1,0 +1,10 @@
+{
+    "name": "Sugestionar Multidões",
+    "level": 6,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "6",
+    "duration": "4 turnos + 4 turnos/nível",
+    "range": "30 metros",
+    "area": "1 criatura/nível",
+    "description": "Sugestionar Multidões permite ao mago influenciar as ações de uma ou mais criaturas do mesmo modo que Sugestão. No máximo uma criatura pode ser influenciada para cada nível do mago, desde que todas estejam dentro do alcance de 30 metros. Mortos-vivos não são afetados por esse efeito. A sugestão deve ser a mesma para todas as vítimas, precisa ser razoável, e ter uma formulação clara e compreensível. Criaturas que passarem em um teste de resistência contra magias não serão afetadas. Os testes sofrem uma penalidade de -1; se apenas uma criatura for atacada, a penalidade vai a -4. Note que uma sugestão muito razoável pode aumentar a penalidade (-1, -2, etc.) se o Mestre desejar. Sugestionar Multidões pode continuar ativa por tempo considerável, caso o Mestre permita. Uma ação sugerida pode ser vinculada a circunstâncias específicas; se as circunstâncias não ocorrerem antes que a duração da magia expire, essa ação não será realizada. Os materiais são uma língua de cobra e um pedaço de favo de mel, ou gota de óleo adocicado."
+}

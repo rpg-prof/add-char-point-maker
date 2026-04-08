@@ -1,0 +1,10 @@
+{
+    "name": "Luz",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "1 turno/nível",
+    "range": "60 metros",
+    "area": "Globo de 6 metros de raio",
+    "description": "Essa magia cria um brilho luminoso semelhante ao de uma tocha, dentro de um raio que parte de um local. Objetos um pouco além desta área também podem ser vistos, mas apenas vagamente. A magia é centrada em um ponto visível ao mago e pode ser lançada em qualquer objeto. O efeito é imóvel, a não ser que a magia seja lançada em um objeto móvel, ou em uma criatura, Desta forma, ela se move junto com seu “suporte”, não se movendo com o vento, se for lançada no ar. Se for utilizada em uma criatura, ela tem direito a um teste de resistência à magia. Se a criatura passar no teste, a magia faz efeito meio metro atrás dela, mas ainda funciona. Caso a criatura tenha a capacidade de anular magias, ela testa essa capacidade. Se passar, ela é anulada. Se um objeto com Luz for levado a uma área de escuridão mágica, a magia simplesmente não funciona; mas se for lançada contra a escuridão mágica, as trevas são anuladas pela duração da Luz. A iluminação no local voltará a ser, durante esse período de tempo, a que existia antes que as magias fossem utilizadas. Luz, centrado nos olhos de uma criatura, deixa-a cega, reduzindo suas jogadas de ataque e resistência em 4, e piorando sua Classe de Armadura também em 4. O mago pode encerrar esta magia com uma única palavra. O componente material é um vaga-lume ou um pouco de musgo fosforescente."
+}

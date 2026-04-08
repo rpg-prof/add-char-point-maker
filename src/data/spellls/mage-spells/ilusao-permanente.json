@@ -1,0 +1,10 @@
+{
+    "name": "Ilusão Permanente",
+    "level": 6,
+    "school": "Ilusão/Visão",
+    "castingTime": "7",
+    "duration": "Permanente",
+    "range": "10 metros/nível",
+    "area": "Cubo de 6 metros + cubo de 3 metros/nível",
+    "description": "Quando essa magia é lançada, o mago produz uma ilusão com componentes visuais, térmicos, olfativos e sonoros. A imagem criada pode reproduzir a aparência de qualquer objeto, criatura ou Força, desde que permaneça nos limites da área de efeito. A ilusão afeta qualquer criatura que a observe, ao ponto das vítimas sofrerem dano se caírem em um buraco ilusório cheio de estacas afiadas, criado pela magia. Criaturas que tentem duvidar da ilusão ganham direito a um teste de resistência à magia. Se forem bem-sucedidas, elas verão a aparência real do objeto afetado e, se puderem comunicar efetivamente o fato aos seus associados, esses receberão um bônus de +4 em seus testes de resistência. Criaturas que não estejam sentindo os efeitos da magia (seres cegos, surdos, etc.) não serão afetados, até que o percebam de alguma forma. A ilusão está sujeita a Dissipar Magia. O componente material é um pouco de lã."
+}

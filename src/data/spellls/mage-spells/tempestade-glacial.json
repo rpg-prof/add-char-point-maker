@@ -1,0 +1,10 @@
+{
+    "name": "Tempestade Glacial",
+    "level": 4,
+    "school": "Evocação",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "10 metros/nível",
+    "area": "Especial",
+    "description": "Essa magia pode ter um dos seguintes efeitos, determinado no momento de sua utilização: grandes pedras de granizo chovem por uma rodada numa área de 12 metros de diâmetro, causando 3d10 pontos de dano em todas as criaturas presentes, ou uma nevasca cai numa área de 24 metros de diâmetro durante uma rodada por nível do mago. A nevasca cega as criaturas que estejam na área de efeito e torna o chão escorregadio como neve, reduzindo a Taxa de Movimentação das criaturas em 50% e fazendo com que haja uma chance de 50% de que uma criatura que esteja se movendo escorregue e caia. A nevasca também apaga tochas e fogueiras. Essa magia cancelará Esquentar Metal. Os componentes materiais dessa magia são algumas gotas de água e poeira."
+}

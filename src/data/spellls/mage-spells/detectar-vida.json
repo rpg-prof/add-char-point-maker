@@ -1,0 +1,10 @@
+{
+    "name": "Detectar Vida",
+    "level": 2,
+    "school": "Adivinhação",
+    "castingTime": "2",
+    "duration": "5 rodadas",
+    "range": "3 metros/nível",
+    "area": "uma criatura",
+    "description": "Através do uso desta magia, o mago pode determinar se uma criatura está viva, incluindo criaturas em coma ou transe, ou sob a influência de Morte Aparente. Qualquer forma de proteção mental impede a eficácia desta magia, como também qualquer espessura de metal. Dois centímetros e meio de pe- dra ou madeira são tratado como 3 metros de espaço aberto para deter- minar se a magia funciona. Os componentes de materiais para esta magia são um símbolo sagrado e um cabelo da cabeça de um animal recém-nascido."
+}

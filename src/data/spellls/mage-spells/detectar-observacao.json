@@ -1,0 +1,10 @@
+{
+    "name": "Detectar Observação",
+    "level": 4,
+    "school": "Adivinhação",
+    "castingTime": "4",
+    "duration": "1d6 turnos +1 turno/nível",
+    "range": "0",
+    "area": "40 metros de raio",
+    "description": "Através da utilização dessa magia, o mago imediatamente percebe qualquer tentativa de observá-lo através da Clarividência, da Claraudiência ou Espelho Encantado. Essa magia também revela o uso de instrumentos de observação, como bolas de cristal, se tais instrumentos forem utilizados dentro da área de efeito. Ela é centrada no mago, permitindo que ele se mova e faça uma “varredura” para tentar detectar observações. Quando uma tentativa de observação mágica é detectada, o observador deve fazer imediatamente um teste de resistência a magia, ou sua identidade e localização aproximada tornam-se imediatamente conhecidas pelo mago. Essa localização aproximada é composta de uma direção e de um ponto de referência próximo ao observador. Por exemplo, o mago pode descobrir: “Seu aprendiz Adam esta utilizando sua bola de cristal no andar de baixo”, ou “Naas, o mago, nos observa da cidade de Waterdeep”. Os componentes materiais são um pequeno espelho e uma corneta acústica de latão."
+}

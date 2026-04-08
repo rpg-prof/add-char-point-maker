@@ -1,0 +1,10 @@
+{
+    "name": "Compor",
+    "level": 5,
+    "school": "Encantamento, Alteração",
+    "castingTime": "1",
+    "duration": "Permanente",
+    "range": "5 metros/nível",
+    "area": "1 metro cúbico/nível",
+    "description": "Através dessa magia, o mago pode converter um tipo qualquer de material em um produto feito daquele material. Portanto, pode-se fabricar uma ponte de madeira à partir de troncos de árvore, uma corda de um pedaço de cânhamo, roupas à partir de linho ou lã, etc. Coisas mágicas ou vivas não podem ser criadas ou alteradas com essa magia. A qualidade dos itens feitos por essa magia é equivalente à qualidade do material utilizado como base para a sua fabricação. Se um mineral for utilizado, a área de efeito cai para 30 centímetros cúbicos/nível. Artigos que exijam um alto grau de especialização para se confeccionar (jóias, espadas, vidro, cristal, etc.) não podem ser fabricados, a menos que o mago possua um grande conhecimento na técnica apropriada. O tempo de execução é de uma rodada completa por metro cúbico de material."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Toque da Dor",
+    "level": 3,
+    "school": "Adivinhação",
+    "castingTime": "3",
+    "duration": "1 rodada/nível",
+    "range": "Toque",
+    "area": "",
+    "description": "Toque da Dor permite ao mago tocar um adversário de forma a provocar dor extrema. A magia funciona se o mago toca qualquer parte exposta do corpo de um oponente. O mago deve estar ao alcance do braço do adversário para a magia funcionar. A magia exige uma jogada de ataque normal. A dor não causa nenhum dano, mas pelas próximas 1d4 rodadas, a vítima sofrerá penalidade de –2 em suas joga- das de ataque e sua CA aumenta em 2. O mago pode realizar a magia e tocar a vítima na mesma rodada. Toque da Dor só é eficaz em humanos, semi-humanos e oponentes humanoides. Os componentes materiais para esta magia são uma agulha e o dedo de uma luva queimada."
+}

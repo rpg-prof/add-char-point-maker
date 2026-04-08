@@ -1,0 +1,10 @@
+{
+    "name": "Criar Passagens",
+    "level": 5,
+    "school": "Alteração",
+    "castingTime": "4",
+    "duration": "1 hora +1 turno por nível",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "Essa magia permite ao mago abrir uma passagem em paredes de madeira, gesso ou pedra, mas não de outros materiais. O mago e seus companheiros podem simplesmente caminhar através de tais obstáculos. O efeito provoca uma abertura de 1,5 metro de largura por 2,5 metros de altura com 3 metros de profundidade. Várias magias deste tipo. combinadas, podem formar uma passagem contínua para que paredes muito espessas possam ser atravessadas. Se dissipada, a passagem se fecha, ejetando todos aqueles que estiverem em seu interior. O componente material é um punhado de sementes de gergelim."
+}

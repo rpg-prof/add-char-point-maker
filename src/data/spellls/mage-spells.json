@@ -1,0 +1,5382 @@
+{
+    "by-level": {
+        "1": [
+            {
+                "name": "A Aura Esotérica de Nystul",
+                "file": "mage-spells/a-aura-esoterica-de-nystul.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "A Reflexão do Olhar",
+                "file": "mage-spells/a-reflexao-do-olhar.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Alacridade",
+                "file": "mage-spells/alacridade.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Alarme",
+                "file": "mage-spells/alarme.json",
+                "level": 1,
+                "school": "Abjuração, Evocação"
+            },
+            {
+                "name": "Alcance Distante I",
+                "file": "mage-spells/alcance-distante-i.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Alcance Distante III",
+                "file": "mage-spells/alcance-distante-iii.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Amizade",
+                "file": "mage-spells/amizade.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Anulação Absurda de Nahal",
+                "file": "mage-spells/anulacao-absurda-de-nahal.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Análise Essencial de Alamir",
+                "file": "mage-spells/analise-essencial-de-alamir.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Apagar",
+                "file": "mage-spells/apagar.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Aquisição de Khazid",
+                "file": "mage-spells/aquisicao-de-khazid.json",
+                "level": 1,
+                "school": "Adivinhação/Convocação"
+            },
+            {
+                "name": "Armadura Arcana",
+                "file": "mage-spells/armadura-arcana.json",
+                "level": 1,
+                "school": "Conjuração"
+            },
+            {
+                "name": "Armadura Espiritual",
+                "file": "mage-spells/armadura-espiritual.json",
+                "level": 1,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Ataque Selvagem",
+                "file": "mage-spells/ataque-selvagem.json",
+                "level": 1,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Aumento I",
+                "file": "mage-spells/aumento-i.json",
+                "level": 1,
+                "school": "Invocação/Evocação"
+            },
+            {
+                "name": "Aumento II",
+                "file": "mage-spells/aumento-ii.json",
+                "level": 1,
+                "school": "Invocação/Evocação"
+            },
+            {
+                "name": "Cajado dos Trovões",
+                "file": "mage-spells/cajado-dos-trovoes.json",
+                "level": 1,
+                "school": "Invocação/Evocação"
+            },
+            {
+                "name": "Cajado Mágico",
+                "file": "mage-spells/cajado-magico.json",
+                "level": 1,
+                "school": "Encantamento/Charme"
+            },
+            {
+                "name": "Celeridade de Mordenkhain",
+                "file": "mage-spells/celeridade-de-mordenkhain.json",
+                "level": 1,
+                "school": "Alteração/Invocação"
+            },
+            {
+                "name": "Cerrar Portas",
+                "file": "mage-spells/cerrar-portas.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Compreensão da Linguagem",
+                "file": "mage-spells/compreensao-da-linguagem.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Conjurar Familiar",
+                "file": "mage-spells/conjurar-familiar.json",
+                "level": 1,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Consertar",
+                "file": "mage-spells/consertar.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Convocar Licantropo",
+                "file": "mage-spells/convocar-licantropo.json",
+                "level": 1,
+                "school": "Convocação/Conjuração"
+            },
+            {
+                "name": "Copiar",
+                "file": "mage-spells/copiar.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Corcel Espectral de Bloodstone",
+                "file": "mage-spells/corcel-espectral-de-bloodstone.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Dardos Místicos",
+                "file": "mage-spells/dardos-misticos.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Defletor de Hornung",
+                "file": "mage-spells/defletor-de-hornung.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Detectar Doença",
+                "file": "mage-spells/detectar-doenca.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Magia",
+                "file": "mage-spells/detectar-magia.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Mortos-Vivos",
+                "file": "mage-spells/detectar-mortos-vivos.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Dilatação I",
+                "file": "mage-spells/dilatacao-i.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Dilatação II",
+                "file": "mage-spells/dilatacao-ii.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Enfeitiçar Pessoas",
+                "file": "mage-spells/enfeiticar-pessoas.json",
+                "level": 1,
+                "school": "Encantamento"
+            },
+            {
+                "name": "Escudo Arcano",
+                "file": "mage-spells/escudo-arcano.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Escudo do Caos",
+                "file": "mage-spells/escudo-do-caos.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Escudo Selvagem",
+                "file": "mage-spells/escudo-selvagem.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Estimativa de Hornung",
+                "file": "mage-spells/estimativa-de-hornung.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Expandir",
+                "file": "mage-spells/expandir.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Explosão de Fogo",
+                "file": "mage-spells/explosao-de-fogo.json",
+                "level": 1,
+                "school": "Alteração/Evocação"
+            },
+            {
+                "name": "Fala do Tolo",
+                "file": "mage-spells/fala-do-tolo.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Força Fantasmagórica",
+                "file": "mage-spells/forca-fantasmagorica.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Garras de Umber Hulk",
+                "file": "mage-spells/garras-de-umber-hulk.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Globos de Luz",
+                "file": "mage-spells/globos-de-luz.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Hipnotismo",
+                "file": "mage-spells/hipnotismo.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Há/ Não Há",
+                "file": "mage-spells/ha-nao-ha.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Identificação",
+                "file": "mage-spells/identificacao.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Leque Cromático",
+                "file": "mage-spells/leque-cromatico.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Ler Magias",
+                "file": "mage-spells/ler-magias.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Luz",
+                "file": "mage-spells/luz.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Malison Menor",
+                "file": "mage-spells/malison-menor.json",
+                "level": 1,
+                "school": "Encantamento/Charme"
+            },
+            {
+                "name": "Manipular Chamas",
+                "file": "mage-spells/manipular-chamas.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Mensagem",
+                "file": "mage-spells/mensagem.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Montaria Arcana",
+                "file": "mage-spells/montaria-arcana.json",
+                "level": 1,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Muralha de Névoas",
+                "file": "mage-spells/muralha-de-nevoas.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Má Sorte",
+                "file": "mage-spells/ma-sorte.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Mão de Pedra de Maximiliano",
+                "file": "mage-spells/mao-de-pedra-de-maximiliano.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Mão de Terra de Maximiliano",
+                "file": "mage-spells/mao-de-terra-de-maximiliano.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Mãos Flamejantes",
+                "file": "mage-spells/maos-flamejantes.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Névoa Mental",
+                "file": "mage-spells/nevoa-mental.json",
+                "level": 1,
+                "school": "Encanto/Charme"
+            },
+            {
+                "name": "O Disco Flutuante de Tenser",
+                "file": "mage-spells/o-disco-flutuante-de-tenser.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Olhar do Mago",
+                "file": "mage-spells/olhar-do-mago.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Orbe Cromática",
+                "file": "mage-spells/orbe-cromatica.json",
+                "level": 1,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Patas de Aranha",
+                "file": "mage-spells/patas-de-aranha.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Proteção ao Mal",
+                "file": "mage-spells/protecao-ao-mal.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Proteção contra Fome e Sede",
+                "file": "mage-spells/protecao-contra-fome-e-sede.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Provocação",
+                "file": "mage-spells/provocacao.json",
+                "level": 1,
+                "school": "Encantamento"
+            },
+            {
+                "name": "Punho de Pedra",
+                "file": "mage-spells/punho-de-pedra.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Queda Suave",
+                "file": "mage-spells/queda-suave.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Repulsão de Von Gasik",
+                "file": "mage-spells/repulsao-de-von-gasik.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Resistência Baixa",
+                "file": "mage-spells/resistencia-baixa.json",
+                "level": 1,
+                "school": "Abjuração/Alteração"
+            },
+            {
+                "name": "Runa Arcana",
+                "file": "mage-spells/runa-arcana.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Salto",
+                "file": "mage-spells/salto.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Salvaguarda",
+                "file": "mage-spells/salvaguarda.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Sede Insaciável",
+                "file": "mage-spells/sede-insaciavel.json",
+                "level": 1,
+                "school": "Encantamento/Charme"
+            },
+            {
+                "name": "Senso de Alterações",
+                "file": "mage-spells/senso-de-alteracoes.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Servo Invisível",
+                "file": "mage-spells/servo-invisivel.json",
+                "level": 1,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Som Ilusório",
+                "file": "mage-spells/som-ilusorio.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Sombra Rastejante de Lorloveim",
+                "file": "mage-spells/sombra-rastejante-de-lorloveim.json",
+                "level": 1,
+                "school": "Ilusão"
+            },
+            {
+                "name": "Sono",
+                "file": "mage-spells/sono.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Susto",
+                "file": "mage-spells/susto.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Toque Chocante",
+                "file": "mage-spells/toque-chocante.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Toque Macabro",
+                "file": "mage-spells/toque-macabro.json",
+                "level": 1,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Transformação Momentânea",
+                "file": "mage-spells/transformacao-momentanea.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Transformação Sombria de Lorloveim",
+                "file": "mage-spells/transformacao-sombria-de-lorloveim.json",
+                "level": 1,
+                "school": "Ilusão"
+            },
+            {
+                "name": "Truque",
+                "file": "mage-spells/truque.json",
+                "level": 1,
+                "school": "Todas as escolas"
+            },
+            {
+                "name": "Varinha da Adivinhação",
+                "file": "mage-spells/varinha-da-adivinhacao.json",
+                "level": 1,
+                "school": "Adivinhação/Encantamento"
+            },
+            {
+                "name": "Ventriloquismo",
+                "file": "mage-spells/ventriloquismo.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Visão de Cadáver",
+                "file": "mage-spells/visao-de-cadaver.json",
+                "level": 1,
+                "school": "Ilusão, Necromancia"
+            },
+            {
+                "name": "Área Escorregadia",
+                "file": "mage-spells/area-escorregadia.json",
+                "level": 1,
+                "school": "Conjuração"
+            },
+            {
+                "name": "Último Fôlego",
+                "file": "mage-spells/ultimo-folego.json",
+                "level": 1,
+                "school": "Alteração"
+            }
+        ],
+        "2": [
+            {
+                "name": "A Armadilha de Leomund",
+                "file": "mage-spells/a-armadilha-de-leomund.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "A Flecha Ácida de Melf",
+                "file": "mage-spells/a-flecha-acida-de-melf.json",
+                "level": 2,
+                "school": "Conjuração"
+            },
+            {
+                "name": "Alterar-se",
+                "file": "mage-spells/alterar-se.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Arrombar",
+                "file": "mage-spells/arrombar.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Aterrorizar",
+                "file": "mage-spells/aterrorizar.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Boca Encantada",
+                "file": "mage-spells/boca-encantada.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Bolsos Arcanos",
+                "file": "mage-spells/bolsos-arcanos.json",
+                "level": 2,
+                "school": "Alteração, Encantamento"
+            },
+            {
+                "name": "Borrar a Visão",
+                "file": "mage-spells/borrar-a-visao.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Cegueira",
+                "file": "mage-spells/cegueira.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Confundir Detecção",
+                "file": "mage-spells/confundir-deteccao.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Convocar Enxames",
+                "file": "mage-spells/convocar-enxames.json",
+                "level": 2,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Criação Fantasmagórica",
+                "file": "mage-spells/criacao-fantasmagorica.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Despedaçar",
+                "file": "mage-spells/despedacar.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Detectar Inviabilidade",
+                "file": "mage-spells/detectar-inviabilidade.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Maldade",
+                "file": "mage-spells/detectar-maldade.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Vida",
+                "file": "mage-spells/detectar-vida.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Escuridão, 4,5 m",
+                "file": "mage-spells/escuridao-4-5-m.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Esfera Flamejante",
+                "file": "mage-spells/esfera-flamejante.json",
+                "level": 2,
+                "school": "Evocação"
+            },
+            {
+                "name": "Esquecimento",
+                "file": "mage-spells/esquecimento.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Fechadura Arcana",
+                "file": "mage-spells/fechadura-arcana.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Filtro",
+                "file": "mage-spells/filtro.json",
+                "level": 2,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Força",
+                "file": "mage-spells/forca.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Invisibilidade",
+                "file": "mage-spells/invisibilidade.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Irritação",
+                "file": "mage-spells/irritacao.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Levitação",
+                "file": "mage-spells/levitacao.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Localizar Objetos",
+                "file": "mage-spells/localizar-objetos.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Luz Contínua",
+                "file": "mage-spells/luz-continua.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Mão Espectral",
+                "file": "mage-spells/mao-espectral.json",
+                "level": 2,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Névoa",
+                "file": "mage-spells/nevoa.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Névoa Fétida",
+                "file": "mage-spells/nevoa-fetida.json",
+                "level": 2,
+                "school": "Evocação"
+            },
+            {
+                "name": "Nó",
+                "file": "mage-spells/no.json",
+                "level": 2,
+                "school": "Encantamento"
+            },
+            {
+                "name": "O Riso Histérico de Tasha",
+                "file": "mage-spells/o-riso-histerico-de-tasha.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Os componentes materiais para esta magia são um fio da teia de aranha e um fragmento de pano de algodão com aproximadamente uma polegada quadrada Obstrução",
+                "file": "mage-spells/os-componentes-materiais-para-esta-magia-sao-um-fio-da-teia-de-aranha-e-um-fragmento-de-pano-de-algodao-com-aproximadamente-uma-polegada-quadrada-obstrucao.json",
+                "level": 2,
+                "school": "Necromancia; Conjuração/Convocação"
+            },
+            {
+                "name": "Ouro dos Tolos",
+                "file": "mage-spells/ouro-dos-tolos.json",
+                "level": 2,
+                "school": "Alteração, Ilusão"
+            },
+            {
+                "name": "Padrão Hipnótico",
+                "file": "mage-spells/padrao-hipnotico.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Percepção Extrasensorial",
+                "file": "mage-spells/percepcao-extrasensorial.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Pirotecnia",
+                "file": "mage-spells/pirotecnia.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Poeira Ofuscante",
+                "file": "mage-spells/poeira-ofuscante.json",
+                "level": 2,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Proteção a Truques",
+                "file": "mage-spells/protecao-a-truques.json",
+                "level": 2,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Punhal de Gelo",
+                "file": "mage-spells/punhal-de-gelo.json",
+                "level": 2,
+                "school": "Evocação"
+            },
+            {
+                "name": "Raio de Enfraquecimento",
+                "file": "mage-spells/raio-de-enfraquecimento.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Recordação da Morte",
+                "file": "mage-spells/recordacao-da-morte.json",
+                "level": 2,
+                "school": "Necromancia/Adivinhação"
+            },
+            {
+                "name": "Reflexos",
+                "file": "mage-spells/reflexos.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Revelar Tendências",
+                "file": "mage-spells/revelar-tendencias.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Surdez",
+                "file": "mage-spells/surdez.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Teia",
+                "file": "mage-spells/teia.json",
+                "level": 2,
+                "school": "Evocação"
+            },
+            {
+                "name": "Toque do Carniçal",
+                "file": "mage-spells/toque-do-carnical.json",
+                "level": 2,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Truque de Corda",
+                "file": "mage-spells/truque-de-corda.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Vento Sussurrante",
+                "file": "mage-spells/vento-sussurrante.json",
+                "level": 2,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Vocalizar",
+                "file": "mage-spells/vocalizar.json",
+                "level": 2,
+                "school": "Alteração"
+            }
+        ],
+        "3": [
+            {
+                "name": "Bola de Fogo",
+                "file": "mage-spells/bola-de-fogo.json",
+                "level": 3,
+                "school": "Evocação"
+            },
+            {
+                "name": "Claraudiência",
+                "file": "mage-spells/claraudiencia.json",
+                "level": 3,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Clarividência",
+                "file": "mage-spells/clarividencia.json",
+                "level": 3,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Clava de Ossos",
+                "file": "mage-spells/clava-de-ossos.json",
+                "level": 3,
+                "school": "Encantamento,**\n\n**Necromancia"
+            },
+            {
+                "name": "Compreender Idiomas",
+                "file": "mage-spells/compreender-idiomas.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Convocar Criaturas I",
+                "file": "mage-spells/convocar-criaturas-i.json",
+                "level": 3,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Crânio Flutuante",
+                "file": "mage-spells/cranio-flutuante.json",
+                "level": 3,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Dentes Abocanhantes",
+                "file": "mage-spells/dentes-abocanhantes.json",
+                "level": 3,
+                "school": "Conjuração/ Alteração"
+            },
+            {
+                "name": "Dissipar Magia",
+                "file": "mage-spells/dissipar-magia.json",
+                "level": 3,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Esconder Itens",
+                "file": "mage-spells/esconder-itens.json",
+                "level": 3,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Escrita Ilusória",
+                "file": "mage-spells/escrita-ilusoria.json",
+                "level": 3,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Flecha de Chamas",
+                "file": "mage-spells/flecha-de-chamas.json",
+                "level": 3,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Forma Ectoplásmica",
+                "file": "mage-spells/forma-ectoplasmica.json",
+                "level": 3,
+                "school": "Alteração/Ilusão"
+            },
+            {
+                "name": "Força Espectral",
+                "file": "mage-spells/forca-espectral.json",
+                "level": 3,
+                "school": "Ilusão/visão"
+            },
+            {
+                "name": "Imobilizar Mortos-Vivos",
+                "file": "mage-spells/imobilizar-mortos-vivos.json",
+                "level": 3,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Imobilizar Pessoas",
+                "file": "mage-spells/imobilizar-pessoas.json",
+                "level": 3,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Infravisão",
+                "file": "mage-spells/infravisao.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Invisibilidade, 3 m",
+                "file": "mage-spells/invisibilidade-3-m.json",
+                "level": 3,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Item",
+                "file": "mage-spells/item.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Lentidão",
+                "file": "mage-spells/lentidao.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Logro",
+                "file": "mage-spells/logro.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Lufada de Vento",
+                "file": "mage-spells/lufada-de-vento.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Malha Invisível",
+                "file": "mage-spells/malha-invisivel.json",
+                "level": 3,
+                "school": "Evocação/ Abjuração"
+            },
+            {
+                "name": "Mente de Ferro",
+                "file": "mage-spells/mente-de-ferro.json",
+                "level": 3,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Montaria Fantasmagórica",
+                "file": "mage-spells/montaria-fantasmagorica.json",
+                "level": 3,
+                "school": "Conjuração, Visão"
+            },
+            {
+                "name": "Morte Aparente",
+                "file": "mage-spells/morte-aparente.json",
+                "level": 3,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Muralha de Vento",
+                "file": "mage-spells/muralha-de-vento.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "O Pequeno Refúgio de Leomund",
+                "file": "mage-spells/o-pequeno-refugio-de-leomund.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "O Selo da Serpente Sépia",
+                "file": "mage-spells/o-selo-da-serpente-sepia.json",
+                "level": 3,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Os Meteoros Instantâneos de Melf",
+                "file": "mage-spells/os-meteoros-instantaneos-de-melf.json",
+                "level": 3,
+                "school": "Evocação, Alteração"
+            },
+            {
+                "name": "Piscar",
+                "file": "mage-spells/piscar.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Proteção a Projéteis",
+                "file": "mage-spells/protecao-a-projeteis.json",
+                "level": 3,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Proteção ao Mal, 3 m",
+                "file": "mage-spells/protecao-ao-mal-3-m.json",
+                "level": 3,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Página Secreta",
+                "file": "mage-spells/pagina-secreta.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Relâmpago",
+                "file": "mage-spells/relampago.json",
+                "level": 3,
+                "school": "Evocação"
+            },
+            {
+                "name": "Respirar na Água",
+                "file": "mage-spells/respirar-na-agua.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Retardar Morte",
+                "file": "mage-spells/retardar-morte.json",
+                "level": 3,
+                "school": "Encantamento/ Necromancia"
+            },
+            {
+                "name": "Runas Explosivas",
+                "file": "mage-spells/runas-explosivas.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Sugestão",
+                "file": "mage-spells/sugestao.json",
+                "level": 3,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Toque da Dor",
+                "file": "mage-spells/toque-da-dor.json",
+                "level": 3,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Toque Vampírico",
+                "file": "mage-spells/toque-vampirico.json",
+                "level": 3,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Velocidade",
+                "file": "mage-spells/velocidade.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Vôo",
+                "file": "mage-spells/voo.json",
+                "level": 3,
+                "school": "Alteração"
+            }
+        ],
+        "4": [
+            {
+                "name": "A Esfera Resiliente de Otiluke",
+                "file": "mage-spells/a-esfera-resiliente-de-otiluke.json",
+                "level": 4,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Abandono",
+                "file": "mage-spells/abandono.json",
+                "level": 4,
+                "school": "Alteração, Ilusão/Visão"
+            },
+            {
+                "name": "Ampliar Plantas",
+                "file": "mage-spells/ampliar-plantas.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Arma Encantada",
+                "file": "mage-spells/arma-encantada.json",
+                "level": 4,
+                "school": "Encantamento"
+            },
+            {
+                "name": "Armadilha de Fogo",
+                "file": "mage-spells/armadilha-de-fogo.json",
+                "level": 4,
+                "school": "Abjuração, Evocação"
+            },
+            {
+                "name": "Assassino Fantasmagórico",
+                "file": "mage-spells/assassino-fantasmagorico.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Aura de Fogo",
+                "file": "mage-spells/aura-de-fogo.json",
+                "level": 4,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Confusão",
+                "file": "mage-spells/confusao.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Convocar Criaturas II",
+                "file": "mage-spells/convocar-criaturas-ii.json",
+                "level": 4,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Criar Itens Efêmeros",
+                "file": "mage-spells/criar-itens-efemeros.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Detectar Observação",
+                "file": "mage-spells/detectar-observacao.json",
+                "level": 4,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Dreno Temporário",
+                "file": "mage-spells/dreno-temporario.json",
+                "level": 4,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Duplicar",
+                "file": "mage-spells/duplicar.json",
+                "level": 4,
+                "school": "Conjuração"
+            },
+            {
+                "name": "Emoções",
+                "file": "mage-spells/emocoes.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Enfeitiçar Monstros",
+                "file": "mage-spells/enfeiticar-monstros.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Escavar",
+                "file": "mage-spells/escavar.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Escudo do Fogo",
+                "file": "mage-spells/escudo-do-fogo.json",
+                "level": 4,
+                "school": "Evocação, Alteração"
+            },
+            {
+                "name": "Espelho Encantado",
+                "file": "mage-spells/espelho-encantado.json",
+                "level": 4,
+                "school": "Encantamento, Adivinhação"
+            },
+            {
+                "name": "Extensão I",
+                "file": "mage-spells/extensao-i.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Fiasco",
+                "file": "mage-spells/fiasco.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Fogo da Contemplação",
+                "file": "mage-spells/fogo-da-contemplacao.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Grito",
+                "file": "mage-spells/grito.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Halo de Olhos",
+                "file": "mage-spells/halo-de-olhos.json",
+                "level": 4,
+                "school": "Abjuração/**\n\n**Conjuração"
+            },
+            {
+                "name": "Inviabilidade Melhorada",
+                "file": "mage-spells/inviabilidade-melhorada.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Medo",
+                "file": "mage-spells/medo.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Metamorfose",
+                "file": "mage-spells/metamorfose.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Metamorfose Vegetal",
+                "file": "mage-spells/metamorfose-vegetal.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Metamorfosear-se",
+                "file": "mage-spells/metamorfosear-se.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Monstros de Sombra",
+                "file": "mage-spells/monstros-de-sombra.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Muralha de Fogo",
+                "file": "mage-spells/muralha-de-fogo.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Muralha de Gelo",
+                "file": "mage-spells/muralha-de-gelo.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Névoa Sólida",
+                "file": "mage-spells/nevoa-solida.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "O Realce Mnemônico de Rary",
+                "file": "mage-spells/o-realce-mnemonico-de-rary.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "O Refúgio seguro de Leomund",
+                "file": "mage-spells/o-refugio-seguro-de-leomund.json",
+                "level": 4,
+                "school": "Alteração, Encantamento"
+            },
+            {
+                "name": "Olho Arcano",
+                "file": "mage-spells/olho-arcano.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Os Tentáculos Negros de Evard",
+                "file": "mage-spells/os-tentaculos-negros-de-evard.json",
+                "level": 4,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Padrão Prismático",
+                "file": "mage-spells/padrao-prismatico.json",
+                "level": 4,
+                "school": "Alteração, Ilusão/Visão"
+            },
+            {
+                "name": "Parede Ilusória",
+                "file": "mage-spells/parede-ilusoria.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Pele Rochosa",
+                "file": "mage-spells/pele-rochosa.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Pequeno Globo de Invulnerabilidade",
+                "file": "mage-spells/pequeno-globo-de-invulnerabilidade.json",
+                "level": 4,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Porta Dimensional",
+                "file": "mage-spells/porta-dimensional.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Praga",
+                "file": "mage-spells/praga.json",
+                "level": 4,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Remover Maldição",
+                "file": "mage-spells/remover-maldicao.json",
+                "level": 4,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Sopro do Vento",
+                "file": "mage-spells/sopro-do-vento.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Tempestade Glacial",
+                "file": "mage-spells/tempestade-glacial.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Terreno Ilusório",
+                "file": "mage-spells/terreno-ilusorio.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            }
+        ],
+        "5": [
+            {
+                "name": "A Arca Secreta de Leomund",
+                "file": "mage-spells/a-arca-secreta-de-leomund.json",
+                "level": 5,
+                "school": "Alteração, Conjuração/Convocação"
+            },
+            {
+                "name": "A Mão Interposta de Bigby",
+                "file": "mage-spells/a-mao-interposta-de-bigby.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Ampliar Animais",
+                "file": "mage-spells/ampliar-animais.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Animar os Mortos",
+                "file": "mage-spells/animar-os-mortos.json",
+                "level": 5,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Apodrecimento de Múmia",
+                "file": "mage-spells/apodrecimento-de-mumia.json",
+                "level": 5,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Ar Líquido",
+                "file": "mage-spells/ar-liquido.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Caos",
+                "file": "mage-spells/caos.json",
+                "level": 5,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Compor",
+                "file": "mage-spells/compor.json",
+                "level": 5,
+                "school": "Encantamento, Alteração"
+            },
+            {
+                "name": "Cone Glacial",
+                "file": "mage-spells/cone-glacial.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Conjurar Elemental",
+                "file": "mage-spells/conjurar-elemental.json",
+                "level": 5,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Contato Extraplanar",
+                "file": "mage-spells/contato-extraplanar.json",
+                "level": 5,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Convocar Criaturas III",
+                "file": "mage-spells/convocar-criaturas-iii.json",
+                "level": 5,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Convocar Sombras",
+                "file": "mage-spells/convocar-sombras.json",
+                "level": 5,
+                "school": "Conjuração/Convocação, Necromancia"
+            },
+            {
+                "name": "Criar Itens Temporários",
+                "file": "mage-spells/criar-itens-temporarios.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Criar Passagens",
+                "file": "mage-spells/criar-passagens.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Descobrir Valor",
+                "file": "mage-spells/descobrir-valor.json",
+                "level": 5,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Distorção de Distância",
+                "file": "mage-spells/distorcao-de-distancia.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Dominação",
+                "file": "mage-spells/dominacao.json",
+                "level": 5,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Elo Telepático de Rary",
+                "file": "mage-spells/elo-telepatico-de-rary.json",
+                "level": 5,
+                "school": "Adivinhação/Alteração"
+            },
+            {
+                "name": "Enfraquecer o Intelecto",
+                "file": "mage-spells/enfraquecer-o-intelecto.json",
+                "level": 5,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Enganar Visão",
+                "file": "mage-spells/enganar-visao.json",
+                "level": 5,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Enviar Mensagem",
+                "file": "mage-spells/enviar-mensagem.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Expulsão",
+                "file": "mage-spells/expulsao.json",
+                "level": 5,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Extensão II",
+                "file": "mage-spells/extensao-ii.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Forçar Transformação",
+                "file": "mage-spells/forcar-transformacao.json",
+                "level": 5,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Ilusão Independente",
+                "file": "mage-spells/ilusao-independente.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Imobilizar Monstros",
+                "file": "mage-spells/imobilizar-monstros.json",
+                "level": 5,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Invulnerabilidade a Armas Normais",
+                "file": "mage-spells/invulnerabilidade-a-armas-normais.json",
+                "level": 5,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Magia de Sombras",
+                "file": "mage-spells/magia-de-sombras.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Modificar Aparência",
+                "file": "mage-spells/modificar-aparencia.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Moldar Rochas",
+                "file": "mage-spells/moldar-rochas.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Monstros Sombrios",
+                "file": "mage-spells/monstros-sombrios.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Muralha de Energia",
+                "file": "mage-spells/muralha-de-energia.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Muralha de Ferro",
+                "file": "mage-spells/muralha-de-ferro.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Muralha de Ossos",
+                "file": "mage-spells/muralha-de-ossos.json",
+                "level": 5,
+                "school": "Conjuração/ Necromancia"
+            },
+            {
+                "name": "Muralha de Pedra",
+                "file": "mage-spells/muralha-de-pedra.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Névoa Mortal",
+                "file": "mage-spells/nevoa-mortal.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "O Cão Fiel de Mordenkainen",
+                "file": "mage-spells/o-cao-fiel-de-mordenkainen.json",
+                "level": 5,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "O Lamentável Debate de Leomund",
+                "file": "mage-spells/o-lamentavel-debate-de-leomund.json",
+                "level": 5,
+                "school": "Encantamento, Evocação"
+            },
+            {
+                "name": "Ossos Vibrantes",
+                "file": "mage-spells/ossos-vibrantes.json",
+                "level": 5,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Pedra em Lama",
+                "file": "mage-spells/pedra-em-lama.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Portal Ilusório",
+                "file": "mage-spells/portal-ilusorio.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Recipiente Arcano",
+                "file": "mage-spells/recipiente-arcano.json",
+                "level": 5,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Repulsão",
+                "file": "mage-spells/repulsao.json",
+                "level": 5,
+                "school": "Abjuração, Alteração"
+            },
+            {
+                "name": "Santuário Particular de Mordenkainen",
+                "file": "mage-spells/santuario-particular-de-mordenkainen.json",
+                "level": 5,
+                "school": "Abjuração/ Alteração"
+            },
+            {
+                "name": "Sonho",
+                "file": "mage-spells/sonho.json",
+                "level": 5,
+                "school": "Invocação, Ilusão/Visão"
+            },
+            {
+                "name": "Telecinésia",
+                "file": "mage-spells/telecinesia.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Teleportação",
+                "file": "mage-spells/teleportacao.json",
+                "level": 5,
+                "school": "Alteração"
+            }
+        ],
+        "6": [
+            {
+                "name": "A Elucubração de Mordenkainen",
+                "file": "mage-spells/a-elucubracao-de-mordenkainen.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "A Esfera Gélida de Otiluke",
+                "file": "mage-spells/a-esfera-gelida-de-otiluke.json",
+                "level": 6,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "A Mão Vigorosa de Bigby",
+                "file": "mage-spells/a-mao-vigorosa-de-bigby.json",
+                "level": 6,
+                "school": "Evocação"
+            },
+            {
+                "name": "A Transformação de Tenser",
+                "file": "mage-spells/a-transformacao-de-tenser.json",
+                "level": 6,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Aprisionamento",
+                "file": "mage-spells/aprisionamento.json",
+                "level": 6,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Caçador Invisível",
+                "file": "mage-spells/cacador-invisivel.json",
+                "level": 6,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Comando Visual",
+                "file": "mage-spells/comando-visual.json",
+                "level": 6,
+                "school": "Encantamento/Feitiço, Ilusão/Visão"
+            },
+            {
+                "name": "Concha Antimagia",
+                "file": "mage-spells/concha-antimagia.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Conjurar Animais",
+                "file": "mage-spells/conjurar-animais.json",
+                "level": 6,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Contingência",
+                "file": "mage-spells/contingencia.json",
+                "level": 6,
+                "school": "Evocação"
+            },
+            {
+                "name": "Controlar o Clima",
+                "file": "mage-spells/controlar-o-clima.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Convocar Criatura IV",
+                "file": "mage-spells/convocar-criatura-iv.json",
+                "level": 6,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Corrente de Relâmpagos",
+                "file": "mage-spells/corrente-de-relampagos.json",
+                "level": 6,
+                "school": "Evocação"
+            },
+            {
+                "name": "Desintegração",
+                "file": "mage-spells/desintegracao.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Despistar",
+                "file": "mage-spells/despistar.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Encantar Item",
+                "file": "mage-spells/encantar-item.json",
+                "level": 6,
+                "school": "Encantamento/Invocação"
+            },
+            {
+                "name": "Escamas de Dragão",
+                "file": "mage-spells/escamas-de-dragao.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Extensão III",
+                "file": "mage-spells/extensao-iii.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Globo de Invulnerabilidade",
+                "file": "mage-spells/globo-de-invulnerabilidade.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Ilusão Permanente",
+                "file": "mage-spells/ilusao-permanente.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Ilusão Programada",
+                "file": "mage-spells/ilusao-programada.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Invulnerabilidade a Armas Mágicas",
+                "file": "mage-spells/invulnerabilidade-a-armas-magicas.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Lendas e Histórias",
+                "file": "mage-spells/lendas-e-historias.json",
+                "level": 6,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Magia da Morte",
+                "file": "mage-spells/magia-da-morte.json",
+                "level": 6,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Magia Sombria",
+                "file": "mage-spells/magia-sombria.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Manto Negro",
+                "file": "mage-spells/manto-negro.json",
+                "level": 6,
+                "school": "Necromancia/ Encantamento"
+            },
+            {
+                "name": "Miragem Arcana",
+                "file": "mage-spells/miragem-arcana.json",
+                "level": 6,
+                "school": "Ilusão/Visão, Alteração"
+            },
+            {
+                "name": "Mover Terra",
+                "file": "mage-spells/mover-terra.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Neblina Mortal",
+                "file": "mage-spells/neblina-mortal.json",
+                "level": 6,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Olhos do Morto",
+                "file": "mage-spells/olhos-do-morto.json",
+                "level": 6,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Partir Água",
+                "file": "mage-spells/partir-agua.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Pedra em Carne",
+                "file": "mage-spells/pedra-em-carne.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Projetar Imagem",
+                "file": "mage-spells/projetar-imagem.json",
+                "level": 6,
+                "school": "Alteração, Ilusão/Visão"
+            },
+            {
+                "name": "Proteger Fortalezas",
+                "file": "mage-spells/proteger-fortalezas.json",
+                "level": 6,
+                "school": "Evocação, Alteração, Encantamento/Feitiço"
+            },
+            {
+                "name": "Reencarnação",
+                "file": "mage-spells/reencarnacao.json",
+                "level": 6,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Repulsão",
+                "file": "mage-spells/repulsao-6.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Sombras",
+                "file": "mage-spells/sombras.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Sugestionar Multidões",
+                "file": "mage-spells/sugestionar-multidoes.json",
+                "level": 6,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Tarefa",
+                "file": "mage-spells/tarefa.json",
+                "level": 6,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Tentáculos",
+                "file": "mage-spells/tentaculos.json",
+                "level": 6,
+                "school": "Conjuração, Alteração"
+            },
+            {
+                "name": "Tornar Raso",
+                "file": "mage-spells/tornar-raso.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Visão da Verdade",
+                "file": "mage-spells/visao-da-verdade.json",
+                "level": 6,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Vitrificação",
+                "file": "mage-spells/vitrificacao.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Véu",
+                "file": "mage-spells/veu.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Água em Pó",
+                "file": "mage-spells/agua-em-po.json",
+                "level": 6,
+                "school": "Alteração"
+            }
+        ],
+        "7": [
+            {
+                "name": "A Convocação Instantânea de Drawmij",
+                "file": "mage-spells/a-convocacao-instantanea-de-drawmij.json",
+                "level": 7,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "A Espada de Mordenkainen",
+                "file": "mage-spells/a-espada-de-mordenkainen.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "A Mansão Magnífica de Mordenkainen",
+                "file": "mage-spells/a-mansao-magnifica-de-mordenkainen.json",
+                "level": 7,
+                "school": "Alteração, Conjuração"
+            },
+            {
+                "name": "A Mão Poderosa de Bigby",
+                "file": "mage-spells/a-mao-poderosa-de-bigby.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Aerobarco",
+                "file": "mage-spells/aerobarco.json",
+                "level": 7,
+                "school": "Alteração/Encantamento"
+            },
+            {
+                "name": "Andar nas Sombras",
+                "file": "mage-spells/andar-nas-sombras.json",
+                "level": 7,
+                "school": "Ilusão, Encantamento"
+            },
+            {
+                "name": "Aura Elemental",
+                "file": "mage-spells/aura-elemental.json",
+                "level": 7,
+                "school": "Abjuração/Evocação"
+            },
+            {
+                "name": "Banimento",
+                "file": "mage-spells/banimento.json",
+                "level": 7,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Bola de Fogo Controlável",
+                "file": "mage-spells/bola-de-fogo-controlavel.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Cadeia de Contingência",
+                "file": "mage-spells/cadeia-de-contingencia.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Controlar Mortos-Vivos",
+                "file": "mage-spells/controlar-mortos-vivos.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Convocar Criaturas V",
+                "file": "mage-spells/convocar-criaturas-v.json",
+                "level": 7,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Cubo de Força",
+                "file": "mage-spells/cubo-de-forca.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Dedo da Morte",
+                "file": "mage-spells/dedo-da-morte.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Desejo Restrito",
+                "file": "mage-spells/desejo-restrito.json",
+                "level": 7,
+                "school": "Conjuração/Convocação, Invocação/Evocação"
+            },
+            {
+                "name": "Desvanecimento",
+                "file": "mage-spells/desvanecimento.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Duplicata Zumbi",
+                "file": "mage-spells/duplicata-zumbi.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Enfeitiçar Plantas",
+                "file": "mage-spells/enfeiticar-plantas.json",
+                "level": 7,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Escudo Homúnculo",
+                "file": "mage-spells/escudo-homunculo.json",
+                "level": 7,
+                "school": "Evocação, Necromancia"
+            },
+            {
+                "name": "Estabilizar",
+                "file": "mage-spells/estabilizar.json",
+                "level": 7,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Estátua",
+                "file": "mage-spells/estatua.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Fogo Selvagem",
+                "file": "mage-spells/fogo-selvagem.json",
+                "level": 7,
+                "school": "Invocação/Evocação"
+            },
+            {
+                "name": "Forma Plana",
+                "file": "mage-spells/forma-plana.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Gato das Sombras",
+                "file": "mage-spells/gato-das-sombras.json",
+                "level": 7,
+                "school": "Ilusão"
+            },
+            {
+                "name": "Inverter a Gravidade",
+                "file": "mage-spells/inverter-a-gravidade.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Inviabilidade em Massa",
+                "file": "mage-spells/inviabilidade-em-massa.json",
+                "level": 7,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Lamurio da Banshee",
+                "file": "mage-spells/lamurio-da-banshee.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Moldar Magia",
+                "file": "mage-spells/moldar-magia.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Palavra de Poder, Atordoar",
+                "file": "mage-spells/palavra-de-poder-atordoar.json",
+                "level": 7,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Passagem Invisível",
+                "file": "mage-spells/passagem-invisivel.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Punho Flamejante de Malec-Keith",
+                "file": "mage-spells/punho-flamejante-de-malec-keith.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Rajada Prismática",
+                "file": "mage-spells/rajada-prismatica.json",
+                "level": 7,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Refugiar Itens",
+                "file": "mage-spells/refugiar-itens.json",
+                "level": 7,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Reverter Magia",
+                "file": "mage-spells/reverter-magia.json",
+                "level": 7,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Seletor de Oscilações de Hornug",
+                "file": "mage-spells/seletor-de-oscilacoes-de-hornug.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Simulacrum",
+                "file": "mage-spells/simulacrum.json",
+                "level": 7,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Teleportação Exata",
+                "file": "mage-spells/teleportacao-exata.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Tempestade Ácida",
+                "file": "mage-spells/tempestade-acida.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Transferência de Estado",
+                "file": "mage-spells/transferencia-de-estado.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Transmutação Gloriosa",
+                "file": "mage-spells/transmutacao-gloriosa.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "União Pavorosa de Bloodstone",
+                "file": "mage-spells/uniao-pavorosa-de-bloodstone.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Visão",
+                "file": "mage-spells/visao.json",
+                "level": 7,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Zona Selvagem",
+                "file": "mage-spells/zona-selvagem.json",
+                "level": 7,
+                "school": "Conjuração/Convocação"
+            }
+        ],
+        "8": [
+            {
+                "name": "A Dança Irresistível de Otto",
+                "file": "mage-spells/a-danca-irresistivel-de-otto.json",
+                "level": 8,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "A Esfera Telecinética de Otiluke",
+                "file": "mage-spells/a-esfera-telecinetica-de-otiluke.json",
+                "level": 8,
+                "school": "Evocação, Alteração"
+            },
+            {
+                "name": "A Imunidade à Magia de Serten",
+                "file": "mage-spells/a-imunidade-a-magia-de-serten.json",
+                "level": 8,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Afundar",
+                "file": "mage-spells/afundar.json",
+                "level": 8,
+                "school": "Encantamento, Alteração"
+            },
+            {
+                "name": "Animação Ilusória",
+                "file": "mage-spells/animacao-ilusoria.json",
+                "level": 8,
+                "school": "Adivinhação, Ilusão"
+            },
+            {
+                "name": "Antipatia/Simpatia",
+                "file": "mage-spells/antipatia-simpatia.json",
+                "level": 8,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Aprisionar a Alma",
+                "file": "mage-spells/aprisionar-a-alma.json",
+                "level": 8,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Aço Vítreo",
+                "file": "mage-spells/aco-vitreo.json",
+                "level": 8,
+                "school": "Alteração"
+            },
+            {
+                "name": "Clone",
+                "file": "mage-spells/clone.json",
+                "level": 8,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Convocar Criaturas VI",
+                "file": "mage-spells/convocar-criaturas-vi.json",
+                "level": 8,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Desfolhar",
+                "file": "mage-spells/desfolhar.json",
+                "level": 8,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Enfeitiçar Multidões",
+                "file": "mage-spells/enfeiticar-multidoes.json",
+                "level": 8,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Forma de Sombra",
+                "file": "mage-spells/forma-de-sombra.json",
+                "level": 8,
+                "school": "Ilusão"
+            },
+            {
+                "name": "Labirinto",
+                "file": "mage-spells/labirinto.json",
+                "level": 8,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Limpar a Mente",
+                "file": "mage-spells/limpar-a-mente.json",
+                "level": 8,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Metamorfosear Objetos",
+                "file": "mage-spells/metamorfosear-objetos.json",
+                "level": 8,
+                "school": "Alteração"
+            },
+            {
+                "name": "Muralha Prismática",
+                "file": "mage-spells/muralha-prismatica.json",
+                "level": 8,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Nuvem Incendiária",
+                "file": "mage-spells/nuvem-incendiaria.json",
+                "level": 8,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "O Punho Cerrado de Bigby",
+                "file": "mage-spells/o-punho-cerrado-de-bigby.json",
+                "level": 8,
+                "school": "Evocação"
+            },
+            {
+                "name": "Obstrução",
+                "file": "mage-spells/obstrucao.json",
+                "level": 8,
+                "school": "Encantamento, Evocação"
+            },
+            {
+                "name": "Ordem",
+                "file": "mage-spells/ordem.json",
+                "level": 8,
+                "school": "Evocação, Encantamento/Feitiço"
+            },
+            {
+                "name": "Palavra de Poder, Cegar",
+                "file": "mage-spells/palavra-de-poder-cegar.json",
+                "level": 8,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Permanência",
+                "file": "mage-spells/permanencia.json",
+                "level": 8,
+                "school": "Alteração"
+            },
+            {
+                "name": "Repelir Medo",
+                "file": "mage-spells/repelir-medo.json",
+                "level": 8,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Símbolo",
+                "file": "mage-spells/simbolo.json",
+                "level": 8,
+                "school": "Conjuração /Convocação"
+            }
+        ],
+        "9": [
+            {
+                "name": "A Disjunção de Mordenkainen",
+                "file": "mage-spells/a-disjuncao-de-mordenkainen.json",
+                "level": 9,
+                "school": "Alteração, Encantamento"
+            },
+            {
+                "name": "A Mão Esmagadora de Bigby",
+                "file": "mage-spells/a-mao-esmagadora-de-bigby.json",
+                "level": 9,
+                "school": "Evocação"
+            },
+            {
+                "name": "Alterar Forma",
+                "file": "mage-spells/alterar-forma.json",
+                "level": 9,
+                "school": "Alteração"
+            },
+            {
+                "name": "Aprisionamento",
+                "file": "mage-spells/aprisionamento-9.json",
+                "level": 9,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Auxílio Imediato",
+                "file": "mage-spells/auxilio-imediato.json",
+                "level": 9,
+                "school": "Alteração/Encantamento"
+            },
+            {
+                "name": "Chuva de Meteoros",
+                "file": "mage-spells/chuva-de-meteoros.json",
+                "level": 9,
+                "school": "Evocação"
+            },
+            {
+                "name": "Convocar Criaturas VII",
+                "file": "mage-spells/convocar-criaturas-vii.json",
+                "level": 9,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Cristalização",
+                "file": "mage-spells/cristalizacao.json",
+                "level": 9,
+                "school": "Alteração"
+            },
+            {
+                "name": "Desejo",
+                "file": "mage-spells/desejo.json",
+                "level": 9,
+                "school": "Conjuração/ Convocação"
+            },
+            {
+                "name": "Drenar Energia",
+                "file": "mage-spells/drenar-energia.json",
+                "level": 9,
+                "school": "Evocação, Necromancia"
+            },
+            {
+                "name": "Encarnação do Medo",
+                "file": "mage-spells/encarnacao-do-medo.json",
+                "level": 9,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Esfera Prismática",
+                "file": "mage-spells/esfera-prismatica.json",
+                "level": 9,
+                "school": "Abjuração, Conjuração/Convocação"
+            },
+            {
+                "name": "Magia Astral",
+                "file": "mage-spells/magia-astral.json",
+                "level": 9,
+                "school": "Evocação"
+            },
+            {
+                "name": "Palavra de Poder, Matar",
+                "file": "mage-spells/palavra-de-poder-matar.json",
+                "level": 9,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Parar o Tempo",
+                "file": "mage-spells/parar-o-tempo.json",
+                "level": 9,
+                "school": "Alteração"
+            },
+            {
+                "name": "Portal",
+                "file": "mage-spells/portal.json",
+                "level": 9,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Sexto Sentido",
+                "file": "mage-spells/sexto-sentido.json",
+                "level": 9,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Êxtase Temporal",
+                "file": "mage-spells/extase-temporal.json",
+                "level": 9,
+                "school": "Alteração"
+            }
+        ]
+    },
+    "by-school": {
+        "Abjuração": [
+            {
+                "name": "A Imunidade à Magia de Serten",
+                "file": "mage-spells/a-imunidade-a-magia-de-serten.json",
+                "level": 8,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Alarme",
+                "file": "mage-spells/alarme.json",
+                "level": 1,
+                "school": "Abjuração, Evocação"
+            },
+            {
+                "name": "Anulação Absurda de Nahal",
+                "file": "mage-spells/anulacao-absurda-de-nahal.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Aprisionamento",
+                "file": "mage-spells/aprisionamento-9.json",
+                "level": 9,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Armadilha de Fogo",
+                "file": "mage-spells/armadilha-de-fogo.json",
+                "level": 4,
+                "school": "Abjuração, Evocação"
+            },
+            {
+                "name": "Aura de Fogo",
+                "file": "mage-spells/aura-de-fogo.json",
+                "level": 4,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Aura Elemental",
+                "file": "mage-spells/aura-elemental.json",
+                "level": 7,
+                "school": "Abjuração/Evocação"
+            },
+            {
+                "name": "Banimento",
+                "file": "mage-spells/banimento.json",
+                "level": 7,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Concha Antimagia",
+                "file": "mage-spells/concha-antimagia.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Dissipar Magia",
+                "file": "mage-spells/dissipar-magia.json",
+                "level": 3,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Escamas de Dragão",
+                "file": "mage-spells/escamas-de-dragao.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Esconder Itens",
+                "file": "mage-spells/esconder-itens.json",
+                "level": 3,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Escudo do Caos",
+                "file": "mage-spells/escudo-do-caos.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Esfera Prismática",
+                "file": "mage-spells/esfera-prismatica.json",
+                "level": 9,
+                "school": "Abjuração, Conjuração/Convocação"
+            },
+            {
+                "name": "Estabilizar",
+                "file": "mage-spells/estabilizar.json",
+                "level": 7,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Expulsão",
+                "file": "mage-spells/expulsao.json",
+                "level": 5,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Filtro",
+                "file": "mage-spells/filtro.json",
+                "level": 2,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Globo de Invulnerabilidade",
+                "file": "mage-spells/globo-de-invulnerabilidade.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Halo de Olhos",
+                "file": "mage-spells/halo-de-olhos.json",
+                "level": 4,
+                "school": "Abjuração/**\n\n**Conjuração"
+            },
+            {
+                "name": "Invulnerabilidade a Armas Mágicas",
+                "file": "mage-spells/invulnerabilidade-a-armas-magicas.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Invulnerabilidade a Armas Normais",
+                "file": "mage-spells/invulnerabilidade-a-armas-normais.json",
+                "level": 5,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Limpar a Mente",
+                "file": "mage-spells/limpar-a-mente.json",
+                "level": 8,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Malha Invisível",
+                "file": "mage-spells/malha-invisivel.json",
+                "level": 3,
+                "school": "Evocação/ Abjuração"
+            },
+            {
+                "name": "Mente de Ferro",
+                "file": "mage-spells/mente-de-ferro.json",
+                "level": 3,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Pequeno Globo de Invulnerabilidade",
+                "file": "mage-spells/pequeno-globo-de-invulnerabilidade.json",
+                "level": 4,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Proteção a Projéteis",
+                "file": "mage-spells/protecao-a-projeteis.json",
+                "level": 3,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Proteção a Truques",
+                "file": "mage-spells/protecao-a-truques.json",
+                "level": 2,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Proteção ao Mal",
+                "file": "mage-spells/protecao-ao-mal.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Proteção ao Mal, 3 m",
+                "file": "mage-spells/protecao-ao-mal-3-m.json",
+                "level": 3,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Proteção contra Fome e Sede",
+                "file": "mage-spells/protecao-contra-fome-e-sede.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Remover Maldição",
+                "file": "mage-spells/remover-maldicao.json",
+                "level": 4,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Repelir Medo",
+                "file": "mage-spells/repelir-medo.json",
+                "level": 8,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Repulsão",
+                "file": "mage-spells/repulsao-6.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Repulsão",
+                "file": "mage-spells/repulsao.json",
+                "level": 5,
+                "school": "Abjuração, Alteração"
+            },
+            {
+                "name": "Repulsão de Von Gasik",
+                "file": "mage-spells/repulsao-de-von-gasik.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Resistência Baixa",
+                "file": "mage-spells/resistencia-baixa.json",
+                "level": 1,
+                "school": "Abjuração/Alteração"
+            },
+            {
+                "name": "Reverter Magia",
+                "file": "mage-spells/reverter-magia.json",
+                "level": 7,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Salvaguarda",
+                "file": "mage-spells/salvaguarda.json",
+                "level": 1,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Santuário Particular de Mordenkainen",
+                "file": "mage-spells/santuario-particular-de-mordenkainen.json",
+                "level": 5,
+                "school": "Abjuração/ Alteração"
+            },
+            {
+                "name": "Truque",
+                "file": "mage-spells/truque.json",
+                "level": 1,
+                "school": "Todas as escolas"
+            }
+        ],
+        "Alteração": [
+            {
+                "name": "A Arca Secreta de Leomund",
+                "file": "mage-spells/a-arca-secreta-de-leomund.json",
+                "level": 5,
+                "school": "Alteração, Conjuração/Convocação"
+            },
+            {
+                "name": "A Disjunção de Mordenkainen",
+                "file": "mage-spells/a-disjuncao-de-mordenkainen.json",
+                "level": 9,
+                "school": "Alteração, Encantamento"
+            },
+            {
+                "name": "A Elucubração de Mordenkainen",
+                "file": "mage-spells/a-elucubracao-de-mordenkainen.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "A Esfera Gélida de Otiluke",
+                "file": "mage-spells/a-esfera-gelida-de-otiluke.json",
+                "level": 6,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "A Esfera Resiliente de Otiluke",
+                "file": "mage-spells/a-esfera-resiliente-de-otiluke.json",
+                "level": 4,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "A Esfera Telecinética de Otiluke",
+                "file": "mage-spells/a-esfera-telecinetica-de-otiluke.json",
+                "level": 8,
+                "school": "Evocação, Alteração"
+            },
+            {
+                "name": "A Mansão Magnífica de Mordenkainen",
+                "file": "mage-spells/a-mansao-magnifica-de-mordenkainen.json",
+                "level": 7,
+                "school": "Alteração, Conjuração"
+            },
+            {
+                "name": "A Reflexão do Olhar",
+                "file": "mage-spells/a-reflexao-do-olhar.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "A Transformação de Tenser",
+                "file": "mage-spells/a-transformacao-de-tenser.json",
+                "level": 6,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Abandono",
+                "file": "mage-spells/abandono.json",
+                "level": 4,
+                "school": "Alteração, Ilusão/Visão"
+            },
+            {
+                "name": "Aerobarco",
+                "file": "mage-spells/aerobarco.json",
+                "level": 7,
+                "school": "Alteração/Encantamento"
+            },
+            {
+                "name": "Afundar",
+                "file": "mage-spells/afundar.json",
+                "level": 8,
+                "school": "Encantamento, Alteração"
+            },
+            {
+                "name": "Alacridade",
+                "file": "mage-spells/alacridade.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Alcance Distante I",
+                "file": "mage-spells/alcance-distante-i.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Alcance Distante III",
+                "file": "mage-spells/alcance-distante-iii.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Alterar Forma",
+                "file": "mage-spells/alterar-forma.json",
+                "level": 9,
+                "school": "Alteração"
+            },
+            {
+                "name": "Alterar-se",
+                "file": "mage-spells/alterar-se.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Ampliar Animais",
+                "file": "mage-spells/ampliar-animais.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Ampliar Plantas",
+                "file": "mage-spells/ampliar-plantas.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Apagar",
+                "file": "mage-spells/apagar.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Ar Líquido",
+                "file": "mage-spells/ar-liquido.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Arrombar",
+                "file": "mage-spells/arrombar.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Auxílio Imediato",
+                "file": "mage-spells/auxilio-imediato.json",
+                "level": 9,
+                "school": "Alteração/Encantamento"
+            },
+            {
+                "name": "Aço Vítreo",
+                "file": "mage-spells/aco-vitreo.json",
+                "level": 8,
+                "school": "Alteração"
+            },
+            {
+                "name": "Boca Encantada",
+                "file": "mage-spells/boca-encantada.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Bolsos Arcanos",
+                "file": "mage-spells/bolsos-arcanos.json",
+                "level": 2,
+                "school": "Alteração, Encantamento"
+            },
+            {
+                "name": "Celeridade de Mordenkhain",
+                "file": "mage-spells/celeridade-de-mordenkhain.json",
+                "level": 1,
+                "school": "Alteração/Invocação"
+            },
+            {
+                "name": "Cerrar Portas",
+                "file": "mage-spells/cerrar-portas.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Compor",
+                "file": "mage-spells/compor.json",
+                "level": 5,
+                "school": "Encantamento, Alteração"
+            },
+            {
+                "name": "Compreender Idiomas",
+                "file": "mage-spells/compreender-idiomas.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Compreensão da Linguagem",
+                "file": "mage-spells/compreensao-da-linguagem.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Consertar",
+                "file": "mage-spells/consertar.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Controlar o Clima",
+                "file": "mage-spells/controlar-o-clima.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Criar Passagens",
+                "file": "mage-spells/criar-passagens.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Cristalização",
+                "file": "mage-spells/cristalizacao.json",
+                "level": 9,
+                "school": "Alteração"
+            },
+            {
+                "name": "Dentes Abocanhantes",
+                "file": "mage-spells/dentes-abocanhantes.json",
+                "level": 3,
+                "school": "Conjuração/ Alteração"
+            },
+            {
+                "name": "Desintegração",
+                "file": "mage-spells/desintegracao.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Despedaçar",
+                "file": "mage-spells/despedacar.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Desvanecimento",
+                "file": "mage-spells/desvanecimento.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Dilatação I",
+                "file": "mage-spells/dilatacao-i.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Dilatação II",
+                "file": "mage-spells/dilatacao-ii.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Distorção de Distância",
+                "file": "mage-spells/distorcao-de-distancia.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Elo Telepático de Rary",
+                "file": "mage-spells/elo-telepatico-de-rary.json",
+                "level": 5,
+                "school": "Adivinhação/Alteração"
+            },
+            {
+                "name": "Escudo do Fogo",
+                "file": "mage-spells/escudo-do-fogo.json",
+                "level": 4,
+                "school": "Evocação, Alteração"
+            },
+            {
+                "name": "Escudo Selvagem",
+                "file": "mage-spells/escudo-selvagem.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Escuridão, 4,5 m",
+                "file": "mage-spells/escuridao-4-5-m.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Estátua",
+                "file": "mage-spells/estatua.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Expandir",
+                "file": "mage-spells/expandir.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Explosão de Fogo",
+                "file": "mage-spells/explosao-de-fogo.json",
+                "level": 1,
+                "school": "Alteração/Evocação"
+            },
+            {
+                "name": "Extensão I",
+                "file": "mage-spells/extensao-i.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Extensão II",
+                "file": "mage-spells/extensao-ii.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Extensão III",
+                "file": "mage-spells/extensao-iii.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Fala do Tolo",
+                "file": "mage-spells/fala-do-tolo.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Fechadura Arcana",
+                "file": "mage-spells/fechadura-arcana.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Forma Ectoplásmica",
+                "file": "mage-spells/forma-ectoplasmica.json",
+                "level": 3,
+                "school": "Alteração/Ilusão"
+            },
+            {
+                "name": "Forma Plana",
+                "file": "mage-spells/forma-plana.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Força",
+                "file": "mage-spells/forca.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Garras de Umber Hulk",
+                "file": "mage-spells/garras-de-umber-hulk.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Globos de Luz",
+                "file": "mage-spells/globos-de-luz.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Infravisão",
+                "file": "mage-spells/infravisao.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Inverter a Gravidade",
+                "file": "mage-spells/inverter-a-gravidade.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Irritação",
+                "file": "mage-spells/irritacao.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Item",
+                "file": "mage-spells/item.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Lentidão",
+                "file": "mage-spells/lentidao.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Leque Cromático",
+                "file": "mage-spells/leque-cromatico.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Levitação",
+                "file": "mage-spells/levitacao.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Logro",
+                "file": "mage-spells/logro.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Lufada de Vento",
+                "file": "mage-spells/lufada-de-vento.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Luz",
+                "file": "mage-spells/luz.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Luz Contínua",
+                "file": "mage-spells/luz-continua.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Manipular Chamas",
+                "file": "mage-spells/manipular-chamas.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Mensagem",
+                "file": "mage-spells/mensagem.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Metamorfose",
+                "file": "mage-spells/metamorfose.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Metamorfose Vegetal",
+                "file": "mage-spells/metamorfose-vegetal.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Metamorfosear Objetos",
+                "file": "mage-spells/metamorfosear-objetos.json",
+                "level": 8,
+                "school": "Alteração"
+            },
+            {
+                "name": "Metamorfosear-se",
+                "file": "mage-spells/metamorfosear-se.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Miragem Arcana",
+                "file": "mage-spells/miragem-arcana.json",
+                "level": 6,
+                "school": "Ilusão/Visão, Alteração"
+            },
+            {
+                "name": "Moldar Magia",
+                "file": "mage-spells/moldar-magia.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Moldar Rochas",
+                "file": "mage-spells/moldar-rochas.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Mover Terra",
+                "file": "mage-spells/mover-terra.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Muralha de Vento",
+                "file": "mage-spells/muralha-de-vento.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Mãos Flamejantes",
+                "file": "mage-spells/maos-flamejantes.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Neblina Mortal",
+                "file": "mage-spells/neblina-mortal.json",
+                "level": 6,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Nuvem Incendiária",
+                "file": "mage-spells/nuvem-incendiaria.json",
+                "level": 8,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Névoa",
+                "file": "mage-spells/nevoa.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Névoa Sólida",
+                "file": "mage-spells/nevoa-solida.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "O Pequeno Refúgio de Leomund",
+                "file": "mage-spells/o-pequeno-refugio-de-leomund.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "O Realce Mnemônico de Rary",
+                "file": "mage-spells/o-realce-mnemonico-de-rary.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "O Refúgio seguro de Leomund",
+                "file": "mage-spells/o-refugio-seguro-de-leomund.json",
+                "level": 4,
+                "school": "Alteração, Encantamento"
+            },
+            {
+                "name": "Olho Arcano",
+                "file": "mage-spells/olho-arcano.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Orbe Cromática",
+                "file": "mage-spells/orbe-cromatica.json",
+                "level": 1,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Os Meteoros Instantâneos de Melf",
+                "file": "mage-spells/os-meteoros-instantaneos-de-melf.json",
+                "level": 3,
+                "school": "Evocação, Alteração"
+            },
+            {
+                "name": "Ouro dos Tolos",
+                "file": "mage-spells/ouro-dos-tolos.json",
+                "level": 2,
+                "school": "Alteração, Ilusão"
+            },
+            {
+                "name": "Padrão Prismático",
+                "file": "mage-spells/padrao-prismatico.json",
+                "level": 4,
+                "school": "Alteração, Ilusão/Visão"
+            },
+            {
+                "name": "Parar o Tempo",
+                "file": "mage-spells/parar-o-tempo.json",
+                "level": 9,
+                "school": "Alteração"
+            },
+            {
+                "name": "Partir Água",
+                "file": "mage-spells/partir-agua.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Passagem Invisível",
+                "file": "mage-spells/passagem-invisivel.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Patas de Aranha",
+                "file": "mage-spells/patas-de-aranha.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Pedra em Carne",
+                "file": "mage-spells/pedra-em-carne.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Pedra em Lama",
+                "file": "mage-spells/pedra-em-lama.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Pele Rochosa",
+                "file": "mage-spells/pele-rochosa.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Permanência",
+                "file": "mage-spells/permanencia.json",
+                "level": 8,
+                "school": "Alteração"
+            },
+            {
+                "name": "Pirotecnia",
+                "file": "mage-spells/pirotecnia.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Piscar",
+                "file": "mage-spells/piscar.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Porta Dimensional",
+                "file": "mage-spells/porta-dimensional.json",
+                "level": 4,
+                "school": "Alteração"
+            },
+            {
+                "name": "Projetar Imagem",
+                "file": "mage-spells/projetar-imagem.json",
+                "level": 6,
+                "school": "Alteração, Ilusão/Visão"
+            },
+            {
+                "name": "Proteger Fortalezas",
+                "file": "mage-spells/proteger-fortalezas.json",
+                "level": 6,
+                "school": "Evocação, Alteração, Encantamento/Feitiço"
+            },
+            {
+                "name": "Punho de Pedra",
+                "file": "mage-spells/punho-de-pedra.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Página Secreta",
+                "file": "mage-spells/pagina-secreta.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Queda Suave",
+                "file": "mage-spells/queda-suave.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Repulsão",
+                "file": "mage-spells/repulsao.json",
+                "level": 5,
+                "school": "Abjuração, Alteração"
+            },
+            {
+                "name": "Resistência Baixa",
+                "file": "mage-spells/resistencia-baixa.json",
+                "level": 1,
+                "school": "Abjuração/Alteração"
+            },
+            {
+                "name": "Respirar na Água",
+                "file": "mage-spells/respirar-na-agua.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Runa Arcana",
+                "file": "mage-spells/runa-arcana.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Runas Explosivas",
+                "file": "mage-spells/runas-explosivas.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Salto",
+                "file": "mage-spells/salto.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Santuário Particular de Mordenkainen",
+                "file": "mage-spells/santuario-particular-de-mordenkainen.json",
+                "level": 5,
+                "school": "Abjuração/ Alteração"
+            },
+            {
+                "name": "Seletor de Oscilações de Hornug",
+                "file": "mage-spells/seletor-de-oscilacoes-de-hornug.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Senso de Alterações",
+                "file": "mage-spells/senso-de-alteracoes.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Telecinésia",
+                "file": "mage-spells/telecinesia.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Teleportação",
+                "file": "mage-spells/teleportacao.json",
+                "level": 5,
+                "school": "Alteração"
+            },
+            {
+                "name": "Teleportação Exata",
+                "file": "mage-spells/teleportacao-exata.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Tentáculos",
+                "file": "mage-spells/tentaculos.json",
+                "level": 6,
+                "school": "Conjuração, Alteração"
+            },
+            {
+                "name": "Toque Chocante",
+                "file": "mage-spells/toque-chocante.json",
+                "level": 1,
+                "school": "Alteração"
+            },
+            {
+                "name": "Tornar Raso",
+                "file": "mage-spells/tornar-raso.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Transferência de Estado",
+                "file": "mage-spells/transferencia-de-estado.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Transmutação Gloriosa",
+                "file": "mage-spells/transmutacao-gloriosa.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Truque",
+                "file": "mage-spells/truque.json",
+                "level": 1,
+                "school": "Todas as escolas"
+            },
+            {
+                "name": "Truque de Corda",
+                "file": "mage-spells/truque-de-corda.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Velocidade",
+                "file": "mage-spells/velocidade.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Vento Sussurrante",
+                "file": "mage-spells/vento-sussurrante.json",
+                "level": 2,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Vitrificação",
+                "file": "mage-spells/vitrificacao.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Vocalizar",
+                "file": "mage-spells/vocalizar.json",
+                "level": 2,
+                "school": "Alteração"
+            },
+            {
+                "name": "Vôo",
+                "file": "mage-spells/voo.json",
+                "level": 3,
+                "school": "Alteração"
+            },
+            {
+                "name": "Água em Pó",
+                "file": "mage-spells/agua-em-po.json",
+                "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Êxtase Temporal",
+                "file": "mage-spells/extase-temporal.json",
+                "level": 9,
+                "school": "Alteração"
+            },
+            {
+                "name": "Último Fôlego",
+                "file": "mage-spells/ultimo-folego.json",
+                "level": 1,
+                "school": "Alteração"
+            }
+        ],
+        "Augúrio": [
+            {
+                "name": "Truque",
+                "file": "mage-spells/truque.json",
+                "level": 1,
+                "school": "Todas as escolas"
+            }
+        ],
+        "Conjuração/Convocação": [
+            {
+                "name": "A Arca Secreta de Leomund",
+                "file": "mage-spells/a-arca-secreta-de-leomund.json",
+                "level": 5,
+                "school": "Alteração, Conjuração/Convocação"
+            },
+            {
+                "name": "A Convocação Instantânea de Drawmij",
+                "file": "mage-spells/a-convocacao-instantanea-de-drawmij.json",
+                "level": 7,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "A Flecha Ácida de Melf",
+                "file": "mage-spells/a-flecha-acida-de-melf.json",
+                "level": 2,
+                "school": "Conjuração"
+            },
+            {
+                "name": "A Mansão Magnífica de Mordenkainen",
+                "file": "mage-spells/a-mansao-magnifica-de-mordenkainen.json",
+                "level": 7,
+                "school": "Alteração, Conjuração"
+            },
+            {
+                "name": "Aprisionamento",
+                "file": "mage-spells/aprisionamento.json",
+                "level": 6,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Aprisionar a Alma",
+                "file": "mage-spells/aprisionar-a-alma.json",
+                "level": 8,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Aquisição de Khazid",
+                "file": "mage-spells/aquisicao-de-khazid.json",
+                "level": 1,
+                "school": "Adivinhação/Convocação"
+            },
+            {
+                "name": "Armadura Arcana",
+                "file": "mage-spells/armadura-arcana.json",
+                "level": 1,
+                "school": "Conjuração"
+            },
+            {
+                "name": "Ataque Selvagem",
+                "file": "mage-spells/ataque-selvagem.json",
+                "level": 1,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Caçador Invisível",
+                "file": "mage-spells/cacador-invisivel.json",
+                "level": 6,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Conjurar Animais",
+                "file": "mage-spells/conjurar-animais.json",
+                "level": 6,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Conjurar Elemental",
+                "file": "mage-spells/conjurar-elemental.json",
+                "level": 5,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Conjurar Familiar",
+                "file": "mage-spells/conjurar-familiar.json",
+                "level": 1,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Convocar Criatura IV",
+                "file": "mage-spells/convocar-criatura-iv.json",
+                "level": 6,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Convocar Criaturas I",
+                "file": "mage-spells/convocar-criaturas-i.json",
+                "level": 3,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Convocar Criaturas II",
+                "file": "mage-spells/convocar-criaturas-ii.json",
+                "level": 4,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Convocar Criaturas III",
+                "file": "mage-spells/convocar-criaturas-iii.json",
+                "level": 5,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Convocar Criaturas V",
+                "file": "mage-spells/convocar-criaturas-v.json",
+                "level": 7,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Convocar Criaturas VI",
+                "file": "mage-spells/convocar-criaturas-vi.json",
+                "level": 8,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Convocar Criaturas VII",
+                "file": "mage-spells/convocar-criaturas-vii.json",
+                "level": 9,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Convocar Enxames",
+                "file": "mage-spells/convocar-enxames.json",
+                "level": 2,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Convocar Licantropo",
+                "file": "mage-spells/convocar-licantropo.json",
+                "level": 1,
+                "school": "Convocação/Conjuração"
+            },
+            {
+                "name": "Convocar Sombras",
+                "file": "mage-spells/convocar-sombras.json",
+                "level": 5,
+                "school": "Conjuração/Convocação, Necromancia"
+            },
+            {
+                "name": "Dentes Abocanhantes",
+                "file": "mage-spells/dentes-abocanhantes.json",
+                "level": 3,
+                "school": "Conjuração/ Alteração"
+            },
+            {
+                "name": "Desejo",
+                "file": "mage-spells/desejo.json",
+                "level": 9,
+                "school": "Conjuração/ Convocação"
+            },
+            {
+                "name": "Desejo Restrito",
+                "file": "mage-spells/desejo-restrito.json",
+                "level": 7,
+                "school": "Conjuração/Convocação, Invocação/Evocação"
+            },
+            {
+                "name": "Duplicar",
+                "file": "mage-spells/duplicar.json",
+                "level": 4,
+                "school": "Conjuração"
+            },
+            {
+                "name": "Esfera Prismática",
+                "file": "mage-spells/esfera-prismatica.json",
+                "level": 9,
+                "school": "Abjuração, Conjuração/Convocação"
+            },
+            {
+                "name": "Flecha de Chamas",
+                "file": "mage-spells/flecha-de-chamas.json",
+                "level": 3,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Halo de Olhos",
+                "file": "mage-spells/halo-de-olhos.json",
+                "level": 4,
+                "school": "Abjuração/**\n\n**Conjuração"
+            },
+            {
+                "name": "Labirinto",
+                "file": "mage-spells/labirinto.json",
+                "level": 8,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Montaria Arcana",
+                "file": "mage-spells/montaria-arcana.json",
+                "level": 1,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Montaria Fantasmagórica",
+                "file": "mage-spells/montaria-fantasmagorica.json",
+                "level": 3,
+                "school": "Conjuração, Visão"
+            },
+            {
+                "name": "Muralha de Ossos",
+                "file": "mage-spells/muralha-de-ossos.json",
+                "level": 5,
+                "school": "Conjuração/ Necromancia"
+            },
+            {
+                "name": "Muralha Prismática",
+                "file": "mage-spells/muralha-prismatica.json",
+                "level": 8,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "O Cão Fiel de Mordenkainen",
+                "file": "mage-spells/o-cao-fiel-de-mordenkainen.json",
+                "level": 5,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "O Selo da Serpente Sépia",
+                "file": "mage-spells/o-selo-da-serpente-sepia.json",
+                "level": 3,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Os componentes materiais para esta magia são um fio da teia de aranha e um fragmento de pano de algodão com aproximadamente uma polegada quadrada Obstrução",
+                "file": "mage-spells/os-componentes-materiais-para-esta-magia-sao-um-fio-da-teia-de-aranha-e-um-fragmento-de-pano-de-algodao-com-aproximadamente-uma-polegada-quadrada-obstrucao.json",
+                "level": 2,
+                "school": "Necromancia; Conjuração/Convocação"
+            },
+            {
+                "name": "Os Tentáculos Negros de Evard",
+                "file": "mage-spells/os-tentaculos-negros-de-evard.json",
+                "level": 4,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Palavra de Poder, Atordoar",
+                "file": "mage-spells/palavra-de-poder-atordoar.json",
+                "level": 7,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Palavra de Poder, Cegar",
+                "file": "mage-spells/palavra-de-poder-cegar.json",
+                "level": 8,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Palavra de Poder, Matar",
+                "file": "mage-spells/palavra-de-poder-matar.json",
+                "level": 9,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Poeira Ofuscante",
+                "file": "mage-spells/poeira-ofuscante.json",
+                "level": 2,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Portal",
+                "file": "mage-spells/portal.json",
+                "level": 9,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Rajada Prismática",
+                "file": "mage-spells/rajada-prismatica.json",
+                "level": 7,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Servo Invisível",
+                "file": "mage-spells/servo-invisivel.json",
+                "level": 1,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Símbolo",
+                "file": "mage-spells/simbolo.json",
+                "level": 8,
+                "school": "Conjuração /Convocação"
+            },
+            {
+                "name": "Tentáculos",
+                "file": "mage-spells/tentaculos.json",
+                "level": 6,
+                "school": "Conjuração, Alteração"
+            },
+            {
+                "name": "Truque",
+                "file": "mage-spells/truque.json",
+                "level": 1,
+                "school": "Todas as escolas"
+            },
+            {
+                "name": "Zona Selvagem",
+                "file": "mage-spells/zona-selvagem.json",
+                "level": 7,
+                "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Área Escorregadia",
+                "file": "mage-spells/area-escorregadia.json",
+                "level": 1,
+                "school": "Conjuração"
+            }
+        ],
+        "Encantamento/Feitiço": [
+            {
+                "name": "A Dança Irresistível de Otto",
+                "file": "mage-spells/a-danca-irresistivel-de-otto.json",
+                "level": 8,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "A Disjunção de Mordenkainen",
+                "file": "mage-spells/a-disjuncao-de-mordenkainen.json",
+                "level": 9,
+                "school": "Alteração, Encantamento"
+            },
+            {
+                "name": "Aerobarco",
+                "file": "mage-spells/aerobarco.json",
+                "level": 7,
+                "school": "Alteração/Encantamento"
+            },
+            {
+                "name": "Afundar",
+                "file": "mage-spells/afundar.json",
+                "level": 8,
+                "school": "Encantamento, Alteração"
+            },
+            {
+                "name": "Amizade",
+                "file": "mage-spells/amizade.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Andar nas Sombras",
+                "file": "mage-spells/andar-nas-sombras.json",
+                "level": 7,
+                "school": "Ilusão, Encantamento"
+            },
+            {
+                "name": "Antipatia/Simpatia",
+                "file": "mage-spells/antipatia-simpatia.json",
+                "level": 8,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Arma Encantada",
+                "file": "mage-spells/arma-encantada.json",
+                "level": 4,
+                "school": "Encantamento"
+            },
+            {
+                "name": "Aterrorizar",
+                "file": "mage-spells/aterrorizar.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Auxílio Imediato",
+                "file": "mage-spells/auxilio-imediato.json",
+                "level": 9,
+                "school": "Alteração/Encantamento"
+            },
+            {
+                "name": "Bolsos Arcanos",
+                "file": "mage-spells/bolsos-arcanos.json",
+                "level": 2,
+                "school": "Alteração, Encantamento"
+            },
+            {
+                "name": "Cajado Mágico",
+                "file": "mage-spells/cajado-magico.json",
+                "level": 1,
+                "school": "Encantamento/Charme"
+            },
+            {
+                "name": "Caos",
+                "file": "mage-spells/caos.json",
+                "level": 5,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Clava de Ossos",
+                "file": "mage-spells/clava-de-ossos.json",
+                "level": 3,
+                "school": "Encantamento,**\n\n**Necromancia"
+            },
+            {
+                "name": "Comando Visual",
+                "file": "mage-spells/comando-visual.json",
+                "level": 6,
+                "school": "Encantamento/Feitiço, Ilusão/Visão"
+            },
+            {
+                "name": "Compor",
+                "file": "mage-spells/compor.json",
+                "level": 5,
+                "school": "Encantamento, Alteração"
+            },
+            {
+                "name": "Confusão",
+                "file": "mage-spells/confusao.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Dominação",
+                "file": "mage-spells/dominacao.json",
+                "level": 5,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Emoções",
+                "file": "mage-spells/emocoes.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Encantar Item",
+                "file": "mage-spells/encantar-item.json",
+                "level": 6,
+                "school": "Encantamento/Invocação"
+            },
+            {
+                "name": "Enfeitiçar Monstros",
+                "file": "mage-spells/enfeiticar-monstros.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Enfeitiçar Multidões",
+                "file": "mage-spells/enfeiticar-multidoes.json",
+                "level": 8,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Enfeitiçar Pessoas",
+                "file": "mage-spells/enfeiticar-pessoas.json",
+                "level": 1,
+                "school": "Encantamento"
+            },
+            {
+                "name": "Enfeitiçar Plantas",
+                "file": "mage-spells/enfeiticar-plantas.json",
+                "level": 7,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Enfraquecer o Intelecto",
+                "file": "mage-spells/enfraquecer-o-intelecto.json",
+                "level": 5,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Espelho Encantado",
+                "file": "mage-spells/espelho-encantado.json",
+                "level": 4,
+                "school": "Encantamento, Adivinhação"
+            },
+            {
+                "name": "Esquecimento",
+                "file": "mage-spells/esquecimento.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Fiasco",
+                "file": "mage-spells/fiasco.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Fogo da Contemplação",
+                "file": "mage-spells/fogo-da-contemplacao.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Hipnotismo",
+                "file": "mage-spells/hipnotismo.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Imobilizar Monstros",
+                "file": "mage-spells/imobilizar-monstros.json",
+                "level": 5,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Imobilizar Pessoas",
+                "file": "mage-spells/imobilizar-pessoas.json",
+                "level": 3,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Malison Menor",
+                "file": "mage-spells/malison-menor.json",
+                "level": 1,
+                "school": "Encantamento/Charme"
+            },
+            {
+                "name": "Manto Negro",
+                "file": "mage-spells/manto-negro.json",
+                "level": 6,
+                "school": "Necromancia/ Encantamento"
+            },
+            {
+                "name": "Névoa Mental",
+                "file": "mage-spells/nevoa-mental.json",
+                "level": 1,
+                "school": "Encanto/Charme"
+            },
+            {
+                "name": "Nó",
+                "file": "mage-spells/no.json",
+                "level": 2,
+                "school": "Encantamento"
+            },
+            {
+                "name": "O Lamentável Debate de Leomund",
+                "file": "mage-spells/o-lamentavel-debate-de-leomund.json",
+                "level": 5,
+                "school": "Encantamento, Evocação"
+            },
+            {
+                "name": "O Refúgio seguro de Leomund",
+                "file": "mage-spells/o-refugio-seguro-de-leomund.json",
+                "level": 4,
+                "school": "Alteração, Encantamento"
+            },
+            {
+                "name": "O Riso Histérico de Tasha",
+                "file": "mage-spells/o-riso-histerico-de-tasha.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Obstrução",
+                "file": "mage-spells/obstrucao.json",
+                "level": 8,
+                "school": "Encantamento, Evocação"
+            },
+            {
+                "name": "Ordem",
+                "file": "mage-spells/ordem.json",
+                "level": 8,
+                "school": "Evocação, Encantamento/Feitiço"
+            },
+            {
+                "name": "Proteger Fortalezas",
+                "file": "mage-spells/proteger-fortalezas.json",
+                "level": 6,
+                "school": "Evocação, Alteração, Encantamento/Feitiço"
+            },
+            {
+                "name": "Provocação",
+                "file": "mage-spells/provocacao.json",
+                "level": 1,
+                "school": "Encantamento"
+            },
+            {
+                "name": "Raio de Enfraquecimento",
+                "file": "mage-spells/raio-de-enfraquecimento.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Retardar Morte",
+                "file": "mage-spells/retardar-morte.json",
+                "level": 3,
+                "school": "Encantamento/ Necromancia"
+            },
+            {
+                "name": "Sede Insaciável",
+                "file": "mage-spells/sede-insaciavel.json",
+                "level": 1,
+                "school": "Encantamento/Charme"
+            },
+            {
+                "name": "Sono",
+                "file": "mage-spells/sono.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Sugestionar Multidões",
+                "file": "mage-spells/sugestionar-multidoes.json",
+                "level": 6,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Sugestão",
+                "file": "mage-spells/sugestao.json",
+                "level": 3,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Tarefa",
+                "file": "mage-spells/tarefa.json",
+                "level": 6,
+                "school": "Encantamento/Feitiço"
+            },
+            {
+                "name": "Truque",
+                "file": "mage-spells/truque.json",
+                "level": 1,
+                "school": "Todas as escolas"
+            },
+            {
+                "name": "Varinha da Adivinhação",
+                "file": "mage-spells/varinha-da-adivinhacao.json",
+                "level": 1,
+                "school": "Adivinhação/Encantamento"
+            }
+        ],
+        "Ilusão": [
+            {
+                "name": "A Armadilha de Leomund",
+                "file": "mage-spells/a-armadilha-de-leomund.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "A Aura Esotérica de Nystul",
+                "file": "mage-spells/a-aura-esoterica-de-nystul.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Abandono",
+                "file": "mage-spells/abandono.json",
+                "level": 4,
+                "school": "Alteração, Ilusão/Visão"
+            },
+            {
+                "name": "Andar nas Sombras",
+                "file": "mage-spells/andar-nas-sombras.json",
+                "level": 7,
+                "school": "Ilusão, Encantamento"
+            },
+            {
+                "name": "Animação Ilusória",
+                "file": "mage-spells/animacao-ilusoria.json",
+                "level": 8,
+                "school": "Adivinhação, Ilusão"
+            },
+            {
+                "name": "Assassino Fantasmagórico",
+                "file": "mage-spells/assassino-fantasmagorico.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Borrar a Visão",
+                "file": "mage-spells/borrar-a-visao.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Cegueira",
+                "file": "mage-spells/cegueira.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Comando Visual",
+                "file": "mage-spells/comando-visual.json",
+                "level": 6,
+                "school": "Encantamento/Feitiço, Ilusão/Visão"
+            },
+            {
+                "name": "Confundir Detecção",
+                "file": "mage-spells/confundir-deteccao.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Criar Itens Efêmeros",
+                "file": "mage-spells/criar-itens-efemeros.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Criar Itens Temporários",
+                "file": "mage-spells/criar-itens-temporarios.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Criação Fantasmagórica",
+                "file": "mage-spells/criacao-fantasmagorica.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Despistar",
+                "file": "mage-spells/despistar.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Encarnação do Medo",
+                "file": "mage-spells/encarnacao-do-medo.json",
+                "level": 9,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Escrita Ilusória",
+                "file": "mage-spells/escrita-ilusoria.json",
+                "level": 3,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Forma de Sombra",
+                "file": "mage-spells/forma-de-sombra.json",
+                "level": 8,
+                "school": "Ilusão"
+            },
+            {
+                "name": "Forma Ectoplásmica",
+                "file": "mage-spells/forma-ectoplasmica.json",
+                "level": 3,
+                "school": "Alteração/Ilusão"
+            },
+            {
+                "name": "Força Espectral",
+                "file": "mage-spells/forca-espectral.json",
+                "level": 3,
+                "school": "Ilusão/visão"
+            },
+            {
+                "name": "Força Fantasmagórica",
+                "file": "mage-spells/forca-fantasmagorica.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Gato das Sombras",
+                "file": "mage-spells/gato-das-sombras.json",
+                "level": 7,
+                "school": "Ilusão"
+            },
+            {
+                "name": "Ilusão Independente",
+                "file": "mage-spells/ilusao-independente.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Ilusão Permanente",
+                "file": "mage-spells/ilusao-permanente.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Ilusão Programada",
+                "file": "mage-spells/ilusao-programada.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Inviabilidade em Massa",
+                "file": "mage-spells/inviabilidade-em-massa.json",
+                "level": 7,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Inviabilidade Melhorada",
+                "file": "mage-spells/inviabilidade-melhorada.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Invisibilidade",
+                "file": "mage-spells/invisibilidade.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Invisibilidade, 3 m",
+                "file": "mage-spells/invisibilidade-3-m.json",
+                "level": 3,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Magia de Sombras",
+                "file": "mage-spells/magia-de-sombras.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Magia Sombria",
+                "file": "mage-spells/magia-sombria.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Medo",
+                "file": "mage-spells/medo.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Miragem Arcana",
+                "file": "mage-spells/miragem-arcana.json",
+                "level": 6,
+                "school": "Ilusão/Visão, Alteração"
+            },
+            {
+                "name": "Modificar Aparência",
+                "file": "mage-spells/modificar-aparencia.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Monstros de Sombra",
+                "file": "mage-spells/monstros-de-sombra.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Monstros Sombrios",
+                "file": "mage-spells/monstros-sombrios.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Montaria Fantasmagórica",
+                "file": "mage-spells/montaria-fantasmagorica.json",
+                "level": 3,
+                "school": "Conjuração, Visão"
+            },
+            {
+                "name": "Ouro dos Tolos",
+                "file": "mage-spells/ouro-dos-tolos.json",
+                "level": 2,
+                "school": "Alteração, Ilusão"
+            },
+            {
+                "name": "Padrão Hipnótico",
+                "file": "mage-spells/padrao-hipnotico.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Padrão Prismático",
+                "file": "mage-spells/padrao-prismatico.json",
+                "level": 4,
+                "school": "Alteração, Ilusão/Visão"
+            },
+            {
+                "name": "Parede Ilusória",
+                "file": "mage-spells/parede-ilusoria.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Portal Ilusório",
+                "file": "mage-spells/portal-ilusorio.json",
+                "level": 5,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Projetar Imagem",
+                "file": "mage-spells/projetar-imagem.json",
+                "level": 6,
+                "school": "Alteração, Ilusão/Visão"
+            },
+            {
+                "name": "Reflexos",
+                "file": "mage-spells/reflexos.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Refugiar Itens",
+                "file": "mage-spells/refugiar-itens.json",
+                "level": 7,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Simulacrum",
+                "file": "mage-spells/simulacrum.json",
+                "level": 7,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Som Ilusório",
+                "file": "mage-spells/som-ilusorio.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Sombra Rastejante de Lorloveim",
+                "file": "mage-spells/sombra-rastejante-de-lorloveim.json",
+                "level": 1,
+                "school": "Ilusão"
+            },
+            {
+                "name": "Sombras",
+                "file": "mage-spells/sombras.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Sonho",
+                "file": "mage-spells/sonho.json",
+                "level": 5,
+                "school": "Invocação, Ilusão/Visão"
+            },
+            {
+                "name": "Surdez",
+                "file": "mage-spells/surdez.json",
+                "level": 2,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Susto",
+                "file": "mage-spells/susto.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Terreno Ilusório",
+                "file": "mage-spells/terreno-ilusorio.json",
+                "level": 4,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Transformação Momentânea",
+                "file": "mage-spells/transformacao-momentanea.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Transformação Sombria de Lorloveim",
+                "file": "mage-spells/transformacao-sombria-de-lorloveim.json",
+                "level": 1,
+                "school": "Ilusão"
+            },
+            {
+                "name": "Truque",
+                "file": "mage-spells/truque.json",
+                "level": 1,
+                "school": "Todas as escolas"
+            },
+            {
+                "name": "Ventriloquismo",
+                "file": "mage-spells/ventriloquismo.json",
+                "level": 1,
+                "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Visão de Cadáver",
+                "file": "mage-spells/visao-de-cadaver.json",
+                "level": 1,
+                "school": "Ilusão, Necromancia"
+            },
+            {
+                "name": "Véu",
+                "file": "mage-spells/veu.json",
+                "level": 6,
+                "school": "Ilusão/Visão"
+            }
+        ],
+        "Invocação/Evocação": [
+            {
+                "name": "A Esfera Gélida de Otiluke",
+                "file": "mage-spells/a-esfera-gelida-de-otiluke.json",
+                "level": 6,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "A Esfera Resiliente de Otiluke",
+                "file": "mage-spells/a-esfera-resiliente-de-otiluke.json",
+                "level": 4,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "A Esfera Telecinética de Otiluke",
+                "file": "mage-spells/a-esfera-telecinetica-de-otiluke.json",
+                "level": 8,
+                "school": "Evocação, Alteração"
+            },
+            {
+                "name": "A Espada de Mordenkainen",
+                "file": "mage-spells/a-espada-de-mordenkainen.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "A Mão Esmagadora de Bigby",
+                "file": "mage-spells/a-mao-esmagadora-de-bigby.json",
+                "level": 9,
+                "school": "Evocação"
+            },
+            {
+                "name": "A Mão Interposta de Bigby",
+                "file": "mage-spells/a-mao-interposta-de-bigby.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "A Mão Poderosa de Bigby",
+                "file": "mage-spells/a-mao-poderosa-de-bigby.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "A Mão Vigorosa de Bigby",
+                "file": "mage-spells/a-mao-vigorosa-de-bigby.json",
+                "level": 6,
+                "school": "Evocação"
+            },
+            {
+                "name": "A Transformação de Tenser",
+                "file": "mage-spells/a-transformacao-de-tenser.json",
+                "level": 6,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Alarme",
+                "file": "mage-spells/alarme.json",
+                "level": 1,
+                "school": "Abjuração, Evocação"
+            },
+            {
+                "name": "Armadilha de Fogo",
+                "file": "mage-spells/armadilha-de-fogo.json",
+                "level": 4,
+                "school": "Abjuração, Evocação"
+            },
+            {
+                "name": "Aumento I",
+                "file": "mage-spells/aumento-i.json",
+                "level": 1,
+                "school": "Invocação/Evocação"
+            },
+            {
+                "name": "Aumento II",
+                "file": "mage-spells/aumento-ii.json",
+                "level": 1,
+                "school": "Invocação/Evocação"
+            },
+            {
+                "name": "Aura Elemental",
+                "file": "mage-spells/aura-elemental.json",
+                "level": 7,
+                "school": "Abjuração/Evocação"
+            },
+            {
+                "name": "Bola de Fogo",
+                "file": "mage-spells/bola-de-fogo.json",
+                "level": 3,
+                "school": "Evocação"
+            },
+            {
+                "name": "Bola de Fogo Controlável",
+                "file": "mage-spells/bola-de-fogo-controlavel.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Cadeia de Contingência",
+                "file": "mage-spells/cadeia-de-contingencia.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Cajado dos Trovões",
+                "file": "mage-spells/cajado-dos-trovoes.json",
+                "level": 1,
+                "school": "Invocação/Evocação"
+            },
+            {
+                "name": "Celeridade de Mordenkhain",
+                "file": "mage-spells/celeridade-de-mordenkhain.json",
+                "level": 1,
+                "school": "Alteração/Invocação"
+            },
+            {
+                "name": "Chuva de Meteoros",
+                "file": "mage-spells/chuva-de-meteoros.json",
+                "level": 9,
+                "school": "Evocação"
+            },
+            {
+                "name": "Cone Glacial",
+                "file": "mage-spells/cone-glacial.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Contingência",
+                "file": "mage-spells/contingencia.json",
+                "level": 6,
+                "school": "Evocação"
+            },
+            {
+                "name": "Copiar",
+                "file": "mage-spells/copiar.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Corrente de Relâmpagos",
+                "file": "mage-spells/corrente-de-relampagos.json",
+                "level": 6,
+                "school": "Evocação"
+            },
+            {
+                "name": "Cubo de Força",
+                "file": "mage-spells/cubo-de-forca.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Dardos Místicos",
+                "file": "mage-spells/dardos-misticos.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Defletor de Hornung",
+                "file": "mage-spells/defletor-de-hornung.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Desejo Restrito",
+                "file": "mage-spells/desejo-restrito.json",
+                "level": 7,
+                "school": "Conjuração/Convocação, Invocação/Evocação"
+            },
+            {
+                "name": "Drenar Energia",
+                "file": "mage-spells/drenar-energia.json",
+                "level": 9,
+                "school": "Evocação, Necromancia"
+            },
+            {
+                "name": "Encantar Item",
+                "file": "mage-spells/encantar-item.json",
+                "level": 6,
+                "school": "Encantamento/Invocação"
+            },
+            {
+                "name": "Enviar Mensagem",
+                "file": "mage-spells/enviar-mensagem.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Escavar",
+                "file": "mage-spells/escavar.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Escudo Arcano",
+                "file": "mage-spells/escudo-arcano.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Escudo do Fogo",
+                "file": "mage-spells/escudo-do-fogo.json",
+                "level": 4,
+                "school": "Evocação, Alteração"
+            },
+            {
+                "name": "Escudo Homúnculo",
+                "file": "mage-spells/escudo-homunculo.json",
+                "level": 7,
+                "school": "Evocação, Necromancia"
+            },
+            {
+                "name": "Esfera Flamejante",
+                "file": "mage-spells/esfera-flamejante.json",
+                "level": 2,
+                "school": "Evocação"
+            },
+            {
+                "name": "Explosão de Fogo",
+                "file": "mage-spells/explosao-de-fogo.json",
+                "level": 1,
+                "school": "Alteração/Evocação"
+            },
+            {
+                "name": "Fogo Selvagem",
+                "file": "mage-spells/fogo-selvagem.json",
+                "level": 7,
+                "school": "Invocação/Evocação"
+            },
+            {
+                "name": "Grito",
+                "file": "mage-spells/grito.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Há/ Não Há",
+                "file": "mage-spells/ha-nao-ha.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Magia Astral",
+                "file": "mage-spells/magia-astral.json",
+                "level": 9,
+                "school": "Evocação"
+            },
+            {
+                "name": "Malha Invisível",
+                "file": "mage-spells/malha-invisivel.json",
+                "level": 3,
+                "school": "Evocação/ Abjuração"
+            },
+            {
+                "name": "Muralha de Energia",
+                "file": "mage-spells/muralha-de-energia.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Muralha de Ferro",
+                "file": "mage-spells/muralha-de-ferro.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Muralha de Fogo",
+                "file": "mage-spells/muralha-de-fogo.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Muralha de Gelo",
+                "file": "mage-spells/muralha-de-gelo.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Muralha de Névoas",
+                "file": "mage-spells/muralha-de-nevoas.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Muralha de Pedra",
+                "file": "mage-spells/muralha-de-pedra.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "Má Sorte",
+                "file": "mage-spells/ma-sorte.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Mão de Pedra de Maximiliano",
+                "file": "mage-spells/mao-de-pedra-de-maximiliano.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Mão de Terra de Maximiliano",
+                "file": "mage-spells/mao-de-terra-de-maximiliano.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "Neblina Mortal",
+                "file": "mage-spells/neblina-mortal.json",
+                "level": 6,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Nuvem Incendiária",
+                "file": "mage-spells/nuvem-incendiaria.json",
+                "level": 8,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Névoa Fétida",
+                "file": "mage-spells/nevoa-fetida.json",
+                "level": 2,
+                "school": "Evocação"
+            },
+            {
+                "name": "Névoa Mortal",
+                "file": "mage-spells/nevoa-mortal.json",
+                "level": 5,
+                "school": "Evocação"
+            },
+            {
+                "name": "O Disco Flutuante de Tenser",
+                "file": "mage-spells/o-disco-flutuante-de-tenser.json",
+                "level": 1,
+                "school": "Evocação"
+            },
+            {
+                "name": "O Lamentável Debate de Leomund",
+                "file": "mage-spells/o-lamentavel-debate-de-leomund.json",
+                "level": 5,
+                "school": "Encantamento, Evocação"
+            },
+            {
+                "name": "O Punho Cerrado de Bigby",
+                "file": "mage-spells/o-punho-cerrado-de-bigby.json",
+                "level": 8,
+                "school": "Evocação"
+            },
+            {
+                "name": "Obstrução",
+                "file": "mage-spells/obstrucao.json",
+                "level": 8,
+                "school": "Encantamento, Evocação"
+            },
+            {
+                "name": "Orbe Cromática",
+                "file": "mage-spells/orbe-cromatica.json",
+                "level": 1,
+                "school": "Alteração, Evocação"
+            },
+            {
+                "name": "Ordem",
+                "file": "mage-spells/ordem.json",
+                "level": 8,
+                "school": "Evocação, Encantamento/Feitiço"
+            },
+            {
+                "name": "Os Meteoros Instantâneos de Melf",
+                "file": "mage-spells/os-meteoros-instantaneos-de-melf.json",
+                "level": 3,
+                "school": "Evocação, Alteração"
+            },
+            {
+                "name": "Proteger Fortalezas",
+                "file": "mage-spells/proteger-fortalezas.json",
+                "level": 6,
+                "school": "Evocação, Alteração, Encantamento/Feitiço"
+            },
+            {
+                "name": "Punhal de Gelo",
+                "file": "mage-spells/punhal-de-gelo.json",
+                "level": 2,
+                "school": "Evocação"
+            },
+            {
+                "name": "Punho Flamejante de Malec-Keith",
+                "file": "mage-spells/punho-flamejante-de-malec-keith.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Relâmpago",
+                "file": "mage-spells/relampago.json",
+                "level": 3,
+                "school": "Evocação"
+            },
+            {
+                "name": "Sonho",
+                "file": "mage-spells/sonho.json",
+                "level": 5,
+                "school": "Invocação, Ilusão/Visão"
+            },
+            {
+                "name": "Sopro do Vento",
+                "file": "mage-spells/sopro-do-vento.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Teia",
+                "file": "mage-spells/teia.json",
+                "level": 2,
+                "school": "Evocação"
+            },
+            {
+                "name": "Tempestade Glacial",
+                "file": "mage-spells/tempestade-glacial.json",
+                "level": 4,
+                "school": "Evocação"
+            },
+            {
+                "name": "Tempestade Ácida",
+                "file": "mage-spells/tempestade-acida.json",
+                "level": 7,
+                "school": "Evocação"
+            },
+            {
+                "name": "Truque",
+                "file": "mage-spells/truque.json",
+                "level": 1,
+                "school": "Todas as escolas"
+            },
+            {
+                "name": "Vento Sussurrante",
+                "file": "mage-spells/vento-sussurrante.json",
+                "level": 2,
+                "school": "Alteração, Evocação"
+            }
+        ],
+        "Necromancia": [
+            {
+                "name": "Animar os Mortos",
+                "file": "mage-spells/animar-os-mortos.json",
+                "level": 5,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Apodrecimento de Múmia",
+                "file": "mage-spells/apodrecimento-de-mumia.json",
+                "level": 5,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Armadura Espiritual",
+                "file": "mage-spells/armadura-espiritual.json",
+                "level": 1,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Clava de Ossos",
+                "file": "mage-spells/clava-de-ossos.json",
+                "level": 3,
+                "school": "Encantamento,**\n\n**Necromancia"
+            },
+            {
+                "name": "Clone",
+                "file": "mage-spells/clone.json",
+                "level": 8,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Controlar Mortos-Vivos",
+                "file": "mage-spells/controlar-mortos-vivos.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Convocar Sombras",
+                "file": "mage-spells/convocar-sombras.json",
+                "level": 5,
+                "school": "Conjuração/Convocação, Necromancia"
+            },
+            {
+                "name": "Crânio Flutuante",
+                "file": "mage-spells/cranio-flutuante.json",
+                "level": 3,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Dedo da Morte",
+                "file": "mage-spells/dedo-da-morte.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Desfolhar",
+                "file": "mage-spells/desfolhar.json",
+                "level": 8,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Drenar Energia",
+                "file": "mage-spells/drenar-energia.json",
+                "level": 9,
+                "school": "Evocação, Necromancia"
+            },
+            {
+                "name": "Dreno Temporário",
+                "file": "mage-spells/dreno-temporario.json",
+                "level": 4,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Duplicata Zumbi",
+                "file": "mage-spells/duplicata-zumbi.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Escudo Homúnculo",
+                "file": "mage-spells/escudo-homunculo.json",
+                "level": 7,
+                "school": "Evocação, Necromancia"
+            },
+            {
+                "name": "Forçar Transformação",
+                "file": "mage-spells/forcar-transformacao.json",
+                "level": 5,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Imobilizar Mortos-Vivos",
+                "file": "mage-spells/imobilizar-mortos-vivos.json",
+                "level": 3,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Lamurio da Banshee",
+                "file": "mage-spells/lamurio-da-banshee.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Magia da Morte",
+                "file": "mage-spells/magia-da-morte.json",
+                "level": 6,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Manto Negro",
+                "file": "mage-spells/manto-negro.json",
+                "level": 6,
+                "school": "Necromancia/ Encantamento"
+            },
+            {
+                "name": "Morte Aparente",
+                "file": "mage-spells/morte-aparente.json",
+                "level": 3,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Muralha de Ossos",
+                "file": "mage-spells/muralha-de-ossos.json",
+                "level": 5,
+                "school": "Conjuração/ Necromancia"
+            },
+            {
+                "name": "Mão Espectral",
+                "file": "mage-spells/mao-espectral.json",
+                "level": 2,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Olhos do Morto",
+                "file": "mage-spells/olhos-do-morto.json",
+                "level": 6,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Os componentes materiais para esta magia são um fio da teia de aranha e um fragmento de pano de algodão com aproximadamente uma polegada quadrada Obstrução",
+                "file": "mage-spells/os-componentes-materiais-para-esta-magia-sao-um-fio-da-teia-de-aranha-e-um-fragmento-de-pano-de-algodao-com-aproximadamente-uma-polegada-quadrada-obstrucao.json",
+                "level": 2,
+                "school": "Necromancia; Conjuração/Convocação"
+            },
+            {
+                "name": "Ossos Vibrantes",
+                "file": "mage-spells/ossos-vibrantes.json",
+                "level": 5,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Praga",
+                "file": "mage-spells/praga.json",
+                "level": 4,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Recipiente Arcano",
+                "file": "mage-spells/recipiente-arcano.json",
+                "level": 5,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Recordação da Morte",
+                "file": "mage-spells/recordacao-da-morte.json",
+                "level": 2,
+                "school": "Necromancia/Adivinhação"
+            },
+            {
+                "name": "Reencarnação",
+                "file": "mage-spells/reencarnacao.json",
+                "level": 6,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Retardar Morte",
+                "file": "mage-spells/retardar-morte.json",
+                "level": 3,
+                "school": "Encantamento/ Necromancia"
+            },
+            {
+                "name": "Toque do Carniçal",
+                "file": "mage-spells/toque-do-carnical.json",
+                "level": 2,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Toque Macabro",
+                "file": "mage-spells/toque-macabro.json",
+                "level": 1,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Toque Vampírico",
+                "file": "mage-spells/toque-vampirico.json",
+                "level": 3,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Truque",
+                "file": "mage-spells/truque.json",
+                "level": 1,
+                "school": "Todas as escolas"
+            },
+            {
+                "name": "União Pavorosa de Bloodstone",
+                "file": "mage-spells/uniao-pavorosa-de-bloodstone.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Visão de Cadáver",
+                "file": "mage-spells/visao-de-cadaver.json",
+                "level": 1,
+                "school": "Ilusão, Necromancia"
+            }
+        ],
+        "Profecia": [
+            {
+                "name": "Animação Ilusória",
+                "file": "mage-spells/animacao-ilusoria.json",
+                "level": 8,
+                "school": "Adivinhação, Ilusão"
+            },
+            {
+                "name": "Análise Essencial de Alamir",
+                "file": "mage-spells/analise-essencial-de-alamir.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Aquisição de Khazid",
+                "file": "mage-spells/aquisicao-de-khazid.json",
+                "level": 1,
+                "school": "Adivinhação/Convocação"
+            },
+            {
+                "name": "Claraudiência",
+                "file": "mage-spells/claraudiencia.json",
+                "level": 3,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Clarividência",
+                "file": "mage-spells/clarividencia.json",
+                "level": 3,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Contato Extraplanar",
+                "file": "mage-spells/contato-extraplanar.json",
+                "level": 5,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Corcel Espectral de Bloodstone",
+                "file": "mage-spells/corcel-espectral-de-bloodstone.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Descobrir Valor",
+                "file": "mage-spells/descobrir-valor.json",
+                "level": 5,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Doença",
+                "file": "mage-spells/detectar-doenca.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Inviabilidade",
+                "file": "mage-spells/detectar-inviabilidade.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Magia",
+                "file": "mage-spells/detectar-magia.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Maldade",
+                "file": "mage-spells/detectar-maldade.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Mortos-Vivos",
+                "file": "mage-spells/detectar-mortos-vivos.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Observação",
+                "file": "mage-spells/detectar-observacao.json",
+                "level": 4,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Detectar Vida",
+                "file": "mage-spells/detectar-vida.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Elo Telepático de Rary",
+                "file": "mage-spells/elo-telepatico-de-rary.json",
+                "level": 5,
+                "school": "Adivinhação/Alteração"
+            },
+            {
+                "name": "Enganar Visão",
+                "file": "mage-spells/enganar-visao.json",
+                "level": 5,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Espelho Encantado",
+                "file": "mage-spells/espelho-encantado.json",
+                "level": 4,
+                "school": "Encantamento, Adivinhação"
+            },
+            {
+                "name": "Estimativa de Hornung",
+                "file": "mage-spells/estimativa-de-hornung.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Identificação",
+                "file": "mage-spells/identificacao.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Lendas e Histórias",
+                "file": "mage-spells/lendas-e-historias.json",
+                "level": 6,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Ler Magias",
+                "file": "mage-spells/ler-magias.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Localizar Objetos",
+                "file": "mage-spells/localizar-objetos.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Olhar do Mago",
+                "file": "mage-spells/olhar-do-mago.json",
+                "level": 1,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Percepção Extrasensorial",
+                "file": "mage-spells/percepcao-extrasensorial.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Recordação da Morte",
+                "file": "mage-spells/recordacao-da-morte.json",
+                "level": 2,
+                "school": "Necromancia/Adivinhação"
+            },
+            {
+                "name": "Revelar Tendências",
+                "file": "mage-spells/revelar-tendencias.json",
+                "level": 2,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Sexto Sentido",
+                "file": "mage-spells/sexto-sentido.json",
+                "level": 9,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Toque da Dor",
+                "file": "mage-spells/toque-da-dor.json",
+                "level": 3,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Truque",
+                "file": "mage-spells/truque.json",
+                "level": 1,
+                "school": "Todas as escolas"
+            },
+            {
+                "name": "Varinha da Adivinhação",
+                "file": "mage-spells/varinha-da-adivinhacao.json",
+                "level": 1,
+                "school": "Adivinhação/Encantamento"
+            },
+            {
+                "name": "Visão",
+                "file": "mage-spells/visao.json",
+                "level": 7,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "Visão da Verdade",
+                "file": "mage-spells/visao-da-verdade.json",
+                "level": 6,
+                "school": "Adivinhação"
+            }
+        ]
+    }
+}

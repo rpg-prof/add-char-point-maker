@@ -1,0 +1,10 @@
+{
+    "name": "Moldar Rochas",
+    "level": 5,
+    "school": "Alteração",
+    "castingTime": "Especial",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "30 centímetros cúbicos/nível",
+    "description": "Com essa magia, o mago pode moldar um pedaço de rocha em uma forma que sirva a seus propósitos Por exemplo, uma arma de pedra, um alçapão especial ou um ídolo de pedra podem ser feitos. O efeito também permite ao mago remodelar uma porta de pedra para escapar da prisão, desde que o volume de pedra envolvido esteia dentro dos limites impostos pela magia. Arcas e portas de pedra podem ser construídas, mas a qualidade dos detalhes não é muito grande. Por exemplo, se a construção envolver pequenas partes móveis, há uma chance de 30% de que elas não funcionem. O componente material é argila, que deve ser modelada na forma aproximada do objeto desejado, e então encostada na rocha enquanto a magia é formulada."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Cubo de Força",
+    "level": 7,
+    "school": "Evocação",
+    "castingTime": "Especial",
+    "duration": "6 turnos +1/nível",
+    "range": "10 metros a cada 2 níveis",
+    "area": "Cubo de 5 metros",
+    "description": "Essa poderosa magia permite ao mago trazer à existência um Cubo de Força, que tem uma diferença fundamental em relação ao item mágico de mesmo nome: ele não é constituído por paredes sólidas de Força, e sim por grades de Força separadas por intervalos de 2 centímetros. É, portanto, uma gaiola no lugar de um espaço fechado. Criaturas capturadas na área de efeito são presas, a não ser que consigam passar entre as barras. Obviamente, a gaiola não impede a passagem de magias ou Sopro-de-Dragão. Uma criatura com proteção contra magia tem uma única chance de escapar da gaiola. Se passar no teste de proteção, escapa; caso contrário, o ser está aprisionado. Note que um teste feito com sucesso não destrói a gaiola, nem permite que outras criaturas (exceto familiares) escapem junto com o monstro. A gaiola de torça é vulnerável a Dissipar Magia, e deixa de existir no final do tempo de duração da magia. Através de uma preparação especial durante a memorização, o Cubo de Força pode ser alterado para Cela de Força. O Cubo criado tem 3 metros de lado, e o efeito lembra o item Cubo de Força em todos os aspectos, salvo nas diferenças comuns entre uma magia formulada e a magia de um dispositivo, o que inclui os métodos de dissipar seu poder. Embora a execução de ambas as versões do efeito não requeira nenhum componente material, o estudo necessário para memorizá-lo exige que o mago utilize o pó de um diamante de no mínimo 1.000 po para delinear o desenho do cubo ou gaiola que se pretende criar, através da magia. O pó de diamante é totalmente consumido na memorização: depois de completo o estudo, o mago precisa atirar o pó ao ar, onde as partículas desaparecerão."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Servo Invisível",
+    "level": 1,
+    "school": "Conjuração/Convocação",
+    "castingTime": "1",
+    "duration": "1 hora + 1 turno/nível",
+    "range": "0",
+    "area": "10 metros de raio",
+    "description": "Servo Invisível é uma força invisível, sem mente e sem forma, utilizado para serviços normais, como abrir portas destrancadas, polir, lavar, carregar objetos leves, etc. Servo Invisível não é forte, mas obedecerá infalivelmente os comandos do mago. Ele só pode fazer uma ação por vez, e mover apenas itens leves. Levanta no máximo 10 quilos, empurra no máximo 20 quilos, e pode abrir portas, janelas e gavetas. O Servo não pode lutar, nem ser morto, já que é uma força e não uma criatura. Ele pode ser magicamente cancelado, ou eliminado se sofrer um dano de 6 pontos de vida, sob magias que afetam áreas, ou Sopro-de-Dragão. Se o mago tentar mandá-lo para além da área de efeito, a magia termina imediatamente. Os componentes materiais são um pedaço de barbante e um pedaço de madeira."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Escrita Ilusória",
+    "level": 3,
+    "school": "Ilusão/Visão",
+    "castingTime": "1 turno",
+    "duration": "1 dia/nível",
+    "range": "Toque",
+    "area": "Criatura que lê a escrita",
+    "description": "A magia permite ao mago escrever uma mensagem, instruções, ou qualquer tipo de informação em papel, pergaminho, papiro, etc. A escrita é diferente, parecendo estrangeira ou arcana, e só pode ser lida pelos escolhidos pelo mago para receber a mensagem. Um ilusionista é capaz de reconhecer a magia imediatamente. Criaturas não-autorizadas que tentem ler a mensagem precisam testar suas resistências contra magia. As que forem bem sucedidas conseguirão olhar para o lado, apenas um pouco desorientadas. Criaturas que falharem em seus testes estão sujeitas a um castigo que o mago escondeu na escrita quando lançou a magia. O castigo não pode levar mais de três turnos para ser cumprido. Exemplos de castigos: fechar o livro e ir embora, guardar o livro e esquecê-lo, Dissipar Magia pode remover Escrita Ilusória, mas, se falhar, toda a escrita será apagada. A mensagem escondida pode ser lida com a combinação de Visão da Verdade e Ler Magias ou Compreensão da Linguagem, como apropriado. O mago pode escrever suas magias no seu grimoire utilizando Escrita Ilusória, e permitir que apenas ele (e qualquer outra criatura que ele queira) possa ler seu livro de magia. O componente material é uma tinta à base de chumbo que precisa ser especialmente preparada por um alquimista, a um custo de não menos que 300 po por uso."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Refugiar Itens",
+    "level": 7,
+    "school": "Ilusão/Visão",
+    "castingTime": "9",
+    "duration": "1 semana + 1 dia/nível",
+    "range": "Toque",
+    "area": "Cubo de 50 centímetros por nível",
+    "description": "Objetos afetados por essa magia tornam-se invisíveis para todas as magias de detecção e localização, e para todas as formas de percepção visual. Esse efeito pode, portanto, mascarar uma porta secreta, um esconderijo de tesouros ou qualquer outra coisa. A magia não impede que o objeto seja descoberto pelo toque, ou por um Robe dos Olhos ou Gema da Visão. Se Refugiar Itens for utilizado sobre uma criatura que não deseja ser afetada. a vítima tem direito a um teste de resistência à magia. Criaturas vivas (e mesmo mortos-vivos) afetados entram em estado de animação suspensa, e só despertam quando o eleito terminar ou for dissipado. Os componentes materiais são um cílio de basilisco, goma arábica e cal."
+}

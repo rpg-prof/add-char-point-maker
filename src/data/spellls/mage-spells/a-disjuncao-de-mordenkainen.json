@@ -1,0 +1,10 @@
+{
+    "name": "A Disjunção de Mordenkainen",
+    "level": 9,
+    "school": "Alteração, Encantamento",
+    "castingTime": "",
+    "duration": "Instantânea",
+    "range": "0",
+    "area": "10 metros de raio",
+    "description": "Esse encantamento faz com que todas as magias ativas dentro da área de efeito sejam desconjuntadas, exceto aquelas ativas no mago ou na pessoa que ele esteja tocando. Isso significa que as magias são reduzidas a seus componentes materiais, o que normalmente anula todos os efeitos, como um Dissipar Magia faria. Itens mágicos permanentes ou objetos encantados devem passar num teste de resistência à magia, se o efeito for utilizado sobre a criatura que os carrega, ou num teste contra Dissipar Magia, se não estiverem sob a posse de alguma criatura. Caso falhem, esses itens perderão toda a magia. Mesmo artefatos e relíquias podem ser destruídos dessa forma, embora a chance seja de apenas 1% por nível do mago. Assim, todas as poções, pergaminhos, anéis, varinhas, armas, armaduras, e quaisquer outros itens mágicos têm grandes chances de perderem todas as suas propriedades místicas, se estiverem a 10 metros do mago. Essa magia também tem 1% de chance por nível do mago de destruir uma Concha Antimagia. Se a Concha Antimagia não for destruída, os itens contidos nela nada sofrerão. Nota: Destruir um artefato é perigoso, e há 95% de chance de que isso atraia uma divindade que esteja diretamente relacionada com o item destruído. Adicionalmente, ao destruir um artefato, o mago deve fazer um teste de resistência à magia com uma penalidade de -4. Se falhar, ele perde permanentemente a capacidade de utilizar magia."
+}

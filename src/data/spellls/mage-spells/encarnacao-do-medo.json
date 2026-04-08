@@ -1,0 +1,10 @@
+{
+    "name": "Encarnação do Medo",
+    "level": 9,
+    "school": "Ilusão/Visão",
+    "castingTime": "",
+    "duration": "Concentração",
+    "range": "30 metros",
+    "area": "6 metros de raio",
+    "description": "Essa magia faz com que as criaturas afetadas entrem em confronto com imagens ilusórias de seus inimigos mais temidos, forçando um combate imaginário que parece real, mas na verdade acontece num piscar de olhos. Enquanto lança a magia, o mago deve ser capaz de dirigir-se às vítimas, dizendo-lhes que chegou a hora da destruição final. Mesmo os receptores que obtiverem sucesso num teste de resistência à magia, ficarão paralisados de medo por uma rodada e perderão 1d4 pontos de Força, também devido ao terror. A Força perdida é recuperada em um turno. Falhar na resistência faz com que as criaturas enfrentem seus mais terríveis e temidos adversários. O combate deve então começar, já que não há maneira, nem mesmo mágica, das criaturas o evitarem. O inimigo enfrentado é considerado real para todos os efeitos. As vítimas que forem mortas por seus adversários morrem realmente, e as que vencerem emergem da ilusão como se não tivessem lutado, sem danos e sem terem gasto as cargas de itens mágicos e as magias que pensaram utilizar. Os personagens recebem experiência por essa batalha, se sobreviverem. Embora a luta pareça real. cada rodada leva apenas 1/10 do tempo verdadeiro. Enquanto desejar que a batalha continue, o mago deve concentrar-se para manter a ilusão. Se a batalha demorar mais que dez rodadas, ou seja, uma rodada verdadeira, as criaturas bem-sucedidas no teste de resistência poderão agir. Se o mago for perturbado e perder a concentração, a magia acaba imediatamente. Criaturas paralisadas de pavor recobram-se, mesmo antes do final da rodada, caso sofram algum ataque."
+}

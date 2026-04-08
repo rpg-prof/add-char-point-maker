@@ -1,0 +1,10 @@
+{
+    "name": "Desintegração",
+    "level": 6,
+    "school": "Alteração",
+    "castingTime": "1 rodada",
+    "duration": "Instantânea",
+    "range": "5 metros/nível",
+    "area": "Especial",
+    "description": "Essa magia faz a matéria desaparecer. Ela afeta até matéria (ou energia) de natureza mágica, como A Mão Vigorosa de Bigby, mas não afeta Globo de Invulnerabilidade ou Concha Antimagia. A desintegração é instantânea, e seus efeitos são permanentes. Qualquer criatura (apenas uma) pode ser afetada, mesmo mortos-vivos. Matéria não-viva, até o tamanho de um cubo de 3 metros de aresta, pode ser destruída por essa magia. Ela cria um fino raio esverdeado, que faz com que o material atingido brilhe e desapareça, deixando apenas um pó muito fino. Criaturas que passem em um teste de resistência contra magias evitam o raio (itens materiais resistirem à magia) e não são afetadas. Apenas a primeira criatura ou objeto atingido sofre esses efeitos. Os componentes materiais são um imã e um punhado de pó."
+}

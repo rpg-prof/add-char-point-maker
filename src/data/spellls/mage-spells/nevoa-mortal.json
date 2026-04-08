@@ -1,0 +1,10 @@
+{
+    "name": "Névoa Mortal",
+    "level": 5,
+    "school": "Evocação",
+    "castingTime": "5",
+    "duration": "1 rodada/nível",
+    "range": "10 metros",
+    "area": "Nuvem de 12 metros de largura, 6 metros de altura e 6 metros de profundidade",
+    "description": "Essa magia gera uma nuvem ondulante de horríveis vapores verde- amarelados, tão tóxica que mata qualquer criatura com menos de 4+1 dados de vida, e obriga criaturas de 4+1 a 5+1 dados de vida a fazer um teste de resistência contra venenos com penalidade de -4. Falhar no teste significa morte. Criaturas com até 6 dados de vida também precisam fazer o teste de resistência, mas sem redutor, e também para elas a falha significa destruição. Segurar o fôlego sequer, diminui os efeitos dessa nuvem tóxica. Aqueles com nível superior ao 6º (ou 6 dados de vida) devem sair da nuvem imediatamente, ou sofrer 1d10 pontos de dano por envenenamento. O dano repete-se a cada rodada que a criatura permanecer dentro da área de efeito. A nuvem assassina afasta-se do mago a uma velocidade de 3 metros por rodada, rolando pela superfície do solo. Uma brisa moderada faz com que ela mude de curso (defina a direção nos dados), mas a nuvem não se moverá de volta na direção do mago. Um vento forte pode dissipá- la em quatro rodadas, e um vento muito forte impede a utilização da magia. Vegetação muito espessa dispersará os gases em duas rodadas. Como os vapores da nuvem são mais pesados que o ar, eles afundarão em buracos, fendas ou depressões do terreno; essa qualidade faz a magia ideal para, por exemplo, destruir ninhos de formigas gigantes e outros monstros similares. A nuvem não penetra em líquidos, e não pode ser utilizada embaixo d’água."
+}

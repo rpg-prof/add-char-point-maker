@@ -1,0 +1,10 @@
+{
+    "name": "Percepção Extrasensorial",
+    "level": 2,
+    "school": "Adivinhação",
+    "castingTime": "1 rodada",
+    "duration": "1 rodada/nível",
+    "range": "5 metros /nível, máx 90 metros",
+    "area": "1 criatura por inspeção",
+    "description": "Quando utiliza Percepção Extrasensorial, o mago consegue detectar os pensamentos superficiais de qualquer criatura que esteja dentro do alcance da magia, exceção feita aos mortos-vivos. Essa percepção extrasensorial é bloqueada por mais de meio metro de pedra, 5 centímetros de metal ou por uma folha de chumbo de qualquer espessura. O mago pode inspecionar os pensamentos de uma criatura por rodada. Caso a criatura inspecionada não raciocine, o mago percebe os instintos predominantes no momento. O mago não precisa ver as criaturas que inspeciona, portanto a magia pode determinar se há um monstro atrás de uma porta, por exemplo, mas não consegue determinar com certeza qual o monstro. O mago pode manter sua percepção sobre uma criatura por diversas rodadas, ou pode mudar de criatura a cada rodada. Se a magia for utilizada em uma conversação, ou como parte de um interrogatório, uma criatura inteligente que note Percepção Extrasensorial pode testar sua resistência à magia. Se obtiver sucesso, mais nenhuma informação é obtida pelo mago. Se o teste falhar, o mago pode receber informações adicionais. O ajuste na resistência dado pela Sabedoria da criatura se aplica ao teste, bem como bônus adicionais, dados pelo Mestre, baseados na profundidade da informação procurada. O componente material é uma moeda de cobre."
+}

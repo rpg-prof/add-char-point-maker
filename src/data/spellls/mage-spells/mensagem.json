@@ -1,0 +1,10 @@
+{
+    "name": "Mensagem",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "1 rodada",
+    "duration": "5 rodadas/nível",
+    "range": "0",
+    "area": "Especial",
+    "description": "O personagem pode sussurrar mensagens, e receber respostas com poucas chances de ser ouvido por criaturas indesejáveis. Ao lançar a magia, o mago, em segredo ou não, aponta seu dedo para as criaturas que ele quer que participem do efeito, sendo que, além de si mesmo, uma nova criatura pode ser incluída por nível de experiência. Quando o mago sussurra, sua mensagem é ouvida por todas as criaturas escolhidas e que se encontrem a uma distância de até 10 metros mais 3 metros/ nível do mago. As criaturas que recebem a mensagem podem sussurrar uma resposta que é ouvida pelo mago. Deve haver um caminho, sem obstruções, entre o mago e as criaturas incluídas no efeito da magia para que haja comunicação: por exemplo, se o mago e todas as criaturas estiverem em um salão, e uma das criaturas deixar o aposento, fechando a porta atrás de si, ela perde o contato com o mago. O efeito da magia continua válido, no entanto, para todos os demais As mensagens devem ser em línguas compreendidas pelas criaturas, uma vez que a magia não confere poderes lingüísticos. Essa magia é normalmente usada para que o mago possa conduzir conferências rápidas e secretas. O componente material é um pequeno pedaço de fio de cobre."
+}

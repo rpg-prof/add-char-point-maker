@@ -1,0 +1,10 @@
+{
+    "name": "Imobilizar Pessoas",
+    "level": 3,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "3",
+    "duration": "2 rodadas/nível",
+    "range": "120 metros",
+    "area": "1 a 4 criaturas dentro de um cubo de 6 metros de aresta",
+    "description": "Essa magia afeta 1d4 criaturas sobre as quais for lançada. Pelo termo criatura entende-se qualquer bípede: humano, semi-humano, humanóide do tamanho de um humano ou menor, como brownies, dríades, anões, elfos, gnolls, gnomos, goblins, meio-elfos, robgoblins, humanos, kobolds, homens-lagarto, nixies, orcs, pixies, sprites, trogloditas e outros. Desta forma, um guerreiro humano de 19º nível pode ser paralisado, mas um ogro, não. A magia é centrada num ponto determinado pelo mago. Ela afeta as criaturas selecionadas pelo mago dentro da área de efeito. Se a magia for utilizada em três ou quatro criaturas, cada uma faz um teste de resistência à magia sem modificação; em duas, cada uma sofre penalidade de -1 em seu teste de resistência, e se for em uma pessoa, seu teste de resistência tem uma penalidade de -3. As resistências são ajustadas pela Sabedoria. As criaturas que passarem em seus testes não sofrem efeito da magia, e mortos-vivos não são afetados por ela. Criaturas paralisadas não podem se mover e nem falar, mas conseguem perceber o ambiente à sua volta, escutar, enxergar, e podem utilizar habilidades que não requeiram movimentos ou fala. O fato de estar paralisada não impede que a criatura sofra, ou continue sentindo os efeitos de um sangramento (como os provocados por uma Espada Cortante), venenos ou doenças. A duração da magia é de duas rodadas/nível, ou seja, dez rodadas no 5º nível, doze rodadas no 6º nível, quatorze rodadas no 7º nível, e assim por diante. O mago precisa de uma pequena barra de ferro como componente material."
+}

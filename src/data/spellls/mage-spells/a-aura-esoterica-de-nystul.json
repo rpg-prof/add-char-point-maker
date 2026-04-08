@@ -1,0 +1,10 @@
+{
+    "name": "A Aura Esotérica de Nystul",
+    "level": 1,
+    "school": "Ilusão/Visão",
+    "castingTime": "1",
+    "duration": "1 dia/nível",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Através dessa magia, qualquer item que não pese mais que 2 quilos por nível do mago, pode receber uma aura que será notada por qualquer pessoa que tente usar algum tipo de detecção mágica. Além disso, o mago pode especificar qual o tipo de aura que ele quer que seja detectada (Alteração, Ilusão, Convocação, etc.), e esta aura efetivamente disfarçará a aura verdadeira do item, se houver uma — a não ser que a aura do item seja excepcionalmente poderosa, como a de um artefato. Se o objeto que recebeu A Aura Esotérica de Nystul examinado através da Identificação, o examinador tem 50% de chance de perceber que uma aura foi colocada ali para enganar os desavisados. Se isso não acontecer, a falsa aura mantém sua credibilidade e nenhum tipo de teste poderá revelar a verdadeira natureza do item. O componente material é um pequeno corte de seda, que é passado sobre o item quando da utilização da magia."
+}

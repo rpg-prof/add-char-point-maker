@@ -1,0 +1,10 @@
+{
+    "name": "Forçar Transformação",
+    "level": 5,
+    "school": "Necromancia",
+    "castingTime": "1",
+    "duration": "Instantânea",
+    "range": "10 metros/nível",
+    "area": "uma criatura/nível",
+    "description": "Com esta magia, o mago pode forçar qualquer criatura transmorfa ou usuá- rio de magia que esteja usando qual- quer magia de metamorfose a reverter instantaneamente a sua forma verda- deira (ou sua forma mais comum). Para usar a magia, o mago deve apontar para as criaturas que ele conhece ou acredita serem transmorfas. Se as cria- turas são, efetivamente, transmorfas, elas devem ser bem-sucedidas em um teste de resistência ou voltam imediata- mente à sua forma verdadeira e sofrem 3d10 pontos de dano pela dor causada pela mudança forçada. A transforma- ção completa-se em 1 rodada, período durante o qual uma vítima não pode tomar nenhuma outra ação. Se o teste de resistência foi bem-sucedido, a víti- ma não altera a forma, mas ainda sofre metade do dano (2d10/2). Os componentes materiais para esta magia são um pelo de qualquer lican- tropo e uma borboleta viva, libertada quando o componente verbal for pro- ferido."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Punhal de Gelo",
+    "level": 2,
+    "school": "Evocação",
+    "castingTime": "1 rodada",
+    "duration": "Instantânea",
+    "range": "Especial",
+    "area": "Especial",
+    "description": "Esta magia arremessa um punhal de gelo no alvo. O mago faz um ataque normal como se fosse atacar com uma arma de projétil, (o punhal de gelo tem um alcance longo de 30 metros, médio de 20 metros e curto de 10 metros). Um ataque de bem-sucedido causa 2d4 pontos de dano. Se o punhal de gelo erra o alvo, consulte as regras para tipos de projéteis de área na página 89 do Livro do Mestre para determinar onde ele cairá. Quando um Punhal de Gelo atinge uma criatura ou um objeto sólido, o punhal quebra, lançando uma onda de frio paralisante. Todas as criaturas num raio de 5 metros devem ser bem-suce- didas em um teste de resistência contra paralisação ou sofrerão 1d4 pontos de danos de frio e ficam paralisadas por 1d3 rodadas. Criaturas paralisadas têm seu movimento reduzido pela metade e suas jogadas de ataque reduzidas em 2. Proximidade a grandes fontes de calor, tais como uma fogueira acesa, melhora o teste de resistência de uma criatura em +2. Um Punhal de Gelo que errou seu alvo ou foi perdido não pode ser recupe- rado pelo mago (ou qualquer outra pessoa) e lançado novamente. Se um Punhal de Gelo for tocado, ele quebra instantaneamente, lançando uma onda de frio, conforme descrito acima. Se o punhal de gelo perdido não for tocado, ele se derrete em uma poça de água em 1 rodada após ser originalmente criado; este derretimento ocorre independen- temente da temperatura ambiente. Os componentes materiais para esta magia são uma gota de água da neve derretida e um pequeno punhal de prata."
+}

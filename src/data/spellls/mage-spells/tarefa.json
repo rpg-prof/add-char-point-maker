@@ -1,0 +1,10 @@
+{
+    "name": "Tarefa",
+    "level": 6,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "7",
+    "duration": "Especial",
+    "range": "10 metros",
+    "area": "1 criatura",
+    "description": "Tarefa coloca um comando mágico sobre uma criatura (em geral humana ou humanóide) para que ela cumpra algum serviço, ou evite um certo ato ou curso de ação, conforme desejado pelo mago. A criatura deve ser consciente, inteligente, estar sob seu próprio livre-arbítrio e apta a compreender o mago. Embora Tarefa não possa compelir uma criatura ao suicídio ou outras ações que levariam a uma morte certa, o efeito pode provocar quase qualquer outro curso de ação. A criatura deve seguir as instruções dadas até que o serviço estabelecido pelo mago seja feito. Falha significa doença e morte em 1d4 semanas. Desvio ou desvirtuamento das instruções causa uma perda de pontos de Força correspondente até que o desvio termine. Essa magia pode ser anulada através de Desejo, mas Dissipar Magia ou Remover Maldição não terão efeito. O seu Mestre decidirá detalhes adicionais, pois a execução desse efeito e o cumprimento da ordem estabelecida pelo mago são traiçoeiros, e qualquer Tarefa executada impropriamente falhará."
+}

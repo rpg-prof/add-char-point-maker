@@ -1,0 +1,10 @@
+{
+    "name": "Sugestão",
+    "level": 3,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "4",
+    "duration": "1 hora +1 hora/nível",
+    "range": "30 metros",
+    "area": "1 criatura",
+    "description": "Quando essa magia é utilizada pelo personagem, ele influencia as ações do receptor escolhido pronunciando algumas palavras — uma ou duas frases — que sugerem um determinado curso de ação A criatura que se quer influenciar precisa entender a sugestão — o mago precisa (alar numa linguagem compreensível para ela. As frases devem ser ditas de maneira a fazer com que a criatura afetada considere razoáveis os comandos do mago. Sugerir a uma criatura que se mate, se lance de uma torre, ou faça algum ato obviamente danoso, anula a magia automaticamente. Entretanto, uma sugestão de que um vidro de ácido contém água. e de que um gole seria refrescante, pode funcionar. Sugerir a um dragão que pare de atacar o mago, para que juntos possam buscar um grande tesouro, também pode soar razoável para o dragão. O curso de ação sugerido pode durar bastante tempo, como no caso do dragão mencionado acima Condições que ali vem a sugestão podem ser especificadas, mas se tais condições não se cumprirem dentro da duração da magia, ela é anulada. Se a vítima for bem-sucedida num teste de resistência à magia, os efeitos de Sugestão também são neutralizados. Um sugestionamento muito convincente pode dar penalidades no teste de resistência, a critério do Mestre. Mortos-vivos não podem ser vítimas de sugestionamentos. Os componentes materiais são uma língua de cobra e uma gota de mel ou de óleo adocicado."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "A Mão Interposta de Bigby",
+    "level": 5,
+    "school": "Evocação",
+    "castingTime": "1 rodada",
+    "duration": "1 rodada/nível",
+    "range": "10 metros/nível",
+    "area": "Especial",
+    "description": "A Mão Interposta de Bigby é uma mão mágica, cujo tamanho pode variar do humano ao abissal, e que surge entre o mago e um oponente. Essa mão etérea passa a mover-se para permanecer entre os dois, a despeito do que o mago faça ou de como o oponente tente se desviar dela. Nem invisibilidade ou metamorfose enganam a mão, uma vez que o mago tenha definido o adversário. Este efeito não persegue um oponente, e nem se move para mais de três metros de distância do mago. O tamanho da mão é determinado pelo mago, e pode ser aproximadamente humano (1,5 metro) ou atingir proporções titânicas (8 metros). Ela dá cobertura ao mago contra o inimigo selecionado, com todos os modificadores de combate aplicáveis, e tem tantos pontos de vida quanto o mago em estado normal. Além disso, a CA da mão é 0. Qualquer criatura com menos de 1.000 quilos que tente passar através do efeito lera sua movimentação reduzida à metade da normal. Se o adversário original for morto, o mago pode designar um novo oponente para a mão. O mago pode anular a magia a qualquer momento.O componente material é uma luva macia."
+}

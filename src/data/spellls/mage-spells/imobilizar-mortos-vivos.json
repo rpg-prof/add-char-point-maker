@@ -1,0 +1,10 @@
+{
+    "name": "Imobilizar Mortos-Vivos",
+    "level": 3,
+    "school": "Necromancia",
+    "castingTime": "5",
+    "duration": "1d4 rodadas + 1 rodada/nível",
+    "range": "20 metros",
+    "area": "1d3 mortos-vivos",
+    "description": "Quando utilizada, essa magia deixa imóveis 1d3 mortos-vivos. cuja soma de DV não seja maior que o nível do mago. No máximo três mortos-vivos podem ser afetados pela utilização dessa magia. Para lançá-la, o mago escolhe um ponto dentro do alcance e os mortos-vivos mais próximos deste ponto são afetados, contanto que estejam também dentro do alcance da magia e do campo de visão do mago. Mortos-vivos sem mente (esqueletos, zumbis) são afetados imediatamente. Outras formas de mortos-vivos têm direito a testar sua resistência à magia para evitar os efeitos da magia Imobilizar Mortos-Vivos. As criaturas afetadas ficam imóveis pela duração da magia. Os componentes materiais são uma pitada de enxofre misturada com alho amassado."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Aterrorizar",
+    "level": 2,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "2",
+    "duration": "1d4 rodadas + 1 rodada/nível",
+    "range": "30 + 10 metros/nível",
+    "area": "5 metros de raio",
+    "description": "Essa magia faz com que criaturas com menos 6 dados de vida ou níveis de experiência fiquem amedrontadas, deixando-as com acessos de tremedeira incontroláveis. As criaturas assim amedrontadas sofrem uma penalidade de -2 nos ajustes de reação, e podem soltar itens que as sobrecarreguem. Se acossadas, as criaturas lutarão, mas com penalidades de -1 nas jogadas de ataque, de dano e de resistência. Apenas elfos, meio-elfos e clérigos têm direito a testar sua resistência contra essa magia. Aterrorizar não faz efeito em mortos-vivos (esqueletos, zumbis, vampiros, etc.), ou Componentes: V, G, M Resistência: Especial em criaturas dos planos superiores ou inferiores. O componente material é um pedaço do osso de um morto-vivo dentre os seguintes: esqueleto, zumbi, carniçal, carneçal ou múmia."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "A Mão Poderosa de Bigby",
+    "level": 7,
+    "school": "Evocação",
+    "castingTime": "1",
+    "duration": "1 rodada/nível",
+    "range": "10 metros por nível",
+    "area": "Especial",
+    "description": "A Mão Poderosa de Bigby é uma versão mais poderosa de A Mão Vigorosa de Bigby. Ela cria uma mão, cujo tamanho pode variar entre humano (1,5 metro) e abissal (7 metros), que surge e agarra uma criatura designada pelo mago. A mão pode imobilizar criaturas ou objetos de até 500 quilos, diminuir a 3 metros por rodada a movimentação de criaturas pesando entre 500 e 2.000 quilos, ou diminuir a movimentação em 50% se a criatura pesar até 8.000 quilos. A mão não causa dano. Sua CA é 0, ela tem tantos pontos de vida quanto o mago em saúde perfeita e desaparece quando destruída, O mago pode lhe ordenar a libertação de um oponente preso, ou dissipá-la quando quiser. O componente material é uma luva de couro."
+}

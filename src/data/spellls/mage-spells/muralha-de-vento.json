@@ -1,0 +1,10 @@
+{
+    "name": "Muralha de Vento",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "4",
+    "duration": "1 rodada/nível",
+    "range": "10 metros/nível",
+    "area": "Uma área de 3 metros de largura e 1,5 metro de altura por nível do mago",
+    "description": "Essa magia cria uma cortina de 5 centímetros de espessura, feita de um vento forte o suficiente para lançar para longe qualquer pássaro menor que uma águia, ou retirar objetos leves das mãos de pessoas distraídas (na dúvida, faça um teste de resistência à magia para ver se a criatura consegue manter o objeto nas mãos). Insetos normais não podem penetrar esta barreira. Materiais soltos, mesmo roupas, são arremessados para cima quando penetram na Muralha de Vento. Flechas e setas têm suas trajetórias desviadas e erram, enquanto pedras de funda e outros projeteis com menos de 1 quilo recebem uma penalidade de -4 na primeira vez que são lançadas, e -2 nas próximas. Gases, a maior parte dos Sopros-de-Dragão e criaturas em forma gasosa não podem penetrar esta barreira, que não afeta criaturas incorpóreas. Os componentes materiais são um pequeno cata-vento e uma pena de origem exótica."
+}

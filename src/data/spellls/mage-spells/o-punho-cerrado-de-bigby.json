@@ -1,0 +1,10 @@
+{
+    "name": "O Punho Cerrado de Bigby",
+    "level": 8,
+    "school": "Evocação",
+    "castingTime": "8",
+    "duration": "1 rodada/nível",
+    "range": "5 metros/nível",
+    "area": "Especial",
+    "description": "Essa magia cria um imenso punho fechado, pronto a desferir um soco. O mago controla mentalmente a mão, que pode dar um golpe por rodada. Nenhuma concentração é necessária depois que a fórmula for executada. O soco desferido pela mão nunca erra, mas precisa ser conduzido pelo mago, portanto apenas criaturas no campo de visão do mago serão atingidas. Dessa forma, a mão pode ser enganada por invisibilidade e outros métodos de camuflagem e desorientação. A eficiência de cada soco varia de golpe para golpe, e deve ser sorteada na tabela abaixo: Resultado de 1d20 Efeito 1 — 12 golpe de raspão - 1d6 pontos de dano 13 — 16 soco direito - 2d6 pontos de dano 17 — 19 golpe duro - 3d6 pontos de dano 20 golpe esmagador* - 4d6 pontos de dano e a vítima fica atordoada por três rodadas. * O mago tem um bônus de +4 no soco enquanto a vitima estiver atordoada, já que é mais difícil para ela desviar-se ou se defender-se. O punho tem CA 0, e tantos pontos de vida quantos o mago em perfeita saúde. Os componentes materiais dessa magia são uma luva de couro e um soco inglês."
+}

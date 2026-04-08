@@ -1,0 +1,10 @@
+{
+    "name": "Filtro",
+    "level": 2,
+    "school": "Abjuração",
+    "castingTime": "2",
+    "duration": "1 turno/nível",
+    "range": "0",
+    "area": "3 metros de raio envolta da criatura tocada",
+    "description": "Esta magia cria um globo invisível de proteção que filtra todos os elementos nocivos de vapores venenosos; portan- to, uma criatura protegida pelo filtro não sofre nenhum dano e penalidades de gás venenoso de qualquer espécie, incluindo aqueles criados magicamente (como Nuvem Fétida). As exceções são vapores venenosos criados por sopro de dragão (como o gás de cloro de um dragão verde); nestes casos, a criatura protegida pelo filtro sofre metade do dano."
+}

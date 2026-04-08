@@ -1,0 +1,10 @@
+{
+    "name": "Invulnerabilidade a Armas Normais",
+    "level": 5,
+    "school": "Abjuração",
+    "castingTime": "1",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "1,5 m de raio",
+    "description": "Essa magia cria uma esfera magia le- vemente cintilante, imóvel em volta do conjurador que não pode ser penetrada por armas de concussão, cortantes e de arremesso não mágicas. O conjurador pode usar essas armas dentro da esfera e atacar oponentes normalmente. Ma- gias podem ser conjuradas de dentro da esfera. A magia não nega os efeitos de um Dissipar Magias. O componente é uma arma comum quebrada, e uma escama de dragão."
+}

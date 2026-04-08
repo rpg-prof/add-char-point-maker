@@ -1,0 +1,10 @@
+{
+    "name": "Detectar Doença",
+    "level": 1,
+    "school": "Adivinhação",
+    "castingTime": "1",
+    "duration": "1 rodada/nível",
+    "range": "10 metros",
+    "area": "1 criatura ou objeto",
+    "description": "Detectar Doença revela ao mago se um indivíduo ou criatura está infec- tado por alguma doença, sendo ela normal ou magia. Adicionalmente, há uma chance de 10% por nível do mago de identificar com precisão qual o tipo de doença. O componente material para esta magia é um graveto ou pequeno galho de árvore."
+}

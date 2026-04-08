@@ -1,0 +1,10 @@
+{
+    "name": "Proteção a Truques",
+    "level": 2,
+    "school": "Abjuração",
+    "castingTime": "2",
+    "duration": "5 horas + 1 hora/nível",
+    "range": "Toque",
+    "area": "Criatura ou objeto tocado",
+    "description": "Ao utilizar essa magia, o personagem confere ao objeto ou criatura tocado, total imunidade aos efeitos de Truques utilizados por outro mago, aprendizes ou criaturas. A magia pode proteger o próprio mago. a criatura ou objeto tocado, como um grimoire ou uma gaveta contendo componentes materiais. Qualquer Truque utilizado contra o item ou pessoa protegida, dissipa-se com um estouro audível. Essa magia é frequentemente utilizada por um mago que tem aprendizes travessos, ou deseja que seus aprendizes limpem uma determinada área, utilizando a força física em vez da magia. Para tocar uma pessoa que não queira ser afetada, o mago deve obter sucesso numa jogada de ataque, e a vítima pode fazer um teste de resistência à magia para evitar o efeito."
+}

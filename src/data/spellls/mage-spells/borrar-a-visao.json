@@ -1,0 +1,10 @@
+{
+    "name": "Borrar a Visão",
+    "level": 2,
+    "school": "Ilusão/Visão",
+    "castingTime": "2",
+    "duration": "3 rodadas + 1 rodada/nível",
+    "range": "0",
+    "area": "0 mago",
+    "description": "Quando Borrar a Visão é utilizada o mago faz com que o contorno de seu corpo fique borrado e ondulante. Essa distorção permite que todos os ataques à distância sofram uma penalidade de -4 na primeira tentativa e -2 nas subseqüentes. Também confere ao mago um bônus de +1 nos testes de resistência contra todos os ataques diretos feitos com magia. A magia Detectar Invisibilidade não anula esses efeitos, mas a magia divina do 5º círculo Visão da Verdade ou similares anulam."
+}

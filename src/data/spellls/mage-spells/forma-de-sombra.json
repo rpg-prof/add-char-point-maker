@@ -1,0 +1,10 @@
+{
+    "name": "Forma de Sombra",
+    "level": 8,
+    "school": "Ilusão",
+    "castingTime": "1 Rodada",
+    "duration": "1 Rodada/nível",
+    "range": "0",
+    "area": "O Conjurador",
+    "description": "Através desta magia, o lançador transforma-se temporariamente em uma sombra. O lançador ganha a taxa de movimento, Classe de Armadura, Dado de Vida, e todas as habilidades de uma sombra. O ataque de dreno (requer uma jogada normal de ataque) inflige 2-5 (1d4+1) pontos de dano e drena da vítima 1 ponto de Força. Os pontos de Força da vítima retornam em 2-8 (2d4) turnos depois do toque. Uma vítima humana ou semi-humana reduzida a 0 pontos de vida ou que tenha sua Força reduzida a 0 pelo lan- çador na Forma de Sombras, a vítima terá perdido toda a sua força vital e será jogada no Plano Material Negativo onde existirá para sempre apenas como uma sombra. Todas as armas e equipamentos do conjurador permanecem com ele, mas são inúteis enquanto o conjurador esti- ver em Forma de Sombras. Ele também ficará incapacitado de lançar magias na Forma de Sombra, porém fica imune a magias Sono, Encantamentos ou Paralisia, e não é afetado por ataques baseados em frio. Ele é 90% indetectável, menos em ambientes muito iluminados. Di- ferente das Sombras normais o mago não será afetado pelo Poder da Fé de um clérigo. Quando a magia terminar, existe 5% de chance de o mago man- tenha-se permanentemente como uma sombra. Nada menor que uma magia desejo poderá devolver o mago a sua forma normal. O componente material é uma parte decomposta de um cadáver com mais de 100 anos e um mármore com vidro negro."
+}

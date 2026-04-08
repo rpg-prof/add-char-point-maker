@@ -1,0 +1,10 @@
+{
+    "name": "Dreno Temporário",
+    "level": 4,
+    "school": "Necromancia",
+    "castingTime": "4",
+    "duration": "1d4 horas + 1 hora/nível",
+    "range": "10 metros/nível",
+    "area": "1 criatura",
+    "description": "Essa magia temporariamente suprime a força vital da criatura afetada. O necromante aponta o seu dedo e pronuncia o encantamento, lançando um raio negro de energia. A vítima deve fazer um teste de resistência a magia ajustado pela Destreza para evitar o raio. Sucesso significa que a magia não tem efeito. Falhar significa que a criatura terá níveis de experiência drenados, como se houvesse sido tocada por Vulto, sendo que a vítima perde um nível para cada quatro níveis de experiência do mago que lançou a magia. Dados de vida, magias e outras características dependentes do nível são perdidas ou reduzidas. Criaturas drenadas a nível 0 precisam fazer um teste de colapso para sobreviver e ficam imobilizadas até que a magia expire. Os efeitos dessa magia desaparecem com o tempo, após 1d4 horas +1 hora por nível do mago que lançou o raio, ou depois de 6 horas de descanso ininterrupto da parte da criatura que o recebeu. As habilidades perdidas voltam, mas qualquer magia esquecida precisa ser memorizada novamente. Mortos- vivos são imunes a ela."
+}

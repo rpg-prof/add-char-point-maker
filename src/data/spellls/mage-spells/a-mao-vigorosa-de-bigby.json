@@ -1,0 +1,10 @@
+{
+    "name": "A Mão Vigorosa de Bigby",
+    "level": 6,
+    "school": "Evocação",
+    "castingTime": "1 turno",
+    "duration": "1 rodada/nível",
+    "range": "10 metros/nível",
+    "area": "Especial",
+    "description": "A Mão Vigorosa de Bigby é uma versão mais forte da A Mão Interposta de Bigby. 0 efeito cria uma mão com um tamanho que pode ir do humano (1,5 metro) até o abissal (7 metros), que se coloca entre o mago e um oponente escolhido. A mão move-se para permanecer entre os dois. a despeito das ações do mago, ou de como a criatura venha a tentai atravessar o bloqueio Além disso. A Mão Vigorosa também empurra o oponente Ela pode empurrar qualquer criatura pesando 250 quilos ou menos, diminuir para 3 metros por rodada a movimentação de criaturas que pesem entre 250 e 1.000 quilos e diminuir a movimentação de criaturas que pesem mais do que isso em 50%. Uma criatura empurrada pela mão é afastada por uma distância equivalente ao alcance da magia, ou até que encontre uma superfície firme. A mão em si não causa dano algum. Ela tem CA 0 e tantos pontos de vida quanto o mago em plena saúde, e some quando destruída. O mago pode ordená-la a parar (para libertar um oponente preso, por exemplo) ou dispensa-la quando desejar. O componente material é uma luva."
+}

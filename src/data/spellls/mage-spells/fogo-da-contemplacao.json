@@ -1,0 +1,10 @@
+{
+    "name": "Fogo da Contemplação",
+    "level": 4,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "1 turno",
+    "duration": "2 rodadas/nível",
+    "range": "10 metros",
+    "area": "5 metros de distância das chamas",
+    "description": "Através dessa magia, o mago faz com que uma chama normal, como a de um braseiro, tocha, ou até fogueira, sirva de agente mágico, criando um véu de chamas de diversas cores num raio de 2 metros à partir da chama original. Qualquer criatura que observe estas chamas precisa testar sua resistência à magia, uma falha significa que a vítima ficará imóvel, observando as cores. Enquanto permanecerem encantadas desta maneira, as criaturas estarão sugestionáveis, podendo receber comandos de até 12 palavras. As vítimas só irão obedecer aos comandos se falharem em suas resistências contra magia, ajustadas pela Sabedoria, com uma penalidade de -3. O mago pode dar um comando deste tipo para cada criatura, e eles não precisam ser os mesmos. A duração máxima do sugestionamento é 1 hora, não importando o nível do mago. Este encanto é quebrado se a criatura é atacada fisicamente, se um objeto opaco obstruir a visão das criaturas que observam as chamas, ou se a duração da magia expirar. Criaturas que voltem a observar as chamas podem ser afetadas outra vez, a critério do Mestre, embora provavelmente tenham direito a um bônus em seus testes de resistência. As chamas multicoloridas criadas pelo mago não são mágicas, e entrar em contato com elas causa o mesmo dano que entrar em contato com chamas comuns. O componente material é um pedaço de seda finíssima, de diversas cores, que o mago deve lançar às chamas enquanto pronuncia o encantamento."
+}

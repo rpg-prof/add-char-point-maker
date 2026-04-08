@@ -1,0 +1,10 @@
+{
+    "name": "Proteção ao Mal",
+    "level": 1,
+    "school": "Abjuração",
+    "castingTime": "1",
+    "duration": "2 rodadas/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Quando essa magia é utilizada, cria-se uma barreira mágica com raio de meio metro em torno de seu receptor. Esta barreira move-se com o receptor e tem três efeitos: O 1º: todos os ataques feitos contra o receptor, por criaturas malignas, ou malignamente encantadas, têm uma penalidade de -2 na jogada de ataque, e todas as jogadas de resistência geradas por estes ataques são feitas com um bônus de +2. O 2º: qualquer tentativa de possuir (como Recipiente Arcano) ou exercer controle sobre a mente da criatura protegida (como os poderes de vampiro) será bloqueada pela magia. A magia não anula a possessão, se esta já existir, apenas evita que a criatura seja possuída enquanto estiver em efeito. O 3º: a magia previne contato físico com criaturas de natureza extraplanar ou conjurada, como por exemplo, Servo Invisível e Servo Aéreo, elementais, imps, xorns, etc. Isso faz com que os ataques naturais (físicos) dessas criaturas, que requeiram toque, falhem. Quando acertam um ataque (que não faz efeito) as criaturas conjuradas ou extraplanares recuam. Animais ou monstros convocados ou conjurados por magia são afetados da mesma forma. Essa proteção termina, se o receptor tenta fazer um ataque ou forçar a barreira contra uma criatura da qual está protegido. Para esta magia, o mago deve traçar no chão, com pó de prata, um círculo de 1 metro de diâmetro. Esta magia pode ser revertida para Proteção ao Bem, sendo que o primeiro efeito passará a proteger de criaturas boas, e os segundo e terceiro efeitos continuarão os mesmos. O componente material de Proteção ao Bem é um círculo de ferro em pó."
+}

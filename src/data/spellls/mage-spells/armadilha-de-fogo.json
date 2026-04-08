@@ -1,0 +1,10 @@
+{
+    "name": "Armadilha de Fogo",
+    "level": 4,
+    "school": "Abjuração, Evocação",
+    "castingTime": "1 turno",
+    "duration": "Permanente até ser acionada",
+    "range": "Toque",
+    "area": "Objeto tocado",
+    "description": "Qualquer objeto que possa ser fechado (livro, caixa, garrafa, caixão, porta, gaveta, etc.) pode ser protegido por Armadilha de Fogo. Essa magia é centrada em um ponto determinado pelo mago. O item que a recebe não pode receber ou ter recebido outra magia de proteção ou de prisão sobre ele (Símbolo de Proteção, Fechadura Arcana, etc.). Caso isso seja tentado, há 25% de chance da primeira magia ser anulada, 25% para a segunda, e 50% de ambas serem anuladas. Arrombar não afeta Armadilha de Fogo — tão logo o intruso toque ou entre na área afetada, a armadilha é ativada. Ladrões e outros personagens têm apenas metade de sua chance normal de detectar Armadilha de Fogo, notando as marcas características da utilização dessa magia. Eles também têm apenas metade da chance normal de desativá-la, sendo que caso falhem, a armadilha detona automaticamente. Falhar em Dissipar Magia não detona esta armadilha. O mago ou qualquer criatura que conheça a senha e tenha sido harmonizado com a armadilha, pode utilizar o objeto sem medo de detonar Armadilha de Fogo. Quando ela é detonada, há uma explosão de 2 metros de raio partindo do centro da magia. Essa magia faz 1d4 pontos de dano, mais 1 ponto por nível do mago que a colocou. Criaturas que passarem no teste de resistência à magia sofrem apenas metade do dano (arredondado para cima). Sob a água, essa magia inflige apenas a metade do dano, e gera uma grande nuvem de vapor. O item que contém a armadilha não é afetado pela explosão. Para lançá-la, o mago deve traçar um desenho do fecho do objeto com enxofre ou salitre, e apontar o centro do efeito. Para harmonizar uma Componentes: V, G, M Resistência: ½ criatura com a armadilha é necessário um fio de cabelo ou um pêlo dessa criatura."
+}

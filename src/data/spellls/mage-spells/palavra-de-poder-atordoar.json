@@ -1,0 +1,10 @@
+{
+    "name": "Palavra de Poder, Atordoar",
+    "level": 7,
+    "school": "Conjuração/Convocação",
+    "castingTime": "9",
+    "duration": "Especial",
+    "range": "5 metros/nível",
+    "area": "1 criatura",
+    "description": "Quando Palavra de Poder, Atordoar é proferida, qualquer criatura, à escolha do mago, e imediatamente atordoada fica cambaleante, incapaz de pensar coerentemente ou de agir por um período que depende dos pontos de vida atuais da vitima. Obviamente, o mago precisa estar de frente para a criatura que deseja atordoar. A vítima, por sua vez, deve estar dentro do alcance de 5 metros por nível. Criaturas entre 1 e 30 pontos de vida são atordoadas por 4d4 rodadas: aquelas entre 31 e 60 pontos de vida são atordoadas por 2d4 rodadas: as que tiverem entre 61 e 90 pontos são atordoadas por 1d4 rodadas; e aquelas com mais de 90 pontos de vida não são afetadas. Note que o número atual de pontos de vida é usado, e não o valor máximo."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Compreender Idiomas",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "10 metros de raio",
+    "description": "Essa magia permite ao mago falar e entender novas linguagens, mesmo dialetos regionais e línguas de raças específicas, mas não permite ao mago conversar com animais. O mago pode se fazer compreender por todas as criaturas de um mesmo tipo que possam ouvi-lo, ou seja, que estejam a cerca de 20 metros de distância, mas não afeta os testes de reação. O mago pode falar uma língua adicional para cada três níveis de experiência. A magia reversa anula Compreender Idiomas, ou torna impossível qualquer comunicação dentro da área de efeito. O componente material é uma miniatura de um zigurate, que é destruído quando a magia é lançada."
+}

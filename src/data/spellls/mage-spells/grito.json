@@ -1,0 +1,10 @@
+{
+    "name": "Grito",
+    "level": 4,
+    "school": "Evocação",
+    "castingTime": "5",
+    "duration": "Instantânea",
+    "range": "0",
+    "area": "Cone de 3 m",
+    "description": "Essa magia confere ao mago tremendos poderes vocais. O mago pode emitir um som de estourar os tímpanos, que tem a sua área de efeito principal num cone que parte da boca do mago e estende-se até 10 metros de distância, ampliando-se até ter 3 metros de diâmetro. Qualquer criatura dentro dessa área ficará surda por 2d6 rodadas e sofrerá 2d6 pontos de dano. Um sucesso em um teste de resistência a magia evita a surdez e reduz o dano à metade. Qualquer objeto frágil, especialmente de cristal, que esteja nesta área é despedaçado por essa magia. Se o objeto estiver sendo carregado por uma criatura, ele recebe o teste de resistência dessa criatura — se a criatura obteve sucesso em seu teste, o objeto não é destruído. Criaturas surdas têm uma penalidade de -1 nos testes de surpresa, e se tentarem lançar magias com componentes verbais têm 20% de chance de falhar. Grito não pode penetrar a Magia Divina de 2º círculo Silêncio, 4,5 metros de raio. Essa magia só pode ser utilizada uma vez por dia, ou o mago ficará permanentemente surdo. Os componentes materiais são uma gota de mel, uma gota de ácido cítrico e um cone feito do chifre de um touro ou de um carneiro."
+}

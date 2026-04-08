@@ -1,0 +1,10 @@
+{
+    "name": "Logro",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "3",
+    "duration": "1 turno/nível",
+    "range": "0",
+    "area": "O mago",
+    "description": "Através dessa magia, o mago pode mascarar sua própria tendência com a de qualquer criatura que esteja a até 10 metros dele, no momento em que ela é lançada. A criatura precisa ter Inteligência maior que 1 para que a magia funcione, e a tendência do alvo não sofra mudança. A criatura testa sua resistência à magia e, se obtiver sucesso, nada acontece. Se a magia funcionar, qualquer Revelar Tendência usada contra o mago registra apenas a tendência que ele assumiu. Uma tentativa de Detectar Maldade ou Detectar Bondade também detecta a aura falsa. A criatura que teve sua tendência duplicada irradia mágica. Já a aura irradiada pelo mago que realizou a Alteração só pode ser percebida pela criatura cuja tendência foi reproduzida. Se Logro for utilizado com Alterar-se ou Transformação Momentânea, ficará mais difícil de se perceber o disfarce do mago."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Cone Glacial",
+    "level": 5,
+    "school": "Evocação",
+    "castingTime": "5",
+    "duration": "Instantânea",
+    "range": "0",
+    "area": "Especial",
+    "description": "Essa magia produz uma área de frio extremo que parte da mão do mago e se prolonga para a frente num cone de 1,5 metro de comprimento e 30 centímetros de diâmetro, por nível do mago. O cone absorve calor e causa 1d4+1 pontos de dano por nível. Por exemplo: um mago de 10º nível evocaria um cone com 3 metros de diâmetro e 15 metros de comprimento, provocando 10d4+10 pontos de dano. O componente material é um cristal ou um cone de vidro bastante pequeno."
+}

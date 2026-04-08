@@ -1,0 +1,10 @@
+{
+    "name": "Leque Cromático",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "1 rodada",
+    "duration": "Instantânea",
+    "range": "0",
+    "area": "Cunha de 2 m x 6 m x 6 metros",
+    "description": "Ao utilizar essa magia, cria-se um jato de cores fortes em forma de cunha, lançado a partir das mãos do mago. Uma a seis criaturas (1d6) dentro da área de efeito são afetadas pelo jato, em ordem crescente de proximidade ao mago. Todas as criaturas que tiverem nível ou número de dados de vida maiores que os do mago, de no mínimo 6 nível, ou com seis ou mais dados de vida, têm direito a um teste de resistência à magia. Criaturas cegas, ou que por qualquer razão não possam ver a magia, não são afetadas. As criaturas que não tiverem direito, ou falharem em seus testes de resistência (caso tenham nível/dados de vida iguais ou menor aos do mago), ficam inconscientes por 2d4 rodadas; caso tenham um ou dois níveis/dados de vida a mais que o mago são cegadas por 1d4 rodadas; caso tenham três ou mais níveis/dados de vida a mais que o mago ficam atordoadas (cambaleantes e sem conseguir pensar coerentemente) por uma rodada. Os componentes materiais são três pitadas de pó ou areia: uma vermelha, uma amarela e uma azul."
+}

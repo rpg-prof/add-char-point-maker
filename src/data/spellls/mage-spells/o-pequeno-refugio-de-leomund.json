@@ -1,0 +1,10 @@
+{
+    "name": "O Pequeno Refúgio de Leomund",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "3",
+    "duration": "4 horas + 1 hora/nível",
+    "range": "0",
+    "area": "Esfera de 5 metros de diâmetro",
+    "description": "Quando o mago utiliza essa magia, ele cria uma esfera de força de qualquer cor, opaca e imóvel, ao redor de si. O hemisfério superior fica acima do solo, enquanto o hemisfério inferior passa através dele. Até sete outras criaturas de tamanho humano podem ficar dentro deste campo de força junto com o mago que o criou; essas criaturas podem entrar ou sair da esfera sem afetá-la, mas se o mago sair, a esfera dissipa-se. A temperatura dentro da esfera é de 25°C, se a temperatura exterior estiver entre -20°C e 45°C. Se a temperatura exterior for menor que -20°!C ou maior que 45°C, a temperatura interior deve ser ajustada por 1°C para cada grau de diferença. Por exemplo, se a temperatura exterior for 55°C, 10°C a mais que o máximo, a temperatura interior será de 35°C. 10°C a mais que o normal. A esfera também fornece proteção contra os elementos como chuva, tempestade de areia, poeira, etc. A esfera pode resistir a qualquer vento de intensidade menor que a de um furacão, mas um furacão a destrói. O interior do Refúgio é um hemisfério que o mago pode iluminar fracamente se assim o quiser, ou tornar escuro com um comando verbal. Embora o campo de força seja opaco de fora para dentro, ele é transparente de dentro para fora. Projeteis, armas, e a maior parte dos eleitos mágicos, podem passar nos dois sentidos da esfera sem afetá-la, mas os ocupantes não podem ser vistos do lado de fora. A esfera pode ser desfeita por Dissipar Magia. O componente material é uma conta de metal, que se quebra quando a magia termina ou é desfeita."
+}

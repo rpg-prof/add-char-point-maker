@@ -1,0 +1,10 @@
+{
+    "name": "Controlar Mortos-Vivos",
+    "level": 7,
+    "school": "Necromancia",
+    "castingTime": "1 rodada",
+    "duration": "3d4 rodadas+1 rodada/nível",
+    "range": "20 metros",
+    "area": "1d6 mortos-vivos",
+    "description": "Essa magia permite ao mago controlar 1d6 mortos-vivos por um curto período. Ao executar o efeito, o mago seleciona um ponto dentro do alcance. Os mortos-vivos mais próximos desse ponto são afetados, até que seu total de dados de vida se iguale ao nível do mago, ou que seis monstros sejam afetados, mortos-vivos com menos de três dados de vida são controlados automaticamente. Aqueles que tiverem mais dados de vida que isso, recebem um teste de resistência à magia, e os que passarem não serão controlados. A despeito do sucesso ou falha no teste, todos contam para o limite de dados de vida do efeito. As criaturas sob controle do mago só podem receber ordens se estiverem em alcance de audição. Não há comunicação telepática entre o mago e os mortos-vivos. Mesmo que não haja alguma forma possível de comunicação, os mortos-vivos não atacarão o autor da magia. Quando a magia expirar, os mortos-vivos voltarão a se comportar normalmente; aqueles que tiverem Inteligência irão se lembrar do controle exercido pelo mago. Os componentes materiais são um pedaço de osso, e um de carne crua."
+}

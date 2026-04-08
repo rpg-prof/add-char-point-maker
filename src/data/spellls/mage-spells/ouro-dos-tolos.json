@@ -1,0 +1,10 @@
+{
+    "name": "Ouro dos Tolos",
+    "level": 2,
+    "school": "Alteração, Ilusão",
+    "castingTime": "2",
+    "duration": "1 hora/nível",
+    "range": "10 metros",
+    "area": "25 cm/nível",
+    "description": "Através do Ouro dos Tolos, moedas de cobre podem ser temporariamente transmutadas em moedas de ouro, ou itens de latão convertidos em itens de ouro puro. A área de efeito é de 25 centímetros cúbicos por nível, ou aproximadamente 150 moedas. Qualquer criatura que veja esse “ouro” deve testar sua resistência à magia, modificada pela Sabedoria, com uma penalidade de -1 para cada nível do mago que criou a magia. Desta forma, caso o mago seja bastante experiente, será extremamente difícil perceber a farsa. Caso o “ouro” seja tocado por um objeto de ferro frio, há uma chance da magia ser anulada, dependendo do componente material utilizado. Se uma citrina (quartzo amarelo) de 25 po de valor for pulverizada e aspergida sobre o metal utilizado a chance de que a magia seja anulada pelo ferro frio é de 30%. Substituindo-se a citrina por 50 po de âmbar, a chance diminui para 25%. Se for utilizado um topázio no valor de 250 po, a chance diminui para 10%. Se for utilizado um topázio oriental no valor de 500 po, a chance reduz-se a 1%, Note que as pedras preciosas utilizadas são pulverizadas e consumidas pela magia, sendo um péssimo negócio criar 100 po de ouro de tolo quase autêntico utilizando um topázio oriental."
+}

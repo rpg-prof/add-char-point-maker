@@ -1,0 +1,10 @@
+{
+    "name": "Provocação",
+    "level": 1,
+    "school": "Encantamento",
+    "castingTime": "1",
+    "duration": "1 rodada",
+    "range": "60 metros",
+    "area": "10 metros de raio",
+    "description": "Provocação permite ao mago insultar, com eficácia, uma única espécie de criaturas que tenha Inteligência 2 ou maior. O mago não precisa conhecer a linguagem das criaturas. Suas palavras e gestos têm verdadeiro significado para elas: insultos, blasfêmias, desafios, que irritam profundamente os ouvintes. Quem falhar em um teste de resistência à magia, corre para combater o mago, se puder fazê-lo, sempre preterindo o corpo a corpo a armas de arremesso, arcos e magia. Se o mago estiver separado dos receptores por uma barreira intransponível (um abismo, uma falange de lanceiros, uma parede de fogo), a magia é quebrada. Se o mago insulta um grupo misto, ele precisa escolher a espécie que quer afetar. Criaturas que estejam acompanhadas de um líder poderoso (que tenha bônus de Carisma, ou um nível maior que o delas) têm um bônus em seu teste de resistência, que varia de +1 a +4, determinado pelo Mestre. Se utilizado em conjunto com Ventriloquismo, as criaturas podem atacar a fonte aparente dos insultos, dependendo de sua Inteligência. O componente material é uma lesma, que é atirada na direção das criaturas."
+}

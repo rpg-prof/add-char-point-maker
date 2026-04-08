@@ -1,0 +1,10 @@
+{
+    "name": "Vento Sussurrante",
+    "level": 2,
+    "school": "Alteração, Evocação",
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "1 Km/nível",
+    "area": "Diâmetro de 60 centímetros",
+    "description": "Através dessa magia, o mago pode mandar uma mensagem ou criar um efeito sonoro. Vento Sussurrante viaja acima do solo por tantos quilômetros quanto o mago tiver níveis de experiência, para uma localização determinada e conhecida pelo mago. Vento Sussurrante é delicado e imperceptível como uma brisa muito suave, até que chegue ao seu destino. Lá ele diz a sua mensagem, ou faz o seu efeito sonoro, mesmo que não haja alguém para ouvi-lo, e então se dissipa. O mago pode fazer com que Vento Sussurrante envie uma mensagem de até 25 palavras, faça algum som durante uma rodada ou apenas produza barulho de ventos. Ele decide se quer que Vento Sussurrante vá lentamente, a 1 quilômetro por hora, ou rapidamente, a 1 quilômetro por turno. Chegando em seu destino, Vento Sussurrante permanece até terminar a sua mensagem. Como a Boca Encantada, o Vento Sussurrante não pode ser usado para lançar magias vocais."
+}

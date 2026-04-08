@@ -1,0 +1,10 @@
+{
+    "name": "Ordem",
+    "level": 8,
+    "school": "Evocação, Encantamento/Feitiço",
+    "castingTime": "",
+    "duration": "Especial",
+    "range": "Especial",
+    "area": "1 criatura",
+    "description": "Essa magia é muito semelhante ao efeito mago de 5º círculo Enviar Mensagem, permitindo um rápido contato com uma criatura muito distante, com a diferença de que a mensagem transmitida pela Ordem pode conter uma sugestão (ver Sugestão) que o receptor tentará cumprir da melhor maneira possível. A vítima tem direito a um teste de resistência à magia, com penalidade de -2. Claro que se a Sugestão for impossível, ou se não fizer sentido para o receptor, a mensagem é compreendida da mesma forma, mas a Sugestão falha automaticamente. O mago precisa ser familiar à criatura contatada, deve conhecer seu nome e lembrar-se bem de sua aparência. Se a criatura está num plano de existência diferente do plano em que o mago se encontra, há 5% de chance de que a mensagem não chegue. Condições locais nos diferentes planos podem piorar consideravelmente essa chance, a critério do Mestre. A sugestão, se recebida, será compreendida mesmo que a criatura tenha Inteligência 1 (animal). Semideuses e outras divindades podem escolher se atendem à mensagem ou não, da maneira que quiserem. A mensagem com a sugestão deve ter um máximo de 25 palavras. O receptor pode enviar uma resposta breve ao recebê-la. Os componentes materiais são um par de cilindros, cada um aberto em uma de suas extremidades, conectados por um fio bem fino de cobre, um deles contendo um pequeno pedaço do receptor; um pêlo, um cabelo, uma unha, etc."
+}

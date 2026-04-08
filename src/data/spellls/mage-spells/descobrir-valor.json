@@ -1,0 +1,10 @@
+{
+    "name": "Descobrir Valor",
+    "level": 5,
+    "school": "Adivinhação",
+    "castingTime": "3",
+    "duration": "Instantânea",
+    "range": "10 m",
+    "area": "cubo de 3 m",
+    "description": "Descobrir Valor permite ao mago sa- ber o valor total de todas as moedas, gemas e joias dentro da área de efeito, dentro dos limites que se seguem. Os itens devem ser claramente visí- veis. Eles não podem estar escondidos nas pessoas, ocultados em um baú ou enterrados no solo. Os itens também devem estar contidos dentro de um espaço não maior do que um cubo de 3 m, e esta área não pode estar mais distante do que 10 m do mago. Além disso, Descobrir Valor só reve- lará o valor de 75% do número total de objetos em uma pilha de tesouro, até ao limite máximo de 10 peças; o Mestre determina quais peças a magia afeta e o mago não sabe quais partes específicas foram avaliadas. A magia não detecta a presença ou o valor dos itens mágicos e ignora o valor dos bens pessoais, tais como roupas, armas e outros equipamentos. Descobrir Valor não revela o número ou a natureza de qualquer tipo de objetos ocultos. Os componentes materiais para esta magia são uma peça de cobre e uma gema falsificada."
+}

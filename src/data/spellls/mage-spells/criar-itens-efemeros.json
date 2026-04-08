@@ -1,0 +1,10 @@
+{
+    "name": "Criar Itens Efêmeros",
+    "level": 4,
+    "school": "Ilusão/Visão",
+    "castingTime": "1",
+    "duration": "1 hora/nível",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Essa magia permite que o mago crie um item de matéria morta, de natureza vegetal — madeira, palha, corda. etc. O mago realmente remove punhados do material do Plano das Sombras e os molda no objeto desejado O volume do item criado não pode exceder 30 centímetros cúbicos por nível do mago. O item permanece apenas pela duração da magia. O mago precisa ter ao menos um pequeno pedaço do material em que ele deseja que o item seja constituído para utilizar esta magia — um pedaço de cordel para formar uma corda, uma lasca de madeira para criar uma porta, e assim por diante."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Banimento",
+    "level": 7,
+    "school": "Abjuração",
+    "castingTime": "3",
+    "duration": "Instantânea",
+    "range": "20 metros",
+    "area": "1 ou mais criaturas num raio de 20 metros",
+    "description": "O efeito Banimento permite expulsar alguma Força extraplanar que esteja no plano de existência mago. O efeito é instantâneo, e a vítima não pode regressar, a menos que seja convocada por magia, ou encontre um meio especial de saída em seu próprio plano. Até dois dados de vida ou níveis de criatura podem ser banidos para cada nível do mago. O mago deve dizer o nome do tipo da criatura a ser banida e, se existir, o nome próprio do indivíduo, e o título também. Em qualquer caso, a proteção contra magia da criatura deve ser vencida para que o efeito funcione. Os componentes materiais são substâncias perigosas, desagradáveis ou opostas à natureza da(s) vítima(s) da magia. Para cada substância incluída, o receptor perde 5% da sua proteção contra magia, e sofre um redutor de -2 no seu teste de resistência à magia. Por exemplo, se ferro, água benta, um diamante e um ramo de rosmarinho fossem utilizados no banimento de uma criatura que odiasse essas coisas, ela faria o seu teste de resistência com um redutor de -8 (quatro substâncias multiplicado pelo fator -2). Itens especiais, como o pêlo da cauda de um ki-rin ou penas de couatl podem ser usados para aumentar o fator para -3 ou -4 por item. Em contraste, o cabelo de um titã ou visco benzido por um druida podem reduzir o fator dessa mesma criatura para -1. Se a criatura passar no teste de resistência à magia, o mago é atingido por um ricochete de energia, sofre 2d6 pontos de dano e é tonteado por uma rodada."
+}

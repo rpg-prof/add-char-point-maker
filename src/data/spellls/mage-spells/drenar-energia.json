@@ -1,0 +1,10 @@
+{
+    "name": "Drenar Energia",
+    "level": 9,
+    "school": "Evocação, Necromancia",
+    "castingTime": "",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "1 criatura",
+    "description": "Ao utilizar essa magia, o mago abre um canal entre o plano em que está e o plano Material Negativo, e se torna um condutor entre esses dois planos. Tão logo ele toque qualquer criatura, ela perde imediata 1d10 pontos de dano 2d10 pontos de dano 4d10 pontos de dano e permanentemente dois níveis de experiência, ou 2 DV, como se houvesse sido tocada por um espectro. Habilidades afetadas pelo nível ou DV são perdidas também. O componente material dessa magia é a essência de um espectro ou as cinzas de um vampiro. A preparação leva apenas alguns segundos, e então o componente material é jogado fora. Ao tocar a vítima, o mago pronuncia a fórmula, ativando a magia. Esse efeito fica ativo por apenas uma rodada. Humanos e humanóides reduzidos a um nível menor que zero através dessa magia podem ser animados como zumbis vudu sob controle do mago. O mago tem sempre 5% de chance (ou 1 em 1d20) de ser afetado pelo pó, perdendo um ponto de Constituição ao mesmo tempo em que drena a vítima. Quando o número de pontos de Constituição perdidos igualar-se à Constituição original do mago, ele morre e se torna um morto-vivo."
+}

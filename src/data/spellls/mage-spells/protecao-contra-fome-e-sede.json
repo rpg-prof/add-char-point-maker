@@ -1,0 +1,10 @@
+{
+    "name": "Proteção contra Fome e Sede",
+    "level": 1,
+    "school": "Abjuração",
+    "castingTime": "1",
+    "duration": "1 dia/nível",
+    "range": "Toque",
+    "area": "uma criatura",
+    "description": "Quando Proteção contra a Fome e Sede é realizada, o destinatário não necessita de comida, água ou alimento de qualquer tipo pela duração da magia. O destinatário pode ser o mago ou qualquer pessoa que ele toca. Cada dia que o mago (ou o sujeito da escolha do mago) está sob o efeito da magia, ele é totalmente alimentado como se ele tivesse a comer e beber normalmente. No final da duração da magia, o alvo não está mais faminto ou sedento do que ele estava quando a magia foi originalmente realizada. Os componentes materiais para esta magia são um pequeno pedaço de car- ne seca e um copo de água."
+}

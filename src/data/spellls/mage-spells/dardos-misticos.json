@@ -1,0 +1,10 @@
+{
+    "name": "Dardos Místicos",
+    "level": 1,
+    "school": "Evocação",
+    "castingTime": "1",
+    "duration": "Instantânea",
+    "range": "60 metros + 10 metros/nível",
+    "area": "1 ou mais criaturas em",
+    "description": "um cubo de 3 metros de aresta Dardos Místicos cria até cinco dardos de energia, que são lançados das pontas dos dedos do mago, e acertam seus alvos. Isso inclui criaturas inimigas em combate corpo a corpo. As criaturas selecionadas como alvos precisam ser vistas ou detectadas para serem atingidas, o que permite que uma boa cobertura, como seteiras, torne a magia ineficiente. Da mesma forma, o mago também precisa identificar o alvo a ser atingido. Ele não pode mandar um dardo acertar o “comandante da legião” a não ser que ele consiga, entre os soldados que vê, discerni-lo. Objetos inanimados, como fechaduras, não sofrem nenhum dano com esta magia, e a tentativa de designá-los como alvo desperdiça os dardos. Partes específicas de uma criatura também não podem ser definidas como alvos. Contra criaturas, cada dardo inflige 1d4+1 pontos de dano. O mago, no 1º nível de experiência, tem um dardo, ganhando um dardo extra a cada dois níveis, ou seja: no 3º nível, ele tem dois dardos; no 5º nível, tem três dardos: no 7º nível, tem quatro dardos, até um máximo de cinco dardos, no 9º nível de experiência. Se o mago tem mais de um dardo, ele pode escolher entre alvejar com todos os dardos uma só criatura, ou dividi-los entre vários alvos, da maneira que desejar."
+}

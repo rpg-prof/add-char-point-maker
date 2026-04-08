@@ -1,0 +1,10 @@
+{
+    "name": "Caos",
+    "level": 5,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "5",
+    "duration": "1 rodada/nível",
+    "range": "5 metros/nível",
+    "area": "Um cubo de até 12 metros de aresta",
+    "description": "E A nd Em > > >> ams > “ — Fá R Essa magia é similar à Confusão, mas apenas os seguintes seres têm direito a um teste de resistência: guerreiros, magos especializados em Encantamentos, monstros que não utilizam magia e tenham Inteligência igual ou menor que 4. criaturas com Inteligência 21 ou maior, e seres com mais níveis ou dados de vida que o mago. O efeito causa desorientação e distorções severas nos sentidos, criando indecisão e impossibilitando os afetados de realizarem qualquer ação eficiente. A magia afeta 1d4 criaturas, mais uma criatura por nível do mago. Aqueles com direito a um teste de resistência contra magia devem fazê-lo com um redutor de -2, ajustado pela Sabedoria. As criaturas afetadas reagem da seguinte forma: Resultado de 1d10 Ação 1 Afastam-se (a menos que sejam impedidas) enquanto o efeito durar 2-6 Param, confusas, por uma rodada (e então jogam 1d10 de novo) 7-9 Atacam a criatura mais próxima por uma rodada (e então jogam 1d10 de novo) 10 Agem normalmente por uma rodada (e então jogam 1d10 de novo) A magia dura uma rodada por nível do mago. O Mestre confere as ações das vítimas em todas as rodadas que ocorrerem dentro da duração da magia, ou até que surja o resultado “afastam-se enquanto o efeito durar”. Criaturas se afastando movem-se para tão longe do mago quanto for possível, usando os meios de locomoção típicos de cada espécie (personagens andam, peixes nadam, morcegos voam, etc.). Testes de resistência e ações em geral são definidos no início de cada rodada. Qualquer criatura atingida pelos efeitos da magia que sofra um ataque verá o atacante como um inimigo, e agirá de acordo com sua natureza básica. Os componentes materiais são um pequeno disco de bronze e um pequeno bastão de ferro."
+}

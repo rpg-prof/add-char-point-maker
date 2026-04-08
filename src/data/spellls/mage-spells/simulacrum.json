@@ -1,0 +1,10 @@
+{
+    "name": "Simulacrum",
+    "level": 7,
+    "school": "Ilusão/Visão",
+    "castingTime": "9",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "1 criatura",
+    "description": "Com o Simulacrum, o mago pode criar uma duplicata de qualquer criatura. A duplicata parece idêntica em todos os detalhes ao original, mas há diferenças: o simulacro tem apenas entre 51 e 60% (50% + 1d10%) dos pontos de vida da criatura original; existem também divergências de personalidade, e o original detém conhecimentos que a duplicata não possui. Detectar Magia ou Visão da Verdade revelarão a verdadeira natureza do simulacro, que permanece sob absoluto controle do mago que o criou. Não há elo telepático entre criador e criatura, logo deve haver alguma forma de comunicação para que as ordens sejam compreendidas. A magia produz a forma da duplicata, mas nesse estágio ela pode ser comparada a um zumbi. Reencarnação deve ser usada para lhe dar força vital, e um Desejo Restrito pode conceder à criatura de 40 a 65% dos conhecimentos e da personalidade da criatura original. O nível do simulacro é de 20 a 50% do nível da criatura original. A duplicata é feita de gelo ou neve. A magia é lançada sobre essa forma inacabada, e alguma parte da criatura a ser reproduzida deve ser posta no interior da neve ou geio. Além disso, a magia requer pó de rubi. O simulacro não pode se tornar muito poderoso; ele não sobe de nível, e nem aumenta suas habilidades. Se destruída, a duplicata volta a ser gelo, e derrete. Danos ao simulacro podem ser reparados através de um processo complexo que dura pelo menos um dia, custa 100 peças de ouro por ponto de vida e requer um laboratório totalmente equipado."
+}

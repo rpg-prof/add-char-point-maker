@@ -1,0 +1,10 @@
+{
+    "name": "Força Espectral",
+    "level": 3,
+    "school": "Ilusão/visão",
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "60 +1 metros por nível",
+    "area": "Cubo de 6 m + um cubo de 3 m de aresta por nível",
+    "description": "Força Espectral cria uma ilusão onde sons, cheiros e temperaturas estão incluídos. No restante, é semelhante à Criação Fantasmagórica. Essa magia dura por três níveis após o término da concentração do mago."
+}

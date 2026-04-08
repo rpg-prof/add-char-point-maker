@@ -1,0 +1,10 @@
+{
+    "name": "Tornar Raso",
+    "level": 6,
+    "school": "Alteração",
+    "castingTime": "7",
+    "duration": "5 rodadas/nível",
+    "range": "80 metros",
+    "area": "Quadrado de 3 metros",
+    "description": "de lado, por nível O mago que utilizar essa magia poderá fazer com que a água, ou outro fluido similar na área de efeito, afunde. O nível da água pode ser diminuído em 50 centímetros por nível de experiência do mago, até uma profundidade mínima de 3 centímetros. A água é rebaixada dentro de uma área quadrada, cujos lados têm 3 metros por nível do mago. Assim, um mago de 12º nível afeta um volume de 6 metros x 36 metros x 36 metros, um mago de 13º nível afetaria um volume de 6,5 metros x 39 metros x 39 metros, e assim por diante. Em massas de água extremamente largas e profundas, como o alto mar, o efeito cria um redemoinho que atrai navios e outras embarcações para baixo, colocando-os em perigo e impedindo-os de deixar a área afetada utilizando meios normais, enquanto durar a magia. Quando lançado sobre elementais da água, o efeito age como Lentidão: a criatura move- se a meia velocidade, e faz apenas metade do seu número normal de ataques por rodada. A magia não tem efeito sobre outras criaturas. O componente material é um pequeno recipiente com pó. O inverso, Tornar Profundo, faz com que água ou líquidos similares assumam sua posição natural mais alta (época das cheias, maré alta, etc.). Isso pode fazer com que navios encalhados flutuem, impedir que rios sejam ultrapassados ou até arrebentar pontes, se o Mestre o permitir. Tornar Profundo anula Tornar Raso, e vice-versa. O componente material para Tornar Profundo é um pequeno recipiente com água."
+}

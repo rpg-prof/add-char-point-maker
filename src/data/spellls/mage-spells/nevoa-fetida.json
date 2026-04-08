@@ -1,0 +1,10 @@
+{
+    "name": "Névoa Fétida",
+    "level": 2,
+    "school": "Evocação",
+    "castingTime": "2",
+    "duration": "1 rodada/nível",
+    "range": "30 metros",
+    "area": "Cubo de 6 metros de aresta",
+    "description": "Quando utiliza uma Névoa Fétida, o mago cria uma cortina de vapores extremamente malcheirosos a até 30 metros de sua posição. Qualquer criatura que seja pega pela cortina de vapor, deve testar sua resistência contra veneno. Caso não obtenha sucesso, ela ficará nauseada e cambaleante, impossibilitada de atacar por 1d4 + 1 rodadas depois de deixar a nuvem. As criaturas que passarem no teste de resistência podem deixar a nuvem sem sofrer náuseas, mas deverão fazer novos testes em todas as rodadas que neta permanecerem. Esses efeitos nauseantes podem ser retardados ou neutralizados por magias apropriadas. A duração da nuvem é reduzida à metade por uma brisa moderada, e uma brisa forte (5 a 10 Km/h) ou qualquer vento acaba com ela numa rodada. O componente material é um ovo podre, ou várias folhas de repolho."
+}

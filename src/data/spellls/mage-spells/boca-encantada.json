@@ -1,0 +1,10 @@
+{
+    "name": "Boca Encantada",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "10 metros",
+    "area": "1 objeto",
+    "description": "Quando utiliza essa magia, o mago cria uma boca mágica que aparece e fala uma mensagem quando um efeito predeterminado ocorre. A mensagem pode ter até 25 palavras, ser em qualquer linguagem que o mago fale e pronunciada dentro do período de um turno. A boca não pode lançar magias vocais ou ativar itens mágicos com comandos verbais. Se a magia for utilizada em uma estátua, enquanto ela falar, sua boca se movimentará de acordo com a pronúncia. O receptor da magia pode ser uma pedra, uma árvore, ou qualquer outro objeto inanimado. A magia funciona quando certas condições são cumpridas, conforme especificado pelo mago no momento em que a lança. Alguns exemplos de condições: “Fale para a primeira criatura que lhe tocar,” ou “Fale para a primeira criatura que passe a até dez metros.” As condições podem ser tão genéricas, ou detalhadas, quanto o mago desejar, embora a magia só responda a estímulos visuais e sonoros, como: “Fale quando uma velha sentar-se de pernas cruzadas, a 1/2 metro de distância, carregando uma sacola de armas e pronunciar ‘cansada...’“. Esses estímulos visuais podem ser imitados por criaturas disfarçadas; dessa forma, no exemplo acima, uma pessoa disfarçada de velha, que cumprisse as outras condições, ativaria a magia. O alcance da detecção dos estímulos é de 5 metros por nível, ou seja, no 5º nível, a alteração pode reagir a estímulos que ocorram no máximo a 25 metros. A magia dura até ser ativada, e depois desaparece; tendo duração indeterminada. A magia não pode diferenciar classes, níveis, tendências ou características que não dependam apenas da aparência. O componente material é um punhado de favos de mel."
+}

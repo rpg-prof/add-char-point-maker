@@ -1,0 +1,10 @@
+{
+    "name": "Rajada Prismática",
+    "level": 7,
+    "school": "Conjuração/Convocação",
+    "castingTime": "7",
+    "duration": "Instantânea",
+    "range": "0",
+    "area": "Trapézio de 20 metros",
+    "description": "de comprimento, com 5 metros de largura no final e 1,5 metro na base Quando essa magia é utilizada, o mago lança de sua mão sete raios de luz coloridos e tremeluzentes, com todas as cores do espectro luminoso. Cada raio tem poderes e propósitos diferentes. Qualquer criatura com menos de 8 dados de vida, atingida por um dos raios, liça cega por 2d4 rodadas, além de receber outros efeitos. Qualquer criatura na área de efeito será atingida por um ou mais raios. Para determinar qual raio atinge uma criatura, jogue 1d8. Resultados da Rajada Prismática 1 = vermelho 5 = azul 2 = laranja 6 = anil 3 = amarelo 7 = violeta 4 = verde 8 = atingido por dois, jogue o dado novamente duas vezes, ignorando qualquer 8. Cor do O r d e m raio do raio Efeitos do raio Vermelho 1° causa 20 pontos de dano, teste de resistência contra magia para evitar a metade Laranja 2° causa 40 pontos de dano, teste de resistência contra magia para evitar a metade Amarelo 3° causa 80 pontos de dano, teste de resistência contra magia para evitar a metade Verde 4° teste de resistência contra veneno; falha significa morte, sucesso causa 20 pontos de dano por envenenamento Azul 5° teste de resistência contra petrificação ou transformação em pedra Anil 6° teste de resistência contra varinha, ou loucura Violeta 7° teste de resistência contra magia, ou enviado para outro plano"
+}

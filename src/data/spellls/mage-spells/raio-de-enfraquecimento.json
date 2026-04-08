@@ -1,0 +1,10 @@
+{
+    "name": "Raio de Enfraquecimento",
+    "level": 2,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "2",
+    "duration": "1 rodada/nível",
+    "range": "10 metros+ 5 nível",
+    "area": "1 criatura",
+    "description": "Através de Raio de Enfraquecimento, o mago enfraquece um oponente, reduzindo sua Força, e a potência dos ataques que dependam dessa habilidade. Humanos, semi-humanos e humanóides, de tamanho próximo ao humano ou menores, passam a ter uma Força de 5, sofrendo uma penalidade de -1 para o dano que provocam e uma de -2 para as jogadas de ataque. Outras criaturas (que não têm um atributo determinado de Força) sofrem uma penalidade de -1 para cada dado de dano que infligem (sendo que cada dado inflige no mínimo 1 ponto de dano), e uma penalidade de -2 nas jogadas de ataque. O Mestre deve determinar as outras conseqüências da falta de força. A magia poderia permitir que os personagens amarrassem um gigante com uma corda grande, mas normal. Se a criatura escolhida para receber a magia obtiver sucesso em um teste de resistência à magia, ela não sofrerá o efeito. Essa magia não afeta os bônus conferidos à criatura por itens mágicos ou magia."
+}

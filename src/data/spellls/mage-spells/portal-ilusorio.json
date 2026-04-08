@@ -1,0 +1,10 @@
+{
+    "name": "Portal Ilusório",
+    "level": 5,
+    "school": "Ilusão/Visão",
+    "castingTime": "3 turnos",
+    "duration": "1 rodada/nível",
+    "range": "10 metros",
+    "area": "Especial",
+    "description": "Através dessa magia, o mago cria a ilusão de uma porta. A ilusão permite- lhe entrar nessa “porta” e desaparecer. Na verdade, ele pula para o lado e pode fugir, totalmente invisível, enquanto durar a magia, Criaturas que observam isso pensam que estão vendo — ou penetrando — um espaço vazio de 3 metros x 3 metros, se abrirem a porta. Uma Visão da Verdade, uma gema da visão ou outros meios mágicos similares podem descobrir o mago. Certas criaturas com muitos dados de vida poderiam também notá-lo (veja invisibilidade), mas apenas se tentarem isso ativamente."
+}

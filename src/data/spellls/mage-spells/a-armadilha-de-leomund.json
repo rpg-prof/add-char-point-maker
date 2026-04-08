@@ -1,0 +1,10 @@
+{
+    "name": "A Armadilha de Leomund",
+    "level": 2,
+    "school": "Ilusão/Visão",
+    "castingTime": "2",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Objeto tocado",
+    "description": "Essa falsa armadilha é útil para enganar um ladrão, ou um outro personagem que tente mexer nos pertences do mago. Este a prepara sobre qualquer mecanismo ou método de abertura, como uma fechadura, ranhura, tampa de rosquear, etc. O personagem que puder detectar armadilhas, ou use qualquer magia ou instrumento para a detecção, lerá certeza absoluta que há uma armadilha de verdade no mecanismo afetado. Obviamente, esta magia é ilusória, e nada acontece se o mecanismo for aberto. O propósito principal desta ilusão é assustar ladrões ou fazer com que percam minutos preciosos tentando remover a armadilha. O componente material é pirita, que é encostada no mecanismo, enquanto este é aspergido com um pó especial que custa 200 po para ser preparado. Se houver outra Armadilha de Leomund a menos de 15 metros, quando essa for utilizada, a magia falhará."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Escuridão, 4,5 m",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "2",
+    "duration": "1 turno + 1 rodada/nível",
+    "range": "10 metros/nível",
+    "area": "esfera de 4,5 metros de raio",
+    "description": "Essa magia cria uma escuridão total e impenetrável dentro da área de efeito. Infravisão não funciona. Luz normal ou mágica não funcionam dentro da área de efeito, a não ser que uma magia de Luz ou Luz Contínua sejam utilizadas. Neste caso, a escuridão é anulada pela luz e vice-versa. Os componentes materiais são um pouco de pele de morcego e uma gota de piche ou um pedaço de carvão."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Pedra em Lama",
+    "level": 5,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "Especial",
+    "range": "10 metros/nível",
+    "area": "Um cubo de 5 metros por nível",
+    "description": "Essa magia transforma rocha natural de qualquer tipo em um volume equivalente de lodo. A profundidade do lodo não pode exceder metade de seu comprimento ou largura. Criaturas que não possam voar, levitar ou de outro modo fugir do lodo afundam a uma taxa de 3 metros por rodada e sufocam, exceto no caso de seres que sejam suficientemente leves para caminhar sobre esse tipo de terreno. Galhos e madeira podem ser usados como bóias, mas a quantidade necessária desses materiais é determinada pelo Mestre. O lodo permanece até que o inverso desta Componentes: V magia, Lama em Pedra, ou Dissipar Magia, restaurem a solidez da Tempo de Execução: 2 rocha — mas não necessariamente a forma. A evaporação transforma Resistência: Nenhuma o lodo em poeira normal, a uma taxa de 1d6 dias para cada 3 metros cúbicos. Lama em Pedra pode endurecer lodo normal e transformá-lo em pedras quebradiças (arenito ou similar) permanentemente, a menos que o material volte a sofrer alterações mágicas. Os componentes materiais são argila e água (ou areia, limo e água para o efeito inverso)."
+}

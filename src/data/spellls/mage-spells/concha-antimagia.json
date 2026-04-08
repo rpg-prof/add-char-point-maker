@@ -1,0 +1,10 @@
+{
+    "name": "Concha Antimagia",
+    "level": 6,
+    "school": "Abjuração",
+    "castingTime": "6",
+    "duration": "1 turno/nível Área de",
+    "range": "0",
+    "area": "Esfera de 30 centímetros de diâmetro/nível",
+    "description": "Através dessa magia, o mago cerca-se com uma barreira invisível, que se move com ele. A área dentro dessa barreira é totalmente impermeável a todos os efeitos mágicos, impedindo assim a passagem de magias. Além disso, a barreira anula o funcionamento de qualquer item mágico ou magia em seu interior. A área é também invulnerável a Sopro-de- Dragão, ataques visuais ou vocais e outras formas similares de ataque especial. A Concha Antimagia também afasta criaturas enfeitiçadas (que foram vítimas, por exemplo, de Enfeitiçar Pessoas), invocadas ou conjuradas. Ele não pode, no entanto, ser pressionado contra as criaturas que manteria afastadas. Qualquer tentativa nesse sentido cria uma pressão sensível contra a barreira, e pressão continua pode quebrar o efeito. Criaturas normais (um troll encontrado normalmente e não conjurado, por exemplo) podem entrar na área, bem como projéteis normais. Além disso, embora uma espada mágica perca as suas propriedades especiais dentro do Globo, ela continua sendo uma espada, e pode matar o pobre mago da mesma forma. Note que criaturas em seus planos de origem são criaturas normais lá. Portanto, no Plano Elemental do Fogo, um elemental do fogo encontrado aleatoriamente não será afastado por essa magia. Artefatos, relíquias e criaturas com status de semideus ou maior, não são afetados por esse efeito. Caso o mago seja maior que a área protegida pela magia, certas partes do seu corpo podem ser consideradas expostas, se o Mestre assim o desejar. Dissipar Magia não afetará o invólucro. O mago pode encerrar a magia quando desejar."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Desvanecimento",
+    "level": 7,
+    "school": "Alteração",
+    "castingTime": "",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "1 objeto",
+    "description": "Quando o mago emprega essa magia, ele faz com que um objeto desapareça (isto é, seja teletransportado, como na Teleportação). O receptor deve pesar menos de 25 quilos por nível do mago. Por exemplo, um mago de 14- nível poderia fazer com que um item de até 350 quilos desaparecesse e ressurgisse na localização desejada. O volume máximo de material afetado é 1 metro cúbico (1.000 litros) por nível do mago. Portanto, peso e volume limitam o efeito. Um objeto que exceda qualquer um dos dois limites causará a falha imediata da magia. Se o mago assim desejar, o objeto pode ser enviado para as profundezas do plano Etéreo. Nesse caso, o ponto em que o material desapareceu permanece irradiando uma leve aura mágica, até que o item seja recuperado. Dissipar Magia lançada com sucesso nesse ponto fará com que o objeto volte. O Desvanecimento não funciona contra criaturas ou energias mágicas. Há uma chance de 1% de que o objeto seja desintegrado, e não transportado. Há também uma chance de 1% de que criaturas do plano Etéreo ganhem acesso ao plano Material Primário, através da conexão estabelecida pelo Desvanecimento."
+}

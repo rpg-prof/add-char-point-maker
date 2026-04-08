@@ -1,0 +1,10 @@
+{
+    "name": "Teleportação Exata",
+    "level": 7,
+    "school": "Alteração",
+    "castingTime": "Especial",
+    "duration": "1 hora por nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Esse efeito é semelhante à Teleportação. O mago pode transportar- se, juntamente com o peso descrito em Teleportação, para qualquer lugar do seu plano natal sem chance de erro. A magia permite também que o mago viaje para outros planos de existência, mas qualquer um deles é considerado, na melhor das hipóteses, como uma destinação “estudada com cuidado” (veja a Tabela na Teleportação). Isto porque se assume que o mago já tenha estado no plano em questão, e estudado cuidadosamente uma área para esse fim. A tabela da Teleportação é usada, com o conhecimento do mago a respeito de sua destinação sendo usado para determinar a chance de erro (exceção: veja Auxílio Imediato). O mago não pode fazer nada na rodada em que se materializa de um teletransporte."
+}

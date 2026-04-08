@@ -1,0 +1,10 @@
+{
+    "name": "Muralha de Fogo",
+    "level": 4,
+    "school": "Evocação",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "60 metros",
+    "area": "Especial",
+    "description": "Essa magia cria uma cortina de fogo brilhante, violeta ou vermelho- azulado. O mago pode optar por criar uma parede opaca de chamas na forma de um quadrado de 6 metros de lado por nível, ou um anel de chamas com um raio de 3 +1,5 metros para cada dois níveis do mago. Em qualquer uma das formas, as chamas têm 6 metros de altura e devem ser verticais. Um dos lados (o de dentro ou o de fora) lança jatos de calor, que provocam 2d4 pontos de dano por calor nas criaturas a até 3 metros e 1d4 pontos de dano nas criaturas distantes até 6 metros. Além disso, as chamas infligem 2d6 pontos de dano, mais um ponto de dano por nível do mago em qualquer criatura que ousar atravessá-las. Criaturas particularmente sensíveis ao calor podem sofrer danos maiores e mortos-vivos sempre sofrem o dobro do dano. Note que tentar lançar Muralha de Fogo sobre uma criatura é difícil, tendo a criatura, nesse caso, o direito a um teste de resistência à magia. Se tiver sucesso, a magia foi evitada. Sua direção e velocidade de movimento determinam de que lado das chamas ela foi parar. As chamas duram enquanto o mago estiver concentrado; caso não queira se concentrar, as chamas duram uma rodada por nível de sua experiência. O componente material é fósforo."
+}

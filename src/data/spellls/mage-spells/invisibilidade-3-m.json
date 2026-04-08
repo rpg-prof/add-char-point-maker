@@ -1,0 +1,10 @@
+{
+    "name": "Invisibilidade, 3 m",
+    "level": 3,
+    "school": "Ilusão/Visão",
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Esfera de 3 metros de raio centrada na criatura tocada",
+    "description": "Essa magia confere Invisibilidade a todas as criaturas que estejam a até 3 metros do receptor. Equipamentos e fontes de luz estão incluídos no efeito, mas qualquer luz emitida ainda é visível. O centro do efeito move- se com o receptor. As criaturas afetadas por essa magia não podem ver umas às outras. Qualquer criatura afetada que se mova para fora da área de efeito toma-se visível, enquanto criaturas visíveis que entrem nela depois que a magia é lançada, não se tornam invisíveis. Se uma criatura invisível atacar, ela anula o efeito da magia apenas para si mesma. Se o receptor atacar, ele anula o efeito para todas as criaturas. Os componentes materiais são os mesmos da Invisibilidade."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Repelir Medo",
+    "level": 8,
+    "school": "Abjuração",
+    "castingTime": "1 rodada",
+    "duration": "1 turno/nível",
+    "range": "0",
+    "area": "1,5 m de raio",
+    "description": "Repelir Medo cria uma aura em torno do mago que o torna imune a todas as formas de medo, incluindo a causada por dragões. Além disso, Repelir Medo protege o mago contra ataques de todas as formas de mortos-vivos; o feitiço é igualmente eficaz contra ataques físicos e mágicos. Dissipar Magia não tem efei- to sobre Repelir Medo, mas um Desejo vai negá-lo. Os componentes materiais para esta magia são as presas de uma aranha e um cabelo da cabeça de um carniçal."
+}

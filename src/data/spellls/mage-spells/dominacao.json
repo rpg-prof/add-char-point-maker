@@ -1,0 +1,10 @@
+{
+    "name": "Dominação",
+    "level": 5,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "10 metros /nível",
+    "area": "1 pessoa",
+    "description": "Dominação permite que o mago controle as ações de qualquer pessoa até que a magia seja encerrada pela Inteligência do ser encantado (veja Enfeitiçar Pessoas). Elfos e meio-elfos têm proteção contra essa magia, do mesmo modo que estão protegidos contra todas as magias do tipo Feitiço. Quando a fórmula é lançada, a pessoa atingida deve testar sua resistência contra magia com uma penalidade de -2, mas os modificadores de Sabedoria se aplicam. Uma falha no teste significa que o mago estabeleceu um elo telepático com a mente da vítima. Se ambos conhecerem um mesmo idioma, o mago pode forçá-la a fazer qualquer coisa, dentro dos limites da Força e da estrutura corporal do receptor. Note que o mago não recebe nenhuma informação sensorial direta da pessoa. As pessoas lutam contra esse controle, e aqueles forçados a agir contra a própria natureza recebem um novo teste de resistência contra magia, com um bônus que varia de +1 a +4, dependendo do tipo de ação requerida. Ordens obviamente autodestrutivas não serão cumpridas. Uma vez que o controle tenha sido estabelecido, não há limites de distância entre mago e vítima, desde que ambos estejam no mesmo plano. Uma magia Proteção ao Mal pode impedir que o mago exerça controle ou utilize o elo telepático enquanto o receptor estiver protegido, mas não impede que o domínio se estabeleça."
+}

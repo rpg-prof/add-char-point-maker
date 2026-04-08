@@ -1,0 +1,10 @@
+{
+    "name": "Os Meteoros Instantâneos de Melf",
+    "level": 3,
+    "school": "Evocação, Alteração",
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "70 metros + 10 metros/nível",
+    "area": "1 alvo por meteoro",
+    "description": "Essa magia permite ao mago criar pequenos globos de fogo, um para cada nível de experiência que possuir. Quando se chocam com alguma superfície sólida, esses globos explodem em esferas de fogo de 30 centímetros de diâmetro, causando 1d4 pontos de dano na criatura atingida. As esferas também podem atear fogo em materiais inflamáveis próximos ao ponto de impacto. Os meteoros são tratados como projeteis disparados pelo mago, com um bônus de +2 na jogada de ataque e sem penalidade pela distância. Meteoros que erram o alvo são tratados como projéteis de área, que infligem 1 ponto de dano em criaturas que estejam a até 3 metros de distância. Essa magia pode ser utilizada de uma das duas formas seguintes: A) O mago dispara cinco meteoros por rodada (veja “Ataques Múltiplos e Iniciativa”). B) O mago dispara um meteoro por rodada. Além de poder disparar o meteoro, o mago pode fazer outras ações na rodada, incluindo lutar, lançar magias, ou utilizar itens mágicos. Magias que necessitem da concentração do mago para serem mantidas fazem com que ele tenha que perder o restante dos meteoros. Além do mais, se esquecer de quantos meteoros ainda pode disparar, perderá involuntariamente os restantes. Essa magia termina quando o mago já tiver lançado todos os meteoros que possuir, não quiser mais lançar meteoros, perder a concentração ou quando Dissipar Magia for utilizada com sucesso sobre ele. Os componentes materiais para a utilização dessa magia são salitre e enxofre enrolados em uma bola, junto com piche. O mago precisa ter, também, um minúsculo tubo feito de ouro, que custa pelo menos 1.000 po para ser feito, já que não pode falhar, e precisa receber símbolos mágicos. Este tubo pode ser reutilizado."
+}

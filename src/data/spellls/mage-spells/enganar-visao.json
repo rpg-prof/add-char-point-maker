@@ -1,0 +1,10 @@
+{
+    "name": "Enganar Visão",
+    "level": 5,
+    "school": "Adivinhação",
+    "castingTime": "5",
+    "duration": "1d4 rodadas + 1 rodada/nível",
+    "range": "0",
+    "area": "raio de 10 metros",
+    "description": "Quando essa magia é lançada, o mago impede que qualquer ponto dentro da área de efeito seja espionado por meios místicos. Para usá-la, o mago deve estar consciente da tentativa de espionagem, mas conhecimentos precisos sobre quem tenta espioná-lo ou sua localização são desnecessários. Com este efeito, o mago e tudo mais que ele desejar, dentro do raio de ação, tornam-se indetectáveis por meios mágicos. Além disso, o mago pode enviar a informação falsa que quiser, incluindo som e visão, de acordo com o meio de espionagem empregado. Para lazer isso, o mago precisa concentrar-se na informação a ser remetida. Uma vez quebrada a concentração, outras imagens não podem mais ser enviadas, embora o mago e a área permaneçam indetectáveis pela duração da magia. O componente material é o pó de uma esmeralda no valor de pelo menos 500 po, que deve ser espalhado pelo ar quando a fórmula é pronunciada."
+}

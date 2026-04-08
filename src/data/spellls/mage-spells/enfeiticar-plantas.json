@@ -1,0 +1,10 @@
+{
+    "name": "Enfeitiçar Plantas",
+    "level": 7,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "8",
+    "duration": "Permanente",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "Essa magia permite ao mago controlar as formas de vida vegetais, e se comunicar com esses seres, que obedecerão às instruções do mago da melhor forma que puderem. O feitiço afetará as plantas em uma área de 10 x 3 metros. Embora o efeito não conceda às plantas nenhum poder extra, os vegetais usarão todos os recursos disponíveis para obedecer ao mago: se as plantas na área de efeito possuírem poderes incomuns ou especiais, eles serão empregados da forma que o mago ordenar. Por exemplo, esse feitiço pode duplicar os efeitos de Constrição. O teste de resistência aplica-se apenas a plantas inteligentes, e é feito com um redutor de -4. Os componentes materiais são um pouco de humo, uma gota de água e uma folha ou rebento."
+}

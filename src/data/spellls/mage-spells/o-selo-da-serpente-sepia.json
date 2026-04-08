@@ -1,0 +1,10 @@
+{
+    "name": "O Selo da Serpente Sépia",
+    "level": 3,
+    "school": "Conjuração/Convocação",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "5 metros",
+    "area": "1 símbolo",
+    "description": "Quando essa magia é utilizada, um pequeno símbolo aparece no meio do texto de qualquer obra escrita Quando lido, uma Cobra Sépia (marrom-escura) aparece e ataca a criatura mais próxima, mas nunca o mago que lançou a magia. Seu ataque é leito com a TAC0 de um monstro com tantos DV quanto o mago tem de níveis de experiência. Caso o ataque acerte, a vítima é envolvida por um campo de força âmbar, congelada e imobilizada até que o mago a solte, que se passem 1d4 dias + um dia por nível do mago que lançou a magia, ou até que Dissipar Magia seja utilizada com sucesso sobre o campo de força Durante o período em que a magia estiver em funcionamento, nada pode tocar a vítima ou afetá-la. Ela não envelhece, não sente fome, não dorme, nem recupera magias enquanto estiver neste estado A vítima também não tem percepção sobre o que acontece à sua volta. Caso a cobra erre o alvo, ela se dissipa num clarão de luz marrom, com um estampido alto, e forma uma nuvem de fumaça esverdeada, que preenche uma esfera de 3 metros de diâmetro e dura uma rodada. A magia não pode ser detectada por observação normal, e Detectar Magia revela apenas que o texto todo é mágico. Dissipar Magia pode removê- la. Apagar apenas destrói a página onde o símbolo está desenhado. Essa magia pode ser utilizada em conjunto com outras magias que escondem ou disfarçam o texto. Os componentes materiais são 100 po de pó de âmbar, uma escama de qualquer cobra, e um punhado de esporos de cogumelos."
+}

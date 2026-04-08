@@ -1,0 +1,10 @@
+{
+    "name": "A Transformação de Tenser",
+    "level": 6,
+    "school": "Alteração, Evocação",
+    "castingTime": "1 turno",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "O mago",
+    "description": "A Transformação de Tenser é uma visão impressionante para todos os que não conhecem seu poder. Uma vez lançada, essa magia faz o mago passar por uma inacreditável transformação. O tamanho e a Força do mago aumentam até atingir proporções heróicas, e ele se torna uma formidável máquina de combate: um guerreiro furioso! Os pontos de vida do mago dobram, e o dano recebido é subtraído, prioritariamente, dos pontos fornecidos pela magia. Uma vez que esses pontos tenham acabado, todo o dano subseqüente (aplicado aos seus verdadeiros pontos de vida) é dobrado. A CA do mago torna-se 4 pontos melhor do que era antes (CA 10 vai para CA 6. etc.), até um máximo de -10. Os ataques do mago são os de um guerreiro do mesmo nível (o mago passa a usar os valores de combate reservados a guerreiros). O mago pode utilizar o cajado e a adaga como armas. A adaga pode ser usada duas vezes por rodada, cada ataque com sucesso causando 2 pontos de dano adicionais. O cajado pode ser usado apenas uma vez por rodada. mas o bônus de +2 aplica-se à jogada de ataque e ao dano. O mago prefere o corpo a corpo a qualquer outra forma de ataque, e continua investindo até que todos os oponentes estejam mortos, que ele próprio seja morto, que a magia seja anulada ou que a duração acabe. O componente material é uma poção do heroísmo (ou do super- heroísmo), que deve ser consumida pelo mago durante a execução."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Convocar Criaturas VI",
+    "level": 8,
+    "school": "Conjuração/Convocação",
+    "castingTime": "",
+    "duration": "7 rodadas +1 rodada/nível",
+    "range": "80 metros",
+    "area": "Especial",
+    "description": "Essa magia é muito semelhante à Convocar Criaturas I, exceto pelo fato de que essa versão convoca 1d3 monstros de 6º nível, que aparecem em 1d3 rodadas. Os monstros aparecem na área determinada pelo alcance da magia, em qualquer posição determinada pelo mago. Eles atacam os oponentes do mago da melhor maneira que puderem, até que o mago dê uma ordem em contrário, a duração da magia expire ou os monstros morram. Essas criaturas não fazem teste de moral, e desaparecem quando mortas. Se não houver oponentes a enfrentar, os monstros podem executar outros serviços para o mago, desde que a comunicação seja viável e as ordens não sejam impossíveis. Os componentes materiais são uma sacola pequena e uma minúscula vela, que não precisa estar acesa."
+}

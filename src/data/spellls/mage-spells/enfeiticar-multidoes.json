@@ -1,0 +1,10 @@
+{
+    "name": "Enfeitiçar Multidões",
+    "level": 8,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "",
+    "duration": "Especial",
+    "range": "5 metros/nível",
+    "area": "Especial",
+    "description": "Essa magia afeta pessoas ou monstros da mesma maneira que Enfeitiçar Pessoas e Enfeitiçar Monstros. O Enfeitiçar Multidões, entretanto, atinge um número de criaturas cujos níveis de experiência ou DVs combinados não podem exceder o dobro do nível de experiência do mago. Todas as criaturas a serem afetadas precisam estar no alcance do efeito, e dentro de um cubo de 10 metros de aresta. Não há diferença de penalidades nos testes de resistência devido ao número de criaturas, como acontece no Enfeitiçar Monstros. Todas as criaturas sofrem uma penalidade de -2 em seus testes de resistência contra essa poderosa magia. O modificador de Sabedoria também deve ser aplicado."
+}

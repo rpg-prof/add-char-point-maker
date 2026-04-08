@@ -1,0 +1,10 @@
+{
+    "name": "Convocar Criaturas V",
+    "level": 7,
+    "school": "Conjuração/Convocação",
+    "castingTime": "9",
+    "duration": "6 rodadas +1 rodada por nível",
+    "range": "70 metros",
+    "area": "Especial",
+    "description": "Essa magia é uma versão melhorada do efeito do 3º círculo Convocar Criaturas I. Ela convoca 1d3 monstros de 5º nível, que aparecem dentro do alcance da magia e atacam os inimigos do mago até que ele os mande parar, a magia termine ou os monstros morram. Essas criaturas não fazem testes de moral, e desaparecem quando são destruídas. Se não houver inimigos para enfrentar, os monstros convocados podem obedecer às outras ordens do mago — desde que esse possa se comunicar com eles, e as criaturas estejam fisicamente aptas para a tarefa. Os componentes materiais são uma sacolinha e uma pequena vela (não necessariamente acesa)."
+}

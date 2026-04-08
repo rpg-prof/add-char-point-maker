@@ -1,0 +1,10 @@
+{
+    "name": "Área Escorregadia",
+    "level": 1,
+    "school": "Conjuração",
+    "castingTime": "1",
+    "duration": "3 rodadas + 1 rodada/nível",
+    "range": "10 metros",
+    "area": "Área de 3 m x 3 m",
+    "description": "Quando um mago utiliza Área Escorregadia, ele recobre a superfície afetada com uma substância gordurosa e escorregadia. Qualquer criatura que entre na área, ou que nela esteja enquanto a magia estiver em efeito, deve testar sua resistência à magia para evitar escorregar, patinar e cair. As criaturas que passarem no teste conseguirão atingir o terreno não afetado mais próximo no fim da rodada. Aqueles que ficarem na área, têm direito a um teste de resistência por rodada até que possam deixá-la. O Mestre deve ajustar os testes de resistência e seus efeitos, de acordo com cada situação. Por exemplo: uma criatura que desce em investida numa encosta tem poucas chances de evitar o efeito, caso a magia seja aplicada ao declive, mas sua chance de sair da área é quase certa. Ela também pode ser utilizada para tornar um item escorregadio, como por exemplo, o cabo de uma espada ou uma corda. Objetos que não estejam em uso são sempre afetados. Criaturas têm direito a um teste de resistência à magia e evitar o efeito, quando estiverem usando itens visados por ela. Um teste de resistência deve ser feito para cada rodada em que a criatura tentar usar o objeto. O mago pode encerrar a magia com uma simples palavra. Caso contrário, ela durará três rodadas mais uma rodada por nível de experiência do mago. Os componentes materiais são couro de porco ou manteiga."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Proteção a Projéteis",
+    "level": 3,
+    "school": "Abjuração",
+    "castingTime": "3",
+    "duration": "1 turno/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Através dessa magia, o mago concede à criatura locada imunidade total a projéteis disparados e arremessados, como flechas, machados, martelos, setas, dardos, lanças, pedras, etc. Além do mais. esta magia dá uma penalidade de -1 para cada dado de dano (mas cada dado inflige no mínimo 1 ponto de dano) causado por projéteis grandes ou mágicos, como pedras catapultadas, flechas de balistas, flechas, machados, martelos, ou quaisquer projeteis mágicos. Entretanto, ela não providencia nenhuma proteção contra ataques mágicos como Bola de Fogo, Dardos Místicos ou Relâmpagos. O componente material é um pedaço do casco de uma tartaruga."
+}

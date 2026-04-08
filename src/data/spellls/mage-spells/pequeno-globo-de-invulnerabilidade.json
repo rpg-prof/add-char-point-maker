@@ -1,0 +1,10 @@
+{
+    "name": "Pequeno Globo de Invulnerabilidade",
+    "level": 4,
+    "school": "Abjuração",
+    "castingTime": "4",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "Esfera de 1,5 metro de raio",
+    "description": "Essa magia cria um globo mágico, imóvel e brilhante, ao redor do mago, impedindo que quaisquer magias dos três primeiros níveis o afetem, e o exclui da área de efeito. Isto também afeta efeitos gerados por itens mágicos e habilidades inatas. Entretanto, qualquer magia pode ser lançada de dentro para fora do Pequeno Globo de Invulnerabilidade, sem afetá-lo. Magias do 4º nível em diante não são afetadas pelo Globo, que pode ser derrubado por uma Dissipar Magia utilizada com sucesso. O mago pode entrar e sair do Pequeno Globo de Invulnerabilidade sem problema algum. Ele não cancela magias, a não ser que estas sejam lançadas através dele, de fora para dentro. Se um mago utiliza Reflexos do lado externo, e então entra nele, as imagens desaparecerão, reaparecendo apenas se o mago sair do Pequeno Globo de Invulnerabilidade. Da mesma maneira, um mago que estivesse na área de Luz ainda receberia iluminação suficiente para poder ver o exterior, mesmo que o interior do Pequeno Globo de Invulnerabilidade ficasse escuro: ele não anula a magia, apenas reduz a sua área. O componente material é uma conta de vidro ou de cristal, que se quebra quando a magia acaba."
+}

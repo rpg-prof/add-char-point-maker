@@ -1,0 +1,10 @@
+{
+    "name": "Remover Maldição",
+    "level": 4,
+    "school": "Abjuração",
+    "castingTime": "5",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Ao utilizar essa magia, o mago é normalmente capaz de remover uma maldição — seja de uma pessoa, um objeto ou na forma de uma presença maligna. Remover Maldição não afeta uma espada ou um escudo amaldiçoado, por exemplo, embora ela geralmente permita que uma pessoa atormentada por um item amaldiçoado se livre dele Certas maldições não podem ser removidas com essa magia, a não ser que ela seja lançada por um mago de um determinado nível, e algumas maldições não podem ser removidas por mago algum. Um mago de 12º nível ou maior pode lançar essa magia para curar licantropia, bastando utilizá-la na forma animal da criatura afetada. Ela testa a resistência à magia e, se obtiver sucesso, Remover Maldição falhará e o mago não poderá tentar novamente até subir um nível de experiência. O reverso da magia, Provocar Maldição, não é permanente: dura um turno por nível de experiência do mago que o lançou. Provocar Maldição causa os seguintes efeitos, que devem ser sorteados em 1d100: Resultado no d100 Efeito 1-50 Uma das características da criatura é reduzida para 3 (determine aleatoriamente) 51-75 As jogadas de ataque e os testes de resistência da criatura têm uma penalidade de -4 76-00 A criatura afetada tem 50% de chance por turno de soltar o que quer que esteja carregando (ou simplesmente não fazer coisa alguma, se não estiver usando ferramenta) O mago pode criar sua própria maldição, que deve ser tão poderosa quanto as sugeridas aqui (a decisão final cabe ao Mestre). A vítima de Provocar Maldições precisa ser tocada. Depois de tocada, poderá ainda testar sua resistência à magia. Se obtiver sucesso, a magia é cancelada. Uma maldição não pode ser removida com Dissipar Magia."
+}

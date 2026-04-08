@@ -1,0 +1,10 @@
+{
+    "name": "Muralha Prismática",
+    "level": 8,
+    "school": "Conjuração/Convocação",
+    "castingTime": "7",
+    "duration": "1 turno/nível",
+    "range": "10 metros",
+    "area": "Especial",
+    "description": "Essa magia permite que o mago crie uma parede vertical e opaca um plano de Força de múltiplas cores brilhantes que o protege contra todas as formas de ataque. A parede vibra em todas as cores do espectro visível. Sete das cores produzem efeitos mágicos. Qualquer criatura com menos de 8 DV que se aproxime ou esteja a até 6 metros da parede sem cobrir a sua visão, ficará cega por 2d4 rodadas. A parede criada é imóvel, mas o mago pode passar através dela sem ser afetado. Cada cor que produza um efeito mágico pode ser cancelada por uma magia específica, mas essas cores precisam ser canceladas na ordem correta do espectro. As cores e efeitos estão descritos na tabela que se segue: Efeito da Parede Prismática Cor OrdemEfeito da Cor Magia anulada por Vermelho 1° Detém projéteis não-mágicos. Cone Glacial Causa 20 pontos de dano, teste de resistência para evitar a metade Laranja 2° Detém projéteis mágicos. Lufada de Vento Causa 40 pontos de dano, teste de resistência para evitar a metade Amarelo 3° Detém gases, venenos e Desintegração petrificação. Causa 80 pontos de dano, teste de resistência para evitar a metade Verde 4° Detém Sopro-de-Dragão. Criar Passagem resistência teste de contra veneno ou morte, sobreviventes sofrendo 20 pontos de dano Azul 5° Detém magias de detectação Dardos Místicos e localização, além de ataques mentais/teste de resistência contra petrificação, ou transformação em pedra Anil 6° Detém magias/teste de Luz Contínua resistência contra varinha de condão, ou loucura Vileta 7° Proteção tipo campo de Dissipar Magia Força/teste de resistência contra magia, ou enviado para outro plano O tamanho máximo dessa parede é de 12 metros de largura por nível do mago, e 6 metros de altura por nível. Caso o mago tente lançar esse efeito num espaço já ocupado por uma criatura, a parede não se materializa, e a magia é cancelada."
+}

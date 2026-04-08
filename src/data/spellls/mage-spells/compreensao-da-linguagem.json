@@ -1,0 +1,10 @@
+{
+    "name": "Compreensão da Linguagem",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "5 rodadas/nível",
+    "range": "Toque",
+    "area": "1 criatura falando",
+    "description": "Quando utilizar essa magia, o personagem poderá entender as palavras ditas por uma criatura, ou ler uma mensagem escrita, qualquer que seja a língua utilizada. Em ambos os casos, o mago precisa tocar o objeto ou a criatura. A habilidade de ler, entretanto, não garante a compreensão do material lido. A magia também não permite escrever ou comunicar- se em uma linguagem desconhecida. O mago pode ler uma página por rodada. Escrita mágica (como a de um grimoire, por exemplo) não pode ser lida, mas torna-se evidente para o mago o que ela é. Essa magia não permite que o mago perceba nada além do texto que ele vê, ou seja, não conseguirá ler o seu conteúdo sob os efeitos de Página Secreta e poderá ser enganado pela Escrita Ilusória. Os componentes materiais são uma pitada de fuligem e alguns grãos de sal. O reverso, Incompreensão da Linguagem deixa uma criatura ou um texto incompreensíveis pela duração da magia."
+}

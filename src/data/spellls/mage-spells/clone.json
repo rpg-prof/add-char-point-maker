@@ -1,0 +1,10 @@
+{
+    "name": "Clone",
+    "level": 8,
+    "school": "Necromancia",
+    "castingTime": "",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Essa magia cria uma duplicata de um ser humano, semi-humano ou humanóide. Esse clone é em todos os aspectos igual à pessoa original, incluindo nível de experiência e memórias. O problema é que o clone é a pessoa, de modo que se ambos existirem ao mesmo tempo, um sabe da existência do outro; e tanto o clone quanto a pessoa original irão desejar a morte de seu sósia, porque um alter-ego desses é insuportável para os dois. Se um não conseguir destruir o outro, um deles ficará insano (90% de chance de ser o clone) e destruirá a si mesmo, ou talvez (2% de chance) ambos ficarão insanos e destruirão uma ao outro. Estes eventos geralmente ocorrem depois de uma semana de coexistência. O clone é elaborado à partir de um pedaço da carne da pessoa original, e duplica tudo que a pessoa era e sabia no instante em que a carne foi removida. Portanto, toda a experiência e conhecimento subseqüentes a esse momento são desconhecidos para o clone. Os objetos possuídos pelo original não são duplicados. Um clone leva 2d4 meses para crescer, e só depois disso começam os problemas gerados pela coexistência. Finalmente, o clone tem um ponto de Constituição a menos que a pessoa original. Se isso deixar o clone com Constituição 0, a duplicação falha. O componente material dessa magia é um pequeno pedaço de carne da pessoa que se quer duplicar. O Mestre pode, se quiser, estipular mais condições para que a duplicação tenha sucesso, como requisitar que a amostra de carne ainda mantenha traços de vida, quais maneiras de preservar e guardar o clone devem ser providenciadas, etc."
+}

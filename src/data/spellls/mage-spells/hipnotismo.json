@@ -1,0 +1,10 @@
+{
+    "name": "Hipnotismo",
+    "level": 1,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "Especial",
+    "duration": "1 rodada + 1 rodada/nível",
+    "range": "5 metros",
+    "area": "Cubo de 10 metros de aresta",
+    "description": "Os gestos do mago, junto com as palavras sussurradas do encantamento, fazem com que 1d6 criaturas dentro da área de efeito fiquem suscetíveis à sugestões hipnóticas — curtas e razoáveis (veja a magia arcana do 3º círculo Sugestão). A sugestão deve ser feita depois do Hipnotismo ter sido utilizado. O mago não sabe se a magia funcionou quando faz a sugestão. A sugestão subseqüente à magia não é mágica e, portanto, o mago deve fazê-la numa linguagem que as criaturas afetadas compreendam. Criaturas que passem em seus testes de resistência à magia não são afetadas, e aquelas que sejam hostis ao mago têm um bônus de +1 a +3 neste teste. Se a vítima estiver olhando nos olhos do mago, ela terá uma penalidade de -2 em seu teste de resistência. Uma criatura que falha em seu teste de resistência, não se lembra de que o mago a enfeitiçou."
+}

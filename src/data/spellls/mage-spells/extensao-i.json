@@ -1,0 +1,10 @@
+{
+    "name": "Extensão I",
+    "level": 4,
+    "school": "Alteração",
+    "castingTime": "1 hora",
+    "duration": "Especial",
+    "range": "0",
+    "area": "Especial",
+    "description": "Com a utilização da Extensão 1, o mago prolonga a duração de uma magia do 1°, 2 ou 3º nível em 50%. Assim, uma Levitação pode passar a funcionar quinze rodadas/nível, Imobilizar Pessoas, três rodadas/nível, etc. Naturalmente, apenas magias que possuem duração podem ser afetadas. Essa magia deve ser utilizada imediatamente após a magia que se quer prolongar, no máximo uma rodada depois dela ser lançada. Se mais de uma rodada se passar, essa magia falha e é desperdiçada. Um mago pode prolongar a duração de magias lançadas por outros magos utilizando-se dessa magia."
+}

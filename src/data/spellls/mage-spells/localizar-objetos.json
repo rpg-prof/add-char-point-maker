@@ -1,0 +1,10 @@
+{
+    "name": "Localizar Objetos",
+    "level": 2,
+    "school": "Adivinhação",
+    "castingTime": "2",
+    "duration": "1 rodada/nível",
+    "range": "20 metros /nível",
+    "area": "Especial",
+    "description": "Essa magia pode localizar um objeto conhecido, descrito ou familiar. O mago lança a magia, vira-se lentamente, e sente quando estiver voltado para a direção que leva àquilo que procura, contanto que o objeto esteja dentro do alcance da adivinhação. Esta também pode localizar tipos genéricos de objetos, como uma cadeira, armas, jóias, moedas, ou até mesmo escadas. Também pode-se procurar algo específico, como uma espada mágica, mas nesse caso o mago precisa ter uma imagem precisa do objeto procurado. Caso a imagem não seja suficientemente próxima da verdadeira, a magia falhará. Essa magia é bloqueada por chumbo, e não pode ser utilizada para localizar criaturas. O componente material é uma forquilha. O reverso, Esconder Objetos, esconde por 8 horas um objeto de bolas de cristal, Adivinhação ou outras maneiras similares de detecção. Criaturas não são afetadas por esta magia. O componente material é uma pele de camaleão."
+}

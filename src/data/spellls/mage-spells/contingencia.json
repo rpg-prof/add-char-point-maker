@@ -1,0 +1,10 @@
+{
+    "name": "Contingência",
+    "level": 6,
+    "school": "Evocação",
+    "castingTime": "6",
+    "duration": "1 dia/nível",
+    "range": "0",
+    "area": "O mago",
+    "description": "Através dessa magia, o mago pode lançar outro efeito sobre si mesmo, para ser ativado sob as condições ditadas durante a execução de Contingência. Ambas as magias (Contingência e o Efeito Programado) são formuladas ao mesmo tempo (dai o tempo de execução de um turno). A magia a ser ativada por Contingência deve afetar o mago diretamente (Levitação, por exemplo) e seu círculo não pode ser maior que 1/3 do nível de experiência do mago, até o 6º circulo, no máximo. Nível do Mago Círculo Máximo da Magia 12º - 14º 15º - 17º 18º ou + Apenas uma Contingência pode ser lançada sobre o mago de cada vez; qualquer tentativa de acumular um segundo efeito sob Contingência anula o primeiro. As condições necessárias para ativar a magia devem ser claras, embora possam ser genéricas. Por exemplo, Ar Liquido poderia ser programado para funcionar assim que o mago fosse envolvido ou submerso em líquido. Note que se condições demasiadamente complexas forem previstas, todo o complexo mágico (Contingência e a magia subordinada) pode vir a falhar. 4º 5º 6º Os componentes materiais, além dos componentes da magia subordinada, são mercúrio, no valor de 100 peças de ouro, e o cílio de um ogro mago. ki-rin ou qualquer outra criatura similar, que também utilize magia. Além disso, o efeito requer uma imagem do mago esculpida em marfim de elefante (que não é destruída), e que deve ser carregada pelo mago para que Contingência possa funcionar."
+}

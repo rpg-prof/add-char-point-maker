@@ -1,0 +1,10 @@
+{
+    "name": "Teleportação",
+    "level": 5,
+    "school": "Alteração",
+    "castingTime": "Especial",
+    "duration": "Instantânea",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Quando essa magia é utilizada, o mago mais uma certa quantidade de peso adicional que ele esteja carregando ou tocando são transportados imediatamente para um local conhecido. A distância não influi no efeito, mas uma viagem interplanar não é possível através da Teleportação. O mago pode carregar um peso de 125 quilos, mais 75 quilos por nível de experiência acima do 10º (um mago de 13º nível pode teletransportar até 350 quilos). Se o destino do transporte for muito familiar ao mago (se ele tiver uma imagem mental clara, obtida através de estudo pessoal, e detalhado, da área), é improvável que ocorra algum erro; o mago apenas não terá controle sobre a direção para a qual estará olhando ao chegar. Áreas menos conhecidas (aquelas vistas apenas por meios mágicos ou à distância) aumentam a possibilidade de erro. Áreas nada familiares representam considerável perigo (confira na tabela). Destinação é: Muito familiar Estudada com cuidado Vista casualmente Vista apenas uma vez Nunca vista Teleportar-se “acima” significa que o mago chega 3 metros acima do solo para cada 1% de diferença entre seu resultado nos dados e o menor valor da coluna “no alvo”. Essa altura pode ser de até 96 metros em áreas nunca vistas. Qualquer resultado “abaixo” significa morte imediata para o mago, se a área para a qual ele se teletransportou for sólida. Um mago não pode se transportar para uma área de espaço vazio é necessário que haja uma superfície substancial, seja um piso de madeira ou de pedra, solo natural, etc. Áreas de fortes energias, físicas ou mágicas, podem tornar o teletransporte ainda mais difícil, se não impossível."
+}

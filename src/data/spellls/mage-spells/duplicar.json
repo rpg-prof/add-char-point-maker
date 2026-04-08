@@ -1,0 +1,10 @@
+{
+    "name": "Duplicar",
+    "level": 4,
+    "school": "Conjuração",
+    "castingTime": "1 rodada",
+    "duration": "1h/nível",
+    "range": "Toque",
+    "area": "um objeto",
+    "description": "Esta magia cria uma cópia exata de qualquer item tocado pelo mago. O item a ser copiado deve caber dentro de um cubo de 7 metros. A magia não tem efeito sobre criaturas vivas, incluindo mortos-vivos, nem copiará itens má- gicos. O item duplicado é idêntico ao original em todos os sentidos – por exemplo, uma espada duplicada pode ser empunhada para infligir danos como uma espada normal – mas Detec- tar Magia pode revelar sua verdadeira natureza e Dissipar Magia pode fazer com que ele desapareça. O objeto dupli- cado existe por 1 hora/nível de mago, momento em que ele desaparece; per- manência não afeta itens duplicados. O componente material para esta magia é um punhado de pó de carvão."
+}

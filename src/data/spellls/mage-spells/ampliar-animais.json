@@ -1,0 +1,10 @@
+{
+    "name": "Ampliar Animais",
+    "level": 5,
+    "school": "Alteração",
+    "castingTime": "5",
+    "duration": "1 rodada/nível",
+    "range": "60 metros",
+    "area": "Até oito animais em um cubo de 5 metros de lado",
+    "description": "Quando essa magia é formulada, o mago faz com que todos os animais escolhidos (num máximo de oito) dentro da área de efeito dobrem de tamanho. O crescimento também dobra o número dos dados de vida (melhorando as jogadas de ataque) e o dano causado em combate. O efeito dura uma rodada para cada nível de experiência do mago que o produziu. Apenas animais naturais, incluindo formas gigantescas, podem ser afetados por essa magia. O inverso, Encolher Animais, reduz pela metade o tamanho da criatura, bem como os seus dados de vida, dano de ataque, etc. O componente material de ambas as versões da magia é um pouco de pó de osso."
+}

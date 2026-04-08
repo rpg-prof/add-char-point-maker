@@ -1,0 +1,10 @@
+{
+    "name": "Montaria Arcana",
+    "level": 1,
+    "school": "Conjuração/Convocação",
+    "castingTime": "1",
+    "duration": "2 horas +1 hora/nível",
+    "range": "10 metros",
+    "area": "1 montaria",
+    "description": "Através dessa magia, o mago conjura um animal de montaria para servi-lo. O animal o serve bem e de boa vontade, mas ao término da magia ele desaparece. O tipo de montaria conjurada depende de seu nível de experiência, sendo que o mago pode, se quiser, escolher uma das montarias a que teve acesso quando era menos experiente. As montarias disponíveis são as seguintes: Nível de Experiência do Mago 1-3 4-7 8-12 13-14 15+ A montaria não vem com equipamento (como sela, freios, arreios, etc.) a não ser que ela seja de uma categoria inferior à da montaria a que o mago tem direito. Por exemplo, um mago de 12º nível poderia conjurar um camelo sem nenhum equipamento de montaria, ou um cavalo de batalha com equipamento de montaria, ou uma mula também equipada. Os atributos do animal são normais. O animal desaparece se eventualmente morrer. O componente material é pêlo do animal desejado."
+}

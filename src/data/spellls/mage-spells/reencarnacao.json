@@ -1,0 +1,10 @@
+{
+    "name": "Reencarnação",
+    "level": 6,
+    "school": "Necromancia",
+    "castingTime": "1 turno",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Pessoa tocada",
+    "description": "Com essa magia, um mago pode trazer de volta à vida uma pessoa que tenha morrido a não mais de um dia por nível de experiência do mago. A essência da pessoa morta e transferida para outro corpo, talvez muito diferente do original. Não é necessário fazer teste de resistência, colapso ou de chance de ressurreição. O corpo é tocado e uma nova encarnação da pessoa surgirá na área, em 1 dó turnos. A pessoa reencarnada se lembrará de sua vida anterior, mas a classe de personagem da nova encarnação pode ser bem diferente. A nova encarnação é determinada na tabela seguinte. Se uma raça de personagem for indicada, a pessoa reencarnada terá que ser recriada (as habilidades serão redefinidas nos dados). Resultado de 1d100 Encarnação 01-05 Bugbear 06-11 Anão 12-18 Elfo 1°-23 Gnoll 24-28 Gnomo 29°33 Goblin 34-40 Meio-elfo 41-47 Halfling 48-54 Meio-orc 55-59 Hobgoblin 60-73 Humano 74-79 Kobold 80-85 Ore 86-90 Ogro 91-95 96-00 Nota: Pessoas muito boas ou muito malignas não reencarnarão como criaturas de tendência gera oposta. Os componentes da magia são um pequeno tambor e um pouco de sangue."
+}

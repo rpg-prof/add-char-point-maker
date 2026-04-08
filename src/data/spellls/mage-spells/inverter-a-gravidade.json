@@ -1,0 +1,10 @@
+{
+    "name": "Inverter a Gravidade",
+    "level": 7,
+    "school": "Alteração",
+    "castingTime": "7",
+    "duration": "1 rodada /nível",
+    "range": "5 metros/nível",
+    "area": "10 x 10 metros",
+    "description": "Essa magia reverte a gravidade de um local, fazendo com que objetos e criaturas na sua área de efeito “elevem-se” para cima. O efeito continua até que a duração acabe, ou até que o mago resolva encerrá-lo. Todos os impactos resultantes dessa “elevação” devem ser tratados em uma queda normal de altura equivalente. Ao final da magia, criaturas e objetos caem novamente no solo. Como a alteração afeta uma área, objetos há dezenas ou mesmo centenas de metros no ar podem ser afetados. Os componentes materiais são um imã e limalha de ferro."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Modificar Aparência",
+    "level": 5,
+    "school": "Ilusão/Visão",
+    "castingTime": "1 rodada",
+    "duration": "12 horas",
+    "range": "10 metros de raio",
+    "area": "1 pessoa/2 níveis",
+    "description": "Esse efeito permite alterar a aparência de uma pessoa a cada dois níveis de experiência do mago. A mudança inclui roupa e equipamento. O mago pode fazer com que os alvos da magia se pareçam com qualquer criatura bípede de forma genericamente humana, se tornem até 30 centímetros mais altos ou mais baixos que a sua altura normal e fiquem gordos ou magros, ou qualquer estado intermediário entre os dois. Todos os afetados devem se parecer com o mesmo tipo de criatura: humano, orc, ogro, etc. Cada um permanece com uma aparência individual reconhecível. O efeito falha para um indivíduo se a ilusão escolhida pelo mago não puder ser cumprida dentro dos parâmetros da magia (por exemplo, um halfling não pode se tomar semelhante a um centauro, mas pode ficar parecido com um ogro jovem e baixo). Pessoas que não querem ser afetadas recebem um teste de resistência contra magia para evitar os efeitos. A magia não é suficientemente precisa para duplicar a aparência de um indivíduo específico."
+}

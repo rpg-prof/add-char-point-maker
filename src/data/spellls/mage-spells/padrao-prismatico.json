@@ -1,0 +1,10 @@
+{
+    "name": "Padrão Prismático",
+    "level": 4,
+    "school": "Alteração, Ilusão/Visão",
+    "castingTime": "5 rodadas",
+    "duration": "Especial",
+    "range": "10 metros",
+    "area": "Cubo de 10 metros de aresta",
+    "description": "Através dessa magia, o mago cria um padrão de cores cintilantes, muito semelhante a um caleidoscópio. Qualquer criatura que esteja dentro da área de efeito ficará fascinada, olhando atentamente para os desenhos formados pelas cores do arco-íris, enquanto o efeito durar, caso falhe num teste de resistência a magia. A magia pode cativar, no máximo, 24 DV de monstros - vinte e quatro criaturas de 1 DV; ou doze criaturas de 2 DV; ou uma criatura de 10 DV + uma de 14 D, ou qualquer combinação possível, que não passe do limite de 24 DV. Um ataque que cause dano em uma criatura que esteja sob efeito desta magia a liberta imediatamente. Criaturas que são impedidas de observar os desenhos ou removidas da área, insistem em tentar seguir as cores. Depois que a magia foi lançada, o mago precisa apenas apontar numa direção para fazer com que os desenhos movam-se lentamente para ela, a 10 metros por rodada. A magia funciona sem a concentração do mago por 1d3 rodadas. Todas as criaturas afetadas seguem o arco-íris de cores. Se o arco-íris leva as criaturas para uma área perigosa (um poço de lava, ou um abismo), a resistência deve ser testada novamente. Se a visão das criaturas for completamente bloqueada (como Obscurecimento, por exemplo), a magia é cancelada. O mago não precisa pronunciar sequer uma palavra para lançar esta magia, mas ele deve executar os gestos apropriados, segurando um prisma de cristal e o componente material, que é fósforo."
+}

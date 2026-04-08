@@ -1,0 +1,10 @@
+{
+    "name": "Sombras",
+    "level": 6,
+    "school": "Ilusão/Visão",
+    "castingTime": "1 hora",
+    "duration": "1 rodada por nível",
+    "range": "30 metros",
+    "area": "Cubo de 5 metros",
+    "description": "Essa magia é relacionada com as magias Monstros de Sombras e Monstros Sombrios. Sombras retira material do Plano das Sombras para formar ilusões quase reais de um ou mais monstros, criando até um dado de vida por nível do mago. Todas as Sombras criadas por uma execução dessa magia devem ser do mesmo tipo, e têm 60% do total de pontos de vida das criaturas em que se baseiam. Aqueles que virem as sombras e falharem em seus testes de resistência à magia acreditam na ilusão. As sombras são como os monstros reais no que diz respeito a CA e formas de ataque. Ataques especiais como petrificação e drenagem de nível não ocorrem de fato, mas uma vítima que acredite que as sombras são reais reagirá de acordo, até que seja tratada do efeito ilusório por Cura Completa, ou até que a ilusão seja destruída por Dissipar Magia. Aqueles que passarem no teste de resistência à magia vêem as sombras como imagens transparentes, sobrepostas a formas vagas e nebulosas. Essas formas têm CA 6 e causam apenas 60% do dano dos monstros verdadeiros em combate corpo a corpo."
+}

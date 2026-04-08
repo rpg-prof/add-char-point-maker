@@ -1,0 +1,10 @@
+{
+    "name": "Sono",
+    "level": 1,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "1",
+    "duration": "5 rodadas/nível",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "Quando um mago utiliza Sono, ele joga sobre uma ou mais criaturas um sono mágico e de aparência comatosa. Certas criaturas são especificamente imunes a este efeito, como os mortos-vivos. Todas as criaturas escolhidas para serem afetadas por esta magia devem estar a um máximo de 10 metros umas das outras. O número de criaturas afetadas depende dos seus dados de vida ou níveis. A magia afeta 2d4 dados de vida, Monstros com mais de 4 + 3 dados de vida (4 dados + 3 pontos) não são afetados. O centro da área de efeito é determinado pelo mago. As criaturas com menos dados de vida são afetadas primeiro, e depois as de maior número. Criaturas parcialmente atingidas não sofrem efeito. Por exemplo, um mago lança Sono em três kobolds, dois gnolls e um ogro. O resultado dos dados (2d4) é 4. O gnoll e os três kobolds são afetados, totalizando (½ + ½ + ½ + 2) 3½ dados de vida. O ½ dado de vida restante não é suficiente para afetar o outro gnoll ou o ogro. Esbofetear ou ferir as criaturas que estejam sob efeito da magia as acorda, mas barulhos normais, não. As criaturas levam uma rodada inteira para acordarem do sono mágico. Oponentes dormindo são atacados com bônus, e podem ser mortos em um só golpe, como explicado no Capítulo de Combate. O componente material é um pouco de areia fina, pétalas de rosa, ou um grilo vivo."
+}

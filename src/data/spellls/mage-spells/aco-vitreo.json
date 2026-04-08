@@ -1,0 +1,10 @@
+{
+    "name": "Aço Vítreo",
+    "level": 8,
+    "school": "Alteração",
+    "castingTime": "",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Objeto tocado",
+    "description": "Aço Vítreo transforma cristal normal e não-mágico em uma substância que tem a aparência do cristal, e é transparente, mas com a resistência do aço. Apenas uma pequena massa de cristal pode ser afetada — um máximo de 5 quilos por nível do mago e esse peso deve ser o do objeto como um todo: não se pode transformar apenas uma parte de um item. A CA da substância é 1. Os componentes materiais desse efeito são um pequeno pedaço de cristal e um pequeno pedaço de aço."
+}

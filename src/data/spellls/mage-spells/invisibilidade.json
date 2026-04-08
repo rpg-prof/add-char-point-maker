@@ -1,0 +1,10 @@
+{
+    "name": "Invisibilidade",
+    "level": 2,
+    "school": "Ilusão/Visão",
+    "castingTime": "1 rod",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Essa magia torna a criatura tocada absolutamente indetectável pela visão normal ou Infravisão. Mesmo assim, a criatura não fica magicamente silenciosa, e algumas circunstâncias podem fazer com que seja notada. Mesmo os aliados do receptor não podem vê-lo, a não ser que tenham a habilidade de ver criaturas invisíveis, ou utilizem a magia para tal. O equipamento carregado pelo receptor da magia torna-se invisível com ele. Objetos soltos pelo receptor voltam a se tornar visíveis, e objetos pegos pelo receptor tornam-se invisíveis. A luz nunca fica invisível, embora a fonte da luz possa estar invisível. Por exemplo, caso o receptor carregue uma lanterna, ela fica invisível, mas continua emitindo luz. O efeito aparente é uma luz que surge do nada. A magia continua funcionando até que o mago que a lançou ou o receptor a cancele, o receptor ataque uma criatura, ou 24 horas se passem. Assim, o receptor pode abrir e fechar portas, comer, dormir, ler, estudar, mas se o receptor fizer um ataque, a magia é quebrada imediatamente, embora Invisibilidade permita que ele ataque primeiro, antes de qualquer iniciativa. As magias divinas Bênção, Cântico e Oração não são consideradas ataques. Criaturas que tenham Inteligência 13 ou maior, e que tenham 10 ou mais níveis — ou dados de vida — podem detectar criaturas invisíveis. Essas criaturas devem testar sua resistência à magia, e se obtiverem sucesso conseguirão ver o receptor. Os componentes materiais são um cílio e goma arábica. Durante a execução, o cílio deve ser colocado dentro da goma arábica."
+}

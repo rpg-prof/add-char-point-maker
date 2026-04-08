@@ -1,0 +1,10 @@
+{
+    "name": "Pedra em Carne",
+    "level": 6,
+    "school": "Alteração",
+    "castingTime": "1 turno",
+    "duration": "Permanente",
+    "range": "10 metros/nível",
+    "area": "1 criatura",
+    "description": "Essa magia transforma qualquer tipo de pedra em carne e osso. Se a pedra em questão era anteriormente um ser vivo, não importando o seu tamanho, ela lhe restaura a vida (e os bens), embora a sobrevivência da criatura esteja sujeita ao teste de colapso tradicional. Pedra comum também pode ser transformada em carne (200 litros por nível do mago). Tal carne é inerte, a menos que uma força vital ou energia mágica esteja presente (por exemplo, a magia pode transformar um golem de pedra em um golem de carne e osso, mas uma estátua comum seria transformada num cadáver). Se lançada sobre rocha, o efeito pode criar um cilindro de um material com consistência carnosa, de 30 centímetros a 1 metro de diâmetro e até 3 metros de comprimento, permitindo que uma passagem seja escavada. Os componentes materiais são um punhado de terra e uma gota de sangue. O inverso, Carne em Pedra, transforma carne e osso de qualquer tipo em pedra. Todas as posses da vítima são lambem transformadas. Ela tem direito a um teste de resistência a magia para evitar o efeito. Se uma estátua criada por esse poder for danificada (rachaduras, erosão, etc.), a criatura (se algum dia retornar ao seu estado original) terá danos similares, deformidades, etc. O Mestre pode permitir que tais danos sejam reparados por algumas magias divinas de altos círculos, como Regeneração. Os componentes materiais são limo, água e terra."
+}

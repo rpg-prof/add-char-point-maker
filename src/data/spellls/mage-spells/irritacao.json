@@ -1,0 +1,10 @@
+{
+    "name": "Irritação",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "3 rodadas",
+    "duration": "Especial",
+    "range": "10 metros",
+    "area": "1 a 4 criaturas numa área de 3 metros de diâmetro",
+    "description": "Irritação afeta a epiderme das criaturas receptoras. Criaturas com peies muito duras ou resistentes (búfalos, elefantes, criaturas com escamas) não são afetadas pela magia, Há duas formas diferentes de utilizar a magia, mas só uma pode ser utilizada por memorização. Ambas têm a mesma preparação. Coceira: Quando utilizada, esta forma cria uma sensação instantânea de coceira em alguma parte do corpo do receptor. Se uma rodada não for imediatamente gasta coçando a área afetada, a criatura sofre uma coceira tão grande que, durante as próximas três rodadas, ficará se contorcendo involuntariamente, piorando suas jogadas de ataque em 2 e sua CA em 4. A utilização de magia é proibida durante a Y rodada deste efeito, mas permitida durante as três seguintes. Não fazer nada, além de se coçar, termina com a coceira de uma vez por todas. Se esse efeito for utilizado em uma criatura, sua jogada de resistência tem uma penalidade de -3. Se for utilizado em duas criaturas, a penalidade de cada criatura é de -1. Se for utilizado em três ou quatro criaturas, nenhuma penalidade é aplicada à jogada de resistência. Pústula: Quando esse efeito é utilizado, o receptor não o percebe por 1d4 rodadas, mas depois toda a sua pele abre-se em vergões que coçam. Essas erupções persistem até que Curar Doenças ou Dissipar Magia sejam utilizadas sobre o receptor, Esse efeito baixa o Carisma do receptor em 1 ponto por dia, até que ele perca o máximo de 4 pontos de Carisma. Depois de uma semana, 1 ponto de Destreza também é perdido. Os sintomas desaparecem imediatamente após o fim dos vergões, e o Carisma e a Destreza retornam ao normal. Esse efeito pode ser utilizado em apenas uma criatura, que tem direito a uma jogada de resistência com uma penalidade de -2. Os componentes materiais são uma folha de sumagre-venenoso, madeira, ou sumagre."
+}

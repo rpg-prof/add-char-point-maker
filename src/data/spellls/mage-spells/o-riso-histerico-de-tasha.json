@@ -1,0 +1,10 @@
+{
+    "name": "O Riso Histérico de Tasha",
+    "level": 2,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "2",
+    "duration": "1 rodada/nível",
+    "range": "60 metros",
+    "area": "1 ou mais criaturas",
+    "description": "em um cubo de 6 metros de aresta A vítima dessa magia acha tudo hilariante. O efeito não é imediato, e o receptor sente apenas uma coceirinha na rodada em que a magia é lançada. Na rodada seguinte, a vítima começa a sorrir, depois dá risadinhas, e vai rindo cada vez mais alto, até ter acessos de gargalhadas histéricas e incontroláveis. Embora esse efeito dure apenas uma rodada, a criatura precisa passar a outra rodada recompondo-se, e sofrerá uma penalidade de -2 na Força (ou de -2 nas jogadas de ataque e de dano) por todas as outras rodadas da duração da magia. A jogada de resistência é modificada pela Inteligência da criatura. Criaturas com Inteligência 4 ou menor não são afetadas pela magia. Criaturas com Inteligência de 5 a 7 (baixa) resistem com penalidades de -6. Aquelas com Inteligência de 8 a 12 (média a muito inteligente) têm uma penalidade de -4, e criaturas com Inteligência de 13 ou 14 (alta) têm penalidades de -2. Criaturas com Inteligência 15 (excepcional) ou maior não têm penalidades em seus testes de resistência. O mago pode afetar uma criatura a cada três níveis que possui, ou seja, uma no 3º nível, duas no 6º nível, três no 9º nível. Todas as criaturas afetadas devem estar, no máximo, a 10 metros umas das outras. Os componentes materiais são tortas minúsculas e uma pena. As tortas são jogadas nas vítimas, enquanto a pena é movida pela outra mão, como se fizesse cócegas."
+}

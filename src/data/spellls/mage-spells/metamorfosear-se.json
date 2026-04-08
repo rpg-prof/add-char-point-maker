@@ -1,0 +1,10 @@
+{
+    "name": "Metamorfosear-se",
+    "level": 4,
+    "school": "Alteração",
+    "castingTime": "5",
+    "duration": "2 turnos/nível",
+    "range": "0",
+    "area": "O mago",
+    "description": "Quando essa magia é lançada, o mago pode assumir qualquer forma, com exceção das incorpóreas. A nova aparência pode ser pequena como um rouxinol ou grande como um hipopótamo, Além disso, o mago adquire a maneira de locomoção e respiração da criatura. Não é necessário um teste de colapso. A magia não concede ao mago as formas especiais de ataque e locomoção da criatura, nem as suas habilidades mágicas, nem corre o risco de perder a personalidade. Quando a transformação ocorre, os equipamentos da criatura (se houver) moldam-se à nova forma. Em campanhas particularmente difíceis, o Mestre pode permitir que itens de proteção continuem funcionando. O mago mantém suas habilidades mentais, incluindo utilização de magia, se a nova forma permitir a utilização dos componentes verbais e gestuais. Criaturas desacostumadas à nova forma podem sofrer penalidades (por exemplo, -2 nas jogadas de ataque) até treinarem o suficiente, a critério do Mestre. Dessa maneira, um mago transformado em coruja poderia voar, mas sua visão continuaria humana; se fosse uma Gosma Negra poderia passar sob portas e andaria pelo teto, mas não teria o ataque especial de ácido que a Gosma Negra possui. Naturalmente o mago ganha força suficiente para poder se mover na nova forma. O mago pode transformar-se enquanto a magia estiver em efeito, cada mudança levando uma rodada. Ele mantém os seus próprios pontos de vida, valores de resistência e TAC0, e pode encerrar a magia quando quiser, retornando, então, à sua própria forma e recuperando 1d12 pontos de vida. O retorno ocorre também quando morre ou quando Dissipar Magia é utilizada sobre ele, mas não recupera pontos de vida nesses casos."
+}

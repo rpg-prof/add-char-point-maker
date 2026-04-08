@@ -1,0 +1,10 @@
+{
+    "name": "A Imunidade à Magia de Serten",
+    "level": 8,
+    "school": "Abjuração",
+    "castingTime": "",
+    "duration": "1 turno/nível",
+    "range": "Toque",
+    "area": "Criatura(s) tocada(s)",
+    "description": "Através dessa magia, o mago é virtualmente capaz de conceder imunidade a certas formas de magia e de ataques mágicos àqueles que toca. Para cada quatro níveis de experiência que possui, o mago pode afetar uma criatura, mas se mais de uma criatura for afetada, a duração da magia será dividida entre elas. Por exemplo, um mago de 16º nível pode proteger uma criatura por dezesseis turnos, duas criaturas por oito turnos ou quatro criaturas por quatro turnos. Essa proteção dá um bônus no teste de resistência acordo com o tipo e o círculo da magia, como mostrado na tabela seguinte: Círculo da magia 1º- 3º 4º- 6º 7º- 8º * Inclui Despistar. O componente material é um diamante que valha pelo menos 500 po, que precisa ser esmagado e ter o seu pó lançado sobre os receptores. Além disso, cada receptor deve possuir um diamante intacto de pelo menos um quilate. É preciso que esse diamante seja carregado pelo receptor, aonde quer que ele vá."
+}

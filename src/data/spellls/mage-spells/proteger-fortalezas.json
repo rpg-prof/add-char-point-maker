@@ -1,0 +1,10 @@
+{
+    "name": "Proteger Fortalezas",
+    "level": 6,
+    "school": "Evocação, Alteração, Encantamento/Feitiço",
+    "castingTime": "5",
+    "duration": "1 hora/nível",
+    "range": "0",
+    "area": "Especial",
+    "description": "Essa magia poderosa e especial é principalmente usada para defender a fortaleza do mago. Ela defende uma fortaleza de um andar de altura, e com uma base de 100 metros x 100 metros. O mago pode proteger uma área de vários andares reduzindo proporcionalmente a área da base, Os seguintes efeitos mágicos ocorrem na área protegida: 1. Todos os corredores ficam enevoados, e a visibilidade reduz-se a 3 metros, 2. Todas as portas são fechadas com Fechadura Arcana. 3. As escadas são preenchidas com teias do começo ao fim. Elas funcionam como a Teia, mas crescem de novo em um turno, se destruídas. 4. Em pontos onde houver escolha de direção como um cruzamento ou passagem lateral atua uma magia menor do tipo Confusão, que faz com que, em 50% dos casos, os intrusos acreditem estar indo na direção exatamente oposta àquela que estão seguindo. 5. A área inteira irradia poder místico. O uso normal de Detectar Magia torna-se impossível para aqueles com nível inferior ao do mago, e muito difícil para os outros. 6. Para cada nível de experiência do mago, uma porta é camuflada por ilusão, para que pareça uma parede plana. 7. Adicionalmente, o mago ainda pode utilizar um dos seguintes efeitos mágicos: A) Globos de Luz em quatro corredores. B) Boca Encantada em dois lugares. C) Névoa Fétida em dois lugares. D) Lufada de Vento em um corredor ou sala. E) Sugestão em um lugar. Note que os itens seis e sete só funcionam se o mago estiver totalmente familiarizado com a área protegida. Dissipar Magia pode anular, aleatoriamente, um dos efeitos para cada vez em que for executada. A magia Remover Maldição não funcionará. Os componentes materiais são incenso, uma pequena medida de enxofre e óleo, um cordão amarrado, um pouco de sangue de umber hulk e um pequeno bastão de prata."
+}

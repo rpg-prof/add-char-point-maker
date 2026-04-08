@@ -1,0 +1,10 @@
+{
+    "name": "Queda Suave",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "2d12 horas",
+    "duration": "1 rodada/nível",
+    "range": "10 metros/nível",
+    "area": "Especial",
+    "description": "Quando essa magia é utilizada, as criaturas ou objetos afetados assumem imediatamente o peso de uma pluma. Sua razão de queda é alterada para meio metro por segundo, ou 30 metros por rodada. As criaturas ou objetos afetados não sofrerão dano por queda enquanto a magia estiver em efeito. Entretanto, quando a duração chegar ao fim, volta-se à razão de queda normal. A magia dura uma rodada por nível de experiência do mago, e afeta uma ou mais criaturas ou objetos num cubo de 3 metros de aresta, desde que a massa destas criaturas e objetos não seja maior que 100 quilos, mais 100 quilos por nível do mago. Por exemplo, a magia lançada por um mago de 1º nível tem um alcance de 20 metros, uma duração de duas rodadas, e um limite de peso de 300 quilos. Essa magia tem efeito apenas sobre objetos ou criaturas que estejam voando, em queda livre, ou que tenham sido arremessados, não sendo útil contra um golpe de espada, por exemplo. Esta magia pode ser muito útil em conjunto com a Lufada de Vento e efeitos similares."
+}

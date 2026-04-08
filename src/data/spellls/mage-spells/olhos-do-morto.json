@@ -1,0 +1,10 @@
+{
+    "name": "Olhos do Morto",
+    "level": 6,
+    "school": "Necromancia",
+    "castingTime": "1 rodada",
+    "duration": "1 rodada/nível",
+    "range": "Especial",
+    "area": "Especial",
+    "description": "Os Olhos do Morto fazem com que os brancos dos olhos do mago tornem-se negros e suas pupilas remodelem-se em pequenos crânios brancos. O mago pode afetar uma vítima por rodada, considerando que a vítima esteja den- tro de 1 m do mago e cruze com o seu olhar. As vítimas são afetadas como segue:  Vítimas com 2 DV ou menos (ou vítimas de nível 2 ou mais baixo) morrem instantaneamente. Nenhum teste de resistência é permitido.  Vítimas com 2 a 5 DV (ou vítimas de nível 3-5) morrem instantaneamente a menos que passem em um teste de resistência contra morte por magia com uma penalidade de –2. Aqueles que tiverem êxito em seus testes sofrem 2d6 pontos de vida.  Vítimas com 5 DV ou mais (ou ví- timas de 6º nível ou superior) sofrem 2d6 pontos de dano a menos que eles passem em um teste de resistência con- tra morte por magia. Se olhar do mago for refletido sobre ele (por um espelho, água parada, etc.), ele deverá fazer um teste de resistência contra magia ou sofrerá os mesmos efeitos que uma vítima de 5 DV. No final da duração do feitiço, há uma chance de 5% que o mago fique cego nos próximo 1d6+4 horas. Os componentes materiais para esta magia são duas bolas de gude do tama- nho de olhos. As bolas de gude devem ser da mesma cor dos olhos do mago."
+}

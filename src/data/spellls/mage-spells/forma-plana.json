@@ -1,0 +1,10 @@
+{
+    "name": "Forma Plana",
+    "level": 7,
+    "school": "Alteração",
+    "castingTime": "1 rodada",
+    "duration": "3 rodadas + 1 rodada/nível",
+    "range": "0",
+    "area": "O mago",
+    "description": "Essa magia faz com que o mago tenha apenas duas dimensões, altura e largura, mas não profundidade. Isso o torna invisível quando ele fica de lado. Essa invisibilidade só pode ser detectada através de Visão da Verdade ou método similar. Além disso, o mago bidimensional pode atravessar os espaços mais estreitos, desde que eles tenham a altura apropriada — passar entre uma porta e o seu batente é muito fácil. O mago pode realizar qualquer ação normalmente. Ele pode virar de lado e ficar invisível, mover-se nesse estado, reaparecer na rodada seguinte e lançar uma magia desaparecendo novamente na próxima rodada. Note que o mago não pode ser afetado por nenhum ataque enquanto estiver virado, mas quando visível ele recebe o dobro do dano que porventura venha a sofrer. Além disso, o mago tem uma porção da sua existência transferida para o plano Astral enquanto a magia estiver ativada, e está sujeito a ser percebido por criaturas de lá. Se isso acontecer, existe uma chance de 25% de que o mago seja puxado inteiramente para o plano Astral, devido ao ataque de uma criatura de lá. Tal ataque (e outros ataques recebidos no plano Astral) provocam dano normal. Os componentes materiais são uma reprodução plana do mago, feita em marfim (que deve ser perfeita, enfeitada com ouro e gemas com um custo médio entre 500 e 1.000 po) e uma tira de velino. Conforme a fórmula é recitada, o mago amarra as duas pontas da tira e passa a imagem pelo centro do velino; os dois objetos desaparecem para sempre nesse momento."
+}

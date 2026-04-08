@@ -1,0 +1,10 @@
+{
+    "name": "Manto Negro",
+    "level": 6,
+    "school": "Necromancia/ Encantamento",
+    "castingTime": "1 rodada",
+    "duration": "1 turno/nível",
+    "range": "60 metros",
+    "area": "4,5 metros de raio",
+    "description": "Manto Negro cria uma aura cintilante ao redor das criaturas afetadas pela magia e impossibilita qualquer cura ou regeneração, tanto normal quanto magia. Por isso, uma Poção da Cura não fará efeito enquanto a criatura estiver sob o efeito de Manto Negro, um troll não poderá regenerar seus ferimentos, e um Curar Ferimentos é inútil. Manto Negro é evitado se qualquer criatura obtiver sucesso no teste de Resistência à Magia. Fora isso, a magia dura uma rodada por nível do conju- rador. Se a criatura ainda estiver viva após o término da magia, suas forças curativas voltam a funcionar normal- mente, sendo assim, um Anel da re- generação voltará a ter suas funções normais. Contudo, Poções da Cura e usos de Cajado da Cura não tem efeito quando a magia Manto Negro termina, esses tipos de magia têm funções ins- tantâneas. Nesses casos, uma dose de Porção da Cura ou a Carga do Cajado da Cura não são gastos, mas a aura ge- rada pelo Manto Negro inutiliza Poções da Cura e Cajados da Cura, passando a ser inúteis. Uma Poção da Cura ou Cajado da Cura usados depois do fim da magia, tem suas funções de cura magia normais. O Componente material da magia é um pequeno animal mumificado, algo como um rato ou um sapo."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Mão Espectral",
+    "level": 2,
+    "school": "Necromancia",
+    "castingTime": "1",
+    "duration": "2 rodadas/nível",
+    "range": "30 + 5 metros/nível",
+    "area": "1 oponente",
+    "description": "Essa magia cria uma mão espectral, brilhante, feita da própria energia vital do mago, e que se move de acordo com seus comandos, dentro do alcance da magia. Qualquer magia de 4º círculo ou menor, que necessite de um toque para funcionar, pode ser levada por essa mão. A magia concede ao mago um bônus de +2 em sua jogada de ataque. Ele não pode realizar outras ações enquanto ataca com a mão. A mão retoma para o mago, e flutua perto dele, se o mago se decidir por outras ações. A mão persiste durante toda a duração da magia, podendo ser utilizada para lançar mais de uma magia de toque, a não ser que o mago a encerre, o que ele pode fazer quando desejar. A mão recebe bônus de ataque por trás ou pelos flancos, se o mago está nesta posição em relação ao oponente. A mão é vulnerável a ataques mágicos, e qualquer dano que seja feito à Mão Espectral, faz com que ela desapareça e que o mago que a lançou perca 1d4 pontos de vida. Mão Espectral tem CA -2."
+}

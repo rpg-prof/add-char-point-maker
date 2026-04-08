@@ -1,0 +1,10 @@
+{
+    "name": "Convocar Criatura IV",
+    "level": 6,
+    "school": "Conjuração/Convocação",
+    "castingTime": "7",
+    "duration": "5 rodadas + 1 rodada por nível",
+    "range": "60 metros",
+    "area": "Especial",
+    "description": "Essa magia é similar ao Convocar Criaturas I, mas essa versão é mais poderosa, e convoca 1d3 monstros de 4º nível, que aparecem no alcance da magia e atacam os oponentes do mago até que ele ordene o contrário, a duração termine ou os monstros sejam mortos. As criaturas não testam moral e desaparecem quando destruídas. Se não houver inimigos para combater, os monstros convocados podem prestar serviços ao mago, se conseguirem entender o que ele diz e forem fisicamente aptos para a tarefa. Os componentes materiais são uma minúscula sacola e uma pequena vela (não necessariamente acesa)."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Névoa Sólida",
+    "level": 4,
+    "school": "Alteração",
+    "castingTime": "4",
+    "duration": "2d4 rodadas + 1 rodada/nível",
+    "range": "30 metros",
+    "area": "Um volume de 6 x 3 x 3 metros/nível do mago",
+    "description": "Quando essa magia é lançada, o mago cria uma nuvem de vapor semelhante à criada pela Magia Arcana de 1º círculo Muralha de Névoa. O mago pode criar menos vapor se desejar, contanto que cada aresta tenha no mínimo 3 metros. A nuvem obscurece a visão além de meio metro, tanto normal como Infravisão. Entretanto, ao contrário de uma nuvem normal, qualquer criatura que tente atravessar esta nuvem progride à uma razão de 30 centímetros por rodada para cada ponto de Movimentação que possuir, e esta nuvem só pode ser dispersa por um vento muito forte, a Lufada de Vento não a afeta. Bola de Fogo, Coluna de Chamas ou Muralha de Fogo podem queimar a nuvem em uma rodada. Os componentes materiais são um punhado de ervilhas secas e pulverizadas misturadas à pó de mocho."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Enfeitiçar Monstros",
+    "level": 4,
+    "school": "Encantamento/Feitiço",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "60 metros",
+    "area": "1 ou mais criaturas numa área de 6 metros de raio",
+    "description": "Essa magia é similar a Enfeitiçar Pessoas, mas ela pode afetar qualquer criatura viva — ou diversas criaturas com poucos dados de vida. A magia afeta 2d4 dados de vida de monstros ou criaturas, embora ela possa afetar no máximo uma criatura com 4 DV ou mais. Todas as criaturas que possam ser afetadas devem testar sua resistência à magia, ajustando-as pela Sabedoria. Qualquer dano feito pelo grupo do mago contra os que são alvos do feitiço, na mesma rodada em que a magia é lançada, confere às criaturas feridas um bônus de +1 no teste de resistência para cada ponto de dano que elas sofram. Qualquer criatura afetada passará a tratar o mago como um amigo, um aliado ou companheiro, que deve ser bem tratado e protegido do perigo. Se a comunicação for possível, a criatura enfeitiçada seguirá pedidos razoáveis, ordens e instruções da melhor maneira possível (veja Sugestão). Se a comunicação não for possível, a criatura não atacará o mago, mas outras criaturas próximas poderão estar sujeitas às intenções da criatura, mesmo que estas sejam hostis. Qualquer ação claramente ofensiva da parte do mago quebra a magia imediatamente, ou, na pior das hipóteses, concede à criatura um novo teste de resistência à magia. As criaturas afetadas, depois de algum tempo, conseguem se livrar dos efeitos dessa magia, dependendo do nível ou dados de vida da criatura. Nível ou Dados de vida de monstros 1º nível ou até 2 Dados de Vida 2º nível ou até 3+2 Dados de Vida 3º nível ou até 4+4 Dados de Vida 4º nível ou até 6 Dados de Vida 5º nível ou até 7+2 Dados de Vida 6º nível ou até 8+4 Dados de Vida 7º nível ou até 10 Dados de Vida 8º nível ou até 12 Dados de Vida 9º nível ou mais que 12 Dados de Vida A hora e o dia exato da semana devem ser secretamente determinados."
+}

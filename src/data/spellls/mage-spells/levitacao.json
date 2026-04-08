@@ -1,0 +1,10 @@
+{
+    "name": "Levitação",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "2",
+    "duration": "1 turno/nível",
+    "range": "20 metros/nível",
+    "area": "1 criatura ou objeto",
+    "description": "Quando utiliza Levitação, o mago pode fazer com que o receptor perca o peso e levite. O receptor pode ser o próprio mago, uma criatura ou um objeto, mas com um limite de peso de 50 quilos por nível, de forma que no 3º nível, o mago possa levitar até 150 quilos. O mago pode fazer o receptor subir ou descer com uma movimentação de 2, mas a magia não lhe confere movimento horizontal — que pode se mover horizontalmente empurrando uma parede, por exemplo. A magia não requer concentração por parte do mago, exceto quando ele desejar que o receptor suba ou desça. Se o receptor não deseja receber a magia, ou se o mago utilizar a magia em um objeto sob posse de outra criatura, deve ser feito um teste de resistência à magia para o receptor ou para a criatura que carrega o objeto. Se for obtido sucesso, a magia será neutralizada. Uma criatura que tenta usar armas de arremesso sob efeito de Levitação, sofrerá uma instabilidade cada vez maior: na primeira rodada, ele tem uma penalidade de -1, na segunda de -2, na terceira de -3, até um máximo de -5. Caso uma criatura passe uma rodada inteira apenas estabilizando-se, a penalidade volta para -1. A falta de apoio torna impossível engatilhar uma besta média ou pesada. O componente material é um laço de couro, ou um cordão de ouro dobrado em forma de uma taça com um cabo comprido."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Detectar Inviabilidade",
+    "level": 2,
+    "school": "Adivinhação",
+    "castingTime": "2",
+    "duration": "5 rodadas/nível",
+    "range": "10 metros/nível",
+    "area": "3 metros de largura",
+    "description": "Quando um mago utiliza Detectar Invisibilidade ele pode ver claramente objetos ou criaturas que estejam (ou sejam) invisíveis, bem como criaturas astrais e etéreas. Além disso, o mago ganha a capacidade de ver criaturas escondidas, como halflings em arbustos, ladrões nas sombras, etc. Essa magia não revela o método usado pela criatura para se esconder, exceto no caso de criaturas projetadas astralmente, onde o cordão prateado pode ser visto. Também não revela ilusões, nem permite que o mago veja através de objetos físicos. O mago pode perceber criaturas invisíveis numa faixa de três metros de largura pelo alcance máximo da magia. O início da faixa é sempre o próprio mago. Os componentes materiais são um punhado de talco e pó de prata polvilhados à frente do mago."
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Muralha de Ferro",
+    "level": 5,
+    "school": "Evocação",
+    "castingTime": "1",
+    "duration": "Permanente",
+    "range": "5 metros/nível",
+    "area": "5 metros quadrados por nível, ou especial",
+    "description": "Quando esse efeito é lançado, o mago provoca o surgimento de uma parede de ferro A parede pode ser usada para selar uma passagem ou fechar uma brecha, pois se insere nos materiais não-vivos contíguos (como as paredes de um túnel ou o batente de uma porta) se a área do metal produzido o permitir. A parede de ferro tem 1 centímetro de espessura por nível do mago, que pode produzir uma área de 5 metros quadrados para cada um dos seus níveis de experiência, criando, por exemplo, uma parede de 60 metros quadrados quando estiver no 12º nível. O mago pode dobrar a área da parede, se dividir ao meio a espessura. Se o mago desejar, a parede pode ser criada repousando verticalmente sobre uma superfície plana, de modo que possa ser empurrada para esmagar inimigos próximos. A parede tem 50% de chance de cair para qualquer lado, e essa probabilidade só pode ser modificada por um valor de Força não menor que 30. e por uma massa superior a 200 quilos — cada meio quilo acima de 200 ou 1 ponto de Força maior que 30 altera a chance em 1% a favor do lado mais forte. Criaturas que tenham espaço suficiente para se desviar da parede em queda podem fazê-lo passando num teste de resistência à morte. As criaturas que não passarem no teste morrerão esmagadas pela parede. Criaturas imensas e abissais não podem ser esmagadas pela parede. A parede é permanente, a menos que seja magicamente destruída, mas está sujeita a todas as torças que uma parede de ferro normal estaria ferrugem, por exemplo. O componente material é uma pequena chapa de ferro."
+}

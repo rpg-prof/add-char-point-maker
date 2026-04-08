@@ -1,0 +1,10 @@
+{
+    "name": "Ossos Vibrantes",
+    "level": 5,
+    "school": "Necromancia",
+    "castingTime": "3",
+    "duration": "1 rodada/nível",
+    "range": "10 m",
+    "area": "uma criatura",
+    "description": "Esta magia faz com que os ossos da criatura afetada vibrem e chacoalhem dentro de seu corpo. A magia pode ser lançada sobre qualquer criatura ou pessoa viva dentro do alcance do mago, considerando que a criatura te- nha uma forma física e ossos dentro de seu corpo; por exemplo, Ossos Vibran- tes não afetarão insetos, fantasmas ou minhocas. Durante a duração da magia, a CA da criatura afetada piora em 2, sua mo- vimentação é reduzida pela metade e todos os seus ataques são feitos com uma penalidade de –2. Além disso, ela sofre 1d4 pontos de dano por rodada; este dano é reduzido pela metade se a criatura for bem-sucedido em um teste de resistência. No entanto, um teste de resistência bem-sucedido não tem nenhum efeito sobre a movimentação, ataque e penalidades na CA. Os componentes materiais para esta magia são dois pedaços de um pequeno osso que tenha sido partido na metade."
+}

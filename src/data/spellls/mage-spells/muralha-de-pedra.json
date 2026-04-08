@@ -1,0 +1,10 @@
+{
+    "name": "Muralha de Pedra",
+    "level": 5,
+    "school": "Evocação",
+    "castingTime": "Especial",
+    "duration": "Permanente",
+    "range": "5 metros/nível",
+    "area": "Especial",
+    "description": "Essa magia cria uma parede de granito que se une às superfícies rochosas adjacentes. Em geral, o efeito é empregado para fechar passagens, portais e brechas, impedindo a entrada de oponentes. A parede tem 1 centímetros de espessura e até 5 metros quadrados por nível de experiência do mago Portanto, um mago de 12º nível criaria uma barreira de 12 centímetros de espessura e 60 metros quadrados em superfície. A parede criada não precisa ser vertical, e nem repousar sobre uma superfície firme (veja Muralha de Ferro). Para tanto, as pedras ao redor devem ser capazes de sustentá-la. A parede de granito pode ser utilizada para fazer uma ponte sobre um abismo, ou uma rampa. No entanto, se o comprimento for maior que 5 metros, a parede deve ser arqueada e escorada, o que diminuí a área de efeito pela metade. A parede é permanente, a menos que destruída por Dissipar Magia ou Desintegração, ou por meios normais. O componente material é um pequeno bloco de granito. ## Magias Arcanas do 6º Círculo"
+}

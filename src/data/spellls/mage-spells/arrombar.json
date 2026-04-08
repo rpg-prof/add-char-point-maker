@@ -1,0 +1,10 @@
+{
+    "name": "Arrombar",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "60 metros",
+    "area": "3 metros quadrados/nível",
+    "description": "A magia Arrombar abre portas presas, barradas, trancadas ou protegidas pela Fechadura Arcana. Arrombar não só abre portas secretas, como também arcas e baús trancados ou que tenham mecanismos complicados. Ela também afrouxa grilhões, solta correntes, abre cadeados e destrói soldas. Se utilizada para abrir uma porta que tenha sido lacrada com a Fechadura Arcana, Arrombar não remove a Fechadura, mas suspende o seu funcionamento por um turno. Em todos os outros casos, a porta, o objeto ou a solda são abertos permanentemente, e podem ser fechados e trancados novamente, exceto no caso da solda, que é destruída, Essa magia não afeta portas levadiças, ou similares, e também não faz efeito sobre cordas ou cipós. Note que ela tem uma limitação de área: um mago de 3º nível pode abrir uma porta comum, mas não pode abrir o portão de uma cidade. Cada Arrombar pode remover duas maneiras de fechar uma porta ou objeto. Desta forma, se uma porta tem três fechaduras, são necessárias duas Arrombar para abri-la, Em qualquer caso, será necessário conhecer a localização exata da porta. Um mago não pode tentar utilizar a magia em uma parede, na esperança de descobrir uma porta secreta. O reverso dessa magia, Trancar, fecha e tranca uma porta ou objeto, bastando haver um sistema físico que permita fazê-lo. Não cria uma solda, mas fecha mecanismos operados fisicamente, abaixa barras, fecha cadeados, podendo executar até duas funções. Essa magia não afeta portas levadiças."
+}

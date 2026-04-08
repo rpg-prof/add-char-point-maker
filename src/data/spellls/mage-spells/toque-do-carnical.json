@@ -1,0 +1,10 @@
+{
+    "name": "Toque do Carniçal",
+    "level": 2,
+    "school": "Necromancia",
+    "castingTime": "2",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "1 pessoa",
+    "description": "Quando esta magia está em efeito, o toque do mago causa a qualquer huma- no, anão, gnomo, meio-elfo ou halfling paralisia por 1d6+2 rodadas, a menos que a vítima seja bem-sucedida em um teste de resistência contra paralisação. Além disso, a vítima paralisada trans- pira um odor num raio de 3 metros que causa ânsia de vômito e náuseas. Dentro desta área, quem não passar em um teste de resistência contra veneno fará seus ataques com uma penalidade –2 até o fim da sua duração da magia. O componente material para esta magia é um pequeno pedaço de tecido retirado do vestuário de um ghoul ou um punhado da terra de uma cova de um ghoul."
+}

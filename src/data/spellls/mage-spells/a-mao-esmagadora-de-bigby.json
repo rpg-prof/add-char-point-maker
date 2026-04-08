@@ -1,0 +1,10 @@
+{
+    "name": "A Mão Esmagadora de Bigby",
+    "level": 9,
+    "school": "Evocação",
+    "castingTime": "",
+    "duration": "1 rodada/nível",
+    "range": "5 metros/nível",
+    "area": "Especial",
+    "description": "Essa magia cria uma mão incorpórea e enorme, similar âs outras Mão de Bigby. Essa mão está sobre o controle mental do mago. e pode ser comandada para pegar e esmagar oponentes. Não é necessária uma jogada de ataque, a mão automaticamente agarra e inflige dano de constrição enquanto o mago estiver concentrado. O dano depende do número de rodada que a vítima permanecer presa: Primeira rodada Segunda e terceira rodadas Quarta rodada e seguintes A mão tem CA 0. tantos pontos de vida quantos o mago teria em perfeita saúde e desaparece quando destruída. A mão sofre dano normalmente de ataques tísicos e magias de combate, mas, no caso de efeitos de área, a pessoa presa sofre tanto quanto a própria mão. Nesse caso, um teste de resistência é feito pela mão, e o resultado do teste vale tanto para a mão quanto para a criatura aprisionada. Essa mão não é eficiente contra criaturas incorpóreas ou em forma gasosa, mas consegue impedir que criaturas que normalmente escapam por pequenas frestas fujam. Se a mão segurar um item ou edifício, o teste de resistência apropriado deve ser feito, como se o objeto tivesse sido apertado por Força 25. Os componentes materiais são uma luva feita de pele de cobra e uma casca de ovo."
+}

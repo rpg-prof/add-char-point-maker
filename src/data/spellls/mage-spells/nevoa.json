@@ -1,0 +1,10 @@
+{
+    "name": "Névoa",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "2",
+    "duration": "4 rodadas + 1 rodada/nível",
+    "range": "10 metros",
+    "area": "Especial",
+    "description": "Essa magia pode ser utilizada de duas maneiras: criando uma nuvem espessa e estacionária, ou criando brumas inofensivas, porém semelhantes à magia arcana de 5º círculo Névoa Mortal. Quando utilizada da primeira maneira, a magia cria um nevoeiro espesso de qualquer tamanho e forma, com um volume máximo de 200 metros cúbicos por nível do mago. Este nevoeiro reduz a até meio metro qualquer tipo de visão, normal ou infravisão. Quando utilizada da segunda forma, a magia cria uma onda de vapores espectrais, amarelo-esverdeados, que mede 12 x 6 x 6 metros. Esta onda move-se lentamente para longe do mago, a uma velocidade de 3 metros por rodada. Esses vapores são mais pesados que o ar, e tendem a descer, entrando por ralos, ou por tocas no chão. Se os vapores entrarem mais de 5 metros em uma vegetação espessa, eles serão dispersados. Seu único efeito é obscurecer a visão. Uma brisa moderada reduz sua duração em 50%, enquanto uma brisa forte a dispersa em uma rodada. Esta magia não pode ser lançada embaixo d’água."
+}

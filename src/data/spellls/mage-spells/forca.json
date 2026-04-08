@@ -1,0 +1,10 @@
+{
+    "name": "Força",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "1 hora/nível",
+    "range": "Toque",
+    "area": "Pessoa tocada",
+    "description": "A aplicação dessa magia aumenta à Força do receptor um determinado número de pontos — ou décimos de pontos depois de Força 18, mas só se o receptor for um Homem de Armas. Os benefícios da nova Força persistem por toda a duração da magia. A quantidade de Força obtida depende do grupo do receptor, e está sujeita a todas as restrições de classe e raça, ou seja, um guerreiro halfling não obtém mais do que Força 18 (sem percentagens) com esta magia. Personagens multiclasse recebem o benefício do melhor dado. Classe Clérigo Ladino Homem de Armas Mago Se o Homem de Armas já tiver Força maior que 18, ele ganha de 10 a 80% na sua Força extraordinária. A magia não concede uma Força de 19 ou maior, e também não é cumulativa com outras magias e itens, mágicos que conferem Força. Criaturas sem valor definido para a Força (a maior parte dos monstros), recebem um bônus de +1 nas jogadas de ataque e de dano. O componente material é um pouco do pêlo, ou do esterco, de um animal particularmente forte: urso, boi, búfalo, etc."
+}
