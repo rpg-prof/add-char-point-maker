@@ -83,6 +83,7 @@ const Index = () => {
   const [selectedWeapons, setSelectedWeapons] = useState<string[]>([]);
   const [selectedWeaponGroups, setSelectedWeaponGroups] = useState<string[]>([]);
   const [selectedShields, setSelectedShields] = useState<string[]>([]);
+  const [grimoire, setGrimoire] = useState<string[]>([]);
 
   // Calculate attribute points spent
   const attributePointsSpent = useMemo(
@@ -181,6 +182,12 @@ const Index = () => {
     );
   };
 
+  const handleGrimoireToggle = (spellName: string) => {
+    setGrimoire((prev) =>
+      prev.includes(spellName) ? prev.filter((n) => n !== spellName) : [...prev, spellName]
+    );
+  };
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSave = useCallback(() => {
@@ -188,7 +195,7 @@ const Index = () => {
       charName, playerName, attributes, subAttributes,
       selectedRace, selectedClass, selectedSocialClass,
       selectedAdvantages, selectedRaceClassAdv, selectedSkills,
-      selectedWeapons, selectedWeaponGroups, selectedShields,
+      selectedWeapons, selectedWeaponGroups, selectedShields, grimoire,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -197,7 +204,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields]);
+  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -219,6 +226,7 @@ const Index = () => {
         if (data.selectedWeapons) setSelectedWeapons(data.selectedWeapons);
         if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
         if (data.selectedShields) setSelectedShields(data.selectedShields);
+        if (data.grimoire) setGrimoire(data.grimoire);
         setCurrentStep(0);
       } catch {
         alert("Arquivo JSON inválido.");
@@ -349,9 +357,9 @@ const Index = () => {
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
-              Grimório de referência para a classe <span className="text-foreground font-semibold">{selectedClass}</span>.
+              Selecione as magias para o grimório de <span className="text-foreground font-semibold">{selectedClass}</span>.
             </p>
-            <MagicPanel selectedClass={selectedClass} />
+            <MagicPanel selectedClass={selectedClass} grimoire={grimoire} onGrimoireToggle={handleGrimoireToggle} />
           </div>
         );
       case "Resumo":
