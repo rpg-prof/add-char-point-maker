@@ -83,6 +83,7 @@ const Index = () => {
   const [selectedWeapons, setSelectedWeapons] = useState<string[]>([]);
   const [selectedWeaponGroups, setSelectedWeaponGroups] = useState<string[]>([]);
   const [selectedShields, setSelectedShields] = useState<string[]>([]);
+  const [grimoire, setGrimoire] = useState<string[]>([]);
 
   // Calculate attribute points spent
   const attributePointsSpent = useMemo(
