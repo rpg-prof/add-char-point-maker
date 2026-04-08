@@ -182,6 +182,12 @@ const Index = () => {
     );
   };
 
+  const handleGrimoireToggle = (spellName: string) => {
+    setGrimoire((prev) =>
+      prev.includes(spellName) ? prev.filter((n) => n !== spellName) : [...prev, spellName]
+    );
+  };
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSave = useCallback(() => {
