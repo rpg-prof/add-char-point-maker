@@ -195,7 +195,7 @@ const Index = () => {
       charName, playerName, attributes, subAttributes,
       selectedRace, selectedClass, selectedSocialClass,
       selectedAdvantages, selectedRaceClassAdv, selectedSkills,
-      selectedWeapons, selectedWeaponGroups, selectedShields,
+      selectedWeapons, selectedWeaponGroups, selectedShields, grimoire,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
