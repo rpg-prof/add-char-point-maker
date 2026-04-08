@@ -357,9 +357,9 @@ const Index = () => {
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
-              Grimório de referência para a classe <span className="text-foreground font-semibold">{selectedClass}</span>.
+              Selecione as magias para o grimório de <span className="text-foreground font-semibold">{selectedClass}</span>.
             </p>
-            <MagicPanel selectedClass={selectedClass} />
+            <MagicPanel selectedClass={selectedClass} grimoire={grimoire} onGrimoireToggle={handleGrimoireToggle} />
           </div>
         );
       case "Resumo":
