@@ -162,7 +162,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
                       </span>
                       <span className="text-xs text-muted-foreground font-body">
                         {grimoireCount > 0 && (
-                          <span className="text-gold mr-1">{grimoireCount} no grimório •</span>
+                          <span className="text-gold mr-1">{grimoireCount} selecionada{grimoireCount !== 1 ? "s" : ""} •</span>
                         )}
                         {levelSpells.length} magias
                       </span>
