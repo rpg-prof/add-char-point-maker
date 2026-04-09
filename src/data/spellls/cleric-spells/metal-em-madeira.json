@@ -1,0 +1,11 @@
+{
+    "name": "Metal em Madeira",
+    "level": 7,
+    "school": "Alteração",
+    "sphere": "Elemental (Terra)",
+    "castingTime": "",
+    "duration": "Permanente",
+    "range": "80 metros",
+    "area": "1 objeto de metal",
+    "description": "Essa magia torna o clérigo capaz de transformar um objeto de metal em madeira. A massa do metal não pode exceder um peso máximo de 5 quilos por nível de experiência do clérigo. Objetos mágicos feitos de metal têm 90% de proteção contra magia, e aqueles na posse de uma criatura recebem o teste de resistência de seu detentor. Artefatos e relíquias não podem ser transmutados. Observe que apenas um Desejo ou similar pode devolver um objeto transformado ao seu estado metálico. Do contrário, uma porta de metal transformada em madeira, por exemplo, ficará para sempre sendo de madeira."
+}

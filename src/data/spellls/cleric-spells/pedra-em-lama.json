@@ -1,0 +1,11 @@
+{
+    "name": "Pedra em Lama",
+    "level": 5,
+    "school": "Alteração",
+    "sphere": "Elemental (Terra, Água)",
+    "castingTime": "1 turno",
+    "duration": "Especial",
+    "range": "160 metros",
+    "area": "Cubo de 6 metros de lado/nível",
+    "description": "Essa magia transforma rocha natural de qualquer tipo em um volume equivalente de lama. Pedras mágicas ou encantadas não são atingidas. A profundidade da lama não pode exceder 3 metros. Criaturas incapazes de voar e levitar, ou pesadas demais para caminhar sobre a área afetada, afundam a uma velocidade de 1/3 de sua altura por rodada, e eventualmente morrem sufocadas. Um galho de árvore arremessado sobre a lama, pode agüentar criaturas capazes de escalá-lo, em uma quantidade definida pelo Mestre. Criaturas grandes o suficiente para caminhar pelo fundo, movem-se pela área a uma velocidade de três metros por rodada. A lama permanece até um Dissipar Magia bem sucedido ou um Lama em Pedra restaurar sua substância — mas não necessariamente sua forma. A evaporação transforma a lama em poeira normal a uma velocidade de 1d6 dias para cada metro cúbico. O tempo exato depende da exposição ao sol, vento e à drenagem natural. O reverso, Lama em Pedra, transforma lama normal ou areia movediça em pedra macia (arenito ou mineral semelhante). A mudança é permanente, a menos que seja modificada por magia, Criaturas da lama têm direito a um teste de resistência para escapar antes de a área virar pedra. Areia seca não é afetada. Os componentes materiais são argila e água (ou areia, limo e água para o reverso)."
+}

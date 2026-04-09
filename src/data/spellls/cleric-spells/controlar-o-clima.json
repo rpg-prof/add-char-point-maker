@@ -1,0 +1,11 @@
+{
+    "name": "Controlar o Clima",
+    "level": 7,
+    "school": "Alteração",
+    "sphere": "Clima",
+    "castingTime": "",
+    "duration": "4d12 horas",
+    "range": "0",
+    "area": "8d4 quilômetros quadrados",
+    "description": "Controlar o Clima torna o clérigo capaz de modificar o clima na área local. A magia aleta o tempo por 4d12 horas em uma área de 8d4 quilômetros quadrados. O efeito requer um turno para a execução, e 1d4 turnos adicionais para seus eleitos aparecerem. As condições do tempo são decididas pelo Mestre, dependendo do clima e da estação.e possuem três componentes: precipitação, temperatura e vento. A magia pode mudar esses aspectos de acordo com a tabela seguinte: Precipitação CÉU CLARO Muito claro Nuvens leves ou neblina PARCIALMENTE NUBLADO Céu claro nublado Névoa/chuva leve/granizo leve Chuva com neve/pouca neve NUBLADO Parcialmente nublado Nuvens pesadas Cerração Chuva pesada/granizo forte Chuva com neve muito forte/neve pesada Os títulos em maiúsculas representam as condições existentes. Os títulos em minúsculas abaixo dos em maiúsculas são os novos aspectos do tempo, em que o clérigo pode transformar as condições existentes. Atém disso, ele pode controlar a direção do vento. Por exemplo, um dia claro, morno e com vento moderado pode ser transformado em nublado, quente e calmo. Contradições não são possíveis — neblina e vento forte, por exemplo Múltiplas magias de Controlar o Clima podem ser usadas sucessivamente. Os componentes materiais são o símbolo religioso do clérigo, incenso e um colar de contas de oração, ou objetos similares Obviamente, esse efeito só funciona em áreas com as condições climáticas apropriadas. Se Clima é uma esfera de maior acesso para o clérigo (como é para os druidas), a duração e a área da magia são dobradas, e o clérigo pode mudar o tempo em ate duas categorias da tabela (ou seja. pode fazer a precipitação ir de parcialmente nublado à chuva com neve; a temperatura ir de frio a gelado, e o vento ir de calmo a forte)."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Manto de Bravura",
+    "level": 4,
+    "school": "Conjuração/Convocação",
+    "sphere": "Feitiço",
+    "castingTime": "7",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Essa magia pode ser usada em qualquer um que o permita. A pessoa protegida recebe um bônus em seus testes de resistência contra medo, qualquer que seja sua fonte (mas não contra a habilidade divina chamada assombro, que alguns deuses inspiram em quem os vê). Quando usada, a magia pode afetar, de acordo com a vontade do clérigo, de uma a quatro criaturas. O bônus fornecido à resistência varia de acordo com o número de seres afetados, sendo igual a 4 para uma criatura, 3 para duas, 2 para três e, finalmente, 1 para quatro. Este efeito fornece proteção para apenas um teste de resistência, deixando de surtir efeito quando este é realizado (com sucesso ou não). Se nenhum teste de resistência for necessário durante as oito horas seguintes à criação da magia, esta automaticamente se desfaz. A magia reversa, Manto do Medo, fornece a uma única criatura o dom de gerar uma aura de pavor, à sua vontade, de 1,5 metro de raio. Todos os seres dentro dessa aura devem imediatamente fazer um teste de resistência à magia ou fugir correndo, devido a um enorme pânico, por 2d8 rodadas. Criaturas afetadas podem, se o Mestre quiser, derrubar parte de seus pertences enquanto correm. O componente material é uma pena de águia ou falcão. O material para a magia reversa é uma pena da cauda de abutre, ou de galinha."
+}

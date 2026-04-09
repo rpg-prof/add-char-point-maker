@@ -1,0 +1,11 @@
+{
+    "name": "Reencarnação",
+    "level": 7,
+    "school": "Necromancia",
+    "sphere": "Necromancia",
+    "castingTime": "1 turno",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Pessoa tocada",
+    "description": "Com essa magia, o clérigo pode trazer uma pessoa morta de volta à vida em outro corpo, se a morte ocorreu há não mais do que uma semana antes da execução da fórmula. A Reencarnação não requer teste de resistência, de colapso ou de ressurreição. O cadáver é tocado, e uma nova encarnação da pessoa aparece na área em 1d6 turnos. A pessoa reencarnada recorda-se da maior parte de sua vida e forma anteriores, mas a classe de clérigo, se houver, da nova encarnação, pode ser muito diferente. A nova encarnação é determinada de acordo com a tabela seguinte, ou conforme a escolha do Mestre. Se uma raça de clérigo for indicada, o novo clérigo deve ser criado, com novas jogadas de dados. A critério do Mestre, certos incensos especiais (e caros) podem ser usados na tentativa de lazer um clérigo retornar como um representante de raça ou espécie específicas. Um Desejo pode devolver a forma e o status originais a um clérigo reencarnado. Resultado do 1d100 Encarnação 01-03 Texugo 04-08 Urso negro 09-12 Urso marrom 13-16 Javali selvagem 17-19 Centauro 20-23 Dríade 24-28 Águia 29°31 Eito 32-34 Fauno/sátiro 35-36 Raposa 37-40 Gnomo 41-44 Falcão 45-58 Humano 59-61 Lince 62-64 Coruja 65-68 Pixie 69-70 Guaxinim 71-75 Cervo 76-80 Lobo 81-85 Carcaju 86-00 Escolha do Mestre Se uma forma incomum de criatura for indicada, o Mestre pode (apenas ao seu critério) usar as indicações para a criação de novas raças, e assim permitir ao clérigo que ganhe experiência e avance em níveis, embora ele, talvez, não pertença mais à classe anterior. Se o clérigo reencarnado retornar como uma criatura que poderia pertencer à mesma classe que a encarnação anterior (por exemplo, um guerreiro humano voltar como um elfo), ele terá metade de seus níveis e de pontos de vida. Se reviver em uma nova classe de clérigo, seus pontos de vida corresponderão à metade dos anteriores, mas ele deverá começar de novo do 1º nível. Se o clérigo voltar como uma criatura incapaz de ter uma classe, ele terá metade dos pontos de vida e dos valores de resistência de sua encarnação anterior."
+}

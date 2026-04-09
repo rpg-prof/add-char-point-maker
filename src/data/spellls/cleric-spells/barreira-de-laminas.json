@@ -1,0 +1,11 @@
+{
+    "name": "Barreira de Lâminas",
+    "level": 6,
+    "school": "Evocação",
+    "sphere": "Guarda, Criação",
+    "castingTime": "9",
+    "duration": "3 rodadas/nível",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "O clérigo emprega essa magia a fim de criar uma parede circular de lâminas afiadas. Ela gira em torno de um ponto central, gerando uma barreira imóvel. Qualquer criatura que tentar ultrapassar a Barreira de Lâminas sofre 8d8 pontos de dano ao fazê-lo. O plano de rotação das lâminas pode ser horizontal, vertical ou diagonal. Criaturas que estiverem dentro da área da barreira, quando esta for gerada têm direito a um teste de resistência à magia. Se bem-sucedido, a criatura evita as lâminas e não sofre dano, escapando pela rota mais curta possível. A barreira permanece por três rodadas para cada nível de experiência do clérigo, e pode cobrir desde uma área tão pequena quanto um quadrado de 2 metros de lado, ou chegar a um quadrado de 20 metros de lado."
+}

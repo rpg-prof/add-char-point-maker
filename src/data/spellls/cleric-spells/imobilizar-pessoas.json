@@ -1,0 +1,11 @@
+{
+    "name": "Imobilizar Pessoas",
+    "level": 2,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Feitiços",
+    "castingTime": "5",
+    "duration": "2 rodadas/nível",
+    "range": "120 metros",
+    "area": "1d4 pessoas em uma área de 6 metros cúbicos",
+    "description": "Essa magia imobiliza 1d4 seres humanos, semi-humanos ou humanóides, deixando-os paralisados no lugar por cinco ou mais rodadas. Imobilizar Pessoas afeta qualquer criatura bípede, humanóide com o tamanho de um ser humano ou menor, incluindo brownies, dríades, gnolls, elfos, anões, orcs, humanos, kobolds, nixies, sprites, pixies. trogloditas e outros. Um guerreiro humano de 10º nível será afetado, mas um ogro não. O efeito será focalizado num ponto escolhido pelo clérigo, e afetará somente as criaturas escolhidas por ele, dentro da área atingida. Se a magia for lançada sobre três criaturas, elas farão um teste de resistência normal: se somente duas forem afetadas, seus testes terão uma penalidade de -1; se a magia for lançada sobre uma pessoa, seu teste terá uma penalidade de -2. Os ajustes de Sabedoria devem ser utilizados. Aqueles que forem bem-sucedidos no teste não serão de forma alguma afetados pela magia, mortos-vivos não são atingidos. Criaturas imobilizadas não se movem ou falam, mas continuam cientes do que está ocorrendo ao seu redor, e podem usar poderes que não necessitem de movimento ou de fala. Esta imobilização não irá evitar danos físicos, ou retardar a ação de venenos ou doenças. O efeito desta magia poderá ser cancelado pelo clérigo que a lançou com uma simples palavra; de outro modo, a duração será de duas rodadas no 1º nível, quatro no 2°, seis no 3°, etc. O componente material é um pequeno pedaço de ferro reto."
+}

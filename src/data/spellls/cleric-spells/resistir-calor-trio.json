@@ -1,0 +1,11 @@
+{
+    "name": "Resistir Calor/Trio",
+    "level": 2,
+    "school": "Alteração",
+    "sphere": "Proteção",
+    "castingTime": "5",
+    "duration": "1 rodada/ nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Quando este efeito é lançado pelo Clérigo sobre uma criatura, o corpo do receptor torna-se resistente ao calor ou ao frio. como o executor da magia desejar. A criatura será completamente imune aos climas normais (podendo ficar nua sob a neve. ou muito próxima a um fogo comum, sem notar) O receptor poderá também expor-se ao calor ou frio intensos (de origem natural ou mágica), como o de carvão em brasa ou, também, ser atingido por um tonel de óleo fervendo, espadas flamejantes, Tempestade de Fogo, Bola de Fogo. Chuvas de Meteoros. Sopro-de-Dragão vermelho. Espada do Gelo, Tempestade de Gelo, varinhas do gelo ou Sopro-de-Dragão branco, em que temperatura é muito intensa e prolongada. Nestes casos, o receptor ganha um bônus de +3 no teste de resistência a tais ataques, e todo o dano será reduzido a 50%. mesmo que o teste falhe. Se for bem-sucedido. a criatura sofre apenas 1/4 do dano total. Esta proteção durará uma rodada para cada nível do clérigo que a lançou. O componente material é uma gota de mercúrio."
+}

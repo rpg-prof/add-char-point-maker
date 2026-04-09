@@ -1,0 +1,11 @@
+{
+    "name": "Portal Vegetal",
+    "level": 5,
+    "school": "Alteração",
+    "sphere": "Vegetal",
+    "castingTime": "9",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Usando essa magia, o clérigo torna-se capaz de entrar em uma árvore e mover-se de seu interior para o interior de outras árvores do mesmo tipo, que estejam plantadas na direção da trajetória desejada, e dentro do alcance mostrado na tabela seguinte: Tipo de Árvore Alcance da Área de Efeito Carvalho 600 metros Freixo 540 metros Teixo 480 metros Olmo 420 metros Tília 360 metros Efêmeras 300 metros Coníferas 240 metros Outras 180 metros A árvore ocupada e a que vai receber o clérigo devem ser do mesmo tipo, precisam estar vivas e possuir volume pelo menos igual ao do clérigo. Observe que se ele ocupar uma árvore, um freixo, por exemplo, e quiser ir para o norte o mais longe possível (540 metros), mas o único freixo apropriado dentro do alcance está no sul, o clérigo vai passar para a árvore no sul. O Portal Vegetal funciona de modo que o movimento use apenas uma rodada. O clérigo pode, se quiser, permanecer dentro da árvore por, no máximo, uma rodada por nível de experiência. Senão, pode passar adiante imediatamente. Não havendo uma árvore apropriada no alcance, o clérigo simplesmente permanece dentro dela, não move-se para outro lugar, e deve partir no número devido de rodadas. Se a árvore ocupada for derrubada ou queimada, o clérigo será exterminado, caso não saia antes que a destruição do vegetal se complete."
+}

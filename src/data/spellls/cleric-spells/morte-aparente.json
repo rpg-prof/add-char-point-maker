@@ -1,0 +1,11 @@
+{
+    "name": "Morte Aparente",
+    "level": 3,
+    "school": "Necromancia",
+    "sphere": "Necromântica",
+    "castingTime": "6",
+    "duration": "1 turno + 1 rodada/nível",
+    "range": "Toque",
+    "area": "Pessoa tocada",
+    "description": "Pelo uso dessa magia, a pessoa afetada é reduzida a um estado idêntico à morte. O receptor, apesar de continuar ouvindo e sentindo cheiros, não pode perceber o próprio corpo ou enxergar. Assim, qualquer agressão contra ele não será sentida, tornando-o incapaz de reagir. Todo dano sofrido neste estado é reduzido pela metade, e ataques baseados em paralisação, dreno de energia e veneno não têm efeito. Veneno, se injetado, ou de alguma outra forma introduzido no organismo, passa a atuar apenas quando o efeito de Morte Aparente cessar. De qualquer forma, um teste de resistência a venenos é permitido, seguindo as regras normais de resistência. Esta magia não oferece proteção contra causas de morte certa - ser esmagado, etc. O efeito só atinge pessoas que desejam recebê-lo. O clérigo pode terminar a magia quando desejar, embora o receptor precise de uma rodada completa para restabelecer suas funções vitais. Diferente do que acontece na versão arcana desta magia, apenas pessoas podem ser afetadas sem restrições de nível."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Penitência",
+    "level": 5,
+    "school": "Abjuração",
+    "sphere": "Todas",
+    "castingTime": "7",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "1 pessoa",
+    "description": "Essa magia é usada pelo clérigo para remover a culpa de atos involuntários, ou desconhecidos, praticados pela pessoa que é o objeto da expiação. O efeito também remove qualquer mudança de tendência induzida por magia. A pessoa interessada no perdão deve estar sinceramente arrependida, ou não ter tido controle sobre a própria vontade quando os pecados foram cometidos. O Mestre irá julgar esse efeito com atenção, observando exemplos anteriores de seu uso sobre a pessoa. Crimes deliberados e atos de natureza voluntária e conhecida não podem ser perdoados (veja Missão). Caso o clérigo recuse-se a receber a expiação, assume-se que seus delitos foram voluntários. O clérigo necessita de seu símbolo sagrado, um colar de contas para oração, um moinho de orações ou um livro de rezas, e incenso."
+}

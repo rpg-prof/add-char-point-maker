@@ -1,0 +1,11 @@
+{
+    "name": "Luz Continua",
+    "level": 3,
+    "school": "Alteração",
+    "sphere": "Solar",
+    "castingTime": "5",
+    "duration": "Permanente",
+    "range": "120 metros",
+    "area": "Esfera de 20 metros de raio",
+    "description": "Essa magia é similar à Luz, mas é tão intensa quanto a luz do dia, e dura até ser anulada por escuridão mágica ou por Dissipar Magia. Criaturas que sofrem penalidades sob luz forte serão prejudicadas na área deste efeito. Assim como Luz, esta magia pode ser lançada no ar, num objeto ou numa criatura. No terceiro caso, Luz Contínua afeta o espaço de 30 centímetros atrás da vítima que for bem-sucedida num teste de resistência contra magia. Uma falha no teste significa que o efeito luminoso está centrado no ser, e se move junto com ele. Note que este efeito também pode cegar uma criatura, se lançado sobre seus órgão visuais. Se a magia atingir um objeto coberto por alguma proteção à prova de luz, a magia é bloqueada até que a cobertura seja removida. Se for lançada numa região obscurecida por escuridão mágica, ambas as magias, luz e escuridão, são canceladas, prevalecendo então as condições naturais do local. Com o tempo, este efeito consome o material sobre o qual é lançado, muito embora este processo seja lento demais para afetar uma campanha (às vezes levando séculos). A magia reversa, Escuridão Contínua, causa completa ausência de luz da mesma forma que Escuridão, só que com maiores área e duração."
+}

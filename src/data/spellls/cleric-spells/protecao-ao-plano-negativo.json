@@ -1,0 +1,11 @@
+{
+    "name": "Proteção ao Plano Negativo",
+    "level": 3,
+    "school": "Abjuração",
+    "sphere": "Proteção, Necromântica",
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "1 criatura",
+    "description": "Essa magia concede à criatura afetada uma proteção parcial contra mortos-vivos ligados ao plano Material Negativo (vampiros, espectros, etc.), assim como contra armas e magias que drenem níveis de energia. Este efeito abre uma ligação entre seu receptor e o plano Material Positivo, o que provavelmente provoca a anulação dos efeitos da energia negativa. A criatura protegida, se atingida por algum ataque que utiliza energia negativa, deve fazer um teste de resistência contra morte. Se obtiver sucesso, o contato entre as energias positiva e negativa faz com que ambas se anulem, deixando-o vulnerável apenas ao dano físico do ataque. Se o teste falhar, além dos efeitos causados pela energia negativa, o dano físico recebido pela criatura protegida será igual ao dobro do dano normal. A proteção se limita a apenas um ataque, ou seja, qualquer que tenha sido o resultado do teste de resistência, a magia imediatamente acaba. Se o ataque foi realizado por um morto-vivo, este sofre um dano de 2d6 pontos devido ao contato com a energia positiva. Esta magia não pode ser lançada no plano Material Negativo."
+}

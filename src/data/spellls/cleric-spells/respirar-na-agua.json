@@ -1,0 +1,11 @@
+{
+    "name": "Respirar na Água",
+    "level": 3,
+    "school": "Alteração",
+    "sphere": "Elemental (Água, Ar)",
+    "castingTime": "7",
+    "duration": "1 hora/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "A criatura afetada por essa magia ganha o poder de respirar na água durante toda a duração da magia. O clérigo pode dividir o efeito entre várias pessoas, embora isso também divida a duração, ou seja, um clérigo de 8º nível pode conferir este poder para uma pessoa durante 8 horas, duas pessoas por 4 horas, oito pessoas por 1 hora, etc., até um mínimo de 30 minutos. A magia reversa, Respirar Ar, permite que criaturas que respirem na água passem a respirar ar Observe que nenhuma das versões impede que a criatura afetada respire em seu ambiente natural (ou seja, ela adiciona um poder, não substituindo o anterior)."
+}

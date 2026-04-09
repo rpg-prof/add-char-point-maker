@@ -1,0 +1,11 @@
+{
+    "name": "Oração",
+    "level": 3,
+    "school": "Conjuração/Convocação",
+    "sphere": "Combate",
+    "castingTime": "6",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "20 metros de raio",
+    "description": "Pelo uso desta magia, o clérigo traz para seus amigos e para ele mesmo as boas graças de sua divindade, além de prejudicar os inimigos. Todos que estiverem na área da magia são atingidos em toda a duração do efeito. Os que estiverem lutando ao lado do clérigo recebem um bônus de 1 em suas jogadas de ataque, dano e em todos o testes de resistência. Os inimigos, porém, recebem, nessas mesmas jogadas (ataque, dano e resistência), uma penalidade de 1. Uma vez que a fórmula mágica tenha sido prenunciada, o clérigo poderá realizar qualquer outra ação. Se outro clérigo da mesma religião estiver declamando (veja a magia divina Cântico) quando este efeito é executado, as magias se combinam e produzem bônus e penalidades de +2 e -2, durante todo o tempo em que ambas estiverem ativas simultaneamente. Para lançar essa magia, o clérigo precisa de um símbolo sagrado de prata e de um colar de contas. Esses componentes não são consumidos."
+}

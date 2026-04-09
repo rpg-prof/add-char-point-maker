@@ -1,0 +1,11 @@
+{
+    "name": "Falar com Plantas",
+    "level": 4,
+    "school": "Alteração",
+    "sphere": "Vegetal",
+    "castingTime": "8",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "10 metros de raio",
+    "description": "O clérigo, pelo uso dessa magia, torna-se capaz de estabelecer uma comunicação rudimentar com todas as formas de vida vegetal (incluindo fungos, limos e monstros). Além disso, ele também passa a exercer um controle mental limitado sobre plantas normais Assim, o clérigo pode fazer perguntas aos vegetais, e comandá-los, desde que alguns limites sejam respeitados. Nenhuma planta pode fazer algo que lhe seja fisicamente impossível: assim, um druida poderia ordenar que uma planta segurasse e imobilizasse uma pessoa (como em Constrição), ou exigir a libertação de uma pessoa aprisionada pelo vegetal, mas não poderia exigir que uma árvore retirasse suas raízes do solo para sair andando. Toda a vegetação na área de efeito é afetada. Para que esta magia seja lançada, os seguintes componentes materiais são necessários: uma gota de água, um pouco de estrume e uma fonte de fogo pequena (uma chama basta)."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Carruagem Flamejante",
+    "level": 7,
+    "school": "Evocação",
+    "sphere": "Elemental (Fogo), Criação",
+    "castingTime": "1 rodada",
+    "duration": "12 horas",
+    "range": "10 metros",
+    "area": "Especial",
+    "description": "Essa magia faz surgir uma grande carruagem flamejante puxada por dois cavalos do plano elemental do Fogo. Eles aparecem com um estrondo, em meio a uma nuvem de fumaça. O veículo tem uma taxa de movimentação de 24 sobre o solo e 48 no ar, e pode carregar o clérigo e até mais sete criaturas do mesmo tamanho ou menores do que um homem (os passageiros devem ser tocados pelo clérigo para estarem protegidas das chamas da carruagem). Outras criaturas, além do clérigo e seus passageiros, recebem 2d4 pontos de dano por fogo por rodada, se permanecerem a menos de 2 metros dos cavalos. Tais criaturas não sofrerão dano se fugirem da área por melo de um teste de resistência contra petrificação bem-sucedido, com ajustes de Destreza. O clérigo controla a Carruagem Flamejante com comandos verbais, fazendo os cavalos de fogo parar, andar, trotar, galopar, voar, virar à direita ou à esquerda. Observe que ela é uma manifestação física, e pode, portanto, sofrer danos. O veículo e os cavalos são atacados apenas com armas mágicas ou com água (0.5 litro causa ponto de dano), têm CA 2 e cada um requer 30 pontos de dano para desaparecer. Naturalmente, ataques com fogo não produzem efeito, mas fogo mágico de natureza diversa à da carruagem e dos cavalos pode afetar os tripulantes. Magias, tais como Dissipar Magia ou Palavra Sagrada, quando bem-sucedidas, forçam a carruagem a voltar ao seu lugar de origem, sem os passageiros, A Carruagem Flamejante pode ser convocada apenas uma vez por semana. Os componentes materiais são um pedaço pequeno de madeira, dois azevinhos e uma fonte de fogo equivalente, no mínimo, a uma tocha."
+}

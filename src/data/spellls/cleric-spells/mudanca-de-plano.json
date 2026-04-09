@@ -1,0 +1,11 @@
+{
+    "name": "Mudança de Plano",
+    "level": 5,
+    "school": "Alteração",
+    "sphere": "Astral",
+    "castingTime": "8",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Criatura tocada (especial)",
+    "description": "Quando a Mudança de Plano é lançada, o clérigo move a si mesmo ou a outra criatura para outro plano de existência. O receptor da magia permanece no novo plano até ser mandado adiante por meios semelhantes. Se várias pessoas derem-se as mãos em círculo, até oito delas podem ser afetadas pela magia ao mesmo tempo. Os componentes materiais são um pequeno diapasão — do tamanho exato e do tipo de metal correspondentes ao plano (incluindo subplanos e outras dimensões) que se quer atingir (o Mestre vai especificar como e quais planos são alcançados). Uma vítima involuntária deve ser tocada (numa jogada de ataque bem sucedida) para ser transportada. Além disso, a criatura tem direito a um teste de resistência. Se tiver sucesso, o efeito da magia será anulado. Observe que a destinação precisa, dentro do novo plano, raramente é atingida: é comum chegar a alguma distância do local pretendido. O diapasão não é consumido quando a magia é conjurada. Diapasões que servem de chave para certos planos podem ser difíceis de conseguir, conforme determinar o Mestre."
+}

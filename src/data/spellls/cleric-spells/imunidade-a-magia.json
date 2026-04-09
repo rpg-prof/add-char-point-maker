@@ -1,0 +1,11 @@
+{
+    "name": "Imunidade à Magia",
+    "level": 4,
+    "school": "Abjuração",
+    "sphere": "Proteção",
+    "castingTime": "8",
+    "duration": "1 turno/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Esse efeito pode fazer uma criatura imune a outra magia (no máximo de 4º círculo) ou a poderes inatos que gerem eleitos similares a magias, ou itens mágicos. Ele não protege contra Sopros-de-Dragão ou ataques visuais. Existem outras limitações: o clérigo (executor da fórmula) deve ter sofrido diretamente os efeitos da magia contra a qual quer imunidade; a criatura afetada não pode estar protegida magicamente (seja por outras magias, seja por itens mágicos); e apenas uma imunidade específica é concedida — sendo impossível proteger uma criatura contra todas as magias de um grupo, de uma Escola de Magia ou de uma Esfera de Oração. Isso significa, por exemplo, que uma pessoa imunizada contra Relâmpago ainda é vulnerável ao Toque Chocante. O componente material é o mesmo da magia contra a qual se quer imunidade"
+}

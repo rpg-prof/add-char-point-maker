@@ -1,0 +1,11 @@
+{
+    "name": "Cântico",
+    "level": 2,
+    "school": "Conjuração/Convocação",
+    "sphere": "Combate",
+    "castingTime": "5",
+    "duration": "Tempo de declamação",
+    "range": "0",
+    "area": "10 metros de raio",
+    "description": "Por meio do Cântico o clérigo consegue atrair um favor especial sobre ele e seu grupo, prejudicando seus inimigos. Com o lançamento da magia, toda as jogadas de ataque, dano e testes de resistência feitos na área atingida pelos aliados do clérigo ganham um bônus de +1, enquanto que os inimigos presentes no local recebem penalidade de -1. Estes bônus/penalidades durarão enquanto o clérigo declamar as sílabas místicas e permanecer parado Qualquer interrupção, corno um ataque que cause dano, alguém que agarre o clérigo ou um Silêncio, irá interromper o efeito. Muitos Cânticos não são cumulativos. Entretanto, se uma Oração, do 3º círculo, for lançada enquanto outro clérigo da mesma religião (não necessariamente da mesma tendência) estiver declamando Cântico, o efeito aumentará para +2 e -2."
+}

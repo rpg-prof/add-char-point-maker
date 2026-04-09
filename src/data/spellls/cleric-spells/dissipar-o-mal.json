@@ -1,0 +1,11 @@
+{
+    "name": "Dissipar o Mal",
+    "level": 5,
+    "school": "Abjuração",
+    "sphere": "Proteção, Convocação",
+    "castingTime": "8",
+    "duration": "1 rodada/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Essa magia faz com que uma criatura de natureza maligna, uma criatura maligna de outro plano, ou um ser conjurado por personagens malignos, retorne ao seu próprio plano ou local de origem, assim que o clérigo consiga tocá-la com sucesso — o que requer uma jogada de ataque — em combate corpo a corpo (exemplos dessas criaturas são serviçais aéreos, efreeti, gênios, elementais e Caçadores Invisíveis). Um efeito maligno (como um Feitiço lançado por uma criatura má), que normalmente seria destruído por Dissipar Magia, pode ser automaticamente desfeito por Dissipar o Mal Observe que esta magia dura no máximo uma rodada para cada nível de experiência do clérigo, ou até ser utilizada. Enquanto a magia está em eleito, todas as criaturas que poderiam ser afetadas por ela atacam com uma penalidade de -7 nas jogadas que envolvem o executor do efeito. O reverso, Dissipar o Bem, funciona contra criaturas convocadas ou encantadas de inclinação benevolente, ou criaturas que tenham sido enviadas para ajudar a causa do bem. Os componentes materiais são o objeto religioso do clérigo e água benta (ou profana)."
+}

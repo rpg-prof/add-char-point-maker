@@ -1,0 +1,11 @@
+{
+    "name": "Convocar Animais III",
+    "level": 6,
+    "school": "Conjuração/Convocação",
+    "sphere": "Animal, Convocação",
+    "castingTime": "8",
+    "duration": "Especial",
+    "range": "100 metros/nível",
+    "area": "Especial",
+    "description": "Essa magia tem a mesma duração e efeito de Convocar Animais I, do 4º círculo, exceto pelo fato de que até quatro animais com não mais de 16 dados de vida, ou oito de 8 dados de vida, ou dezesseis criaturas com 4 dados de vida podem ser convocadas. Virão somente animais que estiverem dentro do alcance da magia no instante da formulação. O clérigo pode tentar por 3 vezes convocar três tipos de animais — suponha que ele chame primeiro cães selvagens inutilmente. Depois, sem sucesso, convoque falcões e, finalmente, resolva reunir cavalos selvagens. O Mestre vai determinar a chance dos animais chamados estarem dentro do alcance. Os bichos ajudam o clérigo com qualquer um dos meios de que dispõem, permanecendo até o fim de uma batalha ou de uma missão específica, que o clérigo esteja a salvo ou simplesmente os dispense. Somente animais normais ou gigantes podem ser convocados por esta magia: estando excluídos animais fantásticos ou monstros, como quimeras, dragões, górgonas, manticores, etc."
+}

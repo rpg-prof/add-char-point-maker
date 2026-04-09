@@ -1,0 +1,11 @@
+{
+    "name": "Pele de Árvore",
+    "level": 2,
+    "school": "Alteração",
+    "sphere": "Proteção, Vegetal",
+    "castingTime": "2 rodadas",
+    "duration": "A rodadas + 1 rodada/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Quando o clérigo lança essa magia sobre uma criatura, a pele do receptor se tornará tão dura quanto uma casca de árvore, aumentando a CA para 6, mais 1 CA para cada quatro níveis do clérigo: CA 5 no 4º nível. CA 4 no 8°, e assim por diante. Este efeito não funciona quando combinado com uma armadura comum, ou qualquer outro tipo de proteção mágica. Além disso, testes de resistência contra qualquer ataque, exceto magias, ganham um bônus de +1. Essa magia pode ser aplicada ao próprio clérigo, ou a qualquer criatura que ele tocar. Além de seu símbolo sagrado, o clérigo precisará de um punhado de casca de carvalho como componente para a magia."
+}

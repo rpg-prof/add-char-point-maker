@@ -1,0 +1,11 @@
+{
+    "name": "Mensageiro",
+    "level": 2,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Animal",
+    "castingTime": "1",
+    "duration": "1 dia/nível",
+    "range": "20 metros/nível",
+    "area": "1 criatura",
+    "description": "Essa magia capacita o clérigo a chamar uma criatura diminuta (tamanho D), e com Inteligência não superior ao nível animal, para ser sua mensageira. Este efeito não irá funcionar com animais gigantescos, ou de Inteligência igual ou maior ao nível baixo (Inteligência 5). Se houver alguma criatura dentro do alcance da magia, o clérigo utilizando-se de uma isca (um alimento que o animal aprecie) poderá chamá-la para perto. O receptor deve fazer um teste de resistência à magia. Se falhar, ele avançará para o clérigo e ficará aguardando uma ordem. O clérigo pode se comunicar com o animal num nível extremamente básico, dizendo-lhe aonde ir: entretanto, tais ordens devem ser muito simples. A criatura pode carregar um item ou uma mensagem escrita. Após ser instruído, o animal irá para o local desejado, ficando lá até o final do efeito. (Note que. a menos que o destinatário esteja esperando um mensageiro na forma de um pequeno animal, este mensageiro poderá ser ignorado por ele.) Assim que a duração da magia terminar, o animal volta às suas atividades naturais. O destinatário não ganha a capacidade de se comunicar com o mensageiro."
+}

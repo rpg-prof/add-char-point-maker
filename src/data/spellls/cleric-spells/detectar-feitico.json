@@ -1,0 +1,11 @@
+{
+    "name": "Detectar Feitiço",
+    "level": 2,
+    "school": "Adivinhação",
+    "sphere": "Adivinhação",
+    "castingTime": "1 rodada",
+    "duration": "1 turno",
+    "range": "30 metros",
+    "area": "1 criatura/rodada",
+    "description": "Quando usada, essa magia permite ao clérigo descobrir se uma pessoa ou monstro está sob a influência de um Feitiço, ou magias de controle semelhantes, como Hipnotismo. Sugestão. Despistar. Retenção, etc. A criatura fará um teste de resistência à magia e. se tiver sucesso, nada será descoberto sobre seu estado mental. Um clérigo que descubra que a criatura esta sendo influenciada tem 5% de chance por nível de adivinhar qual o tipo exato de influência está sendo utilizado. Um máximo de dez criaturas podem ser analisadas antes que o eleito acabe Se a criatura estiver sob mais de uma influência, só se saberá que a vítima está sendo controlada. O tipo (uma vez que existem emanações diferentes) é impossível de determinar. A magia reversa, Dissimular Feitiço, esconde completamente, por 24 horas, qualquer magia de influência sobre uma criatura."
+}

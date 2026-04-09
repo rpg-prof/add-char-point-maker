@@ -1,0 +1,11 @@
+{
+    "name": "Passos sem Pegadas",
+    "level": 1,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Vegetal",
+    "castingTime": "4",
+    "duration": "1 turno/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Quando essa magia é utilizada, o receptor poderá andar sobre qualquer tipo de solo — lama, areia, neve, etc. — sem deixar suas pegadas. O terreno por onde ele caminhar ficará com uma aura mágica por até 1d6 turnos após sua passagem. Entretanto, é impossível encontrar um rastro oculto por essa magia usando meios normais. É claro que técnicas avançadas de rastreamento, como a de busca em padrão de espiral, farão com que os perseguidores encontrem o rastro a partir do ponto onde a magia acabou. O componente material é um galho de pinheiro ou sempre-verde, que precisará ser queimado e ter as cinzas espalhadas no ato de lançar a magia."
+}

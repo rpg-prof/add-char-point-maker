@@ -1,0 +1,11 @@
+{
+    "name": "Tempestade de Fogo",
+    "level": 7,
+    "school": "Evocação",
+    "sphere": "Elemental (Fogo)",
+    "castingTime": "",
+    "duration": "1 rodada",
+    "range": "160 metros",
+    "area": "Cubo de 6 metros de lado/nível, no mínimo 16 cubos de 3 metros de lado",
+    "description": "Quando essa magia é lançada, toda a área é atingida por chamas que equivalem, em efeito, a uma Muralha de Fogo. Criaturas dentro da área de fogo, ou a menos de 3 metros das bordas, recebem 2d8 pontos de dano, mais dano adicional correspondente ao nível do clérigo (2d8 + 1/nível). Criaturas bem-sucedidas no teste de resistência contra magia sofrem apenas metade do dano. O dano é infligido a cada rodada que a criatura permanecer na área de efeito, que equivale a dois cubos de 3 x 3 metros por nível do clérigo — ou seja, um clérigo de 13º nível pode lançar uma Tempestade de Fogo medindo 3º x 6 x 3 metros. A altura da tempestade é sempre de 3 ou 6 metros, o balanceamento do volume total deve sempre ser feito em termos de largura e comprimento. O reverso, Extinguir Fogo, abafa fogo normal num espaço que é o dobro da área de efeito, e igual à área de efeito no caso de fogo mágico. Criaturas cuja constituição básica é de fogo. como elementais e salamandras, de status inferior ao de semideus, podem ser exterminadas, numa chance equivalente a 5% por nível de experiência do clérigo. Se a magia for lançada apenas contra uma espada língua de logo. a arma deve passar por um teste de resistência contra esmagamento, ou perder seus poderes mágicos. Essa espada, se estiver em posse de uma criatura, primeiro receberá a resistência dela. Se este teste for bem-sucedido, o segundo terá sucesso automaticamente."
+}

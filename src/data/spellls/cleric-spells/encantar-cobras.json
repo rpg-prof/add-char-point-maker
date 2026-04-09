@@ -1,0 +1,11 @@
+{
+    "name": "Encantar Cobras",
+    "level": 2,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Animal",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "30 metros",
+    "area": "1 metro cúbico",
+    "description": "Com essa magia, o clérigo consegue hipnotizar uma ou mais serpentes, deixando-as inativas. Os animais ficarão semi-eretos, mantendo somente um movimento oscilatório em seus corpos. Se as serpentes forem enfeitiçadas enquanto em torpor a duração da magia será de 1d4 + 2 turnos: se não tiverem sido provocadas e não estiverem irritadas, o feitiço durará 1d3 turnos; se a serpente estiver irritada, ou sendo acuada ou atacada, a duração da magia será de 1d4 + 4 rodadas. O clérigo só poderá enfeitiçar uma ou mais serpentes se o total de pontos de vida das criaturas for menor ou igual ao seu. Normalmente, um clérigo de 1- nível poderá enfeitiçar serpente até 4 ou 5 pontos de vida, no 2- nível serão, normalmente. 9 pontos, etc. Estes pontos de vida poderão pertencer a um animal ou mais, desde que não ultrapassem os pontos de vida do clérigo. Um clérigo de 23 pontos de vida pode, ao tentar enfeitiçar um grupo de doze serpentes com 2 pontos cada. conseguir sucesso com até onze delas. O efeito funciona em qualquer ofídio ou monstro do gênero, como uma naga, couatl, etc., embora esteja sujeito à proteção contra magia do réptil, limite de pontos de vida e coisas assim. Variações deste efeito podem existir, incluindo criaturas com algum significado para as diversas crenças e religiões do jogo. O Mestre irá avisar se tais magias existem."
+}

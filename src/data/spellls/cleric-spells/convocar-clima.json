@@ -1,0 +1,11 @@
+{
+    "name": "Convocar Clima",
+    "level": 6,
+    "school": "Conjuração/Convocação",
+    "sphere": "Clima",
+    "castingTime": "3 rodadas",
+    "duration": "Especial",
+    "range": "0",
+    "area": "Especial",
+    "description": "Com essa magia, o clérigo pode causar um temporal condizente com o clima e a estação do ano em que está. Na primavera poderiam ser criados um tornado, tempestades tropicais, de granizo ou de trovões. Verão, chuvas torrenciais, ondas quentes, temporal com granizo etc. Outono, temperatura quente ou fria, neblina, granizo, etc. Já no inverno, podem ser convocados frio intenso e nevascas. Furacões podem ser criados perto de regiões costeiras no final do inverno, ou início da primavera. O fenômeno climático conjurado não está sob o controle do clérigo. Não pode durar mais que um turno, no caso de um tornado, em outros casos pode levar várias horas ou mesmo dias. A área de eleito lambem varia de 1 a 160 quilômetros quadrados. Observe que diversos clérigos podem agir em conjunto para afetar o tempo, controlar os ventos e convocar condições climáticas extremas. Dentro de quatro turnos após o lançamento da magia, fica visível a tendência do tempo — por exemplo, céus clareando, rajadas de calor ou ar quente, uma brisa Iria, céus nublados, etc. O clima convocado surge em 1d12 + 5 turnos após a execução da fórmula. Observe que a nova condição climática não pode ser modificada pelo clérigo depois de se configurar completamente. ou seja, não poderá ser dissipada. Se a dissipação da magia for bem-sucedida antes que as novas condições atinjam a plenitude, o tempo retornará vagarosamente ao estado original."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Remover Maldições",
+    "level": 3,
+    "school": "Abjuração",
+    "sphere": "Proteção",
+    "castingTime": "6",
+    "duration": "Permanente rea de Efeito:",
+    "range": "Toque",
+    "area": "",
+    "description": "Especial Ao usar essa magia, o clérigo é capaz de remover maldições que estejam em um objeto, pessoa, ou na forma de alguma presença maligna ou indesejada. Não remove permanentemente a maldição de objetos (escudos, armas, armaduras, etc.), mas permite que a pessoa afetada consiga se livrar de um item maldito. Algumas maldições especiais podem não ser desfeitas por essa magia, ou talvez seja necessário que o clérigo possua um nível mínimo para neutralizá-la. Licantropia, por exemplo, pode ser curada por um clérigo de 12º nível ou mais, se esta magia for aplicada até, no máximo, três dias após o contágio (o licantropo faz um teste de resistência à magia para determinar se a cura é eficiente). O contrário desta magia não é permanente, mas dura um turno por nível do clérigo. A maldição pode ter um dos seguintes efeitos (faça uma jogada de porcentagem). 1 a 50 - reduz um atributo por 3 pontos (o Mestre determina aleatoriamente qual o atributo afetado); 51 a 75 -penalidade de 4 para jogadas de ataque e testes de resistência; 76 a 00 - a vítima tem 50% de chance, por rodada, de derrubar o que quer que esteja segurando (ou de não fazer nada, se não estiver segurando objetos). É possível para um clérigo criar sua própria maldição, embora esta deva ser de poder similar às aqui citadas. Consulte o Mestre: ele deve decidir se aprova ou não essa maldição. Uma maldição criada por esta magia não pode ser afetada pela magia Dissipar Magia em qualquer uma de suas versões (arcana ou divina)."
+}

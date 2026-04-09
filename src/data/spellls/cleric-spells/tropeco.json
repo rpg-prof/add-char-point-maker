@@ -1,0 +1,11 @@
+{
+    "name": "Tropeço",
+    "level": 2,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Vegetal",
+    "castingTime": "1 turno",
+    "duration": "1 turno/nível",
+    "range": "Toque",
+    "area": "1 objeto de até 3 m/altura",
+    "description": "Essa magia pode ser lançada sobre qualquer objeto comum — uma parreira, um bastão, uma corda, ou similar. O efeito faz com que o alvo erga levemente do chão ou da superfície em que se encontra, fazendo criaturas mal-sucedi das no teste de resistência, tropeçarem. Note que o objeto só atrapalha o movimento daqueles que estiverem caminhando sobre ele. Com isso, um pedaço de corda de 1 metro de comprimento só poderá atrapalhar a passagem de uma única criatura de tamanho humano. Criaturas que estão se movendo rapidamente (correndo) e tropeçam, sofrem 1 ponto de dano, e ficam atordoadas por 1d4 + 1 rodadas, se a superfície for dura (no caso de turfa ou outro material macio, o atordoamento dura apenas até o final da rodada). Animais muito grandes, como elefantes, não serão afetados por esta magia. O objeto continuará atrapalhando o caminho de quem passar por ele. incluindo a pessoa que o encantou, até o final da duração da magia. Criaturas que saibam da existência da armadilha mágica ganham bônus de + 4 em seus testes de resistência. O objeto terá 80% de chance de passar despercebido, a não ser que quem o observe possua meios de descobrir armadilhas mágicas. Esta magia não funciona debaixo d’água."
+}

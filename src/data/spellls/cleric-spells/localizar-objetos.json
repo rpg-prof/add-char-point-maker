@@ -1,0 +1,11 @@
+{
+    "name": "Localizar Objetos",
+    "level": 3,
+    "school": "Adivinhação",
+    "sphere": "Adivinhação",
+    "castingTime": "6",
+    "duration": "8 horas",
+    "range": "60 metros +10 metros/nível",
+    "area": "1 objeto",
+    "description": "Essa magia permite localizar um objeto que seja conhecido ou familiar ao clérigo. O clérigo, ao executar o efeito, vira-se lentamente, e sentirá quando estiver voltado para a direção do objeto. desde que o item esteja dentro do alcance da magia. Este efeito pode localizar itens como jóias, armas, e até mesmo escadas e escadarias. Uma vez que o clérigo tenha fixado um item em sua mente, a magia localiza apenas esse item. Tentativas de localizar um item específico, como, por exemplo, a coroa de um rei ou a espada de um herói, necessitam de uma imagem mental extremamente fiel ao objeto Se a imagem for falha, o efeito não funcionará. Resumidamente, objetos únicos devem ser conhecidos pelo clérigo, para serem localizados. Esta magia ô bloqueada por chumbo. O reverso Ocultar Objetos impede que um item seja encontrado por magia, bolas de cristal ou meios similares por um período de oito horas. O clérigo deve tocar o objeto para afetá-lo desta forma. Nenhuma das aplicações desta magia atinge seres vivos."
+}

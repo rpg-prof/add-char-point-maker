@@ -1,0 +1,11 @@
+{
+    "name": "Terremoto",
+    "level": 7,
+    "school": "Alteração",
+    "sphere": "Elemental (Terra)",
+    "castingTime": "",
+    "duration": "1 rodada",
+    "range": "120 metros",
+    "area": "2 metros de diâmetro/nível",
+    "description": "Quando essa magia é lançada, um tremor de terra de força adequada rasga o chão. O fenômeno termina em uma rodada. O terremoto atinge todo o terreno, vegetação, estruturas e criaturas na área de efeito, que é circular, com 2 metros de diâmetro para cada nível de experiência do clérigo. Assim, um clérigo de 20º nível lança um terremoto com área de efeito de 40 metros de diâmetro. Estruturas construídas solidamente, com fundações providas de alicerces, recebem metade do dano, e apenas se obtiverem mais que 50% num teste de resistência. Um elemental da terra que se oponha ao clérigo e esteja presente à área afetada pode anular de 10 a 100% do efeito (jogue 1d10,0 = 100%). Outras proteções mágicas permitidas pelo Mestre podem reduzir ou anular os efeitos. Se lançada no fundo do mar. a magia pode criar um tsunami ou onda gigante, a critério do Mestre. Os componentes materiais são uma pitada de poeira, um pedaço de rocha e um torrão de argila. Efeitos do Terremoto: TERRENO Cova ou caverna: Queda do teto Penhasco: Desmorona mento, causando desabamento Solo: Surgimento de rachaduras, provocando queda e morte nas seguintes proporções: Tamanho P: 1 em 4 Tamanho M: 1 em 6 Tamanho G: 1 em 8 Pântano: Perda de água, formação de solo áspero e barrento Túnel: Desmoronamento VEGETAÇÃO Plantas pequenas: Nenhum efeito Árvores: 1 em 3 são arrancadas e caem ESTRUTURAS Todas as estruturas: Recebem 5d12 pontos de dano estrutural; as que sofrerem o dano integral são derrubadas, em escombros CRIATURAS (Ver TERRENO)"
+}

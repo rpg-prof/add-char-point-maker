@@ -1,0 +1,11 @@
+{
+    "name": "Obscurecimento",
+    "level": 2,
+    "school": "Alteração",
+    "sphere": "Clima",
+    "castingTime": "5",
+    "duration": "4 rodadas/nível",
+    "range": "0",
+    "area": "Especial",
+    "description": "Essa magia cria uma neblina em volta do clérigo, que continuará no local por quatro rodadas para cada nível do clérigo, e reduzirá o alcance de qualquer forma de visão (incluindo Infravisão) para 1d3 metros. A área de efeito da magia é derivada do nível do clérigo: 3 metros x 3 metros no 1” nível. 6 x 6 no 2”, 9 x 9 no 3°. e assim por diante. A altura da neblina será restrita a 3 metros de altura, e a névoa estará confinada à área da magia. Um vento forte (assim como o da Lufada de Vento, de 3” círculo) irá diminuir a duração do efeito em 75%. Esta magia não funciona embaixo d’água."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Raio de Sol",
+    "level": 7,
+    "school": "Evocação, Alteração",
+    "sphere": "Solar",
+    "castingTime": "",
+    "duration": "1 + 1d4 rodadas",
+    "range": "10 metros/nível",
+    "area": "Esfera de 2 metros de raio (mais especial)",
+    "description": "Com essa magia, o clérigo pode atrair um brilhante raio de luz durante cada rodada em que nenhuma atitude, além da movimentação, é tomada. O Raio de Sol parece um raio de sol natural. Todas as criaturas dentro da área de efeito de 4 metros de diâmetro devem ter sucesso em um teste de resistências magia ou serão cegadas por 1d3 rodadas, As que estiverem usando infravisão, serão cegadas por 2d6 rodadas. Componenetes: V, G, M Tempo de Execução: 1 dia Resistência: Nenhuma Criaturas para quem a luz do sol é prejudicial, ou não é natural, sofrerão cegueira permanente se o teste de resistência falhar, e ficarão cegas por 2d6 rodadas se funcionar. Aqueles na área de efeito, assim como as criaturas dentro de um perímetro de 8 metros à sua volta, perdem a Infravisão por 1d4 + 1 rodadas. Mortos-vivos surpreendidos na área de efeito recebem 8d6 pontos de dano, metade disso se forem bem-sucedidos no teste de resistência à magia. Os mortos-vivos dentro de 8 metros de distância da área de efeito recebem 3d6 pontos de dano, e não sofrem os efeitos se o teste de resistência funcionar. Além disso, o raio pode resultar na total destruição dos mortos-vivos vulneráveis à luz do sol, no caso dos testes de resistência falharem. A luz ultravioleta gerada pela magia inflige dano em seres fungóides e fungos subterrâneos assim como se fossem mortos-vivos, mas essas formas vegetais não têm direito a teste de resistência. Os componentes materiais são uma semente de áster e um pedaço de aventurina (pedra do sol)."
+}

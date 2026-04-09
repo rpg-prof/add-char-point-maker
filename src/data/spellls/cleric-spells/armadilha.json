@@ -1,0 +1,11 @@
+{
+    "name": "Armadilha",
+    "level": 3,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Vegetal",
+    "castingTime": "6",
+    "duration": "Permanente até ativada",
+    "range": "Toque",
+    "area": "Círculo de diâmetro igual a 60 centímetros + 5 centímetros/nível",
+    "description": "Esta magia permite ao clérigo criar um laço que tem 90% de chance de passar despercebido por observadores que não utilizem auxílio mágico. O laço pode ser leito com qualquer tipo de corda, cordão ou cipó. Quando a magia é lançada, ele se mistura com o ambiente, ficando difícil de ser detectado. Uma das pontas da corda forma o laço propriamente dito, que se contrairá quando a armadilha for ativada, prendendo um ou mais membros da criatura que ativou a armadilha (observe que a cabeça de uma cobra ou de um verme pode ser agarrada desta forma). Se houver alguma árvore grande próxima ao laço, a outra ponta da corda pode ser atada a esta. Quando a magia for ativada, a árvore se curva com violência, levantando a criatura e causando 1d6 pontos de dano. Se nenhuma árvore está atada ao laço, a corda, ao se contrair, irá enrolar-se ao redor da vítima. O laço, que deve ser considerado mágico, somente poderá ser aberto por uma força idêntica à força de um gigante das nuvens (Força 23) durante a primeira hora. Para cada hora, a partir de então, a Força necessária para abrir o laço diminui por 1. Após 6 horas, a Força necessária se estabiliza em 18. Depois de 12 horas, o laço perde toda a magia, libertando sua vítima. O laço pode ser cortado com qualquer arma mágica, ou com qualquer cada 1 metro de movimentação pela área, a vítima sofre 2d4 pontos lâmina empunhada com um bônus para jogada de ataque de pelo de dano. Um teste de resistência à magia é necessário para evitar que menos +2 (bônus de Força, por exemplo). a movimentação caia em 1/3 (com um mínimo de movimentação 1 O clérigo precisa de uma pele de cobra e um pedaço da crina de um permitida). Esta penalidade dura 24 horas. animal forte para trançar na corda que fará o laço. Além disso, deve Sem o uso de magias de detecção, a área afetada (e o fato dela estar utilizar o seu símbolo sagrado, que não será consumido pela magia. encantada) é absolutamente imperceptível, ao menos que uma vítima entre no local e sofra o dano (nesse caso, a criatura percebe que a área"
+}

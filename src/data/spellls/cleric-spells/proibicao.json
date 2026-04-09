@@ -1,0 +1,11 @@
+{
+    "name": "Proibição",
+    "level": 6,
+    "school": "Abjuração",
+    "sphere": "Proteção",
+    "castingTime": "4",
+    "duration": "Permanente",
+    "range": "30 metros",
+    "area": "Cubo de 20 metros de lado/nível",
+    "description": "Essa magia pode ser usada para proteger uma área consagrada (veja o LdM). Ela lacra essa área contra teleportação, transferência de planos e penetração etérea. Se o clérigo assim desejar, o espaço pode ser fechado por uma palavra-chave, e nesse caso só será adentrado por aqueles que a pronunciarem. Do contrário, o efeito sobre os que tentarem entrar serão baseados na tendência relativa à do executor da fórmula. Em cada caso, deve-se aplicar a penalidade mais severa: Tendência idêntica: Sem efeito. Se houver palavra-chave, só entrará ao pronunciá-la (sem teste de resistência). Tendência diferente, com respeito à ordem ou ao caos: teste de resistência contra magia ao entrar. Se falhar, sofre 2d6 pontos de dano. Se houver palavra-chave, não entra se não a souber. Tendência diferente com respeito ao bem ou ao mal: teste de resistência contra magia para entrar. Se falhar, sofre 4d6 pontos de dano. Se houver palavra-chave, não entra se não a conhecer. A tentativa causará dano se o teste de resistência falhar. Quando um teste de resistência falhar, o intruso não poderá entrar na área proibida até o final da magia, que não poderá ser desfeita por arcanos ou clérigos de nível inferior ao daquele que a estabeleceu. Intrusos que conseguirem entrar mediante testes de resistência bem- sucedidos irão sentir-se inquietos e tensos, apesar do êxito. Além do símbolo sagrado do clérigo, os componentes materiais incluem água benta e incensos raros, que valem não menos que 1.000 po para cada cubo de 20 metros de lado. O uso da palavra-chave requer a queima de incensos raros, com o valor de, pelo menos, 5.000 po para cada cubo de 20 metros de lado."
+}

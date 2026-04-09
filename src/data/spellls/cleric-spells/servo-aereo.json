@@ -1,0 +1,11 @@
+{
+    "name": "Servo Aéreo",
+    "level": 6,
+    "school": "Conjuração/ Convocação",
+    "sphere": "Convocação",
+    "castingTime": "1 turno",
+    "duration": "1 dia/nível",
+    "range": "10 metros",
+    "area": "Especial",
+    "description": "Essa magia obriga um serviçal aéreo invisível a encontrar e trazer um objeto ou criatura, determinado pelo clérigo. Ao contrário de um elemental, um serviçal aéreo não pode ser obrigado a lutar pelo conjurador. Ao convocar um deles, o clérigo deve lançar uma Proteção ao Mal, estar dentro de um círculo de proteção ou possuir um item especial para controlá-lo. Senão, o serviçal aéreo tentará exterminar seu convocador e retornar para o local de onde veio. O objeto ou criatura a serem trazidos devem ter um volume que possa ser carregado pelo serviçal (um deles consegue sustentar pelo menos 500 quilos). Se impedido de completar a tarefa designada, o serviçal aéreo fica ensandecido, e procura destruir o clérigo. Ele retornará ao seu lugar de origem se a magia talhar, se a tarefa for realizada ou dispensada, ou se o clérigo vier a libertá-lo ou for morto. A magia perdura por no máximo um dia para cada nível de experiência do clérigo. Se a vítima escolhida não puder detectar objetos invisíveis, o serviçal aéreo atacará aproveitando-se da surpresa. Se a criatura puder perceber a invisibilidade, ainda assim sofre uma penalidade de -2 em cada teste de surpresa causado pelo serviçal. Em cada rodada de combate, o Servo Aéreo deve fazer uma jogada de ataque, Se o alvo for atingido, isso significa que o serviçal conseguiu capturá-lo. Uma criatura com valor para a habilidade Força tem direito a um teste de evasão, equivalente ao dobro de sua chance de dobrar barras, para escapar ao abraço. Se a criatura em questão não possui Força, deve-se jogar 1d8 para cada dado de vida que ela e o Servo Aéreo possuírem. O total maior identifica o mais forte. Uma vez capturada, a criatura não pode livrar-se mediante lestes de Força ou Destreza, e é levada ao clérigo."
+}

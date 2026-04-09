@@ -1,0 +1,11 @@
+{
+    "name": "Pedras Afiadas",
+    "level": 5,
+    "school": "Alteração, Encantamentos",
+    "sphere": "Elemental (Terra)",
+    "castingTime": "1 rodada",
+    "duration": "3d4 turnos + 1/nível",
+    "range": "30 metros",
+    "area": "Quadrado de 3 metros",
+    "description": "de lado por nível,1 espinho por quadrado de 30 centímetros de lado Essa magia faz com que a rocha seja moldada em longas e aliadas pontas, que se unem pela base. Funciona em rochas naturais ou pedras trabalhadas. O efeito serve para impedir a passagem de criaturas através de determinada área, e infligir dano. Se um local é cuidadosamente observado, cada pessoa tem 25% de chance de perceber as lanças de pedra. Senão, aqueles que entram na área de efeito da magia sofrem 1d4 pontos de dano por rodada. O sucesso de cada ataque é determinado como se o clérigo estivesse realmente em combate. Os que entram na área podem atacar imediatamente depois de colocar os pés nela, e durante cada rodada em seu interior. O primeiro passo dentro da área afetada só torna o indivíduo capaz de perceber algum problema se o ataque inicial funcionar. Do contrário, o movimento continua e as pontas de pedra permanecem ocultas, até que algum dano ocorra. Pessoas em investida ou correndo sofrem dois ataques por rodada. Os que caírem em fossos afetados pela magia sofrem seis ataques para cada 3 metros de queda, cada um com bônus de +2 na jogada de ataque. Além disso, o dano causado por ataque aumenta em +2, também para cada 3 metros de queda. Finalmente, as criaturas sofrem todos os danos normais de uma queda. Os componentes materiais são quatro pequenas estalactites."
+}

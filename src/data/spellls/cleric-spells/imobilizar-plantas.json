@@ -1,0 +1,11 @@
+{
+    "name": "Imobilizar Plantas",
+    "level": 4,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Vegetal",
+    "castingTime": "7",
+    "duration": "1 rodada/nível",
+    "range": "80 metros",
+    "area": "Especial",
+    "description": "Essa magia afeta matéria vegetal da seguinte forma: 1) vegetação móvel pára de se mover: 2) as plantas não conseguem mais segurar ou enrolar- se em itens ou criaturas, e deixam de crescer e 3) os vegetais param de emitir qualquer som que não seja causado pelo vento. Este efeito se aplica a qualquer tipo de vegetal, incluindo parasitários e fungos, assim como aqueles animados ou alterados por magia. Monstros como muco- verde. homem-vegetal, guardião e entes também são afetados Esta magia afeta 1d4 plantas em uma área de 20 metros x 20 metros (ou toda vegetação rasteira comum numa área formada por um quadrado de 4 a 16 metros de lado). Se apenas uma planta (ou um quadrado de 4 metros de lado) for visada, o teste de resistência à magia é leito com uma penalidade de 4: se duas plantas forem o alvo (8 metros de lado) essa penalidade baixa para 2: para três plantas (12 metros) a penalidade é de 1. e para quatro plantas (16 metros de lado) não há modificadores."
+}

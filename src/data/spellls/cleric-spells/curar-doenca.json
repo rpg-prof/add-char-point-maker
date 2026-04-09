@@ -1,0 +1,11 @@
+{
+    "name": "Curar Doença",
+    "level": 3,
+    "school": "Abjuração",
+    "sphere": "Necromântica",
+    "castingTime": "1 turno",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Essa magia permite ao clérigo curar quase todas as doenças colocando apenas sua mão sobre a pessoa doente. A doença rapidamente desaparece num intervalo que pode variar — de acordo com o estágio e seriedade da moléstia — de um turno a dez dias (o Mestre determinará o tempo exato). Esta magia também funciona contra monstros parasitas. Quando lançado por um clérigo de pelo menos 12º nível, o efeito pode curar até mesmo licantropia, desde que usado no máximo até 3 dias depois da infecção. (O licantropo tem direito a um teste de resistência a esta magia, e, se tiver sucesso, o clérigo deverá subir um nível, antes de tentar curá-lo novamente.) Note que esta magia não impede que a pessoa curada volte a contrair a doença. O reverso dessa magia é Provocar Doenças. Para funcionar, o clérigo deve tocar a vítima, e esta falhar em um teste de resistência à magia. A gravidade da doença é decidida pelo clérigo (entre “debilitante” ou “fatal”). Os detalhes exatos da doença serão decididos pelo Mestre, sendo as características mais comuns: Debilitante: Começa a agir em 1d6 turnos, quando a vítima passa a perder 1 ponto de Força por hora. até sua Força ser reduzida a 2 (momento em que a vítima fica traça e indefesa). Se o receptor não possuir um valor de Força, ele perde 10% de seus pontos de vida para cada perda de Força que deveria sofrer. Se a doença já afetava seus pontos de vida, use a penalidade maior. A recuperação requer um período de 1d3 semanas. Fatal: Esta doença começa a agir imediatamente. As pessoas afetadas não recebem auxílio de magias do tipo Curar Feridas enquanto a doença estiver ativa, e a cura natural ocorre a 10% do ritmo normal. Esta doença toma-se fatal em 1d6 meses, e só pode ser curada magicamente. Para cada mês de doença, o Carisma da vítima é reduzido permanentemente em 2 pontos. Todas as doenças causadas por essa magia podem ser curadas por Curar Doenças. Licantropia não pode ser causada desta forma."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Círculo de Fé",
+    "level": 1,
+    "school": "Evocação",
+    "sphere": "Todas",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Circulo e clérigos",
+    "description": "Com essa magia, de três a cinco clérigos podem combinar seus poderes, de maneira que um deles consiga lançar magias ou usar poder da fé de uma forma aprimorada. O clérigo de maior nível (ou um deles, caso haja mais de um com o maior nível) fica sozinho, enquanto os outros dão-se as mãos formando um círculo ao seu redor. O clérigo central lança o Círculo de Fé. Ele temporariamente ganha um nível a mais para cada clérigo do Circulo, até um máximo de quatro níveis extras. Isso aumenta o poder da fé, e a eficiência das magias que evoluem com o nível do clérigo. Note que o clérigo central não ganha magia adicional, e os outros clérigos continuam limitados às suas magias já memorizadas. Os clérigos do Circulo devem se concentrar na manutenção do efeito do Círculo de Fé. Eles perdem todos os bônus de CA devidos ao uso de escudos, ou à Destreza. Se algum deles perder a concentração, o efeito terminará imediatamente. Se o ritual for interrompido enquanto o clérigo central estiver lançando uma magia, o efeito dela estará arruinado, como se o próprio clérigo central tivesse perdido a concentração. O Circulo só precisa se manter intacto até o momento em que a fórmula da magia que se quer ampliar for executada os clérigos não têm que permanecer juntos para sustentar o efeito ampliado. Note que a combinação não será interrompida se somente o clérigo central for perturbado"
+}

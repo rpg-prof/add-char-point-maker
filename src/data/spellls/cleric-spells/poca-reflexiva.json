@@ -1,0 +1,11 @@
+{
+    "name": "Poça Reflexiva",
+    "level": 4,
+    "school": "Adivinhação",
+    "sphere": "Adivinhação",
+    "castingTime": "1 turno",
+    "duration": "1 rodada/nóvel",
+    "range": "10 Metros",
+    "area": "",
+    "description": "Essa magia permite ao clérigo alterar uma massa de água normal (localizada em terreno natural, não moldado pelo homem), e fazê-la aluar como um dispositivo de espionagem. A piscina natural não pode possuir diâmetro superior a 1 metro por nível de experiência do clérigo. O eleito simula as propriedades de itens como a bota de cristal, e estende-se apenas aos planos de existência adjacentes ou coexistentes ao plano Material Primário. Informações sobre espionagem, detecção de espionagem e penalidades para sondar outros planos podem ser encontradas no Livro do Mestre (onde também encontra-se a descrição do item bola de cristal). As seguintes magias podem ser canalizadas através deste efeito, com uma chance de 5%/nível de funcionarem corretamente: Detectar Magia, Detectar Armadilhas e Detectar Venenos. Cada tentativa dessas exige uma rodada de concentração, e pode ou não funcionar. Infravisão opera normalmente através desta magia. A imagem criada, na maioria das vezes, não possui definição suficiente para a leitura de escrita de qualquer tipo (livros, documentos, pergaminhos mágicos, etc.). O componente material são três medidas de óleo refinado (que deve ser extraído de amêndoas, nozes ou similares), derramadas na água a ser encantada. Cada medida deve ter cerca de 30 gramas. Se o Mestre desejar, a utilização desta magia pode ser limitada a apenas uma vez por dia."
+}

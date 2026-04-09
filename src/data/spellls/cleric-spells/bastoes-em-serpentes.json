@@ -1,0 +1,11 @@
+{
+    "name": "Bastões em Serpentes",
+    "level": 4,
+    "school": "Alteração",
+    "sphere": "Vegetal",
+    "castingTime": "8",
+    "duration": "2 rodadas/nível",
+    "range": "30 metros",
+    "area": "1d4 bastões +1 bastão/nível em um cubo de 3 metros de lado",
+    "description": "Usando essa magia, o clérigo pode transformar 1d4 bastões (ou objetos similares, de tamanho não superior ao de um cajado ou lança) — além de mais um bastão por nível — em cobras, que atacam ao comando do clérigo. Este efeito apenas os transforma, não os cria. O objeto a ser convertido, se estiver nas mãos ou em contato com alguma outra criatura, tem direito a um teste de resistência contra transformação. Armas e objetos mágicos não podem ser afetados. O tipo de serpente que surge varia, embora, tipicamente, tais cobras possuam 2 DVs, CA 6, movimento 9, e tenham como forma de ataque uma mordida (1 ponto de dano + veneno, se este existir) ou um “abraço” de 1d4 + 1 pontos de dano por rodada. A chance da víbora ser venenosa é igual a 5% por nível de experiência. O reverso transforma cobras em bastões pela duração do efeito, e pode reverter em madeira as cobras obtidas pela versão original (com o número exato de cobras revertidas sendo determinado pelo lance de 1d4, mais 1 por nível). O componente material são lascas de madeira (geralmente casca de árvore) e escamas de cobra."
+}

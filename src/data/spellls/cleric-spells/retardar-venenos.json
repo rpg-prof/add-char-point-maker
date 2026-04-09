@@ -1,0 +1,11 @@
+{
+    "name": "Retardar Venenos",
+    "level": 2,
+    "school": "Necromancia",
+    "sphere": "Cura",
+    "castingTime": "5",
+    "duration": "1 hora/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Essa magia pode retardar os efeitos de qualquer veneno que tenha sido introduzido no corpo de uma criatura. Para isso, no entanto, é preciso que o clérigo aja antes que a substância atinja pleno efeito (este período, conhecido como Latência. será determinado pelo Mestre). Embora essa magia não neutralize o veneno, ela protege a criatura envenenada dos efeitos mais danosos ao organismo, ao menos pelo tempo de sua duração. Talvez, nesse meio-tempo, uma cura definitiva possa ser encontrada. Os componentes necessários são o símbolo sagrado do clérigo e um dente de alho, que deverá ser amassado e colocado onde o veneno entrou no organismo (ou seja, deve ser comido caso o veneno tenha sido administrado por via oral)."
+}

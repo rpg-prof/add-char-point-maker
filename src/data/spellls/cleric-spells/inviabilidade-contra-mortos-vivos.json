@@ -1,0 +1,11 @@
+{
+    "name": "Inviabilidade contra Mortos-Vivos",
+    "level": 1,
+    "school": "Abjuração",
+    "sphere": "Necromancia",
+    "castingTime": "4",
+    "duration": "6 rodadas",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Essa magia faz com que os mortos-vivos afetados percam a pista e ignorem as criaturas protegidas, mortos-vivos com 4 ou menos dados de vida são automaticamente afetados; seres com mais de 4 dados de vida receberão um teste de resistência à magia para poder evitar o efeito. Note que o clérigo protegido não poderá usar o poder da fé contra os mortos-vivos afetados. A magia será imediatamente cancelada se o clérigo receptor fizer um ataque. Magias como Curar Ferimentos Leves, Augúrio ou Cântico não são consideradas ataques. O componente material é o símbolo sagrado do clérigo."
+}

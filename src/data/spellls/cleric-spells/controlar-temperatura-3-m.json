@@ -1,0 +1,11 @@
+{
+    "name": "Controlar Temperatura, 3 m",
+    "level": 4,
+    "school": "Alteração",
+    "sphere": "Clima",
+    "castingTime": "7",
+    "duration": "4 turnos + 1 turno/nível",
+    "range": "0",
+    "area": "3 metros de raio",
+    "description": "Quando essa magia é executada, a temperatura ao redor do clérigo pode ser alterada, para mais ou menos, em 5 C nível de experiência. Assim, o efeito pode garantir conforto e bem-estar nas mais adversas temperaturas. O clérigo poderia ficar em mangas de camisa durante uma nevasca (para ele, estaria apenas chovendo) ou obter gelo durante uma exasperante onda de calor. Esta fórmula também oferece proteção contra ataques (normais ou mágicos) que utilizem temperaturas extremas. Se a temperatura produzida pelo ataque estiver acima das capacidades da magia (como Tipo de Vegetação exemplo disso temos uma devastadora Bola de Fogo, ou o hálito gelado Selva Densa/ de um Dragão Branco) o efeito reduz o dano causado em 5 pontos Leve Moderada/ Floresta Mata Virgem para cada nível do clérigo. Os testes de resistência normais ainda são 30% 20% 10% permitidos, e essa redução aplica-se ao dano sofrido após o teste de 5% 30% 5% resistência (tenha este obtido sucesso ou não). Uma vez afetada por 1% 25% 15% um ataque térmico desta magnitude, a magia imediatamente deixa de 10% 20% 10% funcionar. O componente material é um pouco da casca de uma árvore 1% 30% 10% resistente (para abaixar a temperatura) ou folhas de amoreira (para 0% 5% 25% aumentar a temperatura). - 5% 25% - 15% 20%"
+}

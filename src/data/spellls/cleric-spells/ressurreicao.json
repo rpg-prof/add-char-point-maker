@@ -1,0 +1,11 @@
+{
+    "name": "Ressurreição",
+    "level": 7,
+    "school": "Necromancia",
+    "sphere": "Necromancia",
+    "castingTime": "",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Com essa magia, o clérigo torna-se capaz de devolver vida e força completa a qualquer criatura vivente, inclusive elfos, sobre o qual aplicar a magia. A criatura pode estar morta há até 10 anos por nível do clérigo. Assim, um clérigo de 1º nível pode ressuscitar os ossos de uma criatura morta há 190 anos. A criatura, se sobreviver a um teste de chance de ressurreição, recupera imediatamente todos os pontos de vida e pode desempenhar atividades extenuantes. A magia não pode trazer de volta uma criatura que tenha completado toda a extensão de sua vida (ou seja. tenha morrido de causas naturais). O uso dessa magia impede o clérigo de formular outras, ou engajar-se em combate, até ter descansado na cama por um dia para cada nível de experiência ou dado de vida da criatura ressuscitada. O clérigo envelhece 3 anos ao usar este efeito O reverso, Destruição, imediatamente mata e transforma a vítima em pó Um Desejo ou equivalente é necessária para a recuperação. A Destruição requer um toque durante o combate, ou de outra maneira, e não aumenta a idade do clérigo. Além disso, a vítima tem direito a um teste de resistência (com penalidade de -4) Se for bem-sucedida, receberá 8d6 pontos de dano Os componentes materiais são o símbolo religioso do clérigo e água benta (ou água profana, para a magia reversa). O Mestre pode reduzir as chances de sucesso da ressurreição se pouquíssimos restos mortais da criatura estiverem disponíveis."
+}

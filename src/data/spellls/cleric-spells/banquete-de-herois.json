@@ -1,0 +1,11 @@
+{
+    "name": "Banquete de Heróis",
+    "level": 6,
+    "school": "Evocação",
+    "sphere": "Criação",
+    "castingTime": "1 rodada",
+    "duration": "1 hora",
+    "range": "10 metros",
+    "area": "1 indivíduo/nível",
+    "description": "Essa magia torna o clérigo capaz de fazer surgir um grande banquete para um número de pessoas equivalente ao seu nível de experiência. A magia cria uma magnífica mesa, cadeiras, pratos, talheres e toda a comida e bebida necessárias. O banquete leva uma hora inteira para ser consumido, e seus efeitos benéficos não aparecem antes desse prazo. Os comensais são curados de todas as doenças, tornando-se imunes a venenos por 12 horas e 1d4 + 4 pontos de dano são recuperados depois da ingestão da beberagem, semelhante ao néctar, que faz parte da refeição. O consumo da comida, parecida com ambrósia, provoca efeito equivalente ao de uma Benção, que dura por 12 horas. Além disso, durante esse período, as pessoas que participaram do banquete ficam imunes ao medo, desesperança e pânico. Se o banquete for interrompido por alguma razão, a magia será arruinada e todos os efeitos, anulados. Os componentes materiais são o símbolo sagrado do clérigo e um mel fermentado especial, coletado de favos onde ficam as larvas destinadas a serem abelhas-rainhas."
+}

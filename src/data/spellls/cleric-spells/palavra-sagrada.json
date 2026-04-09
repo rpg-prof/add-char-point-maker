@@ -1,0 +1,11 @@
+{
+    "name": "Palavra Sagrada",
+    "level": 7,
+    "school": "Conjuração/Convocação",
+    "sphere": "Combate",
+    "castingTime": "",
+    "duration": "Especial",
+    "range": "0",
+    "area": "10 metros de raio",
+    "description": "Proferir uma Palavra Sagrada cria um efeito de tremendo poder. Ele afasta criaturas malignas de outros planos, forçando-as a retornar ao lugar de origem, desde que o clérigo esteja em seu próprio plano de existência. Criaturas banidas dessa maneira não podem retornar por, no mínimo, um dia. Além disso, a magia afeta criaturas de tendências diferentes, como mostrado na tabela da página seguinte: Dado de Vida ou Nível da Criatura Menos que 4 4 a 7 + 8 a 11 + 12 ou mais * Criaturas com o movimento retardado atacam apenas nas rodadas pares, até que o efeito passe. As vítimas são aqueles dentro de um raio de 10 metros de distância do clérigo. Os efeitos colaterais não funcionam contra criaturas surdas ou silenciadas, mas elas são enviadas de volta se forem de outros planos. O reverso, Palavra Sagrada, opera exatamente igual, mas afeta criaturas de inclinação para o bem. Efeito da Palavra Sagrada Movimentação Geral de Ataque Jogada Magias Mata - - - Paralisa por - - - 1d4 turnos Retarda por -50% -4* - 1d4 rodadas Ensurdece por -25% -2 50% de 1d4 rodadas chance de falhar"
+}

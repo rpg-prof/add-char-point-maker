@@ -1,0 +1,11 @@
+{
+    "name": "Restauração",
+    "level": 7,
+    "school": "Necromancia",
+    "sphere": "Necromancia",
+    "castingTime": "",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Criatura locada",
+    "description": "Quando essa magia é lançada, o nível de força vital da criatura receptora é acrescido de 1. Isto reverte qualquer drenagem de força vital que a criatura tenha sofrido por parte de uma força, ou de um monstro. Assim, se um clérigo de 10º nível for atingido por um vulto e rebaixado ao 9º nível, Restauração trará de volta exatamente os pontos de experiência necessários para devolvê-lo ao 10º nível, restaurando dados de vida adicionais (ou pontos de vida) e funções correspondentes. Restauração é eficiente apenas se for usada dentro de um dia a partir da perda da energia vital, por nível do clérigo. Um efeito da Restauração recupera a Inteligência de uma criatura afetada por Enfraquecer o intelecto. Também anula todas as formas de insanidade. O lançamento dessa magia acrescenta 2 anos à idade do clérigo, e do receptor. O reverso, Drenar Energia, suga um nível de força vital O dreno de energia requer um toque na vítima. O uso dessa forma da magia não aumenta a idade do clérigo."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Pedra Encantada",
+    "level": 1,
+    "school": "Encantamentos",
+    "sphere": "Combate",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "0",
+    "area": "Especial",
+    "description": "Por meio dessa magia, o clérigo poderá encantar temporariamente até três pequenas pedras, não maiores do que pedras de funda. As pedras encantadas poderão ser arremessadas contra um inimigo. Se arremessadas, elas alcançarão até 30 metros, e as três podem ser lançadas na mesma rodada. Para isto, o clérigo deverá fazer uma jogada de ataque, sendo que o encantamento das pedras permite que qualquer um tenha perícia para arremessá-las. As pedras serão consideradas armas com +1 de bônus, a fim de determinar se o alvo pode ou não ser atingido (por exemplo, as criaturas que são atingidas somente por armas mágicas); entretanto, elas não possuirão bônus na jogada de ataque ou de dano. Cada pedra irá infligir 1d4 pontos de dano e 2d4 no caso de mortos-vivos. A magia de cada pedra terminará 30 minutos após a execução da fórmula, ou com a utilização das pedras. Os componentes materiais são o símbolo sagrado do clérigo e três pequenas pedras, que ainda não foram utilizadas como ferramentas, ou em qualquer outra magia."
+}

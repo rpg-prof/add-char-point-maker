@@ -1,0 +1,2656 @@
+{
+    "by-level": {
+        "1": [
+            {
+                "name": "Arma Abençoada",
+                "file": "cleric-spells/arma-abencoada.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Combate, Vegetal"
+            },
+            {
+                "name": "Benção",
+                "file": "cleric-spells/bencao.json",
+                "level": 1,
+                "school": "Conjuração/Convocação",
+                "sphere": "Todas"
+            },
+            {
+                "name": "Cativar Animais",
+                "file": "cleric-spells/cativar-animais.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Comando",
+                "file": "cleric-spells/comando.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Feitiço"
+            },
+            {
+                "name": "Constrição",
+                "file": "cleric-spells/constricao.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Criar Água",
+                "file": "cleric-spells/criar-agua.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Elemental (Água)"
+            },
+            {
+                "name": "Curar Ferimentos Leves",
+                "file": "cleric-spells/curar-ferimentos-leves.json",
+                "level": 1,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Círculo de Fé",
+                "file": "cleric-spells/circulo-de-fe.json",
+                "level": 1,
+                "school": "Evocação",
+                "sphere": "Todas"
+            },
+            {
+                "name": "Detectar Armadilhas",
+                "file": "cleric-spells/detectar-armadilhas.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Detectar Magia",
+                "file": "cleric-spells/detectar-magia.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Detectar Maldade",
+                "file": "cleric-spells/detectar-maldade.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Todas"
+            },
+            {
+                "name": "Detectar Venenos",
+                "file": "cleric-spells/detectar-venenos.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Fogo das Fadas",
+                "file": "cleric-spells/fogo-das-fadas.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Inviabilidade contra Animais",
+                "file": "cleric-spells/inviabilidade-contra-animais.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Inviabilidade contra Mortos-Vivos",
+                "file": "cleric-spells/inviabilidade-contra-mortos-vivos.json",
+                "level": 1,
+                "school": "Abjuração",
+                "sphere": "Necromancia"
+            },
+            {
+                "name": "Localizar Animais ou Plantas",
+                "file": "cleric-spells/localizar-animais-ou-plantas.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação (Animal, Vegetal)"
+            },
+            {
+                "name": "Luz",
+                "file": "cleric-spells/luz.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Solar"
+            },
+            {
+                "name": "Passos sem Pegadas",
+                "file": "cleric-spells/passos-sem-pegadas.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Pedra Encantada",
+                "file": "cleric-spells/pedra-encantada.json",
+                "level": 1,
+                "school": "Encantamentos",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Proteção ao Calor/Frio",
+                "file": "cleric-spells/protecao-ao-calor-frio.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Proteção ao Mal",
+                "file": "cleric-spells/protecao-ao-mal.json",
+                "level": 1,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Purificar Alimentos",
+                "file": "cleric-spells/purificar-alimentos.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Todas"
+            },
+            {
+                "name": "Remover Medo",
+                "file": "cleric-spells/remover-medo.json",
+                "level": 1,
+                "school": "Abjuração",
+                "sphere": "Feitiços"
+            },
+            {
+                "name": "Santuário",
+                "file": "cleric-spells/santuario.json",
+                "level": 1,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            }
+        ],
+        "2": [
+            {
+                "name": "Ajuda",
+                "file": "cleric-spells/ajuda.json",
+                "level": 2,
+                "school": "Necromancia, Conjuração",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Armadilha de Fogo",
+                "file": "cleric-spells/armadilha-de-fogo.json",
+                "level": 2,
+                "school": "Abjuração, Evocação",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Augúrio",
+                "file": "cleric-spells/augurio.json",
+                "level": 2,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Bom Fruto",
+                "file": "cleric-spells/bom-fruto.json",
+                "level": 2,
+                "school": "Alteração, Evocação",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Cativar",
+                "file": "cleric-spells/cativar.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Feitiços"
+            },
+            {
+                "name": "Criar Chamas",
+                "file": "cleric-spells/criar-chamas.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Cântico",
+                "file": "cleric-spells/cantico.json",
+                "level": 2,
+                "school": "Conjuração/Convocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Demônio ela Poeira",
+                "file": "cleric-spells/demonio-ela-poeira.json",
+                "level": 2,
+                "school": "Conjuração/Convocação",
+                "sphere": "Elemental (Ar)"
+            },
+            {
+                "name": "Detectar Feitiço",
+                "file": "cleric-spells/detectar-feitico.json",
+                "level": 2,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Distanciamento",
+                "file": "cleric-spells/distanciamento.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Encantar Cobras",
+                "file": "cleric-spells/encantar-cobras.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Encantar Pessoas ou Mamíferos",
+                "file": "cleric-spells/encantar-pessoas-ou-mamiferos.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Encontrar Armadilhas",
+                "file": "cleric-spells/encontrar-armadilhas.json",
+                "level": 2,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Esquentar Metal",
+                "file": "cleric-spells/esquentar-metal.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Falar com Animais",
+                "file": "cleric-spells/falar-com-animais.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Animal, Adivinhação"
+            },
+            {
+                "name": "Imobilizar Pessoas",
+                "file": "cleric-spells/imobilizar-pessoas.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Feitiços"
+            },
+            {
+                "name": "Lâmina Flamejante",
+                "file": "cleric-spells/lamina-flamejante.json",
+                "level": 2,
+                "school": "Evocação",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Martelo Espiritual",
+                "file": "cleric-spells/martelo-espiritual.json",
+                "level": 2,
+                "school": "Invocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Mensageiro",
+                "file": "cleric-spells/mensageiro.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Obscurecimento",
+                "file": "cleric-spells/obscurecimento.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Pele de Árvore",
+                "file": "cleric-spells/pele-de-arvore.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Proteção, Vegetal"
+            },
+            {
+                "name": "Resistir Calor/Trio",
+                "file": "cleric-spells/resistir-calor-trio.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Retardar Venenos",
+                "file": "cleric-spells/retardar-venenos.json",
+                "level": 2,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Revelar Tendências",
+                "file": "cleric-spells/revelar-tendencias.json",
+                "level": 2,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Silêncio, 4,5 m",
+                "file": "cleric-spells/silencio-4-5-m.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Guarda"
+            },
+            {
+                "name": "Torcer Madeira",
+                "file": "cleric-spells/torcer-madeira.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Tropeço",
+                "file": "cleric-spells/tropeco.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Wyvern Vigia",
+                "file": "cleric-spells/wyvern-vigia.json",
+                "level": 2,
+                "school": "Evocação",
+                "sphere": "Guarda"
+            }
+        ],
+        "3": [
+            {
+                "name": "Ampliar Plantas",
+                "file": "cleric-spells/ampliar-plantas.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Andar sobre as Chamas",
+                "file": "cleric-spells/andar-sobre-as-chamas.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Andar Sobre as Águas",
+                "file": "cleric-spells/andar-sobre-as-aguas.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Água)"
+            },
+            {
+                "name": "Animar os Mortos",
+                "file": "cleric-spells/animar-os-mortos.json",
+                "level": 3,
+                "school": "Necromancia",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Armadilha",
+                "file": "cleric-spells/armadilha.json",
+                "level": 3,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Brilho das Estrelas",
+                "file": "cleric-spells/brilho-das-estrelas.json",
+                "level": 3,
+                "school": "Evocação, Ilusão/Visão",
+                "sphere": "Solar da magia), e receber informações de acordo com os conhecimentos"
+            },
+            {
+                "name": "Convocar Insetos",
+                "file": "cleric-spells/convocar-insetos.json",
+                "level": 3,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Convocar Relâmpagos",
+                "file": "cleric-spells/convocar-relampagos.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Crescer Espinhos",
+                "file": "cleric-spells/crescer-espinhos.json",
+                "level": 3,
+                "school": "Alteração, Encantamentos",
+                "sphere": "Vegetal pedra e outros tipos de barreira, desde que o volume afetado esteja"
+            },
+            {
+                "name": "Criar Alimentos",
+                "file": "cleric-spells/criar-alimentos.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Criação"
+            },
+            {
+                "name": "Curar Cegueira ou Surdez",
+                "file": "cleric-spells/curar-cegueira-ou-surdez.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Curar Doença",
+                "file": "cleric-spells/curar-doenca.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Dissipar Magia",
+                "file": "cleric-spells/dissipar-magia.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Falar com Mortos",
+                "file": "cleric-spells/falar-com-mortos.json",
+                "level": 3,
+                "school": "Necromancia",
+                "sphere": "Adivinhação consumido), são sete espinhos afiados ou sete galhos com pontas"
+            },
+            {
+                "name": "Imobilizar Animais",
+                "file": "cleric-spells/imobilizar-animais.json",
+                "level": 3,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Localizar Objetos",
+                "file": "cleric-spells/localizar-objetos.json",
+                "level": 3,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Luz Continua",
+                "file": "cleric-spells/luz-continua.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Solar"
+            },
+            {
+                "name": "Mesclar-se às Rochas",
+                "file": "cleric-spells/mesclar-se-as-rochas.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra)"
+            },
+            {
+                "name": "Moldar Rochas",
+                "file": "cleric-spells/moldar-rochas.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra) 1º e 8º 1 mês 3 rodadas 3"
+            },
+            {
+                "name": "Morte Aparente",
+                "file": "cleric-spells/morte-aparente.json",
+                "level": 3,
+                "school": "Necromancia",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Oração",
+                "file": "cleric-spells/oracao.json",
+                "level": 3,
+                "school": "Conjuração/Convocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Pirotecnia",
+                "file": "cleric-spells/pirotecnia.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Proteção a Fogo",
+                "file": "cleric-spells/protecao-a-fogo.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção, Elemental (Fogo)"
+            },
+            {
+                "name": "Proteção ao Plano Negativo",
+                "file": "cleric-spells/protecao-ao-plano-negativo.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção, Necromântica"
+            },
+            {
+                "name": "Remover Maldições",
+                "file": "cleric-spells/remover-maldicoes.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Remover Paralisia",
+                "file": "cleric-spells/remover-paralisia.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Respirar na Água",
+                "file": "cleric-spells/respirar-na-agua.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Água, Ar)"
+            },
+            {
+                "name": "Roupa Encantada",
+                "file": "cleric-spells/roupa-encantada.json",
+                "level": 3,
+                "school": "Encantamento",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Símbolo de Proteção",
+                "file": "cleric-spells/simbolo-de-protecao.json",
+                "level": 3,
+                "school": "Abjuração, Evocação",
+                "sphere": "Guarda"
+            },
+            {
+                "name": "Árvore",
+                "file": "cleric-spells/arvore.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            }
+        ],
+        "4": [
+            {
+                "name": "Abjurar",
+                "file": "cleric-spells/abjurar.json",
+                "level": 4,
+                "school": "Abjuração",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Adivinhação",
+                "file": "cleric-spells/adivinhacao.json",
+                "level": 4,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Bastões em Serpentes",
+                "file": "cleric-spells/bastoes-em-serpentes.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Controlar Temperatura, 3 m",
+                "file": "cleric-spells/controlar-temperatura-3-m.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Convocar Animais I",
+                "file": "cleric-spells/convocar-animais-i.json",
+                "level": 4,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Convocar Criaturas da Floresta",
+                "file": "cleric-spells/convocar-criaturas-da-floresta.json",
+                "level": 4,
+                "school": "Conjuração/Convocação",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Criar Fogo",
+                "file": "cleric-spells/criar-fogo.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Curar Ferimentos Graves",
+                "file": "cleric-spells/curar-ferimentos-graves.json",
+                "level": 4,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Detectar Mentiras",
+                "file": "cleric-spells/detectar-mentiras.json",
+                "level": 4,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Esconderijo Vegetal",
+                "file": "cleric-spells/esconderijo-vegetal.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Falar com Plantas",
+                "file": "cleric-spells/falar-com-plantas.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Floresta Ilusória",
+                "file": "cleric-spells/floresta-ilusoria.json",
+                "level": 4,
+                "school": "Ilusão/Visão",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Idiomas",
+                "file": "cleric-spells/idiomas.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": ""
+            },
+            {
+                "name": "Imobilizar Plantas",
+                "file": "cleric-spells/imobilizar-plantas.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Imunidade à Magia",
+                "file": "cleric-spells/imunidade-a-magia.json",
+                "level": 4,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Inseto Gigante",
+                "file": "cleric-spells/inseto-gigante.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Manto de Bravura",
+                "file": "cleric-spells/manto-de-bravura.json",
+                "level": 4,
+                "school": "Conjuração/Convocação",
+                "sphere": "Feitiço"
+            },
+            {
+                "name": "Movimentação Livre",
+                "file": "cleric-spells/movimentacao-livre.json",
+                "level": 4,
+                "school": "Abjuração, Encantamentos",
+                "sphere": "Feitiço"
+            },
+            {
+                "name": "Neutralizar Venenos",
+                "file": "cleric-spells/neutralizar-venenos.json",
+                "level": 4,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Poça Reflexiva",
+                "file": "cleric-spells/poca-reflexiva.json",
+                "level": 4,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Proteção a Eletricidade",
+                "file": "cleric-spells/protecao-a-eletricidade.json",
+                "level": 4,
+                "school": "Abjuração",
+                "sphere": "Proteção, Clima"
+            },
+            {
+                "name": "Proteção ao Mal, 3 m",
+                "file": "cleric-spells/protecao-ao-mal-3-m.json",
+                "level": 4,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Repelir Insetos",
+                "file": "cleric-spells/repelir-insetos.json",
+                "level": 4,
+                "school": "Abjuração, Alteração",
+                "sphere": "Animal, Proteção"
+            },
+            {
+                "name": "Tornar Raso",
+                "file": "cleric-spells/tornar-raso.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Elemental (Água)"
+            },
+            {
+                "name": "Transferência de Poder Divino",
+                "file": "cleric-spells/transferencia-de-poder-divino.json",
+                "level": 4,
+                "school": "Encantamentos",
+                "sphere": "Feitiço"
+            }
+        ],
+        "5": [
+            {
+                "name": "Ampliar Animais",
+                "file": "cleric-spells/ampliar-animais.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Andar no Ar",
+                "file": "cleric-spells/andar-no-ar.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Elementar (Ar)"
+            },
+            {
+                "name": "Arco-íris",
+                "file": "cleric-spells/arco-iris.json",
+                "level": 5,
+                "school": "Evocação, Alteração",
+                "sphere": "Clima, Solar"
+            },
+            {
+                "name": "Coluna de Chamas",
+                "file": "cleric-spells/coluna-de-chamas.json",
+                "level": 5,
+                "school": "Evocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Comunhão",
+                "file": "cleric-spells/comunhao.json",
+                "level": 5,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Comunhão com a Natureza",
+                "file": "cleric-spells/comunhao-com-a-natureza.json",
+                "level": 5,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Concha de Proteção a Vegetais",
+                "file": "cleric-spells/concha-de-protecao-a-vegetais.json",
+                "level": 5,
+                "school": "Abjuração",
+                "sphere": "Vegetal, Proteção"
+            },
+            {
+                "name": "Controlar os Ventos",
+                "file": "cleric-spells/controlar-os-ventos.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Convocar Animais II",
+                "file": "cleric-spells/convocar-animais-ii.json",
+                "level": 5,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Curar Ferimentos Críticos",
+                "file": "cleric-spells/curar-ferimentos-criticos.json",
+                "level": 5,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Dissipar o Mal",
+                "file": "cleric-spells/dissipar-o-mal.json",
+                "level": 5,
+                "school": "Abjuração",
+                "sphere": "Proteção, Convocação"
+            },
+            {
+                "name": "Fonte Mágica",
+                "file": "cleric-spells/fonte-magica.json",
+                "level": 5,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Missão",
+                "file": "cleric-spells/missao.json",
+                "level": 5,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Feitiço"
+            },
+            {
+                "name": "Mudança de Plano",
+                "file": "cleric-spells/mudanca-de-plano.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Astral"
+            },
+            {
+                "name": "Muralha de Fogo",
+                "file": "cleric-spells/muralha-de-fogo.json",
+                "level": 5,
+                "school": "Conjuração, Convocação",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Pedra em Lama",
+                "file": "cleric-spells/pedra-em-lama.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra, Água)"
+            },
+            {
+                "name": "Pedras Afiadas",
+                "file": "cleric-spells/pedras-afiadas.json",
+                "level": 5,
+                "school": "Alteração, Encantamentos",
+                "sphere": "Elemental (Terra)"
+            },
+            {
+                "name": "Penitência",
+                "file": "cleric-spells/penitencia.json",
+                "level": 5,
+                "school": "Abjuração",
+                "sphere": "Todas"
+            },
+            {
+                "name": "Portal Vegetal",
+                "file": "cleric-spells/portal-vegetal.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Praga de Insetos",
+                "file": "cleric-spells/praga-de-insetos.json",
+                "level": 5,
+                "school": "Conjuração, Convocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Raio de Luar",
+                "file": "cleric-spells/raio-de-luar.json",
+                "level": 5,
+                "school": "Evocação, Alteração",
+                "sphere": "Solar"
+            },
+            {
+                "name": "Reviver Mortos",
+                "file": "cleric-spells/reviver-mortos.json",
+                "level": 5,
+                "school": "Necromancia",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Visão da Verdade",
+                "file": "cleric-spells/visao-da-verdade.json",
+                "level": 5,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            }
+        ],
+        "6": [
+            {
+                "name": "Afugentar Plantas",
+                "file": "cleric-spells/afugentar-plantas.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Animar Objetos",
+                "file": "cleric-spells/animar-objetos.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Criação, Convocação"
+            },
+            {
+                "name": "Banquete de Heróis",
+                "file": "cleric-spells/banquete-de-herois.json",
+                "level": 6,
+                "school": "Evocação",
+                "sphere": "Criação"
+            },
+            {
+                "name": "Barreira de Lâminas",
+                "file": "cleric-spells/barreira-de-laminas.json",
+                "level": 6,
+                "school": "Evocação",
+                "sphere": "Guarda, Criação"
+            },
+            {
+                "name": "Carvalho Vivo",
+                "file": "cleric-spells/carvalho-vivo.json",
+                "level": 6,
+                "school": "Encantamento",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Concha de Proteção a Animais",
+                "file": "cleric-spells/concha-de-protecao-a-animais.json",
+                "level": 6,
+                "school": "Abjuração",
+                "sphere": "Animal, Proteção"
+            },
+            {
+                "name": "Conjurar Animais",
+                "file": "cleric-spells/conjurar-animais.json",
+                "level": 6,
+                "school": "Conjuração, Convocação",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Conjurar Elemental do Fogo",
+                "file": "cleric-spells/conjurar-elemental-do-fogo.json",
+                "level": 6,
+                "school": "Conjuração/Convocação",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Convocar Animais III",
+                "file": "cleric-spells/convocar-animais-iii.json",
+                "level": 6,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Convocar Clima",
+                "file": "cleric-spells/convocar-clima.json",
+                "level": 6,
+                "school": "Conjuração/Convocação",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Cura Completa",
+                "file": "cleric-spells/cura-completa.json",
+                "level": 6,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Encontrar o Caminho",
+                "file": "cleric-spells/encontrar-o-caminho.json",
+                "level": 6,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Falar com Monstros",
+                "file": "cleric-spells/falar-com-monstros.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Muralha de Espinhos",
+                "file": "cleric-spells/muralha-de-espinhos.json",
+                "level": 6,
+                "school": "Conjuração/Convocação",
+                "sphere": "Vegetal, Criação"
+            },
+            {
+                "name": "O Conto das Rochas",
+                "file": "cleric-spells/o-conto-das-rochas.json",
+                "level": 6,
+                "school": "Adivinhação",
+                "sphere": "Elemental (Terra), Adivinhação"
+            },
+            {
+                "name": "Palavra de Recordação",
+                "file": "cleric-spells/palavra-de-recordacao.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Partir Água",
+                "file": "cleric-spells/partir-agua.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Elemental (Água)"
+            },
+            {
+                "name": "Proibição",
+                "file": "cleric-spells/proibicao.json",
+                "level": 6,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Sementes de Fogo",
+                "file": "cleric-spells/sementes-de-fogo.json",
+                "level": 6,
+                "school": "Conjuração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Servo Aéreo",
+                "file": "cleric-spells/servo-aereo.json",
+                "level": 6,
+                "school": "Conjuração/ Convocação",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Teleporte por Árvores",
+                "file": "cleric-spells/teleporte-por-arvores.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Água em Pó",
+                "file": "cleric-spells/agua-em-po.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Elemental (Água, Terra)"
+            }
+        ],
+        "7": [
+            {
+                "name": "Animar Pedras",
+                "file": "cleric-spells/animar-pedras.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra)"
+            },
+            {
+                "name": "Auxílio Imediato",
+                "file": "cleric-spells/auxilio-imediato.json",
+                "level": 7,
+                "school": "Alteração, Encantamento",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Cajado Vivo",
+                "file": "cleric-spells/cajado-vivo.json",
+                "level": 7,
+                "school": "Evocação, Encantamento",
+                "sphere": "Vegetal. Criação"
+            },
+            {
+                "name": "Caminhar no Vento",
+                "file": "cleric-spells/caminhar-no-vento.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Elemental (Ar)"
+            },
+            {
+                "name": "Carruagem Flamejante",
+                "file": "cleric-spells/carruagem-flamejante.json",
+                "level": 7,
+                "school": "Evocação",
+                "sphere": "Elemental (Fogo), Criação"
+            },
+            {
+                "name": "Confusão",
+                "file": "cleric-spells/confusao.json",
+                "level": 7,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Feitiço"
+            },
+            {
+                "name": "Conjurar Elemental da Terra",
+                "file": "cleric-spells/conjurar-elemental-da-terra.json",
+                "level": 7,
+                "school": "Conjuração/Convocação",
+                "sphere": "Elemental (Terra), Convocação"
+            },
+            {
+                "name": "Controlar o Clima",
+                "file": "cleric-spells/controlar-o-clima.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Destruição Rastejante",
+                "file": "cleric-spells/destruicao-rastejante.json",
+                "level": 7,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Magia Astral",
+                "file": "cleric-spells/magia-astral.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Astral"
+            },
+            {
+                "name": "Metal em Madeira",
+                "file": "cleric-spells/metal-em-madeira.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra)"
+            },
+            {
+                "name": "Palavra Sagrada",
+                "file": "cleric-spells/palavra-sagrada.json",
+                "level": 7,
+                "school": "Conjuração/Convocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Portal",
+                "file": "cleric-spells/portal.json",
+                "level": 7,
+                "school": "Conjuração, Convocação",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Raio de Sol",
+                "file": "cleric-spells/raio-de-sol.json",
+                "level": 7,
+                "school": "Evocação, Alteração",
+                "sphere": "Solar"
+            },
+            {
+                "name": "Reencarnação",
+                "file": "cleric-spells/reencarnacao.json",
+                "level": 7,
+                "school": "Necromancia",
+                "sphere": "Necromancia"
+            },
+            {
+                "name": "Regeneração",
+                "file": "cleric-spells/regeneracao.json",
+                "level": 7,
+                "school": "Necromancia",
+                "sphere": "Necromancia"
+            },
+            {
+                "name": "Requisição",
+                "file": "cleric-spells/requisicao.json",
+                "level": 7,
+                "school": "Evocação/Alteração",
+                "sphere": "Feitiço, Convocação"
+            },
+            {
+                "name": "Ressurreição",
+                "file": "cleric-spells/ressurreicao.json",
+                "level": 7,
+                "school": "Necromancia",
+                "sphere": "Necromancia"
+            },
+            {
+                "name": "Restauração",
+                "file": "cleric-spells/restauracao.json",
+                "level": 7,
+                "school": "Necromancia",
+                "sphere": "Necromancia"
+            },
+            {
+                "name": "Símbolo",
+                "file": "cleric-spells/simbolo.json",
+                "level": 7,
+                "school": "Conjuração/Convocação",
+                "sphere": "Guarda"
+            },
+            {
+                "name": "Tempestade de Fogo",
+                "file": "cleric-spells/tempestade-de-fogo.json",
+                "level": 7,
+                "school": "Evocação",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Terremoto",
+                "file": "cleric-spells/terremoto.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra)"
+            }
+        ]
+    },
+    "by-sphere": {
+        "Adivinhação": [
+            {
+                "name": "Adivinhação",
+                "file": "cleric-spells/adivinhacao.json",
+                "level": 4,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Augúrio",
+                "file": "cleric-spells/augurio.json",
+                "level": 2,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Comunhão",
+                "file": "cleric-spells/comunhao.json",
+                "level": 5,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Comunhão com a Natureza",
+                "file": "cleric-spells/comunhao-com-a-natureza.json",
+                "level": 5,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Detectar Armadilhas",
+                "file": "cleric-spells/detectar-armadilhas.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Detectar Feitiço",
+                "file": "cleric-spells/detectar-feitico.json",
+                "level": 2,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Detectar Magia",
+                "file": "cleric-spells/detectar-magia.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Detectar Mentiras",
+                "file": "cleric-spells/detectar-mentiras.json",
+                "level": 4,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Detectar Venenos",
+                "file": "cleric-spells/detectar-venenos.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Encontrar Armadilhas",
+                "file": "cleric-spells/encontrar-armadilhas.json",
+                "level": 2,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Encontrar o Caminho",
+                "file": "cleric-spells/encontrar-o-caminho.json",
+                "level": 6,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Falar com Animais",
+                "file": "cleric-spells/falar-com-animais.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Animal, Adivinhação"
+            },
+            {
+                "name": "Falar com Monstros",
+                "file": "cleric-spells/falar-com-monstros.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Falar com Mortos",
+                "file": "cleric-spells/falar-com-mortos.json",
+                "level": 3,
+                "school": "Necromancia",
+                "sphere": "Adivinhação consumido), são sete espinhos afiados ou sete galhos com pontas"
+            },
+            {
+                "name": "Fonte Mágica",
+                "file": "cleric-spells/fonte-magica.json",
+                "level": 5,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Localizar Animais ou Plantas",
+                "file": "cleric-spells/localizar-animais-ou-plantas.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação (Animal, Vegetal)"
+            },
+            {
+                "name": "Localizar Objetos",
+                "file": "cleric-spells/localizar-objetos.json",
+                "level": 3,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "O Conto das Rochas",
+                "file": "cleric-spells/o-conto-das-rochas.json",
+                "level": 6,
+                "school": "Adivinhação",
+                "sphere": "Elemental (Terra), Adivinhação"
+            },
+            {
+                "name": "Poça Reflexiva",
+                "file": "cleric-spells/poca-reflexiva.json",
+                "level": 4,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Revelar Tendências",
+                "file": "cleric-spells/revelar-tendencias.json",
+                "level": 2,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            },
+            {
+                "name": "Visão da Verdade",
+                "file": "cleric-spells/visao-da-verdade.json",
+                "level": 5,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação"
+            }
+        ],
+        "Animal": [
+            {
+                "name": "Ampliar Animais",
+                "file": "cleric-spells/ampliar-animais.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Cativar Animais",
+                "file": "cleric-spells/cativar-animais.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Concha de Proteção a Animais",
+                "file": "cleric-spells/concha-de-protecao-a-animais.json",
+                "level": 6,
+                "school": "Abjuração",
+                "sphere": "Animal, Proteção"
+            },
+            {
+                "name": "Convocar Animais I",
+                "file": "cleric-spells/convocar-animais-i.json",
+                "level": 4,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Convocar Animais II",
+                "file": "cleric-spells/convocar-animais-ii.json",
+                "level": 5,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Convocar Animais III",
+                "file": "cleric-spells/convocar-animais-iii.json",
+                "level": 6,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Convocar Insetos",
+                "file": "cleric-spells/convocar-insetos.json",
+                "level": 3,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Destruição Rastejante",
+                "file": "cleric-spells/destruicao-rastejante.json",
+                "level": 7,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Encantar Cobras",
+                "file": "cleric-spells/encantar-cobras.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Encantar Pessoas ou Mamíferos",
+                "file": "cleric-spells/encantar-pessoas-ou-mamiferos.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Falar com Animais",
+                "file": "cleric-spells/falar-com-animais.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Animal, Adivinhação"
+            },
+            {
+                "name": "Imobilizar Animais",
+                "file": "cleric-spells/imobilizar-animais.json",
+                "level": 3,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Inseto Gigante",
+                "file": "cleric-spells/inseto-gigante.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Inviabilidade contra Animais",
+                "file": "cleric-spells/inviabilidade-contra-animais.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Localizar Animais ou Plantas",
+                "file": "cleric-spells/localizar-animais-ou-plantas.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação (Animal, Vegetal)"
+            },
+            {
+                "name": "Mensageiro",
+                "file": "cleric-spells/mensageiro.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Animal"
+            },
+            {
+                "name": "Repelir Insetos",
+                "file": "cleric-spells/repelir-insetos.json",
+                "level": 4,
+                "school": "Abjuração, Alteração",
+                "sphere": "Animal, Proteção"
+            }
+        ],
+        "Astral": [
+            {
+                "name": "Magia Astral",
+                "file": "cleric-spells/magia-astral.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Astral"
+            },
+            {
+                "name": "Mudança de Plano",
+                "file": "cleric-spells/mudanca-de-plano.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Astral"
+            }
+        ],
+        "Clima": [
+            {
+                "name": "Arco-íris",
+                "file": "cleric-spells/arco-iris.json",
+                "level": 5,
+                "school": "Evocação, Alteração",
+                "sphere": "Clima, Solar"
+            },
+            {
+                "name": "Controlar o Clima",
+                "file": "cleric-spells/controlar-o-clima.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Controlar os Ventos",
+                "file": "cleric-spells/controlar-os-ventos.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Controlar Temperatura, 3 m",
+                "file": "cleric-spells/controlar-temperatura-3-m.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Convocar Clima",
+                "file": "cleric-spells/convocar-clima.json",
+                "level": 6,
+                "school": "Conjuração/Convocação",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Convocar Relâmpagos",
+                "file": "cleric-spells/convocar-relampagos.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Fogo das Fadas",
+                "file": "cleric-spells/fogo-das-fadas.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Obscurecimento",
+                "file": "cleric-spells/obscurecimento.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Clima"
+            },
+            {
+                "name": "Proteção a Eletricidade",
+                "file": "cleric-spells/protecao-a-eletricidade.json",
+                "level": 4,
+                "school": "Abjuração",
+                "sphere": "Proteção, Clima"
+            }
+        ],
+        "Combate": [
+            {
+                "name": "Arma Abençoada",
+                "file": "cleric-spells/arma-abencoada.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Combate, Vegetal"
+            },
+            {
+                "name": "Coluna de Chamas",
+                "file": "cleric-spells/coluna-de-chamas.json",
+                "level": 5,
+                "school": "Evocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Cântico",
+                "file": "cleric-spells/cantico.json",
+                "level": 2,
+                "school": "Conjuração/Convocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Martelo Espiritual",
+                "file": "cleric-spells/martelo-espiritual.json",
+                "level": 2,
+                "school": "Invocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Oração",
+                "file": "cleric-spells/oracao.json",
+                "level": 3,
+                "school": "Conjuração/Convocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Palavra Sagrada",
+                "file": "cleric-spells/palavra-sagrada.json",
+                "level": 7,
+                "school": "Conjuração/Convocação",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Pedra Encantada",
+                "file": "cleric-spells/pedra-encantada.json",
+                "level": 1,
+                "school": "Encantamentos",
+                "sphere": "Combate"
+            },
+            {
+                "name": "Praga de Insetos",
+                "file": "cleric-spells/praga-de-insetos.json",
+                "level": 5,
+                "school": "Conjuração, Convocação",
+                "sphere": "Combate"
+            }
+        ],
+        "Convocação": [
+            {
+                "name": "Abjurar",
+                "file": "cleric-spells/abjurar.json",
+                "level": 4,
+                "school": "Abjuração",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Animar Objetos",
+                "file": "cleric-spells/animar-objetos.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Criação, Convocação"
+            },
+            {
+                "name": "Auxílio Imediato",
+                "file": "cleric-spells/auxilio-imediato.json",
+                "level": 7,
+                "school": "Alteração, Encantamento",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Conjurar Animais",
+                "file": "cleric-spells/conjurar-animais.json",
+                "level": 6,
+                "school": "Conjuração, Convocação",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Conjurar Elemental da Terra",
+                "file": "cleric-spells/conjurar-elemental-da-terra.json",
+                "level": 7,
+                "school": "Conjuração/Convocação",
+                "sphere": "Elemental (Terra), Convocação"
+            },
+            {
+                "name": "Convocar Animais I",
+                "file": "cleric-spells/convocar-animais-i.json",
+                "level": 4,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Convocar Animais II",
+                "file": "cleric-spells/convocar-animais-ii.json",
+                "level": 5,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Convocar Animais III",
+                "file": "cleric-spells/convocar-animais-iii.json",
+                "level": 6,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Convocar Criaturas da Floresta",
+                "file": "cleric-spells/convocar-criaturas-da-floresta.json",
+                "level": 4,
+                "school": "Conjuração/Convocação",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Destruição Rastejante",
+                "file": "cleric-spells/destruicao-rastejante.json",
+                "level": 7,
+                "school": "Conjuração/Convocação",
+                "sphere": "Animal, Convocação"
+            },
+            {
+                "name": "Dissipar o Mal",
+                "file": "cleric-spells/dissipar-o-mal.json",
+                "level": 5,
+                "school": "Abjuração",
+                "sphere": "Proteção, Convocação"
+            },
+            {
+                "name": "Palavra de Recordação",
+                "file": "cleric-spells/palavra-de-recordacao.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Portal",
+                "file": "cleric-spells/portal.json",
+                "level": 7,
+                "school": "Conjuração, Convocação",
+                "sphere": "Convocação"
+            },
+            {
+                "name": "Requisição",
+                "file": "cleric-spells/requisicao.json",
+                "level": 7,
+                "school": "Evocação/Alteração",
+                "sphere": "Feitiço, Convocação"
+            },
+            {
+                "name": "Servo Aéreo",
+                "file": "cleric-spells/servo-aereo.json",
+                "level": 6,
+                "school": "Conjuração/ Convocação",
+                "sphere": "Convocação"
+            }
+        ],
+        "Criação": [
+            {
+                "name": "Animar Objetos",
+                "file": "cleric-spells/animar-objetos.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Criação, Convocação"
+            },
+            {
+                "name": "Banquete de Heróis",
+                "file": "cleric-spells/banquete-de-herois.json",
+                "level": 6,
+                "school": "Evocação",
+                "sphere": "Criação"
+            },
+            {
+                "name": "Barreira de Lâminas",
+                "file": "cleric-spells/barreira-de-laminas.json",
+                "level": 6,
+                "school": "Evocação",
+                "sphere": "Guarda, Criação"
+            },
+            {
+                "name": "Cajado Vivo",
+                "file": "cleric-spells/cajado-vivo.json",
+                "level": 7,
+                "school": "Evocação, Encantamento",
+                "sphere": "Vegetal. Criação"
+            },
+            {
+                "name": "Carruagem Flamejante",
+                "file": "cleric-spells/carruagem-flamejante.json",
+                "level": 7,
+                "school": "Evocação",
+                "sphere": "Elemental (Fogo), Criação"
+            },
+            {
+                "name": "Criar Alimentos",
+                "file": "cleric-spells/criar-alimentos.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Criação"
+            },
+            {
+                "name": "Muralha de Espinhos",
+                "file": "cleric-spells/muralha-de-espinhos.json",
+                "level": 6,
+                "school": "Conjuração/Convocação",
+                "sphere": "Vegetal, Criação"
+            }
+        ],
+        "Cura": [
+            {
+                "name": "Cura Completa",
+                "file": "cleric-spells/cura-completa.json",
+                "level": 6,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Curar Ferimentos Críticos",
+                "file": "cleric-spells/curar-ferimentos-criticos.json",
+                "level": 5,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Curar Ferimentos Graves",
+                "file": "cleric-spells/curar-ferimentos-graves.json",
+                "level": 4,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Curar Ferimentos Leves",
+                "file": "cleric-spells/curar-ferimentos-leves.json",
+                "level": 1,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Neutralizar Venenos",
+                "file": "cleric-spells/neutralizar-venenos.json",
+                "level": 4,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            },
+            {
+                "name": "Retardar Venenos",
+                "file": "cleric-spells/retardar-venenos.json",
+                "level": 2,
+                "school": "Necromancia",
+                "sphere": "Cura"
+            }
+        ],
+        "Elemental": [
+            {
+                "name": "Andar no Ar",
+                "file": "cleric-spells/andar-no-ar.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Elementar (Ar)"
+            },
+            {
+                "name": "Andar sobre as Chamas",
+                "file": "cleric-spells/andar-sobre-as-chamas.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Andar Sobre as Águas",
+                "file": "cleric-spells/andar-sobre-as-aguas.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Água)"
+            },
+            {
+                "name": "Animar Pedras",
+                "file": "cleric-spells/animar-pedras.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra)"
+            },
+            {
+                "name": "Armadilha de Fogo",
+                "file": "cleric-spells/armadilha-de-fogo.json",
+                "level": 2,
+                "school": "Abjuração, Evocação",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Caminhar no Vento",
+                "file": "cleric-spells/caminhar-no-vento.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Elemental (Ar)"
+            },
+            {
+                "name": "Carruagem Flamejante",
+                "file": "cleric-spells/carruagem-flamejante.json",
+                "level": 7,
+                "school": "Evocação",
+                "sphere": "Elemental (Fogo), Criação"
+            },
+            {
+                "name": "Conjurar Elemental da Terra",
+                "file": "cleric-spells/conjurar-elemental-da-terra.json",
+                "level": 7,
+                "school": "Conjuração/Convocação",
+                "sphere": "Elemental (Terra), Convocação"
+            },
+            {
+                "name": "Conjurar Elemental do Fogo",
+                "file": "cleric-spells/conjurar-elemental-do-fogo.json",
+                "level": 6,
+                "school": "Conjuração/Convocação",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Criar Chamas",
+                "file": "cleric-spells/criar-chamas.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Criar Fogo",
+                "file": "cleric-spells/criar-fogo.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Criar Água",
+                "file": "cleric-spells/criar-agua.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Elemental (Água)"
+            },
+            {
+                "name": "Demônio ela Poeira",
+                "file": "cleric-spells/demonio-ela-poeira.json",
+                "level": 2,
+                "school": "Conjuração/Convocação",
+                "sphere": "Elemental (Ar)"
+            },
+            {
+                "name": "Esquentar Metal",
+                "file": "cleric-spells/esquentar-metal.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Lâmina Flamejante",
+                "file": "cleric-spells/lamina-flamejante.json",
+                "level": 2,
+                "school": "Evocação",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Mesclar-se às Rochas",
+                "file": "cleric-spells/mesclar-se-as-rochas.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra)"
+            },
+            {
+                "name": "Metal em Madeira",
+                "file": "cleric-spells/metal-em-madeira.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra)"
+            },
+            {
+                "name": "Moldar Rochas",
+                "file": "cleric-spells/moldar-rochas.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra) 1º e 8º 1 mês 3 rodadas 3"
+            },
+            {
+                "name": "Muralha de Fogo",
+                "file": "cleric-spells/muralha-de-fogo.json",
+                "level": 5,
+                "school": "Conjuração, Convocação",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "O Conto das Rochas",
+                "file": "cleric-spells/o-conto-das-rochas.json",
+                "level": 6,
+                "school": "Adivinhação",
+                "sphere": "Elemental (Terra), Adivinhação"
+            },
+            {
+                "name": "Partir Água",
+                "file": "cleric-spells/partir-agua.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Elemental (Água)"
+            },
+            {
+                "name": "Pedra em Lama",
+                "file": "cleric-spells/pedra-em-lama.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra, Água)"
+            },
+            {
+                "name": "Pedras Afiadas",
+                "file": "cleric-spells/pedras-afiadas.json",
+                "level": 5,
+                "school": "Alteração, Encantamentos",
+                "sphere": "Elemental (Terra)"
+            },
+            {
+                "name": "Pirotecnia",
+                "file": "cleric-spells/pirotecnia.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Proteção a Fogo",
+                "file": "cleric-spells/protecao-a-fogo.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção, Elemental (Fogo)"
+            },
+            {
+                "name": "Respirar na Água",
+                "file": "cleric-spells/respirar-na-agua.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Elemental (Água, Ar)"
+            },
+            {
+                "name": "Sementes de Fogo",
+                "file": "cleric-spells/sementes-de-fogo.json",
+                "level": 6,
+                "school": "Conjuração",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Tempestade de Fogo",
+                "file": "cleric-spells/tempestade-de-fogo.json",
+                "level": 7,
+                "school": "Evocação",
+                "sphere": "Elemental (Fogo)"
+            },
+            {
+                "name": "Terremoto",
+                "file": "cleric-spells/terremoto.json",
+                "level": 7,
+                "school": "Alteração",
+                "sphere": "Elemental (Terra)"
+            },
+            {
+                "name": "Tornar Raso",
+                "file": "cleric-spells/tornar-raso.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Elemental (Água)"
+            },
+            {
+                "name": "Água em Pó",
+                "file": "cleric-spells/agua-em-po.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Elemental (Água, Terra)"
+            }
+        ],
+        "Feitiço": [
+            {
+                "name": "Cativar",
+                "file": "cleric-spells/cativar.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Feitiços"
+            },
+            {
+                "name": "Comando",
+                "file": "cleric-spells/comando.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Feitiço"
+            },
+            {
+                "name": "Confusão",
+                "file": "cleric-spells/confusao.json",
+                "level": 7,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Feitiço"
+            },
+            {
+                "name": "Imobilizar Pessoas",
+                "file": "cleric-spells/imobilizar-pessoas.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Feitiços"
+            },
+            {
+                "name": "Manto de Bravura",
+                "file": "cleric-spells/manto-de-bravura.json",
+                "level": 4,
+                "school": "Conjuração/Convocação",
+                "sphere": "Feitiço"
+            },
+            {
+                "name": "Missão",
+                "file": "cleric-spells/missao.json",
+                "level": 5,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Feitiço"
+            },
+            {
+                "name": "Movimentação Livre",
+                "file": "cleric-spells/movimentacao-livre.json",
+                "level": 4,
+                "school": "Abjuração, Encantamentos",
+                "sphere": "Feitiço"
+            },
+            {
+                "name": "Remover Medo",
+                "file": "cleric-spells/remover-medo.json",
+                "level": 1,
+                "school": "Abjuração",
+                "sphere": "Feitiços"
+            },
+            {
+                "name": "Requisição",
+                "file": "cleric-spells/requisicao.json",
+                "level": 7,
+                "school": "Evocação/Alteração",
+                "sphere": "Feitiço, Convocação"
+            },
+            {
+                "name": "Transferência de Poder Divino",
+                "file": "cleric-spells/transferencia-de-poder-divino.json",
+                "level": 4,
+                "school": "Encantamentos",
+                "sphere": "Feitiço"
+            }
+        ],
+        "Guarda": [
+            {
+                "name": "Barreira de Lâminas",
+                "file": "cleric-spells/barreira-de-laminas.json",
+                "level": 6,
+                "school": "Evocação",
+                "sphere": "Guarda, Criação"
+            },
+            {
+                "name": "Silêncio, 4,5 m",
+                "file": "cleric-spells/silencio-4-5-m.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Guarda"
+            },
+            {
+                "name": "Símbolo",
+                "file": "cleric-spells/simbolo.json",
+                "level": 7,
+                "school": "Conjuração/Convocação",
+                "sphere": "Guarda"
+            },
+            {
+                "name": "Símbolo de Proteção",
+                "file": "cleric-spells/simbolo-de-protecao.json",
+                "level": 3,
+                "school": "Abjuração, Evocação",
+                "sphere": "Guarda"
+            },
+            {
+                "name": "Wyvern Vigia",
+                "file": "cleric-spells/wyvern-vigia.json",
+                "level": 2,
+                "school": "Evocação",
+                "sphere": "Guarda"
+            }
+        ],
+        "Necromântica": [
+            {
+                "name": "Ajuda",
+                "file": "cleric-spells/ajuda.json",
+                "level": 2,
+                "school": "Necromancia, Conjuração",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Animar os Mortos",
+                "file": "cleric-spells/animar-os-mortos.json",
+                "level": 3,
+                "school": "Necromancia",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Curar Cegueira ou Surdez",
+                "file": "cleric-spells/curar-cegueira-ou-surdez.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Curar Doença",
+                "file": "cleric-spells/curar-doenca.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Inviabilidade contra Mortos-Vivos",
+                "file": "cleric-spells/inviabilidade-contra-mortos-vivos.json",
+                "level": 1,
+                "school": "Abjuração",
+                "sphere": "Necromancia"
+            },
+            {
+                "name": "Morte Aparente",
+                "file": "cleric-spells/morte-aparente.json",
+                "level": 3,
+                "school": "Necromancia",
+                "sphere": "Necromântica"
+            },
+            {
+                "name": "Proteção ao Plano Negativo",
+                "file": "cleric-spells/protecao-ao-plano-negativo.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção, Necromântica"
+            },
+            {
+                "name": "Reencarnação",
+                "file": "cleric-spells/reencarnacao.json",
+                "level": 7,
+                "school": "Necromancia",
+                "sphere": "Necromancia"
+            },
+            {
+                "name": "Regeneração",
+                "file": "cleric-spells/regeneracao.json",
+                "level": 7,
+                "school": "Necromancia",
+                "sphere": "Necromancia"
+            },
+            {
+                "name": "Ressurreição",
+                "file": "cleric-spells/ressurreicao.json",
+                "level": 7,
+                "school": "Necromancia",
+                "sphere": "Necromancia"
+            },
+            {
+                "name": "Restauração",
+                "file": "cleric-spells/restauracao.json",
+                "level": 7,
+                "school": "Necromancia",
+                "sphere": "Necromancia"
+            },
+            {
+                "name": "Reviver Mortos",
+                "file": "cleric-spells/reviver-mortos.json",
+                "level": 5,
+                "school": "Necromancia",
+                "sphere": "Necromântica"
+            }
+        ],
+        "Proteção": [
+            {
+                "name": "Concha de Proteção a Animais",
+                "file": "cleric-spells/concha-de-protecao-a-animais.json",
+                "level": 6,
+                "school": "Abjuração",
+                "sphere": "Animal, Proteção"
+            },
+            {
+                "name": "Concha de Proteção a Vegetais",
+                "file": "cleric-spells/concha-de-protecao-a-vegetais.json",
+                "level": 5,
+                "school": "Abjuração",
+                "sphere": "Vegetal, Proteção"
+            },
+            {
+                "name": "Dissipar Magia",
+                "file": "cleric-spells/dissipar-magia.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Dissipar o Mal",
+                "file": "cleric-spells/dissipar-o-mal.json",
+                "level": 5,
+                "school": "Abjuração",
+                "sphere": "Proteção, Convocação"
+            },
+            {
+                "name": "Distanciamento",
+                "file": "cleric-spells/distanciamento.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Imunidade à Magia",
+                "file": "cleric-spells/imunidade-a-magia.json",
+                "level": 4,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Pele de Árvore",
+                "file": "cleric-spells/pele-de-arvore.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Proteção, Vegetal"
+            },
+            {
+                "name": "Proibição",
+                "file": "cleric-spells/proibicao.json",
+                "level": 6,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Proteção a Eletricidade",
+                "file": "cleric-spells/protecao-a-eletricidade.json",
+                "level": 4,
+                "school": "Abjuração",
+                "sphere": "Proteção, Clima"
+            },
+            {
+                "name": "Proteção a Fogo",
+                "file": "cleric-spells/protecao-a-fogo.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção, Elemental (Fogo)"
+            },
+            {
+                "name": "Proteção ao Calor/Frio",
+                "file": "cleric-spells/protecao-ao-calor-frio.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Proteção ao Mal",
+                "file": "cleric-spells/protecao-ao-mal.json",
+                "level": 1,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Proteção ao Mal, 3 m",
+                "file": "cleric-spells/protecao-ao-mal-3-m.json",
+                "level": 4,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Proteção ao Plano Negativo",
+                "file": "cleric-spells/protecao-ao-plano-negativo.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção, Necromântica"
+            },
+            {
+                "name": "Remover Maldições",
+                "file": "cleric-spells/remover-maldicoes.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Remover Paralisia",
+                "file": "cleric-spells/remover-paralisia.json",
+                "level": 3,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Repelir Insetos",
+                "file": "cleric-spells/repelir-insetos.json",
+                "level": 4,
+                "school": "Abjuração, Alteração",
+                "sphere": "Animal, Proteção"
+            },
+            {
+                "name": "Resistir Calor/Trio",
+                "file": "cleric-spells/resistir-calor-trio.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Roupa Encantada",
+                "file": "cleric-spells/roupa-encantada.json",
+                "level": 3,
+                "school": "Encantamento",
+                "sphere": "Proteção"
+            },
+            {
+                "name": "Santuário",
+                "file": "cleric-spells/santuario.json",
+                "level": 1,
+                "school": "Abjuração",
+                "sphere": "Proteção"
+            }
+        ],
+        "Solar": [
+            {
+                "name": "Arco-íris",
+                "file": "cleric-spells/arco-iris.json",
+                "level": 5,
+                "school": "Evocação, Alteração",
+                "sphere": "Clima, Solar"
+            },
+            {
+                "name": "Brilho das Estrelas",
+                "file": "cleric-spells/brilho-das-estrelas.json",
+                "level": 3,
+                "school": "Evocação, Ilusão/Visão",
+                "sphere": "Solar da magia), e receber informações de acordo com os conhecimentos"
+            },
+            {
+                "name": "Luz",
+                "file": "cleric-spells/luz.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Solar"
+            },
+            {
+                "name": "Luz Continua",
+                "file": "cleric-spells/luz-continua.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Solar"
+            },
+            {
+                "name": "Raio de Luar",
+                "file": "cleric-spells/raio-de-luar.json",
+                "level": 5,
+                "school": "Evocação, Alteração",
+                "sphere": "Solar"
+            },
+            {
+                "name": "Raio de Sol",
+                "file": "cleric-spells/raio-de-sol.json",
+                "level": 7,
+                "school": "Evocação, Alteração",
+                "sphere": "Solar"
+            }
+        ],
+        "Todas": [
+            {
+                "name": "Benção",
+                "file": "cleric-spells/bencao.json",
+                "level": 1,
+                "school": "Conjuração/Convocação",
+                "sphere": "Todas"
+            },
+            {
+                "name": "Círculo de Fé",
+                "file": "cleric-spells/circulo-de-fe.json",
+                "level": 1,
+                "school": "Evocação",
+                "sphere": "Todas"
+            },
+            {
+                "name": "Detectar Maldade",
+                "file": "cleric-spells/detectar-maldade.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Todas"
+            },
+            {
+                "name": "Penitência",
+                "file": "cleric-spells/penitencia.json",
+                "level": 5,
+                "school": "Abjuração",
+                "sphere": "Todas"
+            },
+            {
+                "name": "Purificar Alimentos",
+                "file": "cleric-spells/purificar-alimentos.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Todas"
+            }
+        ],
+        "Vegetal": [
+            {
+                "name": "Afugentar Plantas",
+                "file": "cleric-spells/afugentar-plantas.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Ampliar Plantas",
+                "file": "cleric-spells/ampliar-plantas.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Arma Abençoada",
+                "file": "cleric-spells/arma-abencoada.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Combate, Vegetal"
+            },
+            {
+                "name": "Armadilha",
+                "file": "cleric-spells/armadilha.json",
+                "level": 3,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Bastões em Serpentes",
+                "file": "cleric-spells/bastoes-em-serpentes.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Bom Fruto",
+                "file": "cleric-spells/bom-fruto.json",
+                "level": 2,
+                "school": "Alteração, Evocação",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Cajado Vivo",
+                "file": "cleric-spells/cajado-vivo.json",
+                "level": 7,
+                "school": "Evocação, Encantamento",
+                "sphere": "Vegetal. Criação"
+            },
+            {
+                "name": "Carvalho Vivo",
+                "file": "cleric-spells/carvalho-vivo.json",
+                "level": 6,
+                "school": "Encantamento",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Concha de Proteção a Vegetais",
+                "file": "cleric-spells/concha-de-protecao-a-vegetais.json",
+                "level": 5,
+                "school": "Abjuração",
+                "sphere": "Vegetal, Proteção"
+            },
+            {
+                "name": "Constrição",
+                "file": "cleric-spells/constricao.json",
+                "level": 1,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Crescer Espinhos",
+                "file": "cleric-spells/crescer-espinhos.json",
+                "level": 3,
+                "school": "Alteração, Encantamentos",
+                "sphere": "Vegetal pedra e outros tipos de barreira, desde que o volume afetado esteja"
+            },
+            {
+                "name": "Esconderijo Vegetal",
+                "file": "cleric-spells/esconderijo-vegetal.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Falar com Plantas",
+                "file": "cleric-spells/falar-com-plantas.json",
+                "level": 4,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Floresta Ilusória",
+                "file": "cleric-spells/floresta-ilusoria.json",
+                "level": 4,
+                "school": "Ilusão/Visão",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Imobilizar Plantas",
+                "file": "cleric-spells/imobilizar-plantas.json",
+                "level": 4,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Localizar Animais ou Plantas",
+                "file": "cleric-spells/localizar-animais-ou-plantas.json",
+                "level": 1,
+                "school": "Adivinhação",
+                "sphere": "Adivinhação (Animal, Vegetal)"
+            },
+            {
+                "name": "Muralha de Espinhos",
+                "file": "cleric-spells/muralha-de-espinhos.json",
+                "level": 6,
+                "school": "Conjuração/Convocação",
+                "sphere": "Vegetal, Criação"
+            },
+            {
+                "name": "Passos sem Pegadas",
+                "file": "cleric-spells/passos-sem-pegadas.json",
+                "level": 1,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Pele de Árvore",
+                "file": "cleric-spells/pele-de-arvore.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Proteção, Vegetal"
+            },
+            {
+                "name": "Portal Vegetal",
+                "file": "cleric-spells/portal-vegetal.json",
+                "level": 5,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Teleporte por Árvores",
+                "file": "cleric-spells/teleporte-por-arvores.json",
+                "level": 6,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Torcer Madeira",
+                "file": "cleric-spells/torcer-madeira.json",
+                "level": 2,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Tropeço",
+                "file": "cleric-spells/tropeco.json",
+                "level": 2,
+                "school": "Encantamento/Feitiço",
+                "sphere": "Vegetal"
+            },
+            {
+                "name": "Árvore",
+                "file": "cleric-spells/arvore.json",
+                "level": 3,
+                "school": "Alteração",
+                "sphere": "Vegetal"
+            }
+        ]
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Mesclar-se às Rochas",
+    "level": 3,
+    "school": "Alteração",
+    "sphere": "Elemental (Terra)",
+    "castingTime": "6",
+    "duration": "8 rodadas + 1d8 rodadas",
+    "range": "0",
+    "area": "0 clérigo",
+    "description": "Essa magia permite que o clérigo una seu corpo e seus pertences em um bloco único de pedra. A pedra deve ser grande o suficiente para acomodar o corpo do clérigo em três dimensões. Quando a execução termina, o clérigo e uns 30 quilos de matéria inanimada se fundem à rocha. Se qualquer uma das condições acima não for cumprida, a magia não funciona. Enquanto estiver fundido a pedra, o clérigo mantém contato, ainda que tênue, com a superfície da rocha Além disso, contínua consciente da passagem do tempo. Nada que ocorre fora da pedra pode ser visto ou ouvido pelo clérigo. Pequenos danos à rocha não afetam o clérigo, a menos que a pedra seja reduzida a proporções que não acomodem mais seu corpo. Neste caso, ele será violentamente expelido, sofrendo um dano de 4d8 pontos. Se a pedra for totalmente destruída, o clérigo deve obter sucesso em um teste de resistência à magia para não morrer por causa da violência da separação (o dano de 4d8 ainda se aplica). Entre os componentes da duração da magia (8 + 1d8 rodadas), a parte variável é determinada secretamente pelo Mestre. O clérigo pode deixar a pedra quando desejar. Se a duração se esgota, ou se o efeito é magicamente anulado antes do clérigo sair. voluntariamente, da pedra, este é expulso e sofre o habitual dano de 4d8 pontos. Estas magias podem ferir ou afetar o clérigo, quando lançadas contra a pedra: Pedra em Carne expele o clérigo (4d8 pontos de dano); Moldar Rochas fere o clérigo, sem expeli-lo, em 4d4 pontos de dano (notem que se a nova forma da pedra não puder acomodar o clérigo, ele sofre os efeitos das regras de expulsão); Pedra em Lama expele o clérigo e, se este não obtiver sucesso em um teste de resistência à magia, morre devido ao choque imposto ao seu organismo: e, finalmente, Criar Passagens, que expele o clérigo sem causar dano algum."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Abjurar",
+    "level": 4,
+    "school": "Abjuração",
+    "sphere": "Convocação",
+    "castingTime": "7",
+    "duration": "Especial",
+    "range": "10 metros",
+    "area": "1 criatura",
+    "description": "Essa magia pode mandar uma criatura extraplanar de volta para seu plano de origem, desde que o receptor tenha um status inferior ao de semideus. Se a criatura tiver um nome específico (pessoal), este será utilizado para que a magia possa afetá-la. Qualquer proteção contra magia possuída pelo receptor deve ser vencida, ou o efeito não ocorrerá. Abjurar tem uma chance básica de funcionar na proporção de 50% (11 ou mais em 1d20). A chance é ajustada pela diferença entre o nível do clérigo e o nível (ou DV, se for o caso) da criatura a ser afetada. Se o clérigo tiver um nível maior que o da criatura, a diferença é subtraída do número que precisa, obtido no dado; caso contrário, essa diferença é somada ao número. Se a magia tem sucesso, a criatura é imediatamente arremessada de volta ao seu plano de origem, devendo sobreviver a um teste de colapso (para seres que não possuem o atributo Constituição, a chance é de 70% + 2%/DV ou nível). Caso a magia falhe, o clérigo deve ganhar mais um nível antes de tentar novamente expulsar aquela criatura. Os componentes são o símbolo sagrado do clérigo (que não é consumido), água benta e algo que seja repugnante para o receptor."
+}

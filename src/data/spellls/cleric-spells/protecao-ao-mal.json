@@ -1,0 +1,11 @@
+{
+    "name": "Proteção ao Mal",
+    "level": 1,
+    "school": "Abjuração",
+    "sphere": "Proteção",
+    "castingTime": "1 rodada",
+    "duration": "3 rodadas/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Com o lançamento dessa magia, surge uma barreira mística a 30 centímetros do receptor. Esta se moverá junto com ele, produzindo três efeitos: Primeiro, todos os ataques de criaturas malignas, ou encantadas de forma maligna, contra o receptor, receberão uma penalidade de -2 para cada ataque, e qualquer teste de resistência realizado pelo receptor contra tais criaturas, terá um bônus de +2. Segundo, qualquer tentativa de controle mental de uma criatura maligna contra o receptor (por exemplo, um vampiro tenta enfeitiçar o clérigo) ou de penetrar em sua mente (como o ataque de um fantasma com Recipiente Arcano) será bloqueado. Note que esta proteção não irá anular o feitiço do vampiro, ou interrompê-lo, mas evitará que ele controle a mente da criatura protegida. Da mesma maneira, uma Força vital estranha não será exorcizada por este efeito. Terceiro, a magia previne o toque de criaturas de outros planos ou que tenham sido convocadas (como serviçais aéreos, elementais, diabretes, caçadores invisíveis, salamandras, víboras aquosas, xorns, e outros). Isto faz com que os ataques naturais (garras, presas, rabeadas, etc.) destas criaturas falhem. Se seus ataques dependerem de contato físico com a criatura protegida, os seres extraplanares fugirão. Animais ou monstros chamados ou convocados por magia são igualmente bloqueados, não podendo tocar o clérigo protegido. Esta proteção acaba se a criatura protegida fizer um ataque corpo a corpo contra o ser repelido, ou se a barreira for pressionada contra a criatura. Para lançar esta magia o clérigo usa água benta e queima incenso. Esta magia pode ser revertida, tornando-se Proteção ao Bem: o segundo e terceiro aspectos continuam idênticos. O componente material da magia reversa é um circulo de água profana ou esterco queimado."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Coluna de Chamas",
+    "level": 5,
+    "school": "Evocação",
+    "sphere": "Combate",
+    "castingTime": "9",
+    "duration": "Instantânea",
+    "range": "60 metros",
+    "area": "Coluna com raio de 2 metros por altura de 10 metros",
+    "description": "Quando essa magia é lançada, uma coluna vertical de fogo aparece no local determinado pelo clérigo. Qualquer criatura dentro da área de efeito deve passar por um teste de resistência à magia. Fracasso significa que a vítima sofrerá 6d8 pontos de dano. Do contrário, o dano cai pela metade. O componente material é uma pitada de enxofre."
+}

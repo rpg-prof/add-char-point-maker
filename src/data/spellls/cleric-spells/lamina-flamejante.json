@@ -1,0 +1,11 @@
+{
+    "name": "Lâmina Flamejante",
+    "level": 2,
+    "school": "Evocação",
+    "sphere": "Elemental (Fogo)",
+    "castingTime": "1 rodada",
+    "duration": "4 rodadas + 1 rodada/2 níveis",
+    "range": "0",
+    "area": "1 metro, como uma lâmina de espada",
+    "description": "Essa magia produz um jato de logo que se projeta a partir da mão de quem o criou. Este jato assemelha-se a uma lâmina de cimitarra, e é usado como uma espada. Se o clérigo acertar alguma criatura com a chama, a vítima irá receber 1d4 + 4 pontos de dano. Um bônus de +2 (7 a 10 pontos de dano) é aplicado se a lâmina atingir um morto- vivo, ou outra criatura especialmente vulnerável ao fogo. Se a vítima tiver qualquer proteção contra fogo, o dano será reduzido em 2 (1d4+2 pontos de dano). Elementais do fogo e criaturas que o usem como arma natural não sofrerão dano algum se atacados desta forma A espada pode inflamar materiais combustíveis, como pergaminho, gravetos secos, tecido, palha, etc. Entretanto, ela não é considerada uma arma mágica. Assim, criaturas (exceto mortos-vivos) que são afetadas somente por armas mágicas não serão feridas por esta magia. Este efeito não funciona dentro da água. Além do símbolo sagrado do clérigo. Lâmina Flamejante necessita de uma folha de sumagre como componente material."
+}

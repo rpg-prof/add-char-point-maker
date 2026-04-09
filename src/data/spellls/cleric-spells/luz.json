@@ -1,0 +1,11 @@
+{
+    "name": "Luz",
+    "level": 1,
+    "school": "Alteração",
+    "sphere": "Solar",
+    "castingTime": "4",
+    "duration": "1 hora +1 turno/nível",
+    "range": "120 metros",
+    "area": "Globo de 6 metros de raio",
+    "description": "Essa magia cria luminosidade dentro do espaço compreendido por um globo de aproximadamente 6 metros de raio, a partir do ponto focal. A luz emanada tem a mesma intensidade que a produzida por uma tocha. Objetos na escuridão fora desta luz poderão ser vistos, mas aparecerão imprecisos e sombreados. O efeito é centrado em um ponto determinado pelo clérigo, que precisa ter uma visão clara e desobstruída deste foco. A luz poderá surgir do ar, pedra, metal, madeira, ou qualquer substância similar. O efeito da magia será imóvel, a não ser que o foco esteja sobre um objeto ou criatura em movimento. Se esta magia for lançada sobre uma criatura, qualquer resistência ou proteção contra magia aplicável deverá ser testada. Um sucesso no teste de proteção anulará a magia, enquanto um sucesso no teste de resistência indica somente que o ponto focal do efeito estará imediatamente atrás desta criatura, mas não em suas costas. Se a magia for centrada nos órgãos visuais de um ser, ele ficará cego, recebendo uma penalidade de -4 nos testes de resistência e em jogadas de ataque, além da penalidade de -4 na CA. O clérigo poderá extinguir a luz quando quiser, com um simples comando oral. Magias de luz não são cumulativas — o lançamento de múltiplos efeitos não irá criar uma luz mais brilhante. Essa magia possui um reverso, que cria uma área de escuridão de igual tamanho e nas mesmas condições da magia comum, mas com a metade da duração. A escuridão mágica é como a escuridão existente em um quarto sem janelas não iluminado — preto como breu. Qualquer tipo de luz, normal ou mágica, que tenha menos claridade do que a presente num dia ensolarado, não conseguirá funcionar dentro de Escuridão. Esta Escuridão lançada diretamente contra uma de Luz provocará um cancelamento mútuo, e vice-versa."
+}

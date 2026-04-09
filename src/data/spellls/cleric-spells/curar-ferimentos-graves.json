@@ -1,0 +1,11 @@
+{
+    "name": "Curar Ferimentos Graves",
+    "level": 4,
+    "school": "Necromancia",
+    "sphere": "Cura",
+    "castingTime": "6",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Essa magia é uma versão mais potente de Curar Ferimentos Leves. Ao tocar outra criatura, o clérigo restaura 2d8 + 1 pontos de vida. Esta cura não afeta criaturas incorpóreas, mortas ou seres extraplanares. A magia reversa. Provocar Ferimentos Graves, age da mesma forma, mas ao invés de restaurar ela causa 2d8 +1 pontos de dano na criatura tocada (para tocar uma criatura com o intuito de feri-la, normalmente é preciso uma jogada de ataque)."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Raio de Luar",
+    "level": 5,
+    "school": "Evocação, Alteração",
+    "sphere": "Solar",
+    "castingTime": "9",
+    "duration": "1 rodada/nível",
+    "range": "60 metros + 10 metros/nível",
+    "area": "Círculo de 2 metros de raio (mais especial)",
+    "description": "Com essa magia, o clérigo é capaz de fazer surgir um raio de luz pálido e suave, e iluminar uma área indicada. A luz é exatamente como o luar, e por isso todas as cores que não sejam variações do preto, branco e cinza ficam vagas. O clérigo pode facilmente mover o raio de luz para qualquer área que consiga ver e apontar. Isso torna essa magia numa maneira eficaz de se iluminar alguma coisa, um oponente, por exemplo. Embora o Raio de Luar não elimine todas as sombras, uma criatura focalizada pelo raio fica bem visível. O reflexo permite que essa magia seja vislumbrada a até 10 metros da área de efeito, mas não derrama luz suficiente para estragar uma surpresa. A luminosidade não afeta infravisão. Se desejar, o clérigo ainda pode diminuir a luz a uma intensidade próxima à escuridão. O raio luminoso tem todas as propriedades do luar verdadeiro e pode induzir à licantropia, a menos que seu Mestre determine o contrário. Os componentes materiais são algumas sementes de menispermo e um pedaço de feldspato opalescente (pedra da lua)."
+}

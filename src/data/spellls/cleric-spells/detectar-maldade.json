@@ -1,0 +1,11 @@
+{
+    "name": "Detectar Maldade",
+    "level": 1,
+    "school": "Adivinhação",
+    "sphere": "Todas",
+    "castingTime": "1 rodada",
+    "duration": "1 turno + 5 rodadas/nível",
+    "range": "120 metros",
+    "area": "3 metros em uma direção",
+    "description": "Através dessa magia, o clérigo percebe emanações de maldade (ou de bondade, no caso da magia reversa) de alguma criatura, objeto ou área. A tendência, entretanto, só será revelada em situações anormais: personagens com inclinações extremamente fortes, ou que não se afastam de sua fé, e aqueles que estão pelo menos no 9º nível, podem gerar uma aura de bondade ou maldade, desde que tenham a intenção de fazer ações boas ou malignas. Monstros poderosos, como rakshasas ou ki-rins, costumam possuir auras malignas e bondosas, quando metamorfoseados. Um morto-vivo com tendência emana o mal, pois este é o poder que lhe permite continuar existindo neste plano. Um objeto amaldiçoado ou água profana emana uma aura maligna. O mesmo não ocorre com uma armadilha escondida ou uma víbora sem Inteligência. O nível de maldade (fraco, moderado, forte, opressivo) e a possível natureza (na expectativa, malévolo, exultante, etc.) podem ser percebidos. Se o mal é muito opressivo, o clérigo tem 10% de chance por nível de detectar a inclinação geral da tendência (leal, neutro, caótico). A duração da magia é um turno mais cinco rodadas por nível do clérigo. Sendo assim, um clérigo de 1º nível poderá lançar uma magia com quinze rodadas de duração, o de 2º poderá lançar com vinte rodadas, etc. A magia tem a capacidade de percepção de 3 metros de largura na direção em que o clérigo estiver olhando. O clérigo precisa se concentrar— parar, ficar quieto, e desejar, conscientemente, perceber a aura para que, depois de uma rodada, surja uma resposta. O clérigo deve segurar seu símbolo sagrado à frente e com firmeza para que o efeito seja positivo."
+}

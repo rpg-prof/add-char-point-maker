@@ -1,0 +1,11 @@
+{
+    "name": "Cativar Animais",
+    "level": 1,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Animal",
+    "castingTime": "1 hora",
+    "duration": "Permanente",
+    "range": "10 metros",
+    "area": "1 animal",
+    "description": "Por meio dessa magia, o clérigo torna-se capaz de fazer a qualquer animal, ou outro ser com Inteligência animal (1 a 4), uma oferta de amizade Se a criatura não obtiver sucesso num teste de resistência à magia, ela ficará calma e quieta até que o clérigo encerre o efeito. Além disso, o animal seguirá o clérigo. A magia funciona somente se a oferta de amizade for sincera. Se o clérigo tiver outros motivos, o animal irá senti-los (por exemplo, se o clérigo pretende comer o animal, mandá-lo na frente para ativar armadilhas, etc.). O clérigo pode ensinar ao seu animal amigo três truques ou tarefas específicas para cada ponto de Inteligência da criatura. Truques comuns são aqueles ensinados normalmente a um cão ou animal doméstico similar (nada muito complexo). O treinamento de cada truque deve ser feito em um período de 1 semana, e todos devem ser ensinados até três meses depois do início da amizade. Durante este tempo, o animal não ira ferir o clérigo. Se a criatura for deixada sozinha por mais de uma semana, porém, ela voltará ao estado natural. O clérigo pode usar esta magia para atrair um ou mais animais de até dois dados de vida por nível de experiência. Este também é o número máximo de animais que podem ser atraídos e treinados de cada vez: o dobro do nível de experiência do clérigo. Apenas animais sem tendência podem ser atraídos, conquistados e treinados. Os componentes materiais são o símbolo sagrado e um pouco de um alimento de que o animal goste."
+}

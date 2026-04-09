@@ -1,0 +1,11 @@
+{
+    "name": "Sementes de Fogo",
+    "level": 6,
+    "school": "Conjuração",
+    "sphere": "Elemental (Fogo)",
+    "castingTime": "30 minutos",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "A magia Sementes de Fogo cria projéteis especiais, ou bombas incendiárias, que queimam com grande calor. O efeito pode ser utilizado em qualquer uma das duas formas, conforme definido pelo clérigo: Projétil: Essa opção transforma até quatro bolotas (sementes de carvalho) em projéteis de área que podem ser atirados a até 40 metros. É preciso uma jogada de ataque para acertar o alvo pretendido, e penalidades por imperícia devem ser aplicadas. Cada bolota estoura quando atinge alguma superfície rígida, causando 2d8 pontos de dano e queimando qualquer material combustível em um círculo de 3 metros de diâmetro, a partir do ponto de impacto. Por meio de um teste de resistência contra magia bem-sucedido, uma criatura dentro da área afetada recebe somente metade do dano, mas um ser atingido diretamente por um dos projéteis receberá dano integral (isto é, sem teste de resistência). Incendiárias: Esta opção transforma até oito bagas de azevinho em bombas incendiárias especiais. As bagas de azevinho são enterradas na maioria das vezes, sendo muito leves para lazer mísseis eficientes (podem ser arremessadas a até 2 metros). Elas estouram e ficam em chamas se o clérigo estiver a uma distancia máxima de 40 metros e disser uma palavra de comando. As bagas explodem instantaneamente, causando 1d8 pontos de dano a qualquer criatura, e queimando qualquer material combustível dentro de um círculo de 2 metros de diâmetro. As criaturas nessa área sofrem metade do dano se forem bem-sucedidas no teste de resistência à magia. Todas as Sementes de Fogo perdem o poder depois de um período equivalente a um turno por nível de experiência do clérigo — por exemplo, as sementes de um clérigo de 13º nível permanecem potentes por um máximo de 13 turnos após sua criação. Além das bolotas ou bagas, nenhum componente material é necessário para esta magia."
+}

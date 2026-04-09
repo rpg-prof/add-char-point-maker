@@ -1,0 +1,11 @@
+{
+    "name": "Árvore",
+    "level": 3,
+    "school": "Alteração",
+    "sphere": "Vegetal",
+    "castingTime": "1 turno",
+    "duration": "6 turnos +1 turno/nível",
+    "range": "0",
+    "area": "O clérigo",
+    "description": "Utilizando essa magia, o clérigo assume a forma viva de uma pequena árvore ou arbusto, ou a forma morta de um grande tronco (em qualquer um dos casos, a forma assumida possui poucos galhos). Qualquer inspeção, por mais apurada que seja, jamais poderá revelar que a árvore, tronco, ou arbusto é, na verdade, uma pessoa; e testes normais dirão que realmente não passa de um pedaço de madeira, vivo ou morto, de acordo com a opção do clérigo. O executor da magia, no entanto, permanece capaz de observar tudo o que acontece ao seu redor. A CA e os pontos de vida da planta são os mesmos do clérigo, que pode voltar à forma normal assim que quiser. Todas as roupas e equipamentos carregados pelo clérigo mudam de forma com ele. O componente material é um pequeno galho de árvore e o símbolo sagrado do clérigo. O símbolo não é consumido pela magia."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Muralha de Fogo",
+    "level": 5,
+    "school": "Conjuração, Convocação",
+    "sphere": "Elemental (Fogo)",
+    "castingTime": "9",
+    "duration": "Especial",
+    "range": "80 metros",
+    "area": "Especial A",
+    "description": "Muralha de fogo gera cortina imóvel e incandescente de fogo mágico, com cores cintilantes — amarelo-esverdeado ou âmbar (diferente da Muralha de Fogo arcana do 4º círculo). O efeito produz uma superfície flamejante que cobre até um quadrado de 6 metros de lado por nível do clérigo, ou um anel com raio de até 3 metros — mais 2 metros para cada dois níveis de experiência do clérigo — e 6 metros de altura. O efeito deve ser executado de modo a ficar vertical em relação ao clérigo. Um dos lados da parede, selecionado pelo clérigo, emana ondas de calor, infligindo 2d4 pontos de dano sobre criaturas a até 3 metros de distância, e 1d4 pontos de dano às que estão a até 6 metros. Além disso, a parede causa 4d4 pontos de dano mais 1 ponto por nível de experiência do clérigo às criaturas que a atravessarem. Seres especialmente vulneráveis ao fogo podem sofrer dano extra, e mortos- vivos sempre sofrem o dobro do dano normal. Observe que é difícil atingir criaturas em movimento com a criação de uma Muralha de Fogo: um teste de resistência bem-sucedido permite evitar a parede, enquanto que a velocidade e a direção do movimento determinam em qual lado da parede as vítimas ficarão. A Muralha de fogo dura enquanto o clérigo estiver concentrado em sua manutenção, ou uma rodada por nível de experiência, caso a concentração cesse. O componente material necessário para esta magia é fósforo. ## Magias Divinas do 6º Círculo"
+}

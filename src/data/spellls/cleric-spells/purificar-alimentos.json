@@ -1,0 +1,11 @@
+{
+    "name": "Purificar Alimentos",
+    "level": 1,
+    "school": "Alteração",
+    "sphere": "Todas",
+    "castingTime": "1",
+    "duration": "Permanente",
+    "range": "30 metros",
+    "area": "30 litros/nível, 1 metro quadrado de área",
+    "description": "Quando lançada, essa magia faz com que comidas ou bebidas que estejam deterioradas, apodrecidas, envenenadas ou de alguma forma contaminadas tornem-se puras e apropriadas ao consumo. Até 30 litros de comida ou bebida podem ser purificados por nível. Esta magia não protege a comida ou bebida do apodrecimento natural, caso não sejam consumidas. Água profana ou comidas e bebidas similares serão estragadas pela magia, mas o efeito não atinge criaturas ou poções mágicas. O reverso desta magia é Apodrecer Alimentos, que irá estragar até água benta. A magia continua não fazendo efeito sobre criaturas ou poções."
+}

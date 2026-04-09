@@ -1,0 +1,11 @@
+{
+    "name": "Andar no Ar",
+    "level": 5,
+    "school": "Alteração",
+    "sphere": "Elementar (Ar)",
+    "castingTime": "1 hora",
+    "duration": "1 hora + 1 turno/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Essa magia permite a uma criatura, independente do tamanho, mover- se pelo ar como estivesse em chão sólido. O movimento para o alto assemelha-se à escalada de uma colina. O ângulo máximo de subida é de 45, à metade da movimentação normal. Do mesmo modo, o ângulo máximo de descida é de 45 e a taxa normal de movimentação é permitida. Uma criatura em caminhada pelo ar está sempre com o controle de seus movimentos, salvo quando sopra o vento. Nesse caso. a criatura perde ou ganha 3 metros de movimentação para cada 15 quilômetros/ hora de velocidade do vento. A criatura pode estar sujeita, pela vontade do Mestre, â penalidades adicionais, perda do controle e possíveis danos no caso de ventos especialmente fortes ou turbulentos. É possível lançar a magia quando se está sobre uma montaria treinada, que poderá, então, ser cavalgada pelo ar. Obviamente, uma montaria não acostumada a tais movimentos vai precisar de cuidados especiais e treinamento prolongado, cujos detalhes ficam a cargo do Mestre. Os componentes materiais são o símbolo sagrado do clérigo, e algumas folhas de cardo."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Comunhão com a Natureza",
+    "level": 5,
+    "school": "Adivinhação",
+    "sphere": "Adivinhação",
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "0",
+    "area": "Especial",
+    "description": "Essa magia torna o clérigo um só com a natureza da área, fortalecendo-o com conhecimentos sobre a região. Para cada nível de experiência, o clérigo pode “saber” um fato: como é o terreno, as plantas, os minerais, os cursos d’água, a população e seus costumes, os animais em geral, a presença de criaturas da floresta, enfim, tudo que esteja à sua volta. A presença de criaturas sobrenaturais poderosas também pode ser detectada, assim como o estado geral do cenário natural. A magia é mais eficaz em lugares abertos, operando em um raio de 800 metros para cada nível de experiência do clérigo. Em locais subterrâneos naturais, como cavernas e covas, o alcance limita-se a 10 metros por nível. Em construções (masmorras e cidades), a magia não funciona. O Mestre pode limitar a execução deste efeito a uma oportunidade por mês."
+}

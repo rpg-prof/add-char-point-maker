@@ -1,0 +1,11 @@
+{
+    "name": "Inviabilidade contra Animais",
+    "level": 1,
+    "school": "Alteração",
+    "sphere": "Animal",
+    "castingTime": "4",
+    "duration": "1 turno + 1 rodada/nível",
+    "range": "Toque",
+    "area": "1 criatura tocada/nível",
+    "description": "Quando essa magia é lançada, a criatura tocada torna-se completa- mente invisível para animais comuns, com Inteligência até 6. Qualquer criatura, incluindo sua versão gigante, é afetada, excluindo-se apenas os seres dotados de poderes mágicos. O receptor desta magia poderá caminhar normalmente por entre os animais sem que as criaturas tomem conhecimento de sua presença. Por exemplo, qualquer um que esteja sob este eleito poderá ficar junto a leões famintos, ou próximo a um Tiranossauro Rex, sem ser molestado: estes animais nem saberão da existência do receptor. Entretanto, um pesadelo voador, um cão demoníaco ou um lobo das estepes certamente irão notar o clérigo. Para cada nível que o clérigo ganhe, outra pessoa ou criatura poderá tornar-se invisível pela ação desta magia. Qualquer um que ataque enquanto estiver sob a proteção do efeito perderá a Invisibilidade. O componente material utilizado é azevinho, que deverá ser passado no corpo do receptor."
+}

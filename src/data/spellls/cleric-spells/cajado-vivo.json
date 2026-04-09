@@ -1,0 +1,11 @@
+{
+    "name": "Cajado Vivo",
+    "level": 7,
+    "school": "Evocação, Encantamento",
+    "sphere": "Vegetal. Criação",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "O cajado do clérigo",
+    "description": "Por meio dessa magia, o clérigo torna-se capaz de transformar um cajado especial em uma criatura semelhante a um ente do maior tamanho possível (cerca de 8 metros de altura). Quando o clérigo finca a ponta do cajado no chão e pronuncia um comando e uma invocação especiais, este vira uma criatura semelhante a um ente, com 12 dados de vida, 40 pontos de vida e Categoria de Armadura 0. Ataca duas vezes por rodada, infligindo 4d6 pontos de dano em cada ataque bem- sucedido, defende o clérigo e obedece aos seus comandos verbais. No entanto, por não ser um ente verdadeiro, o cajado não pode conversar com entes reais, ou controlar árvores. A transformação dura um número de turnos equivalentes ao nível de experiência do clérigo, o clérigo mandar o cajado retornar à sua forma normal ou o pseudo-ente ser destruído, o que ocorrer primeiro. Se o cajado-ente tiver os pontos de vida reduzidos a 0 ou menos, ele será reduzido a um pó semelhante à serragem, e o cajado estará destruído. Do contrário, o cajado pode ser usado novamente depois de 24 horas, e a criatura mantém força total. Para lançar esta magia, o clérigo deve dispor de seu símbolo sagrado ou de folhas (freixo, carvalho ou teixo), de árvores da mesma madeira do cajado. O cajado em questão deve ser especialmente preparado. Deve ser feito de um galho saudável de freixo, carvalho ou teixo, derrubado por um raio há menos de 24 horas antes do galho ser cortado. O ramo precisa ser tratado com exposição ao sol e fumos especiais por 28 dias. Logo o galho deve ser moldado, gravado e polido por outros 28 dias. O clérigo não pode envolver-se em aventuras, combates ou outras atividades extenuantes durante os períodos de preparo. Depois de terminado e entalhado com ilustrações da vida silvestre, o cajado é esfregado com o suco de azevinho e, por fim, sua extremidade é enfiada na terra do arvoredo do clérigo, enquanto ele lança uma magia de Falar com Plantas, com a qual ordena ao cajado que o ajude em tempos de necessidade. O item é então carregado com um poder que deve durar por várias transformações de cajado para ente e vice-versa."
+}

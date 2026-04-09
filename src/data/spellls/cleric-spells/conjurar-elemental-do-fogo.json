@@ -1,0 +1,11 @@
+{
+    "name": "Conjurar Elemental do Fogo",
+    "level": 6,
+    "school": "Conjuração/Convocação",
+    "sphere": "Elemental (Fogo)",
+    "castingTime": "1",
+    "duration": "1 rodada/nível",
+    "range": "80 metros",
+    "area": "Especial",
+    "description": "Quando lança essa magia, o clérigo abre uma passagem especial para o plano elemental do Fogo, e um desses é chamado para as proximidades. Há 65% de probabilidade de um elemental com 12 dados de vida aparecer; 20% de um com 16 dados de vida aparecer; 9% de duas ou quatro salamandras surgirem; 4% de vir um efreeti, e 2% de aparecer um imenso elemental com 21 a 24 dados de vida. O clérigo não precisa temer rebeldia por parte do elemental. Por isso, concentração ou proteções especiais contra a criatura não são necessárias. O ser ajuda o clérigo como for possível, inclusive atacando seus oponentes. O elemental ou outra criatura convocada permanece, no máximo, durante um turno por nível do clérigo, ou até ser exterminado, enviado de volta por meio de um Dissipar Magia, o reverso Expulsar Elemental do Fogo ou por magia semelhante."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Praga de Insetos",
+    "level": 5,
+    "school": "Conjuração, Convocação",
+    "sphere": "Combate",
+    "castingTime": "9",
+    "duration": "2 rodadas/nível",
+    "range": "120 metros",
+    "area": "Nuvem com 60 metros",
+    "description": "de diâmetro x 20 metros de altura Quando essa magia é lançada pelo clérigo, uma horda de insetos rastejantes, saltadores e voadores aglomeram-se em uma nuvem densa (em ambientes normalmente livres de insetos a magia falha). Os insetos obscurecem a visão, limitando-a a 3 metros. Lançar magias dentro da nuvem é impossível. A despeito de sua CA, as criaturas na Praga de insetos recebem um ponto de dano para cada rodada em que permanecerem dentro da horda, devido às mordidas e picadas que sofrerão. Invisibilidade não oferece proteção. Todas as vítimas com 2 ou menos dados de vida se moverão automaticamente na maior velocidade possível, em qualquer direção, até que estejam a mais de 240 metros dos insetos. Criaturas com menos de 5 dados de vida devem fazer um teste de morai; falha significa fuga, como descrito acima. Fumaça densa afasta os insetos. Fogo também os espanta: uma parede de fogo em forma de anel mantém uma Praga de insetos lançada posteriormente fora de seus limites, mas uma Bola de Fogo simplesmente afasta os insetos por uma rodada. Um simples archote é inofensivo contra a vasta horda de insetos. Relâmpagos, frio e gelo são igualmente ineficazes, enquanto um vento forte, que cubra toda a área da praga, pode dispersar os insetos e acabar com a magia, que dura duas rodadas para cada nível de experiência do clérigo, e depois disso os insetos são dispersadas. Os insetos aglomeram-se em uma área em torno de um ponto de convocação determinado pelo conjurador, que pode estar a até 120 metros de distância. A Praga de Insetos não se espalha após o tempo de sua duração. Observe que o efeito pode ser confrontado por Dissipar Magia. Os componentes materiais são cubos de açúcar, algumas amêndoas e um pouco de banha."
+}

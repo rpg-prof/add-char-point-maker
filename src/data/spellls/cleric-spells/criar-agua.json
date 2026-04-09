@@ -1,0 +1,11 @@
+{
+    "name": "Criar Água",
+    "level": 1,
+    "school": "Alteração",
+    "sphere": "Elemental (Água)",
+    "castingTime": "1 rodada",
+    "duration": "Permanente",
+    "range": "30 metros",
+    "area": "Até 1 metro cúbico",
+    "description": "Quando um clérigo lança uma Criar Água, até 18 litros de água são criados por cada nível de experiência do clérigo (por exemplo, um clérigo de 2º nível cria até 36 litros de água, um de 3º nível cria até 54 litros). A água é limpa e pode ser ingerida (como se fosse água de chuva). O efeito mágico pode ser dissipado até uma rodada após o surgimento da água; depois disso, a magia desaparece, e o que resta é água comum, que pode ser usada, derramada, evaporada, etc. A magia reversa, Desfazer Água, apaga qualquer traço (até mesmo vapor ou névoa) de uma quantidade de água idêntica à produzida pela versão original do eleito. A água pode ser criada ou destruída em um volume tão pequeno quanto o que o clérigo pretende encher (ou esvaziar), até um máximo de 1 metro cúbico (1.000 litros). A magia necessita de pelo menos uma gota de água em sua forma criadora, ou de um punhado de poeira em sua modalidade destruidora. Note que a água não será criada ou destruída dentro de uma criatura. Para propósito de referência, a água pesa 1 quilo por litro; um metro cúbico de água pesa, portanto, 1.000 quilos."
+}

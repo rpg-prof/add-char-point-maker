@@ -1,0 +1,11 @@
+{
+    "name": "Muralha de Espinhos",
+    "level": 6,
+    "school": "Conjuração/Convocação",
+    "sphere": "Vegetal, Criação",
+    "castingTime": "1",
+    "duration": "1 turno/nível",
+    "range": "80 metros",
+    "area": "Cubo de 3 metros de lado/nível",
+    "description": "Esse efeito cria uma barreira de espinhos muito duros, emaranhados, pontiagudos como agulhas e longos como um dedo humano. Qualquer criatura que transpuser ou chocar-se com a barreira sofrerá 8 pontos de dano, mais uma quantia adicional equivalente à CA da criatura. Uma CA negativa elimina pontos de dano da base 8, mas os modificadores de Destreza não são aplicados. Qualquer criatura dentro da área de efeito no instante da execução da magia choca-se com a parede, e deve ultrapassá-la para mover-se. O dano se repete a cada 3 metros de espessura da barreira. Se a parede de espinhos puder ser perfurada, levará pelo menos quatro turnos para cortar um caminho através de 3 metros de espessura. O fogo normal não danifica a barreira, mas o fogo mágico a queima em dois turnos, criando o efeito da Muralha de Fogo no processo. Neste caso, o lado frio da parede é aquele mais próximo ao criador da parede de espinhos. A fronteira mais próxima da parede de espinhos aparece a até 80 metros de distância do clérigo, conforme ele desejar. A magia dura por um turno para cada nível de experiência, e cobre 27 metros cúbicos por nível, na forma que o clérigo quiser. Assim, um clérigo de 14º nível poderia criar uma parede de espinhos de até 27 metros de comprimento por 7 metros de altura (ou profundidade) por 2 metros de profundidade (ou altura), ou uma de 3 metros de altura por 3 metros de largura e 3 metros de comprimento para bloquear uma passagem de masmorra, ou qualquer outra combinação de forma que sirva às suas necessidades. O clérigo também pode criar uma parede de 1,5 metro de espessura, que inflige metade do dano, mas que pode ter uma das outras dimensões dobrada. Observe que aqueles com capacidade de passar através da vegetação não são afetados por esta barreira. O clérigo pode dissipar a magia por meio de um comando."
+}

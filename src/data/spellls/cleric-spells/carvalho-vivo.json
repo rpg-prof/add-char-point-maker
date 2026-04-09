@@ -1,0 +1,11 @@
+{
+    "name": "Carvalho Vivo",
+    "level": 6,
+    "school": "Encantamento",
+    "sphere": "Vegetal",
+    "castingTime": "1 turno",
+    "duration": "1 dia/nível",
+    "range": "Toque",
+    "area": "1 carvalho",
+    "description": "Essa magia permite ao clérigo enfeitiçar uma árvore saudável de carvalho (ou de outra espécie, se o Mestre deixar) de modo a fazê-la servir como um protetor. A magia pode ser lançada sobre uma árvore de cada vez: enquanto um Carvalho Vivo executado por um determinado clérigo estiver em andamento, ele não poderá lançar outra dessas magias. A árvore em questão deve estar a até 3 metros da residência do clérigo, em um lugar sagrado para ele ou dentro de um raio de 100 metros daquilo que o clérigo quer guardar ou proteger. A magia pode ser lançada sobre um carvalho de pequeno, médio ou grande porte, de acordo com o desejo ou a disponibilidade. Então, uma frase de comando é colocada sobre a árvore. Tal frase pode ter, no máximo, uma palavra para cada nível de experiência do clérigo. Por exemplo, “ataque qualquer pessoa que se aproximar sem dizer antes Visco sagrado’“ é uma sentença de 11 palavras, que poderia ser usada por um clérigo de 11º nível ou superior. A magia concede à arvore a vitalidade de um ente do mesmo tamanho. CA O e dois ataques por rodada, mas com taxa de movimentação de apenas 10 metros por rodada. Tamanho da Dano por Árvore Altura Dados de Vida Ataque Pequena 36-42 cm 7-8 2d8 Média 48-57 cm 9-10 3d6 Grande 60-69 cm 11-12 4d6 Uma árvore encantada por essa magia irradia uma aura mágica, se examinada para isso. e pode retornar ao normal mediante o lançamento bem-sucedido de uma magia Dissipar Magia ou de acordo com o desejo do clérigo. Se a magia for dissipada, a árvore criará raízes imediatamente. Se liberada pelo clérigo, ela retornará ao lugar de origem antes de enraizar. Os danos à árvore podem ser curados com Ampliar Plantas, que recupera 3d4 pontos de dano. Uma Ampliar Plantas usada desta forma, não eleva o tamanho ou os pontos de vida da árvore além de seu valor original. O clérigo precisa de seu símbolo sagrado para lançar esta magia."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Armadilha de Fogo",
+    "level": 2,
+    "school": "Abjuração, Evocação",
+    "sphere": "Elemental (Fogo)",
+    "castingTime": "1 rodada Resitência: Anula",
+    "duration": "Permanente até que disparada",
+    "range": "Toque",
+    "area": "Objeto tocado",
+    "description": "Qualquer item que possa ser fechado (livro, caixa, garrafa, cesto. arca. caixão, porta, gaveta, etc.) pode ser protegido por uma Armadilha de Fogo, que é focada num ponto escolhido pelo clérigo. Depois disso, o item não poderá mais ser aberto, ou suportar qualquer outra magia de segurança. Um Arrombar não afetará de forma alguma a Armadilha de Fogo — assim que se tentar abrir o item, ela disparará. Como acontece com a maioria das armadilhas mágicas, ladrões só podem usar a metade de seu talento Encontrar Armadilhas para descobrir uma dessas. Qualquer falha na remoção da armadilha fará com que ela detone imediatamente (a única exceção é um Dissipar Magia mal-sucedido). Quando ativada. a armadilha cria uma explosão de 1.5 metro de raio. a partir do ponto focal. Todas as criaturas nesta área têm que fazer um teste de resistência à magia. O dano é de 1d4 pontos, mais 1 ponto por nível do clérigo que a tenha lançado, e será reduzido à metade caso a criatura atingida passe no teste de resistência. (Embaixo d’água o dano infligido é dividido pela metade, e a magia produz uma grande nuvem de vapor.) 0 item protegido não é afetado, e não sofre dano pela explosão. O clérigo que lançou a magia pode utilizar o objeto protegido normalmente, sem detonar o efeito, assim como qualquer um a quem seja dada permissão. Essa permissão só é concedida quando a magia é executada (o método normalmente envolve uma palavra chave). Para lançar a magia, o clérigo precisa traçar o contorno do fecho com um pedaço de carvão e tocar no ponto central da magia, onde ocorrerá a explosão. Para que qualquer outro ser utilize o item protegido, é preciso um pouco de cabelo, ou objeto similar, pertencente ao clérigo O componente material são sementes de azevinho."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Encontrar Armadilhas",
+    "level": 2,
+    "school": "Adivinhação",
+    "sphere": "Adivinhação",
+    "castingTime": "5",
+    "duration": "3 turnos",
+    "range": "30 metros",
+    "area": "3 metros em uma direção",
+    "description": "Com essa magia todas as armadilhas escondidas normal ou magicamente, e de natureza mágica ou mecânica tornam-se evidentes para o clérigo. Note que esta é uma magia direcionada. O clérigo deve olhar para um local específico e descobrir se ali existem armadilhas. Uma armadilha é qualquer mecanismo, ou barreira mágica, que satisfaça três critérios: causar um resultado inesperado; tal resultado ser danoso ou indesejado pelo clérigo: ser intenção do criador do dispositivo causar esses resultados. Estas armadilhas incluem Alarme, Símbolo e magias ou mecanismos semelhantes. O clérigo descobrirá a natureza geral da armadilha (mecânica ou mágica) mas não seu eleito, ou como desarmá-la. Um exame minucioso irá. entretanto, fazer com que ele descubra que tipo de ação ativará a armadilha. Note que o conhecimento do clérigo se limita àquilo que pode ser perigoso ou inesperado. A magia não tem como predizer ações de criaturas (consequentemente. um assassino escondido ou uma emboscada não são armadilhas), nem prever a presença de acidentes geográficos naturais (uma caverna que desaba com a chuva, uma parede que enfraqueceu com o passar do tempo). Se o Mestre estiver usando hieróglifos ou sinais para identificar as barreiras ou armadilhas mágicas (veja Símbolo de Proteção). este efeito mostrará a forma do sinal ou marca. A magia não descobrirá armadilhas que tenham sido desarmadas, ou estejam, de algum modo, inativas."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Conjurar Animais",
+    "level": 6,
+    "school": "Conjuração, Convocação",
+    "sphere": "Convocação",
+    "castingTime": "1 turno",
+    "duration": "2 rodadas/nível",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "Com essa magia, o clérigo cria um ou mais mamíferos para atacar seus oponentes. O total de dados de vida dos animais não pode exceder o dobro do nível do clérigo, no caso das criaturas serem escolhidas ao acaso; e igual ao nível, se um tipo específico é requisitado. O Mestre selecionará o tipo de animal, se a escolha for ao acaso. Assim, um clérigo de 12º nível pode conjurar ao acaso dois mamíferos com 12 dados de vida cada, quatro com 6 dados de vida, seis com 4 dados de vida cada, oito com 3 dados de vida, doze com 2 dados de vida, vinte e quatro com 1 dado de vida. Conte cada +1 ponto de vida adicionado aos dados de vida de uma criatura como 1/4 de dado. Assim, uma criatura com 4 + 3 dados de vida equivale a outra com 4 dados de vida. Os animais conjurados permanecem por duas rodadas para cada nível de experiência do clérigo, ou até serem mortos, e seguem os comandos verbais do clérigo. Tais animais infalivelmente atacam os oponentes do clérigo, mas resistem a ser usados para outros propósitos. Eles não gostam disso, tornam-se claramente mais difíceis de controlar e podendo recusarem-se a cumprir uma ordem, fugir ou atacar o clérigo, dependendo da natureza das criaturas e dos detalhes da situação. Os animais conjurados desaparecem depois de mortos."
+}

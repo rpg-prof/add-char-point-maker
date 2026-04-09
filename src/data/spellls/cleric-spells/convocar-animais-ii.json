@@ -1,0 +1,11 @@
+{
+    "name": "Convocar Animais II",
+    "level": 5,
+    "school": "Conjuração/Convocação",
+    "sphere": "Animal, Convocação",
+    "castingTime": "8",
+    "duration": "Especial",
+    "range": "60 metros/nível",
+    "area": "Especial",
+    "description": "Por meio dessa magia, o clérigo convoca até seis animais com 8 dados de vida ou menos, ou 12 animais com 4 dados de vida ou menos, de qualquer espécie à sua escolha. Virão somente os animais que estiverem dentro do alcance do efeito no instante da formulação. O clérigo pode tentar convocar três diferentes tipos de animais, por três vezes — suponha que, primeiro, ele chame, cães selvagens. Depois, convoque falcões e, finalmente, tente reunir cavalos selvagens. O Mestre vai determinar a chance dos animais chamados estarem dentro do alcance da magia. Os animais ajudam o clérigo com qualquer dos meios de que dispõem, permanecendo até o fim de uma batalha, uma missão específica, até que o clérigo esteja a salvo ou mande-os embora, etc. Somente animais normais ou gigantes podem ser convocados por esta magia; excluindo- se animais fantásticos ou monstros, como quimeras, dragões, górgonas, manticores, etc."
+}

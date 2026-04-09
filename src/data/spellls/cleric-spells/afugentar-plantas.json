@@ -1,0 +1,11 @@
+{
+    "name": "Afugentar Plantas",
+    "level": 6,
+    "school": "Alteração",
+    "sphere": "Vegetal",
+    "castingTime": "5",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "Faixa de 40 metros de largura x 6 metros de comprimento/nível",
+    "description": "Quando essa magia é lançada, o clérigo irradia ondas de força na direção para a qual está voltado, fazendo com que todos os objetos de madeira nessa faixa de terreno sejam empurrados para longe, até o limite da área de efeito. Objetos acima de 9 centímetros de diâmetro e que estejam fixados firmemente não são afetados, mas objetos soltos vão para trás. Objetos fixos com menos de 9 centímetros de diâmetro lascam e quebram, e os pedaços movem-se com a onda de força. Assim, objetos como escudos e lanças, punhos e hastes de madeira, flechas e dardos são empurrados, levando consigo quem os carrega. Se uma lança for fincada no chão. a fim de impedir esse movimento forçado, ela irá se partir. Até itens mágicos com partes de madeira são afetados, embora uma Concha Antimagia bloqueie os efeitos. Um Dissipar Magia bem- sucedido acaba com as ondas de força. Do contrário, o efeito perdura por uma rodada para cada nível de experiência. As ondas de força continuam a espalhar-se pelo caminho enquanto durar a magia, empurrando os objetos de madeira na área de efeito a um ritmo de 13 metros por rodada de combate. O comprimento do caminho é de 6 metros por nível do clérigo. Assim, um clérigo de 14º nível afeta uma área de 40 metros de largura por 80 metros de comprimento, num período, de catorze rodadas. Observe que, depois de lançar a magia, a área estará delimitada, e o clérigo pode fazer outras coisas sem afetar o poder da magia."
+}

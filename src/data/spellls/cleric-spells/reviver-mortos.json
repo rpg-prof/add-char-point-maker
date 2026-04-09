@@ -1,0 +1,11 @@
+{
+    "name": "Reviver Mortos",
+    "level": 5,
+    "school": "Necromancia",
+    "sphere": "Necromântica",
+    "castingTime": "6 rodadas",
+    "duration": "Permanente",
+    "range": "30 metros",
+    "area": "1 pessoa",
+    "description": "Quando o clérigo lança um Reviver Mortos, ele restaura a vida a um anão, gnomo, meio-elfo, halfling ou humano (outras criaturas podem ser permitidas, a critério do Mestre). O tempo que o receptor esteve morto tem importância, pois o clérigo pode ressuscitar pessoas mortas até o limite de um dia para cada nível de sua experiência (por exemplo, um clérigo do 9º nível pode reerguer uma pessoa morta há nove dias). Observe que o corpo da pessoa deve estar inteiro. Senão, as partes perdidas vão continuar faltando quando a pessoa for trazida de volta à vida. Do mesmo modo, outros males, como veneno ou doenças, não são anulados. O afetado deve testar sua chance de ressurreição, e ser bem sucedido, para sobreviver à magia (veja a Tabela 3 de Constituição) e perder 1 ponto de Constituição. Além disso, o ressuscitado está fraco e indefeso, e precisa descansar no mínimo um dia inteiro na cama, para cada dia em que esteve morto. A pessoa tem apenas 1 ponto de vida quando volta da morte, e deve recuperar o restante por cura natural, ou magia. Note que a Constituição inicial do clérigo é um limite absoluto para o número de vezes que pode ser revivida por este meio. O componente gestual é um dedo apontado. O reverso é Reviver Vivos, que concede à vítima um teste de resistência contra morte por magia. Se for bem sucedida, ela recebe dano equivalente apenas a um Provocar Ferimentos Graves - por exemplo, 2d8 + 1 pontos. Falha significa que a vítima morre instantaneamente."
+}

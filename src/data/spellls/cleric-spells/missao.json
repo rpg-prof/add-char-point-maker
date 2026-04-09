@@ -1,0 +1,11 @@
+{
+    "name": "Missão",
+    "level": 5,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Feitiço",
+    "castingTime": "3 rodadas",
+    "duration": "Até ser cumprido",
+    "range": "60 metros",
+    "area": "1 criatura A",
+    "description": "Missão permite ao clérigo obrigar a criatura afetada a cumprir um serviço, e a retornar com uma prova de que a tarefa foi finalizada. A Missão pode exigir, por exemplo, que a criatura localize e recupere algum objeto importante ou valioso; resgatar uma pessoa eminente; liberte outra criatura, capture uma fortaleza; extermine uma pessoa; faça uma entrega, e assim por diante. Se a Missão não for concluída apropriadamente, devido a indiferença, atraso ou perversão de objetivos, a criatura afetada perderá 1 ponto em todos os lestes de resistência para cada dia em que tal atitude durar. Essa penalidade não será removida até a Missão estar devidamente cumprida, ou até o clérigo cancelá-la (há certas circunstâncias que podem suspendê-la temporariamente, e outras que irão desconsiderá-la, ou até cancelá-la. O Mestre vai lhe dar informações se necessário). Se lançada sobre uma vítima involuntária, esta terá direito ao teste de resistência. Porém, se a pessoa afetada concordar com a tarefa, mesmo se a concordância for extraída à força ou trapaça, o teste de resistência não é permitido. Se uma busca for justa e meritória, uma criatura da religião do clérigo não pode recusar-se a cumpri-la, e qualquer criatura da mesma tendência do clérigo sofrerá uma penalidade de -4 em seu teste de resistência, qualquer que seja o caso. Uma Missão não pode ser dissipada, mas poderá ser removida por um clérigo mesma religião ou de nível superior ao executor do efeito. Alguns artefatos e relíquias podem evitara magia, assim como a intervenção direta de uma divindade. Do mesmo modo, uma busca injusta ou desprovida de mérito concede bônus ao teste de resistência, ou pode até mesmo invalidar-se automaticamente. O componente material é o símbolo sagrado do clérigo."
+}

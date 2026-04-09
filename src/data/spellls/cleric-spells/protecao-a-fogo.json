@@ -1,0 +1,11 @@
+{
+    "name": "Proteção a Fogo",
+    "level": 3,
+    "school": "Abjuração",
+    "sphere": "Proteção, Elemental (Fogo)",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Os efeitos dessa magia diferem, de acordo com quem recebe a proteção: se o clérigo que a lançou ou outra criatura. Em ambos os casos, a duração máxima é de 1 turno por nível de seu criador. Se esta magia é lançada sobre o clérigo que a executou, ela garante completa imunidade ao fogo (normal ou mágico) até que tenham sido absorvidos 12 pontos de dano por nível, e então termina. Se este efeito é lançado sobre outra criatura, ela garante invulnerabilidade ao fogo comum, e fornece um bônus de 4 para testes de resistência contra fogo mágico, além de reduzir o dano sofrido em 50%. O componente material é o símbolo sagrado do clérigo, que não será consumido pela magia."
+}

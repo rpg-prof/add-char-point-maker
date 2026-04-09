@@ -1,0 +1,11 @@
+{
+    "name": "Água em Pó",
+    "level": 6,
+    "school": "Alteração",
+    "sphere": "Elemental (Água, Terra)",
+    "castingTime": "1 rodada",
+    "duration": "Permanente",
+    "range": "60 metros",
+    "area": "1 metro cúbico por nível",
+    "description": "Quando essa magia é lançada, a área afetada instantaneamente sofre uma transformação de líquido para pó. Observe que a área de efeito dobra se a água já é lamacenta, e quadruplica se a ação for sobre barro umedecido. Se ainda existir água nas redondezas, o pó se mistura à ela normalmente, produzindo lama. Se houver muita água, a poeira ficará encharcada. Apenas o líquido lealmente dentro da área de efeito no instante do lançamento da magia é transformado. Poções que contêm água tornam- se inúteis. Criaturas vivas não são afetadas, com exceção dos nativos do plano elemental da Água. Tais seres devem conseguir sucesso no teste de resistência contra morte, do contrário serão exterminadas. Porém, apenas uma criatura pode ser atingida com uma única execução da magia, a despeito de seu tamanho ou do tamanho da área de efeito. A magia reversa é simplesmente uma Criar Água muito potente, que requer uma pitada de poeira comum como componente material adicional. Para ambos os usos, outros componentes materiais necessários são: pó de um diamante de no mínimo 500 po de valor, algumas conchas do mar e o símbolo sagrado do clérigo."
+}

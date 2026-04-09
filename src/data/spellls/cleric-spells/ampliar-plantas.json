@@ -1,0 +1,11 @@
+{
+    "name": "Ampliar Plantas",
+    "level": 3,
+    "school": "Alteração",
+    "sphere": "Vegetal",
+    "castingTime": "3 rodadas",
+    "duration": "Permanente",
+    "range": "160 metros",
+    "area": "Especial",
+    "description": "Essa magia pode ser usada de duas formas A primeira faz com que a vegetação normal cresça, enrolando-se e entrelaçando-se de tal forma que uma criatura precisará forçar seu caminho por entre as plantas, alcançando no máximo uma movimentação de 3 metros por rodada (ou 6 metros por rodada para seres de tamanho maior que o humano). O local deve possuir árvores e arbustos para poder ser afetado desta forma. A área de efeito é um quadrado de lado igual ao dobro do nível do clérigo, em metros. Essa região pode ser tanto esse quadrado quanto um retângulo, desde que a área máxima seja respeitada. Os efeitos desta versão da magia mantêm-se até serem desfeitos, seja por fogo, por esforço físico ou até mesmo por magias (incluindo Dissipar Magia). O segundo uso deste efeito atinge 3 quilômetros quadrados de área. O Mestre secretamente faz um teste de resistência contra esta magia, baseado na resistência do clérigo, para determinar se a magia funciona ou não. Se a magia funcionar, a colheita da região afetada é aumentada em (1d4 + 1) x 10%. Este efeito dura até que o ciclo vegetal anual se encerre, com a chegada do inverno. Em comunidades rurais, essa magia é utilizada durante o plantio, para celebrar a primavera."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Andar Sobre as Águas",
+    "level": 3,
+    "school": "Alteração",
+    "sphere": "Elemental (Água)",
+    "castingTime": "7",
+    "duration": "1 turno + 1 turno/nível",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Usando essa magia, o clérigo é capaz de conferir a uma ou mais criaturas o dom de mover-se sobre líquido (areia movediça, neve, água, óleo, etc.) como se fosse solo firme. Os pés da criatura afetada, na realidade, não tocam a superfície do líquido, embora depressões ovais de tamanho (e profundidade não superior a 5 centímetros) adequado formam-se sobre neve ou lama. A movimentação mantém-se estável. Se este efeito é executado embaixo da água, a criatura afetada projeta-se em direção à superfície, onde começa a boiar. Para cada nível do clérigo acima do 5°, uma pessoa extra pode ser afetada. Esta magia requer, além do símbolo sagrado (que não é consumido), um pedaço de cortiça. ## Magias Divinas do 4º Círculo"
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Convocar Relâmpagos",
+    "level": 3,
+    "school": "Alteração",
+    "sphere": "Clima",
+    "castingTime": "½",
+    "duration": "1 turno/nível",
+    "range": "0",
+    "area": "120 metros de raio",
+    "description": "Quando essa magia é executada, deve haver algum tipo de tempestade na área (nuvens ou ventos fortes, chuva ou até mesmo um tornado incluindo o redemoinho causado por um gênio ou elemental do Ar de 7 DV ou mais). O clérigo é, então, capaz de chamar dos céus raios de eletricidade. Um raio pode ser chamado por turno. Este raio não precisa ser convocado imediatamente — outras ações, inclusive o uso de outras magias, podem ser feitas neste intervalo de tempo. Quando desejar o raio, o clérigo deverá ficar parado e concentrar-se por uma rodada inteira. Um raio causa 2d8 pontos de dano elétrico, com um adicional de 1d8 pontos para cada nível de experiência do clérigo. O raio descerá do céu sobre qualquer ponto dentro do alcance da magia, à escolha do clérigo. Qualquer criatura a uma distância de 3 metros — seja da trajetória do raio, seja do local em que o relâmpago atingir — será afetada por todo o dano, a menos que obtenha sucesso em um teste de resistência. Neste caso, o dano cai à metade. Como esta magia necessita da presença de uma tempestade, ela só pode ser utilizada em locais abertos, não funcionando, portanto, em subterrâneos ou embaixo da água."
+}

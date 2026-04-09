@@ -1,0 +1,11 @@
+{
+    "name": "Tornar Raso",
+    "level": 4,
+    "school": "Alteração",
+    "sphere": "Elemental (Água)",
+    "castingTime": "1 turno",
+    "duration": "1 turno/nível",
+    "range": "120 metros",
+    "area": "Especial",
+    "description": "Essa magia faz com que a água (ou outro líquido similar) baixe até uma profundidade de 3 centímetros. A profundidade máxima que pode ser afetada pelo clérigo equivale a 50 centímetros por nível de experiência. A água é nivelada numa área igual à de um quadrado de 3 metros de lado, por nível. Se a massa de água a ser afetada é muito larga e profunda, a magia produz um redemoinho, que pode sugar navios, colocando- os em grande perigo e impedindo-os de afastar-se por meios normais, enquanto o efeito durar. Se lançada sobre elementais da Água ou outros monstros de natureza líquida, esta magia age como Lentidão, reduzindo a movimentação e o número de ataques da criatura à metade. O reverso (Tomar Profundo), além de cancelar Tornar Raso, faz com que água e outros líquidos retornem ao máximo do seu nível natural — maré alta, estação das cheias, etc. Este efeito reverso pode desencalhar navios, ou até mesmo criar uma torrente capaz de arrancar pontes, se o Mestre permitir. O componente material é uma pitada de poeira. Além disso, o símbolo sagrado também é necessário, embora não seja consumido como a poeira."
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Roupa Encantada",
+    "level": 3,
+    "school": "Encantamento",
+    "sphere": "Proteção",
+    "castingTime": "6",
+    "duration": "5 rodadas/nível",
+    "range": "Toque",
+    "area": "O clérigo",
+    "description": "Essa magia encanta as roupas de seu criador, dando, pelo menos, proteção equivalente á de uma cota de malha (CA 5). A CA do traje encantado recebe um bônus de 1 para cada três níveis que o clérigo tenha acima do 5°, até um máximo de CA 1 ao 17º nível. A duração da magia pode ser abreviada se o clérigo perder, por algum motivo, a consciência. Se a vestimenta é utilizada junto a outra armadura, apenas a melhor CA é utilizada. Esta proteção não é cumulativa com nenhum outro efeito de aumento da CA (anel de proteção, etc.). O componente material é a vestimenta a ser encantada e o símbolo sagrado do clérigo, sendo que nenhum desses é consumido."
+}

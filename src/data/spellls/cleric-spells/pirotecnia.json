@@ -1,0 +1,11 @@
+{
+    "name": "Pirotecnia",
+    "level": 3,
+    "school": "Alteração",
+    "sphere": "Elemental (Fogo)",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
+    "range": "160 metros",
+    "area": "10 ou 100 vezes uma única fonte de fogo",
+    "description": "Essa magia alimenta-se de uma fonte de fogo para produzir dois tipos de efeitos, sendo que o clérigo determina qual efeito ocorre. • Primeiro, pode-se produzir uma explosão de luzes brilhantes e coloridas, que duram uma rodada inteira. Esta explosão cega, temporariamente, todos os que, tendo uma visão desobstruída do efeito, encontravam-se também a uma distância de, no máximo, 40 metros da fonte de fogo. A criatura que estiver dentro dessas condições ficará cega por 1d4 +1 rodadas, a não ser que obtenha sucesso em um teste de resistência à magia. Estes fogos de artifício ocupam um volume igual a dez vezes o volume original da fonte de fogo utilizada. • Segundo, pode-se causar uma nuvem de fumaça e vapor muito densa, que dura urna iodada por nível de experiência do seu criador. Dentro do hemisfério preenchido pela nuvem é muito difícil respirar, e o alcance da visão fica limitado a cerca de 60 centímetros. Esta fumaça cobre um volume igual a cem vezes o volume original da fonte de fogo utilizada. Essa fonte de fogo, desde que não seja muito grande (caso em que é afetada apenas parcialmente), se extingue imediatamente. Fogo mágico não pode ser drenado por essa magia. Criaturas baseadas em chamas, como elementais do fogo, sofrem 1d4 pontos de dano (com um bônus de 1 ponto/nível do clérigo) se forem o alvo deste efeito. Esta magia não pode ser utilizada embaixo da água."
+}

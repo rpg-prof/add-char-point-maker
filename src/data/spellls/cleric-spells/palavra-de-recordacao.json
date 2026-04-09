@@ -1,0 +1,11 @@
+{
+    "name": "Palavra de Recordação",
+    "level": 6,
+    "school": "Alteração",
+    "sphere": "Convocação",
+    "castingTime": "1 turno",
+    "duration": "Especial",
+    "range": "0",
+    "area": "Especial",
+    "description": "Essa magia leva o clérigo, instantaneamente, de volta ao seu santuário, quando uma palavra especial é pronunciada. O clérigo precisa designar especificamente o santuário, que deve ser um lugar bem conhecido. O ponto de chegada real é uma área não superior a 30 x 30 centímetros. O clérigo pode ser transportado de qualquer distância, sobre ou sob o solo. Este tipo de transporte é seguro dentro de um plano, mas para cada plano de existência pelo qual passar a trajetória existe uma chance cumulativa, de 10%, do clérigo ficar irremediavelmente perdido. O clérigo é capaz de levar consigo 13 quilos de peso por nível de experiência. Assim, um clérigo de 15º nível pode transportar 195 quilos. Esse peso extra pode ser constituído de equipamentos, tesouros ou mesmo matéria viva, como outra pessoa. A magia falhará se esses limites forem excedidos. Observe que campos físicos incomumente fortes (por exemplo, magnéticos ou gravitacionais) ou forças mágicas podem, a critério do Mestre, tornar este efeito arriscado ou impossível. ## Magias Divinas do 7º Círculo"
+}

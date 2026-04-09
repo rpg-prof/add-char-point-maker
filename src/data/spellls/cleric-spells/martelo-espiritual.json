@@ -1,0 +1,11 @@
+{
+    "name": "Martelo Espiritual",
+    "level": 2,
+    "school": "Invocação",
+    "sphere": "Combate",
+    "castingTime": "1 rodada",
+    "duration": "3 rodadas + 1 rodada/nível",
+    "range": "10 metros/nível",
+    "area": "Especial",
+    "description": "Pelo poder de sua divindade, o clérigo que cria um Martelo Espiritual traz à existência um campo de Força vagamente parecido com martelo. Enquanto o clérigo se concentrar, o Martelo atinge qualquer oponente dentro da área da magia. A cada rodada, o clérigo poderá escolher um alvo qualquer dentro do alcance. A chance do martelo acertar o alvo desejado é a mesma do clérigo que o criou, sem nenhum ajuste ou bônus de Força. Além disso, o martelo atua como uma arma mágica com +1 de bônus para cada seis níveis de experiência do clérigo, até um máximo de +3 na jogada de ataque e no dano a partir do 13º nível de experiência. O dano causado pelo Martelo é o mesmo causado por um martelo de batalha comum (1d4 + 1 contra oponentes de tamanho humano ou menor; 1d4 contra oponentes maiores, mais o bônus mágico). O martelo acerta na direção em que seu criador está olhando. Assim, se o clérigo estiver por trás do inimigo, todos os bônus de um ataque pelas costas serão aplicados, assim como o adversário perderá os ajustes de Destreza, escudo, etc., em sua CA. Tão logo o clérigo interrompa sua concentração, o martelo espiritual deixará de existir. Um Dissipar Magia na área de ação do martelo poderá destruí-lo. Se alguma das criaturas atacadas tiver proteção contra magia, o teste deverá ocorrer na primeira rodada de ataque do martelo. Se a vítima obtiver sucesso no teste de proteção, o efeito será anulado, e o martelo desaparecerá; caso contrário, o campo de Força continuará até o final da duração, e com efeito normal. O componente material é um martelo de batalha, que o clérigo deverá jogar contra seus oponentes enquanto declama a magia. O martelo comum desaparecerá quando o Martelo Espiritual surgir."
+}

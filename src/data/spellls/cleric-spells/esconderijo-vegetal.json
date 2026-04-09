@@ -1,0 +1,11 @@
+{
+    "name": "Esconderijo Vegetal",
+    "level": 4,
+    "school": "Alteração",
+    "sphere": "Vegetal",
+    "castingTime": "8",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Essa magia cria um portal através de árvores ou outras formações vegetais, mesmo nas de origem mágica. Essa porta está aberta para o executor do efeito, clérigos de maior nível e para dríades; outros seres devem, antes, conhecer a localização da abertura. A passagem permite que criaturas ocultem-se dentro de árvores até o final da duração. O espaço disponível para o esconderijo é limitado pelo tamanho da árvore. Se a planta é cortada ou queimada, as pessoas em seu interior devem sair antes da queda, ou da carbonização total, para não morrerem. O caminho formado através da árvore tem 1 metro de largura, 3 metros de altura e 4 metros/ nível de profundidade. O tempo de duração é um turno/nível de experiência. Se a árvore receptora for um freixo, o efeito dura três vezes mais. Se a magia for usada em um carvalho, o tempo da duração é nove vezes maior. Este efeito não atinge monstros vegetais. O componente material, além do símbolo sagrado (que não e consumido), é um pedaço de giz."
+}

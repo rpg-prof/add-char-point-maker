@@ -1,0 +1,11 @@
+{
+    "name": "Comando",
+    "level": 1,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Feitiço",
+    "castingTime": "1",
+    "duration": "1 rodada",
+    "range": "30 metros",
+    "area": "1 criatura",
+    "description": "Essa magia permite ao clérigo comandar uma outra criatura com uma simples ordem. Esta ordem deve ser dada em uma linguagem que a criatura entenda. A vítima obedecerá apenas à ordens absolutamente claras e inequívocas; uma ordem “suicide-se!” será ignorada. A ordem “morra!” fará com que a criatura desmaie, ou caia em estado cataléptico por uma rodada, mas depois a vítima acordará, voltando ao normal. Ordens típicas são volte, pare, fuja, corra, caia, parta, renda-se, durma, descanse, etc. Nenhuma ordem afetará a criatura por mais de 1 rodada; mortos-vivos não são de forma alguma afetados por esta magia. Criaturas com Inteligência 13 (alta) ou mais, ou com 6 ou mais dados de vida (ou níveis de experiência) poderão fazer um teste de resistência à magia, com ajuste de Sabedoria. (Criaturas com Inteligência igual ou maior do que treze e seis dados de vida/ níveis fazem apenas um teste!)"
+}

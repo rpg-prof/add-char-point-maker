@@ -1,0 +1,11 @@
+{
+    "name": "Torcer Madeira",
+    "level": 2,
+    "school": "Alteração",
+    "sphere": "Vegetal",
+    "castingTime": "6",
+    "duration": "Permanente",
+    "range": "10 metros/nível",
+    "area": "Especial",
+    "description": "Com essa magia, o clérigo consegue fazer com que um certo volume de madeira se dobre e empene, perdendo permanentemente sua resistência e forma original. O alcance dessa magia é de 10 metros para cada nível de experiência do clérigo. Ela afeta uma tora de aproximadamente 40 centímetros de comprimento e até 3 centímetros de diâmetro por nível. Com isso, um clérigo de 1º nível conseguirá empenar a haste de uma machadinha, ou quatro flechas de besta; no 5º nível, ele poderá empenar o equivalente a uma azagaia. Note que pranchas e tábuas também podem ser afetadas. Assim, é possível atingir uma porta, ou fazer um buraco num barco ou navio. Armas de arremesso empenadas estarão efetivamente estragadas, e armas de combate corpo a corpo receberão uma penalidade de -4 nas jogadas de ataque. Madeira encantada só sofre os efeitos dessa magia se o clérigo estiver num nível maior do que quem a encantou. O clérigo terá uma chance de 20% para cada nível de diferença (20% se tiver um nível a mais, 40% se tiver dois, etc.). Assim, uma porta magicamente fechada ou travada com Fechadura Arcana por um mago de 5º nível tem 40% de chance de ser destruída por um clérigo de 7°. Itens mágicos de madeira são normalmente afetados por clérigos que estejam no 12º nível, ou mais. Itens extremamente poderosos, como artefatos, não serão afetados por este efeito. O reverso dessa magia, Destorcer Madeira, endireita madeira empenada ou torta, ou reverte a ação do Torcer Madeira, e está sujeito às mesmas restrições."
+}

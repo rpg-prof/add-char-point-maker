@@ -1,0 +1,11 @@
+{
+    "name": "Proteção ao Calor/Frio",
+    "level": 1,
+    "school": "Alteração",
+    "sphere": "Proteção",
+    "castingTime": "1 rodada",
+    "duration": "1 hora e meia/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "A criatura que receber essa magia estará protegida do frio e calor naturais, mesmo que extremos (dependendo da aplicação que o clérigo escolher enquanto estiver lançando a magia). O receptor poderá suportar normalmente temperaturas de 0° e 55° Celsius (dependendo da aplicação), sem sofrer conseqüências. Temperaturas maiores ou menores que essa faixa causarão dano de 1 ponto por hora de exposição, para cada grau além do limite. A magia será imediatamente cancelada se o receptor for atingido por qualquer tipo de calor ou frio anormais, como os causados por outros efeitos mágicos (Sopro-de- Dragão e coisas assim). O cancelamento ocorre independentemente da modalidade da magia escolhida pelo clérigo, e do tipo de ataque místico (ou seja, uma Proteção ao Calor será cancelada por calor ou fogo criados misticamente, assim como por frio mágico). O receptor da magia não sofrerá os primeiros 10 pontos de dano (após a aplicação de quaisquer testes de resistência necessários) devido ao calor ou frio, na rodada em que a magia for cancelada. O efeito também desaparece instantaneamente se Resistir Calor ou Resistir Frio forem lançadas sobre o receptor."
+}

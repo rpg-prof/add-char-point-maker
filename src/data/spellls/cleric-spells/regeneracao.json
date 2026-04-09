@@ -1,0 +1,11 @@
+{
+    "name": "Regeneração",
+    "level": 7,
+    "school": "Necromancia",
+    "sphere": "Necromancia",
+    "castingTime": "3 rodadas",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Quando essa magia é lançada, partes do corpo (dedos da mão e do pé, mãos, pés, braços, pernas, caudas ou mesmo cabeças de criaturas com várias delas), ossos e órgãos crescem novamente. O processo de regeneração requer apenas uma rodada se o membro atingido estiver em contato com o receptor, ou 2d4 turnos em outros casos. A criatura deve estar viva para receber os benefícios da magia. Se o membro avariado não estiver presente, ou se a ferida for mais antiga do que um dia por nível de experiência do clérigo, o receptor deve ter sucesso em um teste de colapso a fim de sobreviver ao efeito. O reverso, Definhar, faz o membro ou órgão tocado se retrair e parar de funcionar em uma rodada, transformando-o em pó depois de 2d4 turnos. As criaturas precisam ser tocadas (jogada de ataque) para que ocorra o efeito prejudicial. Os componentes materiais necessários são algum dispositivo para orações e água sagrada (ou água profana, para a magia reversa)."
+}

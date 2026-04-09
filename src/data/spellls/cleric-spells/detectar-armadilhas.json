@@ -1,0 +1,11 @@
+{
+    "name": "Detectar Armadilhas",
+    "level": 1,
+    "school": "Adivinhação",
+    "sphere": "Adivinhação",
+    "castingTime": "4",
+    "duration": "4 rodadas/nível",
+    "range": "0",
+    "area": "3 metros de largura, 12 metros de comprimento",
+    "description": "Lançando essa magia, o clérigo torna-se capaz de detectar armadilhas, fossos, abismos e outros perigos similares em uma área de 3 metros de largura e 12 metros de comprimento. Estes perigos incluem simples buracos, erosões, armadilhas de animais selvagens (aranhas, orvalheiras gigantes, formigas-leão, etc.), e armadilhas primitivas feitas de material natural (disparadores de lanças, armadilhas de caça, etc.). O efeito é direcionado — o clérigo deve olhar para a direção desejada e descobrir se ali existe ameaça ou armadilha. Caso exista, o clérigo experimenta uma sensação de perigo que aumentará com a proximidade. O clérigo sente a natureza do perigo (fosso, armadilha ou abismo) mas não como ele age, ou como desarmá-lo. Um exame mais minucioso, entretanto, habilita-o a perceber que ação ativará a armadilha. A magia descobre certos perigos naturais — areia movediça (armadilha), fossas ou covas (buracos), ou possíveis erosões no solo (abismos). Outras ameaças, como uma caverna que possa desabar com a chuva, uma construção insegura ou uma planta venenosa não serão revelados. O efeito não descobrirá armadilhas mágicas (a menos que as mesmas operem com buracos, abismos ou armadilhas naturais — ver Tropeço e Armadilha), ou dispositivos mecânicos muito complexos; armadilhas inativas também escapam à detecção. O clérigo precisa de seu símbolo sagrado para lançar essa magia."
+}

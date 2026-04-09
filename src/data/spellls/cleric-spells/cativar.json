@@ -1,0 +1,11 @@
+{
+    "name": "Cativar",
+    "level": 2,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Feitiços",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "0",
+    "area": "30 metros de raio",
+    "description": "Utilizando essa magia, um clérigo conseguirá fazer com que todos, em uma audiência, compreendam claramente sua linguagem. Aqueles que estiverem na área de efeito farão um teste de resistência à magia, ou passarão a prestar a mais completa atenção no clérigo, ignorando completamente o que estiver acontecendo ao redor. Aqueles de raça ou religião hostis às do clérigo tem +4 de bônus no teste de resistência. Qualquer bônus de Sabedoria deverá ser aplicado. Criaturas com 4 ou mais dados de vida, ou com 16 ou mais pontos de Sabedoria não serão afetados. Para lançar a magia, o clérigo deverá permanecer falando durante toda uma rodada. A magia durará enquanto o clérigo continuar em seu discurso, até o máximo de 1 hora. As criaturas sob o efeito da magia nada farão enquanto o clérigo estiver falando, e discutirão o tema abordado por 1d3 rodadas após o término do discurso. Aqueles que adentrarem na área da magia deverão fazer um teste de resistência, ou serão afetados. Os que não estiverem sob o efeito têm 50% de chance. por rodada, de vaiar ou zombar, em uníssono, o tema abordado. Se a zombaria for muita, os demais devem fazer novos testes de resistência. A magia terminará (continuando com as três rodadas de discussão) se o clérigo for atingido por um ataque, ou se fizer algo além de falar. Se a audiência for atacada, a magia terminará e as pessoas reagirão imediatamente, fazendo um teste de reação relacionado à fonte de interrupção, com uma penalidade de -10. Nota: Quando a audiência for muito grande e composta por seres da mesma espécie, o Mestre pode resumir as resistências e tirar uma média para não perder tempo. Portanto, um grupo de vinte pessoas com resistência média de 16 (25% de chance de sucesso) terá quinze sob efeito da magia e cinco não."
+}

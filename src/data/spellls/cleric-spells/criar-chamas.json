@@ -1,0 +1,11 @@
+{
+    "name": "Criar Chamas",
+    "level": 2,
+    "school": "Alteração",
+    "sphere": "Elemental (Fogo)",
+    "castingTime": "5",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "Especial",
+    "description": "Uma chama brilhante, de luminosidade semelhante à de uma tocha, sairá das mãos do clérigo que utilizar essa magia. A chama não machucará o clérigo, mas queimará qualquer material inflamável (papel, papiro, madeira seca, óleo, etc.). O clérigo será capaz de arremessar esta chama mágica como um dardo a uma distância de 40 metros (considerado curto alcance). A chama explodirá no impacto, inflamando materiais que estejam a até 1 metro de seu ponto de impacto, extinguindo-se após a explosão, Uma criatura atingida pela chama sofrerá um dano de 1d4 + 1 pontos e, caso a chama pegue em suas roupas ou pertences, deverá passar a rodada seguinte combatendo o fogo. Do contrário, a vítima sofrerá um dano adicional, escolhido pelo Mestre, até o fogo extinguir- se Um erro no arremesso do dardo de fogo será tratado segundo as regras para projeteis de área. Após o lançamento de um desses dardos, outra chama aparecerá na mão do clérigo, enquanto durar a magia. O clérigo só poderá jogar uma chama por nível, e não mais do que uma vez por rodada. O clérigo pode encerrar a magia assim que desejar, mas o fogo causado por ela continuará queimando. Este efeito não funciona embaixo d’água"
+}

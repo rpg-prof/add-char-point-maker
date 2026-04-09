@@ -1,0 +1,11 @@
+{
+    "name": "Localizar Animais ou Plantas",
+    "level": 1,
+    "school": "Adivinhação",
+    "sphere": "Adivinhação (Animal, Vegetal)",
+    "castingTime": "4",
+    "duration": "1 rodada/nível",
+    "range": "100 metros + 20 metros/nível",
+    "area": "6 metros de largura e 20 metros de comprimento em uma direção/nível",
+    "description": "O clérigo poderá determinar em que direção e a que distância se encontra qualquer tipo de animal ou planta. Olhando para uma direção, o clérigo pensará no animal ou planta, e com isso descobrirá se existe algum exemplar da espécie na área determinada pela magia. Também é possível descobrir a distância exata em que tal criatura se encontra, assim como o número aproximado de indivíduos. Durante cada rodada, o clérigo poderá olhar somente para uma direção, ou seja, apenas 6 metros de largura serão rastreados. A magia dura uma rodada por nível de experiência do clérigo, e permite o rastreamento de uma distância de 100 metros mais 20 metros por nível. (Como opção do Mestre, o clérigo só poderá descobrir animais ou plantas ligados à sua crença.) O componente material necessário é o símbolo sagrado do clérigo. A probabilidade de localização de um tipo específico de animal depende das circunstâncias exatas da tentativa. Normalmente, devem ser usados como fatores: animal comum = 50%; incomum = 30%; raro = 15% , muito raro = 5%. Em relação à plantas, algumas crescem em regiões temperadas, enquanto outras em regiões tropicais. A maioria utilizada como componente de magia ou para estudos místicos é rara, ou muito rara. O resultado da aplicação deste efeito deve sempre ser decidido pelo Mestre. Tempo de Execução: 1 rodada Resistência: Nenhuma"
+}

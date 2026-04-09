@@ -1,0 +1,11 @@
+{
+    "name": "Benção",
+    "level": 1,
+    "school": "Conjuração/Convocação",
+    "sphere": "Todas",
+    "castingTime": "1 rodada",
+    "duration": "6 rodadas",
+    "range": "60 metros",
+    "area": "Cubo de 15 metros de lado",
+    "description": "Durante a duração de uma Bênção, o clérigo eleva o moral de seus amigos, animais e criaturas aliadas, e qualquer teste de resistência que eles façam contra efeitos de Medo recebe um bônus de +1. Além disso, as jogadas de ataque também passam a contar com um bônus de +1. A Bênção, porém, afeta somente quem não estiver engajado num combate corpo a corpo. O clérigo determina a que distância {até 60 metros) a magia fará efeito. No instante em que a Bênção começa a funcionar, ela afeta todas as criaturas em uma área de até 15 metros cúbicos centrada em um ponto selecionado pelo clérigo (somente criaturas que estiverem na área durante o lançamento da magia serão afetadas, e não as que entrarem depois). O segundo uso para essa magia é para abençoar algum item (por exemplo, uma seta de besta para ser usada contra um rakshasa). O peso do item é limitado a 1/2 quilo por nível do clérigo, e o efeito se encerra com o uso do item, ou ao término da duração da magia. Múltiplas bênção não são cumulativas. Além dos componentes verbais e gestuais, a Bênção requer água benta. Esse efeito pode ser revertido por um clérigo e transformado numa Maldição contra seus oponentes ou inimigos, que sofrem uma penalidade de -1 em jogadas de moral e ataque. Uma Maldição requer água profana."
+}

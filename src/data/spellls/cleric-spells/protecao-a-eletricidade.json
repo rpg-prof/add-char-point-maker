@@ -1,0 +1,11 @@
+{
+    "name": "Proteção a Eletricidade",
+    "level": 4,
+    "school": "Abjuração",
+    "sphere": "Proteção, Clima",
+    "castingTime": "1 turno",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Os eleitos dessa magia variam de acordo com a criatura afetada: se o próprio executor da fórmula ou outra pessoa. Se for lançado sobre o clérigo que o executou, o eleito confere total invulnerabilidade contra fenômenos elétricos (e a ataques e magias baseados em eletricidade) Isso dura até que a magia absorva 10 pontos de dano por nível de experiência do clérigo, quando então se desfaz. Se for utilizado sobre outra criatura, o efeito fornece um bônus de +4 para teste de resistência contra ataques elétricos. e reduz o dano destes ataques pela metade. Em ambos os casos, a magia não permanece por mais que 1 turno por nível de experiência do clérigo. O componente material, que não é consumido, é o símbolo sagrado do clérigo."
+}

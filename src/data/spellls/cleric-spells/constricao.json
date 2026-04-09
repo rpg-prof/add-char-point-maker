@@ -1,0 +1,11 @@
+{
+    "name": "Constrição",
+    "level": 1,
+    "school": "Alteração",
+    "sphere": "Vegetal",
+    "castingTime": "4",
+    "duration": "1 turno",
+    "range": "80 metros",
+    "area": "Cubo com 15 metros de lado",
+    "description": "Usando esse efeito, o clérigo faz com que todas as plantas de uma área fiquem emaranhadas no caminho de uma criatura, que deverá estar dentro da área afetada. Grama, trepadeiras, mato, arbustos e até pequenas árvores irão se enroscar na vítima, diminuindo sua velocidade durante a duração da magia. Qualquer criatura que entre na área de efeito será tolhida pelos vegetais. Ela precisará fazer um teste de resistência à magia para escapar do local, movendo-se a 3 metros por rodada até sair daquela região. Criaturas extremamente grandes (abissais), ou fortes, irão sentir menos dificuldade (ou até mesmo nenhuma dificuldade) em escapar das plantas. A Força do “abraço” dos vegetais fica a critério do Mestre. O componente material é o símbolo sagrado do clérigo."
+}

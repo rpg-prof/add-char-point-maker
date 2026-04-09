@@ -1,0 +1,11 @@
+{
+    "name": "Símbolo",
+    "level": 7,
+    "school": "Conjuração/Convocação",
+    "sphere": "Guarda",
+    "castingTime": "",
+    "duration": "1 turno/nível",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Com essa magia, o clérigo inscreve um símbolo incandescente no ar ou sobre qualquer superfície, de acordo com seu desejo. Qualquer criatura que olhar para o símbolo completo, a urna distância de 20 metros, deve realizar um teste de resistência contra magia bem-sucedido, ou sofrerá seus eleitos. O símbolo brilha por um turno para cada nível de experiência de seu criador. O símbolo específico é selecionado pelo clérigo no instante do lançamento da magia, e ele pessoalmente não é afetado pelo próprio ícone. Um dos efeitos seguintes é escolhido pelo conjurador: Desespero: Criaturas que vêem o símbolo recuam em desânimo ou rendem-se à captura ou ao ataque, a menos que sejam bem-sucedidas num teste de resistência contra magia. O efeito dura 3d4 turnos. Dor: Criaturas afetadas sofrem penalidade de -4 em suas jogadas de ataque e de -2 na Destreza, devido a dores lancinantes. O efeito dura por 2d10 turnos. Persuasão: As criaturas tornam-se da mesma tendência do clérigo, e ficam amigáveis para com ele por 1d20 turnos, a menos que triunfem no teste de resistência contra magia. Os componentes materiais são mercúrio e fósforo (veja Símbolo do 8º círculo)."
+}

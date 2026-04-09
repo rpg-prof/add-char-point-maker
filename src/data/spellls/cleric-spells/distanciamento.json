@@ -1,0 +1,11 @@
+{
+    "name": "Distanciamento",
+    "level": 2,
+    "school": "Alteração",
+    "sphere": "Proteção",
+    "castingTime": "1 turno",
+    "duration": "Especial",
+    "range": "0",
+    "area": "O clérigo",
+    "description": "Através dessa magia, o clérigo altera o fluxo do tempo em favor de si mesmo. Enquanto uma rodada se passa normalmente, quem lançou esta magia poderá gastar duas rodadas, mais uma rodada por nível, em contemplação. Com isso, um clérigo de 5º nível poderá ficar sete rodadas pensando, enquanto somente uma rodada se passará para todos os outros. (0 Mestre deverá dar 1 minuto de tempo real para cada rodada extra a que o jogador tiver direito, Nenhum diálogo com outros participantes será permitido,) Note que, enquanto estiver protegido por esta magia, o clérigo poderá usar apenas magias de adivinhação e poderes de cura (e estes últimos somente sobre si mesmo). O uso de qualquer magia fora de tais parâmetros (por exemplo, Curar Ferimentos Leves em outro clérigo) irá anular imediatamente a dilatação de tempo. O clérigo não poderá andar, correr, tornar-se invisível ou fazer qualquer outra ação além de pensar, ler e coisas assim. Ele poderá ser afetado pela ações de outros, e perde todos os bônus de escudo ou Destreza. Qualquer ataque bem-sucedido contra o clérigo irá quebrar a magia."
+}

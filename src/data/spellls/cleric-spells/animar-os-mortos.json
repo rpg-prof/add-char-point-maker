@@ -1,0 +1,11 @@
+{
+    "name": "Animar os Mortos",
+    "level": 3,
+    "school": "Necromancia",
+    "sphere": "Necromântica",
+    "castingTime": "1 rodada",
+    "duration": "Permanente",
+    "range": "10 metros",
+    "area": "Especial",
+    "description": "Essa magia é responsável pela criação dos mais simples tipos de mortos-vivos (esqueletos e zumbis) a partir de ossos e corpos mortos, geralmente de humanos, semi-humanos ou humanóides. A magia faz com que os corpos tornem-se animados e obedeçam a ordens simples de seu criador, independente de como eles se comunicavam quando vivos (um esqueleto de animal cumpre tão bem as ordens de seu criador quanto, por exemplo, o esqueleto de um anão), Esses mortos- vivos permanecerão animados até serem destruídos em combate, ou afetados pelo poder da fé. A magia, uma vez executada, não pode ser afetada por Dissipar Magia. O clérigo pode animar um esqueleto ou zumbi para cada nível de experiência que possuir, com uma única restrição: se a espécie da criatura possuir mais de 1 DV, o número de criaturas animadas será determinado pelo DV da criatura. Esqueletos possuem o DV característico da espécie, enquanto os zumbis possuem um DV a mais. Assim, um clérigo de 12º nível pode animar doze esqueletos de anão (ou seis zumbis), quatro zumbis de gnolls ou um único zumbi de gigante do fogo. Alternativamente, o clérigo pode animar dois esqueletos de animais pequenos (de DV menor ou igual a 1-1) para cada nível de experiência que possuir. Essa magia requer uma gota de sangue, um pedaço de carne do tipo da criatura a ser animada e uma pitada (ou um pedaço) de osso. O uso de Animar os Mortos não é um ato bom. Apenas clérigos de tendência maligna valem-se dela frequentemente."
+}

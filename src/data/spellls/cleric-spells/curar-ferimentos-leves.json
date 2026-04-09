@@ -1,0 +1,11 @@
+{
+    "name": "Curar Ferimentos Leves",
+    "level": 1,
+    "school": "Necromancia",
+    "sphere": "Cura",
+    "castingTime": "5",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Quando usa essa magia, o clérigo restitui 1d8 pontos de vida à criatura tocada. Este efeito não beneficia seres que não possuam um corpo físico, e não se pode curar ferimentos de criaturas não vivas (mortos- vivos), ou de origem extraplanar. O reverso desta magia, Provocar Ferimentos Leves, ocorre da mesma maneira, infligindo 1d8 pontos de dano. Se a criatura estiver evitando o toque do clérigo, uma jogada de ataque será necessária para determinar se o clérigo conseguiu tocar o oponente, e com isto causou o dano.A cura só é permanente se a criatura não receber mais ferimentos; ferimentos causados pelo efeito reverso irão cicatrizar — ou podem ser curados símbolo — como feridas comuns."
+}

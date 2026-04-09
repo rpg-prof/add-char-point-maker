@@ -1,0 +1,11 @@
+{
+    "name": "Ajuda",
+    "level": 2,
+    "school": "Necromancia, Conjuração",
+    "sphere": "Necromântica",
+    "castingTime": "2 rodadas",
+    "duration": "1 rodada + 1 rodada/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "O receptor dessa magia ganha os mesmos benefícios de uma Bênção (+1 na jogada de ataque e em testes de resistência), e um bônus especial de 1d8 pontos de vida pelo tempo de duração do efeito. Ajuda permite que o receptor acumule mais pontos de vida do que o seu total natural. Os pontos de vida que o clérigo tiver além do total serão os primeiros perdidos em caso de dano, e não poderão ser recuperados através de curas normais ou mágicas. Exemplo: um guerreiro de 1º nível, com 8 pontos de vida, sofre um ataque e perde 2 pontos (8 - 2 = 6). Em seguida, recebe uma Ajuda que lhe dá 5 pontos adicionais. O guerreiro passa a ter 11 pontos de vida, sendo que 5 são temporários. Se ele sofrer 7 pontos de dano, 2 pontos normais e todos os pontos de vida temporários serão perdidos. Depois disso, ele ainda recebe um Curar Ferimentos Leves que restaura 4 pontos, deixando-o com seus 8 pontos de vida originais. Note que a ação dessa magia não é afetada pela perda permanente de pontos de vida causada por Drenar Energia, perda de dados de vida ou níveis, perda de um familiar ou pela ação de certos artefatos; os pontos de vida obtidos são simplesmente somados ao novo total. Os componentes materiais dessa magia são um pequeno pedaço de tecido branco molhado com uma substância adesiva (como alguma seiva de árvore) nas pontas, e o símbolo sagrado do clérigo."
+}

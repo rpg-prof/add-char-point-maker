@@ -1,0 +1,11 @@
+{
+    "name": "Detectar Magia",
+    "level": 1,
+    "school": "Adivinhação",
+    "sphere": "Adivinhação",
+    "castingTime": "1 rodada",
+    "duration": "1 turno",
+    "range": "30 metros",
+    "area": "Largura de 3 metros",
+    "description": "Quando essa magia é lançada, o clérigo é capaz de perceber radiações mágicas em uma área de 3 metros de largura e 30 metros de comprimento, na direção em que estiver olhando. A intensidade do poder pode ser percebida (fraca, moderada, forte, opressiva), O clérigo tem 10% de chance por nível de determinar a esfera da magia, mas, ao contrário do que acontece na versão arcana deste efeito, o tipo (alteração, conjuração, etc.) não será descoberto. O clérigo pode girar o corpo, rastreando um arco de 60° por rodada. Irá bloquear a magia um muro de pedra de 30 centímetros ou mais de largura ou metal sólido com 3 centímetros de espessura ou 1 metro ou mais de madeira sólida. O efeito requer o símbolo sagrado do clérigo."
+}

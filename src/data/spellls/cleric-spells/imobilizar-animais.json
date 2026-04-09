@@ -1,0 +1,11 @@
+{
+    "name": "Imobilizar Animais",
+    "level": 3,
+    "school": "Encantamento/Feitiço",
+    "sphere": "Animal",
+    "castingTime": "6",
+    "duration": "2 rodadas/nível",
+    "range": "80 metros",
+    "area": "1 a 4 animais em um cubo de 15 metros de lado",
+    "description": "Usando essa magia, o clérigo imobiliza de um a quatro animais. Este efeito atinge apenas animais normais (urso, leão, coelho, etc.) ou uma versão gigante dos mesmos (urso gigante, etc.). Animais mágicos (como centauros, grifos) não são afetados. O clérigo decide quantos e quais os animais na área de efeito são atingidos pela magia. Quanto maior for o número, menor será a penalidade nos lestes de resistência. Cada animal recebe um teste, com as seguintes modificações: se apenas um é o alvo, ele sofre uma penalidade de -4; se dois são afetados, a penalidade cai para -2: se três animais são visados, a penalidade é de apenas -1, e, finalmente, se quatro animais são o alvo da magia, não há nenhuma penalidade. Um peso corporal máximo de 200 quilos (50 quilos, se não for mamífero) por animal por nível do clérigo pode ser afetado Exemplificando, um clérigo de 8º nível pode afetar animais (mamíferos) de até 1.600 quilos, ou, se estes animais não forem mamíferos, de até 400 quilos."
+}

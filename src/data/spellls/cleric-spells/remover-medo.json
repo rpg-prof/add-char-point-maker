@@ -1,0 +1,11 @@
+{
+    "name": "Remover Medo",
+    "level": 1,
+    "school": "Abjuração",
+    "sphere": "Feitiços",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "10 metros",
+    "area": "1 criatura/4 níveis",
+    "description": "O clérigo aumenta a coragem do receptor desta magia, aumentando com isso seu valor de resistência a Medo mágico em +4 por um turno. Se o receptor tiver recentemente (mesmo dia) falhado num teste de resistências um ataque de Medo, a magia imediatamente confere outro teste, com +4 de bônus. Para cada quatro níveis, uma criatura a mais pode ser afetada (1 criatura do 1º ao 4º níveis, duas do 5º ao 8°, etc.). O reverso, Provocar Medo, faz com que uma criatura fuja em pânico o mais rápido possível do clérigo que lançou a magia. A fuga dura 1d4 rodadas. Um sucesso no teste de resistência contra a magia reversa irá anulá-la, e qualquer bônus de Sabedoria deverá ser aplicado. É claro que Remover Medo irá anular Provocar Medo, e vice-versa. Nenhuma das magias faz efeito contra qualquer morto-vivo."
+}

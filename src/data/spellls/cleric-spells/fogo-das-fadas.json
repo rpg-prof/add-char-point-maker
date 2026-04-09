@@ -1,0 +1,11 @@
+{
+    "name": "Fogo das Fadas",
+    "level": 1,
+    "school": "Alteração",
+    "sphere": "Clima",
+    "castingTime": "4",
+    "duration": "4 rodadas/nível",
+    "range": "80 metros",
+    "area": "1 metro quadrado/nível,",
+    "description": "dentro de um raio de 15 metros Essa magia permite ao clérigo envolver um ou mais objetos ou criaturas em uma fraca luminosidade. A quantidade de itens afetados depende do número de metros quadrados que o clérigo pode alterai. Uma metragem suficiente permite que vários objetos ou criaturas sejam abarcados na luz criada pela magia, mas um objeto deverá ser completamente envolvido antes que outro receba a aura, e iodos precisam estar na área de efeito. Criaturas ou objetos recobertos por esta luz se tornarão visíveis a 80 metros na escuridão, 40 metros se o observador tiver uma forte fonte de luz consigo. Criaturas envoltas na luz passam a ser alvos mais fáceis, dando aos oponentes um bônus de +2 no escuro (incluindo noites com lua) e um bônus de +1 no crepúsculo, ou em situações de melhor iluminação. Note que criaturas invisíveis podem ser reveladas por esta magia. Esta aura de luz não se fixa em criaturas que não possuam corpo físico, sejam etéreas ou gasosas. A luminosidade produzida pelo efeito também não encobrirá a luz do sol. por exemplo. Ela também não possui efeito especial contra mortos-vivos, ou criaturas das sombras. O Fogo das Fadas poderá ser azul, verde ou violeta, de acordo com as palavras usadas pelo clérigo durante o seu lançamento. Esta magia não causa dano algum ao objeto ou criatura afetado. O componente material necessário é um pequeno pedaço de madeira e fosforescente, do tipo que provoca fogo-fátuo nos pântanos."
+}

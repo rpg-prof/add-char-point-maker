@@ -1,0 +1,11 @@
+{
+    "name": "Cura Completa",
+    "level": 6,
+    "school": "Necromancia",
+    "sphere": "Cura",
+    "castingTime": "1 turno",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "A potente magia Cura Completa torna o clérigo apto a eliminar todas as doenças e feridas da criatura que recebe o benefício. Doenças ou cegueira são curadas totalmente, e recuperam-se os pontos de vida perdidos em ferimentos. Os efeitos de Enfraquecer o Intelecto são dissipados. Desordens mentais, causadas por magias ou ferimentos no crânio, também desaparecem. Naturalmente, os efeitos podem ser anulados por feridas posteriores, machucados e doenças. A magia reversa, Doença Plena, infecta a vítima com alguma doença e causa a perda de 1d4 pontos de vida se o toque (jogada de ataque) for bem sucedido. Para criaturas que não são afetadas pela Cura Completa (ou Doença Plena), veja Curar Ferimentos Leves."
+}

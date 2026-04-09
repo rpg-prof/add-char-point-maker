@@ -1,0 +1,11 @@
+{
+    "name": "Falar com Monstros",
+    "level": 6,
+    "school": "Alteração",
+    "sphere": "Adivinhação",
+    "castingTime": "1 rodada",
+    "duration": "2 rodadas/nível",
+    "range": "30 metros",
+    "area": "O clérigo",
+    "description": "Esse efeito torna o clérigo capaz de conversar com qualquer tipo de criatura que possua alguma forma de comunicação (incluindo empatia, tato, feromônio. etc.). Ou seja, o monstro entende, em sua própria linguagem ou meio, o sentido do que o clérigo deseja dizer e vice-versa. A criatura recebe um teste de reação por parte do Mestre. Todos os seres da mesma espécie escolhidos pelo clérigo podem ser igualmente compreendidos, desde que estejam dentro do alcance da magia. O clérigo pode falar com diferentes tipos de criaturas enquanto durar a magia, mas deve dirigir-se separadamente a cada tipo. O efeito perdura por duas rodadas por nível."
+}

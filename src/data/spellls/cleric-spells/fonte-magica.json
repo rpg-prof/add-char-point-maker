@@ -1,0 +1,11 @@
+{
+    "name": "Fonte Mágica",
+    "level": 5,
+    "school": "Adivinhação",
+    "sphere": "Adivinhação",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "A magia faz uma bacia de água benta servir como um dispositivo de observação. O efeito não opera a menos que o clérigo esteja em boas relações com a divindade. A bacia de água benta torna-se semelhante a uma bola de cristal. Para cada frasco de água benta que compuser o volume da bacia, o clérigo pode observar por uma rodada, até o máximo de uma hora. Assim, a duração de uma Fonte Mágica está diretamente relacionada ao tamanho do recipiente. O Mestre saberá as chances de um clérigo pressentir esse tipo de observação. O símbolo sagrado do clérigo, a bacia e seus enfeites não são consumidos."
+}

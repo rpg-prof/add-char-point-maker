@@ -1,0 +1,11 @@
+{
+    "name": "Neutralizar Venenos",
+    "level": 4,
+    "school": "Necromancia",
+    "sphere": "Cura",
+    "castingTime": "8",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Criatura tocada ou 30 litros/2 níveis.",
+    "description": "Essa magia neutraliza imediatamente qualquer tipo de veneno presente na área de efeito. Além do uso óbvio, que é curar (ou prevenir) envenenamentos, pode ser usada contra seres venenosos (ou contra armas ou objetos envenenados), destruindo permanentemente o veneno presente. Neste caso, uma jogada de ataque é necessária para determinar se o clérigo conseguiu tocar seu oponente. A magia afeta apenas o veneno presente no momento do toque: veneno que seja reinserido (ou regenerado, no caso de seres venenosos) nada sofre. A magia reversa, Envenenar, também requer uma jogada de ataque, e a vítima tem direito a um teste de resistência contra veneno. Caso o teste fracasse, a vítima fica incapacitada e morre em um turno, a menos que a substância seja neutralizada (ou retardada) magicamente."
+}

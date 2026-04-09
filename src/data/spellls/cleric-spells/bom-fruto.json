@@ -1,0 +1,11 @@
+{
+    "name": "Bom Fruto",
+    "level": 2,
+    "school": "Alteração, Evocação",
+    "sphere": "Vegetal",
+    "castingTime": "5",
+    "duration": "1 dia + 1 dia/nível",
+    "range": "Toque",
+    "area": "2d4 frutos récem-colhidos",
+    "description": "Lançando Bom Fruto sobre um punhado de frutos recém-colhidos, o clérigo faz com que 2d4 deles tornem-se mágicos. O clérigo (assim como qualquer outro clérigo da mesma divindade e que esteja pelo menos no 3º nível) conseguirá distinguir os frutos encantados. Um Detectar Magia também irá descobri-los. Uma criatura esfomeada, de tamanho humano ou menor, que coma um destes frutos irá sentir-se bem, como se tivesse comido uma refeição completa, ou recuperará 1 ponto de dano físico produzido por ferimentos ou causas similares. No entanto, só 8 pontos, no máximo podem ser curados desta forma em cada período de 24 horas. O reverso, Maus Frutos, faz 2d4 frutos se estragarem, cada um causando 1 ponto de dano se ingerido (sem resistência). Para lançar esta magia, o clérigo deverá esfregar seu símbolo sagrado nos frutos, a fim de encantá- los (frutos como morangos, amoras, groselhas, framboesas, etc.). Resistência: Nenhuma Componentes: V, G, M Tempo de Execução: 1 rodada"
+}

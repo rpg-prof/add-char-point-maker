@@ -1,0 +1,11 @@
+{
+    "name": "Curar Cegueira ou Surdez",
+    "level": 3,
+    "school": "Abjuração",
+    "sphere": "Necromântica",
+    "castingTime": "6",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "Ao tocar a criatura afligida, o clérigo que utiliza esta magia pode permanentemente curar alguns tipos de cegueira ou de surdez. Este efeito não repara danos causados por ferimentos ou doença dos órgãos visuais ou auditivos. A magia reversa. Provocar Cegueira ou Surdez requer um toque (jogada de ataque bem-sucedida) sobre a vítima. Se o receptor tiver sucesso em um teste de resistência, o efeito é anulado. Caso contrário, uma forma de cegueira ou surdez mágica ocorre. Uma pessoa surda sofre penalidade de 1 nos testes de surpresa e iniciativa, além de ter uma chance de 20% de errar na execução de magias com componente verbal. Uma pessoa cega sofre uma penalidade de 4 em suas jogadas de ataque e na categoria de armadura, e uma penalidade de 2 na iniciativa."
+}

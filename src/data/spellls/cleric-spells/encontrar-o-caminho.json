@@ -1,0 +1,11 @@
+{
+    "name": "Encontrar o Caminho",
+    "level": 6,
+    "school": "Adivinhação",
+    "sphere": "Adivinhação",
+    "castingTime": "1 rodada",
+    "duration": "1 turno/nível",
+    "range": "Toque",
+    "area": "Criatura tocada",
+    "description": "O receptor dessa magia pode encontrar a menor e mais direta rota física para alcançar ou deixar um local. O lugar pode ser ao ar livre ou subterrâneo, uma armadilha ou mesmo um Labirinto Mágico. Observe que o efeito funciona no que diz respeito a locais, não a objetos ou criaturas dentro de um lugar. Assim, a magia não poderia encontrar o caminho para “uma floresta onde vive um dragão verde”, nem para a localização de “um tesouro de peças de platina”. Além disso, o local deve estar no mesmo plano do clérigo. A magia torna o receptor capaz de sentir a direção correia que o levará ao seu destino, indicando, nos momentos apropriados, o caminho exato a seguir (ou ações físicas a serem efetuadas — com concentração, a magia capacita o sujeito a perceber, por exemplo, algumas armadilhas, ou a palavra apropriada para ultrapassar um símbolo). O efeito termina quando o destino é alcançado, ou quando se esgota a duração de um turno por nível do clérigo. A magia livra o receptor, e aqueles que o acompanham, de um Labirinto Mágico em uma única rodada, e continuará a fazê-lo enquanto durar. Observe que esta adivinhação está ligada ao clérigo, e não aos seus companheiros e, assim como Encontrar Armadilhas, não prediz nem leva em conta as atitudes de seres vivos. A magia necessita de um conjunto de contas de adivinhação, do tipo preferido do clérigo — ossos, contas de marfim, búzios, runas entalhadas ou coisas assim. A magia reversa, Perder o Caminho, faz com que a vítima tocada fique totalmente perdida, incapaz de achar seu caminho pela duração da magia, embora, obviamente, ela possa ser orientada ou conduzida por terceiros."
+}

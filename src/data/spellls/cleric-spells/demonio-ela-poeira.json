@@ -1,0 +1,11 @@
+{
+    "name": "Demônio ela Poeira",
+    "level": 2,
+    "school": "Conjuração/Convocação",
+    "sphere": "Elemental (Ar)",
+    "castingTime": "2 rodadas",
+    "duration": "2 rodadas/nível",
+    "range": "30 metros",
+    "area": "Especial",
+    "description": "Essa magia capacita o clérigo a conjurar um fraco elemental do Ar — um Demônio da Poeira tem CA 4, 2 DV, MV 50 de metros por rodada, ataques de 1d4 pontos de dano e pode ser ferido por armas comuns. Ele parece um pequeno furacão de 30 centímetros de diâmetro na base. 1.5 metro de altura e pouco mais de 1 metro de diâmetro superior. Ele se move de acordo com as ordens do clérigo que o conjurou, mas irá se dissipar caso fique a mais de 30 metros de distância do mesmo O vento causado por sua passagem é suficiente para apagar tochas, pequenas fogueiras de acampamento, lampiões abertos e qualquer outro tipo de fogo exposto que não seja de origem mística. O Demônio da Poeira é capaz de deter uma nuvem de gás, ou criatura de forma gasosa, e empurrá-la para longe do clérigo (embora seja incapaz de ferir ou dispersar a nuvem). Se passar por uma área cuja superfície esteja coberta de poeira, areia ou cinzas, o Demônio irá sugar estas partículas e dispersá-las em uma nuvem de 3 metros de diâmetro, centrada nele mesmo. A nuvem obstruirá a visão normal, e as criaturas, dentro desta área, ficarão momentaneamente cegas por até uma rodada depois que saírem da nuvem. Se um clérigo lançando magia for atingido, ou entrar na área da nuvem causada pelo demônio de areia, será necessário um teste de resistência à magia para manter a concentração, ou o efeito estará arruinado. Qualquer criatura nativa do plano elemental do Ar — ou outro Demônio de Poeira conseguirá dispersar um Demônio de Poeira com um simples ataque."
+}

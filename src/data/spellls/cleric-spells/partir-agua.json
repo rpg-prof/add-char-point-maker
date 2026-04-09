@@ -1,0 +1,11 @@
+{
+    "name": "Partir Água",
+    "level": 6,
+    "school": "Alteração",
+    "sphere": "Elemental (Água)",
+    "castingTime": "1 turno",
+    "duration": "1 turno/nível",
+    "range": "20 metros/nível",
+    "area": "Especial",
+    "description": "Ao empregar essa magia, o clérigo torna-se capaz de separar água ou líquido semelhante, formando uma passagem, A profundidade e o comprimento do caminho criado pela magia dependem do nível de experiência do clérigo: o caminho terá 1 metro de profundidade por nível, por 30 metros de largura, por 20 metros de comprimento para cada nível. Note que a largura é fixa. Assim, um clérigo de 12º nível poderia construir uma passagem de 12 metros de profundidade por 30 metros de largura e 240 metros de comprimento. O caminho perdura tanto quanto a magia, ou até que o clérigo resolva fechá-lo. Correntes de água parecem fluir através da separação, embora criaturas aquáticas e objetos como barcos, não consigam entrar na divisão sem esforço deliberado e extenuante. Se lançada embaixo d’água, a magia cria um cilindro de ar com diâmetro e comprimento apropriados. Se for lançada diretamente sobre um elemental da Água, ou outra criatura formada basicamente de água, a vítima recebe 4d8 pontos de dano e deve ter sucesso no teste de resistência contra magia, ou fugirá em pânico por 3d4 rodadas. O componente material é o símbolo sagrado do clérigo."
+}

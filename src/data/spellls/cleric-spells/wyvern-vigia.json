@@ -1,0 +1,11 @@
+{
+    "name": "Wyvern Vigia",
+    "level": 2,
+    "school": "Evocação",
+    "sphere": "Guarda",
+    "castingTime": "1 rodada",
+    "duration": "8 horas ou até acertar um golpe",
+    "range": "30 metros",
+    "area": "Esfera de 3 metros de raio",
+    "description": "Essa magia é conhecida por Wyvern Vigia porque cria uma neblina com uma forma semelhante a um Wyvern. É usada para manter alguma área livre de intrusos. Qualquer criatura que chegue a 3 metros do local atingido poderá ser afetada pelo Wyvern. Terá que fazer um teste de resistência à magia ou ficará paralisada por uma rodada por nível do clérigo, ou até ser liberada por ele, por um Dissipar Magia ou por um Remover Paralisia. Se for bem-sucedida no teste de resistência, a criatura passou pelo ataque do Wyvern e a magia continuará intacta. Se o teste de resistência falhar e a criatura for paralisada, o efeito será dissipado. Isto também ocorrerá se nenhum intruso for atacado pelo Wyvern nas 8 horas subseqüentes ao lançamento da magia. Qualquer criatura que se aproximar da área protegida tem uma chance detectar sua presença antes de ser atacado; esta chance é de 90% com uma boa iluminação, 30% com luz fraca, e 0% no escuro. O componente material é o símbolo sagrado do clérigo. ## Magias Divinas do 3º Círculo"
+}

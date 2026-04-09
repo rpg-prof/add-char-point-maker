@@ -1,0 +1,11 @@
+{
+    "name": "Animar Pedras",
+    "level": 7,
+    "school": "Alteração",
+    "sphere": "Elemental (Terra)",
+    "castingTime": "4",
+    "duration": "1 rodada/nível",
+    "range": "40 metros",
+    "area": "60 litros/nível",
+    "description": "Com o uso dessa magia, o clérigo faz um objeto de pedra, de tamanho apropriado, movimentar-se (veja Animar Pedras do 6º círculo). O objeto animado deve ser autônomo, e não uma parte de um enorme bloco ou similar, Ele segue a vontade do clérigo—atacando, quebrando objetos, bloqueando passagens — enquanto durar o efeito. A rocha animada não possui Inteligência ou vontade própria, mas cumpre as ordens ao pé da letra. Observe que a rocha só recebe um conjunto de instruções para cada ação simples (frases breves e com palavras fáceis — 12 palavras, aproximadamente). A pedra permanece com vida durante uma rodada por nível do clérigo. O volume da rocha que pode ser animado também é calculado com base no nível de experiência — 60 litros por nível. Assim, um clérigo de 12º nível pode animar 720 litros de rocha, uma massa de tamanho próximo ao humano. Embora os detalhes exatos da rocha animada fiquem a critério do Mestre, sua Categoria de Armadura nunca é pior que 5, e a pedra tem 1d3 pontos de vida para cada 30 litros. O dano máximo que pode infligir é 1d2 pontos por nível do clérigo. Assim, uma rocha sob o controle de um clérigo do 12º nível pode causar de 12 a 24 pontos de dano. A taxa de movimentação, para uma pedra do tamanho de um homem, é de 20 metros por rodada. Uma rocha geralmente pesa de 50 a 150 quilos, para cada 30 litros. Os componentes materiais são uma pedra e uma gota do sangue do clérigo."
+}

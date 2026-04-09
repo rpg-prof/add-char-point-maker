@@ -1,0 +1,11 @@
+{
+    "name": "Teleporte por Árvores",
+    "level": 6,
+    "school": "Alteração",
+    "sphere": "Vegetal",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Por meio dessa magia, o clérigo é capaz de entrar em qualquer planta grande (do tamanho de um homem ou maior) e transpor qualquer distância ale outra planta da mesma espécie em uma única rodada, a despeito da extensão do caminho. A planta a ser penetrada precisa estar viva. A planta-destino não precisa ser familiar ao clérigo, mas também deve estar viva. Se o clérigo não tem certeza quanto à localização de sua planta-destino, precisa somente determinar direção e distância, e a magia irá transportá-lo para o vegetal o mais próximo do local desejado. Há uma chance básica de 20%, reduzida em 1 ponto percentual por nível do clérigo, do transporte deixá-lo em uma espécie de planta similar, a uma distância de 1 a 160 quilômetros do vegetal desejado. Se uma planta em particular for escolhida como destino mas não estiver viva, a magia falhará e o clérigo deve sair da planta de entrada dentro de 24 horas. Observe que essa magia não funciona com monstros vegetais — ou seja, homens-vegetais, entes, etc. A destruição de uma planta ocupada extermina o clérigo (veja Esconderijo Vegetal)."
+}
