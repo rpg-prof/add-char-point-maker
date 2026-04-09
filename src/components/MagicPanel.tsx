@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Sparkles, BookOpen, Plus, Check, Book } from "lucide-react";
-import { spellLists, type Spell } from "@/data/spells";
+import { spellLists, isDivineCaster, type Spell } from "@/data/spells";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 interface MagicPanelProps {
@@ -25,7 +25,7 @@ const SpellItem = ({
       <div className="flex items-center gap-1">
         <button
           onClick={onToggle}
-          title={inGrimoire ? "Remover do grimório" : "Adicionar ao grimório"}
+          title={inGrimoire ? "Remover da coleção" : "Adicionar à coleção"}
           className={`w-6 h-6 flex items-center justify-center rounded border transition-all flex-shrink-0 ${
             inGrimoire
               ? "bg-gold/20 border-gold text-gold hover:bg-destructive/20 hover:border-destructive hover:text-destructive"
@@ -59,6 +59,7 @@ const SpellItem = ({
             {spell.castingTime && <span><span className="text-foreground font-semibold">Tempo:</span> {spell.castingTime}</span>}
             {spell.components && <span><span className="text-foreground font-semibold">Componentes:</span> {spell.components}</span>}
             {spell.area && <span><span className="text-foreground font-semibold">Área:</span> {spell.area}</span>}
+            {spell.sphere && <span><span className="text-foreground font-semibold">Esfera:</span> {spell.sphere}</span>}
           </div>
           <p className="pt-1 border-t border-border/50">{spell.description}</p>
         </div>
@@ -70,6 +71,8 @@ const SpellItem = ({
 const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelProps) => {
   const [openLevels, setOpenLevels] = useState<Record<string, boolean>>({});
   const [showGrimoireOnly, setShowGrimoireOnly] = useState(false);
+  const divine = isDivineCaster(selectedClass);
+  const collectionName = divine ? "Livro de Orações" : "Grimório";
 
   const relevantLists = spellLists.filter((list) =>
     list.classes.includes(selectedClass)
@@ -95,7 +98,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
         <div className="flex items-center gap-2">
           <Book className="w-4 h-4 text-gold" />
           <span className="font-display text-xs tracking-wider uppercase text-gold">
-            Grimório
+            {collectionName}
           </span>
           <span className="text-xs text-muted-foreground font-body">
             {grimoire.length} {grimoire.length === 1 ? "magia" : "magias"} selecionada{grimoire.length !== 1 ? "s" : ""}
@@ -109,7 +112,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
               : "border-border text-muted-foreground hover:border-gold hover:text-gold"
           }`}
         >
-          {showGrimoireOnly ? "Mostrar todas" : "Só grimório"}
+          {showGrimoireOnly ? "Mostrar todas" : `Só ${divine ? "orações" : "grimório"}`}
         </button>
       </div>
 
@@ -123,7 +126,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
         if (showGrimoireOnly && filteredSpells.length === 0) {
           return (
             <div key={list.type} className="text-center py-4 text-muted-foreground text-sm font-body">
-              Nenhuma magia adicionada ao grimório ainda.
+              Nenhuma magia adicionada ainda.
             </div>
           );
         }
@@ -160,7 +163,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
                       </span>
                       <span className="text-xs text-muted-foreground font-body">
                         {grimoireCount > 0 && (
-                          <span className="text-gold mr-1">{grimoireCount} no grimório •</span>
+                          <span className="text-gold mr-1">{grimoireCount} selecionada{grimoireCount !== 1 ? "s" : ""} •</span>
                         )}
                         {levelSpells.length} magias
                       </span>
