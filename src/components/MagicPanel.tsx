@@ -70,6 +70,8 @@ const SpellItem = ({
 const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelProps) => {
   const [openLevels, setOpenLevels] = useState<Record<string, boolean>>({});
   const [showGrimoireOnly, setShowGrimoireOnly] = useState(false);
+  const divine = isDivineCaster(selectedClass);
+  const collectionName = divine ? "Livro de Orações" : "Grimório";
 
   const relevantLists = spellLists.filter((list) =>
     list.classes.includes(selectedClass)
