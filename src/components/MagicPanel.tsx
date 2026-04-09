@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Sparkles, BookOpen, Plus, Check, Book } from "lucide-react";
-import { spellLists, type Spell } from "@/data/spells";
+import { spellLists, isDivineCaster, type Spell } from "@/data/spells";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 interface MagicPanelProps {
