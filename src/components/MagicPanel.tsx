@@ -59,6 +59,7 @@ const SpellItem = ({
             {spell.castingTime && <span><span className="text-foreground font-semibold">Tempo:</span> {spell.castingTime}</span>}
             {spell.components && <span><span className="text-foreground font-semibold">Componentes:</span> {spell.components}</span>}
             {spell.area && <span><span className="text-foreground font-semibold">Área:</span> {spell.area}</span>}
+            {spell.sphere && <span><span className="text-foreground font-semibold">Esfera:</span> {spell.sphere}</span>}
           </div>
           <p className="pt-1 border-t border-border/50">{spell.description}</p>
         </div>
