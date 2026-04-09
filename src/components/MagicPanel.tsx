@@ -25,7 +25,7 @@ const SpellItem = ({
       <div className="flex items-center gap-1">
         <button
           onClick={onToggle}
-          title={inGrimoire ? "Remover do grimório" : "Adicionar ao grimório"}
+          title={inGrimoire ? "Remover da coleção" : "Adicionar à coleção"}
           className={`w-6 h-6 flex items-center justify-center rounded border transition-all flex-shrink-0 ${
             inGrimoire
               ? "bg-gold/20 border-gold text-gold hover:bg-destructive/20 hover:border-destructive hover:text-destructive"
@@ -125,7 +125,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
         if (showGrimoireOnly && filteredSpells.length === 0) {
           return (
             <div key={list.type} className="text-center py-4 text-muted-foreground text-sm font-body">
-              Nenhuma magia adicionada ao grimório ainda.
+              Nenhuma magia adicionada ainda.
             </div>
           );
         }
