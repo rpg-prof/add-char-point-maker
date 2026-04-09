@@ -97,7 +97,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
         <div className="flex items-center gap-2">
           <Book className="w-4 h-4 text-gold" />
           <span className="font-display text-xs tracking-wider uppercase text-gold">
-            Grimório
+            {collectionName}
           </span>
           <span className="text-xs text-muted-foreground font-body">
             {grimoire.length} {grimoire.length === 1 ? "magia" : "magias"} selecionada{grimoire.length !== 1 ? "s" : ""}
@@ -111,7 +111,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
               : "border-border text-muted-foreground hover:border-gold hover:text-gold"
           }`}
         >
-          {showGrimoireOnly ? "Mostrar todas" : "Só grimório"}
+          {showGrimoireOnly ? "Mostrar todas" : `Só ${divine ? "orações" : "grimório"}`}
         </button>
       </div>
 
