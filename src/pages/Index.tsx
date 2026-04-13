@@ -100,7 +100,6 @@ const Index = () => {
     timestamp: string;
   }
   const [progressionHistory, setProgressionHistory] = useState<ProgressionEntry[]>([]);
-  const [progressionPointsExtra, setProgressionPointsExtra] = useState(0); // extra points spent on progression items
   const [showEvolveDialog, setShowEvolveDialog] = useState(false);
   const [evolveLevel, setEvolveLevel] = useState(2);
 
@@ -506,13 +505,13 @@ const Index = () => {
           />
           <PointTracker
             label="Pontos de Personagem"
-            spent={characterPointsSpent}
+            spent={Math.min(characterPointsSpent, CHARACTER_POINTS)}
             total={CHARACTER_POINTS}
           />
           {totalProgressionPoints > 0 && (
             <PointTracker
               label="Pontos de Progressão"
-              spent={progressionPointsExtra}
+              spent={Math.max(0, characterPointsSpent - CHARACTER_POINTS)}
               total={totalProgressionPoints}
             />
           )}
