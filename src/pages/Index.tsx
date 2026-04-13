@@ -93,6 +93,41 @@ const Index = () => {
   const [selectedShields, setSelectedShields] = useState<string[]>([]);
   const [grimoire, setGrimoire] = useState<string[]>([]);
 
+  // Progression system
+  interface ProgressionEntry {
+    level: number;
+    points: number;
+    timestamp: string;
+  }
+  const [progressionHistory, setProgressionHistory] = useState<ProgressionEntry[]>([]);
+  const [progressionPointsExtra, setProgressionPointsExtra] = useState(0); // extra points spent on progression items
+  const [showEvolveDialog, setShowEvolveDialog] = useState(false);
+  const [evolveLevel, setEvolveLevel] = useState(2);
+
+  const totalProgressionPoints = useMemo(
+    () => progressionHistory.reduce((sum, e) => sum + e.points, 0),
+    [progressionHistory]
+  );
+
+  const handleEvolve = useCallback(() => {
+    const points = evolveLevel * 10;
+    setProgressionHistory((prev) => [
+      ...prev,
+      { level: evolveLevel, points, timestamp: new Date().toISOString() },
+    ]);
+    setShowEvolveDialog(false);
+    setEvolveLevel((prev) => prev + 1);
+  }, [evolveLevel]);
+
+  const handleUndoEvolve = useCallback(() => {
+    setProgressionHistory((prev) => {
+      if (prev.length === 0) return prev;
+      const newHistory = prev.slice(0, -1);
+      return newHistory;
+    });
+    setEvolveLevel((prev) => Math.max(2, prev - 1));
+  }, []);
+
   // Calculate attribute points spent
   const attributePointsSpent = useMemo(
     () => Object.values(attributes).reduce((sum, val) => sum + val, 0),
