@@ -1,5 +1,13 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
