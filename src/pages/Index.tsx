@@ -271,6 +271,11 @@ const Index = () => {
         if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
         if (data.selectedShields) setSelectedShields(data.selectedShields);
         if (data.grimoire) setGrimoire(data.grimoire);
+        if (data.progressionHistory) {
+          setProgressionHistory(data.progressionHistory);
+          const maxLevel = data.progressionHistory.reduce((max: number, e: ProgressionEntry) => Math.max(max, e.level), 1);
+          setEvolveLevel(maxLevel + 1);
+        }
         setCurrentStep(0);
       } catch {
         alert("Arquivo JSON inválido.");
