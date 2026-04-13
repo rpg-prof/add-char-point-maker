@@ -1,5 +1,13 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
@@ -84,6 +92,41 @@ const Index = () => {
   const [selectedWeaponGroups, setSelectedWeaponGroups] = useState<string[]>([]);
   const [selectedShields, setSelectedShields] = useState<string[]>([]);
   const [grimoire, setGrimoire] = useState<string[]>([]);
+
+  // Progression system
+  interface ProgressionEntry {
+    level: number;
+    points: number;
+    timestamp: string;
+  }
+  const [progressionHistory, setProgressionHistory] = useState<ProgressionEntry[]>([]);
+  const [progressionPointsExtra, setProgressionPointsExtra] = useState(0); // extra points spent on progression items
+  const [showEvolveDialog, setShowEvolveDialog] = useState(false);
+  const [evolveLevel, setEvolveLevel] = useState(2);
+
+  const totalProgressionPoints = useMemo(
+    () => progressionHistory.reduce((sum, e) => sum + e.points, 0),
+    [progressionHistory]
+  );
+
+  const handleEvolve = useCallback(() => {
+    const points = evolveLevel * 10;
+    setProgressionHistory((prev) => [
+      ...prev,
+      { level: evolveLevel, points, timestamp: new Date().toISOString() },
+    ]);
+    setShowEvolveDialog(false);
+    setEvolveLevel((prev) => prev + 1);
+  }, [evolveLevel]);
+
+  const handleUndoEvolve = useCallback(() => {
+    setProgressionHistory((prev) => {
+      if (prev.length === 0) return prev;
+      const newHistory = prev.slice(0, -1);
+      return newHistory;
+    });
+    setEvolveLevel((prev) => Math.max(2, prev - 1));
+  }, []);
 
   // Calculate attribute points spent
   const attributePointsSpent = useMemo(
@@ -196,6 +239,7 @@ const Index = () => {
       selectedRace, selectedClass, selectedSocialClass,
       selectedAdvantages, selectedRaceClassAdv, selectedSkills,
       selectedWeapons, selectedWeaponGroups, selectedShields, grimoire,
+      progressionHistory,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -227,6 +271,11 @@ const Index = () => {
         if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
         if (data.selectedShields) setSelectedShields(data.selectedShields);
         if (data.grimoire) setGrimoire(data.grimoire);
+        if (data.progressionHistory) {
+          setProgressionHistory(data.progressionHistory);
+          const maxLevel = data.progressionHistory.reduce((max: number, e: ProgressionEntry) => Math.max(max, e.level), 1);
+          setEvolveLevel(maxLevel + 1);
+        }
         setCurrentStep(0);
       } catch {
         alert("Arquivo JSON inválido.");
@@ -424,6 +473,24 @@ const Index = () => {
                 <Save className="w-4 h-4 mr-1" />
                 Salvar
               </Button>
+              <Button
+                size="sm"
+                onClick={() => setShowEvolveDialog(true)}
+                className="bg-accent text-accent-foreground hover:bg-accent/80 font-display text-xs tracking-wider"
+              >
+                <TrendingUp className="w-4 h-4 mr-1" />
+                Evoluir
+              </Button>
+              {progressionHistory.length > 0 && (
+                <Button
+                  size="sm"
+                  onClick={handleUndoEvolve}
+                  className="bg-blood/80 text-parchment hover:bg-blood font-display text-xs tracking-wider"
+                  title="Desfazer última evolução"
+                >
+                  <Undo2 className="w-4 h-4" />
+                </Button>
+              )}
             </div>
           </div>
         </div>
@@ -431,7 +498,7 @@ const Index = () => {
 
       <main className="container max-w-6xl mx-auto px-4 py-6 space-y-6">
         {/* Point Trackers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg bg-card/80 border border-border shadow-sm">
+        <div className={`grid grid-cols-1 ${totalProgressionPoints > 0 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-4 p-4 rounded-lg bg-card/80 border border-border shadow-sm`}>
           <PointTracker
             label="Pontos de Atributos"
             spent={attributePointsSpent}
@@ -442,7 +509,80 @@ const Index = () => {
             spent={characterPointsSpent}
             total={CHARACTER_POINTS}
           />
+          {totalProgressionPoints > 0 && (
+            <PointTracker
+              label="Pontos de Progressão"
+              spent={progressionPointsExtra}
+              total={totalProgressionPoints}
+            />
+          )}
         </div>
+
+        {/* Evolve Dialog */}
+        <Dialog open={showEvolveDialog} onOpenChange={setShowEvolveDialog}>
+          <DialogContent className="dark-panel border-gold/40 sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="font-display text-gold tracking-wider">
+                <TrendingUp className="w-5 h-5 inline mr-2" />
+                Evoluir Personagem
+              </DialogTitle>
+              <DialogDescription className="text-parchment/60">
+                Ao atingir um novo nível, o personagem recebe Nível × 10 pontos de progressão.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4 py-2">
+              <div>
+                <label className="font-display text-xs tracking-wider uppercase text-parchment/70 mb-1 block">
+                  Nível Alcançado
+                </label>
+                <input
+                  type="number"
+                  min={2}
+                  max={20}
+                  value={evolveLevel}
+                  onChange={(e) => setEvolveLevel(Math.max(2, Math.min(20, parseInt(e.target.value) || 2)))}
+                  className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body focus:outline-none focus:ring-1 focus:ring-gold"
+                />
+              </div>
+              <div className="rounded-lg border border-gold/30 bg-gold/5 p-3 text-sm">
+                <p className="text-muted-foreground">
+                  Pontos a receber: <span className="text-gold font-bold text-lg">{evolveLevel * 10}</span>
+                </p>
+                {progressionHistory.length > 0 && (
+                  <p className="text-muted-foreground mt-1">
+                    Total acumulado: <span className="font-bold">{totalProgressionPoints}</span> → <span className="font-bold text-gold">{totalProgressionPoints + evolveLevel * 10}</span>
+                  </p>
+                )}
+              </div>
+              {progressionHistory.length > 0 && (
+                <div className="text-xs text-muted-foreground">
+                  <p className="font-display tracking-wider uppercase mb-1">Histórico:</p>
+                  {progressionHistory.map((entry, i) => (
+                    <span key={i} className="inline-block mr-2 px-1.5 py-0.5 rounded bg-gold/10 border border-gold/20 text-gold-dark">
+                      Nv.{entry.level} (+{entry.points})
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <DialogFooter>
+              <Button
+                variant="outline"
+                onClick={() => setShowEvolveDialog(false)}
+                className="font-display text-xs tracking-wider"
+              >
+                Cancelar
+              </Button>
+              <Button
+                onClick={handleEvolve}
+                className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
+              >
+                <TrendingUp className="w-4 h-4 mr-1" />
+                Evoluir para Nível {evolveLevel}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
 
         {/* Wizard Stepper */}
         <div className="rounded-lg bg-card/80 border border-border shadow-sm overflow-hidden">
