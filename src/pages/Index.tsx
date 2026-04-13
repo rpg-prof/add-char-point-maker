@@ -498,7 +498,7 @@ const Index = () => {
 
       <main className="container max-w-6xl mx-auto px-4 py-6 space-y-6">
         {/* Point Trackers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg bg-card/80 border border-border shadow-sm">
+        <div className={`grid grid-cols-1 ${totalProgressionPoints > 0 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-4 p-4 rounded-lg bg-card/80 border border-border shadow-sm`}>
           <PointTracker
             label="Pontos de Atributos"
             spent={attributePointsSpent}
@@ -509,7 +509,80 @@ const Index = () => {
             spent={characterPointsSpent}
             total={CHARACTER_POINTS}
           />
+          {totalProgressionPoints > 0 && (
+            <PointTracker
+              label="Pontos de Progressão"
+              spent={progressionPointsExtra}
+              total={totalProgressionPoints}
+            />
+          )}
         </div>
+
+        {/* Evolve Dialog */}
+        <Dialog open={showEvolveDialog} onOpenChange={setShowEvolveDialog}>
+          <DialogContent className="dark-panel border-gold/40 sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="font-display text-gold tracking-wider">
+                <TrendingUp className="w-5 h-5 inline mr-2" />
+                Evoluir Personagem
+              </DialogTitle>
+              <DialogDescription className="text-parchment/60">
+                Ao atingir um novo nível, o personagem recebe Nível × 10 pontos de progressão.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4 py-2">
+              <div>
+                <label className="font-display text-xs tracking-wider uppercase text-parchment/70 mb-1 block">
+                  Nível Alcançado
+                </label>
+                <input
+                  type="number"
+                  min={2}
+                  max={20}
+                  value={evolveLevel}
+                  onChange={(e) => setEvolveLevel(Math.max(2, Math.min(20, parseInt(e.target.value) || 2)))}
+                  className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body focus:outline-none focus:ring-1 focus:ring-gold"
+                />
+              </div>
+              <div className="rounded-lg border border-gold/30 bg-gold/5 p-3 text-sm">
+                <p className="text-muted-foreground">
+                  Pontos a receber: <span className="text-gold font-bold text-lg">{evolveLevel * 10}</span>
+                </p>
+                {progressionHistory.length > 0 && (
+                  <p className="text-muted-foreground mt-1">
+                    Total acumulado: <span className="font-bold">{totalProgressionPoints}</span> → <span className="font-bold text-gold">{totalProgressionPoints + evolveLevel * 10}</span>
+                  </p>
+                )}
+              </div>
+              {progressionHistory.length > 0 && (
+                <div className="text-xs text-muted-foreground">
+                  <p className="font-display tracking-wider uppercase mb-1">Histórico:</p>
+                  {progressionHistory.map((entry, i) => (
+                    <span key={i} className="inline-block mr-2 px-1.5 py-0.5 rounded bg-gold/10 border border-gold/20 text-gold-dark">
+                      Nv.{entry.level} (+{entry.points})
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <DialogFooter>
+              <Button
+                variant="outline"
+                onClick={() => setShowEvolveDialog(false)}
+                className="font-display text-xs tracking-wider"
+              >
+                Cancelar
+              </Button>
+              <Button
+                onClick={handleEvolve}
+                className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
+              >
+                <TrendingUp className="w-4 h-4 mr-1" />
+                Evoluir para Nível {evolveLevel}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
 
         {/* Wizard Stepper */}
         <div className="rounded-lg bg-card/80 border border-border shadow-sm overflow-hidden">
