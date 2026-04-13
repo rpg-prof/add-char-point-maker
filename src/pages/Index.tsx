@@ -473,6 +473,24 @@ const Index = () => {
                 <Save className="w-4 h-4 mr-1" />
                 Salvar
               </Button>
+              <Button
+                size="sm"
+                onClick={() => setShowEvolveDialog(true)}
+                className="bg-accent text-accent-foreground hover:bg-accent/80 font-display text-xs tracking-wider"
+              >
+                <TrendingUp className="w-4 h-4 mr-1" />
+                Evoluir
+              </Button>
+              {progressionHistory.length > 0 && (
+                <Button
+                  size="sm"
+                  onClick={handleUndoEvolve}
+                  className="bg-blood/80 text-parchment hover:bg-blood font-display text-xs tracking-wider"
+                  title="Desfazer última evolução"
+                >
+                  <Undo2 className="w-4 h-4" />
+                </Button>
+              )}
             </div>
           </div>
         </div>
