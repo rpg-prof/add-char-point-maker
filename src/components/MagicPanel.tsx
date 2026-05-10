@@ -71,15 +71,39 @@ const SpellItem = ({
   );
 };
 
-const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelProps) => {
+const MagicPanel = ({
+  grimoire,
+  onGrimoireToggle,
+  divineAccess,
+  arcaneAccess,
+  arcaneSpecialist,
+}: MagicPanelProps) => {
   const [openLevels, setOpenLevels] = useState<Record<string, boolean>>({});
   const [showGrimoireOnly, setShowGrimoireOnly] = useState(false);
-  const divine = isDivineCaster(selectedClass);
+
+  const accessibleDivineSpheres = Object.keys(divineAccess);
+  const accessibleArcaneSchools = Object.keys(arcaneAccess);
+  const hasDivine = accessibleDivineSpheres.length > 0;
+  const hasArcane = accessibleArcaneSchools.length > 0 || !!arcaneSpecialist;
+  const divine = hasDivine && !hasArcane;
   const collectionName = divine ? "Livro de Orações" : "Grimório";
 
-  const relevantLists = spellLists.filter((list) =>
-    list.classes.includes(selectedClass)
-  );
+  // Build filtered lists based on access
+  const filterSpells = (list: typeof spellLists[number]): Spell[] => {
+    if (list.type === "arcane") {
+      if (!hasArcane) return [];
+      return list.spells.filter((s) =>
+        spellMatchesArcane(s.school, accessibleArcaneSchools, arcaneSpecialist)
+      );
+    } else {
+      if (!hasDivine) return [];
+      return list.spells.filter((s) => spellMatchesDivine(s.sphere, accessibleDivineSpheres));
+    }
+  };
+
+  const relevantLists = spellLists
+    .map((list) => ({ ...list, spells: filterSpells(list) }))
+    .filter((list) => list.spells.length > 0);
 
   const toggleLevel = (key: string) => {
     setOpenLevels((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -89,7 +113,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
     return (
       <div className="text-center py-8 text-muted-foreground font-body">
         <BookOpen className="w-12 h-12 mx-auto mb-3 opacity-30" />
-        <p>A classe <span className="text-foreground font-semibold">{selectedClass}</span> não possui magias.</p>
+        <p>O personagem não tem acesso a nenhuma escola ou esfera de magia.</p>
       </div>
     );
   }
