@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Sparkles, BookOpen, Plus, Check, Book } from "lucide-react";
-import { spellLists, isDivineCaster, type Spell } from "@/data/spells";
+import { spellLists, type Spell } from "@/data/spells";
+import { spellMatchesArcane, spellMatchesDivine } from "@/data/magicAccess";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 interface MagicPanelProps {
-  selectedClass: string;
   grimoire: string[];
   onGrimoireToggle: (spellName: string) => void;
+  divineAccess: Record<string, "minor" | "major">;
+  arcaneAccess: Record<string, "access">;
+  arcaneSpecialist: string | null;
 }
 
 const SpellItem = ({
