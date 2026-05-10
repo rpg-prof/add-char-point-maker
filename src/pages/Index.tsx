@@ -463,13 +463,33 @@ const Index = () => {
             />
           </div>
         );
+      case "Acesso a Magias":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <MagicAccessPanel
+              selectedClass={selectedClass}
+              selectedRace={selectedRace}
+              divineAccess={divineAccess}
+              arcaneAccess={arcaneAccess}
+              arcaneSpecialist={arcaneSpecialist}
+              onDivineChange={handleDivineAccessChange}
+              onArcaneChange={handleArcaneAccessChange}
+            />
+          </div>
+        );
       case "Magia":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
-              Selecione as magias para o grimório de <span className="text-foreground font-semibold">{selectedClass}</span>.
+              Selecione as magias do personagem dentro das esferas e escolas acessíveis.
             </p>
-            <MagicPanel selectedClass={selectedClass} grimoire={grimoire} onGrimoireToggle={handleGrimoireToggle} />
+            <MagicPanel
+              grimoire={grimoire}
+              onGrimoireToggle={handleGrimoireToggle}
+              divineAccess={divineAccess}
+              arcaneAccess={arcaneAccess}
+              arcaneSpecialist={arcaneSpecialist}
+            />
           </div>
         );
       case "Resumo":
