@@ -45,7 +45,8 @@ const BASE_STEPS = [
   { label: "Armas", icon: Crosshair, desc: "Proficiências com armas e escudos" },
 ];
 
-const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório de magias" };
+const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
+const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
 
 const Index = () => {
@@ -78,13 +79,23 @@ const Index = () => {
   const [selectedRace, setSelectedRace] = useState("Humano");
   const [selectedClass, setSelectedClass] = useState("Sem Classe");
 
-  const hasMagic = spellcastingClasses.includes(selectedClass);
+  // Magic access
+  const [divineAccess, setDivineAccess] = useState<Record<string, "minor" | "major">>({});
+  const [arcaneAccess, setArcaneAccess] = useState<Record<string, "access">>({});
+  const [arcaneSpecialist, setArcaneSpecialist] = useState<string | null>(null);
+
+  const hasMagicAccess =
+    Object.keys(divineAccess).length > 0 ||
+    Object.keys(arcaneAccess).length > 0 ||
+    arcaneSpecialist !== null;
+
   const STEPS = useMemo(() => {
-    const steps = [...BASE_STEPS];
-    if (hasMagic) steps.push(MAGIC_STEP);
+    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP];
+    if (hasMagicAccess) steps.push(MAGIC_STEP);
     steps.push(SUMMARY_STEP);
     return steps;
-  }, [hasMagic]);
+  }, [hasMagicAccess]);
+
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
   const [selectedAdvantages, setSelectedAdvantages] = useState<string[]>([]);
   const [selectedRaceClassAdv, setSelectedRaceClassAdv] = useState<string[]>([]);
