@@ -16,7 +16,8 @@ import AdvantagesPanel from "@/components/AdvantagesPanel";
 import SkillsPanel from "@/components/SkillsPanel";
 import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import MagicPanel from "@/components/MagicPanel";
-import { spellcastingClasses } from "@/data/spells";
+import MagicAccessPanel, { type DivineAccessLevel, type ArcaneAccessLevel } from "@/components/MagicAccessPanel";
+import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
   attributeCosts,
   attributeNames,
@@ -44,7 +45,8 @@ const BASE_STEPS = [
   { label: "Armas", icon: Crosshair, desc: "Proficiências com armas e escudos" },
 ];
 
-const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório de magias" };
+const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
+const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
 
 const Index = () => {
@@ -77,13 +79,23 @@ const Index = () => {
   const [selectedRace, setSelectedRace] = useState("Humano");
   const [selectedClass, setSelectedClass] = useState("Sem Classe");
 
-  const hasMagic = spellcastingClasses.includes(selectedClass);
+  // Magic access
+  const [divineAccess, setDivineAccess] = useState<Record<string, "minor" | "major">>({});
+  const [arcaneAccess, setArcaneAccess] = useState<Record<string, "access">>({});
+  const [arcaneSpecialist, setArcaneSpecialist] = useState<string | null>(null);
+
+  const hasMagicAccess =
+    Object.keys(divineAccess).length > 0 ||
+    Object.keys(arcaneAccess).length > 0 ||
+    arcaneSpecialist !== null;
+
   const STEPS = useMemo(() => {
-    const steps = [...BASE_STEPS];
-    if (hasMagic) steps.push(MAGIC_STEP);
+    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP];
+    if (hasMagicAccess) steps.push(MAGIC_STEP);
     steps.push(SUMMARY_STEP);
     return steps;
-  }, [hasMagic]);
+  }, [hasMagicAccess]);
+
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
   const [selectedAdvantages, setSelectedAdvantages] = useState<string[]>([]);
   const [selectedRaceClassAdv, setSelectedRaceClassAdv] = useState<string[]>([]);
@@ -176,8 +188,22 @@ const Index = () => {
       return sum + (shield?.cost ?? 0);
     }, 0);
 
-    return raceCost + classCost + socialCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost;
-  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields]);
+    // Magic access cost
+    const divineCost = Object.entries(divineAccess).reduce((sum, [name, level]) => {
+      const sphere = divineSpheres.find((s) => s.name === name);
+      return sphere ? sum + divineSphereCost(sphere, level, selectedClass) : sum;
+    }, 0);
+    const arcaneCost = Object.keys(arcaneAccess).reduce((sum, name) => {
+      const school = arcaneSchools.find((s) => s.name === name);
+      return school ? sum + arcaneSchoolCost(school, selectedClass, selectedRace) : sum;
+    }, 0);
+    const specialistCost = arcaneSpecialist
+      ? (arcaneSchools.find((s) => s.name === arcaneSpecialist)?.specialization?.cost ?? 0)
+      : 0;
+    const magicCost = divineCost + arcaneCost + specialistCost;
+
+    return raceCost + classCost + socialCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost;
+  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist]);
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
     const newVal = Math.max(3, Math.min(18, value));
@@ -230,6 +256,36 @@ const Index = () => {
     );
   };
 
+  const handleDivineAccessChange = (sphere: string, level: DivineAccessLevel) => {
+    setDivineAccess((prev) => {
+      const next = { ...prev };
+      if (level === "none") delete next[sphere];
+      else next[sphere] = level;
+      return next;
+    });
+  };
+
+  const handleArcaneAccessChange = (school: string, level: ArcaneAccessLevel) => {
+    if (level === "specialist") {
+      setArcaneSpecialist(school);
+      setArcaneAccess((prev) => {
+        const next = { ...prev };
+        delete next[school];
+        return next;
+      });
+    } else if (level === "access") {
+      if (arcaneSpecialist === school) setArcaneSpecialist(null);
+      setArcaneAccess((prev) => ({ ...prev, [school]: "access" }));
+    } else {
+      if (arcaneSpecialist === school) setArcaneSpecialist(null);
+      setArcaneAccess((prev) => {
+        const next = { ...prev };
+        delete next[school];
+        return next;
+      });
+    }
+  };
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSave = useCallback(() => {
@@ -238,6 +294,7 @@ const Index = () => {
       selectedRace, selectedClass, selectedSocialClass,
       selectedAdvantages, selectedRaceClassAdv, selectedSkills,
       selectedWeapons, selectedWeaponGroups, selectedShields, grimoire,
+      divineAccess, arcaneAccess, arcaneSpecialist,
       progressionHistory,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
@@ -247,7 +304,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire]);
+  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -270,6 +327,11 @@ const Index = () => {
         if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
         if (data.selectedShields) setSelectedShields(data.selectedShields);
         if (data.grimoire) setGrimoire(data.grimoire);
+        if (data.divineAccess) setDivineAccess(data.divineAccess);
+        else setDivineAccess({});
+        if (data.arcaneAccess) setArcaneAccess(data.arcaneAccess);
+        else setArcaneAccess({});
+        setArcaneSpecialist(data.arcaneSpecialist ?? null);
         if (data.progressionHistory) {
           setProgressionHistory(data.progressionHistory);
           const maxLevel = data.progressionHistory.reduce((max: number, e: ProgressionEntry) => Math.max(max, e.level), 1);
@@ -401,13 +463,33 @@ const Index = () => {
             />
           </div>
         );
+      case "Acesso a Magias":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <MagicAccessPanel
+              selectedClass={selectedClass}
+              selectedRace={selectedRace}
+              divineAccess={divineAccess}
+              arcaneAccess={arcaneAccess}
+              arcaneSpecialist={arcaneSpecialist}
+              onDivineChange={handleDivineAccessChange}
+              onArcaneChange={handleArcaneAccessChange}
+            />
+          </div>
+        );
       case "Magia":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
-              Selecione as magias para o grimório de <span className="text-foreground font-semibold">{selectedClass}</span>.
+              Selecione as magias do personagem dentro das esferas e escolas acessíveis.
             </p>
-            <MagicPanel selectedClass={selectedClass} grimoire={grimoire} onGrimoireToggle={handleGrimoireToggle} />
+            <MagicPanel
+              grimoire={grimoire}
+              onGrimoireToggle={handleGrimoireToggle}
+              divineAccess={divineAccess}
+              arcaneAccess={arcaneAccess}
+              arcaneSpecialist={arcaneSpecialist}
+            />
           </div>
         );
       case "Resumo":
