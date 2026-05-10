@@ -304,7 +304,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire]);
+  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
