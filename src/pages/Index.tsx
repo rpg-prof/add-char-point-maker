@@ -188,8 +188,22 @@ const Index = () => {
       return sum + (shield?.cost ?? 0);
     }, 0);
 
-    return raceCost + classCost + socialCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost;
-  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields]);
+    // Magic access cost
+    const divineCost = Object.entries(divineAccess).reduce((sum, [name, level]) => {
+      const sphere = divineSpheres.find((s) => s.name === name);
+      return sphere ? sum + divineSphereCost(sphere, level, selectedClass) : sum;
+    }, 0);
+    const arcaneCost = Object.keys(arcaneAccess).reduce((sum, name) => {
+      const school = arcaneSchools.find((s) => s.name === name);
+      return school ? sum + arcaneSchoolCost(school, selectedClass, selectedRace) : sum;
+    }, 0);
+    const specialistCost = arcaneSpecialist
+      ? (arcaneSchools.find((s) => s.name === arcaneSpecialist)?.specialization?.cost ?? 0)
+      : 0;
+    const magicCost = divineCost + arcaneCost + specialistCost;
+
+    return raceCost + classCost + socialCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost;
+  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist]);
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
     const newVal = Math.max(3, Math.min(18, value));
