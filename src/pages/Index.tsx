@@ -16,7 +16,8 @@ import AdvantagesPanel from "@/components/AdvantagesPanel";
 import SkillsPanel from "@/components/SkillsPanel";
 import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import MagicPanel from "@/components/MagicPanel";
-import { spellcastingClasses } from "@/data/spells";
+import MagicAccessPanel, { type DivineAccessLevel, type ArcaneAccessLevel } from "@/components/MagicAccessPanel";
+import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
   attributeCosts,
   attributeNames,
