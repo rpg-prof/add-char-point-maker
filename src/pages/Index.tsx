@@ -327,6 +327,11 @@ const Index = () => {
         if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
         if (data.selectedShields) setSelectedShields(data.selectedShields);
         if (data.grimoire) setGrimoire(data.grimoire);
+        if (data.divineAccess) setDivineAccess(data.divineAccess);
+        else setDivineAccess({});
+        if (data.arcaneAccess) setArcaneAccess(data.arcaneAccess);
+        else setArcaneAccess({});
+        setArcaneSpecialist(data.arcaneSpecialist ?? null);
         if (data.progressionHistory) {
           setProgressionHistory(data.progressionHistory);
           const maxLevel = data.progressionHistory.reduce((max: number, e: ProgressionEntry) => Math.max(max, e.level), 1);
