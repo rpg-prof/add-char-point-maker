@@ -256,6 +256,36 @@ const Index = () => {
     );
   };
 
+  const handleDivineAccessChange = (sphere: string, level: DivineAccessLevel) => {
+    setDivineAccess((prev) => {
+      const next = { ...prev };
+      if (level === "none") delete next[sphere];
+      else next[sphere] = level;
+      return next;
+    });
+  };
+
+  const handleArcaneAccessChange = (school: string, level: ArcaneAccessLevel) => {
+    if (level === "specialist") {
+      setArcaneSpecialist(school);
+      setArcaneAccess((prev) => {
+        const next = { ...prev };
+        delete next[school];
+        return next;
+      });
+    } else if (level === "access") {
+      if (arcaneSpecialist === school) setArcaneSpecialist(null);
+      setArcaneAccess((prev) => ({ ...prev, [school]: "access" }));
+    } else {
+      if (arcaneSpecialist === school) setArcaneSpecialist(null);
+      setArcaneAccess((prev) => {
+        const next = { ...prev };
+        delete next[school];
+        return next;
+      });
+    }
+  };
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSave = useCallback(() => {
@@ -264,6 +294,7 @@ const Index = () => {
       selectedRace, selectedClass, selectedSocialClass,
       selectedAdvantages, selectedRaceClassAdv, selectedSkills,
       selectedWeapons, selectedWeaponGroups, selectedShields, grimoire,
+      divineAccess, arcaneAccess, arcaneSpecialist,
       progressionHistory,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
