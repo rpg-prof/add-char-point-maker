@@ -1,4 +1,4 @@
-import { Check, ChevronDown, ChevronRight } from "lucide-react";
+import { Check, ChevronDown, ChevronRight, AlertTriangle } from "lucide-react";
 import { useState } from "react";
 import { generalAdvantages, generalDisadvantages, type AdvantageOption } from "@/data/characterData";
 import { raceClassAdvantages, categoryLabels, type RaceClassAdvantage } from "@/data/raceClassAdvantages";
@@ -12,6 +12,7 @@ interface AdvantagesPanelProps {
   onRaceClassToggle: (name: string, cost: number) => void;
   selectedRace: string;
   selectedClass: string;
+  disadvantagePoints: number;
 }
 
 const AdvantagesPanel = ({
