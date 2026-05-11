@@ -105,6 +105,19 @@ const MagicAccessPanel = ({
 
         {/* Arcane schools */}
         <TabsContent value="arcane" className="mt-3 space-y-1">
+          <div className="flex justify-end mb-2">
+            <button
+              onClick={() => {
+                Object.keys(arcaneAccess).forEach((school) => onArcaneChange(school, "none"));
+                if (arcaneSpecialist) onArcaneChange(arcaneSpecialist, "none");
+              }}
+              disabled={Object.keys(arcaneAccess).length === 0 && !arcaneSpecialist}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-display tracking-wider border border-border text-muted-foreground hover:border-red-400/50 hover:text-red-300 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <Trash2 className="w-3 h-3" />
+              Limpar
+            </button>
+          </div>
           {arcaneSchools.map((school) => {
             const isAccess = !!arcaneAccess[school.name];
             const isSpec = arcaneSpecialist === school.name;
