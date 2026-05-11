@@ -98,8 +98,9 @@ const MagicAccessPanel = ({
             const isAccess = !!arcaneAccess[school.name];
             const isSpec = arcaneSpecialist === school.name;
             const accessCost = arcaneSchoolCost(school, selectedClass, selectedRace);
-            const specCost = school.specialization?.cost;
-            const specDisabled = !isSpec && arcaneSpecialist !== null;
+            const canSpecialize = selectedClass === "Mago" || selectedClass === "Arcano";
+            const specTotalCost = school.specialization ? accessCost + school.specialization.cost : 0;
+            const specDisabled = !canSpecialize || (!isSpec && arcaneSpecialist !== null);
             const current: ArcaneAccessLevel = isSpec ? "specialist" : isAccess ? "access" : "none";
 
             return (
