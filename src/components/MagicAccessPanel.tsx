@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Sparkles, BookOpen, Star } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
   divineSpheres,
   arcaneSchools,
@@ -29,21 +31,26 @@ const MagicAccessPanel = ({
   onArcaneChange,
 }: MagicAccessPanelProps) => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       <p className="font-body text-muted-foreground text-sm">
         Escolha as escolas (arcanas) e esferas (divinas) de magia que o personagem pode acessar.
         Apenas <span className="text-gold font-semibold">uma escola arcana</span> pode ser de Especialista.
       </p>
 
-      {/* Divine spheres */}
-      <div>
-        <div className="flex items-center gap-2 mb-3">
-          <BookOpen className="w-4 h-4 text-gold" />
-          <h3 className="font-display text-sm tracking-wider uppercase text-gold">
+      <Tabs defaultValue="divine" className="w-full">
+        <TabsList className="w-full grid grid-cols-2 bg-card/60 border border-border">
+          <TabsTrigger value="divine" className="font-display text-xs tracking-wider uppercase data-[state=active]:bg-gold/20 data-[state=active]:text-gold">
+            <BookOpen className="w-3.5 h-3.5 mr-1.5" />
             Esferas Divinas
-          </h3>
-        </div>
-        <div className="space-y-1">
+          </TabsTrigger>
+          <TabsTrigger value="arcane" className="font-display text-xs tracking-wider uppercase data-[state=active]:bg-gold/20 data-[state=active]:text-gold">
+            <Sparkles className="w-3.5 h-3.5 mr-1.5" />
+            Escolas Arcanas
+          </TabsTrigger>
+        </TabsList>
+
+        {/* Divine spheres */}
+        <TabsContent value="divine" className="mt-3 space-y-1">
           {divineSpheres.map((sphere) => {
             const current = divineAccess[sphere.name] ?? "none";
             const minorCost = divineSphereCost(sphere, "minor", selectedClass);
@@ -82,18 +89,10 @@ const MagicAccessPanel = ({
               </div>
             );
           })}
-        </div>
-      </div>
+        </TabsContent>
 
-      {/* Arcane schools */}
-      <div>
-        <div className="flex items-center gap-2 mb-3">
-          <Sparkles className="w-4 h-4 text-gold" />
-          <h3 className="font-display text-sm tracking-wider uppercase text-gold">
-            Escolas Arcanas
-          </h3>
-        </div>
-        <div className="space-y-1">
+        {/* Arcane schools */}
+        <TabsContent value="arcane" className="mt-3 space-y-1">
           {arcaneSchools.map((school) => {
             const isAccess = !!arcaneAccess[school.name];
             const isSpec = arcaneSpecialist === school.name;
@@ -170,8 +169,8 @@ const MagicAccessPanel = ({
               </div>
             );
           })}
-        </div>
-      </div>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 };
