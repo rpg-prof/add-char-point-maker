@@ -209,6 +209,27 @@ const Index = () => {
     return raceCost + classCost + socialCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost;
   }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist]);
 
+  // Calculate total points gained from disadvantages (for display/limiting)
+  const disadvantagePoints = useMemo(() => {
+    const allItems = [...generalAdvantages, ...generalDisadvantages];
+    const generalDisadvCost = selectedAdvantages.reduce((sum, name) => {
+      const item = allItems.find((a) => a.name === name);
+      if (item?.type === "disadvantage") return sum + Math.abs(item.cost);
+      return sum;
+    }, 0);
+
+    const raceClassDisadvCost = selectedRaceClassAdv.reduce((sum, name) => {
+      const item = raceClassAdvantages.find((a) => a.name === name);
+      if (!item || item.type !== "disadvantage") return sum;
+      const matchesRace = item.applicableRaces?.includes(selectedRace);
+      const matchesClass = item.applicableClasses?.includes(selectedClass);
+      const cost = (matchesRace || matchesClass) ? item.cost : (item.costOthers ?? item.cost);
+      return sum + Math.abs(cost);
+    }, 0);
+
+    return generalDisadvCost + raceClassDisadvCost;
+  }, [selectedAdvantages, selectedRaceClassAdv, selectedRace, selectedClass]);
+
   const handleAttributeChange = (attr: AttributeName, value: number) => {
     const newVal = Math.max(3, Math.min(18, value));
     setAttributes((prev) => ({ ...prev, [attr]: newVal }));
