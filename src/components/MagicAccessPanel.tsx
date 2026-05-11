@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Sparkles, BookOpen, Star } from "lucide-react";
+import { Sparkles, BookOpen, Star, Trash2 } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
   divineSpheres,
