@@ -198,7 +198,11 @@ const Index = () => {
       return school ? sum + arcaneSchoolCost(school, selectedClass, selectedRace) : sum;
     }, 0);
     const specialistCost = arcaneSpecialist
-      ? (arcaneSchools.find((s) => s.name === arcaneSpecialist)?.specialization?.cost ?? 0)
+      ? (() => {
+          const sch = arcaneSchools.find((s) => s.name === arcaneSpecialist);
+          if (!sch) return 0;
+          return arcaneSchoolCost(sch, selectedClass, selectedRace) + (sch.specialization?.cost ?? 0);
+        })()
       : 0;
     const magicCost = divineCost + arcaneCost + specialistCost;
 

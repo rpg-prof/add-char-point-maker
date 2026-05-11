@@ -98,8 +98,9 @@ const MagicAccessPanel = ({
             const isAccess = !!arcaneAccess[school.name];
             const isSpec = arcaneSpecialist === school.name;
             const accessCost = arcaneSchoolCost(school, selectedClass, selectedRace);
-            const specCost = school.specialization?.cost;
-            const specDisabled = !isSpec && arcaneSpecialist !== null;
+            const canSpecialize = selectedClass === "Mago" || selectedClass === "Arcano";
+            const specTotalCost = school.specialization ? accessCost + school.specialization.cost : 0;
+            const specDisabled = !canSpecialize || (!isSpec && arcaneSpecialist !== null);
             const current: ArcaneAccessLevel = isSpec ? "specialist" : isAccess ? "access" : "none";
 
             return (
@@ -145,9 +146,15 @@ const MagicAccessPanel = ({
                   </button>
                   {school.specialization && (
                     <button
-                      onClick={() => onArcaneChange(school.name, "specialist")}
+                      onClick={() => !specDisabled && onArcaneChange(school.name, "specialist")}
                       disabled={specDisabled}
-                      title={specDisabled ? "Apenas uma especialização permitida" : undefined}
+                      title={
+                        !canSpecialize
+                          ? "Apenas Magos podem ser especialistas"
+                          : specDisabled
+                          ? "Apenas uma especialização permitida"
+                          : undefined
+                      }
                       className={`px-2 py-1 rounded text-xs font-display tracking-wider border transition-all ${
                         current === "specialist"
                           ? "bg-gold/30 border-gold text-gold"
@@ -156,7 +163,7 @@ const MagicAccessPanel = ({
                           : "border-border text-muted-foreground hover:border-gold/50 hover:text-foreground"
                       }`}
                     >
-                      Especialista ({specCost})
+                      Especialista ({specTotalCost})
                     </button>
                   )}
                 </div>
