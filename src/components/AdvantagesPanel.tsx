@@ -22,6 +22,7 @@ const AdvantagesPanel = ({
   onRaceClassToggle,
   selectedRace,
   selectedClass,
+  disadvantagePoints,
 }: AdvantagesPanelProps) => {
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
 
