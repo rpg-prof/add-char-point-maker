@@ -456,6 +456,7 @@ const Index = () => {
               onRaceClassToggle={handleRaceClassAdvToggle}
               selectedRace={selectedRace}
               selectedClass={selectedClass}
+              disadvantagePoints={disadvantagePoints}
             />
           </div>
         );
