@@ -51,6 +51,18 @@ const MagicAccessPanel = ({
 
         {/* Divine spheres */}
         <TabsContent value="divine" className="mt-3 space-y-1">
+          <div className="flex justify-end mb-2">
+            <button
+              onClick={() => {
+                Object.keys(divineAccess).forEach((sphere) => onDivineChange(sphere, "none"));
+              }}
+              disabled={Object.keys(divineAccess).length === 0}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-display tracking-wider border border-border text-muted-foreground hover:border-red-400/50 hover:text-red-300 transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+            >
+              <Trash2 className="w-3 h-3" />
+              Limpar
+            </button>
+          </div>
           {divineSpheres.map((sphere) => {
             const current = divineAccess[sphere.name] ?? "none";
             const minorCost = divineSphereCost(sphere, "minor", selectedClass);
