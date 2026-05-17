@@ -1,10 +1,10 @@
 {
     "name": "Sombra Rastejante de Lorloveim",
-    "level": 1,
+    "level": 3,
     "school": "Ilusão",
-    "castingTime": "2 Tempo de Execução: 7",
-    "duration": "2 rodadas/nível Duração: 1 Rodada/Nível",
-    "range": "20 metros Alcance: 0",
-    "area": "esfera de 20m raio Área de Efeito: A Sombra do Conjurador",
-    "description": "Resistência: Anula Este feitiço permite que um mago afete negativamente a Essa magia faz a sombra do conjurador se alongar, todos os Testes de Resistência de seus inimigos. esticando-se á uma velocidade 15 metros por rodada. Opositores sob a influência deste feitiço fazem todos os Podendo alongar-se em um máximo de distância de 10 Testes de Resistência com uma penalidade de -1. Como metros por nível do conjurador. A sombra se move alternativa, o mago pode selecionar um escola qualquer de normalmente, ao longo de quartos e paredes. O conjurador magia e obrigar que seus inimigos façam seus Testes de pode manobrar de qualquer maneira possível colocar a Resistência contra a magia dessa escola com redutor de -2. sombra onde ele deseja. Um conjurador poderia posicionar Esta penalidade não é cumulativa com uma penalidade de a sombra dele em cima de uma janela alta em uma torre Testes de Resistência derivada do fato do mago ser para espiar nos ocupantes da torre. A sombra não faz especialista; a pena não é aumentada para-3. nenhum som e é 90% indetectável menos iluminados. Enquanto a magia estiver ativa, o ilusionista vê, ouve, e"
+    "castingTime": "7",
+    "duration": "1 Rodada/Nível",
+    "range": "0",
+    "area": "A Sombra do Conjurador",
+    "description": "Essa magia faz a sombra do conjurador se alongar, esticando-se á uma velocidade 15 metros por rodada. Podendo alongar-se em um máximo de distância de 10 metros por nível do conjurador. A sombra se move normalmente, ao longo de quartos e paredes. O conjurador pode manobrar de qualquer maneira possível colocar a sombra onde ele deseja. Um conjurador poderia posicionar a sombra dele em cima de uma janela alta em uma torre para espiar nos ocupantes da torre. A sombra não faz nenhum som e é 90% indetectável menos iluminados. Enquanto a magia estiver ativa, o ilusionista vê, ouve, e fala pela sombra. A sombra não pode ser tocada fisicamente, agarrada, ou atacada por criaturas ou objetos. Só podendo ser ferida por magias, ou armas mágicas +1 ou melhores, ou outros ataques especiais (como sopro de dragão). A sombra possui a mesma AC do conjurador. Pontos de vida perdidos pela sombra serão nocivos ao conjurador. Para conjurar a magia, uma fonte luminosa de pelo menos o brilho de uma vela deve estar presente. O Componente material é uma estátua esculpida pelo conjurado com uma obsidiana que custe não menos que 1.000gps."
 }

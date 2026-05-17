@@ -1,0 +1,10 @@
+{
+    "name": "Localizar Criatura",
+    "level": 4,
+    "school": "Adivinhação",
+    "castingTime": "5",
+    "duration": "1 turno/nível",
+    "range": "50m/nível",
+    "area": "uma criatura",
+    "description": "Este feitiço é semelhante à mágica de 2º nível Localizar Objeto. Em vez de encontrar um objeto inanimado, no entanto, ele permite que o mago encontre uma criatura. O mago lança o feitiço, vira-se lentamente e é capaz de perceber a direção da pessoa ou criatura, desde que o sujeito esteja no alcance da magia. O mago descobre quão longe está a criatura e em que sentido ele está a avançar (se estiver se movendo). Este feitiço pode localizar uma espécie geral da criatura (um cavalo ou Umber Hulk, por exemplo) ou pode ser usado para encontrar um indivíduo específico. O mago deve ter visto fisicamente o indivíduo ou o tipo de criatura, pelo menos uma vez, há uma distância de não mais de 10m. Ao contrário de Localizar Objeto, esta mágica não é bloqueada pelo chumbo. É bloqueado, no entanto, pela água (como um rio ou fluxo). Objetos não podem ser encontrados através do uso deste feitiço. O componente material é um pouco da pelos de um cão de caça."
+}

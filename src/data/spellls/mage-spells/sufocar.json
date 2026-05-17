@@ -1,0 +1,10 @@
+{
+    "name": "Sufocar",
+    "level": 7,
+    "school": "Alteração/Necromancia",
+    "castingTime": "7",
+    "duration": "1 rodada/nível",
+    "range": "30 metros",
+    "area": "Esfera de 3,5m de raio",
+    "description": "Este feitiço interrompe a respiração de todas as criaturas dentro da área do efeito que falharem em um Teste de Resistência. Sua respiração é colocada dentro de um saco de seda pequeno de posse do mago. Cada rodada, a vítima deste feitiço deve tentar um teste da Constituição. Se falhar, a criatura sofre 2d4 pontos de dano. Se for bem- sucedido, o alvo tomou ar suficiente para reduzir os danos para 1d4. Enquanto lutam em busca de ar, as criaturas afetadas têm seus movimentos e ataques reduzidos à metade de suas taxas normais, uma pena de -4 no AC e nos de ataques e perdem todos os bônus de destreza em combate. Efeitos deste feitiço continuam a cada rodada independentemente se as vítimas permanecem ou não na área de efeito original. O dano se acumula até o fim da magia, até o saco de seda ser aberto ou um feitiço Dissipar Magia bem sucedido for lançado sobre o saco. As sanções para combater permanecem em vigor por 1d3 rodadas após o término do feitiço. O componente material é um pequeno saco de seda bordado com opalas pretas, valendo um total não inferior a 5.000gp. O saco não é destruído durante a conjuração, mas torna-se inútil para usos futuros se a magia for dissipada com êxito sobre ele. Magias de 8° Círculo"
+}

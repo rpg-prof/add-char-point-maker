@@ -1,0 +1,10 @@
+{
+    "name": "Corrente de Fogo",
+    "level": 3,
+    "school": "Alteração",
+    "castingTime": "3",
+    "duration": "1 rodada/nível",
+    "range": "30m",
+    "area": "uma fonte de fogo",
+    "description": "Este feitiço permite que um mago controle incêndios naturais, manipulando a aleatoriedade e ajustando probabilidades para que se espalhe e tome a forma em qualquer direção que o mago desejar. Uma vez expressos, o mago aponta para qualquer incêndio ao alcance da magia. Em seguida, ele pode fazer esse incêndio mover-se em qualquer direção desejada durante a duração da mágica, desde que as chamas estejam em contato com uma superfície sólida (o fogo não pode ser erguido no ar). O mago deve manter a concentração ou o magia falha. As chamas podem propagar-se à taxa de 15m² por turno. Assim, se um mago afeta uma fogueira, ele poderia criar uma linha flamejante de 1m de largura e 15m de comprimento ou preencher um quadrado 3x5m em uma única rodada. As chamas não são limitadas pela falta de material inflamável e podem ser direcionadas para espalhar sobre água, neve, gelo e outras superfícies não- inflamáveis. A superfície não é destruída, mas objetos e criaturas capturadas em chamas sofrem danos como se eles tivessem passado pela fonte original do fogo. Assim, um personagem capturado em chamas criadas a partir de uma vela sofrerá apenas pequenos danos, enquanto um personagem capturado em uma chama que foi originada a partir de um incêndio enorme será gravado severamente. Os componentes de materiais são um pincel pequeno e um pote de piche."
+}

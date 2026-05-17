@@ -1,10 +1,10 @@
 {
     "name": "Corcel Espectral de Bloodstone",
-    "level": 1,
+    "level": 6,
     "school": "Adivinhação",
-    "castingTime": "",
+    "castingTime": "1 rodada",
     "duration": "1 Hora/nível",
-    "range": "10 Metros de Umber Hulk.",
-    "area": "",
-    "description": ""
+    "range": "10 Metros",
+    "area": "Especial",
+    "description": "Essa magia permite ao mago criar um espectro, uma criatura de aparência parecida com um abutre. Um Corcel Voador que pode carregar o conjurador e outra pessoa a cada três níveis do mago (quatro no 12º nível, cinco no 15º nível, etc). Todos os personagens devem ter seus nomes especificados durante a conjuração. O corcel espectral se parece com um urubu enorme, de esqueleto com asas esfarrapadas. Quando voa, profere guinchos horrorosos que arremedam pelo céu. O corcel espectral voa a uma taxa de movimento de 4 por nível do Conjurador, com uma taxa de movimento de no máximo de 48. Se aparece um pouco com e brida, mais uma sela por passageiro. Ele aparece com um freio e com uma rédea, adicionando uma cela por passageiro. Todos os animais normais evitam o corcel espectral e só os monstros o atacam. A montaria possui AC 2 e 10 pontos de vida +1 por nível de conjurador. Quando perder todos os seus pontos de vida, o Corcel desaparecerá. Não possui nenhum modo de ataque. Os componentes são ossos ocos da asa de um abutre, que deve ser esculpido em forma de apito e assoprado quando a magia é conjurada."
 }

@@ -2,9 +2,9 @@
     "name": "Explosão de Fogo",
     "level": 1,
     "school": "Alteração/Evocação",
-    "castingTime": "1 particularmente popular com agiotas e generais.",
-    "duration": "Instantânea tamanho das unidades do exército e tesouro acumulado. É",
-    "range": "5 metros/nível com menos de 10 membros) é inútil. Estimativa de",
+    "castingTime": "1",
+    "duration": "Instantânea",
+    "range": "5 metros/nível",
     "area": "3 metros de raio",
-    "description": "Quando essa magia é conjurada sobre fogo não mágico (como uma fogueira, lanterna ou candelabro) causa um"
+    "description": "Quando essa magia é conjurada sobre fogo não mágico (como uma fogueira, lanterna ou candelabro) causa um flash de fogo que atira setas flamejantes. Todas as criaturas na área de três metros de raio sofrem 1 ponto de dano por nível do mago (máximo 10). Criaturas que passarem no teste de resistência à magia não sofrem dano."
 }

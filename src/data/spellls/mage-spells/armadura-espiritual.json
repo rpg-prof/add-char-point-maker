@@ -1,10 +1,10 @@
 {
     "name": "Armadura Espiritual",
-    "level": 1,
+    "level": 3,
     "school": "Necromancia",
-    "castingTime": "3 dragão). A sombra possui a mesma AC do conjurador.",
-    "duration": "2 rodadas /nível melhores, ou outros ataques especiais (como sopro de",
-    "range": "0 fisicamente, agarrada, ou atacada por criaturas ou objetos.",
-    "area": "o mago Pontos de vida perdidos pela sombra serão nocivos ao",
-    "description": "conjurador. Para conjurar a magia, uma fonte luminosa de pelo menos o brilho de uma vela deve estar presente. O Este feitiço permite ao mago cercar-se com uma porção de Componente material é uma estátua esculpida pelo sua própria essência de vida, que assume a forma de uma conjurado com uma obsidiana que custe não menos que aura trêmula. A Armadura Espiritual oferece proteção 1.000gps. equivalente a Cota de Talas (AC 4) e concede ao mago um bônus de +3 nos Testes de Resistência contra ataques"
+    "castingTime": "3",
+    "duration": "2 rodadas /nível",
+    "range": "0",
+    "area": "o mago",
+    "description": "Este feitiço permite ao mago cercar-se com uma porção de sua própria essência de vida, que assume a forma de uma aura trêmula. A Armadura Espiritual oferece proteção equivalente a Cota de Talas (AC 4) e concede ao mago um bônus de +3 nos Testes de Resistência contra ataques mágicos. Os efeitos da Armadura Espiritual não são cumulativos com outros tipos de armadura ou proteção mágica, mas os bônus de Destreza se aplicam. A Armadura Espiritual é eficaz contra ataques e armas mágicas e não mágicas. Não trancam a circulação ou adicionam peso ou estorvo. Ela não interfere na realização de mágicas. Quando a magia chega ao fim, a aura dissipa- se e o mago perde temporariamente um pouco de sua essência de vida, sofrendo 2d3 pontos de dano a menos que ele seja bem-sucedido em um Teste de Resistência contra magia. Nenhum dano é sofrido se o salvamento for bem-sucedido. Os pontos de vida perdidos podem ser recuperados apenas através de cura mágica. Enquadrar o Círculo (Alteração) Alcance: 0 Componentes: V, G, M Duração: 1 rodada/nível Tempo de Execução: 2 Área de Efeito: Especial Resistência: Nenhuma Enquadrar o Círculo permite a um mago alterar a forma da área do efeito de uma mágica de 1º ao 5º nível. O feitiço a ser afetado deve ser expresso no prazo de duração da magia Enquadrar o Círculo. Áreas de efeito quadradas ou cúbicas podem ser transformadas em áreas de efeito circulares ou esféricas. Áreas do efeito circulares ou esféricas, da mesma forma, podem ser transformadas em áreas de efeito quadradas ou cúbicas. Em ambos os casos, o comprimento de um lado de uma área quadrada é equiparado ao diâmetro de uma área circular ou esférica. Como alternativa, uma área quadrada ou cúbica pode ser transformada em um retângulo. O retângulo não pode cobrir a área em metros quadrados mais ou menos que a área quadrada padrão da magia. Da mesma forma, uma área circular ou esférica pode ser transformada em uma forma oval ou ovo. A área coberta pela forma oval ou ovo não pode cobrir a área em metros quadrados mais ou menos que a área original da magia. O componente material é um pequeno pingente de qualquer metal precioso com um círculo trabalhado dentro de um quadrado."
 }

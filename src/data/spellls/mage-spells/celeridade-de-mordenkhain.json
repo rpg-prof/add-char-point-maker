@@ -1,10 +1,10 @@
 {
     "name": "Celeridade de Mordenkhain",
-    "level": 1,
+    "level": 4,
     "school": "Alteração/Invocação",
-    "castingTime": "4 da criatura escapar. Se os dados de vida do Licantropo",
-    "duration": "1 turno nível mais elevado, a diferença é subtraída da chance base",
-    "range": "0 modificada pela diferença entre os seus dados de vida e o",
-    "area": "Especial forem maior que nível do mago, serão acrescidos números",
-    "description": "em sua chance de escapar. Qualquer avaria no círculo acaba com o poder da magia e permite que licantropo Celeridade de Mordenkainen afeta magias dos níveis 1º-3º, preso escape. Mesmo uma palha que caia na linha do que alteram a movimentação do mago, como Queda círculo pode acabar com seu poder. Felizmente, a criatura Suave, Salto, Patas de Aranha, Levitação, Voar e não pode fazer nada perante o círculo de proteção, a magia Velocidade. Magias a serem afetadas devem ser expressas o proíbe e previne contra isso. Os componentes materiais no prazo de 1 rodada da execução de Celeridade. As são uma gota de sangue de qualquer animal, cabelo magias não expiram quando expira Celeridade. Magias humano, e uma Pedra da Lua no valor mínimo de 150gps. expressas na seqüência de Celeridade recebem um bônus Fora os componentes descritos acima para a criação do de 25% de duração. Este efeito não pode ser adquirido em círculo, caso o mago faça um. conjunto com outros meios de magicamente prolongar a duração de um feitiço. Além disso, taxa de movimento do mago é aumentada em 25%. Queda Suave é uma exceção;"
+    "castingTime": "4",
+    "duration": "1 turno",
+    "range": "0",
+    "area": "Especial",
+    "description": "Celeridade de Mordenkainen afeta magias dos níveis 1º-3º, que alteram a movimentação do mago, como Queda Suave, Salto, Patas de Aranha, Levitação, Voar e Velocidade. Magias a serem afetadas devem ser expressas no prazo de 1 rodada da execução de Celeridade. As magias não expiram quando expira Celeridade. Magias expressas na seqüência de Celeridade recebem um bônus de 25% de duração. Este efeito não pode ser adquirido em conjunto com outros meios de magicamente prolongar a duração de um feitiço. Além disso, taxa de movimento do mago é aumentada em 25%. Queda Suave é uma exceção; a taxa de descida pode ser reduzida em 25% por opção do mago. A área de efeito é sempre o mago, exceto no caso da magia Velocidade, para os quais os efeitos de Celeridade irão operar em 1d4 criaturas além do mago. O Celeridade não afetará as outras criaturas de qualquer outra forma. O Celeridade dá ao mago um bônus em seus Testes de Resistência contra magias dos níveis 1º-3º que afetam diretamente o seu movimento. Isso inclui Teia, Imobilizar Pessoa e Lentidão. O mago também ganha um bônus em todos os Testes de Resistência contra ataques de paralisia mágica. O componente material é um pequeno pote ou vasilha contendo pernas de Centopéia."
 }
