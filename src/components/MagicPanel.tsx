@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Sparkles, BookOpen, Plus, Check, Book } from "lucide-react";
 import { spellLists, type Spell } from "@/data/spells";
+import { spellMatchesArcane, spellMatchesDivine } from "@/data/magicAccess";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 interface MagicPanelProps {
-  selectedClass: string;
   grimoire: string[];
   onGrimoireToggle: (spellName: string) => void;
+  divineAccess: Record<string, "minor" | "major">;
+  arcaneAccess: Record<string, "access">;
+  arcaneSpecialist: string | null;
 }
 
 const SpellItem = ({
@@ -25,7 +28,7 @@ const SpellItem = ({
       <div className="flex items-center gap-1">
         <button
           onClick={onToggle}
-          title={inGrimoire ? "Remover do grimório" : "Adicionar ao grimório"}
+          title={inGrimoire ? "Remover da coleção" : "Adicionar à coleção"}
           className={`w-6 h-6 flex items-center justify-center rounded border transition-all flex-shrink-0 ${
             inGrimoire
               ? "bg-gold/20 border-gold text-gold hover:bg-destructive/20 hover:border-destructive hover:text-destructive"
@@ -59,6 +62,7 @@ const SpellItem = ({
             {spell.castingTime && <span><span className="text-foreground font-semibold">Tempo:</span> {spell.castingTime}</span>}
             {spell.components && <span><span className="text-foreground font-semibold">Componentes:</span> {spell.components}</span>}
             {spell.area && <span><span className="text-foreground font-semibold">Área:</span> {spell.area}</span>}
+            {spell.sphere && <span><span className="text-foreground font-semibold">Esfera:</span> {spell.sphere}</span>}
           </div>
           <p className="pt-1 border-t border-border/50">{spell.description}</p>
         </div>
@@ -67,13 +71,39 @@ const SpellItem = ({
   );
 };
 
-const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelProps) => {
+const MagicPanel = ({
+  grimoire,
+  onGrimoireToggle,
+  divineAccess,
+  arcaneAccess,
+  arcaneSpecialist,
+}: MagicPanelProps) => {
   const [openLevels, setOpenLevels] = useState<Record<string, boolean>>({});
   const [showGrimoireOnly, setShowGrimoireOnly] = useState(false);
 
-  const relevantLists = spellLists.filter((list) =>
-    list.classes.includes(selectedClass)
-  );
+  const accessibleDivineSpheres = Object.keys(divineAccess);
+  const accessibleArcaneSchools = Object.keys(arcaneAccess);
+  const hasDivine = accessibleDivineSpheres.length > 0;
+  const hasArcane = accessibleArcaneSchools.length > 0 || !!arcaneSpecialist;
+  const divine = hasDivine && !hasArcane;
+  const collectionName = divine ? "Livro de Orações" : "Grimório";
+
+  // Build filtered lists based on access
+  const filterSpells = (list: typeof spellLists[number]): Spell[] => {
+    if (list.type === "arcane") {
+      if (!hasArcane) return [];
+      return list.spells.filter((s) =>
+        spellMatchesArcane(s.school, accessibleArcaneSchools, arcaneSpecialist)
+      );
+    } else {
+      if (!hasDivine) return [];
+      return list.spells.filter((s) => spellMatchesDivine(s.sphere, accessibleDivineSpheres));
+    }
+  };
+
+  const relevantLists = spellLists
+    .map((list) => ({ ...list, spells: filterSpells(list) }))
+    .filter((list) => list.spells.length > 0);
 
   const toggleLevel = (key: string) => {
     setOpenLevels((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -83,7 +113,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
     return (
       <div className="text-center py-8 text-muted-foreground font-body">
         <BookOpen className="w-12 h-12 mx-auto mb-3 opacity-30" />
-        <p>A classe <span className="text-foreground font-semibold">{selectedClass}</span> não possui magias.</p>
+        <p>O personagem não tem acesso a nenhuma escola ou esfera de magia.</p>
       </div>
     );
   }
@@ -95,7 +125,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
         <div className="flex items-center gap-2">
           <Book className="w-4 h-4 text-gold" />
           <span className="font-display text-xs tracking-wider uppercase text-gold">
-            Grimório
+            {collectionName}
           </span>
           <span className="text-xs text-muted-foreground font-body">
             {grimoire.length} {grimoire.length === 1 ? "magia" : "magias"} selecionada{grimoire.length !== 1 ? "s" : ""}
@@ -109,7 +139,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
               : "border-border text-muted-foreground hover:border-gold hover:text-gold"
           }`}
         >
-          {showGrimoireOnly ? "Mostrar todas" : "Só grimório"}
+          {showGrimoireOnly ? "Mostrar todas" : `Só ${divine ? "orações" : "grimório"}`}
         </button>
       </div>
 
@@ -123,7 +153,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
         if (showGrimoireOnly && filteredSpells.length === 0) {
           return (
             <div key={list.type} className="text-center py-4 text-muted-foreground text-sm font-body">
-              Nenhuma magia adicionada ao grimório ainda.
+              Nenhuma magia adicionada ainda.
             </div>
           );
         }
@@ -160,7 +190,7 @@ const MagicPanel = ({ selectedClass, grimoire, onGrimoireToggle }: MagicPanelPro
                       </span>
                       <span className="text-xs text-muted-foreground font-body">
                         {grimoireCount > 0 && (
-                          <span className="text-gold mr-1">{grimoireCount} no grimório •</span>
+                          <span className="text-gold mr-1">{grimoireCount} selecionada{grimoireCount !== 1 ? "s" : ""} •</span>
                         )}
                         {levelSpells.length} magias
                       </span>

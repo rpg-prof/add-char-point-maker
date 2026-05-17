@@ -1,4 +1,4 @@
-import { Check, ChevronDown, ChevronRight } from "lucide-react";
+import { Check, ChevronDown, ChevronRight, AlertTriangle } from "lucide-react";
 import { useState } from "react";
 import { generalAdvantages, generalDisadvantages, type AdvantageOption } from "@/data/characterData";
 import { raceClassAdvantages, categoryLabels, type RaceClassAdvantage } from "@/data/raceClassAdvantages";
@@ -12,6 +12,7 @@ interface AdvantagesPanelProps {
   onRaceClassToggle: (name: string, cost: number) => void;
   selectedRace: string;
   selectedClass: string;
+  disadvantagePoints: number;
 }
 
 const AdvantagesPanel = ({
@@ -21,6 +22,7 @@ const AdvantagesPanel = ({
   onRaceClassToggle,
   selectedRace,
   selectedClass,
+  disadvantagePoints,
 }: AdvantagesPanelProps) => {
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
 
@@ -171,6 +173,19 @@ const AdvantagesPanel = ({
   return (
     <TooltipProvider delayDuration={200}>
     <div className="space-y-4">
+      {/* Disadvantage Points Counter */}
+      <div className="flex items-center justify-between p-3 rounded-lg bg-blood/10 border border-blood/30">
+        <div className="flex items-center gap-2">
+          <AlertTriangle className="w-5 h-5 text-blood" />
+          <span className="font-display text-sm tracking-wider text-foreground">
+            Pontos de Desvantagem
+          </span>
+        </div>
+        <span className="font-display text-lg text-blood font-bold">
+          {disadvantagePoints}
+        </span>
+      </div>
+
       {/* General Advantages */}
       <div>
         <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-2">

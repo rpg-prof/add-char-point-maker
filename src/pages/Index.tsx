@@ -1,5 +1,13 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2 } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
@@ -8,7 +16,8 @@ import AdvantagesPanel from "@/components/AdvantagesPanel";
 import SkillsPanel from "@/components/SkillsPanel";
 import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import MagicPanel from "@/components/MagicPanel";
-import { spellcastingClasses } from "@/data/spells";
+import MagicAccessPanel, { type DivineAccessLevel, type ArcaneAccessLevel } from "@/components/MagicAccessPanel";
+import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
   attributeCosts,
   attributeNames,
@@ -36,7 +45,8 @@ const BASE_STEPS = [
   { label: "Armas", icon: Crosshair, desc: "Proficiências com armas e escudos" },
 ];
 
-const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório de magias" };
+const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
+const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
 
 const Index = () => {
@@ -69,13 +79,23 @@ const Index = () => {
   const [selectedRace, setSelectedRace] = useState("Humano");
   const [selectedClass, setSelectedClass] = useState("Sem Classe");
 
-  const hasMagic = spellcastingClasses.includes(selectedClass);
+  // Magic access
+  const [divineAccess, setDivineAccess] = useState<Record<string, "minor" | "major">>({});
+  const [arcaneAccess, setArcaneAccess] = useState<Record<string, "access">>({});
+  const [arcaneSpecialist, setArcaneSpecialist] = useState<string | null>(null);
+
+  const hasMagicAccess =
+    Object.keys(divineAccess).length > 0 ||
+    Object.keys(arcaneAccess).length > 0 ||
+    arcaneSpecialist !== null;
+
   const STEPS = useMemo(() => {
-    const steps = [...BASE_STEPS];
-    if (hasMagic) steps.push(MAGIC_STEP);
+    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP];
+    if (hasMagicAccess) steps.push(MAGIC_STEP);
     steps.push(SUMMARY_STEP);
     return steps;
-  }, [hasMagic]);
+  }, [hasMagicAccess]);
+
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
   const [selectedAdvantages, setSelectedAdvantages] = useState<string[]>([]);
   const [selectedRaceClassAdv, setSelectedRaceClassAdv] = useState<string[]>([]);
@@ -84,6 +104,40 @@ const Index = () => {
   const [selectedWeaponGroups, setSelectedWeaponGroups] = useState<string[]>([]);
   const [selectedShields, setSelectedShields] = useState<string[]>([]);
   const [grimoire, setGrimoire] = useState<string[]>([]);
+
+  // Progression system
+  interface ProgressionEntry {
+    level: number;
+    points: number;
+    timestamp: string;
+  }
+  const [progressionHistory, setProgressionHistory] = useState<ProgressionEntry[]>([]);
+  const [showEvolveDialog, setShowEvolveDialog] = useState(false);
+  const [evolveLevel, setEvolveLevel] = useState(2);
+
+  const totalProgressionPoints = useMemo(
+    () => progressionHistory.reduce((sum, e) => sum + e.points, 0),
+    [progressionHistory]
+  );
+
+  const handleEvolve = useCallback(() => {
+    const points = evolveLevel * 10;
+    setProgressionHistory((prev) => [
+      ...prev,
+      { level: evolveLevel, points, timestamp: new Date().toISOString() },
+    ]);
+    setShowEvolveDialog(false);
+    setEvolveLevel((prev) => prev + 1);
+  }, [evolveLevel]);
+
+  const handleUndoEvolve = useCallback(() => {
+    setProgressionHistory((prev) => {
+      if (prev.length === 0) return prev;
+      const newHistory = prev.slice(0, -1);
+      return newHistory;
+    });
+    setEvolveLevel((prev) => Math.max(2, prev - 1));
+  }, []);
 
   // Calculate attribute points spent
   const attributePointsSpent = useMemo(
@@ -134,8 +188,47 @@ const Index = () => {
       return sum + (shield?.cost ?? 0);
     }, 0);
 
-    return raceCost + classCost + socialCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost;
-  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields]);
+    // Magic access cost
+    const divineCost = Object.entries(divineAccess).reduce((sum, [name, level]) => {
+      const sphere = divineSpheres.find((s) => s.name === name);
+      return sphere ? sum + divineSphereCost(sphere, level, selectedClass) : sum;
+    }, 0);
+    const arcaneCost = Object.keys(arcaneAccess).reduce((sum, name) => {
+      const school = arcaneSchools.find((s) => s.name === name);
+      return school ? sum + arcaneSchoolCost(school, selectedClass, selectedRace) : sum;
+    }, 0);
+    const specialistCost = arcaneSpecialist
+      ? (() => {
+          const sch = arcaneSchools.find((s) => s.name === arcaneSpecialist);
+          if (!sch) return 0;
+          return arcaneSchoolCost(sch, selectedClass, selectedRace) + (sch.specialization?.cost ?? 0);
+        })()
+      : 0;
+    const magicCost = divineCost + arcaneCost + specialistCost;
+
+    return raceCost + classCost + socialCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost;
+  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist]);
+
+  // Calculate total points gained from disadvantages (for display/limiting)
+  const disadvantagePoints = useMemo(() => {
+    const allItems = [...generalAdvantages, ...generalDisadvantages];
+    const generalDisadvCost = selectedAdvantages.reduce((sum, name) => {
+      const item = allItems.find((a) => a.name === name);
+      if (item?.type === "disadvantage") return sum + Math.abs(item.cost);
+      return sum;
+    }, 0);
+
+    const raceClassDisadvCost = selectedRaceClassAdv.reduce((sum, name) => {
+      const item = raceClassAdvantages.find((a) => a.name === name);
+      if (!item || item.type !== "disadvantage") return sum;
+      const matchesRace = item.applicableRaces?.includes(selectedRace);
+      const matchesClass = item.applicableClasses?.includes(selectedClass);
+      const cost = (matchesRace || matchesClass) ? item.cost : (item.costOthers ?? item.cost);
+      return sum + Math.abs(cost);
+    }, 0);
+
+    return generalDisadvCost + raceClassDisadvCost;
+  }, [selectedAdvantages, selectedRaceClassAdv, selectedRace, selectedClass]);
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
     const newVal = Math.max(3, Math.min(18, value));
@@ -188,6 +281,36 @@ const Index = () => {
     );
   };
 
+  const handleDivineAccessChange = (sphere: string, level: DivineAccessLevel) => {
+    setDivineAccess((prev) => {
+      const next = { ...prev };
+      if (level === "none") delete next[sphere];
+      else next[sphere] = level;
+      return next;
+    });
+  };
+
+  const handleArcaneAccessChange = (school: string, level: ArcaneAccessLevel) => {
+    if (level === "specialist") {
+      setArcaneSpecialist(school);
+      setArcaneAccess((prev) => {
+        const next = { ...prev };
+        delete next[school];
+        return next;
+      });
+    } else if (level === "access") {
+      if (arcaneSpecialist === school) setArcaneSpecialist(null);
+      setArcaneAccess((prev) => ({ ...prev, [school]: "access" }));
+    } else {
+      if (arcaneSpecialist === school) setArcaneSpecialist(null);
+      setArcaneAccess((prev) => {
+        const next = { ...prev };
+        delete next[school];
+        return next;
+      });
+    }
+  };
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSave = useCallback(() => {
@@ -196,6 +319,8 @@ const Index = () => {
       selectedRace, selectedClass, selectedSocialClass,
       selectedAdvantages, selectedRaceClassAdv, selectedSkills,
       selectedWeapons, selectedWeaponGroups, selectedShields, grimoire,
+      divineAccess, arcaneAccess, arcaneSpecialist,
+      progressionHistory,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -204,7 +329,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire]);
+  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -227,6 +352,16 @@ const Index = () => {
         if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
         if (data.selectedShields) setSelectedShields(data.selectedShields);
         if (data.grimoire) setGrimoire(data.grimoire);
+        if (data.divineAccess) setDivineAccess(data.divineAccess);
+        else setDivineAccess({});
+        if (data.arcaneAccess) setArcaneAccess(data.arcaneAccess);
+        else setArcaneAccess({});
+        setArcaneSpecialist(data.arcaneSpecialist ?? null);
+        if (data.progressionHistory) {
+          setProgressionHistory(data.progressionHistory);
+          const maxLevel = data.progressionHistory.reduce((max: number, e: ProgressionEntry) => Math.max(max, e.level), 1);
+          setEvolveLevel(maxLevel + 1);
+        }
         setCurrentStep(0);
       } catch {
         alert("Arquivo JSON inválido.");
@@ -321,6 +456,7 @@ const Index = () => {
               onRaceClassToggle={handleRaceClassAdvToggle}
               selectedRace={selectedRace}
               selectedClass={selectedClass}
+              disadvantagePoints={disadvantagePoints}
             />
           </div>
         );
@@ -353,13 +489,33 @@ const Index = () => {
             />
           </div>
         );
+      case "Acesso a Magias":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <MagicAccessPanel
+              selectedClass={selectedClass}
+              selectedRace={selectedRace}
+              divineAccess={divineAccess}
+              arcaneAccess={arcaneAccess}
+              arcaneSpecialist={arcaneSpecialist}
+              onDivineChange={handleDivineAccessChange}
+              onArcaneChange={handleArcaneAccessChange}
+            />
+          </div>
+        );
       case "Magia":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
             <p className="font-body text-muted-foreground text-sm">
-              Selecione as magias para o grimório de <span className="text-foreground font-semibold">{selectedClass}</span>.
+              Selecione as magias do personagem dentro das esferas e escolas acessíveis.
             </p>
-            <MagicPanel selectedClass={selectedClass} grimoire={grimoire} onGrimoireToggle={handleGrimoireToggle} />
+            <MagicPanel
+              grimoire={grimoire}
+              onGrimoireToggle={handleGrimoireToggle}
+              divineAccess={divineAccess}
+              arcaneAccess={arcaneAccess}
+              arcaneSpecialist={arcaneSpecialist}
+            />
           </div>
         );
       case "Resumo":
@@ -424,6 +580,24 @@ const Index = () => {
                 <Save className="w-4 h-4 mr-1" />
                 Salvar
               </Button>
+              <Button
+                size="sm"
+                onClick={() => setShowEvolveDialog(true)}
+                className="bg-accent text-accent-foreground hover:bg-accent/80 font-display text-xs tracking-wider"
+              >
+                <TrendingUp className="w-4 h-4 mr-1" />
+                Evoluir
+              </Button>
+              {progressionHistory.length > 0 && (
+                <Button
+                  size="sm"
+                  onClick={handleUndoEvolve}
+                  className="bg-blood/80 text-parchment hover:bg-blood font-display text-xs tracking-wider"
+                  title="Desfazer última evolução"
+                >
+                  <Undo2 className="w-4 h-4" />
+                </Button>
+              )}
             </div>
           </div>
         </div>
@@ -431,7 +605,7 @@ const Index = () => {
 
       <main className="container max-w-6xl mx-auto px-4 py-6 space-y-6">
         {/* Point Trackers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg bg-card/80 border border-border shadow-sm">
+        <div className={`grid grid-cols-1 ${totalProgressionPoints > 0 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-4 p-4 rounded-lg bg-card/80 border border-border shadow-sm`}>
           <PointTracker
             label="Pontos de Atributos"
             spent={attributePointsSpent}
@@ -439,10 +613,83 @@ const Index = () => {
           />
           <PointTracker
             label="Pontos de Personagem"
-            spent={characterPointsSpent}
+            spent={Math.min(characterPointsSpent, CHARACTER_POINTS)}
             total={CHARACTER_POINTS}
           />
+          {totalProgressionPoints > 0 && (
+            <PointTracker
+              label="Pontos de Progressão"
+              spent={Math.max(0, characterPointsSpent - CHARACTER_POINTS)}
+              total={totalProgressionPoints}
+            />
+          )}
         </div>
+
+        {/* Evolve Dialog */}
+        <Dialog open={showEvolveDialog} onOpenChange={setShowEvolveDialog}>
+          <DialogContent className="dark-panel border-gold/40 sm:max-w-md">
+            <DialogHeader>
+              <DialogTitle className="font-display text-gold tracking-wider">
+                <TrendingUp className="w-5 h-5 inline mr-2" />
+                Evoluir Personagem
+              </DialogTitle>
+              <DialogDescription className="text-parchment/60">
+                Ao atingir um novo nível, o personagem recebe Nível × 10 pontos de progressão.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="space-y-4 py-2">
+              <div>
+                <label className="font-display text-xs tracking-wider uppercase text-parchment/70 mb-1 block">
+                  Nível Alcançado
+                </label>
+                <input
+                  type="number"
+                  min={2}
+                  max={20}
+                  value={evolveLevel}
+                  onChange={(e) => setEvolveLevel(Math.max(2, Math.min(20, parseInt(e.target.value) || 2)))}
+                  className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body focus:outline-none focus:ring-1 focus:ring-gold"
+                />
+              </div>
+              <div className="rounded-lg border border-gold/30 bg-gold/5 p-3 text-sm">
+                <p className="text-muted-foreground">
+                  Pontos a receber: <span className="text-gold font-bold text-lg">{evolveLevel * 10}</span>
+                </p>
+                {progressionHistory.length > 0 && (
+                  <p className="text-muted-foreground mt-1">
+                    Total acumulado: <span className="font-bold">{totalProgressionPoints}</span> → <span className="font-bold text-gold">{totalProgressionPoints + evolveLevel * 10}</span>
+                  </p>
+                )}
+              </div>
+              {progressionHistory.length > 0 && (
+                <div className="text-xs text-muted-foreground">
+                  <p className="font-display tracking-wider uppercase mb-1">Histórico:</p>
+                  {progressionHistory.map((entry, i) => (
+                    <span key={i} className="inline-block mr-2 px-1.5 py-0.5 rounded bg-gold/10 border border-gold/20 text-gold-dark">
+                      Nv.{entry.level} (+{entry.points})
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+            <DialogFooter>
+              <Button
+                variant="outline"
+                onClick={() => setShowEvolveDialog(false)}
+                className="font-display text-xs tracking-wider"
+              >
+                Cancelar
+              </Button>
+              <Button
+                onClick={handleEvolve}
+                className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
+              >
+                <TrendingUp className="w-4 h-4 mr-1" />
+                Evoluir para Nível {evolveLevel}
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
 
         {/* Wizard Stepper */}
         <div className="rounded-lg bg-card/80 border border-border shadow-sm overflow-hidden">
