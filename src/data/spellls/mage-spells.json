@@ -580,8 +580,8 @@
                 "school": "Encantamento/Feitiço"
             },
             {
-                "name": "Os componentes materiais para esta magia são um fio da teia de aranha e um fragmento de pano de algodão com aproximadamente uma polegada quadrada Obstrução",
-                "file": "magias-arcanas/os-componentes-materiais-para-esta-magia-sao-um-fio-da-teia-de-aranha-e-um-fragmento-de-pano-de-algodao-com-aproximadamente-uma-polegada-quadrada-obstrucao.json",
+                "name": "Obstrução",
+                "file": "magias-arcanas/obstrucao.json",
                 "level": 2,
                 "school": "Necromancia; Conjuração/Convocação"
             },
@@ -765,7 +765,7 @@
                 "name": "Clava de Ossos",
                 "file": "magias-arcanas/clava-de-ossos.json",
                 "level": 3,
-                "school": "Encantamento,**\n\n**Necromancia"
+                "school": "Encantamento, Necromancia"
             },
             {
                 "name": "Compreender Idiomas",
@@ -1223,7 +1223,7 @@
                 "name": "Halo de Olhos",
                 "file": "magias-arcanas/halo-de-olhos.json",
                 "level": 4,
-                "school": "Abjuração/**\n\n**Conjuração"
+                "school": "Abjuração/ Conjuração"
             },
             {
                 "name": "Há/ Não Há",
@@ -1386,6 +1386,12 @@
                 "file": "magias-arcanas/sopro-do-vento.json",
                 "level": 4,
                 "school": "Evocação"
+            },
+            {
+                "name": "Tela de Dissipação de Otiluke",
+                "file": "magias-arcanas/tela-de-dissipacao-de-otiluke.json",
+                "level": 4,
+                "school": "Evocação/Abjuração"
             },
             {
                 "name": "Tempestade Glacial",
@@ -2494,8 +2500,8 @@
                 "school": "Evocação"
             },
             {
-                "name": "Obstrução",
-                "file": "magias-arcanas/obstrucao.json",
+                "name": "Obstrução Extraplanar",
+                "file": "magias-arcanas/obstrucao-extraplanar.json",
                 "level": 8,
                 "school": "Encantamento, Evocação"
             },
@@ -2761,7 +2767,7 @@
                 "name": "Halo de Olhos",
                 "file": "magias-arcanas/halo-de-olhos.json",
                 "level": 4,
-                "school": "Abjuração/**\n\n**Conjuração"
+                "school": "Abjuração/ Conjuração"
             },
             {
                 "name": "Invulnerabilidade a Armas Mágicas",
@@ -2888,6 +2894,12 @@
                 "file": "magias-arcanas/santuario-particular-de-mordenkainen.json",
                 "level": 5,
                 "school": "Abjuração/ Alteração"
+            },
+            {
+                "name": "Tela de Dissipação de Otiluke",
+                "file": "magias-arcanas/tela-de-dissipacao-de-otiluke.json",
+                "level": 4,
+                "school": "Evocação/Abjuração"
             },
             {
                 "name": "Truque",
@@ -3973,7 +3985,7 @@
                 "name": "Halo de Olhos",
                 "file": "magias-arcanas/halo-de-olhos.json",
                 "level": 4,
-                "school": "Abjuração/**\n\n**Conjuração"
+                "school": "Abjuração/ Conjuração"
             },
             {
                 "name": "Intensificar Convocação",
@@ -4024,8 +4036,8 @@
                 "school": "Conjuração/Convocação"
             },
             {
-                "name": "Os componentes materiais para esta magia são um fio da teia de aranha e um fragmento de pano de algodão com aproximadamente uma polegada quadrada Obstrução",
-                "file": "magias-arcanas/os-componentes-materiais-para-esta-magia-sao-um-fio-da-teia-de-aranha-e-um-fragmento-de-pano-de-algodao-com-aproximadamente-uma-polegada-quadrada-obstrucao.json",
+                "name": "Obstrução",
+                "file": "magias-arcanas/obstrucao.json",
                 "level": 2,
                 "school": "Necromancia; Conjuração/Convocação"
             },
@@ -4197,7 +4209,7 @@
                 "name": "Clava de Ossos",
                 "file": "magias-arcanas/clava-de-ossos.json",
                 "level": 3,
-                "school": "Encantamento,**\n\n**Necromancia"
+                "school": "Encantamento, Necromancia"
             },
             {
                 "name": "Comando Visual",
@@ -4362,8 +4374,8 @@
                 "school": "Encantamento/Feitiço"
             },
             {
-                "name": "Obstrução",
-                "file": "magias-arcanas/obstrucao.json",
+                "name": "Obstrução Extraplanar",
+                "file": "magias-arcanas/obstrucao-extraplanar.json",
                 "level": 8,
                 "school": "Encantamento, Evocação"
             },
@@ -5170,8 +5182,8 @@
                 "school": "Evocação"
             },
             {
-                "name": "Obstrução",
-                "file": "magias-arcanas/obstrucao.json",
+                "name": "Obstrução Extraplanar",
+                "file": "magias-arcanas/obstrucao-extraplanar.json",
                 "level": 8,
                 "school": "Encantamento, Evocação"
             },
@@ -5236,6 +5248,12 @@
                 "school": "Evocação"
             },
             {
+                "name": "Tela de Dissipação de Otiluke",
+                "file": "magias-arcanas/tela-de-dissipacao-de-otiluke.json",
+                "level": 4,
+                "school": "Evocação/Abjuração"
+            },
+            {
                 "name": "Tempestade Glacial",
                 "file": "magias-arcanas/tempestade-glacial.json",
                 "level": 4,
@@ -5289,7 +5307,7 @@
                 "name": "Clava de Ossos",
                 "file": "magias-arcanas/clava-de-ossos.json",
                 "level": 3,
-                "school": "Encantamento,**\n\n**Necromancia"
+                "school": "Encantamento, Necromancia"
             },
             {
                 "name": "Clone",
@@ -5418,16 +5436,16 @@
                 "school": "Necromancia"
             },
             {
+                "name": "Obstrução",
+                "file": "magias-arcanas/obstrucao.json",
+                "level": 2,
+                "school": "Necromancia; Conjuração/Convocação"
+            },
+            {
                 "name": "Olhos do Morto",
                 "file": "magias-arcanas/olhos-do-morto.json",
                 "level": 6,
                 "school": "Necromancia"
-            },
-            {
-                "name": "Os componentes materiais para esta magia são um fio da teia de aranha e um fragmento de pano de algodão com aproximadamente uma polegada quadrada Obstrução",
-                "file": "magias-arcanas/os-componentes-materiais-para-esta-magia-sao-um-fio-da-teia-de-aranha-e-um-fragmento-de-pano-de-algodao-com-aproximadamente-uma-polegada-quadrada-obstrucao.json",
-                "level": 2,
-                "school": "Necromancia; Conjuração/Convocação"
             },
             {
                 "name": "Ossos Vibrantes",
