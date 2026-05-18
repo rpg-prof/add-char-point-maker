@@ -86,11 +86,25 @@
                 "sphere": "Adivinhação"
             },
             {
+                "name": "Dissipar Fadiga",
+                "file": "cleric-spells/dissipar-fadiga.json",
+                "level": 1,
+                "school": "Necromancia",
+                "sphere": "Necromancia"
+            },
+            {
                 "name": "Fogo das Fadas",
                 "file": "cleric-spells/fogo-das-fadas.json",
                 "level": 1,
                 "school": "Alteração",
                 "sphere": "Clima"
+            },
+            {
+                "name": "Forte como uma Rocha",
+                "file": "cleric-spells/forte-como-uma-rocha.json",
+                "level": 1,
+                "school": "Invocação/Evocação",
+                "sphere": "Elemental Terra"
             },
             {
                 "name": "Inviabilidade contra Animais",
@@ -119,6 +133,13 @@
                 "level": 1,
                 "school": "Alteração",
                 "sphere": "Solar"
+            },
+            {
+                "name": "Oração",
+                "file": "cleric-spells/oracao.json",
+                "level": 1,
+                "school": "Várias escolas",
+                "sphere": "Todas"
             },
             {
                 "name": "Passos sem Pegadas",
@@ -511,7 +532,7 @@
             },
             {
                 "name": "Oração",
-                "file": "cleric-spells/oracao.json",
+                "file": "cleric-spells/oracao-3.json",
                 "level": 3,
                 "school": "Conjuração/Convocação",
                 "sphere": "Combate"
@@ -1616,7 +1637,7 @@
             },
             {
                 "name": "Oração",
-                "file": "cleric-spells/oracao.json",
+                "file": "cleric-spells/oracao-3.json",
                 "level": 3,
                 "school": "Conjuração/Convocação",
                 "sphere": "Combate"
@@ -1945,6 +1966,13 @@
                 "sphere": "Elemental (Fogo)"
             },
             {
+                "name": "Forte como uma Rocha",
+                "file": "cleric-spells/forte-como-uma-rocha.json",
+                "level": 1,
+                "school": "Invocação/Evocação",
+                "sphere": "Elemental Terra"
+            },
+            {
                 "name": "Lâmina Flamejante",
                 "file": "cleric-spells/lamina-flamejante.json",
                 "level": 2,
@@ -2201,6 +2229,13 @@
                 "level": 3,
                 "school": "Abjuração",
                 "sphere": "Necromântica"
+            },
+            {
+                "name": "Dissipar Fadiga",
+                "file": "cleric-spells/dissipar-fadiga.json",
+                "level": 1,
+                "school": "Necromancia",
+                "sphere": "Necromancia"
             },
             {
                 "name": "Inviabilidade contra Mortos-Vivos",
@@ -2465,6 +2500,13 @@
                 "file": "cleric-spells/detectar-maldade.json",
                 "level": 1,
                 "school": "Adivinhação",
+                "sphere": "Todas"
+            },
+            {
+                "name": "Oração",
+                "file": "cleric-spells/oracao.json",
+                "level": 1,
+                "school": "Várias escolas",
                 "sphere": "Todas"
             },
             {

@@ -1,11 +1,11 @@
 {
     "name": "Oração",
-    "level": 3,
-    "school": "Conjuração/Convocação",
-    "sphere": "Combate",
-    "castingTime": "6",
-    "duration": "1 rodada/nível",
-    "range": "0",
-    "area": "20 metros de raio",
-    "description": "Pelo uso desta magia, o clérigo traz para seus amigos e para ele mesmo as boas graças de sua divindade, além de prejudicar os inimigos. Todos que estiverem na área da magia são atingidos em toda a duração do efeito. Os que estiverem lutando ao lado do clérigo recebem um bônus de 1 em suas jogadas de ataque, dano e em todos o testes de resistência. Os inimigos, porém, recebem, nessas mesmas jogadas (ataque, dano e resistência), uma penalidade de 1. Uma vez que a fórmula mágica tenha sido prenunciada, o clérigo poderá realizar qualquer outra ação. Se outro clérigo da mesma religião estiver declamando (veja a magia divina Cântico) quando este efeito é executado, as magias se combinam e produzem bônus e penalidades de +2 e -2, durante todo o tempo em que ambas estiverem ativas simultaneamente. Para lançar essa magia, o clérigo precisa de um símbolo sagrado de prata e de um colar de contas. Esses componentes não são consumidos."
+    "level": 1,
+    "school": "Várias escolas",
+    "sphere": "Todas",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "10 metros",
+    "area": "Varia",
+    "description": "A mais básica das magias sacerdotais é a oração, é o pedido e invocação de natureza mais branda. Tipicamente, clérigos aprendem um número de orações na mesma velocidade que um estudante aprende habilidades mágicas e ênfases conceituais, ideologias, ou brasões importantes para sua fé. Orações não são como as demais magias de 1º círculo. Sacerdotes memorizam um número particularizado de orações igual a três +1 por nível (no máximo nove) quando devotam espaços para a oração. Em outras palavras, um clérigo de primeiro nível decora quatro orações por magia de 1° círculo gasto, oito para dois espaços gastos, e assim por diante. Diferente da magia arcana truque, oração possui efeitos mais específicos, apesar de clérigos não precisarem decidir o tipo de oração que irão usar até a hora de conjurar a magia. Independente da escolha do jogador, nenhuma oração dura mais que uma rodada por nível do sacerdote. Uma criatura que está sofrendo náuseas, relativa dor e desconforto. Dores e náuseas induzidas magicamente só serão aliviadas caso a vítima passe em teste de resistência à magia com penalidade de -2. Uma criatura que esteja amedrontada ou atemorizada será acalmada. Vítimas sofrendo de efeitos mágicos só serão acalmadas com teste de resistência à magia com penalidade de -2. Pela duração da oração, um clérigo discursa de forma clara e livre de impedimentos. Normalmente usado para ensinamentos de textos sacros e ritos. Condições mágicas como confundir linguagens não são afetadas. O sacerdote ganha +1 para a próxima jogada de ataque, desde que ocorra durante a duração da magia. O clérigo ganha +1 nos testes de Inteligência e Sabedoria para solucionar enigmas ou resolver problemas. Com um toque, o sacerdote cura 1 ponto de vida da criatura. Magias persistentes ou itens mágicos dentro de 10 metros produzem sensação perceptível. Não identifica natureza específica do efeito. Qualquer item submetido à memória do mago durante a duração da magia é completamente compreendido. Recebe +2 em testes para lembrar aparência, funcionalidade ou significado. +1 no próximo teste de resistência à magia. +2 no próximo teste de resistência a veneno. Outros poderes podem ser permitidos pelo Mestre. Normalmente uma oração não é efetiva em mais que uma criatura ou dado de vida por vez. Orações ofensivas são raras."
 }
