@@ -1,10 +1,10 @@
 {
     "name": "Explosão de Fogo",
     "level": 1,
-    "school": "Alteração/Evocação",
+    "school": "Alteração / Evocação",
     "castingTime": "1",
     "duration": "Instantânea",
     "range": "5 metros/nível",
-    "area": "3 metros de raio",
-    "description": "Quando essa magia é conjurada sobre fogo não mágico (como uma fogueira, lanterna ou candelabro) causa um flash de fogo que atira setas flamejantes. Todas as criaturas na área de três metros de raio sofrem 1 ponto de dano por nível do mago (máximo 10). Criaturas que passarem no teste de resistência à magia não sofrem dano."
+    "area": "raio de 3 metros",
+    "description": "Conjurada sobre fogo não mágico: gera explosão flamejante. Todas as criaturas: 1 dano por nível máximo 10 Sucesso na resistência: sem dano."
 }

@@ -71,7 +71,7 @@
                 "name": "Copiar",
                 "file": "mage-spells/copiar.json",
                 "level": 1,
-                "school": "Evocação"
+                "school": "Alteração"
             },
             {
                 "name": "Costura",
@@ -131,7 +131,7 @@
                 "name": "Explosão de Fogo",
                 "file": "mage-spells/explosao-de-fogo.json",
                 "level": 1,
-                "school": "Alteração/Evocação"
+                "school": "Alteração / Evocação"
             },
             {
                 "name": "Força Fantasmagórica",
@@ -714,6 +714,12 @@
         ],
         "3": [
             {
+                "name": "A Análise Essencial de Alamir",
+                "file": "mage-spells/a-analise-essencial-de-alamir.json",
+                "level": 3,
+                "school": "Adivinhação"
+            },
+            {
                 "name": "Alacridade",
                 "file": "mage-spells/alacridade.json",
                 "level": 3,
@@ -765,7 +771,7 @@
                 "name": "Clava de Ossos",
                 "file": "mage-spells/clava-de-ossos.json",
                 "level": 3,
-                "school": "Encantamento, Necromancia"
+                "school": "Encantamento / Necromancia"
             },
             {
                 "name": "Compreender Idiomas",
@@ -808,6 +814,12 @@
                 "file": "mage-spells/duplicata-aquosa.json",
                 "level": 3,
                 "school": "Conjuração/Convocação/Encantamento"
+            },
+            {
+                "name": "Encantar Fogo",
+                "file": "mage-spells/encantar-fogo.json",
+                "level": 3,
+                "school": "Alteração"
             },
             {
                 "name": "Esconder Itens",
@@ -1109,7 +1121,7 @@
                 "name": "Cajado dos Trovões",
                 "file": "mage-spells/cajado-dos-trovoes.json",
                 "level": 4,
-                "school": "Invocação/Evocação"
+                "school": "Invocação / Evocação"
             },
             {
                 "name": "Celeridade de Mordenkhain",
@@ -1133,7 +1145,7 @@
                 "name": "Convocar Licantropo",
                 "file": "mage-spells/convocar-licantropo.json",
                 "level": 4,
-                "school": "Convocação/Conjuração"
+                "school": "Convocação / Conjuração"
             },
             {
                 "name": "Criar Itens Efêmeros",
@@ -1414,6 +1426,12 @@
         ],
         "5": [
             {
+                "name": "A Aquisição de Khazid",
+                "file": "mage-spells/a-aquisicao-de-khazid.json",
+                "level": 5,
+                "school": "Adivinhação / Convocação"
+            },
+            {
                 "name": "A Arca Secreta de Leomund",
                 "file": "mage-spells/a-arca-secreta-de-leomund.json",
                 "level": 5,
@@ -1424,6 +1442,12 @@
                 "file": "mage-spells/a-mao-interposta-de-bigby.json",
                 "level": 5,
                 "school": "Evocação"
+            },
+            {
+                "name": "A Repulsão de Von Gasik",
+                "file": "mage-spells/a-repulsao-de-von-gasik.json",
+                "level": 5,
+                "school": "Abjuração"
             },
             {
                 "name": "Alcance Distante III",
@@ -1606,6 +1630,12 @@
                 "school": "Abjuração"
             },
             {
+                "name": "Invulnerabilidade à Armas Normais",
+                "file": "mage-spells/invulnerabilidade-a-armas-normais-5.json",
+                "level": 5,
+                "school": "Abjuração"
+            },
+            {
                 "name": "Magia de Sombras",
                 "file": "mage-spells/magia-de-sombras.json",
                 "level": 5,
@@ -1724,6 +1754,12 @@
                 "file": "mage-spells/salvaguarda.json",
                 "level": 5,
                 "school": "Abjuração"
+            },
+            {
+                "name": "Santuário Particular de Monderkainen",
+                "file": "mage-spells/santuario-particular-de-monderkainen.json",
+                "level": 5,
+                "school": "Abjuração / Alteração"
             },
             {
                 "name": "Santuário Particular de Mordenkainen",
@@ -1932,6 +1968,12 @@
                 "school": "Abjuração"
             },
             {
+                "name": "Invulnerabilidade à Armas Mágicas",
+                "file": "mage-spells/invulnerabilidade-a-armas-magicas-6.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
                 "name": "Lendas e Histórias",
                 "file": "mage-spells/lendas-e-historias.json",
                 "level": 6,
@@ -1953,7 +1995,7 @@
                 "name": "Manto Negro",
                 "file": "mage-spells/manto-negro.json",
                 "level": 6,
-                "school": "Necromancia/ Encantamento"
+                "school": "Necromancia / Encantamento"
             },
             {
                 "name": "Miragem Arcana",
@@ -2147,7 +2189,7 @@
                 "name": "Chocar a Pedra do Ovo",
                 "file": "mage-spells/chocar-a-pedra-do-ovo.json",
                 "level": 7,
-                "school": "Alteração, Evocação, Adivinhação"
+                "school": "Alteração / Evocação / Adivinhação"
             },
             {
                 "name": "Controlar Mortos-Vivos",
@@ -2188,6 +2230,12 @@
             {
                 "name": "Desvanecimento",
                 "file": "mage-spells/desvanecimento.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Direcionar Magia",
+                "file": "mage-spells/direcionar-magia.json",
                 "level": 7,
                 "school": "Alteração"
             },
@@ -2452,6 +2500,12 @@
                 "school": "Necromancia"
             },
             {
+                "name": "Desviar Medo",
+                "file": "mage-spells/desviar-medo.json",
+                "level": 8,
+                "school": "Abjuração"
+            },
+            {
                 "name": "Enfeitiçar Multidões",
                 "file": "mage-spells/enfeiticar-multidoes.json",
                 "level": 8,
@@ -2500,8 +2554,8 @@
                 "school": "Evocação"
             },
             {
-                "name": "Obstrução Extraplanar",
-                "file": "mage-spells/obstrucao-extraplanar.json",
+                "name": "Obstrução",
+                "file": "mage-spells/obstrucao-8.json",
                 "level": 8,
                 "school": "Encantamento, Evocação"
             },
@@ -2610,6 +2664,12 @@
                 "school": "Abjuração, Conjuração/Convocação"
             },
             {
+                "name": "Lamúrio da Banshee",
+                "file": "mage-spells/lamurio-da-banshee-9.json",
+                "level": 9,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Magia Astral",
                 "file": "mage-spells/magia-astral.json",
                 "level": 9,
@@ -2640,6 +2700,12 @@
                 "school": "Adivinhação"
             },
             {
+                "name": "Transmutação Gloriosa",
+                "file": "mage-spells/transmutacao-gloriosa-9.json",
+                "level": 9,
+                "school": "Alteração"
+            },
+            {
                 "name": "Êxtase Temporal",
                 "file": "mage-spells/extase-temporal.json",
                 "level": 9,
@@ -2653,6 +2719,12 @@
                 "name": "A Imunidade à Magia de Serten",
                 "file": "mage-spells/a-imunidade-a-magia-de-serten.json",
                 "level": 8,
+                "school": "Abjuração"
+            },
+            {
+                "name": "A Repulsão de Von Gasik",
+                "file": "mage-spells/a-repulsao-de-von-gasik.json",
+                "level": 5,
                 "school": "Abjuração"
             },
             {
@@ -2701,6 +2773,12 @@
                 "name": "Concha Antimagia",
                 "file": "mage-spells/concha-antimagia.json",
                 "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Desviar Medo",
+                "file": "mage-spells/desviar-medo.json",
+                "level": 8,
                 "school": "Abjuração"
             },
             {
@@ -2778,6 +2856,18 @@
             {
                 "name": "Invulnerabilidade a Armas Normais",
                 "file": "mage-spells/invulnerabilidade-a-armas-normais.json",
+                "level": 5,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Invulnerabilidade à Armas Mágicas",
+                "file": "mage-spells/invulnerabilidade-a-armas-magicas-6.json",
+                "level": 6,
+                "school": "Abjuração"
+            },
+            {
+                "name": "Invulnerabilidade à Armas Normais",
+                "file": "mage-spells/invulnerabilidade-a-armas-normais-5.json",
                 "level": 5,
                 "school": "Abjuração"
             },
@@ -2888,6 +2978,12 @@
                 "file": "mage-spells/salvaguarda.json",
                 "level": 5,
                 "school": "Abjuração"
+            },
+            {
+                "name": "Santuário Particular de Monderkainen",
+                "file": "mage-spells/santuario-particular-de-monderkainen.json",
+                "level": 5,
+                "school": "Abjuração / Alteração"
             },
             {
                 "name": "Santuário Particular de Mordenkainen",
@@ -3087,7 +3183,7 @@
                 "name": "Chocar a Pedra do Ovo",
                 "file": "mage-spells/chocar-a-pedra-do-ovo.json",
                 "level": 7,
-                "school": "Alteração, Evocação, Adivinhação"
+                "school": "Alteração / Evocação / Adivinhação"
             },
             {
                 "name": "Compor",
@@ -3117,6 +3213,12 @@
                 "name": "Controlar o Clima",
                 "file": "mage-spells/controlar-o-clima.json",
                 "level": 6,
+                "school": "Alteração"
+            },
+            {
+                "name": "Copiar",
+                "file": "mage-spells/copiar.json",
+                "level": 1,
                 "school": "Alteração"
             },
             {
@@ -3180,6 +3282,12 @@
                 "school": "Alteração"
             },
             {
+                "name": "Direcionar Magia",
+                "file": "mage-spells/direcionar-magia.json",
+                "level": 7,
+                "school": "Alteração"
+            },
+            {
                 "name": "Distorção de Distância",
                 "file": "mage-spells/distorcao-de-distancia.json",
                 "level": 5,
@@ -3190,6 +3298,12 @@
                 "file": "mage-spells/elo-telepatico-de-rary.json",
                 "level": 5,
                 "school": "Adivinhação/Alteração"
+            },
+            {
+                "name": "Encantar Fogo",
+                "file": "mage-spells/encantar-fogo.json",
+                "level": 3,
+                "school": "Alteração"
             },
             {
                 "name": "Escudo do Fogo",
@@ -3225,7 +3339,7 @@
                 "name": "Explosão de Fogo",
                 "file": "mage-spells/explosao-de-fogo.json",
                 "level": 1,
-                "school": "Alteração/Evocação"
+                "school": "Alteração / Evocação"
             },
             {
                 "name": "Extensão I",
@@ -3654,6 +3768,12 @@
                 "school": "Alteração"
             },
             {
+                "name": "Santuário Particular de Monderkainen",
+                "file": "mage-spells/santuario-particular-de-monderkainen.json",
+                "level": 5,
+                "school": "Abjuração / Alteração"
+            },
+            {
                 "name": "Santuário Particular de Mordenkainen",
                 "file": "mage-spells/santuario-particular-de-mordenkainen.json",
                 "level": 5,
@@ -3717,6 +3837,12 @@
                 "name": "Transferência de Estado",
                 "file": "mage-spells/transferencia-de-estado.json",
                 "level": 7,
+                "school": "Alteração"
+            },
+            {
+                "name": "Transmutação Gloriosa",
+                "file": "mage-spells/transmutacao-gloriosa-9.json",
+                "level": 9,
                 "school": "Alteração"
             },
             {
@@ -3795,6 +3921,12 @@
             }
         ],
         "Conjuração/Convocação": [
+            {
+                "name": "A Aquisição de Khazid",
+                "file": "mage-spells/a-aquisicao-de-khazid.json",
+                "level": 5,
+                "school": "Adivinhação / Convocação"
+            },
             {
                 "name": "A Arca Secreta de Leomund",
                 "file": "mage-spells/a-arca-secreta-de-leomund.json",
@@ -3931,7 +4063,7 @@
                 "name": "Convocar Licantropo",
                 "file": "mage-spells/convocar-licantropo.json",
                 "level": 4,
-                "school": "Convocação/Conjuração"
+                "school": "Convocação / Conjuração"
             },
             {
                 "name": "Convocar Sombras",
@@ -4209,7 +4341,7 @@
                 "name": "Clava de Ossos",
                 "file": "mage-spells/clava-de-ossos.json",
                 "level": 3,
-                "school": "Encantamento, Necromancia"
+                "school": "Encantamento / Necromancia"
             },
             {
                 "name": "Comando Visual",
@@ -4341,7 +4473,7 @@
                 "name": "Manto Negro",
                 "file": "mage-spells/manto-negro.json",
                 "level": 6,
-                "school": "Necromancia/ Encantamento"
+                "school": "Necromancia / Encantamento"
             },
             {
                 "name": "Névoa Mental",
@@ -4374,8 +4506,8 @@
                 "school": "Encantamento/Feitiço"
             },
             {
-                "name": "Obstrução Extraplanar",
-                "file": "mage-spells/obstrucao-extraplanar.json",
+                "name": "Obstrução",
+                "file": "mage-spells/obstrucao-8.json",
                 "level": 8,
                 "school": "Encantamento, Evocação"
             },
@@ -4933,7 +5065,7 @@
                 "name": "Cajado dos Trovões",
                 "file": "mage-spells/cajado-dos-trovoes.json",
                 "level": 4,
-                "school": "Invocação/Evocação"
+                "school": "Invocação / Evocação"
             },
             {
                 "name": "Celeridade de Mordenkhain",
@@ -4945,7 +5077,7 @@
                 "name": "Chocar a Pedra do Ovo",
                 "file": "mage-spells/chocar-a-pedra-do-ovo.json",
                 "level": 7,
-                "school": "Alteração, Evocação, Adivinhação"
+                "school": "Alteração / Evocação / Adivinhação"
             },
             {
                 "name": "Chuva de Meteoros",
@@ -4963,12 +5095,6 @@
                 "name": "Contingência",
                 "file": "mage-spells/contingencia.json",
                 "level": 6,
-                "school": "Evocação"
-            },
-            {
-                "name": "Copiar",
-                "file": "mage-spells/copiar.json",
-                "level": 1,
                 "school": "Evocação"
             },
             {
@@ -5053,7 +5179,7 @@
                 "name": "Explosão de Fogo",
                 "file": "mage-spells/explosao-de-fogo.json",
                 "level": 1,
-                "school": "Alteração/Evocação"
+                "school": "Alteração / Evocação"
             },
             {
                 "name": "Fogo Selvagem",
@@ -5182,8 +5308,8 @@
                 "school": "Evocação"
             },
             {
-                "name": "Obstrução Extraplanar",
-                "file": "mage-spells/obstrucao-extraplanar.json",
+                "name": "Obstrução",
+                "file": "mage-spells/obstrucao-8.json",
                 "level": 8,
                 "school": "Encantamento, Evocação"
             },
@@ -5307,7 +5433,7 @@
                 "name": "Clava de Ossos",
                 "file": "mage-spells/clava-de-ossos.json",
                 "level": 3,
-                "school": "Encantamento, Necromancia"
+                "school": "Encantamento / Necromancia"
             },
             {
                 "name": "Clone",
@@ -5400,6 +5526,12 @@
                 "school": "Necromancia"
             },
             {
+                "name": "Lamúrio da Banshee",
+                "file": "mage-spells/lamurio-da-banshee-9.json",
+                "level": 9,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Magia da Morte",
                 "file": "mage-spells/magia-da-morte.json",
                 "level": 6,
@@ -5409,7 +5541,7 @@
                 "name": "Manto Negro",
                 "file": "mage-spells/manto-negro.json",
                 "level": 6,
-                "school": "Necromancia/ Encantamento"
+                "school": "Necromancia / Encantamento"
             },
             {
                 "name": "Morte Aparente",
@@ -5528,6 +5660,18 @@
         ],
         "Profecia": [
             {
+                "name": "A Análise Essencial de Alamir",
+                "file": "mage-spells/a-analise-essencial-de-alamir.json",
+                "level": 3,
+                "school": "Adivinhação"
+            },
+            {
+                "name": "A Aquisição de Khazid",
+                "file": "mage-spells/a-aquisicao-de-khazid.json",
+                "level": 5,
+                "school": "Adivinhação / Convocação"
+            },
+            {
                 "name": "Animação Ilusória",
                 "file": "mage-spells/animacao-ilusoria.json",
                 "level": 8,
@@ -5549,7 +5693,7 @@
                 "name": "Chocar a Pedra do Ovo",
                 "file": "mage-spells/chocar-a-pedra-do-ovo.json",
                 "level": 7,
-                "school": "Alteração, Evocação, Adivinhação"
+                "school": "Alteração / Evocação / Adivinhação"
             },
             {
                 "name": "Claraudiência",

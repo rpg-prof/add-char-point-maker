@@ -1,0 +1,10 @@
+{
+    "name": "Lamúrio da Banshee",
+    "level": 9,
+    "school": "Necromancia",
+    "castingTime": "9",
+    "duration": "Instantânea",
+    "range": "0",
+    "area": "esfera de 9,5 metros de raio",
+    "description": "No clímax da magia, o mago grita como uma banshee. Para cada nível do conjurador: 1 ouvinte dentro da área pode ser afetado. Se falhar na resistência: morte instantânea O mago não escolhe vítimas. Se houver mais vítimas que o limite: o Mestre escolhe aleatoriamente. Criaturas incapazes de ouvir: não são afetadas. Componente material: mecha de cabelo de elfa maligna."
+}

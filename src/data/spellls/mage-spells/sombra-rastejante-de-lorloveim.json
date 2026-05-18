@@ -3,8 +3,8 @@
     "level": 3,
     "school": "Ilusão",
     "castingTime": "7",
-    "duration": "1 Rodada/Nível",
+    "duration": "1 rodada/nível",
     "range": "0",
-    "area": "A Sombra do Conjurador",
-    "description": "Essa magia faz a sombra do conjurador se alongar, esticando-se á uma velocidade 15 metros por rodada. Podendo alongar-se em um máximo de distância de 10 metros por nível do conjurador. A sombra se move normalmente, ao longo de quartos e paredes. O conjurador pode manobrar de qualquer maneira possível colocar a sombra onde ele deseja. Um conjurador poderia posicionar a sombra dele em cima de uma janela alta em uma torre para espiar nos ocupantes da torre. A sombra não faz nenhum som e é 90% indetectável menos iluminados. Enquanto a magia estiver ativa, o ilusionista vê, ouve, e fala pela sombra. A sombra não pode ser tocada fisicamente, agarrada, ou atacada por criaturas ou objetos. Só podendo ser ferida por magias, ou armas mágicas +1 ou melhores, ou outros ataques especiais (como sopro de dragão). A sombra possui a mesma AC do conjurador. Pontos de vida perdidos pela sombra serão nocivos ao conjurador. Para conjurar a magia, uma fonte luminosa de pelo menos o brilho de uma vela deve estar presente. O Componente material é uma estátua esculpida pelo conjurado com uma obsidiana que custe não menos que 1.000gps."
+    "area": "sombra do conjurador",
+    "description": "A sombra do conjurador se alonga. Velocidade: 15 metros por rodada Distância máxima: 10 metros por nível A sombra pode mover-se: - por quartos - paredes - janelas - superfícies Aplicações: espionagem, observação, escuta. Enquanto ativa, o conjurador: - vê pela sombra - ouve pela sombra - fala pela sombra A sombra: - não pode ser agarrada - não pode ser tocada - não sofre ataques físicos normais Pode ser afetada apenas por: - magia - armas +1 - ataques especiais PV perdidos pela sombra afetam o conjurador. Pré-requisito: fonte de luz mínima equivalente a vela. Componente material: estatueta esculpida pelo conjurador em obsidiana de pelo menos 1.000 po."
 }

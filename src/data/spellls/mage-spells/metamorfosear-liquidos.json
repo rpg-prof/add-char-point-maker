@@ -2,9 +2,9 @@
     "name": "Metamorfosear Líquidos",
     "level": 1,
     "school": "Alteração",
-    "castingTime": "uma rodada",
+    "castingTime": "1 rodada",
     "duration": "Permanente",
     "range": "Toque",
     "area": "1 metro cúbico/nível",
-    "description": "Essa magia transmuta líquidos em uma quantidade igual de um líquido diferente, fluídos não mágicos (óleos, sangue, água, vinho, cidra de maçã, etc.). O conjurador tem que tocar o líquido e não apenas o recipiente para que a magia tenha efeito. Líquidos mágicos (como poções) fazem um teste de resistência contra Desintegração com bônus de +3 para evitar o efeito da magia. Fluídos podem ser apenas transformados em líquidos não mágicos, um líquido mágico não pode ser transmutado em outro líquido mágico. Venenos podem se tornar inofensivos com o uso dessa magia, a magia não afeta venenos já ingeridos. Criaturas vivas não são afetadas pela magia, excluindo todas as formas de Elemental da Água. Essas criaturas devem fazer um teste de resistência à magia. Uma falha significa 1d4 de dano por nível do conjurador, um sucesso significa metade do dano. Uma única criatura apenas pode ser atingida por um único conjurador, sem levar em consideração o tamanho da criatura. O componente material é uma gota do líquido que o mago deseja criar, que o mago coloca em sua língua e consome. Criar venenos com essa magia é algo extremante perigoso."
+    "description": "Transforma líquidos não mágicos em outros líquidos não mágicos. Exemplos: - água - vinho - sangue - óleo Necessário tocar o líquido. Líquidos mágicos: teste contra desintegração com +3. Não pode: transformar líquido mágico em outro líquido mágico. Venenos: podem ser neutralizados. Não afeta: venenos já ingeridos. Elementais da água: afetados. Dano: 1d4 por nível Sucesso: metade. Componente material: gota do líquido desejado."
 }

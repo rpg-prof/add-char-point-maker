@@ -5,6 +5,6 @@
     "castingTime": "2",
     "duration": "3 turnos",
     "range": "0",
-    "area": "o mago",
-    "description": "Senso de Alterações permite ao mago afetar todas as magias do 1° ao 3° círculo. Para cada magia você poderá afetar três fatores sensoriais pertinentes na magia, som, cor e aparência visual do efeito mágico. As mudanças produzidas na magia não afetam as funções efetivas da magia ou qualquer jogada de resistência contra esses efeitos. Senso de Alterações pode servir para produzir Bolas de Fogo Verdes, Mísseis Mágicos que riscam o ar com gritos, Luz Contínua com orbes coloridas, customizar o estilo de Padrão Hipnótico, ou uma Mão Espectral que emite sons ao tentar acertar um alvo. Senso de Alterações não pode criar qualquer forma de invisibilidade. E não pode deixar um efeito mágico completamente silencioso (pode-se diminuir o estrondo de uma Bola de Fogo, mas não eliminá-lo). O componente material é uma corda multicolorida com as cores do arco-íris com um sino de prata preso na ponta. Mágicas do 3º Círculo"
+    "area": "mago",
+    "description": "Permite alterar aspectos sensoriais de magias de 1º a 3º círculo. Pode modificar: - som - cor - aparência visual Não altera efeito mecânico. Exemplos: - bola de fogo verde - mísseis gritantes - orbes coloridas Não pode: - criar invisibilidade - tornar magia totalmente silenciosa Componente material: corda multicolorida + sino de prata."
 }

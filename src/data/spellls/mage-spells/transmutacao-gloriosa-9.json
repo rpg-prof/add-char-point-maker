@@ -1,0 +1,10 @@
+{
+    "name": "Transmutação Gloriosa",
+    "level": 9,
+    "school": "Alteração",
+    "castingTime": "1 turno",
+    "duration": "Permanente",
+    "range": "Toque",
+    "area": "Especial",
+    "description": "Transforma: - ferro em prata ou - chumbo em ouro Necessita pedra filosofal. Capacidade: 1d10 × 25 kg Toda pedra é consumida. A fórmula exata depende do Mestre."
+}

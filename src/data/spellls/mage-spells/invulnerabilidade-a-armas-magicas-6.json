@@ -1,0 +1,10 @@
+{
+    "name": "Invulnerabilidade à Armas Mágicas",
+    "level": 6,
+    "school": "Abjuração",
+    "castingTime": "3",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "raio de 1,5 metro",
+    "description": "Cria esfera protetora cintilante. Bloqueia: - armas mágicas físicas - projéteis Não protege contra: - criaturas mágicas - ataques de olhar - magia pura O conjurador pode atacar de dentro. Pode ser anulada por Dissipar Magia. Componente material: arma mágica quebrada."
+}

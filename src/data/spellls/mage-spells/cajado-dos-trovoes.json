@@ -1,10 +1,10 @@
 {
     "name": "Cajado dos Trovões",
     "level": 4,
-    "school": "Invocação/Evocação",
+    "school": "Invocação / Evocação",
     "castingTime": "4",
     "duration": "Instantânea",
     "range": "0",
-    "area": "Um cone de 6x12 metros",
-    "description": "Em complementação á magia, o mago o bate seu cajado no chão produzindo um cone de força com trovões de 1,5 metros na ponta, 6 metros na base e 12 metros de largura. Todas as criaturas que estiverem dentro da área do conjurador devem obter sucesso em um teste de resistência ou ficarão atordoadas por 1d3 rodadas. Criaturas atordoadas não podem pensar coerentemente ou agir durante este tempo e são ensurdecidas por 1d3+1 rodadas. Adicionalmente, criaturas que não passarem no teste de resistência serão arremessadas pelo cone de fora 2d3 (4d4+4 pés) metros de distância e recebe 7 pontos de dano por cada metro (1 de dano por pé) que é arremessada. Estruturas podem restringir a distância (muros, quartos e etc.), mas o dano continuará o mesmo. Se obtiver um sucesso no teste de resistência, a vítima não ficará atordoada, mas vítima ficará surda por 1d3+1 rodadas e será arremessa a metade da distância comum da magia. Criaturas grandes que obtiverem sucesso no Teste de Resistência estarão surdas, mas não serão arremessadas, não perdem pontos de vida, e não estarão atordoadas. Se falharem no teste de resistência, essas criaturas serão arremessadas 1d3 metros (2d4+2 pés), sofrendo 7 de dano para cada dois metros (1 de dano para cada 2 pés), e estarão surdas e atordoadas. O cone de força é considerado com Força 19 para abrir portas trancadas, emperradas, ou seladas magicamente. A magia também pode mover objetos com um peso até 291 Kg por uma distância de 2d3 metros. Itens mais frágeis devem fazer um teste de resistência contra esmagamento ou serão destruídos. O componente é um frasco com a chuva recolhida durante uma tempestade raios e um cajado próprio para os magos, o cajado não é destruído durante a magia."
+    "area": "cone de 6 x 12 metros",
+    "description": "O mago golpeia o chão com o cajado. Gera cone de força com trovões. Criaturas afetadas: teste de resistência. Falha: - atordoado por 1d3 rodadas - ensurdecido por 1d3+1 rodadas - arremessado 2d3 metros - dano 7 por metro Sucesso: - sem atordoamento - ainda ensurdecido - metade da distância Criaturas grandes: tratamento especial. Pode: - abrir portas (Força 19) - mover objetos até 291 kg Objetos frágeis: teste contra esmagamento. Componente material: - frasco com chuva de tempestade - cajado (não consumido)"
 }

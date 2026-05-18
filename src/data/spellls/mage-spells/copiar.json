@@ -1,10 +1,10 @@
 {
     "name": "Copiar",
     "level": 1,
-    "school": "Evocação",
+    "school": "Alteração",
     "castingTime": "1 rodada",
     "duration": "Instantânea",
     "range": "Especial",
     "area": "um objeto",
-    "description": "Copiar habilita ao conjurador fazer a cópia perfeita de um mapa, projeto, ou qualquer outra escritura em um documento. Omago precisa de uma folha em branco ou um livro com folhas em branco o suficiente para fazer a cópia. O Conjurador pega o objeto em branco e coloca sobre o objeto a ser copiado, e então conjura a magia; a cópia aparece imediatamente no documento que anteriormente estava em branco. Acópia é permanente e é uma duplicata perfeita do original. Amagia cópia serve para copiar magias para um novo livro de magias para dentro do livro de magias do conjurador, assumindo-se que o livro de magias do conjurador possua páginas o suficiente que caibam as novas magias. Primeiro o conjurador e terá que fazer um teste para aprender as magias, e depois, irá conjurar Cópia e as magias aparecerão instantaneamente em seu livro de magias. O Componente material já foi descrito acima e é páginas em branco (ou um livro com páginas em branco como foi descrito acima) e uma gota de tinta preta."
+    "description": "Cria cópia perfeita de: - mapas - projetos - escritos - magias Necessário: papel ou livro em branco. A cópia surge instantaneamente. Também serve para copiar magias entre grimórios. Pré-requisito: teste de aprendizado normal. Componente material: - páginas em branco - tinta preta"
 }
