@@ -403,40 +403,59 @@ const Index = () => {
     if (!step) return null;
 
     switch (step.label) {
-      case "Identificação":
+      case "Identificação": {
+        const inputCls = "w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold";
+        const labelCls = "font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block";
         return (
           <div className="space-y-6">
             <p className="font-body text-muted-foreground text-sm">
-              Comece dando um nome ao seu personagem e identificando o jogador.
+              Comece preenchendo os dados básicos do personagem.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
-                  Nome do Personagem
-                </label>
-                <input
-                  type="text"
-                  value={charName}
-                  onChange={(e) => setCharName(e.target.value)}
-                  placeholder="Ex: Thorin Escudo-de-Carvalho"
-                  className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold"
-                />
+                <label className={labelCls}>Nome do Personagem</label>
+                <input type="text" value={charName} onChange={(e) => setCharName(e.target.value)} placeholder="Ex: Thorin Escudo-de-Carvalho" className={inputCls} />
               </div>
               <div>
-                <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
-                  Nome do Jogador
-                </label>
-                <input
-                  type="text"
-                  value={playerName}
-                  onChange={(e) => setPlayerName(e.target.value)}
-                  placeholder="Seu nome"
-                  className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold"
-                />
+                <label className={labelCls}>Nome do Jogador</label>
+                <input type="text" value={playerName} onChange={(e) => setPlayerName(e.target.value)} placeholder="Seu nome" className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Sexo</label>
+                <input type="text" value={sexo} onChange={(e) => setSexo(e.target.value)} placeholder="Masculino / Feminino / ..." className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Idade</label>
+                <input type="text" value={idade} onChange={(e) => setIdade(e.target.value)} placeholder="Ex: 27" className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Peso</label>
+                <input type="text" value={peso} onChange={(e) => setPeso(e.target.value)} placeholder="Ex: 80 kg" className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Altura</label>
+                <input type="text" value={altura} onChange={(e) => setAltura(e.target.value)} placeholder="Ex: 1,75m" className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Cabelos</label>
+                <input type="text" value={cabelos} onChange={(e) => setCabelos(e.target.value)} placeholder="Ex: Castanhos longos" className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Olhos</label>
+                <input type="text" value={olhos} onChange={(e) => setOlhos(e.target.value)} placeholder="Ex: Verdes" className={inputCls} />
+              </div>
+              <div className="md:col-span-2">
+                <label className={labelCls}>Tendência</label>
+                <select value={tendencia} onChange={(e) => setTendencia(e.target.value)} className={inputCls}>
+                  {alignments.map((a) => (
+                    <option key={a} value={a}>{a}</option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
         );
+      }
       case "Atributos":
         return (
           <div className="space-y-4">
@@ -455,15 +474,32 @@ const Index = () => {
         return (
           <div className="space-y-4">
             <p className="font-body text-muted-foreground text-sm">
-              Escolha a raça, classe e nível social do personagem. Cada opção consome pontos de personagem.
+              Escolha raça, classe, classe social e reputação. Cada opção consome pontos de personagem.
             </p>
             <RaceClassPanel
               selectedRace={selectedRace}
               selectedClass={selectedClass}
               selectedSocialClass={selectedSocialClass}
+              selectedReputation={selectedReputation}
               onRaceChange={setSelectedRace}
               onClassChange={setSelectedClass}
               onSocialClassChange={setSelectedSocialClass}
+              onReputationChange={setSelectedReputation}
+            />
+          </div>
+        );
+      case "Resistência":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Resistências calculadas a partir do valor base + modificador da sub-habilidade + vantagens/desvantagens.
+            </p>
+            <ResistancePanel
+              subAttributes={subAttributes}
+              selectedRace={selectedRace}
+              selectedClass={selectedClass}
+              selectedRaceClassAdv={selectedRaceClassAdv}
+              onRaceClassToggle={handleRaceClassAdvToggle}
             />
           </div>
         );
