@@ -60,6 +60,13 @@ const Index = () => {
   // Basic info
   const [charName, setCharName] = useState("");
   const [playerName, setPlayerName] = useState("");
+  const [sexo, setSexo] = useState("");
+  const [idade, setIdade] = useState("");
+  const [peso, setPeso] = useState("");
+  const [altura, setAltura] = useState("");
+  const [cabelos, setCabelos] = useState("");
+  const [olhos, setOlhos] = useState("");
+  const [tendencia, setTendencia] = useState("Neutro");
 
   // Attributes (default 10)
   const [attributes, setAttributes] = useState<Record<AttributeName, number>>(
@@ -95,13 +102,14 @@ const Index = () => {
     arcaneSpecialist !== null;
 
   const STEPS = useMemo(() => {
-    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP];
+    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP];
     if (hasMagicAccess) steps.push(MAGIC_STEP);
     steps.push(SUMMARY_STEP);
     return steps;
   }, [hasMagicAccess]);
 
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
+  const [selectedReputation, setSelectedReputation] = useState(0);
   const [selectedAdvantages, setSelectedAdvantages] = useState<string[]>([]);
   const [selectedRaceClassAdv, setSelectedRaceClassAdv] = useState<string[]>([]);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
