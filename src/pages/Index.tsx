@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2 } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -17,6 +17,7 @@ import SkillsPanel from "@/components/SkillsPanel";
 import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import MagicPanel from "@/components/MagicPanel";
 import MagicAccessPanel, { type DivineAccessLevel, type ArcaneAccessLevel } from "@/components/MagicAccessPanel";
+import ResistancePanel from "@/components/ResistancePanel";
 import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
   attributeCosts,
@@ -24,6 +25,8 @@ import {
   races,
   classes,
   socialClasses,
+  reputations,
+  alignments,
   generalAdvantages,
   generalDisadvantages,
   skills,
@@ -37,17 +40,19 @@ const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
 
 const BASE_STEPS = [
-  { label: "Identificação", icon: User, desc: "Nome e dados básicos" },
+  { label: "Identificação", icon: User, desc: "Dados básicos do personagem" },
   { label: "Atributos", icon: Shield, desc: "Distribua 75 pontos" },
-  { label: "Raça & Classe", icon: User, desc: "Escolha raça, classe e nível social" },
-  { label: "Vantagens", icon: Swords, desc: "Vantagens e desvantagens" },
-  { label: "Perícias", icon: BookOpen, desc: "Habilidades do personagem" },
+  { label: "Raça & Classe", icon: User, desc: "Raça, classe, social e reputação" },
   { label: "Armas", icon: Crosshair, desc: "Proficiências com armas e escudos" },
+  { label: "Perícias", icon: BookOpen, desc: "Perícias comuns do personagem" },
+  { label: "Resistência", icon: Heart, desc: "Valores de resistência calculados" },
 ];
 
 const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
+const ADVANTAGES_STEP = { label: "Vantagens", icon: Swords, desc: "Vantagens e desvantagens" };
 const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
+
 
 const Index = () => {
   const [currentStep, setCurrentStep] = useState(0);
