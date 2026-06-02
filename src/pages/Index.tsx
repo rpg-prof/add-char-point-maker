@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2 } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -17,6 +17,7 @@ import SkillsPanel from "@/components/SkillsPanel";
 import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import MagicPanel from "@/components/MagicPanel";
 import MagicAccessPanel, { type DivineAccessLevel, type ArcaneAccessLevel } from "@/components/MagicAccessPanel";
+import ResistancePanel from "@/components/ResistancePanel";
 import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
   attributeCosts,
@@ -24,6 +25,8 @@ import {
   races,
   classes,
   socialClasses,
+  reputations,
+  alignments,
   generalAdvantages,
   generalDisadvantages,
   skills,
@@ -37,17 +40,19 @@ const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
 
 const BASE_STEPS = [
-  { label: "Identificação", icon: User, desc: "Nome e dados básicos" },
+  { label: "Identificação", icon: User, desc: "Dados básicos do personagem" },
   { label: "Atributos", icon: Shield, desc: "Distribua 75 pontos" },
-  { label: "Raça & Classe", icon: User, desc: "Escolha raça, classe e nível social" },
-  { label: "Vantagens", icon: Swords, desc: "Vantagens e desvantagens" },
-  { label: "Perícias", icon: BookOpen, desc: "Habilidades do personagem" },
+  { label: "Raça & Classe", icon: User, desc: "Raça, classe, social e reputação" },
   { label: "Armas", icon: Crosshair, desc: "Proficiências com armas e escudos" },
+  { label: "Perícias", icon: BookOpen, desc: "Perícias comuns do personagem" },
+  { label: "Resistência", icon: Heart, desc: "Valores de resistência calculados" },
 ];
 
 const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
+const ADVANTAGES_STEP = { label: "Vantagens", icon: Swords, desc: "Vantagens e desvantagens" };
 const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
+
 
 const Index = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -55,6 +60,13 @@ const Index = () => {
   // Basic info
   const [charName, setCharName] = useState("");
   const [playerName, setPlayerName] = useState("");
+  const [sexo, setSexo] = useState("");
+  const [idade, setIdade] = useState("");
+  const [peso, setPeso] = useState("");
+  const [altura, setAltura] = useState("");
+  const [cabelos, setCabelos] = useState("");
+  const [olhos, setOlhos] = useState("");
+  const [tendencia, setTendencia] = useState("Neutro");
 
   // Attributes (default 10)
   const [attributes, setAttributes] = useState<Record<AttributeName, number>>(
@@ -90,13 +102,14 @@ const Index = () => {
     arcaneSpecialist !== null;
 
   const STEPS = useMemo(() => {
-    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP];
+    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP];
     if (hasMagicAccess) steps.push(MAGIC_STEP);
     steps.push(SUMMARY_STEP);
     return steps;
   }, [hasMagicAccess]);
 
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
+  const [selectedReputation, setSelectedReputation] = useState(0);
   const [selectedAdvantages, setSelectedAdvantages] = useState<string[]>([]);
   const [selectedRaceClassAdv, setSelectedRaceClassAdv] = useState<string[]>([]);
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
@@ -150,6 +163,7 @@ const Index = () => {
     const raceCost = races.find((r) => r.name === selectedRace)?.cost ?? 0;
     const classCost = classes.find((c) => c.name === selectedClass)?.cost ?? 0;
     const socialCost = socialClasses.find((s) => s.name === selectedSocialClass)?.cost ?? 0;
+    const reputationCost = reputations.find((r) => r.level === selectedReputation)?.cost ?? 0;
 
     const allItems = [...generalAdvantages, ...generalDisadvantages];
     const advCost = selectedAdvantages.reduce((sum, name) => {
@@ -206,8 +220,9 @@ const Index = () => {
       : 0;
     const magicCost = divineCost + arcaneCost + specialistCost;
 
-    return raceCost + classCost + socialCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost;
-  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist]);
+    return raceCost + classCost + socialCost + reputationCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost;
+  }, [selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist]);
+
 
   // Calculate total points gained from disadvantages (for display/limiting)
   const disadvantagePoints = useMemo(() => {
@@ -315,8 +330,9 @@ const Index = () => {
 
   const handleSave = useCallback(() => {
     const data = {
-      charName, playerName, attributes, subAttributes,
-      selectedRace, selectedClass, selectedSocialClass,
+      charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia,
+      attributes, subAttributes,
+      selectedRace, selectedClass, selectedSocialClass, selectedReputation,
       selectedAdvantages, selectedRaceClassAdv, selectedSkills,
       selectedWeapons, selectedWeaponGroups, selectedShields, grimoire,
       divineAccess, arcaneAccess, arcaneSpecialist,
@@ -329,7 +345,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory]);
+  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -340,11 +356,19 @@ const Index = () => {
         const data = JSON.parse(ev.target?.result as string);
         if (data.charName !== undefined) setCharName(data.charName);
         if (data.playerName !== undefined) setPlayerName(data.playerName);
+        if (data.sexo !== undefined) setSexo(data.sexo);
+        if (data.idade !== undefined) setIdade(data.idade);
+        if (data.peso !== undefined) setPeso(data.peso);
+        if (data.altura !== undefined) setAltura(data.altura);
+        if (data.cabelos !== undefined) setCabelos(data.cabelos);
+        if (data.olhos !== undefined) setOlhos(data.olhos);
+        if (data.tendencia !== undefined) setTendencia(data.tendencia);
         if (data.attributes) setAttributes(data.attributes);
         if (data.subAttributes) setSubAttributes(data.subAttributes);
         if (data.selectedRace) setSelectedRace(data.selectedRace);
         if (data.selectedClass) setSelectedClass(data.selectedClass);
         if (data.selectedSocialClass) setSelectedSocialClass(data.selectedSocialClass);
+        if (typeof data.selectedReputation === "number") setSelectedReputation(data.selectedReputation);
         if (data.selectedAdvantages) setSelectedAdvantages(data.selectedAdvantages);
         if (data.selectedRaceClassAdv) setSelectedRaceClassAdv(data.selectedRaceClassAdv);
         if (data.selectedSkills) setSelectedSkills(data.selectedSkills);
@@ -379,40 +403,59 @@ const Index = () => {
     if (!step) return null;
 
     switch (step.label) {
-      case "Identificação":
+      case "Identificação": {
+        const inputCls = "w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold";
+        const labelCls = "font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block";
         return (
           <div className="space-y-6">
             <p className="font-body text-muted-foreground text-sm">
-              Comece dando um nome ao seu personagem e identificando o jogador.
+              Comece preenchendo os dados básicos do personagem.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
-                  Nome do Personagem
-                </label>
-                <input
-                  type="text"
-                  value={charName}
-                  onChange={(e) => setCharName(e.target.value)}
-                  placeholder="Ex: Thorin Escudo-de-Carvalho"
-                  className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold"
-                />
+                <label className={labelCls}>Nome do Personagem</label>
+                <input type="text" value={charName} onChange={(e) => setCharName(e.target.value)} placeholder="Ex: Thorin Escudo-de-Carvalho" className={inputCls} />
               </div>
               <div>
-                <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
-                  Nome do Jogador
-                </label>
-                <input
-                  type="text"
-                  value={playerName}
-                  onChange={(e) => setPlayerName(e.target.value)}
-                  placeholder="Seu nome"
-                  className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold"
-                />
+                <label className={labelCls}>Nome do Jogador</label>
+                <input type="text" value={playerName} onChange={(e) => setPlayerName(e.target.value)} placeholder="Seu nome" className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Sexo</label>
+                <input type="text" value={sexo} onChange={(e) => setSexo(e.target.value)} placeholder="Masculino / Feminino / ..." className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Idade</label>
+                <input type="text" value={idade} onChange={(e) => setIdade(e.target.value)} placeholder="Ex: 27" className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Peso</label>
+                <input type="text" value={peso} onChange={(e) => setPeso(e.target.value)} placeholder="Ex: 80 kg" className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Altura</label>
+                <input type="text" value={altura} onChange={(e) => setAltura(e.target.value)} placeholder="Ex: 1,75m" className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Cabelos</label>
+                <input type="text" value={cabelos} onChange={(e) => setCabelos(e.target.value)} placeholder="Ex: Castanhos longos" className={inputCls} />
+              </div>
+              <div>
+                <label className={labelCls}>Olhos</label>
+                <input type="text" value={olhos} onChange={(e) => setOlhos(e.target.value)} placeholder="Ex: Verdes" className={inputCls} />
+              </div>
+              <div className="md:col-span-2">
+                <label className={labelCls}>Tendência</label>
+                <select value={tendencia} onChange={(e) => setTendencia(e.target.value)} className={inputCls}>
+                  {alignments.map((a) => (
+                    <option key={a} value={a}>{a}</option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
         );
+      }
       case "Atributos":
         return (
           <div className="space-y-4">
@@ -431,15 +474,32 @@ const Index = () => {
         return (
           <div className="space-y-4">
             <p className="font-body text-muted-foreground text-sm">
-              Escolha a raça, classe e nível social do personagem. Cada opção consome pontos de personagem.
+              Escolha raça, classe, classe social e reputação. Cada opção consome pontos de personagem.
             </p>
             <RaceClassPanel
               selectedRace={selectedRace}
               selectedClass={selectedClass}
               selectedSocialClass={selectedSocialClass}
+              selectedReputation={selectedReputation}
               onRaceChange={setSelectedRace}
               onClassChange={setSelectedClass}
               onSocialClassChange={setSelectedSocialClass}
+              onReputationChange={setSelectedReputation}
+            />
+          </div>
+        );
+      case "Resistência":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Resistências calculadas a partir do valor base + modificador da sub-habilidade + vantagens/desvantagens.
+            </p>
+            <ResistancePanel
+              subAttributes={subAttributes}
+              selectedRace={selectedRace}
+              selectedClass={selectedClass}
+              selectedRaceClassAdv={selectedRaceClassAdv}
+              onRaceClassToggle={handleRaceClassAdvToggle}
             />
           </div>
         );

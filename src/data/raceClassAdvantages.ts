@@ -126,6 +126,35 @@ export const raceClassAdvantages: RaceClassAdvantage[] = [
     description: "Poder se especializar em uma arma adicional",
     type: "advantage",
   },
+  {
+    name: "Ataque Destro",
+    category: "ofensivo",
+    applicableClasses: ["Monge"],
+    cost: 10,
+    costOthers: 30,
+    description: "Usa Ajuste Defensivo (Destreza/Equilíbrio) no lugar de Chance de Acertar (Força/Músculos) — o que for maior — como bônus de ataque e no lugar de Ajuste de Dano (Força/Músculos) como bônus de dano",
+    type: "advantage",
+  },
+  {
+    name: "Ataque adicional desarmado",
+    category: "ofensivo",
+    applicableClasses: ["Monge"],
+    cost: 15,
+    costOthers: 40,
+    description: "Ataque extra com os punhos. Requer arma de uma mão (ou nenhuma) e sem escudo",
+    type: "advantage",
+  },
+  {
+    name: "Artes Marciais",
+    category: "ofensivo",
+    applicableClasses: ["Monge"],
+    cost: 15,
+    costOthers: 50,
+    description: "Golpes de artes marciais (desarmado ou com armas marciais) causando 1d6 (evolutivo) de dano por ataque",
+    type: "advantage",
+  },
+
+
 
   // ===== AJUSTES DEFENSIVOS - POR RAÇA =====
   {
@@ -192,6 +221,15 @@ export const raceClassAdvantages: RaceClassAdvantage[] = [
     costOthers: -15,
     description: "Restrito a couro batido ou mais leves",
     type: "disadvantage",
+  },
+  {
+    name: "Defesa por Sabedoria",
+    category: "defensivo",
+    applicableClasses: ["Monge"],
+    cost: 15,
+    costOthers: 40,
+    description: "Usa os pontos de Magias Bônus (Sabedoria/Intuição) como bônus de CA, além da Destreza",
+    type: "advantage",
   },
   {
     name: "Limitação de Armadura Natural",
@@ -1204,10 +1242,19 @@ export const raceClassAdvantages: RaceClassAdvantage[] = [
   {
     name: "Voto (Antecedente)",
     category: "antecedente",
-    applicableClasses: ["Guerreiro", "Paladino", "Ranger", "Ladrão", "Bardo", "Sacerdote", "Arcano"],
+    applicableClasses: ["Guerreiro", "Paladino", "Ranger", "Ladrão", "Bardo", "Sacerdote", "Arcano", "Monge"],
     cost: -20,
     costOthers: null,
     description: "Realizou um voto que leva muito a sério",
+    type: "disadvantage",
+  },
+  {
+    name: "Pacto",
+    category: "antecedente",
+    applicableClasses: ["Guerreiro", "Paladino", "Ranger", "Ladrão", "Bardo", "Sacerdote", "Arcano", "Monge"],
+    cost: -40,
+    costOthers: -40,
+    description: "Pacto com alguma entidade. Semelhante ao Voto, mas pode trazer consequências",
     type: "disadvantage",
   },
 ];

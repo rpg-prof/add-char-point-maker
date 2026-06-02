@@ -1,25 +1,30 @@
-import { races, classes, socialClasses, type RaceOption, type ClassOption, type SocialClassOption } from "@/data/characterData";
+import { races, classes, socialClasses, reputations } from "@/data/characterData";
 
 interface RaceClassPanelProps {
   selectedRace: string;
   selectedClass: string;
   selectedSocialClass: string;
+  selectedReputation: number;
   onRaceChange: (race: string) => void;
   onClassChange: (cls: string) => void;
   onSocialClassChange: (sc: string) => void;
+  onReputationChange: (rep: number) => void;
 }
 
 const RaceClassPanel = ({
   selectedRace,
   selectedClass,
   selectedSocialClass,
+  selectedReputation,
   onRaceChange,
   onClassChange,
   onSocialClassChange,
+  onReputationChange,
 }: RaceClassPanelProps) => {
   const raceObj = races.find((r) => r.name === selectedRace);
   const classObj = classes.find((c) => c.name === selectedClass);
   const socialObj = socialClasses.find((s) => s.name === selectedSocialClass);
+  const repObj = reputations.find((r) => r.level === selectedReputation);
 
   return (
     <div className="space-y-4">
@@ -51,7 +56,7 @@ const RaceClassPanel = ({
         <label className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-1.5 block">
           Classe <span className="text-gold">{classObj ? `(${classObj.cost} pts)` : ""}</span>
         </label>
-        <div className="grid grid-cols-4 gap-1.5">
+        <div className="grid grid-cols-3 sm:grid-cols-5 gap-1.5">
           {classes.map((c) => (
             <button
               key={c.name}
@@ -90,6 +95,35 @@ const RaceClassPanel = ({
             </button>
           ))}
         </div>
+      </div>
+
+      {/* Reputation */}
+      <div>
+        <label className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-1.5 block">
+          Reputação <span className="text-gold">{repObj ? `(${repObj.cost} pts)` : ""}</span>
+        </label>
+        <div className="grid grid-cols-5 gap-1.5">
+          {reputations.map((r) => (
+            <button
+              key={r.level}
+              onClick={() => onReputationChange(r.level)}
+              title={r.description}
+              className={`px-2 py-1.5 rounded text-sm font-body border transition-all ${
+                selectedReputation === r.level
+                  ? "bg-gold/20 border-gold text-foreground font-semibold"
+                  : "bg-card/40 border-border hover:bg-card/80 text-muted-foreground"
+              }`}
+            >
+              Nv. {r.level}
+              <span className="block text-xs opacity-70">{r.cost} pts</span>
+            </button>
+          ))}
+        </div>
+        {repObj && (
+          <p className="text-xs text-muted-foreground font-body mt-1.5 italic">
+            {repObj.description}
+          </p>
+        )}
       </div>
     </div>
   );

@@ -168,7 +168,7 @@ const AdvantagesPanel = ({
   };
 
   // Group race/class advantages by category
-  const categories = ["ofensivo", "defensivo", "resistencia", "magica", "outros", "aversao", "poder", "antecedente"] as const;
+  const categories = ["ofensivo", "defensivo", "magica", "outros", "aversao", "poder", "antecedente"] as const;
 
   return (
     <TooltipProvider delayDuration={200}>
