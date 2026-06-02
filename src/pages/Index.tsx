@@ -163,6 +163,7 @@ const Index = () => {
     const raceCost = races.find((r) => r.name === selectedRace)?.cost ?? 0;
     const classCost = classes.find((c) => c.name === selectedClass)?.cost ?? 0;
     const socialCost = socialClasses.find((s) => s.name === selectedSocialClass)?.cost ?? 0;
+    const reputationCost = reputations.find((r) => r.level === selectedReputation)?.cost ?? 0;
 
     const allItems = [...generalAdvantages, ...generalDisadvantages];
     const advCost = selectedAdvantages.reduce((sum, name) => {
@@ -219,8 +220,9 @@ const Index = () => {
       : 0;
     const magicCost = divineCost + arcaneCost + specialistCost;
 
-    return raceCost + classCost + socialCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost;
-  }, [selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist]);
+    return raceCost + classCost + socialCost + reputationCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost;
+  }, [selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist]);
+
 
   // Calculate total points gained from disadvantages (for display/limiting)
   const disadvantagePoints = useMemo(() => {
