@@ -330,8 +330,9 @@ const Index = () => {
 
   const handleSave = useCallback(() => {
     const data = {
-      charName, playerName, attributes, subAttributes,
-      selectedRace, selectedClass, selectedSocialClass,
+      charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia,
+      attributes, subAttributes,
+      selectedRace, selectedClass, selectedSocialClass, selectedReputation,
       selectedAdvantages, selectedRaceClassAdv, selectedSkills,
       selectedWeapons, selectedWeaponGroups, selectedShields, grimoire,
       divineAccess, arcaneAccess, arcaneSpecialist,
@@ -344,7 +345,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory]);
+  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -355,11 +356,19 @@ const Index = () => {
         const data = JSON.parse(ev.target?.result as string);
         if (data.charName !== undefined) setCharName(data.charName);
         if (data.playerName !== undefined) setPlayerName(data.playerName);
+        if (data.sexo !== undefined) setSexo(data.sexo);
+        if (data.idade !== undefined) setIdade(data.idade);
+        if (data.peso !== undefined) setPeso(data.peso);
+        if (data.altura !== undefined) setAltura(data.altura);
+        if (data.cabelos !== undefined) setCabelos(data.cabelos);
+        if (data.olhos !== undefined) setOlhos(data.olhos);
+        if (data.tendencia !== undefined) setTendencia(data.tendencia);
         if (data.attributes) setAttributes(data.attributes);
         if (data.subAttributes) setSubAttributes(data.subAttributes);
         if (data.selectedRace) setSelectedRace(data.selectedRace);
         if (data.selectedClass) setSelectedClass(data.selectedClass);
         if (data.selectedSocialClass) setSelectedSocialClass(data.selectedSocialClass);
+        if (typeof data.selectedReputation === "number") setSelectedReputation(data.selectedReputation);
         if (data.selectedAdvantages) setSelectedAdvantages(data.selectedAdvantages);
         if (data.selectedRaceClassAdv) setSelectedRaceClassAdv(data.selectedRaceClassAdv);
         if (data.selectedSkills) setSelectedSkills(data.selectedSkills);
