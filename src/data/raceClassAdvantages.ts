@@ -126,6 +126,35 @@ export const raceClassAdvantages: RaceClassAdvantage[] = [
     description: "Poder se especializar em uma arma adicional",
     type: "advantage",
   },
+  {
+    name: "Ataque Destro",
+    category: "ofensivo",
+    applicableClasses: ["Monge"],
+    cost: 10,
+    costOthers: 30,
+    description: "Usa Ajuste Defensivo (Destreza/Equilíbrio) no lugar de Chance de Acertar (Força/Músculos) — o que for maior — como bônus de ataque e no lugar de Ajuste de Dano (Força/Músculos) como bônus de dano",
+    type: "advantage",
+  },
+  {
+    name: "Ataque adicional desarmado",
+    category: "ofensivo",
+    applicableClasses: ["Monge"],
+    cost: 15,
+    costOthers: 40,
+    description: "Ataque extra com os punhos. Requer arma de uma mão (ou nenhuma) e sem escudo",
+    type: "advantage",
+  },
+  {
+    name: "Artes Marciais",
+    category: "ofensivo",
+    applicableClasses: ["Monge"],
+    cost: 15,
+    costOthers: 50,
+    description: "Golpes de artes marciais (desarmado ou com armas marciais) causando 1d6 (evolutivo) de dano por ataque",
+    type: "advantage",
+  },
+
+
 
   // ===== AJUSTES DEFENSIVOS - POR RAÇA =====
   {

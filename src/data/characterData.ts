@@ -28,6 +28,7 @@ export const classes: ClassOption[] = [
   { name: "Bardo", cost: 15 },
   { name: "Sacerdote", cost: 15 },
   { name: "Arcano", cost: 20 },
+  { name: "Monge", cost: 20 },
 ];
 
 // ===== SOCIAL CLASS =====
@@ -44,6 +45,34 @@ export const socialClasses: SocialClassOption[] = [
   { name: "Classe média alta", cost: 20, capital: "160 p.o." },
   { name: "Classe alta / Nobreza menor", cost: 30, capital: "320 p.o." },
   { name: "Nobreza Maior", cost: 50, capital: "640 p.o." },
+];
+
+// ===== REPUTATION =====
+export interface ReputationOption {
+  level: number;
+  cost: number;
+  description: string;
+}
+
+export const reputations: ReputationOption[] = [
+  { level: 0, cost: 0, description: "Ninguém nunca ouviu falar do personagem" },
+  { level: 1, cost: 5, description: "Personagem conhecido em sua cidade" },
+  { level: 2, cost: 10, description: "Nome do personagem já foi falado nas cidades vizinhas" },
+  { level: 3, cost: 25, description: "Em muitos lugares já se ouviu alguma estória dele" },
+  { level: 4, cost: 50, description: "É reconhecido (querido ou temido) em todos lugares" },
+];
+
+// ===== ALIGNMENT / TENDÊNCIAS =====
+export const alignments: string[] = [
+  "Leal e Bom",
+  "Leal e Neutro",
+  "Leal e Mal",
+  "Neutro e Bom",
+  "Neutro",
+  "Neutro e Mal",
+  "Caótico e Bom",
+  "Caótico e Neutro",
+  "Caótico e Mal",
 ];
 
 // ===== ADVANTAGES / DISADVANTAGES =====
