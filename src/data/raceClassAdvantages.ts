@@ -223,6 +223,15 @@ export const raceClassAdvantages: RaceClassAdvantage[] = [
     type: "disadvantage",
   },
   {
+    name: "Defesa por Sabedoria",
+    category: "defensivo",
+    applicableClasses: ["Monge"],
+    cost: 15,
+    costOthers: 40,
+    description: "Usa os pontos de Magias Bônus (Sabedoria/Intuição) como bônus de CA, além da Destreza",
+    type: "advantage",
+  },
+  {
     name: "Limitação de Armadura Natural",
     category: "defensivo",
     applicableClasses: ["Guerreiro"],
@@ -1233,10 +1242,19 @@ export const raceClassAdvantages: RaceClassAdvantage[] = [
   {
     name: "Voto (Antecedente)",
     category: "antecedente",
-    applicableClasses: ["Guerreiro", "Paladino", "Ranger", "Ladrão", "Bardo", "Sacerdote", "Arcano"],
+    applicableClasses: ["Guerreiro", "Paladino", "Ranger", "Ladrão", "Bardo", "Sacerdote", "Arcano", "Monge"],
     cost: -20,
     costOthers: null,
     description: "Realizou um voto que leva muito a sério",
+    type: "disadvantage",
+  },
+  {
+    name: "Pacto",
+    category: "antecedente",
+    applicableClasses: ["Guerreiro", "Paladino", "Ranger", "Ladrão", "Bardo", "Sacerdote", "Arcano", "Monge"],
+    cost: -40,
+    costOthers: -40,
+    description: "Pacto com alguma entidade. Semelhante ao Voto, mas pode trazer consequências",
     type: "disadvantage",
   },
 ];
