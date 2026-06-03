@@ -1,20 +1,16 @@
-import { Shield, Check } from "lucide-react";
+import { Shield, Minus, Plus } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { raceClassAdvantages } from "@/data/raceClassAdvantages";
+import { raceClassAdvantages, type RaceClassAdvantage } from "@/data/raceClassAdvantages";
 
 interface ResistancePanelProps {
   subAttributes: Record<string, number>;
   selectedRace: string;
   selectedClass: string;
   selectedRaceClassAdv: string[];
-  onRaceClassToggle: (name: string, cost: number) => void;
+  onAddResistance: (name: string, cost: number) => void;
+  onRemoveResistance: (name: string) => void;
 }
 
-// Constitution-based (Saúde): Veneno/Doenças
-// Destreza (Equilíbrio): Calor
-// Constituição (Condicionamento): Frio
-// Sabedoria (Força de Vontade): Encantamento/Sono
-// Inteligência (Conhecimento): Ilusões
 const RESISTANCE_DEFS: { key: string; label: string; base: number; subAttr: string }[] = [
   { key: "veneno", label: "Veneno / Doenças", base: 20, subAttr: "Saúde" },
   { key: "calor", label: "Calor", base: 20, subAttr: "Equilíbrio" },
@@ -34,15 +30,13 @@ function attrModifier(value: number): number {
   if (value === 15) return 5;
   if (value === 16) return 10;
   if (value === 17) return 15;
-  return 20; // 18+
+  return 20;
 }
 
-// "+5% para cada 3½ pontos" do atributo correspondente
 function perThreeHalf(attrValue: number): number {
   return Math.floor(attrValue / 3.5) * 5;
 }
 
-// Mapping advantage name → which resistance key(s) it boosts and bonus calculation
 function advantageBonus(name: string, subAttributes: Record<string, number>): Partial<Record<string, number>> {
   switch (name) {
     case "Proteção contra magias de sono e feitiço (Raça)":
@@ -78,40 +72,43 @@ function advantageBonus(name: string, subAttributes: Record<string, number>): Pa
   }
 }
 
-
 const ResistancePanel = ({
   subAttributes,
   selectedRace,
   selectedClass,
   selectedRaceClassAdv,
-  onRaceClassToggle,
+  onAddResistance,
+  onRemoveResistance,
 }: ResistancePanelProps) => {
   const resistanceItems = raceClassAdvantages.filter((a) => a.category === "resistencia");
 
-  const matchesRaceOf = (item: typeof resistanceItems[number]) =>
+  const matchesRaceOf = (item: RaceClassAdvantage) =>
     !!item.applicableRaces?.some((r) => r === "Todas" || r === selectedRace);
-  const matchesClassOf = (item: typeof resistanceItems[number]) =>
+  const matchesClassOf = (item: RaceClassAdvantage) =>
     !!item.applicableClasses?.some((c) => c === "Todas" || c === selectedClass);
 
-  const isAvailable = (item: typeof resistanceItems[number]): boolean => {
+  const isAvailable = (item: RaceClassAdvantage): boolean => {
     if (matchesRaceOf(item) || matchesClassOf(item)) return true;
     return item.costOthers !== null;
   };
 
-  const getItemCost = (item: typeof resistanceItems[number]): number => {
+  const getItemCost = (item: RaceClassAdvantage): number => {
     if (matchesRaceOf(item) || matchesClassOf(item)) return item.cost;
     return item.costOthers ?? item.cost;
   };
 
+  const countOf = (name: string) => selectedRaceClassAdv.filter((n) => n === name).length;
 
-  // Compute totals
+  // Compute totals (multiplied by purchase count)
   const totals = RESISTANCE_DEFS.map((def) => {
     const subVal = subAttributes[def.subAttr] ?? 10;
     const attrMod = attrModifier(subVal);
     let bonus = 0;
-    for (const advName of selectedRaceClassAdv) {
-      const b = advantageBonus(advName, subAttributes)[def.key];
-      if (b) bonus += b;
+    for (const item of resistanceItems) {
+      const count = countOf(item.name);
+      if (!count) continue;
+      const b = advantageBonus(item.name, subAttributes)[def.key];
+      if (b) bonus += b * count;
     }
     const total = def.base + attrMod + bonus;
     return { ...def, subVal, attrMod, bonus, total };
@@ -120,7 +117,6 @@ const ResistancePanel = ({
   return (
     <TooltipProvider delayDuration={200}>
       <div className="space-y-6">
-        {/* Resistance values */}
         <div>
           <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-3">
             <Shield className="w-4 h-4 inline mr-1" />
@@ -128,19 +124,14 @@ const ResistancePanel = ({
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
             {totals.map((r) => (
-              <div
-                key={r.key}
-                className="rounded border border-border bg-card/40 px-3 py-2 flex flex-col"
-              >
+              <div key={r.key} className="rounded border border-border bg-card/40 px-3 py-2 flex flex-col">
                 <div className="flex items-center justify-between">
                   <span className="font-display text-sm text-foreground">{r.label}</span>
                   <span className="font-display text-xl font-bold text-gold">{r.total}%</span>
                 </div>
                 <div className="text-[10px] text-muted-foreground font-body mt-1">
                   Base {r.base}% · {r.subAttr}({r.subVal}) {r.attrMod >= 0 ? "+" : ""}{r.attrMod}%
-                  {r.bonus !== 0 && (
-                    <> · Vant. {r.bonus >= 0 ? "+" : ""}{r.bonus}%</>
-                  )}
+                  {r.bonus !== 0 && (<> · Vant. {r.bonus >= 0 ? "+" : ""}{r.bonus}%</>)}
                 </div>
               </div>
             ))}
@@ -150,61 +141,79 @@ const ResistancePanel = ({
           </p>
         </div>
 
-        {/* Resistance advantages */}
         <div>
           <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-2">
             Vantagens & Desvantagens de Resistência
           </h3>
           <p className="text-xs text-muted-foreground font-body mb-3">
             Raça: <span className="text-foreground font-semibold">{selectedRace}</span> · Classe: <span className="text-foreground font-semibold">{selectedClass}</span>
+            <span className="ml-2 text-muted-foreground/60">(<span className="font-display">*</span> = custo diferente para outras raças/classes)</span>
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
             {resistanceItems.map((item) => {
               if (!isAvailable(item)) return null;
-              const isSelected = selectedRaceClassAdv.includes(item.name);
-              const isAdv = item.type === "advantage";
               const cost = getItemCost(item);
               const isNative = matchesRaceOf(item) || matchesClassOf(item);
-
+              const isAdv = item.type === "advantage";
+              const count = countOf(item.name);
+              const max = item.maxPurchases ?? 1;
+              const canAdd = count < max;
+              const canRemove = count > 0;
+              const isActive = count > 0;
 
               return (
                 <Tooltip key={item.name}>
                   <TooltipTrigger asChild>
-                    <button
-                      onClick={() => onRaceClassToggle(item.name, cost)}
-                      className={`flex items-center gap-2 px-2.5 py-1.5 rounded text-sm font-body border transition-all text-left ${
-                        isSelected
+                    <div
+                      className={`flex items-center gap-2 px-2.5 py-1.5 rounded text-sm font-body border transition-all ${
+                        isActive
                           ? isAdv
                             ? "bg-gold/20 border-gold text-foreground"
                             : "bg-blood/15 border-blood/50 text-foreground"
                           : !isNative
-                          ? "bg-card/20 border-border/50 hover:bg-card/60 text-muted-foreground/70"
-                          : "bg-card/40 border-border hover:bg-card/80 text-muted-foreground"
+                          ? "bg-card/20 border-border/50 text-muted-foreground/70"
+                          : "bg-card/40 border-border text-muted-foreground"
                       }`}
                     >
-                      <span
-                        className={`w-4 h-4 rounded-sm border flex items-center justify-center flex-shrink-0 ${
-                          isSelected
-                            ? isAdv
-                              ? "bg-gold border-gold"
-                              : "bg-blood border-blood"
-                            : "border-border"
-                        }`}
-                      >
-                        {isSelected && <Check className="w-3 h-3 text-primary-foreground" />}
-                      </span>
                       <span className="flex-1 truncate text-xs">{item.name}</span>
-                      {!isNative && (
-                        <span className="text-[10px] text-muted-foreground/50 font-display">*</span>
-                      )}
+                      {!isNative && <span className="text-[10px] text-muted-foreground/50 font-display">*</span>}
                       <span className={`text-xs font-display ${cost > 0 ? "text-gold-dark" : "text-blood"}`}>
                         {cost > 0 ? `+${cost}` : cost}
                       </span>
-                    </button>
+                      <div className="flex items-center gap-1 ml-1">
+                        <button
+                          type="button"
+                          disabled={!canRemove}
+                          onClick={() => onRemoveResistance(item.name)}
+                          className="w-5 h-5 rounded border border-border bg-card/60 flex items-center justify-center hover:bg-card disabled:opacity-30 disabled:cursor-not-allowed"
+                          aria-label="Remover"
+                        >
+                          <Minus className="w-3 h-3" />
+                        </button>
+                        <span className="font-display text-xs w-4 text-center">
+                          {count}{max > 1 ? `/${max}` : ""}
+                        </span>
+                        <button
+                          type="button"
+                          disabled={!canAdd}
+                          onClick={() => onAddResistance(item.name, cost)}
+                          className="w-5 h-5 rounded border border-border bg-card/60 flex items-center justify-center hover:bg-card disabled:opacity-30 disabled:cursor-not-allowed"
+                          aria-label="Adicionar"
+                        >
+                          <Plus className="w-3 h-3" />
+                        </button>
+                      </div>
+                    </div>
                   </TooltipTrigger>
                   <TooltipContent side="top" className="max-w-sm text-xs font-body">
                     <p className="font-semibold text-foreground mb-1">{item.name}</p>
                     <p className="text-muted-foreground">{item.description}</p>
+                    {item.costOthers !== null && (
+                      <p className="text-muted-foreground mt-1">
+                        Custo p/ Classe/Raça: <span className="text-foreground font-semibold">{item.cost > 0 ? `+${item.cost}` : item.cost}</span>
+                        {" · Demais: "}<span className="text-foreground font-semibold">{item.costOthers > 0 ? `+${item.costOthers}` : item.costOthers}</span>
+                      </p>
+                    )}
                   </TooltipContent>
                 </Tooltip>
               );
