@@ -12,6 +12,8 @@ export interface RaceClassAdvantage {
   costOthers: number | null;
   description: string;
   type: "advantage" | "disadvantage";
+  /** Maximum number of times this item can be purchased (default 1) */
+  maxPurchases?: number;
 }
 
 export const raceClassAdvantages: RaceClassAdvantage[] = [
