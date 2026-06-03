@@ -513,7 +513,8 @@ const Index = () => {
               selectedRace={selectedRace}
               selectedClass={selectedClass}
               selectedRaceClassAdv={selectedRaceClassAdv}
-              onRaceClassToggle={handleRaceClassAdvToggle}
+              onAddResistance={handleAddResistance}
+              onRemoveResistance={handleRemoveResistance}
             />
           </div>
         );
