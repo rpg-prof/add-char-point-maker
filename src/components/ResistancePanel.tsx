@@ -164,9 +164,8 @@ const ResistancePanel = ({
               const isSelected = selectedRaceClassAdv.includes(item.name);
               const isAdv = item.type === "advantage";
               const cost = getItemCost(item);
-              const matchesRace = item.applicableRaces?.includes(selectedRace);
-              const matchesClass = item.applicableClasses?.includes(selectedClass);
-              const isNative = matchesRace || matchesClass;
+              const isNative = matchesRaceOf(item) || matchesClassOf(item);
+
 
               return (
                 <Tooltip key={item.name}>
