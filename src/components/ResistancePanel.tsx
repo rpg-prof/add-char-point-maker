@@ -88,19 +88,21 @@ const ResistancePanel = ({
 }: ResistancePanelProps) => {
   const resistanceItems = raceClassAdvantages.filter((a) => a.category === "resistencia");
 
+  const matchesRaceOf = (item: typeof resistanceItems[number]) =>
+    !!item.applicableRaces?.some((r) => r === "Todas" || r === selectedRace);
+  const matchesClassOf = (item: typeof resistanceItems[number]) =>
+    !!item.applicableClasses?.some((c) => c === "Todas" || c === selectedClass);
+
   const isAvailable = (item: typeof resistanceItems[number]): boolean => {
-    const matchesRace = item.applicableRaces?.includes(selectedRace);
-    const matchesClass = item.applicableClasses?.includes(selectedClass);
-    if (matchesRace || matchesClass) return true;
+    if (matchesRaceOf(item) || matchesClassOf(item)) return true;
     return item.costOthers !== null;
   };
 
   const getItemCost = (item: typeof resistanceItems[number]): number => {
-    const matchesRace = item.applicableRaces?.includes(selectedRace);
-    const matchesClass = item.applicableClasses?.includes(selectedClass);
-    if (matchesRace || matchesClass) return item.cost;
+    if (matchesRaceOf(item) || matchesClassOf(item)) return item.cost;
     return item.costOthers ?? item.cost;
   };
+
 
   // Compute totals
   const totals = RESISTANCE_DEFS.map((def) => {
