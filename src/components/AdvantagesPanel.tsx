@@ -82,28 +82,29 @@ const AdvantagesPanel = ({
     return button;
   };
 
+  const matchesRaceOf = (item: RaceClassAdvantage) =>
+    !!item.applicableRaces?.some((r) => r === "Todas" || r === selectedRace);
+  const matchesClassOf = (item: RaceClassAdvantage) =>
+    !!item.applicableClasses?.some((c) => c === "Todas" || c === selectedClass);
+
   const getItemCost = (item: RaceClassAdvantage): number => {
-    const matchesRace = item.applicableRaces?.includes(selectedRace);
-    const matchesClass = item.applicableClasses?.includes(selectedClass);
-    if (matchesRace || matchesClass) return item.cost;
+    if (matchesRaceOf(item) || matchesClassOf(item)) return item.cost;
     return item.costOthers ?? item.cost;
   };
 
   const isAvailable = (item: RaceClassAdvantage): boolean => {
-    const matchesRace = item.applicableRaces?.includes(selectedRace);
-    const matchesClass = item.applicableClasses?.includes(selectedClass);
-    if (matchesRace || matchesClass) return true;
+    if (matchesRaceOf(item) || matchesClassOf(item)) return true;
     return item.costOthers !== null;
   };
+
 
   const renderRaceClassItem = (item: RaceClassAdvantage) => {
     const available = isAvailable(item);
     const isSelected = selectedRaceClassAdvantages.includes(item.name);
     const isAdv = item.type === "advantage";
     const cost = getItemCost(item);
-    const matchesRace = item.applicableRaces?.includes(selectedRace);
-    const matchesClass = item.applicableClasses?.includes(selectedClass);
-    const isNative = matchesRace || matchesClass;
+    const isNative = matchesRaceOf(item) || matchesClassOf(item);
+
 
     if (!available) return null;
 

@@ -22,6 +22,8 @@ const RESISTANCE_DEFS: { key: string; label: string; base: number; subAttr: stri
   { key: "sono", label: "Encantamento / Sono", base: 15, subAttr: "Força de Vontade" },
   { key: "ilusoes", label: "Ilusões", base: 15, subAttr: "Conhecimento" },
   { key: "magia", label: "Magia", base: 15, subAttr: "Força de Vontade" },
+  { key: "som", label: "Som", base: 0, subAttr: "Força de Vontade" },
+  { key: "dreno", label: "Dreno de Energia", base: 0, subAttr: "Força de Vontade" },
 ];
 
 function attrModifier(value: number): number {
@@ -35,27 +37,24 @@ function attrModifier(value: number): number {
   return 20; // 18+
 }
 
+// "+5% para cada 3½ pontos" do atributo correspondente
+function perThreeHalf(attrValue: number): number {
+  return Math.floor(attrValue / 3.5) * 5;
+}
+
 // Mapping advantage name → which resistance key(s) it boosts and bonus calculation
 function advantageBonus(name: string, subAttributes: Record<string, number>): Partial<Record<string, number>> {
-  const tieredBonus = (val: number): number => {
-    if (val >= 4 && val <= 6) return 5;
-    if (val >= 7 && val <= 10) return 10;
-    if (val >= 11 && val <= 13) return 15;
-    if (val >= 14 && val <= 17) return 20;
-    if (val >= 18) return 25;
-    return 0;
-  };
   switch (name) {
     case "Proteção contra magias de sono e feitiço (Raça)":
       return { sono: 30 };
     case "Resistência à magia (Raça)":
-      return { magia: tieredBonus(subAttributes["Razão"] ?? 10) };
+      return { magia: perThreeHalf(subAttributes["Razão"] ?? 10) };
     case "Resistência à veneno (Raça)":
-      return { veneno: tieredBonus(subAttributes["Saúde"] ?? 10) };
+      return { veneno: perThreeHalf(subAttributes["Saúde"] ?? 10) };
     case "Resistência à magias de sono e feitiço (Raça)":
-      return { sono: tieredBonus(subAttributes["Força de Vontade"] ?? 10) };
+      return { sono: perThreeHalf(subAttributes["Força de Vontade"] ?? 10) };
     case "Resistência à ilusões (Raça)":
-      return { ilusoes: tieredBonus(subAttributes["Conhecimento"] ?? 10) };
+      return { ilusoes: perThreeHalf(subAttributes["Conhecimento"] ?? 10) };
     case "Acreditar em ilusões":
       return { ilusoes: -15 };
     case "Resistência ao calor":
@@ -67,17 +66,18 @@ function advantageBonus(name: string, subAttributes: Record<string, number>): Pa
     case "Resistência a magia (Classe)":
       return { magia: 5 };
     case "Resistência ao Som":
-      return {}; // separate resistance, not in our base list
+      return { som: 15 };
     case "Resistência a sono e feitiço (Classe)":
       return { sono: 5 };
     case "Resistência a veneno (Classe)":
       return { veneno: 5 };
     case "Resistir a dreno de energia":
-      return {}; // separate
+      return { dreno: 15 };
     default:
       return {};
   }
 }
+
 
 const ResistancePanel = ({
   subAttributes,
@@ -88,19 +88,21 @@ const ResistancePanel = ({
 }: ResistancePanelProps) => {
   const resistanceItems = raceClassAdvantages.filter((a) => a.category === "resistencia");
 
+  const matchesRaceOf = (item: typeof resistanceItems[number]) =>
+    !!item.applicableRaces?.some((r) => r === "Todas" || r === selectedRace);
+  const matchesClassOf = (item: typeof resistanceItems[number]) =>
+    !!item.applicableClasses?.some((c) => c === "Todas" || c === selectedClass);
+
   const isAvailable = (item: typeof resistanceItems[number]): boolean => {
-    const matchesRace = item.applicableRaces?.includes(selectedRace);
-    const matchesClass = item.applicableClasses?.includes(selectedClass);
-    if (matchesRace || matchesClass) return true;
+    if (matchesRaceOf(item) || matchesClassOf(item)) return true;
     return item.costOthers !== null;
   };
 
   const getItemCost = (item: typeof resistanceItems[number]): number => {
-    const matchesRace = item.applicableRaces?.includes(selectedRace);
-    const matchesClass = item.applicableClasses?.includes(selectedClass);
-    if (matchesRace || matchesClass) return item.cost;
+    if (matchesRaceOf(item) || matchesClassOf(item)) return item.cost;
     return item.costOthers ?? item.cost;
   };
+
 
   // Compute totals
   const totals = RESISTANCE_DEFS.map((def) => {
@@ -162,9 +164,8 @@ const ResistancePanel = ({
               const isSelected = selectedRaceClassAdv.includes(item.name);
               const isAdv = item.type === "advantage";
               const cost = getItemCost(item);
-              const matchesRace = item.applicableRaces?.includes(selectedRace);
-              const matchesClass = item.applicableClasses?.includes(selectedClass);
-              const isNative = matchesRace || matchesClass;
+              const isNative = matchesRaceOf(item) || matchesClassOf(item);
+
 
               return (
                 <Tooltip key={item.name}>
