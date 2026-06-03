@@ -266,6 +266,20 @@ const Index = () => {
     );
   };
 
+  const handleAddResistance = (name: string) => {
+    setSelectedRaceClassAdv((prev) => [...prev, name]);
+  };
+
+  const handleRemoveResistance = (name: string) => {
+    setSelectedRaceClassAdv((prev) => {
+      const idx = prev.lastIndexOf(name);
+      if (idx === -1) return prev;
+      const next = [...prev];
+      next.splice(idx, 1);
+      return next;
+    });
+  };
+
   const handleSkillToggle = (name: string) => {
     setSelectedSkills((prev) =>
       prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
