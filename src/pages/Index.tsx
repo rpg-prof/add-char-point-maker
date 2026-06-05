@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -50,6 +50,8 @@ const BASE_STEPS = [
 
 const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
 const ADVANTAGES_STEP = { label: "Vantagens", icon: Swords, desc: "Vantagens e desvantagens" };
+const POWERS_STEP = { label: "Poderes", icon: Sparkles, desc: "Poderes especiais do personagem" };
+const BACKGROUND_STEP = { label: "Antecedentes", icon: Scroll, desc: "Antecedentes e história do personagem" };
 const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
 
@@ -102,7 +104,7 @@ const Index = () => {
     arcaneSpecialist !== null;
 
   const STEPS = useMemo(() => {
-    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP];
+    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP, POWERS_STEP, BACKGROUND_STEP];
     if (hasMagicAccess) steps.push(MAGIC_STEP);
     steps.push(SUMMARY_STEP);
     return steps;
@@ -531,7 +533,45 @@ const Index = () => {
               onRaceClassToggle={handleRaceClassAdvToggle}
               selectedRace={selectedRace}
               selectedClass={selectedClass}
-              disadvantagePoints={disadvantagePoints}
+              categoriesFilter={["ofensivo", "defensivo", "magica", "outros", "aversao"]}
+            />
+          </div>
+        );
+      case "Poderes":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Poderes especiais disponíveis para a raça e classe selecionadas.
+            </p>
+            <AdvantagesPanel
+              selected={selectedAdvantages}
+              onToggle={handleAdvantageToggle}
+              selectedRaceClassAdvantages={selectedRaceClassAdv}
+              onRaceClassToggle={handleRaceClassAdvToggle}
+              selectedRace={selectedRace}
+              selectedClass={selectedClass}
+              showGeneral={false}
+              categoriesFilter={["poder"]}
+              raceClassHeading="Poderes"
+            />
+          </div>
+        );
+      case "Antecedentes":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Antecedentes e elementos de história do personagem.
+            </p>
+            <AdvantagesPanel
+              selected={selectedAdvantages}
+              onToggle={handleAdvantageToggle}
+              selectedRaceClassAdvantages={selectedRaceClassAdv}
+              onRaceClassToggle={handleRaceClassAdvToggle}
+              selectedRace={selectedRace}
+              selectedClass={selectedClass}
+              showGeneral={false}
+              categoriesFilter={["antecedente"]}
+              raceClassHeading="Antecedentes"
             />
           </div>
         );
@@ -699,6 +739,21 @@ const Index = () => {
             />
           )}
         </div>
+
+        {/* Global Disadvantage Points Counter */}
+        {disadvantagePoints > 0 && (
+          <div className="flex items-center justify-between p-3 rounded-lg bg-blood/10 border border-blood/30">
+            <div className="flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-blood" />
+              <span className="font-display text-sm tracking-wider text-foreground">
+                Pontos de Desvantagem
+              </span>
+            </div>
+            <span className="font-display text-lg text-blood font-bold">
+              {disadvantagePoints}
+            </span>
+          </div>
+        )}
 
         {/* Evolve Dialog */}
         <Dialog open={showEvolveDialog} onOpenChange={setShowEvolveDialog}>
