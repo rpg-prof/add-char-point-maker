@@ -961,6 +961,15 @@ export const raceClassAdvantages: RaceClassAdvantage[] = [
 
   // ===== PODERES =====
   {
+    name: "Truque Arcano",
+    category: "poder",
+    applicableClasses: ["Arcano"],
+    cost: 15,
+    costOthers: 40,
+    description: "Acesso permanente a todos os Truques. Uso livre, sem limite e sem Pontos de Magia. Ver detalhes: http://adeide25.net.uztec.com.br/pagina/a2-truques-arcanos",
+    type: "advantage",
+  },
+  {
     name: "Cura pelas mãos",
     category: "poder",
     applicableClasses: ["Sacerdote", "Paladino"],
