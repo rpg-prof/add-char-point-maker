@@ -197,48 +197,40 @@ const AdvantagesPanel = ({
   };
 
   // Group race/class advantages by category
-  const categories = ["ofensivo", "defensivo", "magica", "outros", "aversao", "poder", "antecedente"] as const;
+  const allCategories: AdvCategory[] = ["ofensivo", "defensivo", "magica", "outros", "aversao", "poder", "antecedente"];
+  const categories = categoriesFilter ?? allCategories;
 
   return (
     <TooltipProvider delayDuration={200}>
     <div className="space-y-4">
-      {/* Disadvantage Points Counter */}
-      <div className="flex items-center justify-between p-3 rounded-lg bg-blood/10 border border-blood/30">
-        <div className="flex items-center gap-2">
-          <AlertTriangle className="w-5 h-5 text-blood" />
-          <span className="font-display text-sm tracking-wider text-foreground">
-            Pontos de Desvantagem
-          </span>
-        </div>
-        <span className="font-display text-lg text-blood font-bold">
-          {disadvantagePoints}
-        </span>
-      </div>
+      {showGeneral && (
+        <>
+          {/* General Advantages */}
+          <div>
+            <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-2">
+              Vantagens Gerais
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+              {generalAdvantages.map(renderGeneralItem)}
+            </div>
+          </div>
 
-      {/* General Advantages */}
-      <div>
-        <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-2">
-          Vantagens Gerais
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
-          {generalAdvantages.map(renderGeneralItem)}
-        </div>
-      </div>
-
-      {/* General Disadvantages */}
-      <div>
-        <h3 className="font-display text-sm tracking-wider uppercase text-blood mb-2">
-          Desvantagens Gerais
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
-          {generalDisadvantages.map(renderGeneralItem)}
-        </div>
-      </div>
+          {/* General Disadvantages */}
+          <div>
+            <h3 className="font-display text-sm tracking-wider uppercase text-blood mb-2">
+              Desvantagens Gerais
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+              {generalDisadvantages.map(renderGeneralItem)}
+            </div>
+          </div>
+        </>
+      )}
 
       {/* Race/Class Specific */}
-      <div className="border-t border-border pt-4">
+      <div className={showGeneral ? "border-t border-border pt-4" : ""}>
         <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-3">
-          Vantagens por Raça & Classe
+          {raceClassHeading}
         </h3>
         <p className="text-xs text-muted-foreground mb-3 font-body">
           Raça: <span className="text-foreground font-semibold">{selectedRace}</span> · Classe: <span className="text-foreground font-semibold">{selectedClass}</span>
