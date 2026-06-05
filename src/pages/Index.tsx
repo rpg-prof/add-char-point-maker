@@ -555,7 +555,15 @@ const Index = () => {
         return (
           <div className="space-y-4">
             <p className="font-body text-muted-foreground text-sm">
-              Distribua {ATTRIBUTE_POINTS} pontos entre os atributos. Cada um começa em 10.
+              Distribua {ATTRIBUTE_POINTS} pontos entre os atributos. Cada um começa em 10.{" "}
+              <a
+                href="http://adeide25.net.uztec.com.br/pagina/01-atributos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gold hover:underline"
+              >
+                Ver mais detalhes
+              </a>
             </p>
             <AttributePanel
               attributes={attributes}
@@ -723,7 +731,7 @@ const Index = () => {
               <AppLogo size={44} />
               <div>
                 <h1 className="font-display text-xl md:text-2xl tracking-widest text-parchment">
-                  AD&D 2.5 Edition - Criação de Personagens
+                  AD&D 2.5 Edition - Criação de Personagens - v0.8
                 </h1>
                 <p className="text-sm font-body">
                   <a

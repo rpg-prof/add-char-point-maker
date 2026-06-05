@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Minus, Plus, ChevronDown, ChevronUp } from "lucide-react";
+import type { ReactNode } from "react";
+import { Minus, Plus } from "lucide-react";
 import { attributeNames, type AttributeName } from "@/data/characterData";
 import {
   subAttributeMap,
@@ -16,13 +16,14 @@ interface AttributePanelProps {
   onSubChange: (subAttr: string, value: number) => void;
 }
 
-const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: AttributePanelProps) => {
-  const [expandedAttr, setExpandedAttr] = useState<string | null>(null);
+const btnCls =
+  "w-7 h-7 rounded flex items-center justify-center bg-parchment-dark/10 border border-border hover:bg-parchment-dark/20 disabled:opacity-30 transition-colors shrink-0";
 
-  const totalCost = Object.entries(attributes).reduce(
-    (sum, [, val]) => sum + val,
-    0
-  );
+const labelCls =
+  "font-display text-sm tracking-wide text-foreground truncate w-[9rem] shrink-0";
+
+const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: AttributePanelProps) => {
+  const totalCost = Object.entries(attributes).reduce((sum, [, val]) => sum + val, 0);
 
   const handleMainChange = (attr: AttributeName, newValue: number) => {
     const oldValue = attributes[attr];
@@ -31,27 +32,22 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
 
     onChange(attr, newValue);
 
-    // Reset sub-attributes to equal the new main value
     const diff = newValue - oldValue;
     const oldSub1 = subAttributes[def.sub1] ?? oldValue;
     const oldSub2 = subAttributes[def.sub2] ?? oldValue;
-    // Keep the ratio but clamp
     let newSub1 = oldSub1 + diff;
     let newSub2 = oldSub2;
-    // Ensure sum = 2 * newValue
     const targetSum = newValue * 2;
     const currentSum = newSub1 + newSub2;
     if (currentSum !== targetSum) {
       newSub2 = targetSum - newSub1;
     }
-    // Clamp both within +/-2 of main
     newSub1 = Math.max(newValue - 2, Math.min(newValue + 2, newSub1));
     newSub2 = targetSum - newSub1;
     if (newSub2 < newValue - 2 || newSub2 > newValue + 2) {
       newSub2 = Math.max(newValue - 2, Math.min(newValue + 2, newSub2));
       newSub1 = targetSum - newSub2;
     }
-    // Final clamp to 3-18
     newSub1 = Math.max(3, Math.min(18, newSub1));
     newSub2 = Math.max(3, Math.min(18, newSub2));
 
@@ -71,7 +67,6 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
     const newVal = currentVal + delta;
     const newOther = otherVal - delta;
 
-    // Constraints: within +/-2 of main, 3-18 range
     if (newVal < mainVal - 2 || newVal > mainVal + 2) return;
     if (newOther < mainVal - 2 || newOther > mainVal + 2) return;
     if (newVal < 3 || newVal > 18 || newOther < 3 || newOther > 18) return;
@@ -80,117 +75,113 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
     onSubChange(otherSub, newOther);
   };
 
+  const renderBonuses = (subName: SubAttributeName, subVal: number) => {
+    const bonuses = getSubAttributeBonuses(subName, subVal);
+    if (Object.keys(bonuses).length === 0) return null;
+
+    return (
+      <div className="mt-1.5 flex flex-wrap gap-x-2.5 gap-y-0.5">
+        {Object.entries(bonuses).map(([key, val]) => (
+          <span key={key} className="text-[10px] font-body text-muted-foreground leading-tight whitespace-nowrap">
+            <span className="text-foreground/55">{key}:</span>{" "}
+            <span
+              className={
+                val.startsWith("+") ? "text-gold" : val.startsWith("-") ? "text-blood" : "text-foreground/80"
+              }
+            >
+              {val}
+            </span>
+          </span>
+        ))}
+      </div>
+    );
+  };
+
+  const renderColumn = (
+    label: string,
+    value: number,
+    onDec: () => void,
+    onInc: () => void,
+    decDisabled: boolean,
+    incDisabled: boolean,
+    bonuses?: ReactNode,
+    deltaFromMain?: number
+  ) => (
+    <div className="min-w-0">
+      <div className="grid grid-cols-[9rem_1.75rem_1.75rem_1.75rem_auto] gap-x-1.5 items-center">
+        <span className={labelCls} title={label}>
+          {label}
+        </span>
+        <button type="button" onClick={onDec} disabled={decDisabled} className={btnCls}>
+          <Minus className="w-3.5 h-3.5" />
+        </button>
+        <span className="font-display text-lg text-center font-bold text-foreground tabular-nums">
+          {value}
+        </span>
+        <button type="button" onClick={onInc} disabled={incDisabled} className={btnCls}>
+          <Plus className="w-3.5 h-3.5" />
+        </button>
+        {deltaFromMain !== undefined && deltaFromMain !== 0 ? (
+          <span className="text-[10px] text-gold/80 font-body whitespace-nowrap">
+            ({deltaFromMain >= 0 ? "+" : ""}
+            {deltaFromMain})
+          </span>
+        ) : (
+          <span aria-hidden="true" />
+        )}
+      </div>
+      {bonuses && <div className="pl-[calc(9rem+0.375rem)]">{bonuses}</div>}
+    </div>
+  );
+
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
         <h2 className="font-display text-lg tracking-wider text-foreground">Atributos</h2>
-        <span className="font-display text-sm text-gold">
-          Gastos: {totalCost} / 75
-        </span>
+        <span className="font-display text-sm text-gold">Gastos: {totalCost} / 75</span>
       </div>
 
-      <div className="grid gap-2">
+      <div className="grid gap-3">
         {attributeNames.map((attr) => {
           const value = attributes[attr];
-          const cost = value;
           const def = subAttributeMap.find((d) => d.main === attr)!;
-          const isExpanded = expandedAttr === attr;
+          const sub1Val = subAttributes[def.sub1] ?? value;
+          const sub2Val = subAttributes[def.sub2] ?? value;
 
           return (
-            <div key={attr} className="rounded-md bg-card/60 border border-border overflow-hidden">
-              {/* Main attribute row */}
-              <div className="flex items-center gap-3 px-3 py-2">
-                <button
-                  onClick={() => setExpandedAttr(isExpanded ? null : attr)}
-                  className="w-5 h-5 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                </button>
+            <div key={attr} className="rounded-md bg-card/60 border border-border px-3 py-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-3">
+                {renderColumn(
+                  attr,
+                  value,
+                  () => handleMainChange(attr, Math.max(3, value - 1)),
+                  () => handleMainChange(attr, Math.min(18, value + 1)),
+                  value <= 3,
+                  value >= 18
+                )}
 
-                <span className="font-display text-sm w-24 tracking-wide">{attr}</span>
+                {renderColumn(
+                  def.sub2,
+                  sub2Val,
+                  () => handleSubAttrChange(attr, def.sub2, -1),
+                  () => handleSubAttrChange(attr, def.sub2, 1),
+                  sub2Val <= value - 2 || sub2Val <= 3,
+                  sub2Val >= value + 2 || sub2Val >= 18,
+                  renderBonuses(def.sub2 as SubAttributeName, sub2Val),
+                  sub2Val - value
+                )}
 
-                <button
-                  onClick={() => handleMainChange(attr, Math.max(3, value - 1))}
-                  disabled={value <= 3}
-                  className="w-7 h-7 rounded flex items-center justify-center bg-parchment-dark/10 border border-border hover:bg-parchment-dark/20 disabled:opacity-30 transition-colors"
-                >
-                  <Minus className="w-3.5 h-3.5" />
-                </button>
-
-                <span className="font-display text-lg w-8 text-center font-bold text-foreground">
-                  {value}
-                </span>
-
-                <button
-                  onClick={() => handleMainChange(attr, Math.min(18, value + 1))}
-                  disabled={value >= 18}
-                  className="w-7 h-7 rounded flex items-center justify-center bg-parchment-dark/10 border border-border hover:bg-parchment-dark/20 disabled:opacity-30 transition-colors"
-                >
-                  <Plus className="w-3.5 h-3.5" />
-                </button>
-
-                <span className="text-xs text-muted-foreground ml-auto font-body">
-                  Custo: {cost}
-                </span>
+                {renderColumn(
+                  def.sub1,
+                  sub1Val,
+                  () => handleSubAttrChange(attr, def.sub1, -1),
+                  () => handleSubAttrChange(attr, def.sub1, 1),
+                  sub1Val <= value - 2 || sub1Val <= 3,
+                  sub1Val >= value + 2 || sub1Val >= 18,
+                  renderBonuses(def.sub1 as SubAttributeName, sub1Val),
+                  sub1Val - value
+                )}
               </div>
-
-              {/* Sub-attributes */}
-              {isExpanded && (
-                <div className="border-t border-border bg-background/30 px-3 py-2 space-y-2">
-                  {[def.sub1, def.sub2].map((subName) => {
-                    const subVal = subAttributes[subName] ?? value;
-                    const bonuses = getSubAttributeBonuses(subName as SubAttributeName, subVal);
-
-                    return (
-                      <div key={subName} className="space-y-1">
-                        <div className="flex items-center gap-2">
-                          <span className="font-body text-xs text-muted-foreground w-32 truncate" title={subName}>
-                            {subName}
-                          </span>
-
-                          <button
-                            onClick={() => handleSubAttrChange(attr, subName, -1)}
-                            disabled={subVal <= value - 2 || subVal <= 3}
-                            className="w-6 h-6 rounded flex items-center justify-center bg-parchment-dark/10 border border-border hover:bg-parchment-dark/20 disabled:opacity-30 transition-colors"
-                          >
-                            <Minus className="w-3 h-3" />
-                          </button>
-
-                          <span className="font-display text-sm w-6 text-center font-bold text-foreground">
-                            {subVal}
-                          </span>
-
-                          <button
-                            onClick={() => handleSubAttrChange(attr, subName, 1)}
-                            disabled={subVal >= value + 2 || subVal >= 18}
-                            className="w-6 h-6 rounded flex items-center justify-center bg-parchment-dark/10 border border-border hover:bg-parchment-dark/20 disabled:opacity-30 transition-colors"
-                          >
-                            <Plus className="w-3 h-3" />
-                          </button>
-
-                          <span className="text-[10px] text-gold/80 ml-1">
-                            ({subVal - value >= 0 ? "+" : ""}{subVal - value})
-                          </span>
-                        </div>
-
-                        {/* Bonuses from lookup table */}
-                        {Object.keys(bonuses).length > 0 && (
-                          <div className="flex flex-wrap gap-x-3 gap-y-0.5 pl-[136px]">
-                            {Object.entries(bonuses).map(([key, val]) => (
-                              <span key={key} className="text-[10px] font-body text-muted-foreground">
-                                <span className="text-foreground/60">{key}:</span>{" "}
-                                <span className={val.startsWith("+") ? "text-gold" : val.startsWith("-") ? "text-blood" : ""}>
-                                  {val}
-                                </span>
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              )}
             </div>
           );
         })}
