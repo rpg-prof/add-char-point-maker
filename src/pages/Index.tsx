@@ -533,7 +533,45 @@ const Index = () => {
               onRaceClassToggle={handleRaceClassAdvToggle}
               selectedRace={selectedRace}
               selectedClass={selectedClass}
-              disadvantagePoints={disadvantagePoints}
+              categoriesFilter={["ofensivo", "defensivo", "magica", "outros", "aversao"]}
+            />
+          </div>
+        );
+      case "Poderes":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Poderes especiais disponíveis para a raça e classe selecionadas.
+            </p>
+            <AdvantagesPanel
+              selected={selectedAdvantages}
+              onToggle={handleAdvantageToggle}
+              selectedRaceClassAdvantages={selectedRaceClassAdv}
+              onRaceClassToggle={handleRaceClassAdvToggle}
+              selectedRace={selectedRace}
+              selectedClass={selectedClass}
+              showGeneral={false}
+              categoriesFilter={["poder"]}
+              raceClassHeading="Poderes"
+            />
+          </div>
+        );
+      case "Antecedentes":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Antecedentes e elementos de história do personagem.
+            </p>
+            <AdvantagesPanel
+              selected={selectedAdvantages}
+              onToggle={handleAdvantageToggle}
+              selectedRaceClassAdvantages={selectedRaceClassAdv}
+              onRaceClassToggle={handleRaceClassAdvToggle}
+              selectedRace={selectedRace}
+              selectedClass={selectedClass}
+              showGeneral={false}
+              categoriesFilter={["antecedente"]}
+              raceClassHeading="Antecedentes"
             />
           </div>
         );
