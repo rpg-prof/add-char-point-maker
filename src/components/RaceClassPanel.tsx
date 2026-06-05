@@ -9,6 +9,8 @@ interface RaceClassPanelProps {
   onClassChange: (cls: string) => void;
   onSocialClassChange: (sc: string) => void;
   onReputationChange: (rep: number) => void;
+  /** Returns false when selecting this social class would exceed the disadvantage limit. */
+  canSelectSocialClass?: (sc: string) => boolean;
 }
 
 const RaceClassPanel = ({
@@ -20,6 +22,7 @@ const RaceClassPanel = ({
   onClassChange,
   onSocialClassChange,
   onReputationChange,
+  canSelectSocialClass,
 }: RaceClassPanelProps) => {
   const raceObj = races.find((r) => r.name === selectedRace);
   const classObj = classes.find((c) => c.name === selectedClass);
@@ -80,12 +83,22 @@ const RaceClassPanel = ({
           Classe Social <span className="text-gold">{socialObj ? `(${socialObj.cost} pts)` : ""}</span>
         </label>
         <div className="grid grid-cols-3 gap-1.5">
-          {socialClasses.map((s) => (
+          {socialClasses.map((s) => {
+            const blocked =
+              selectedSocialClass !== s.name &&
+              canSelectSocialClass != null &&
+              !canSelectSocialClass(s.name);
+            return (
             <button
               key={s.name}
+              type="button"
+              disabled={blocked}
+              title={blocked ? "Limite de pontos de desvantagem atingido" : undefined}
               onClick={() => onSocialClassChange(s.name)}
               className={`px-2 py-1.5 rounded text-sm font-body border transition-all ${
-                selectedSocialClass === s.name
+                blocked
+                  ? "bg-card/20 border-border/40 text-muted-foreground/40 cursor-not-allowed"
+                  : selectedSocialClass === s.name
                   ? "bg-gold/20 border-gold text-foreground font-semibold"
                   : "bg-card/40 border-border hover:bg-card/80 text-muted-foreground"
               }`}
@@ -93,7 +106,8 @@ const RaceClassPanel = ({
               {s.name}
               <span className="block text-xs opacity-70">{s.cost} pts · {s.capital}</span>
             </button>
-          ))}
+            );
+          })}
         </div>
       </div>
 

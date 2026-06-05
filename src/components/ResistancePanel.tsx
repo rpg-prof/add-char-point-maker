@@ -1,5 +1,6 @@
 import { Shield, Minus, Plus } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import AdvantageDescription from "@/components/AdvantageDescription";
 import { raceClassAdvantages, type RaceClassAdvantage } from "@/data/raceClassAdvantages";
 
 interface ResistancePanelProps {
@@ -205,9 +206,13 @@ const ResistancePanel = ({
                       </div>
                     </div>
                   </TooltipTrigger>
-                  <TooltipContent side="top" className="max-w-sm text-xs font-body">
+                  <TooltipContent side="top" className="max-w-md text-xs font-body">
                     <p className="font-semibold text-foreground mb-1">{item.name}</p>
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <AdvantageDescription
+                      description={item.description}
+                      link={item.link}
+                      className="text-muted-foreground"
+                    />
                     {item.costOthers !== null && (
                       <p className="text-muted-foreground mt-1">
                         Custo p/ Classe/Raça: <span className="text-foreground font-semibold">{item.cost > 0 ? `+${item.cost}` : item.cost}</span>

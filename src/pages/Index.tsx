@@ -38,6 +38,8 @@ import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
+/** Máximo de pontos recuperáveis via desvantagens (inclui classe social negativa). */
+const MAX_DISADVANTAGE_POINTS = CHARACTER_POINTS;
 
 const BASE_STEPS = [
   { label: "Identificação", icon: User, desc: "Dados básicos do personagem" },
@@ -49,11 +51,35 @@ const BASE_STEPS = [
 ];
 
 const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
-const ADVANTAGES_STEP = { label: "Vantagens", icon: Swords, desc: "Vantagens e desvantagens" };
-const POWERS_STEP = { label: "Poderes", icon: Sparkles, desc: "Poderes especiais do personagem" };
-const BACKGROUND_STEP = { label: "Antecedentes", icon: Scroll, desc: "Antecedentes e história do personagem" };
+const ADVANTAGES_STEP = {
+  label: "Vantagens",
+  icon: Swords,
+  desc: "Vantagens, desvantagens, poderes e antecedentes",
+  hasSubTabs: true as const,
+};
 const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
+
+type AdvantageSubTab =
+  | "gerais"
+  | "ofensivo"
+  | "defensivo"
+  | "magica"
+  | "outros"
+  | "aversao"
+  | "poder"
+  | "antecedente";
+
+const ADVANTAGE_SUB_TABS: { id: AdvantageSubTab; label: string; desc: string }[] = [
+  { id: "gerais", label: "Vantagens Gerais", desc: "Vantagens e desvantagens universais do personagem" },
+  { id: "ofensivo", label: "Vantagens Ofensivas", desc: "Ajustes ofensivos por raça e classe" },
+  { id: "defensivo", label: "Vantagens Defensivas", desc: "Ajustes defensivos por raça e classe" },
+  { id: "magica", label: "Vantagens Mágicas", desc: "Vantagens e desvantagens mágicas" },
+  { id: "outros", label: "Outras Vantagens", desc: "Outras vantagens e desvantagens por raça e classe" },
+  { id: "aversao", label: "Aversões", desc: "Aversões raciais e restrições de tendência" },
+  { id: "poder", label: "Poderes", desc: "Poderes especiais da classe" },
+  { id: "antecedente", label: "Antecedentes", desc: "Antecedentes e elementos de história" },
+];
 
 
 const Index = () => {
@@ -104,11 +130,13 @@ const Index = () => {
     arcaneSpecialist !== null;
 
   const STEPS = useMemo(() => {
-    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP, POWERS_STEP, BACKGROUND_STEP];
+    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP];
     if (hasMagicAccess) steps.push(MAGIC_STEP);
     steps.push(SUMMARY_STEP);
     return steps;
   }, [hasMagicAccess]);
+
+  const [advantageSubTab, setAdvantageSubTab] = useState<AdvantageSubTab>("gerais");
 
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
   const [selectedReputation, setSelectedReputation] = useState(0);
@@ -228,6 +256,9 @@ const Index = () => {
 
   // Calculate total points gained from disadvantages (for display/limiting)
   const disadvantagePoints = useMemo(() => {
+    const socialCost = socialClasses.find((s) => s.name === selectedSocialClass)?.cost ?? 0;
+    const socialDisadvCost = socialCost < 0 ? Math.abs(socialCost) : 0;
+
     const allItems = [...generalAdvantages, ...generalDisadvantages];
     const generalDisadvCost = selectedAdvantages.reduce((sum, name) => {
       const item = allItems.find((a) => a.name === name);
@@ -244,8 +275,8 @@ const Index = () => {
       return sum + Math.abs(cost);
     }, 0);
 
-    return generalDisadvCost + raceClassDisadvCost;
-  }, [selectedAdvantages, selectedRaceClassAdv, selectedRace, selectedClass]);
+    return socialDisadvCost + generalDisadvCost + raceClassDisadvCost;
+  }, [selectedAdvantages, selectedRaceClassAdv, selectedRace, selectedClass, selectedSocialClass]);
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
     const newVal = Math.max(3, Math.min(18, value));
@@ -257,19 +288,66 @@ const Index = () => {
   };
 
   const handleAdvantageToggle = (name: string) => {
-    setSelectedAdvantages((prev) =>
-      prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
-    );
+    const allItems = [...generalAdvantages, ...generalDisadvantages];
+    const item = allItems.find((a) => a.name === name);
+    setSelectedAdvantages((prev) => {
+      if (prev.includes(name)) return prev.filter((n) => n !== name);
+      if (
+        item?.type === "disadvantage" &&
+        disadvantagePoints + Math.abs(item.cost) > MAX_DISADVANTAGE_POINTS
+      ) {
+        return prev;
+      }
+      return [...prev, name];
+    });
   };
 
-  const handleRaceClassAdvToggle = (name: string) => {
-    setSelectedRaceClassAdv((prev) =>
-      prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
-    );
+  const handleRaceClassAdvToggle = (name: string, cost: number) => {
+    const item = raceClassAdvantages.find((a) => a.name === name);
+    setSelectedRaceClassAdv((prev) => {
+      if (prev.includes(name)) return prev.filter((n) => n !== name);
+      if (
+        item?.type === "disadvantage" &&
+        disadvantagePoints + Math.abs(cost) > MAX_DISADVANTAGE_POINTS
+      ) {
+        return prev;
+      }
+      return [...prev, name];
+    });
   };
 
-  const handleAddResistance = (name: string) => {
-    setSelectedRaceClassAdv((prev) => [...prev, name]);
+  const handleSocialClassChange = (socialClass: string) => {
+    const currentCost = socialClasses.find((s) => s.name === selectedSocialClass)?.cost ?? 0;
+    const newCost = socialClasses.find((s) => s.name === socialClass)?.cost ?? 0;
+    const currentDisadv = currentCost < 0 ? Math.abs(currentCost) : 0;
+    const newDisadv = newCost < 0 ? Math.abs(newCost) : 0;
+    const nextTotal = disadvantagePoints - currentDisadv + newDisadv;
+    if (nextTotal > MAX_DISADVANTAGE_POINTS) return;
+    setSelectedSocialClass(socialClass);
+  };
+
+  const canSelectSocialClass = useCallback(
+    (socialClass: string) => {
+      const currentCost = socialClasses.find((s) => s.name === selectedSocialClass)?.cost ?? 0;
+      const newCost = socialClasses.find((s) => s.name === socialClass)?.cost ?? 0;
+      const currentDisadv = currentCost < 0 ? Math.abs(currentCost) : 0;
+      const newDisadv = newCost < 0 ? Math.abs(newCost) : 0;
+      return disadvantagePoints - currentDisadv + newDisadv <= MAX_DISADVANTAGE_POINTS;
+    },
+    [disadvantagePoints, selectedSocialClass]
+  );
+
+  const handleAddResistance = (name: string, cost: number) => {
+    const item = raceClassAdvantages.find((a) => a.name === name);
+    setSelectedRaceClassAdv((prev) => {
+      if (
+        item?.type === "disadvantage" &&
+        disadvantagePoints + Math.abs(cost) > MAX_DISADVANTAGE_POINTS
+      ) {
+        return prev;
+      }
+      return [...prev, name];
+    });
   };
 
   const handleRemoveResistance = (name: string) => {
@@ -499,7 +577,8 @@ const Index = () => {
               selectedReputation={selectedReputation}
               onRaceChange={setSelectedRace}
               onClassChange={setSelectedClass}
-              onSocialClassChange={setSelectedSocialClass}
+              onSocialClassChange={handleSocialClassChange}
+              canSelectSocialClass={canSelectSocialClass}
               onReputationChange={setSelectedReputation}
             />
           </div>
@@ -520,61 +599,40 @@ const Index = () => {
             />
           </div>
         );
-      case "Vantagens":
+      case "Vantagens": {
+        const subTab = ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)!;
+        const panelProps = {
+          selected: selectedAdvantages,
+          onToggle: handleAdvantageToggle,
+          selectedRaceClassAdvantages: selectedRaceClassAdv,
+          onRaceClassToggle: handleRaceClassAdvToggle,
+          selectedRace,
+          selectedClass,
+          disadvantagePoints,
+          maxDisadvantagePoints: MAX_DISADVANTAGE_POINTS,
+        };
+
+        if (advantageSubTab === "gerais") {
+          return (
+            <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+              <p className="font-body text-muted-foreground text-sm">{subTab.desc}</p>
+              <AdvantagesPanel {...panelProps} showRaceClass={false} />
+            </div>
+          );
+        }
+
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-            <p className="font-body text-muted-foreground text-sm">
-              Selecione vantagens (custam pontos) e desvantagens (devolvem pontos).
-            </p>
+            <p className="font-body text-muted-foreground text-sm">{subTab.desc}</p>
             <AdvantagesPanel
-              selected={selectedAdvantages}
-              onToggle={handleAdvantageToggle}
-              selectedRaceClassAdvantages={selectedRaceClassAdv}
-              onRaceClassToggle={handleRaceClassAdvToggle}
-              selectedRace={selectedRace}
-              selectedClass={selectedClass}
-              categoriesFilter={["ofensivo", "defensivo", "magica", "outros", "aversao"]}
-            />
-          </div>
-        );
-      case "Poderes":
-        return (
-          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-            <p className="font-body text-muted-foreground text-sm">
-              Poderes especiais disponíveis para a raça e classe selecionadas.
-            </p>
-            <AdvantagesPanel
-              selected={selectedAdvantages}
-              onToggle={handleAdvantageToggle}
-              selectedRaceClassAdvantages={selectedRaceClassAdv}
-              onRaceClassToggle={handleRaceClassAdvToggle}
-              selectedRace={selectedRace}
-              selectedClass={selectedClass}
+              {...panelProps}
               showGeneral={false}
-              categoriesFilter={["poder"]}
-              raceClassHeading="Poderes"
+              categoriesFilter={[advantageSubTab]}
+              raceClassHeading={subTab.label}
             />
           </div>
         );
-      case "Antecedentes":
-        return (
-          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-            <p className="font-body text-muted-foreground text-sm">
-              Antecedentes e elementos de história do personagem.
-            </p>
-            <AdvantagesPanel
-              selected={selectedAdvantages}
-              onToggle={handleAdvantageToggle}
-              selectedRaceClassAdvantages={selectedRaceClassAdv}
-              onRaceClassToggle={handleRaceClassAdvToggle}
-              selectedRace={selectedRace}
-              selectedClass={selectedClass}
-              showGeneral={false}
-              categoriesFilter={["antecedente"]}
-              raceClassHeading="Antecedentes"
-            />
-          </div>
-        );
+      }
       case "Perícias":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
@@ -742,7 +800,13 @@ const Index = () => {
 
         {/* Global Disadvantage Points Counter */}
         {disadvantagePoints > 0 && (
-          <div className="flex items-center justify-between p-3 rounded-lg bg-blood/10 border border-blood/30">
+          <div
+            className={`flex items-center justify-between p-3 rounded-lg border ${
+              disadvantagePoints >= MAX_DISADVANTAGE_POINTS
+                ? "bg-blood/20 border-blood/50"
+                : "bg-blood/10 border-blood/30"
+            }`}
+          >
             <div className="flex items-center gap-2">
               <AlertTriangle className="w-5 h-5 text-blood" />
               <span className="font-display text-sm tracking-wider text-foreground">
@@ -751,6 +815,7 @@ const Index = () => {
             </div>
             <span className="font-display text-lg text-blood font-bold">
               {disadvantagePoints}
+              <span className="text-sm text-blood/70 font-normal"> / {MAX_DISADVANTAGE_POINTS}</span>
             </span>
           </div>
         )}
@@ -856,6 +921,28 @@ const Index = () => {
                 );
               })}
             </div>
+
+            {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs && (
+              <div className="flex flex-wrap items-center justify-center gap-1.5 mt-3 pt-3 border-t border-gold/15">
+                {ADVANTAGE_SUB_TABS.map((tab) => {
+                  const isActive = advantageSubTab === tab.id;
+                  return (
+                    <button
+                      key={tab.id}
+                      type="button"
+                      onClick={() => setAdvantageSubTab(tab.id)}
+                      className={`px-2.5 py-1 rounded text-[11px] font-display tracking-wide transition-all border ${
+                        isActive
+                          ? "bg-gold/25 text-gold border-gold/50"
+                          : "text-parchment/50 hover:text-parchment/80 hover:bg-parchment/5 border-transparent"
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           {/* Step Header */}
@@ -866,11 +953,16 @@ const Index = () => {
                 return <StepIcon className="w-5 h-5 text-gold" />;
               })()}
               <h2 className="font-display text-lg tracking-wider text-foreground">
-                {STEPS[currentStep].label}
+                {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs
+                  ? ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)?.label ?? STEPS[currentStep].label
+                  : STEPS[currentStep].label}
               </h2>
             </div>
             <p className="text-xs text-muted-foreground font-body mt-1 ml-7">
-              Passo {currentStep + 1} de {STEPS.length} — {STEPS[currentStep].desc}
+              Passo {currentStep + 1} de {STEPS.length} —{" "}
+              {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs
+                ? ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)?.desc ?? STEPS[currentStep].desc
+                : STEPS[currentStep].desc}
             </p>
           </div>
 

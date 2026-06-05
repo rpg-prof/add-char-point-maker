@@ -2,6 +2,7 @@ import { Check, ChevronDown, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { generalAdvantages, generalDisadvantages, type AdvantageOption } from "@/data/characterData";
 import { raceClassAdvantages, categoryLabels, type RaceClassAdvantage } from "@/data/raceClassAdvantages";
+import AdvantageDescription from "@/components/AdvantageDescription";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -18,8 +19,14 @@ interface AdvantagesPanelProps {
   categoriesFilter?: AdvCategory[];
   /** Show the general advantages/disadvantages section. Default true. */
   showGeneral?: boolean;
+  /** Show race/class-specific section. Default true. */
+  showRaceClass?: boolean;
   /** Heading shown above race/class section. */
   raceClassHeading?: string;
+  /** Total disadvantage points already committed (incl. classe social). */
+  disadvantagePoints?: number;
+  /** Maximum disadvantage points allowed. */
+  maxDisadvantagePoints?: number;
 }
 
 const AdvantagesPanel = ({
@@ -31,9 +38,16 @@ const AdvantagesPanel = ({
   selectedClass,
   categoriesFilter,
   showGeneral = true,
+  showRaceClass = true,
   raceClassHeading = "Vantagens por Raça & Classe",
+  disadvantagePoints = 0,
+  maxDisadvantagePoints,
 }: AdvantagesPanelProps) => {
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
+
+  const wouldExceedDisadvantageLimit = (additional: number) =>
+    maxDisadvantagePoints != null &&
+    disadvantagePoints + additional > maxDisadvantagePoints;
 
   const toggleSection = (key: string) => {
     setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -42,13 +56,21 @@ const AdvantagesPanel = ({
   const renderGeneralItem = (item: AdvantageOption) => {
     const isSelected = selected.includes(item.name);
     const isAdv = item.type === "advantage";
+    const blocked =
+      !isSelected &&
+      item.type === "disadvantage" &&
+      wouldExceedDisadvantageLimit(Math.abs(item.cost));
 
     const button = (
       <button
         key={item.name}
+        type="button"
+        disabled={blocked}
         onClick={() => onToggle(item.name, item.cost)}
         className={`flex items-center gap-2 px-2.5 py-1.5 rounded text-sm font-body border transition-all text-left ${
-          isSelected
+          blocked
+            ? "bg-card/20 border-border/40 text-muted-foreground/40 cursor-not-allowed"
+            : isSelected
             ? isAdv
               ? "bg-gold/20 border-gold text-foreground"
               : "bg-blood/15 border-blood/50 text-foreground"
@@ -77,12 +99,16 @@ const AdvantagesPanel = ({
       </button>
     );
 
-    if (item.description) {
+    if (item.description || item.link) {
       return (
         <Tooltip key={item.name}>
           <TooltipTrigger asChild>{button}</TooltipTrigger>
-          <TooltipContent side="top" className="max-w-xs text-xs font-body">
-            {item.description}
+          <TooltipContent side="top" className="max-w-md text-xs font-body">
+            <AdvantageDescription
+              description={item.description ?? ""}
+              link={item.link}
+              className=""
+            />
           </TooltipContent>
         </Tooltip>
       );
@@ -113,7 +139,10 @@ const AdvantagesPanel = ({
     const isAdv = item.type === "advantage";
     const cost = getItemCost(item);
     const isNative = matchesRaceOf(item) || matchesClassOf(item);
-
+    const blocked =
+      !isSelected &&
+      item.type === "disadvantage" &&
+      wouldExceedDisadvantageLimit(Math.abs(cost));
 
     if (!available) return null;
 
@@ -121,9 +150,13 @@ const AdvantagesPanel = ({
       <Tooltip key={item.name}>
         <TooltipTrigger asChild>
           <button
+            type="button"
+            disabled={blocked}
             onClick={() => onRaceClassToggle(item.name, cost)}
             className={`flex items-center gap-2 px-2.5 py-1.5 rounded text-sm font-body border transition-all text-left ${
-              isSelected
+              blocked
+                ? "bg-card/20 border-border/40 text-muted-foreground/40 cursor-not-allowed"
+                : isSelected
                 ? isAdv
                   ? "bg-gold/20 border-gold text-foreground"
                   : "bg-blood/15 border-blood/50 text-foreground"
@@ -156,7 +189,7 @@ const AdvantagesPanel = ({
             </span>
           </button>
         </TooltipTrigger>
-        <TooltipContent side="top" className="max-w-sm text-xs font-body space-y-1">
+        <TooltipContent side="top" className="max-w-md text-xs font-body space-y-1">
           <p className="font-semibold text-foreground">{item.name}</p>
           {(item.applicableRaces?.length || item.applicableClasses?.length) && (
             <p className="text-muted-foreground">
@@ -171,25 +204,8 @@ const AdvantagesPanel = ({
               <> · Demais: <span className="text-foreground font-semibold">{item.costOthers > 0 ? `+${item.costOthers}` : item.costOthers}</span></>
             )}
           </p>
-          {item.description && (
-            <p className="pt-1 border-t border-border/50">
-              {item.description.split(/(https?:\/\/\S+)/g).map((part, i) =>
-                /^https?:\/\//.test(part) ? (
-                  <a
-                    key={i}
-                    href={part}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="text-gold underline break-all"
-                  >
-                    {part}
-                  </a>
-                ) : (
-                  <span key={i}>{part}</span>
-                )
-              )}
-            </p>
+          {(item.description || item.link) && (
+            <AdvantageDescription description={item.description} link={item.link} />
           )}
         </TooltipContent>
       </Tooltip>
@@ -199,6 +215,7 @@ const AdvantagesPanel = ({
   // Group race/class advantages by category
   const allCategories: AdvCategory[] = ["ofensivo", "defensivo", "magica", "outros", "aversao", "poder", "antecedente"];
   const categories = categoriesFilter ?? allCategories;
+  const isFlatLayout = categoriesFilter?.length === 1;
 
   return (
     <TooltipProvider delayDuration={200}>
@@ -228,6 +245,7 @@ const AdvantagesPanel = ({
       )}
 
       {/* Race/Class Specific */}
+      {showRaceClass && (
       <div className={showGeneral ? "border-t border-border pt-4" : ""}>
         <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-3">
           {raceClassHeading}
@@ -243,6 +261,14 @@ const AdvantagesPanel = ({
               (a) => a.category === cat && isAvailable(a)
             );
             if (items.length === 0) return null;
+
+            if (isFlatLayout) {
+              return (
+                <div key={cat} className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+                  {items.map(renderRaceClassItem)}
+                </div>
+              );
+            }
 
             const isOpen = openSections[cat] ?? false;
             const selectedCount = items.filter((i) =>
@@ -279,6 +305,7 @@ const AdvantagesPanel = ({
           })}
         </div>
       </div>
+      )}
     </div>
     </TooltipProvider>
   );
