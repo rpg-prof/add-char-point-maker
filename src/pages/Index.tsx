@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Coins } from "lucide-react";
 import AppLogo from "@/components/AppLogo";
 import {
   Dialog,
@@ -19,6 +19,7 @@ import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import MagicPanel from "@/components/MagicPanel";
 import MagicAccessPanel, { type DivineAccessLevel, type ArcaneAccessLevel } from "@/components/MagicAccessPanel";
 import ResistancePanel from "@/components/ResistancePanel";
+import EquipmentShopPanel from "@/components/EquipmentShopPanel";
 import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
   attributeCosts,
@@ -34,7 +35,18 @@ import {
   type AttributeName,
 } from "@/data/characterData";
 import { weaponGroups, shieldProficiencies } from "@/data/weaponProficiencies";
-import { subAttributeMap } from "@/data/subAttributes";
+import { subAttributeMap, getSubAttributeBonuses } from "@/data/subAttributes";
+import {
+  equipmentById,
+  formatMoney,
+  getRemainingCopper,
+  getSpentCopper,
+  getStartingCapitalPc,
+  getTotalWeightKg,
+  migratePurchasedItems,
+  type PurchasedItems,
+} from "@/data/equipment";
+import { parseCargaKg } from "@/data/currency";
 import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 
 const ATTRIBUTE_POINTS = 75;
@@ -49,6 +61,7 @@ const BASE_STEPS = [
   { label: "Armas", icon: Crosshair, desc: "Proficiências com armas e escudos" },
   { label: "Perícias", icon: BookOpen, desc: "Perícias comuns do personagem" },
   { label: "Resistência", icon: Heart, desc: "Valores de resistência calculados" },
+  { label: "Dinheiro & Equipamento", icon: Coins, desc: "Comprar equipamento com o capital da classe social" },
 ];
 
 const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
@@ -148,6 +161,7 @@ const Index = () => {
   const [selectedWeaponGroups, setSelectedWeaponGroups] = useState<string[]>([]);
   const [selectedShields, setSelectedShields] = useState<string[]>([]);
   const [grimoire, setGrimoire] = useState<string[]>([]);
+  const [purchasedItems, setPurchasedItems] = useState<PurchasedItems>({});
 
   // Progression system
   interface ProgressionEntry {
@@ -432,6 +446,7 @@ const Index = () => {
       selectedWeapons, selectedWeaponGroups, selectedShields, grimoire,
       divineAccess, arcaneAccess, arcaneSpecialist,
       progressionHistory,
+      purchasedItems,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -440,7 +455,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory]);
+  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -481,6 +496,8 @@ const Index = () => {
           const maxLevel = data.progressionHistory.reduce((max: number, e: ProgressionEntry) => Math.max(max, e.level), 1);
           setEvolveLevel(maxLevel + 1);
         }
+        if (data.purchasedItems) setPurchasedItems(migratePurchasedItems(data.purchasedItems));
+        else setPurchasedItems({});
         setCurrentStep(0);
       } catch {
         alert("Arquivo JSON inválido.");
@@ -608,6 +625,21 @@ const Index = () => {
             />
           </div>
         );
+      case "Dinheiro & Equipamento":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Use o capital da classe social para comprar armas, armaduras e equipamento. O peso total é comparado com a
+              carga permitida (sub-atributo Resistência).
+            </p>
+            <EquipmentShopPanel
+              selectedSocialClass={selectedSocialClass}
+              subAttributes={subAttributes}
+              purchased={purchasedItems}
+              onPurchaseChange={setPurchasedItems}
+            />
+          </div>
+        );
       case "Vantagens": {
         const subTab = ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)!;
         const panelProps = {
@@ -709,6 +741,8 @@ const Index = () => {
             selectedClass={selectedClass}
             selectedSocialClass={selectedSocialClass}
             attributes={attributes}
+            subAttributes={subAttributes}
+            purchasedItems={purchasedItems}
             selectedAdvantages={selectedAdvantages}
             selectedRaceClassAdv={selectedRaceClassAdv}
             selectedSkills={selectedSkills}
@@ -1037,6 +1071,8 @@ interface SummaryPanelProps {
   selectedClass: string;
   selectedSocialClass: string;
   attributes: Record<AttributeName, number>;
+  subAttributes: Record<string, number>;
+  purchasedItems: PurchasedItems;
   selectedAdvantages: string[];
   selectedRaceClassAdv: string[];
   selectedSkills: string[];
@@ -1051,6 +1087,8 @@ const SummaryPanel = ({
   selectedClass,
   selectedSocialClass,
   attributes,
+  subAttributes,
+  purchasedItems,
   selectedAdvantages,
   selectedRaceClassAdv,
   selectedSkills,
@@ -1058,6 +1096,18 @@ const SummaryPanel = ({
   characterPointsSpent,
 }: SummaryPanelProps) => {
   const allAdvItems = [...generalAdvantages, ...generalDisadvantages];
+  const resistenciaValue = subAttributes["Resistência"] ?? 10;
+  const cargaBonus = getSubAttributeBonuses("Resistência", resistenciaValue)["Carga Permitida"] ?? "—";
+  const cargaKg = parseCargaKg(cargaBonus);
+  const startingPc = getStartingCapitalPc(selectedSocialClass, socialClasses);
+  const spentPc = getSpentCopper(purchasedItems);
+  const remainingPc = getRemainingCopper(selectedSocialClass, socialClasses, purchasedItems);
+  const totalWeight = getTotalWeightKg(purchasedItems);
+  const ownedItems = Object.entries(purchasedItems)
+    .filter(([, qty]) => qty > 0)
+    .map(([id, qty]) => ({ item: equipmentById[id], qty }))
+    .filter((e) => e.item)
+    .sort((a, b) => a.item!.name.localeCompare(b.item!.name, "pt"));
 
   return (
     <div className="space-y-4">
@@ -1167,6 +1217,50 @@ const SummaryPanel = ({
           </div>
         </div>
       )}
+
+      <div className="rounded-lg border border-border p-3">
+        <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
+          Dinheiro & Equipamento
+        </h4>
+        <div className="grid grid-cols-2 gap-2 text-sm mb-2">
+          <div>
+            <span className="text-muted-foreground">Capital:</span> {formatMoney(startingPc)}
+          </div>
+          <div>
+            <span className="text-muted-foreground">Restante:</span>{" "}
+            <span className={remainingPc < 0 ? "text-blood font-bold" : "font-bold"}>
+              {formatMoney(remainingPc)}
+            </span>
+          </div>
+          <div>
+            <span className="text-muted-foreground">Gasto:</span> {formatMoney(spentPc)}
+          </div>
+          <div>
+            <span className="text-muted-foreground">Peso:</span>{" "}
+            <span className={cargaKg > 0 && totalWeight > cargaKg ? "text-blood font-bold" : ""}>
+              {totalWeight.toFixed(1).replace(".", ",")} kg
+              {cargaKg > 0 && ` / ${cargaKg.toFixed(1).replace(".", ",")} kg`}
+            </span>
+            <span className="text-xs text-muted-foreground block">
+              (Resistência {resistenciaValue} — {cargaBonus})
+            </span>
+          </div>
+        </div>
+        {ownedItems.length > 0 ? (
+          <div className="flex flex-wrap gap-1.5">
+            {ownedItems.map(({ item, qty }) => (
+              <span
+                key={item!.id}
+                className="px-2 py-0.5 rounded text-xs font-body border bg-card border-border"
+              >
+                {item!.name} ×{qty}
+              </span>
+            ))}
+          </div>
+        ) : (
+          <p className="text-xs text-muted-foreground">Nenhum item comprado.</p>
+        )}
+      </div>
 
       <div className="rounded-lg border-2 border-gold/40 p-3 bg-gold/5">
         <h4 className="font-display text-sm tracking-wider uppercase text-gold mb-2">

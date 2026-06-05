@@ -35,16 +35,18 @@ export const classes: ClassOption[] = [
 export interface SocialClassOption {
   name: string;
   cost: number;
+  /** Capital inicial em peças de ouro (po). */
+  capitalPo: number;
   capital: string;
 }
 
 export const socialClasses: SocialClassOption[] = [
-  { name: "Escravo", cost: -40, capital: "0" },
-  { name: "Classe baixa", cost: -20, capital: "40 p.o." },
-  { name: "Classe média baixa", cost: 0, capital: "80 p.o." },
-  { name: "Classe média alta", cost: 20, capital: "160 p.o." },
-  { name: "Classe alta / Nobreza menor", cost: 30, capital: "320 p.o." },
-  { name: "Nobreza Maior", cost: 50, capital: "640 p.o." },
+  { name: "Escravo", cost: -40, capitalPo: 0, capital: "0 po" },
+  { name: "Classe baixa", cost: -20, capitalPo: 40, capital: "40 po" },
+  { name: "Classe média baixa", cost: 0, capitalPo: 80, capital: "80 po" },
+  { name: "Classe média alta", cost: 20, capitalPo: 160, capital: "160 po" },
+  { name: "Classe alta / Nobreza menor", cost: 30, capitalPo: 320, capital: "320 po" },
+  { name: "Nobreza Maior", cost: 50, capitalPo: 640, capital: "640 po" },
 ];
 
 // ===== REPUTATION =====
