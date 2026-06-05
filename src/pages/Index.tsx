@@ -765,7 +765,7 @@ const Index = () => {
               <AppLogo size={44} />
               <div>
                 <h1 className="font-display text-xl md:text-2xl tracking-widest text-parchment">
-                  AD&D 2.5 Edition - Criação de Personagens - v0.8
+                  AD&D 2.5 Edition - Criação de Personagens
                 </h1>
                 <p className="text-sm font-body">
                   <a
