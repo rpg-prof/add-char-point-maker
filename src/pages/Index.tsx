@@ -1,5 +1,6 @@
 import { useState, useMemo, useRef, useCallback } from "react";
 import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle } from "lucide-react";
+import AppLogo from "@/components/AppLogo";
 import {
   Dialog,
   DialogContent,
@@ -719,13 +720,20 @@ const Index = () => {
         <div className="container max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Shield className="w-8 h-8 text-gold" />
+              <AppLogo size={44} />
               <div>
                 <h1 className="font-display text-xl md:text-2xl tracking-widest text-parchment">
-                  AD&D Ficha de Pontos
+                  AD&D 2.5 Edition - Criação de Personagens
                 </h1>
-                <p className="text-sm text-parchment/60 font-body">
-                  Sistema de Pontos por Personagem v0.7
+                <p className="text-sm font-body">
+                  <a
+                    href="http://adeide25.net.uztec.com.br/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-parchment/60 hover:text-gold hover:underline transition-colors"
+                  >
+                    Sistema AD&D 2.5 - Pontos por Personagem v0.8
+                  </a>
                 </p>
               </div>
             </div>

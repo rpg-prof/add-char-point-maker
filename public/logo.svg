@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AD&amp;D Ficha de Pontos">
+  <defs>
+    <linearGradient id="logo-gold" x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f0d878"/>
+      <stop offset="45%" stop-color="#d4a84b"/>
+      <stop offset="100%" stop-color="#8b6914"/>
+    </linearGradient>
+    <linearGradient id="logo-face-light" x1="32" y1="10" x2="32" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4a3f32"/>
+      <stop offset="100%" stop-color="#1f1a14"/>
+    </linearGradient>
+    <linearGradient id="logo-face-dark" x1="32" y1="18" x2="32" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2e2720"/>
+      <stop offset="100%" stop-color="#12100c"/>
+    </linearGradient>
+    <radialGradient id="logo-glow" cx="32" cy="30" r="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e8a830" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#e8a830" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="logo-soft-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <circle cx="32" cy="32" r="30" fill="url(#logo-glow)"/>
+
+  <!-- D20 body -->
+  <g filter="url(#logo-soft-glow)">
+    <polygon points="32,6 54,22 44,54 20,54 10,22" fill="url(#logo-face-dark)" stroke="url(#logo-gold)" stroke-width="1.4" stroke-linejoin="round"/>
+    <polygon points="32,6 54,22 32,28" fill="url(#logo-face-light)" stroke="url(#logo-gold)" stroke-width="1.1" stroke-linejoin="round"/>
+    <polygon points="32,6 10,22 32,28" fill="#352d24" stroke="url(#logo-gold)" stroke-width="1.1" stroke-linejoin="round"/>
+    <polygon points="32,28 54,22 44,54" fill="#2a231c" stroke="url(#logo-gold)" stroke-width="1.1" stroke-linejoin="round"/>
+    <polygon points="32,28 10,22 20,54" fill="#241e18" stroke="url(#logo-gold)" stroke-width="1.1" stroke-linejoin="round"/>
+    <polygon points="32,28 44,54 20,54" fill="#1a1510" stroke="url(#logo-gold)" stroke-width="1.1" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Center 20 -->
+  <text x="32" y="33" text-anchor="middle" dominant-baseline="middle"
+        font-family="Cinzel, Georgia, serif" font-size="15" font-weight="700"
+        fill="url(#logo-gold)" letter-spacing="-0.5">20</text>
+
+  <!-- Corner rune accents -->
+  <path d="M18 18 L20 14 L22 18" fill="none" stroke="#d4a84b" stroke-width="1" stroke-linecap="round" opacity="0.8"/>
+  <path d="M42 18 L44 14 L46 18" fill="none" stroke="#d4a84b" stroke-width="1" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="32" cy="48" r="1.2" fill="#e8c45a" opacity="0.9"/>
+</svg>
