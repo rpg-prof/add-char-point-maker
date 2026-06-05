@@ -162,7 +162,26 @@ const AdvantagesPanel = ({
               <> · Demais: <span className="text-foreground font-semibold">{item.costOthers > 0 ? `+${item.costOthers}` : item.costOthers}</span></>
             )}
           </p>
-          {item.description && <p className="pt-1 border-t border-border/50">{item.description}</p>}
+          {item.description && (
+            <p className="pt-1 border-t border-border/50">
+              {item.description.split(/(https?:\/\/\S+)/g).map((part, i) =>
+                /^https?:\/\//.test(part) ? (
+                  <a
+                    key={i}
+                    href={part}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-gold underline break-all"
+                  >
+                    {part}
+                  </a>
+                ) : (
+                  <span key={i}>{part}</span>
+                )
+              )}
+            </p>
+          )}
         </TooltipContent>
       </Tooltip>
     );
