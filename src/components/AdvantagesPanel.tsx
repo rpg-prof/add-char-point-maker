@@ -29,7 +29,9 @@ const AdvantagesPanel = ({
   onRaceClassToggle,
   selectedRace,
   selectedClass,
-  disadvantagePoints,
+  categoriesFilter,
+  showGeneral = true,
+  raceClassHeading = "Vantagens por Raça & Classe",
 }: AdvantagesPanelProps) => {
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({});
 
