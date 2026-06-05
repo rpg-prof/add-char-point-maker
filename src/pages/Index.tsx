@@ -50,6 +50,8 @@ const BASE_STEPS = [
 
 const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
 const ADVANTAGES_STEP = { label: "Vantagens", icon: Swords, desc: "Vantagens e desvantagens" };
+const POWERS_STEP = { label: "Poderes", icon: Sparkles, desc: "Poderes especiais do personagem" };
+const BACKGROUND_STEP = { label: "Antecedentes", icon: Scroll, desc: "Antecedentes e história do personagem" };
 const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
 
