@@ -770,7 +770,7 @@ const Index = () => {
         <div className="rounded-lg bg-card/80 border border-border shadow-sm overflow-hidden">
           {/* Step Indicators */}
           <div className="dark-panel border-b border-gold/20 px-4 py-3">
-            <div className="flex items-center justify-between gap-1 overflow-x-auto">
+            <div className="flex flex-wrap items-center justify-center gap-2">
               {STEPS.map((step, i) => {
                 const StepIcon = step.icon;
                 const isActive = i === currentStep;
@@ -779,7 +779,7 @@ const Index = () => {
                   <button
                     key={i}
                     onClick={() => setCurrentStep(i)}
-                    className={`flex items-center gap-1.5 px-2 py-1.5 rounded transition-all text-xs font-display tracking-wider whitespace-nowrap ${
+                    className={`flex items-center gap-1.5 px-2 py-1.5 rounded transition-all text-xs font-display tracking-wider ${
                       isActive
                         ? "bg-gold/20 text-gold border border-gold/40"
                         : isDone
