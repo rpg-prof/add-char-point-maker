@@ -144,9 +144,6 @@ const EquipmentShopPanel = ({
               <> · CA {caLabel}</>
             )}
             {item.weightKg > 0 && <> · {item.weightKg.toFixed(2).replace(".", ",")} kg</>}
-            {item.weaponStats && (
-              <> · {item.weaponStats.damagePM}/{item.weaponStats.damageG}</>
-            )}
             {item.weaponGroup && item.weaponGroup !== "outras" && (
               <> · {WEAPON_SUB_TABS.find((s) => s.id === item.weaponGroup)?.label}</>
             )}
