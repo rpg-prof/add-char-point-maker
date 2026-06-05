@@ -740,6 +740,21 @@ const Index = () => {
           )}
         </div>
 
+        {/* Global Disadvantage Points Counter */}
+        {disadvantagePoints > 0 && (
+          <div className="flex items-center justify-between p-3 rounded-lg bg-blood/10 border border-blood/30">
+            <div className="flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-blood" />
+              <span className="font-display text-sm tracking-wider text-foreground">
+                Pontos de Desvantagem
+              </span>
+            </div>
+            <span className="font-display text-lg text-blood font-bold">
+              {disadvantagePoints}
+            </span>
+          </div>
+        )}
+
         {/* Evolve Dialog */}
         <Dialog open={showEvolveDialog} onOpenChange={setShowEvolveDialog}>
           <DialogContent className="dark-panel border-gold/40 sm:max-w-md">
