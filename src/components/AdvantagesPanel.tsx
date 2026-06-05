@@ -1,9 +1,11 @@
-import { Check, ChevronDown, ChevronRight, AlertTriangle } from "lucide-react";
+import { Check, ChevronDown, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { generalAdvantages, generalDisadvantages, type AdvantageOption } from "@/data/characterData";
 import { raceClassAdvantages, categoryLabels, type RaceClassAdvantage } from "@/data/raceClassAdvantages";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+
+type AdvCategory = RaceClassAdvantage["category"];
 
 interface AdvantagesPanelProps {
   selected: string[];
@@ -12,7 +14,12 @@ interface AdvantagesPanelProps {
   onRaceClassToggle: (name: string, cost: number) => void;
   selectedRace: string;
   selectedClass: string;
-  disadvantagePoints: number;
+  /** If provided, only these race/class categories will be rendered. */
+  categoriesFilter?: AdvCategory[];
+  /** Show the general advantages/disadvantages section. Default true. */
+  showGeneral?: boolean;
+  /** Heading shown above race/class section. */
+  raceClassHeading?: string;
 }
 
 const AdvantagesPanel = ({
