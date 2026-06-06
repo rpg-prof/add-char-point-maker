@@ -95,21 +95,51 @@ export const arcaneSchoolCost = (
 const tokenize = (s: string): string[] =>
   s.split(/[,/]/).map((t) => t.trim()).filter(Boolean);
 
+/** Escolas equivalentes no sistema (ex.: Adivinhação nas magias ↔ Augúrio/Profecia na compra). */
+const SCHOOL_EQUIVALENCE_GROUPS = [
+  ["Adivinhação", "Augúrio", "Profecia"],
+] as const;
+
+const UNIVERSAL_SPELL_SCHOOLS = new Set([
+  "todas as escolas",
+  "qualquer escola",
+  "todas",
+  "qualquer",
+]);
+
+const schoolTokensMatch = (a: string, b: string): boolean =>
+  a === b || a.includes(b) || b.includes(a);
+
+const isUniversalSpellSchool = (token: string): boolean =>
+  UNIVERSAL_SPELL_SCHOOLS.has(token.trim().toLowerCase());
+
+const expandSchoolTokens = (tokens: string[]): string[] => {
+  const expanded = new Set(tokens);
+  for (const group of SCHOOL_EQUIVALENCE_GROUPS) {
+    if (tokens.some((token) => group.some((school) => schoolTokensMatch(token, school)))) {
+      group.forEach((school) => expanded.add(school));
+    }
+  }
+  return [...expanded];
+};
+
 export const spellMatchesArcane = (
   spellSchool: string,
   accessSchools: string[],
   specialist: string | null
 ): boolean => {
   if (accessSchools.length === 0 && !specialist) return false;
+
   const spellTokens = tokenize(spellSchool);
-  const allowed = new Set([...accessSchools, ...(specialist ? [specialist] : [])]);
-  for (const a of allowed) {
-    const accessTokens = tokenize(a);
-    if (spellTokens.some((st) => accessTokens.some((at) => st === at || st.includes(at) || at.includes(st)))) {
-      return true;
-    }
-  }
-  return false;
+  if (spellTokens.some(isUniversalSpellSchool)) return true;
+
+  const allowed = [...accessSchools, ...(specialist ? [specialist] : [])];
+  const expandedAccess = expandSchoolTokens(allowed.flatMap((school) => tokenize(school)));
+  const expandedSpell = expandSchoolTokens(spellTokens);
+
+  return expandedSpell.some((spellToken) =>
+    expandedAccess.some((accessToken) => schoolTokensMatch(spellToken, accessToken))
+  );
 };
 
 export const spellMatchesDivine = (

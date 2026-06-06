@@ -95,13 +95,13 @@
                 "name": "Detectar Magia",
                 "file": "mage-spells/detectar-magia.json",
                 "level": 1,
-                "school": "Adivinhação"
+                "school": "Adivinhação / Augúrio"
             },
             {
                 "name": "Detectar Mortos-Vivos",
                 "file": "mage-spells/detectar-mortos-vivos.json",
                 "level": 1,
-                "school": "Adivinhação"
+                "school": "Adivinhação / Augúrio / Necromancia"
             },
             {
                 "name": "Enfeitiçar Pessoas",
@@ -155,7 +155,7 @@
                 "name": "Identificação",
                 "file": "mage-spells/identificacao.json",
                 "level": 1,
-                "school": "Adivinhação"
+                "school": "Adivinhação / Augúrio"
             },
             {
                 "name": "Leque Cromático",
@@ -167,7 +167,7 @@
                 "name": "Ler Magias",
                 "file": "mage-spells/ler-magias.json",
                 "level": 1,
-                "school": "Adivinhação"
+                "school": "Adivinhação / Augúrio"
             },
             {
                 "name": "Luz",
@@ -323,7 +323,7 @@
                 "name": "Truque",
                 "file": "mage-spells/truque.json",
                 "level": 1,
-                "school": "Todas as escolas"
+                "school": "Qualquer Escola"
             },
             {
                 "name": "Varinha da Adivinhação",
@@ -3001,7 +3001,7 @@
                 "name": "Truque",
                 "file": "mage-spells/truque.json",
                 "level": 1,
-                "school": "Todas as escolas"
+                "school": "Qualquer Escola"
             }
         ],
         "Alteração": [
@@ -3855,7 +3855,7 @@
                 "name": "Truque",
                 "file": "mage-spells/truque.json",
                 "level": 1,
-                "school": "Todas as escolas"
+                "school": "Qualquer Escola"
             },
             {
                 "name": "Truque de Corda",
@@ -3917,7 +3917,7 @@
                 "name": "Truque",
                 "file": "mage-spells/truque.json",
                 "level": 1,
-                "school": "Todas as escolas"
+                "school": "Qualquer Escola"
             }
         ],
         "Conjuração/Convocação": [
@@ -4237,7 +4237,7 @@
                 "name": "Truque",
                 "file": "mage-spells/truque.json",
                 "level": 1,
-                "school": "Todas as escolas"
+                "school": "Qualquer Escola"
             },
             {
                 "name": "Vento Selvagem",
@@ -4581,7 +4581,7 @@
                 "name": "Truque",
                 "file": "mage-spells/truque.json",
                 "level": 1,
-                "school": "Todas as escolas"
+                "school": "Qualquer Escola"
             },
             {
                 "name": "Varinha da Adivinhação",
@@ -4919,7 +4919,7 @@
                 "name": "Truque",
                 "file": "mage-spells/truque.json",
                 "level": 1,
-                "school": "Todas as escolas"
+                "school": "Qualquer Escola"
             },
             {
                 "name": "Ventriloquismo",
@@ -5395,7 +5395,7 @@
                 "name": "Truque",
                 "file": "mage-spells/truque.json",
                 "level": 1,
-                "school": "Todas as escolas"
+                "school": "Qualquer Escola"
             },
             {
                 "name": "Vento Sussurrante",
@@ -5643,7 +5643,7 @@
                 "name": "Truque",
                 "file": "mage-spells/truque.json",
                 "level": 1,
-                "school": "Todas as escolas"
+                "school": "Qualquer Escola"
             },
             {
                 "name": "União Pavorosa de Bloodstone",
@@ -5747,7 +5747,7 @@
                 "name": "Detectar Magia",
                 "file": "mage-spells/detectar-magia.json",
                 "level": 1,
-                "school": "Adivinhação"
+                "school": "Adivinhação / Augúrio"
             },
             {
                 "name": "Detectar Maldade",
@@ -5759,7 +5759,7 @@
                 "name": "Detectar Mortos-Vivos",
                 "file": "mage-spells/detectar-mortos-vivos.json",
                 "level": 1,
-                "school": "Adivinhação"
+                "school": "Adivinhação / Augúrio / Necromancia"
             },
             {
                 "name": "Detectar Observação",
@@ -5801,7 +5801,7 @@
                 "name": "Identificação",
                 "file": "mage-spells/identificacao.json",
                 "level": 1,
-                "school": "Adivinhação"
+                "school": "Adivinhação / Augúrio"
             },
             {
                 "name": "Lendas e Histórias",
@@ -5813,7 +5813,7 @@
                 "name": "Ler Magias",
                 "file": "mage-spells/ler-magias.json",
                 "level": 1,
-                "school": "Adivinhação"
+                "school": "Adivinhação / Augúrio"
             },
             {
                 "name": "Localizar Criatura",
@@ -5867,7 +5867,7 @@
                 "name": "Truque",
                 "file": "mage-spells/truque.json",
                 "level": 1,
-                "school": "Todas as escolas"
+                "school": "Qualquer Escola"
             },
             {
                 "name": "Varinha da Adivinhação",
