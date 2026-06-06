@@ -1,6 +1,11 @@
 import type { ReactNode } from "react";
 import { Minus, Plus } from "lucide-react";
-import { attributeNames, type AttributeName } from "@/data/characterData";
+import {
+  attributeNames,
+  getAttributeLimits,
+  getRaceAttributeAdjustment,
+  type AttributeName,
+} from "@/data/characterData";
 import {
   subAttributeMap,
   getSubAttributeBonuses,
@@ -12,6 +17,7 @@ export type SubAttributes = Record<string, number>;
 interface AttributePanelProps {
   attributes: Record<AttributeName, number>;
   subAttributes: SubAttributes;
+  selectedRace: string;
   onChange: (attr: AttributeName, value: number) => void;
   onSubChange: (subAttr: string, value: number) => void;
 }
@@ -22,7 +28,13 @@ const btnCls =
 const labelCls =
   "font-display text-sm tracking-wide text-foreground truncate w-[9rem] shrink-0";
 
-const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: AttributePanelProps) => {
+const AttributePanel = ({
+  attributes,
+  subAttributes,
+  selectedRace,
+  onChange,
+  onSubChange,
+}: AttributePanelProps) => {
   const totalCost = Object.entries(attributes).reduce((sum, [, val]) => sum + val, 0);
 
   const handleMainChange = (attr: AttributeName, newValue: number) => {
@@ -48,8 +60,9 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
       newSub2 = Math.max(newValue - 2, Math.min(newValue + 2, newSub2));
       newSub1 = targetSum - newSub2;
     }
-    newSub1 = Math.max(3, Math.min(18, newSub1));
-    newSub2 = Math.max(3, Math.min(18, newSub2));
+    const { min, max } = getAttributeLimits(selectedRace, attr);
+    newSub1 = Math.max(min, Math.min(max, newSub1));
+    newSub2 = Math.max(min, Math.min(max, newSub2));
 
     onSubChange(def.sub1, newSub1);
     onSubChange(def.sub2, newSub2);
@@ -60,6 +73,7 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
     if (!def) return;
 
     const mainVal = attributes[attr];
+    const { min, max } = getAttributeLimits(selectedRace, attr);
     const otherSub = subName === def.sub1 ? def.sub2 : def.sub1;
     const currentVal = subAttributes[subName] ?? mainVal;
     const otherVal = subAttributes[otherSub] ?? mainVal;
@@ -69,10 +83,22 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
 
     if (newVal < mainVal - 2 || newVal > mainVal + 2) return;
     if (newOther < mainVal - 2 || newOther > mainVal + 2) return;
-    if (newVal < 3 || newVal > 18 || newOther < 3 || newOther > 18) return;
+    if (newVal < min || newVal > max || newOther < min || newOther > max) return;
 
     onSubChange(subName, newVal);
     onSubChange(otherSub, newOther);
+  };
+
+  const formatAttrLabel = (attr: AttributeName) => {
+    const { min, max } = getAttributeLimits(selectedRace, attr);
+    const adjustment = getRaceAttributeAdjustment(selectedRace, attr);
+    const range =
+      min !== 3 || max !== 18 ? ` (${min}–${max})` : "";
+    const raceAdj =
+      adjustment !== 0
+        ? ` ${adjustment > 0 ? "+" : ""}${adjustment} raça`
+        : "";
+    return { label: attr, range, raceAdj, adjustment };
   };
 
   const renderBonuses = (subName: SubAttributeName, subVal: number) => {
@@ -136,10 +162,14 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
 
   return (
     <div className="space-y-3">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-4">
         <h2 className="font-display text-lg tracking-wider text-foreground">Atributos</h2>
         <span className="font-display text-sm text-gold">Gastos: {totalCost} / 75</span>
       </div>
+      <p className="text-xs text-muted-foreground font-body">
+        Limites min/máx conforme raça:{" "}
+        <span className="text-foreground font-semibold">{selectedRace}</span>
+      </p>
 
       <div className="grid gap-3">
         {attributeNames.map((attr) => {
@@ -147,17 +177,21 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
           const def = subAttributeMap.find((d) => d.main === attr)!;
           const sub1Val = subAttributes[def.sub1] ?? value;
           const sub2Val = subAttributes[def.sub2] ?? value;
+          const { min, max } = getAttributeLimits(selectedRace, attr);
+          const { range, raceAdj, adjustment } = formatAttrLabel(attr);
+          const mainLabel =
+            adjustment !== 0 ? `${attr}${range} (${raceAdj.trim()})` : `${attr}${range}`;
 
           return (
             <div key={attr} className="rounded-md bg-card/60 border border-border px-3 py-3">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-3">
                 {renderColumn(
-                  attr,
+                  mainLabel,
                   value,
-                  () => handleMainChange(attr, Math.max(3, value - 1)),
-                  () => handleMainChange(attr, Math.min(18, value + 1)),
-                  value <= 3,
-                  value >= 18
+                  () => handleMainChange(attr, Math.max(min, value - 1)),
+                  () => handleMainChange(attr, Math.min(max, value + 1)),
+                  value <= min,
+                  value >= max
                 )}
 
                 {renderColumn(
@@ -165,8 +199,8 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
                   sub2Val,
                   () => handleSubAttrChange(attr, def.sub2, -1),
                   () => handleSubAttrChange(attr, def.sub2, 1),
-                  sub2Val <= value - 2 || sub2Val <= 3,
-                  sub2Val >= value + 2 || sub2Val >= 18,
+                  sub2Val <= value - 2 || sub2Val <= min,
+                  sub2Val >= value + 2 || sub2Val >= max,
                   renderBonuses(def.sub2 as SubAttributeName, sub2Val),
                   sub2Val - value
                 )}
@@ -176,8 +210,8 @@ const AttributePanel = ({ attributes, subAttributes, onChange, onSubChange }: At
                   sub1Val,
                   () => handleSubAttrChange(attr, def.sub1, -1),
                   () => handleSubAttrChange(attr, def.sub1, 1),
-                  sub1Val <= value - 2 || sub1Val <= 3,
-                  sub1Val >= value + 2 || sub1Val >= 18,
+                  sub1Val <= value - 2 || sub1Val <= min,
+                  sub1Val >= value + 2 || sub1Val >= max,
                   renderBonuses(def.sub1 as SubAttributeName, sub1Val),
                   sub1Val - value
                 )}

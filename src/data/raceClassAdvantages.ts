@@ -1335,15 +1335,6 @@ export const raceClassAdvantages: RaceClassAdvantage[] = [
     type: "advantage",
   },
   {
-    name: "Magia Anotada",
-    category: "antecedente",
-    applicableClasses: ["Arcano", "Sacerdote"],
-    cost: 3,
-    costOthers: null,
-    description: "Por magia anotada no Grimoire / Livro de Orações",
-    type: "advantage",
-  },
-  {
     name: "Maldição",
     category: "antecedente",
     applicableClasses: ["Todas"],

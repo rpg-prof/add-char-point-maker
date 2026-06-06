@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, ChevronUp, Sparkles, BookOpen, Plus, Check, Book } from "lucide-react";
 import { spellLists, type Spell } from "@/data/spells";
+import { GRIMOIRE_SPELL_POINT_COST } from "@/lib/pointBreakdown";
 import { spellMatchesArcane, spellMatchesDivine } from "@/data/magicAccess";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
@@ -128,7 +129,14 @@ const MagicPanel = ({
             {collectionName}
           </span>
           <span className="text-xs text-muted-foreground font-body">
-            {grimoire.length} {grimoire.length === 1 ? "magia" : "magias"} selecionada{grimoire.length !== 1 ? "s" : ""}
+            {grimoire.length} {grimoire.length === 1 ? "magia" : "magias"} selecionada
+            {grimoire.length !== 1 ? "s" : ""}
+            {grimoire.length > 0 && (
+              <span className="text-gold font-semibold">
+                {" "}
+                · {grimoire.length * GRIMOIRE_SPELL_POINT_COST} pts ({GRIMOIRE_SPELL_POINT_COST}/magia)
+              </span>
+            )}
           </span>
         </div>
         <button

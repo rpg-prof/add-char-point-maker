@@ -22,8 +22,8 @@ import ResistancePanel from "@/components/ResistancePanel";
 import EquipmentShopPanel from "@/components/EquipmentShopPanel";
 import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
-  attributeCosts,
   attributeNames,
+  clampAttributeValue,
   races,
   classes,
   socialClasses,
@@ -48,6 +48,13 @@ import {
 } from "@/data/equipment";
 import { parseCargaKg } from "@/data/currency";
 import { raceClassAdvantages } from "@/data/raceClassAdvantages";
+import {
+  getAttributeBreakdown,
+  getCharacterPointBreakdown,
+  getProgressionBreakdown,
+  GRIMOIRE_SPELL_POINT_COST,
+} from "@/lib/pointBreakdown";
+import { clampAttributesForRace } from "@/lib/clampAttributesForRace";
 
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
@@ -264,10 +271,67 @@ const Index = () => {
         })()
       : 0;
     const magicCost = divineCost + arcaneCost + specialistCost;
+    const grimoireCost = grimoire.length * GRIMOIRE_SPELL_POINT_COST;
 
-    return raceCost + classCost + socialCost + reputationCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost;
-  }, [selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist]);
+    return raceCost + classCost + socialCost + reputationCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost + grimoireCost;
+  }, [selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist, grimoire]);
 
+  const attributeBreakdown = useMemo(
+    () => getAttributeBreakdown(attributes),
+    [attributes]
+  );
+
+  const characterPointContext = useMemo(
+    () => ({
+      selectedRace,
+      selectedClass,
+      selectedSocialClass,
+      selectedReputation,
+      selectedAdvantages,
+      selectedRaceClassAdv,
+      selectedSkills,
+      selectedWeapons,
+      selectedWeaponGroups,
+      selectedShields,
+      grimoire,
+      divineAccess,
+      arcaneAccess,
+      arcaneSpecialist,
+    }),
+    [
+      selectedRace,
+      selectedClass,
+      selectedSocialClass,
+      selectedReputation,
+      selectedAdvantages,
+      selectedRaceClassAdv,
+      selectedSkills,
+      selectedWeapons,
+      selectedWeaponGroups,
+      selectedShields,
+      grimoire,
+      divineAccess,
+      arcaneAccess,
+      arcaneSpecialist,
+    ]
+  );
+
+  const characterBreakdown = useMemo(
+    () => getCharacterPointBreakdown(characterPointContext),
+    [characterPointContext]
+  );
+
+  const progressionBreakdown = useMemo(
+    () =>
+      getProgressionBreakdown(
+        characterBreakdown,
+        characterPointsSpent,
+        progressionHistory
+      ),
+    [characterBreakdown, characterPointsSpent, progressionHistory]
+  );
+
+  const progressionPointsSpent = Math.max(0, characterPointsSpent - CHARACTER_POINTS);
 
   // Calculate total points gained from disadvantages (for display/limiting)
   const disadvantagePoints = useMemo(() => {
@@ -294,9 +358,19 @@ const Index = () => {
   }, [selectedAdvantages, selectedRaceClassAdv, selectedRace, selectedClass, selectedSocialClass]);
 
   const handleAttributeChange = (attr: AttributeName, value: number) => {
-    const newVal = Math.max(3, Math.min(18, value));
+    const newVal = clampAttributeValue(selectedRace, attr, value);
     setAttributes((prev) => ({ ...prev, [attr]: newVal }));
   };
+
+  const handleRaceChange = useCallback(
+    (race: string) => {
+      setSelectedRace(race);
+      const clamped = clampAttributesForRace(attributes, subAttributes, race);
+      setAttributes(clamped.attributes);
+      setSubAttributes(clamped.subAttributes);
+    },
+    [attributes, subAttributes]
+  );
 
   const handleSubAttributeChange = (subAttr: string, value: number) => {
     setSubAttributes((prev) => ({ ...prev, [subAttr]: value }));
@@ -473,14 +547,26 @@ const Index = () => {
         if (data.cabelos !== undefined) setCabelos(data.cabelos);
         if (data.olhos !== undefined) setOlhos(data.olhos);
         if (data.tendencia !== undefined) setTendencia(data.tendencia);
-        if (data.attributes) setAttributes(data.attributes);
-        if (data.subAttributes) setSubAttributes(data.subAttributes);
-        if (data.selectedRace) setSelectedRace(data.selectedRace);
+        const loadedRace = data.selectedRace ?? "Humano";
+        const loadedAttrs = data.attributes;
+        const loadedSubs = data.subAttributes ?? {};
+        if (loadedAttrs) {
+          const clamped = clampAttributesForRace(loadedAttrs, loadedSubs, loadedRace);
+          setAttributes(clamped.attributes);
+          setSubAttributes(clamped.subAttributes);
+        } else if (data.subAttributes) {
+          setSubAttributes(data.subAttributes);
+        }
+        if (data.selectedRace) setSelectedRace(loadedRace);
         if (data.selectedClass) setSelectedClass(data.selectedClass);
         if (data.selectedSocialClass) setSelectedSocialClass(data.selectedSocialClass);
         if (typeof data.selectedReputation === "number") setSelectedReputation(data.selectedReputation);
         if (data.selectedAdvantages) setSelectedAdvantages(data.selectedAdvantages);
-        if (data.selectedRaceClassAdv) setSelectedRaceClassAdv(data.selectedRaceClassAdv);
+        if (data.selectedRaceClassAdv) {
+          setSelectedRaceClassAdv(
+            data.selectedRaceClassAdv.filter((n: string) => n !== "Magia Anotada")
+          );
+        }
         if (data.selectedSkills) setSelectedSkills(data.selectedSkills);
         if (data.selectedWeapons) setSelectedWeapons(data.selectedWeapons);
         if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
@@ -585,6 +671,7 @@ const Index = () => {
             <AttributePanel
               attributes={attributes}
               subAttributes={subAttributes}
+              selectedRace={selectedRace}
               onChange={handleAttributeChange}
               onSubChange={handleSubAttributeChange}
             />
@@ -601,7 +688,7 @@ const Index = () => {
               selectedClass={selectedClass}
               selectedSocialClass={selectedSocialClass}
               selectedReputation={selectedReputation}
-              onRaceChange={setSelectedRace}
+              onRaceChange={handleRaceChange}
               onClassChange={setSelectedClass}
               onSocialClassChange={handleSocialClassChange}
               canSelectSocialClass={canSelectSocialClass}
@@ -833,17 +920,22 @@ const Index = () => {
             label="Pontos de Atributos"
             spent={attributePointsSpent}
             total={ATTRIBUTE_POINTS}
+            breakdown={attributeBreakdown}
+            detailsVariant="attributes"
           />
           <PointTracker
             label="Pontos de Personagem"
-            spent={Math.min(characterPointsSpent, CHARACTER_POINTS)}
+            spent={characterPointsSpent}
             total={CHARACTER_POINTS}
+            breakdown={characterBreakdown}
           />
           {totalProgressionPoints > 0 && (
             <PointTracker
               label="Pontos de Progressão"
-              spent={Math.max(0, characterPointsSpent - CHARACTER_POINTS)}
+              spent={progressionPointsSpent}
               total={totalProgressionPoints}
+              breakdown={progressionBreakdown}
+              detailsVariant="progression"
             />
           )}
         </div>

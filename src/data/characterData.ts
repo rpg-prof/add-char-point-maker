@@ -281,6 +281,46 @@ export const attributeNames = [
 
 export type AttributeName = typeof attributeNames[number];
 
+/** Tabela 8: Exigências Raciais de Habilidades — ajuste ao mín/máx (base 3–18). */
+export const raceAttributeAdjustments: Partial<
+  Record<string, Partial<Record<AttributeName, number>>>
+> = {
+  Anão: { Constituição: 1, Carisma: -1 },
+  Elfo: { Destreza: 1, Constituição: -1 },
+  Gnomo: { Inteligência: 1, Sabedoria: -1 },
+  Halfling: { Destreza: 1, Força: -1 },
+};
+
+export const ATTRIBUTE_MIN_DEFAULT = 3;
+export const ATTRIBUTE_MAX_DEFAULT = 18;
+
+export function getRaceAttributeAdjustment(
+  race: string,
+  attr: AttributeName
+): number {
+  return raceAttributeAdjustments[race]?.[attr] ?? 0;
+}
+
+export function getAttributeLimits(
+  race: string,
+  attr: AttributeName
+): { min: number; max: number } {
+  const adjustment = getRaceAttributeAdjustment(race, attr);
+  return {
+    min: ATTRIBUTE_MIN_DEFAULT + adjustment,
+    max: ATTRIBUTE_MAX_DEFAULT + adjustment,
+  };
+}
+
+export function clampAttributeValue(
+  race: string,
+  attr: AttributeName,
+  value: number
+): number {
+  const { min, max } = getAttributeLimits(race, attr);
+  return Math.max(min, Math.min(max, value));
+}
+
 // Cost table: attribute value -> cumulative cost
 // Base value is 8 (costs 0). Each point costs more as you go higher.
 export const attributeCosts: Record<number, number> = {
