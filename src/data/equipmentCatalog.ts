@@ -667,8 +667,26 @@ export const equipmentCatalog = [
     "description": "Essa armadura é feita de tiras horizontais de metal, costuradas sobre um fundo de couro e cota de malha. Habitualmente, as tiras recobrem somente as partes vitais, enquanto o couro e a cota de malha protegem as juntas. O peso é distribuído igualmente, através de correias e fivelas. Essa armadura é feita de tiras horizontais de metal, costuradas sobre um fundo de couro e cota de malha. Habitualmente, as tiras recobrem somente as partes vitais, enquanto o couro e a cota de malha protegem as juntas. O peso é distribuído igualmente, através de correias e fivelas."
   },
   {
+    "id": "arco-composto",
+    "name": "Arco Composto",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 7500,
+    "weightKg": 2.0,
+    "section": "lista de armas",
+    "weaponGroup": "arco",
+    "weaponStats": {
+      "size": "G",
+      "type": "p",
+      "speed": "7",
+      "damagePM": "-",
+      "damageG": "-"
+    },
+    "description": "Há arcos de formas e tamanhos variados. O poder de um arco é medido pela sua puxada. Quanto maior a puxada, maior será a força necessária para se manejar o arco Desta forma, é possível que um personagem ganhe bônus no dano causado, em virtude de sua Força. (Aqui, assume-se que o personagem tenha escolhido um arco com uma grande puxada.) Da mesma forma, personagens menos fortes sofrem penalidade ao usar um arco. (Eles são obrigados a manejar um arco com uma puxada mais fraca, ou simplesmente não conseguirão esticar a corda até seu ponto máximo de tensão) Apesar disso, a puxada do arco raramente é um empecilho ao seu uso; o máximo que pode acontecer é o personagem não obter o efeito desejado. O grande teste de força de um personagem consiste em puxar a corda de um arco — a puxada do arco de um herói muito forte pode ser demais para alguém não tão poderoso (como o arco de Ulisses, na Odisséia)."
+  },
+  {
     "id": "arco-curto",
-    "name": "Arco curto",
+    "name": "Arco Curto",
     "category": "arma",
     "tab": "armas",
     "pricePc": 3000,
@@ -677,7 +695,7 @@ export const equipmentCatalog = [
     "weaponGroup": "arco",
     "weaponStats": {
       "size": "M",
-      "type": "-",
+      "type": "p",
       "speed": "7",
       "damagePM": "-",
       "damageG": "-"
@@ -685,35 +703,17 @@ export const equipmentCatalog = [
     "description": "Há arcos de formas e tamanhos variados. O poder de um arco é medido pela sua puxada. Quanto maior a puxada, maior será a força necessária para se manejar o arco Desta forma, é possível que um personagem ganhe bônus no dano causado, em virtude de sua Força. (Aqui, assume-se que o personagem tenha escolhido um arco com uma grande puxada.) Da mesma forma, personagens menos fortes sofrem penalidade ao usar um arco. (Eles são obrigados a manejar um arco com uma puxada mais fraca, ou simplesmente não conseguirão esticar a corda até seu ponto máximo de tensão) Apesar disso, a puxada do arco raramente é um empecilho ao seu uso; o máximo que pode acontecer é o personagem não obter o efeito desejado. O grande teste de força de um personagem consiste em puxar a corda de um arco — a puxada do arco de um herói muito forte pode ser demais para alguém não tão poderoso (como o arco de Ulisses, na Odisséia)."
   },
   {
-    "id": "arco-curto-composto",
-    "name": "Arco curto composto",
+    "id": "arco-de-guerra",
+    "name": "Arco de guerra",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 7500,
-    "weightKg": 1.0,
-    "section": "lista de armas",
-    "weaponGroup": "arco",
-    "weaponStats": {
-      "size": "M",
-      "type": "-",
-      "speed": "6",
-      "damagePM": "-",
-      "damageG": "-"
-    },
-    "description": "Há arcos de formas e tamanhos variados. O poder de um arco é medido pela sua puxada. Quanto maior a puxada, maior será a força necessária para se manejar o arco Desta forma, é possível que um personagem ganhe bônus no dano causado, em virtude de sua Força. (Aqui, assume-se que o personagem tenha escolhido um arco com uma grande puxada.) Da mesma forma, personagens menos fortes sofrem penalidade ao usar um arco. (Eles são obrigados a manejar um arco com uma puxada mais fraca, ou simplesmente não conseguirão esticar a corda até seu ponto máximo de tensão) Apesar disso, a puxada do arco raramente é um empecilho ao seu uso; o máximo que pode acontecer é o personagem não obter o efeito desejado. O grande teste de força de um personagem consiste em puxar a corda de um arco — a puxada do arco de um herói muito forte pode ser demais para alguém não tão poderoso (como o arco de Ulisses, na Odisséia)."
-  },
-  {
-    "id": "arco-longo",
-    "name": "Arco longo",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 7500,
-    "weightKg": 1.5,
+    "pricePc": 10000,
+    "weightKg": 2.5,
     "section": "lista de armas",
     "weaponGroup": "arco",
     "weaponStats": {
       "size": "G",
-      "type": "-",
+      "type": "p",
       "speed": "8",
       "damagePM": "-",
       "damageG": "-"
@@ -721,18 +721,18 @@ export const equipmentCatalog = [
     "description": "Há arcos de formas e tamanhos variados. O poder de um arco é medido pela sua puxada. Quanto maior a puxada, maior será a força necessária para se manejar o arco Desta forma, é possível que um personagem ganhe bônus no dano causado, em virtude de sua Força. (Aqui, assume-se que o personagem tenha escolhido um arco com uma grande puxada.) Da mesma forma, personagens menos fortes sofrem penalidade ao usar um arco. (Eles são obrigados a manejar um arco com uma puxada mais fraca, ou simplesmente não conseguirão esticar a corda até seu ponto máximo de tensão) Apesar disso, a puxada do arco raramente é um empecilho ao seu uso; o máximo que pode acontecer é o personagem não obter o efeito desejado. O grande teste de força de um personagem consiste em puxar a corda de um arco — a puxada do arco de um herói muito forte pode ser demais para alguém não tão poderoso (como o arco de Ulisses, na Odisséia)."
   },
   {
-    "id": "arco-longo-composto",
-    "name": "Arco longo composto",
+    "id": "arco-longo",
+    "name": "Arco Longo",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 10000,
-    "weightKg": 1.5,
+    "pricePc": 7500,
+    "weightKg": 1.8,
     "section": "lista de armas",
     "weaponGroup": "arco",
     "weaponStats": {
       "size": "G",
-      "type": "-",
-      "speed": "7",
+      "type": "p",
+      "speed": "8",
       "damagePM": "-",
       "damageG": "-"
     },
@@ -775,20 +775,38 @@ export const equipmentCatalog = [
     "description": "Há arcos de formas e tamanhos variados. O poder de um arco é medido pela sua puxada. Quanto maior a puxada, maior será a força necessária para se manejar o arco Desta forma, é possível que um personagem ganhe bônus no dano causado, em virtude de sua Força. (Aqui, assume-se que o personagem tenha escolhido um arco com uma grande puxada.) Da mesma forma, personagens menos fortes sofrem penalidade ao usar um arco. (Eles são obrigados a manejar um arco com uma puxada mais fraca, ou simplesmente não conseguirão esticar a corda até seu ponto máximo de tensão) Apesar disso, a puxada do arco raramente é um empecilho ao seu uso; o máximo que pode acontecer é o personagem não obter o efeito desejado. O grande teste de força de um personagem consiste em puxar a corda de um arco — a puxada do arco de um herói muito forte pode ser demais para alguém não tão poderoso (como o arco de Ulisses, na Odisséia)."
   },
   {
-    "id": "besta-de-mão",
-    "name": "Besta de mão",
+    "id": "balestra",
+    "name": "Balestra",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 30000,
-    "weightKg": 1.5,
+    "pricePc": 10000,
+    "weightKg": 2.5,
     "section": "lista de armas",
     "weaponGroup": "besta",
     "weaponStats": {
-      "size": "P",
-      "type": "-",
-      "speed": "5",
-      "damagePM": "-",
-      "damageG": "-"
+      "size": "40 a 50cm",
+      "type": "p",
+      "speed": "7",
+      "damagePM": "1d4",
+      "damageG": "1d6+1"
+    },
+    "description": "Bônus ou penalidades relativas à Força não se aplicam no caso de bestas, já que essas são armas puramente mecânicas. A besta de mão é facilmente manejável com uma mão, e pode ser armada com a outra. A besta leve precisa ser apoiada contra um objeto para receber a seta, o que se faz com o auxílio de uma alavanca localizada no cabo da arma. Uma besta pesada tem uma puxada poderosa, e por isso deve ser armada com uma espécie de manivela que vem acoplada à arma. O atirador firma o pé no estribo da besta enquanto gira a manivela para armar a seta. Bestas disparam quadrelos, e cada arma deve utilizar quadrelos do tamanho adequado."
+  },
+  {
+    "id": "besta-de-repetição",
+    "name": "Besta de repetição",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 30000,
+    "weightKg": 2.5,
+    "section": "lista de armas",
+    "weaponGroup": "besta",
+    "weaponStats": {
+      "size": "50 a 60cm",
+      "type": "p",
+      "speed": "7",
+      "damagePM": "1d3",
+      "damageG": "1d2"
     },
     "description": "Bônus ou penalidades relativas à Força não se aplicam no caso de bestas, já que essas são armas puramente mecânicas. A besta de mão é facilmente manejável com uma mão, e pode ser armada com a outra. A besta leve precisa ser apoiada contra um objeto para receber a seta, o que se faz com o auxílio de uma alavanca localizada no cabo da arma. Uma besta pesada tem uma puxada poderosa, e por isso deve ser armada com uma espécie de manivela que vem acoplada à arma. O atirador firma o pé no estribo da besta enquanto gira a manivela para armar a seta. Bestas disparam quadrelos, e cada arma deve utilizar quadrelos do tamanho adequado."
   },
@@ -798,84 +816,48 @@ export const equipmentCatalog = [
     "category": "arma",
     "tab": "armas",
     "pricePc": 3500,
-    "weightKg": 3.5,
+    "weightKg": 1.8,
     "section": "lista de armas",
     "weaponGroup": "besta",
     "weaponStats": {
-      "size": "M",
-      "type": "-",
-      "speed": "7",
-      "damagePM": "-",
-      "damageG": "-"
+      "size": "40cm",
+      "type": "p",
+      "speed": "5",
+      "damagePM": "1d4",
+      "damageG": "1d3"
     },
     "description": "Bônus ou penalidades relativas à Força não se aplicam no caso de bestas, já que essas são armas puramente mecânicas. A besta de mão é facilmente manejável com uma mão, e pode ser armada com a outra. A besta leve precisa ser apoiada contra um objeto para receber a seta, o que se faz com o auxílio de uma alavanca localizada no cabo da arma. Uma besta pesada tem uma puxada poderosa, e por isso deve ser armada com uma espécie de manivela que vem acoplada à arma. O atirador firma o pé no estribo da besta enquanto gira a manivela para armar a seta. Bestas disparam quadrelos, e cada arma deve utilizar quadrelos do tamanho adequado."
   },
   {
     "id": "besta-pesada",
-    "name": "Besta pesada",
+    "name": "Besta Pesada",
     "category": "arma",
     "tab": "armas",
     "pricePc": 5000,
-    "weightKg": 7.0,
+    "weightKg": 1.8,
     "section": "lista de armas",
     "weaponGroup": "besta",
     "weaponStats": {
-      "size": "M",
-      "type": "-",
+      "size": "60 a 70cm",
+      "type": "p",
       "speed": "10",
-      "damagePM": "-",
-      "damageG": "-"
-    },
-    "description": "Bônus ou penalidades relativas à Força não se aplicam no caso de bestas, já que essas são armas puramente mecânicas. A besta de mão é facilmente manejável com uma mão, e pode ser armada com a outra. A besta leve precisa ser apoiada contra um objeto para receber a seta, o que se faz com o auxílio de uma alavanca localizada no cabo da arma. Uma besta pesada tem uma puxada poderosa, e por isso deve ser armada com uma espécie de manivela que vem acoplada à arma. O atirador firma o pé no estribo da besta enquanto gira a manivela para armar a seta. Bestas disparam quadrelos, e cada arma deve utilizar quadrelos do tamanho adequado."
-  },
-  {
-    "id": "cajado-funda",
-    "name": "Cajado-funda",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 20,
-    "weightKg": 1.0,
-    "section": "lista de armas",
-    "weaponGroup": "besta",
-    "weaponStats": {
-      "size": "M",
-      "type": "-",
-      "speed": "11",
-      "damagePM": "-",
-      "damageG": "-"
-    },
-    "description": "Bônus ou penalidades relativas à Força não se aplicam no caso de bestas, já que essas são armas puramente mecânicas. A besta de mão é facilmente manejável com uma mão, e pode ser armada com a outra. A besta leve precisa ser apoiada contra um objeto para receber a seta, o que se faz com o auxílio de uma alavanca localizada no cabo da arma. Uma besta pesada tem uma puxada poderosa, e por isso deve ser armada com uma espécie de manivela que vem acoplada à arma. O atirador firma o pé no estribo da besta enquanto gira a manivela para armar a seta. Bestas disparam quadrelos, e cada arma deve utilizar quadrelos do tamanho adequado."
-  },
-  {
-    "id": "chicote",
-    "name": "Chicote",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 10,
-    "weightKg": 1.0,
-    "section": "lista de armas",
-    "weaponGroup": "besta",
-    "weaponStats": {
-      "size": "M",
-      "type": "-",
-      "speed": "8",
-      "damagePM": "1d2",
-      "damageG": "1"
+      "damagePM": "1d4+1",
+      "damageG": "1d6+1"
     },
     "description": "Bônus ou penalidades relativas à Força não se aplicam no caso de bestas, já que essas são armas puramente mecânicas. A besta de mão é facilmente manejável com uma mão, e pode ser armada com a outra. A besta leve precisa ser apoiada contra um objeto para receber a seta, o que se faz com o auxílio de uma alavanca localizada no cabo da arma. Uma besta pesada tem uma puxada poderosa, e por isso deve ser armada com uma espécie de manivela que vem acoplada à arma. O atirador firma o pé no estribo da besta enquanto gira a manivela para armar a seta. Bestas disparam quadrelos, e cada arma deve utilizar quadrelos do tamanho adequado."
   },
   {
     "id": "dardo",
-    "name": "Dardo",
+    "name": "dardo",
     "category": "arma",
     "tab": "armas",
     "pricePc": 50,
-    "weightKg": 0.25,
+    "weightKg": 0.15,
     "section": "lista de armas",
     "weaponGroup": "besta",
     "weaponStats": {
-      "size": "P",
-      "type": "P",
+      "size": "12 a 20cm",
+      "type": "p",
       "speed": "2",
       "damagePM": "1d3",
       "damageG": "1d2"
@@ -954,37 +936,123 @@ export const equipmentCatalog = [
     }
   },
   {
-    "id": "cimitarra",
-    "name": "Cimitarra",
+    "id": "cimitarra-curta",
+    "name": "Cimitarra curta",
     "category": "arma",
     "tab": "armas",
     "pricePc": 1500,
-    "weightKg": 2.0,
+    "weightKg": 3.0,
     "section": "lista de armas",
     "weaponGroup": "espada",
     "weaponStats": {
-      "size": "M",
-      "type": "C",
+      "size": "90 a 95cm",
+      "type": "c/p",
+      "speed": "4",
+      "damagePM": "1d6",
+      "damageG": "1d4+1"
+    }
+  },
+  {
+    "id": "cimitarra-longa",
+    "name": "Cimitarra longa",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 6000,
+    "weightKg": 4.0,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "90 a 110cm",
+      "type": "c/p",
       "speed": "5",
       "damagePM": "1d8",
       "damageG": "1d8"
     }
   },
   {
-    "id": "espada-bastarda",
-    "name": "Espada bastarda",
+    "id": "claymore",
+    "name": "Claymore",
     "category": "arma",
     "tab": "armas",
     "pricePc": 2500,
-    "weightKg": 5.0,
+    "weightKg": 8.0,
     "section": "lista de armas",
     "weaponGroup": "espada",
     "weaponStats": {
-      "size": "M",
-      "type": "C",
-      "speed": "-",
-      "damagePM": "-",
-      "damageG": "-"
+      "size": "110 a 135cm",
+      "type": "c",
+      "speed": "8",
+      "damagePM": "2d4",
+      "damageG": "2d8"
+    }
+  },
+  {
+    "id": "cutlass",
+    "name": "Cutlass",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1200,
+    "weightKg": 2.0,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "65 a 90cm",
+      "type": "c/p",
+      "speed": "5",
+      "damagePM": "1d6",
+      "damageG": "1d8"
+    }
+  },
+  {
+    "id": "espada-barbara",
+    "name": "Espada barbara",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 3000,
+    "weightKg": 3.2,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "80 a 95cm",
+      "type": "c/p",
+      "speed": "5",
+      "damagePM": "1d8",
+      "damageG": "1d10"
+    }
+  },
+  {
+    "id": "espada-bastarda-com-duas-mãos",
+    "name": "Espada bastarda (Com duas mãos)",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 2500,
+    "weightKg": 6.0,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "110 a 135cm",
+      "type": "c",
+      "speed": "6",
+      "damagePM": "2d6",
+      "damageG": "1d6+1"
+    },
+    "description": "É muito parecida com a espada longa, porém possui o punho maior, e pode ser manejada com uma mão ou ambas. Em todo caso, verifique a velocidade da arma e o dano apropriado, pois esses valores mudam de acordo com a forma de utilização do item. Se a espada for empunhada com as duas mãos, o personagem deve abdicar do escudo."
+  },
+  {
+    "id": "espada-bastarda-com-uma-mão",
+    "name": "Espada bastarda (Com uma mão)",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 2500,
+    "weightKg": 6.0,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "110 a 135cm",
+      "type": "c",
+      "speed": "6",
+      "damagePM": "1d8",
+      "damageG": "1d12"
     },
     "description": "É muito parecida com a espada longa, porém possui o punho maior, e pode ser manejada com uma mão ou ambas. Em todo caso, verifique a velocidade da arma e o dano apropriado, pois esses valores mudam de acordo com a forma de utilização do item. Se a espada for empunhada com as duas mãos, o personagem deve abdicar do escudo."
   },
@@ -994,15 +1062,66 @@ export const equipmentCatalog = [
     "category": "arma",
     "tab": "armas",
     "pricePc": 1000,
-    "weightKg": 1.5,
+    "weightKg": 2.0,
     "section": "lista de armas",
     "weaponGroup": "espada",
     "weaponStats": {
-      "size": "P",
-      "type": "P",
+      "size": "70 a 80cm",
+      "type": "c/p",
       "speed": "3",
       "damagePM": "1d6",
-      "damageG": "1d8"
+      "damageG": "1d6"
+    }
+  },
+  {
+    "id": "espada-de-assassinos",
+    "name": "Espada de assassinos",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1200,
+    "weightKg": 16.0,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "80 a 90cm",
+      "type": "c/p",
+      "speed": "3",
+      "damagePM": "1d6",
+      "damageG": "1d6+1"
+    }
+  },
+  {
+    "id": "espada-de-duas-mãos",
+    "name": "Espada de duas mãos",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 5000,
+    "weightKg": 7.0,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "140 a 160cm",
+      "type": "c",
+      "speed": "10",
+      "damagePM": "1d10",
+      "damageG": "3d6"
+    }
+  },
+  {
+    "id": "espada-de-treinamento",
+    "name": "Espada de treinamento",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 500,
+    "weightKg": 1.2,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "70 a 80cm",
+      "type": "c/p",
+      "speed": "3",
+      "damagePM": "1d6",
+      "damageG": "1d4+1"
     }
   },
   {
@@ -1011,12 +1130,12 @@ export const equipmentCatalog = [
     "category": "arma",
     "tab": "armas",
     "pricePc": 1000,
-    "weightKg": 2.0,
+    "weightKg": 3.5,
     "section": "lista de armas",
     "weaponGroup": "espada",
     "weaponStats": {
-      "size": "M",
-      "type": "C",
+      "size": "70 a 100cm",
+      "type": "c/p",
       "speed": "5",
       "damagePM": "2d4",
       "damageG": "1d6+1"
@@ -1028,103 +1147,135 @@ export const equipmentCatalog = [
     "category": "arma",
     "tab": "armas",
     "pricePc": 1500,
-    "weightKg": 2.0,
+    "weightKg": 3.0,
     "section": "lista de armas",
     "weaponGroup": "espada",
     "weaponStats": {
-      "size": "M",
-      "type": "C",
+      "size": "90 a 110cm",
+      "type": "c/p",
       "speed": "5",
       "damagePM": "1d8",
       "damageG": "1d12"
     }
   },
   {
-    "id": "faca",
-    "name": "Faca",
+    "id": "falchion-austriaco",
+    "name": "Falchion austriaco",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 50,
-    "weightKg": 0.25,
+    "pricePc": 1800,
+    "weightKg": 3.0,
     "section": "lista de armas",
     "weaponGroup": "espada",
     "weaponStats": {
-      "size": "P",
-      "type": "P/C",
-      "speed": "2",
-      "damagePM": "1d3",
-      "damageG": "1d2"
-    }
-  },
-  {
-    "id": "foice",
-    "name": "Foice",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 60,
-    "weightKg": 1.5,
-    "section": "lista de armas",
-    "weaponGroup": "espada",
-    "weaponStats": {
-      "size": "P",
-      "type": "C",
+      "size": "70 a 85cm",
+      "type": "c/p",
       "speed": "4",
-      "damagePM": "1d4+1",
-      "damageG": "1d4"
+      "damagePM": "1d6",
+      "damageG": "1d4+1"
     }
   },
   {
-    "id": "funda",
-    "name": "Funda",
+    "id": "falchion-italiano",
+    "name": "Falchion italiano",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 5,
-    "weightKg": 0.0,
-    "section": "lista de armas",
-    "weaponGroup": "espada",
-    "weaponStats": {
-      "size": "P",
-      "type": "-",
-      "speed": "6",
-      "damagePM": "-",
-      "damageG": "-"
-    }
-  },
-  {
-    "id": "khopesh",
-    "name": "Khopesh",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 1000,
+    "pricePc": 1700,
     "weightKg": 3.5,
     "section": "lista de armas",
     "weaponGroup": "espada",
     "weaponStats": {
-      "size": "M",
-      "type": "C",
-      "speed": "9",
-      "damagePM": "2d4",
-      "damageG": "1d6"
-    },
-    "description": "É uma arma egípcia. O punho e a proteção para as mãos medem aproximadamente 15 centímetros. A lâmina é reta a partir da proteção, medindo cerca de 45 centímetros. Desse ponto em diante, torna-se ligeiramente curva, como uma foice, estendendo-se por mais 60 centímetros. Trata-se de uma arma pesada e de difícil manejo. É sobretudo uma arma lenta, se o golpe desferido não for certeiro. A parte curva da lâmina pode capturar o oponente ou sua arma."
+      "size": "75 a 90cm",
+      "type": "c/p",
+      "speed": "4",
+      "damagePM": "1d6",
+      "damageG": "1d4+1"
+    }
   },
   {
-    "id": "lança",
-    "name": "Lança",
+    "id": "flamberge",
+    "name": "Flamberge",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 80,
+    "pricePc": 4500,
+    "weightKg": 6.0,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "125 a 140cm",
+      "type": "c",
+      "speed": "8",
+      "damagePM": "1d8+1",
+      "damageG": "1d12+1"
+    }
+  },
+  {
+    "id": "florete",
+    "name": "Florete",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1700,
+    "weightKg": 1.0,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "80 a 100cm",
+      "type": "p",
+      "speed": "4",
+      "damagePM": "1d6",
+      "damageG": "1d6+1"
+    }
+  },
+  {
+    "id": "florete-de-magos",
+    "name": "Florete de magos",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1700,
+    "weightKg": 0.8,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "75 a 90cm",
+      "type": "p",
+      "speed": "4",
+      "damagePM": "1d6",
+      "damageG": "1d6"
+    }
+  },
+  {
+    "id": "katana",
+    "name": "Katana",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 10000,
     "weightKg": 2.5,
     "section": "lista de armas",
     "weaponGroup": "espada",
     "weaponStats": {
-      "size": "M",
-      "type": "P",
-      "speed": "6",
-      "damagePM": "1d6",
-      "damageG": "1d8"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+      "size": "90 a 110cm",
+      "type": "c/p",
+      "speed": "4",
+      "damagePM": "1d10",
+      "damageG": "1d12"
+    }
+  },
+  {
+    "id": "machete",
+    "name": "Machete",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 300,
+    "weightKg": 1.4,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "45 a 60cm",
+      "type": "c/p",
+      "speed": "5",
+      "damagePM": "1d4+1",
+      "damageG": "1d4"
+    }
   },
   {
     "id": "montante",
@@ -1132,200 +1283,247 @@ export const equipmentCatalog = [
     "category": "arma",
     "tab": "armas",
     "pricePc": 5000,
-    "weightKg": 7.5,
+    "weightKg": 10.0,
     "section": "lista de armas",
     "weaponGroup": "espada",
     "weaponStats": {
-      "size": "G",
-      "type": "C",
-      "speed": "10",
-      "damagePM": "1d10",
-      "damageG": "3d6"
+      "size": "180 a 200cm",
+      "type": "c",
+      "speed": "12",
+      "damagePM": "1d12",
+      "damageG": "5d4"
     }
   },
   {
-    "id": "alabarda",
-    "name": "Alabarda",
+    "id": "rapier",
+    "name": "Rapier",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 1000,
+    "pricePc": 1500,
+    "weightKg": 1.2,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "80 a 100cm",
+      "type": "p",
+      "speed": "4",
+      "damagePM": "1d6+1",
+      "damageG": "1d8+1"
+    }
+  },
+  {
+    "id": "rapier-de-duelos",
+    "name": "Rapier de duelos",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 2000,
+    "weightKg": 1.2,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "80 a 100cm",
+      "type": "p",
+      "speed": "4",
+      "damagePM": "1d6+1",
+      "damageG": "1d8+1"
+    }
+  },
+  {
+    "id": "rapier-de-piratas",
+    "name": "Rapier de piratas",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 2000,
+    "weightKg": 1.2,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "80 a 100cm",
+      "type": "p",
+      "speed": "3",
+      "damagePM": "1d6",
+      "damageG": "1d6"
+    }
+  },
+  {
+    "id": "sabre",
+    "name": "Sabre",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1700,
+    "weightKg": 1.5,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "90 a 110cm",
+      "type": "c/p",
+      "speed": "4",
+      "damagePM": "1d6+1",
+      "damageG": "1d8+1"
+    }
+  },
+  {
+    "id": "sabre-de-amazonas",
+    "name": "Sabre de amazonas",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 2000,
+    "weightKg": 1.2,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "90 a 110cm",
+      "type": "c/p",
+      "speed": "4",
+      "damagePM": "1d6+1",
+      "damageG": "1d8+1"
+    }
+  },
+  {
+    "id": "sabre-de-piratas",
+    "name": "Sabre de piratas",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1500,
+    "weightKg": 1.8,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "90 a 110cm",
+      "type": "c/p",
+      "speed": "4",
+      "damagePM": "1d8",
+      "damageG": "1d8"
+    }
+  },
+  {
+    "id": "wakizashi",
+    "name": "Wakizashi",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 5000,
+    "weightKg": 1.2,
+    "section": "lista de armas",
+    "weaponGroup": "espada",
+    "weaponStats": {
+      "size": "45 a 70cm",
+      "type": "c/p",
+      "speed": "3",
+      "damagePM": "1d8",
+      "damageG": "1d8"
+    }
+  },
+  {
+    "id": "arpão-de-pesca",
+    "name": "Arpão de pesca",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 100,
+    "weightKg": 1.2,
+    "section": "lista de armas",
+    "weaponGroup": "haste",
+    "weaponStats": {
+      "size": "1,2 a 1,4m",
+      "type": "p",
+      "speed": "5",
+      "damagePM": "1d6",
+      "damageG": "1d4"
+    },
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
+  },
+  {
+    "id": "dragonlance",
+    "name": "Dragonlance",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 4000,
     "weightKg": 7.5,
     "section": "lista de armas",
     "weaponGroup": "haste",
     "weaponStats": {
-      "size": "G",
-      "type": "P/C",
-      "speed": "g",
-      "damagePM": "1d10",
-      "damageG": "2d6"
+      "size": "4 a 5m",
+      "type": "p",
+      "speed": "6",
+      "damagePM": "1d8",
+      "damageG": "1d12"
     },
-    "description": "Depois do pique e do bill, essa era a arma mais popular na Idade Média: um machado de guerra afixado numa haste de 2,5 metros, num ângulo especial para produzir o impacto máximo. A ponta da haste lembra uma lança ou a ponta do pique. Atrás da lâmina do machado, há um gancho para abrir armaduras ou desmontar cavaleiros. Originalmente destinada a desmantelar cavalaria, a alabarda não era muito eficiente para a tarefa, devido a seu alcance limitado, ao peso e ao fato de que é preciso muito espaço para manejá-la. Tomou- se utilíssima, no entanto, contra blocos de piqueiros: caso o ataque principal falhasse, soldados munidos com alabardas saíam de suas formações e atacavam os flancos do inimigo. Os piqueiros ficavam quase indefesos contra um ataque corpo a corpo devido ao tamanho de suas longas armas."
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
   },
   {
-    "id": "arpão",
-    "name": "Arpão",
+    "id": "dreizak",
+    "name": "Dreizak",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 2000,
+    "pricePc": 500,
+    "weightKg": 2.5,
+    "section": "lista de armas",
+    "weaponGroup": "haste",
+    "weaponStats": {
+      "size": "1,4 a 1,7m",
+      "type": "p/c",
+      "speed": "5",
+      "damagePM": "1d6",
+      "damageG": "1d6"
+    },
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
+  },
+  {
+    "id": "glefe",
+    "name": "Glefe",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 600,
     "weightKg": 3.0,
     "section": "lista de armas",
     "weaponGroup": "haste",
     "weaponStats": {
-      "size": "G",
-      "type": "P",
-      "speed": "7",
-      "damagePM": "2d4",
-      "damageG": "2d6"
-    },
-    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
-  },
-  {
-    "id": "azagaia",
-    "name": "Azagaia",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 50,
-    "weightKg": 1.0,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "M",
-      "type": "P",
-      "speed": "4",
-      "damagePM": "1d6",
-      "damageG": "1d6"
-    },
-    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
-  },
-  {
-    "id": "bardiche",
-    "name": "Bardiche",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 700,
-    "weightKg": 6.0,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "G",
-      "type": "C",
-      "speed": "9",
-      "damagePM": "2d4",
-      "damageG": "2d6"
-    },
-    "description": "Uma das mais simples armas de haste, o bardiche consiste em um machado de batalha com um longo cabo. Uma grande lâmina curva em forma de machado, é colocada na ponta de uma haste de 2,5 metros de comprimento. Esse modelo provavelmente foi adaptado de uma ferramenta agrícola; de fato, o bardiche sempre gozou de grande popularidade entre camponeses. Sua desvantagem é exigir mais espaço do que a lança ou o pique para ser utilizado com eficiência."
-  },
-  {
-    "id": "bec-de-corbin",
-    "name": "Bec de corbin",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 800,
-    "weightKg": 5.0,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "G",
-      "type": "P/E",
-      "speed": "9",
+      "size": "2 a 2,2m",
+      "type": "p/c",
+      "speed": "6",
       "damagePM": "1d8",
-      "damageG": "1d6"
-    },
-    "description": "Uma arma muito específica, utilizada principalmente pelas classes dominantes na Baixa Idade Média e início da Renascença. Esse dispositivo é uma espécie de abridor de latas antigo, feito especialmente para lidar com armaduras completas. A ponta aguçada penetra na armadura, enquanto o lado em forma de martelo é usado para desferir golpes. A arma mede cerca de 2,5 metros e, uma vez que sua eficiência depende de impacto, é necessário muito espaço para manejá-la corretamente."
-  },
-  {
-    "id": "bidente",
-    "name": "Bidente",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 500,
-    "weightKg": 3.5,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "G",
-      "type": "P",
-      "speed": "7",
-      "damagePM": "1d8",
-      "damageG": "2d4"
-    },
-    "description": "A mais simples adaptação de um instrumento agrícola, já que esta arma nada mais é do que um forcado sobre uma haste comprida. Com dentes reforçados e retos, é uma boa arma, que também se presta a combinações com lâminas cortantes."
-  },
-  {
-    "id": "bill-guisarme",
-    "name": "Bill-guisarme",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 700,
-    "weightKg": 7.5,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "G",
-      "type": "P/C",
-      "speed": "10",
-      "damagePM": "2d4",
-      "damageG": "1d10"
-    },
-    "description": "Uma arma com aspecto um tanto esquisito, é mais uma adaptação de um instrumento agrícola, o podão. A extremidade da haste de 2,5 metros sustenta a combinação de uma lâmina afiada e recurva, um espeto protuberante e um gancho. A arma pode ser usada de várias maneiras, requerendo espaço para ser manejada."
-  },
-  {
-    "id": "bordona",
-    "name": "Bordona",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 800,
-    "weightKg": 3.5,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "G",
-      "type": "P/C",
-      "speed": "8",
-      "damagePM": "1d8",
-      "damageG": "1d10"
-    },
-    "description": "Uma tentativa de melhorar o poder de perfuração do fauchard, adicionando uma longa ponta de ferro ou um tridente às costas da lâmina principal. A arma ainda assim é ineficiente."
-  },
-  {
-    "id": "fauchard",
-    "name": "Fauchard",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 500,
-    "weightKg": 3.5,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "G",
-      "type": "P/C",
-      "speed": "8",
-      "damagePM": "1d6",
       "damageG": "1d8"
     },
-    "description": "É uma adaptação da foice e da gadanha. A arma é uma longa lâmina curva sobre uma haste de 2,5 metros. Pode ser usada como arma de corte ou perfurante, embora a lâmina curva a torne Ranseur Alabarda Glaive Arma de Haste Guisarme Spetum Partisan Fauchard Voulge Bec de Corbin Martelo Lucerno Bidente Lança Bardiche um pouco ineficaz como arma de perfuração. A vantagem é que o camponês pode facilmente transformar sua foice nessa arma."
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
   },
   {
-    "id": "fauchard-gancho",
-    "name": "Fauchard gancho",
+    "id": "halberd-longo",
+    "name": "Halberd Longo",
     "category": "arma",
     "tab": "armas",
     "pricePc": 1000,
-    "weightKg": 4.0,
+    "weightKg": 3.0,
     "section": "lista de armas",
     "weaponGroup": "haste",
     "weaponStats": {
-      "size": "G",
-      "type": "P/C",
-      "speed": "9",
-      "damagePM": "1d4",
-      "damageG": "1d4"
+      "size": "2 a 2,2m",
+      "type": "p",
+      "speed": "6",
+      "damagePM": "2d6",
+      "damageG": "1d10"
     },
-    "description": "Outra tentativa de melhorar o fauchard, desta vez adicionando-lhe um gancho na face posterior da lâmina, supostamente para desmontar cavaleiros. Assim como o fauchard, não é uma arma das mais bem-sucedidas."
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
   },
   {
-    "id": "glaive",
-    "name": "Glaive",
+    "id": "kumade",
+    "name": "Kumade",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 2000,
+    "weightKg": 2.5,
+    "section": "lista de armas",
+    "weaponGroup": "haste",
+    "weaponStats": {
+      "size": "1,5 a 1,8m",
+      "type": "p/c",
+      "speed": "5",
+      "damagePM": "1d8",
+      "damageG": "1d6"
+    },
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
+  },
+  {
+    "id": "mata-dragão",
+    "name": "Mata-dragão",
     "category": "arma",
     "tab": "armas",
     "pricePc": 600,
@@ -1333,85 +1531,49 @@ export const equipmentCatalog = [
     "section": "lista de armas",
     "weaponGroup": "haste",
     "weaponStats": {
-      "size": "G",
-      "type": "C",
-      "speed": "8",
-      "damagePM": "1d6",
+      "size": "2 a 2,4m",
+      "type": "p",
+      "speed": "7",
+      "damagePM": "1d8",
       "damageG": "1d10"
     },
-    "description": "Uma arma de haste básica, o glaive possui uma única lâmina, colocada sobre uma haste que mede cerca de 3 metros. Não é eficiente, mas é relativamente fácil de se construir e manejar. Geralmente a lâmina curva-se para fora, aumentando a superfície cortante, o que a torna semelhante a uma faca."
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
   },
   {
-    "id": "glaive-guisarme",
-    "name": "Glaive guisarme",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 1000,
-    "weightKg": 5.0,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "G",
-      "type": "P/C",
-      "speed": "9",
-      "damagePM": "2d4",
-      "damageG": "2d6"
-    },
-    "description": "Arma que combina o glaive básico com uma ponta aguçada ou um gancho. Essa modificação teoricamente melhoraria a eficiência da arma, mas na prática isso provou ser questionável."
-  },
-  {
-    "id": "guisarme",
-    "name": "Guisarme",
+    "id": "naginata",
+    "name": "Naginata",
     "category": "arma",
     "tab": "armas",
     "pricePc": 500,
-    "weightKg": 4.0,
+    "weightKg": 1.5,
     "section": "lista de armas",
     "weaponGroup": "haste",
     "weaponStats": {
-      "size": "G",
-      "type": "e",
-      "speed": "3",
-      "damagePM": "2d4",
-      "damageG": "1d8"
-    },
-    "description": "Provavelmente derivado do podão, um instrumento agrícola. Trata-se basicamente de uma pesada lâmina curva. Apesar de prático e fácil de se fazer, não é eficiente."
-  },
-  {
-    "id": "guisarme-voulge",
-    "name": "Guisarme voulge",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 800,
-    "weightKg": 7.5,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "G",
-      "type": "P/C",
-      "speed": "10",
-      "damagePM": "2d4",
-      "damageG": "2d4"
-    },
-    "description": "É basicamente um machado modificado sobre uma haste de 2,5 metros. A haste termina numa ponta aguçada, e um espeto, colocado nas costas da lâmina, é próprio para atravessar armaduras. Às vezes, o espeto é substituído por um gancho afiado para desmontar cavaleiros."
-  },
-  {
-    "id": "martelo-lucerno",
-    "name": "Martelo lucerno",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 700,
-    "weightKg": 7.5,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "G",
-      "type": "P/E",
-      "speed": "9",
-      "damagePM": "2d4",
+      "size": "1,3 a 1,5m",
+      "type": "p/c",
+      "speed": "5",
+      "damagePM": "1d6",
       "damageG": "1d6"
     },
-    "description": "Parecido com o bec de corbin, essa arma possui uma haste de 3 metros e é usada por soldados comuns de infantaria. Assim como o bec de corbin, seu uso principal é perfurar armaduras. A ponta da haste vem equipada com uma longa cabeça de lança para manter os cavaleiros inimigos à distância."
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
+  },
+  {
+    "id": "pailos",
+    "name": "Pailos",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 3500,
+    "weightKg": 1.7,
+    "section": "lista de armas",
+    "weaponGroup": "haste",
+    "weaponStats": {
+      "size": "3,5 a 4m",
+      "type": "p/c",
+      "speed": "6",
+      "damagePM": "1d8",
+      "damageG": "1d10"
+    },
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
   },
   {
     "id": "partisan",
@@ -1419,89 +1581,89 @@ export const equipmentCatalog = [
     "category": "arma",
     "tab": "armas",
     "pricePc": 1000,
-    "weightKg": 4.0,
+    "weightKg": 2.5,
     "section": "lista de armas",
     "weaponGroup": "haste",
     "weaponStats": {
-      "size": "G",
-      "type": "P",
-      "speed": "9",
+      "size": "2 a 2,5m",
+      "type": "p",
+      "speed": "6",
       "damagePM": "1d6",
-      "damageG": "1d6+1"
+      "damageG": "1d8"
     },
     "description": "Menor do que o pique, porém mais longa que a lança, essa arma é uma cabeça de lança larga sobre uma haste de 2.5 metros. Há duas lâminas menores que se projetam da base da lâmina principal, de modo a aumentar o dano e eventualmente capturar armas inimigas. É uma arma perfurante, para ser usada em formações maciças."
   },
   {
-    "id": "pique",
-    "name": "Pique",
+    "id": "pike",
+    "name": "Pike",
     "category": "arma",
     "tab": "armas",
     "pricePc": 500,
-    "weightKg": 6.0,
+    "weightKg": 2.5,
     "section": "lista de armas",
     "weaponGroup": "haste",
     "weaponStats": {
-      "size": "G",
-      "type": "P",
-      "speed": "13",
+      "size": "1,8 a 2,2m",
+      "type": "p",
+      "speed": "6",
       "damagePM": "1d6",
-      "damageG": "1d12"
+      "damageG": "1d8"
     },
-    "description": "Uma longa lança de até 6 metros, terminando em uma ponta de ferro com quatro laces. Foi uma arma popular durante a Renascença. Soldados eram colocados lado a lado em grandes formações e várias fileiras entravam em combate Grandes blocos de piqueiros formavam tropas formidáveis. Porém, quando eram obrigados a entrar em combate corpo a corpo, deixavam de lado o pique e lutavam com a espada curta, mais apropriada para uma batalha desse gênero."
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
   },
   {
-    "id": "ranseur",
-    "name": "Ranseur",
+    "id": "schnitter",
+    "name": "Schnitter",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 600,
-    "weightKg": 3.5,
+    "pricePc": 1500,
+    "weightKg": 2.5,
     "section": "lista de armas",
     "weaponGroup": "haste",
     "weaponStats": {
-      "size": "G",
-      "type": "P",
-      "speed": "8",
-      "damagePM": "2d4",
-      "damageG": "2d4"
-    },
-    "description": "Muito parecido com o partisan. a diferença fica por conta da ponta de lança, mais delgada. As pequenas lâminas laterais lembram os dentes de um garfo, de modo a capturar armas e, às vezes, perfurar armaduras."
-  },
-  {
-    "id": "spetum",
-    "name": "Spetum",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 500,
-    "weightKg": 3.5,
-    "section": "lista de armas",
-    "weaponGroup": "haste",
-    "weaponStats": {
-      "size": "G",
-      "type": "P",
-      "speed": "8",
+      "size": "1,2 a 1,5m",
+      "type": "p/c",
+      "speed": "6",
       "damagePM": "1d6+1",
-      "damageG": "2d6"
+      "damageG": "1d8"
     },
-    "description": "É uma modificação da lança comum. A haste varia entre 2,5 e 3 metros, com lâminas laterais. Em alguns exemplares, há lâminas que apontam para trás, o que aumenta o dano quando a arma é arrancada do ferimento. As lâminas podem, ainda, capturar armas inimigas, bloquear ataques ou prender o inimigo."
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
   },
   {
-    "id": "voulge",
-    "name": "Voulge",
+    "id": "sturmsense",
+    "name": "Sturmsense",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 500,
-    "weightKg": 6.0,
+    "pricePc": 2000,
+    "weightKg": 2.5,
     "section": "lista de armas",
     "weaponGroup": "haste",
     "weaponStats": {
-      "size": "G",
-      "type": "C",
-      "speed": "10",
-      "damagePM": "2d4",
-      "damageG": "2d4"
+      "size": "1,7 a 2m",
+      "type": "p",
+      "speed": "6",
+      "damagePM": "1d6",
+      "damageG": "1d8"
     },
-    "description": "Essa arma, assim como o bardiche, é uma variação do machado e do cutelo. É similar a um cutelo sobre uma haste de 2,5 metros. Trata-se de uma arma popular, simples de construir e usar. Também chamado de machado de Lochaber. Essa arma, assim como o bardiche, é uma variação do machado e do cutelo. É similar a um cutelo sobre uma haste de 2,5 metros. Trata-se de uma arma popular, simples de construir e usar. Também chamado de machado de Lochaber. ## Descrições dos Itens"
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
+  },
+  {
+    "id": "tridente",
+    "name": "Tridente",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1500,
+    "weightKg": 2.5,
+    "section": "lista de armas",
+    "weaponGroup": "haste",
+    "weaponStats": {
+      "size": "1,4 a 1,7m",
+      "type": "p",
+      "speed": "5",
+      "damagePM": "1d6",
+      "damageG": "1d6"
+    },
+    "description": "Arcos com uma grande puxada geralmente não custam mais do que os arcos normais. A exceção fica por conta de arcos que permitam ao personagem um bônus por Força Extraordinária (18/01 ou mais). Tais armas devem ser feitas sob medida, e custam de três a cinco vezes mais que arcos comuns. São também quase impossíveis de se manejar para aqueles que não possuem Força Extraordinária. Nesse caso, é necessário sucesso em um teste de dobrar barras para conseguir usar corretamente a arma. As flechas de arcos de qualquer tipo estão divididas em flechas de caça, cujo alcance e maior, e flechas de guerra, com ponta metálica mais resistente, porém com um alcance reduzido. Esse tipo de equipamento esteve muito em voga durante a Antiguidade e a Idade Média. Seu comprimento sempre foi uma vantagem e, para os camponeses, esta era uma categoria de arma relativamente fácil de se fazer. Daí resulta a enorme variedade de armas de haste. Devido ao grande número de armas, não há um padrão para estabelecer nomes."
   },
   {
     "id": "dardo-agulha",
@@ -1540,152 +1702,62 @@ export const equipmentCatalog = [
     "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
   },
   {
-    "id": "lança-de-cavalaria-leve",
-    "name": "Lança de cavalaria leve",
+    "id": "lança-de-arremesso",
+    "name": "Lança de arremesso",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 600,
-    "weightKg": 2.5,
+    "pricePc": 80,
+    "weightKg": 1.2,
     "section": "lista de armas",
     "weaponGroup": "lanca",
     "weaponStats": {
-      "size": "G",
-      "type": "P",
+      "size": "1 a 1,2m",
+      "type": "p",
+      "speed": "5",
+      "damagePM": "1d4",
+      "damageG": "1d3"
+    },
+    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+  },
+  {
+    "id": "lança-de-caça",
+    "name": "Lança de caça",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 150,
+    "weightKg": 2.0,
+    "section": "lista de armas",
+    "weaponGroup": "lanca",
+    "weaponStats": {
+      "size": "1,3 a 1,6m",
+      "type": "p",
       "speed": "6",
-      "damagePM": "1d6",
-      "damageG": "1d8"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
-  },
-  {
-    "id": "lança-de-cavalaria-média",
-    "name": "Lança de cavalaria média",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 1000,
-    "weightKg": 5.0,
-    "section": "lista de armas",
-    "weaponGroup": "lanca",
-    "weaponStats": {
-      "size": "G",
-      "type": "P",
-      "speed": "7",
-      "damagePM": "1d6+1",
-      "damageG": "2d6"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
-  },
-  {
-    "id": "lança-de-cavalaria-pesada",
-    "name": "Lança de cavalaria pesada",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 1500,
-    "weightKg": 7.5,
-    "section": "lista de armas",
-    "weaponGroup": "lanca",
-    "weaponStats": {
-      "size": "G",
-      "type": "P",
-      "speed": "8",
-      "damagePM": "1d8+1",
-      "damageG": "3d6"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
-  },
-  {
-    "id": "lança-de-torneio",
-    "name": "Lança de torneio",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 2000,
-    "weightKg": 10.0,
-    "section": "lista de armas",
-    "weaponGroup": "lanca",
-    "weaponStats": {
-      "size": "G",
-      "type": "P",
-      "speed": "10",
-      "damagePM": "1d3-1",
-      "damageG": "1d2-1"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
-  },
-  {
-    "id": "machadinha",
-    "name": "Machadinha",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 100,
-    "weightKg": 2.5,
-    "section": "lista de armas",
-    "weaponGroup": "lanca",
-    "weaponStats": {
-      "size": "M",
-      "type": "C",
-      "speed": "4",
       "damagePM": "1d6",
       "damageG": "1d6"
     },
     "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
   },
   {
-    "id": "machado-de-guerra",
-    "name": "Machado de Guerra",
+    "id": "lança-de-duas-pontas",
+    "name": "Lança de duas pontas",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 500,
-    "weightKg": 3.5,
+    "pricePc": 1000,
+    "weightKg": 0.0,
     "section": "lista de armas",
     "weaponGroup": "lanca",
     "weaponStats": {
-      "size": "M",
-      "type": "C",
-      "speed": "7",
-      "damagePM": "1d8",
-      "damageG": "1d8"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
-  },
-  {
-    "id": "mangual-de-cavalaria",
-    "name": "Mangual de cavalaria",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 800,
-    "weightKg": 2.5,
-    "section": "lista de armas",
-    "weaponGroup": "lanca",
-    "weaponStats": {
-      "size": "M",
-      "type": "E",
+      "size": "1,5m",
+      "type": "p",
       "speed": "6",
-      "damagePM": "1d4+1",
-      "damageG": "1d4"
+      "damagePM": "1d6",
+      "damageG": "1d6"
     },
     "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
   },
   {
-    "id": "mangual-de-infantaria",
-    "name": "Mangual de infantaria",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 1500,
-    "weightKg": 7.5,
-    "section": "lista de armas",
-    "weaponGroup": "lanca",
-    "weaponStats": {
-      "size": "M",
-      "type": "E",
-      "speed": "7",
-      "damagePM": "1d6+1",
-      "damageG": "2d4"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
-  },
-  {
-    "id": "martelo-de-batalha",
-    "name": "Martelo de batalha",
+    "id": "lança-de-golpe",
+    "name": "Lança de golpe",
     "category": "arma",
     "tab": "armas",
     "pricePc": 200,
@@ -1693,107 +1765,363 @@ export const equipmentCatalog = [
     "section": "lista de armas",
     "weaponGroup": "lanca",
     "weaponStats": {
-      "size": "M",
-      "type": "E",
-      "speed": "4",
-      "damagePM": "1d4+1",
-      "damageG": "1d4"
+      "size": "1,8 a 2m",
+      "type": "p",
+      "speed": "7",
+      "damagePM": "1d8",
+      "damageG": "1d10"
     },
     "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
   },
   {
-    "id": "maça-de-cavalaria",
-    "name": "Maça de cavalaria",
+    "id": "lança-de-guerra",
+    "name": "Lança de guerra",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 500,
+    "pricePc": 2000,
     "weightKg": 3.0,
     "section": "lista de armas",
     "weaponGroup": "lanca",
     "weaponStats": {
-      "size": "M",
-      "type": "E",
+      "size": "2 a 2,3m",
+      "type": "p",
       "speed": "6",
+      "damagePM": "1d8",
+      "damageG": "1d10"
+    },
+    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+  },
+  {
+    "id": "lança-de-haken",
+    "name": "Lança de Haken",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 700,
+    "weightKg": 4.0,
+    "section": "lista de armas",
+    "weaponGroup": "lanca",
+    "weaponStats": {
+      "size": "2,5 a 3m",
+      "type": "p",
+      "speed": "6",
+      "damagePM": "1d8",
+      "damageG": "1d8"
+    },
+    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+  },
+  {
+    "id": "lança-de-justa",
+    "name": "Lança de Justa",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 2000,
+    "weightKg": 8.0,
+    "section": "lista de armas",
+    "weaponGroup": "lanca",
+    "weaponStats": {
+      "size": "5 a 6m",
+      "type": "p",
+      "speed": "10",
+      "damagePM": "1d10",
+      "damageG": "2d6"
+    },
+    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+  },
+  {
+    "id": "lança-de-mão",
+    "name": "Lança de mão",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 80,
+    "weightKg": 2.0,
+    "section": "lista de armas",
+    "weaponGroup": "lanca",
+    "weaponStats": {
+      "size": "1,5 a 1,7m",
+      "type": "p",
+      "speed": "6",
+      "damagePM": "1d8",
+      "damageG": "1d6"
+    },
+    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+  },
+  {
+    "id": "lança-de-mão-sem-ponta",
+    "name": "Lança de mão sem ponta",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 100,
+    "weightKg": 1.5,
+    "section": "lista de armas",
+    "weaponGroup": "lanca",
+    "weaponStats": {
+      "size": "1,5 a 1,7m",
+      "type": "p",
+      "speed": "5",
       "damagePM": "1d6",
       "damageG": "1d4"
     },
     "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
   },
   {
-    "id": "maça-de-infantaria",
-    "name": "Maça de infantaria",
+    "id": "lança-machado",
+    "name": "Lança-machado",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 800,
+    "pricePc": 700,
+    "weightKg": 4.5,
+    "section": "lista de armas",
+    "weaponGroup": "lanca",
+    "weaponStats": {
+      "size": "1,7 a 2m",
+      "type": "p/c",
+      "speed": "6",
+      "damagePM": "1d10",
+      "damageG": "1d8"
+    },
+    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+  },
+  {
+    "id": "adaga-de-arremesso",
+    "name": "Adaga de arremesso",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 200,
+    "weightKg": 0.2,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "15 a 35cm",
+      "type": "p",
+      "speed": "3",
+      "damagePM": "1d2",
+      "damageG": "1d2"
+    }
+  },
+  {
+    "id": "adaga-ou-punhal-espada",
+    "name": "Adaga ou Punhal Espada",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 200,
+    "weightKg": 0.25,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "20 a 40cm",
+      "type": "p/c",
+      "speed": "4",
+      "damagePM": "1d4",
+      "damageG": "1d3"
+    }
+  },
+  {
+    "id": "awpike",
+    "name": "Awpike",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 500,
     "weightKg": 5.0,
     "section": "lista de armas",
-    "weaponGroup": "lanca",
+    "weaponGroup": "outras",
     "weaponStats": {
-      "size": "M",
-      "type": "E",
-      "speed": "7",
-      "damagePM": "1d6+1",
-      "damageG": "1d6"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+      "size": "110 a 130cm",
+      "type": "e",
+      "speed": "8",
+      "damagePM": "1d8",
+      "damageG": "1d8+1"
+    }
   },
   {
-    "id": "maça-estrela",
-    "name": "Maça estrela",
+    "id": "bastão-bordão-cajado",
+    "name": "Bastão / Bordão / Cajado",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 1000,
-    "weightKg": 6.0,
+    "pricePc": 150,
+    "weightKg": 3.0,
     "section": "lista de armas",
-    "weaponGroup": "lanca",
+    "weaponGroup": "outras",
     "weaponStats": {
-      "size": "M",
-      "type": "E",
-      "speed": "7",
-      "damagePM": "2d4",
+      "size": "1,5 a 2,2m",
+      "type": "e",
+      "speed": "4",
+      "damagePM": "1d6",
       "damageG": "1d6+1"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+    }
   },
   {
-    "id": "tridente",
-    "name": "Tridente",
+    "id": "boleadeira",
+    "name": "Boleadeira",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 1500,
-    "weightKg": 3.5,
+    "pricePc": 50,
+    "weightKg": 0.5,
     "section": "lista de armas",
-    "weaponGroup": "lanca",
+    "weaponGroup": "outras",
     "weaponStats": {
-      "size": "G",
-      "type": "p",
-      "speed": "7",
-      "damagePM": "1d6+1",
-      "damageG": "3d4"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+      "size": "30 a 45cm",
+      "type": "e",
+      "speed": "3",
+      "damagePM": "1d4",
+      "damageG": "1d4+1"
+    }
   },
   {
-    "id": "zarabatana",
-    "name": "Zarabatana",
+    "id": "bumerangue",
+    "name": "Bumerangue",
     "category": "arma",
     "tab": "armas",
     "pricePc": 500,
     "weightKg": 1.0,
     "section": "lista de armas",
-    "weaponGroup": "lanca",
+    "weaponGroup": "outras",
     "weaponStats": {
-      "size": "G",
-      "type": "-",
-      "speed": "5",
-      "damagePM": "-",
-      "damageG": "-"
-    },
-    "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem."
+      "size": "30 a 45cm",
+      "type": "e",
+      "speed": "3",
+      "damagePM": "1d4",
+      "damageG": "1d4"
+    }
   },
   {
-    "id": "adaga-ou-punhal",
-    "name": "Adaga ou Punhal",
+    "id": "cajado-funda",
+    "name": "Cajado-funda",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 20,
+    "weightKg": 3.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "1,5 a 2,2m",
+      "type": "",
+      "speed": "2",
+      "damagePM": "1",
+      "damageG": "1"
+    }
+  },
+  {
+    "id": "canhestro",
+    "name": "Canhestro",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 200,
+    "weightKg": 0.15,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "20 a 30cm",
+      "type": "p/c",
+      "speed": "2",
+      "damagePM": "1d3",
+      "damageG": "1d3"
+    }
+  },
+  {
+    "id": "chemti",
+    "name": "Chemti",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 500,
+    "weightKg": 1.6,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "90cm a 1,6m",
+      "type": "c",
+      "speed": "6",
+      "damagePM": "1d2",
+      "damageG": "1"
+    }
+  },
+  {
+    "id": "chicote",
+    "name": "Chicote",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 10,
+    "weightKg": 0.8,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "2,5 a 3m",
+      "type": "c",
+      "speed": "8",
+      "damagePM": "1d2",
+      "damageG": "1"
+    }
+  },
+  {
+    "id": "clava",
+    "name": "Clava",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 50,
+    "weightKg": 1.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "80 a 100cm",
+      "type": "e",
+      "speed": "4",
+      "damagePM": "1d6",
+      "damageG": "1d4"
+    }
+  },
+  {
+    "id": "clava-de-pedra",
+    "name": "Clava de pedra",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 50,
+    "weightKg": 1.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "80 a 100cm",
+      "type": "e",
+      "speed": "4",
+      "damagePM": "1d4+1",
+      "damageG": "1d4"
+    }
+  },
+  {
+    "id": "clava-espinho",
+    "name": "Clava-espinho",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 100,
+    "weightKg": 1.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "80 a 100cm",
+      "type": "e",
+      "speed": "4",
+      "damagePM": "1d6",
+      "damageG": "1d4+1"
+    }
+  },
+  {
+    "id": "corrente-com-bola",
+    "name": "Corrente com bola",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 300,
+    "weightKg": 5.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "1,3 a 1,8m",
+      "type": "e",
+      "speed": "8",
+      "damagePM": "1d8",
+      "damageG": "1d8"
+    }
+  },
+  {
+    "id": "cutelo",
+    "name": "Cutelo",
     "category": "arma",
     "tab": "armas",
     "pricePc": 200,
@@ -1801,33 +2129,492 @@ export const equipmentCatalog = [
     "section": "lista de armas",
     "weaponGroup": "outras",
     "weaponStats": {
-      "size": "P",
-      "type": "P",
+      "size": "30 a 45cm",
+      "type": "c",
+      "speed": "4",
+      "damagePM": "1d4+1",
+      "damageG": "1d4"
+    }
+  },
+  {
+    "id": "drachenzahn",
+    "name": "Drachenzahn",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 800,
+    "weightKg": 0.35,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "30 a 50 cm",
+      "type": "c",
+      "speed": "4",
+      "damagePM": "1d4",
+      "damageG": "1d4+1"
+    }
+  },
+  {
+    "id": "eberfänger",
+    "name": "Eberfänger",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 700,
+    "weightKg": 0.3,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "25 a 35cm",
+      "type": "p/c",
+      "speed": "4",
+      "damagePM": "1d4",
+      "damageG": "1d4+1"
+    }
+  },
+  {
+    "id": "faca",
+    "name": "Faca",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 50,
+    "weightKg": 0.25,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "20 a 35cm",
+      "type": "p/c",
+      "speed": "3",
+      "damagePM": "1d3",
+      "damageG": "1d2"
+    }
+  },
+  {
+    "id": "faca-de-caça",
+    "name": "Faca de caça",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 30,
+    "weightKg": 0.25,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "20 a 50cm",
+      "type": "p/c",
+      "speed": "4",
+      "damagePM": "1d4",
+      "damageG": "1d4+1"
+    }
+  },
+  {
+    "id": "faca-de-pedra",
+    "name": "Faca de pedra",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 5,
+    "weightKg": 0.3,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "20 a 35cm",
+      "type": "p/c",
+      "speed": "2",
+      "damagePM": "1d2",
+      "damageG": "1d2"
+    }
+  },
+  {
+    "id": "faca-árabe",
+    "name": "Faca Árabe",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 80,
+    "weightKg": 0.25,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "30 a 50cm",
+      "type": "p/c",
+      "speed": "3",
+      "damagePM": "1d4",
+      "damageG": "1d4+1"
+    }
+  },
+  {
+    "id": "foice",
+    "name": "Foice",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 60,
+    "weightKg": 3.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "70 a 120cm",
+      "type": "c/p",
+      "speed": "7",
+      "damagePM": "1d8",
+      "damageG": "1d6"
+    }
+  },
+  {
+    "id": "foice-druídica",
+    "name": "Foice druídica",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 150,
+    "weightKg": 1.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "20 a 35cm",
+      "type": "p/c",
+      "speed": "3",
+      "damagePM": "1d6",
+      "damageG": "1d3"
+    }
+  },
+  {
+    "id": "funda",
+    "name": "Funda",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 5,
+    "weightKg": 0.1,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "30 a 40cm",
+      "type": "",
+      "speed": "2",
+      "damagePM": "1",
+      "damageG": "1"
+    }
+  },
+  {
+    "id": "garra-de-basilisco",
+    "name": "Garra de basilisco",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 400,
+    "weightKg": 0.3,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "20 a 35cm",
+      "type": "p/c",
+      "speed": "4",
+      "damagePM": "1d3",
+      "damageG": "1d4+1"
+    }
+  },
+  {
+    "id": "gato-de-nove-caudas",
+    "name": "Gato de nove caudas",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 100,
+    "weightKg": 2.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "1 a 1,4m",
+      "type": "c",
+      "speed": "8",
+      "damagePM": "1d3",
+      "damageG": "1d2"
+    }
+  },
+  {
+    "id": "gauntlet",
+    "name": "Gauntlet",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 300,
+    "weightKg": 1.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "20 a 25cm",
+      "type": "e",
+      "speed": "",
+      "damagePM": "+3",
+      "damageG": "+3"
+    }
+  },
+  {
+    "id": "gruufhai",
+    "name": "Gruufhai",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 500,
+    "weightKg": 5.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "120 a 140cm",
+      "type": "e",
+      "speed": "9",
+      "damagePM": "1d10",
+      "damageG": "1d10"
+    }
+  },
+  {
+    "id": "jitte",
+    "name": "Jitte",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 600,
+    "weightKg": 0.1,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "10 a 20 cm",
+      "type": "p",
+      "speed": "2",
+      "damagePM": "1d3",
+      "damageG": "1d2"
+    }
+  },
+  {
+    "id": "kama",
+    "name": "Kama",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 300,
+    "weightKg": 0.4,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "25 a 35cm",
+      "type": "c",
+      "speed": "3",
+      "damagePM": "1d4",
+      "damageG": "1d4"
+    }
+  },
+  {
+    "id": "katar",
+    "name": "Katar",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 300,
+    "weightKg": 0.15,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "20 a 30cm",
+      "type": "p/c",
+      "speed": "3",
+      "damagePM": "1d3",
+      "damageG": "1d6"
+    }
+  },
+  {
+    "id": "katar-de-duas-pontas",
+    "name": "Katar de duas pontas",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 400,
+    "weightKg": 0.15,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "20 a 30cm",
+      "type": "p/c",
+      "speed": "3",
+      "damagePM": "1d3+1",
+      "damageG": "1d4"
+    }
+  },
+  {
+    "id": "machadinha",
+    "name": "Machadinha",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 80,
+    "weightKg": 1.2,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "30 a 45cm",
+      "type": "c",
+      "speed": "3",
+      "damagePM": "1d6",
+      "damageG": "1d6"
+    }
+  },
+  {
+    "id": "machado-arremesso",
+    "name": "Machado arremesso",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 100,
+    "weightKg": 3.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "35 a 55cm",
+      "type": "c",
+      "speed": "4",
+      "damagePM": "1d6",
+      "damageG": "1d4"
+    }
+  },
+  {
+    "id": "machado-batalha-curvo",
+    "name": "Machado batalha curvo",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 500,
+    "weightKg": 4.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "50 a 70cm",
+      "type": "c",
+      "speed": "7",
+      "damagePM": "1d8",
+      "damageG": "1d8"
+    }
+  },
+  {
+    "id": "machado-batalha-reto",
+    "name": "Machado batalha reto",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 600,
+    "weightKg": 4.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "50 a 70cm",
+      "type": "c",
+      "speed": "7",
+      "damagePM": "1d6+1",
+      "damageG": "1d8+1"
+    }
+  },
+  {
+    "id": "machado-bárbaro",
+    "name": "Machado bárbaro",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 600,
+    "weightKg": 5.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "50 a 70cm",
+      "type": "c",
+      "speed": "6",
+      "damagePM": "1d8",
+      "damageG": "1d10"
+    }
+  },
+  {
+    "id": "machado-de-lenhador",
+    "name": "Machado de Lenhador",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 100,
+    "weightKg": 5.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "50 a 80cm",
+      "type": "c",
+      "speed": "8",
+      "damagePM": "1d8",
+      "damageG": "1d8"
+    }
+  },
+  {
+    "id": "machado-de-mão",
+    "name": "Machado de Mão",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 100,
+    "weightKg": 3.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "40 a 60cm",
+      "type": "c",
+      "speed": "6",
+      "damagePM": "1d6",
+      "damageG": "1d6"
+    }
+  },
+  {
+    "id": "machado-militar",
+    "name": "Machado militar",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 800,
+    "weightKg": 3.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "45 a 60cm",
+      "type": "c",
+      "speed": "6",
+      "damagePM": "1d8",
+      "damageG": "1d8"
+    }
+  },
+  {
+    "id": "machado-molok",
+    "name": "Machado Molok",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1000,
+    "weightKg": 4.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "60 a 80cm",
+      "type": "c",
+      "speed": "7",
+      "damagePM": "2d4",
+      "damageG": "1d8+1"
+    }
+  },
+  {
+    "id": "machado-sinuoso",
+    "name": "Machado sinuoso",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 800,
+    "weightKg": 3.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "40 a 60cm",
+      "type": "c",
+      "speed": "6",
+      "damagePM": "1d8",
+      "damageG": "1d8"
+    }
+  },
+  {
+    "id": "main-gauche",
+    "name": "Main-gauche",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 500,
+    "weightKg": 0.1,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "10 a 20g",
+      "type": "p",
       "speed": "2",
       "damagePM": "1d4",
       "damageG": "1d3"
     }
   },
   {
-    "id": "alvião-de-cavalaria",
-    "name": "Alvião de cavalaria",
-    "category": "arma",
-    "tab": "armas",
-    "pricePc": 700,
-    "weightKg": 2.0,
-    "section": "lista de armas",
-    "weaponGroup": "outras",
-    "weaponStats": {
-      "size": "M",
-      "type": "P",
-      "speed": "5",
-      "damagePM": "1d4+1",
-      "damageG": "1d4"
-    }
-  },
-  {
-    "id": "alvião-de-infantaria",
-    "name": "Alvião de infantaria",
+    "id": "mangual",
+    "name": "Mangual",
     "category": "arma",
     "tab": "armas",
     "pricePc": 800,
@@ -1835,66 +2622,488 @@ export const equipmentCatalog = [
     "section": "lista de armas",
     "weaponGroup": "outras",
     "weaponStats": {
-      "size": "M",
-      "type": "P",
+      "size": "50 a 70cm",
+      "type": "e",
       "speed": "7",
+      "damagePM": "1d4+1",
+      "damageG": "1d4"
+    }
+  },
+  {
+    "id": "mangual-de-corrente",
+    "name": "Mangual de corrente",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1000,
+    "weightKg": 4.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "45 a 65cm",
+      "type": "e",
+      "speed": "7",
+      "damagePM": "1d6",
+      "damageG": "1d4+1"
+    }
+  },
+  {
+    "id": "mangual-de-guerra",
+    "name": "Mangual de guerra",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1500,
+    "weightKg": 5.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "75 a 100cm",
+      "type": "e",
+      "speed": "6",
       "damagePM": "1d6+1",
       "damageG": "2d4"
     }
   },
   {
-    "id": "aprisionador",
-    "name": "Aprisionador",
+    "id": "mangual-duplo",
+    "name": "Mangual duplo",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 3000,
+    "pricePc": 1000,
+    "weightKg": 4.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "60 a 80cm",
+      "type": "e",
+      "speed": "7",
+      "damagePM": "1d6+1",
+      "damageG": "1d6+1"
+    }
+  },
+  {
+    "id": "mangual-metalico",
+    "name": "Mangual metalico",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1000,
     "weightKg": 4.0,
     "section": "lista de armas",
     "weaponGroup": "outras",
     "weaponStats": {
-      "size": "G",
-      "type": "-",
-      "speed": "7",
-      "damagePM": "-",
-      "damageG": "-"
-    },
-    "description": "Esse item é um tipo muito específico de arma de captura, destinada a prender uma vítima sem matá-la. Trata-se de uma longa haste de madeira ou metal, com uma espécie de braçadeira de metal na ponta. Quando a vítima é enlaçada, a braçadeira se fecha. Essa é uma arma eficiente apenas contra criaturas de tamanho aproximadamente humano. Considera-se que a vítima, em todo e qualquer caso, tem Categoria de Armadura 10, com as modificações na Destreza Se o ataque for bem sucedido, ela perde todos os bônus de escudo ou Destreza, e pode ser puxada ou empurrada. Isso causa automaticamente 1d2 de dano por rodada, e ainda há uma chance de 25% de que a vítima caia no chão. O prisioneiro pode tentar escapar com uma jogada de dobrar barras, o que causa, no entanto, mais 1d2 de dano. O aprisionador é usado para derrubar cavaleiros de suas montarias e prendê-los ao solo."
+      "size": "60 a 80cm",
+      "type": "c/e",
+      "speed": "6",
+      "damagePM": "1d6+1",
+      "damageG": "1d6+1"
+    }
   },
   {
-    "id": "arcabuz",
-    "name": "Arcabuz",
+    "id": "mangual-militar",
+    "name": "Mangual militar",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 50000,
+    "pricePc": 1500,
     "weightKg": 5.0,
     "section": "lista de armas",
     "weaponGroup": "outras",
     "weaponStats": {
-      "size": "M",
-      "type": "P",
-      "speed": "15",
-      "damagePM": "1d10",
-      "damageG": "1d10"
-    },
-    "description": "Essa arma pode ser vetada pelo Mestre. Verifique se é possível adquiri-la. O arcabuz é uma forma rudimentar de mosquete, sendo tão perigoso para o atirador quanto para o alvo. Seu uso requer um suprimento de pólvora, projéteis de metal e um pedaço de mecha de combustão lenta ou pavio. Esses itens podem não ser encontrados facilmente (a pólvora é considerada um item mágico, pelas regras) O arcabuz dispara um tiro a cada três rodadas, e somente se o usuário não for atacado enquanto estiver recarregando a arma. Ao utilizar o arcabuz, todas as penalidades para alcance são duplicadas. Se o resultado da jogada de ataque for 1 ou 2. o tiro sai pela culatra, causando 1d6 pontos de dano ao atirador A arma, por causa disso, estará suja e precisará ser limpa antes de ser reutilizada, o que leva. em média. 30 minutos. Quando o tiro é certeiro, o arcabuz faz geralmente de 1 a 9 pontos de dano, em 1d10 Se o n° 10 é tirado, o jogador lança novamente o dado. e então soma o novo resultado ao 10 tirado anteriormente. Esse procedimento deve ser repetido toda vez que o n° 10 for obtido. Assim, num lance de muita sorte, um único tiro pode infligir 37 pontos de dano, por exemplo, se o jogador tirar no dado três 10 consecutivos, seguidos do n° 7. O dano causado pelo arcabuz não sofre acréscimo por bônus de Força."
+      "size": "75 a 100cm",
+      "type": "e",
+      "speed": "6",
+      "damagePM": "1d6+1",
+      "damageG": "1d8"
+    }
   },
   {
-    "id": "açoite",
-    "name": "Açoite",
+    "id": "mangual-triplo",
+    "name": "Mangual triplo",
     "category": "arma",
     "tab": "armas",
-    "pricePc": 100,
+    "pricePc": 1500,
+    "weightKg": 5.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "50 a 70m",
+      "type": "e",
+      "speed": "8",
+      "damagePM": "1d8",
+      "damageG": "1d8"
+    }
+  },
+  {
+    "id": "martelo-cabeça-de-corvo",
+    "name": "Martelo cabeça de corvo",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 700,
+    "weightKg": 4.8,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "80 a 90cm",
+      "type": "e",
+      "speed": "7",
+      "damagePM": "1d8",
+      "damageG": "1d8"
+    }
+  },
+  {
+    "id": "martelo-de-2-cabeças",
+    "name": "Martelo de 2 Cabeças",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 400,
+    "weightKg": 5.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "75 a 100cm",
+      "type": "e/p",
+      "speed": "6",
+      "damagePM": "1d8",
+      "damageG": "1d8+1"
+    }
+  },
+  {
+    "id": "martelo-de-guerra",
+    "name": "Martelo de Guerra",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 200,
+    "weightKg": 3.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "70 a 80cm",
+      "type": "e",
+      "speed": "4",
+      "damagePM": "1d4",
+      "damageG": "1d4+1"
+    }
+  },
+  {
+    "id": "martelo-ritual",
+    "name": "Martelo ritual",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 700,
+    "weightKg": 4.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "80 a 95cm",
+      "type": "e",
+      "speed": "5",
+      "damagePM": "1d4+1",
+      "damageG": "1d6"
+    }
+  },
+  {
+    "id": "maça-de-exercito-maça-de-infantaria",
+    "name": "Maça de exercito / Maça de Infantaria",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 500,
+    "weightKg": 1.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "70 a 80cm",
+      "type": "e",
+      "speed": "3",
+      "damagePM": "1d6",
+      "damageG": "1d6"
+    }
+  },
+  {
+    "id": "maça-de-guerra-maça-de-cavalaria",
+    "name": "Maça de guerra / Maça de Cavalaria",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 800,
+    "weightKg": 3.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "90 a 110cm",
+      "type": "e",
+      "speed": "5",
+      "damagePM": "1d8",
+      "damageG": "1d12"
+    }
+  },
+  {
+    "id": "maça-estrela",
+    "name": "Maça estrela",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1000,
+    "weightKg": 5.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "70 a 110cm",
+      "type": "e",
+      "speed": "7",
+      "damagePM": "2d4",
+      "damageG": "1d6+1"
+    }
+  },
+  {
+    "id": "nunchaku",
+    "name": "Nunchaku",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1200,
+    "weightKg": 1.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "60 a 100cm",
+      "type": "e",
+      "speed": "3",
+      "damagePM": "1d6",
+      "damageG": "1d6"
+    }
+  },
+  {
+    "id": "petjat",
+    "name": "Petjat",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 500,
     "weightKg": 1.0,
     "section": "lista de armas",
     "weaponGroup": "outras",
     "weaponStats": {
-      "size": "P",
-      "type": "-",
-      "speed": "5",
-      "damagePM": "1d4",
+      "size": "80cm a 1,2m",
+      "type": "c",
+      "speed": "7",
+      "damagePM": "1d2",
       "damageG": "1d2"
-    },
-    "description": "Essa arma cruel é um chicote curto, com várias tiras de couro. Em cada tira há farpas de metal, o que causa uma chibatada terrível. Às vezes era usado como instrumento de execução."
+    }
+  },
+  {
+    "id": "picador",
+    "name": "Picador",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 10,
+    "weightKg": 0.1,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "15 a 35cm",
+      "type": "p",
+      "speed": "3",
+      "damagePM": "1d2",
+      "damageG": "1d2"
+    }
+  },
+  {
+    "id": "picareta",
+    "name": "Picareta",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 800,
+    "weightKg": 6.0,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "60 a 90cm",
+      "type": "c/p",
+      "speed": "6",
+      "damagePM": "1d6",
+      "damageG": "1d4+1"
+    }
+  },
+  {
+    "id": "punhal",
+    "name": "Punhal",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 200,
+    "weightKg": 0.15,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "12 a 25cm",
+      "type": "p/c",
+      "speed": "3",
+      "damagePM": "1d3",
+      "damageG": "1d2"
+    }
+  },
+  {
+    "id": "punhal-longo",
+    "name": "Punhal longo",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 300,
+    "weightKg": 0.3,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "30 a 50 cm",
+      "type": "p/c",
+      "speed": "4",
+      "damagePM": "1d4",
+      "damageG": "1d4"
+    }
+  },
+  {
+    "id": "sai",
+    "name": "Sai",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 800,
+    "weightKg": 0.1,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "10 a 20cm",
+      "type": "p",
+      "speed": "2",
+      "damagePM": "1d3",
+      "damageG": "1d2"
+    }
+  },
+  {
+    "id": "shuriken",
+    "name": "Shuriken",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 50,
+    "weightKg": 0.05,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "7cm",
+      "type": "p",
+      "speed": "2",
+      "damagePM": "1d4",
+      "damageG": "1d4"
+    }
+  },
+  {
+    "id": "soco-inglês",
+    "name": "Soco inglês",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 100,
+    "weightKg": 0.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "8 a 15cm",
+      "type": "e",
+      "speed": "",
+      "damagePM": "+2",
+      "damageG": "+2"
+    }
+  },
+  {
+    "id": "stiletto",
+    "name": "Stiletto",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 50,
+    "weightKg": 0.2,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "30 a 35cm",
+      "type": "p",
+      "speed": "2",
+      "damagePM": "1d3",
+      "damageG": "1d2"
+    }
+  },
+  {
+    "id": "stonecutter",
+    "name": "Stonecutter",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 800,
+    "weightKg": 5.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "140 a 160cm",
+      "type": "c",
+      "speed": "6",
+      "damagePM": "1d8+1",
+      "damageG": "1d10"
+    }
+  },
+  {
+    "id": "tetsubo",
+    "name": "Tetsubo",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 500,
+    "weightKg": 3.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "1,5 a 2,5m",
+      "type": "e",
+      "speed": "8",
+      "damagePM": "2d4",
+      "damageG": "2d8"
+    }
+  },
+  {
+    "id": "thornwaler",
+    "name": "Thornwaler",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 1000,
+    "weightKg": 4.5,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "120 a 150cm",
+      "type": "c",
+      "speed": "6",
+      "damagePM": "1d8+1",
+      "damageG": "1d10"
+    }
+  },
+  {
+    "id": "waqqif",
+    "name": "Waqqif",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 600,
+    "weightKg": 0.3,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "40 a 50cm",
+      "type": "p/c",
+      "speed": "4",
+      "damagePM": "1d4",
+      "damageG": "1d4"
+    }
+  },
+  {
+    "id": "zarabatana",
+    "name": "Zarabatana",
+    "category": "arma",
+    "tab": "armas",
+    "pricePc": 500,
+    "weightKg": 0.3,
+    "section": "lista de armas",
+    "weaponGroup": "outras",
+    "weaponStats": {
+      "size": "30 a 70cm",
+      "type": "p",
+      "speed": "2",
+      "damagePM": "1",
+      "damageG": "1"
+    }
   },
   {
     "id": "agulha-de-costura",

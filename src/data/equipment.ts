@@ -68,7 +68,18 @@ export const PURCHASED_ITEM_ID_MIGRATION: Record<string, string> = {
   corselete: "corselete-de-couro-acolchoado",
   "corselete-acolchoado-parcial": "corselete-de-couro-acolchoado",
   "proteção-de-couro-ou-acolchoada": "corselete-de-couro-acolchoado",
+  "arco-curto-composto": "arco-composto",
+  "arco-longo-composto": "arco-composto",
+  "adaga-ou-punhal": "adaga-ou-punhal-espada",
+  "besta-de-mão": "besta-de-repetição",
+  "espada-bastarda": "espada-bastarda-com-uma-mão",
+  "espada-bastarda-2": "espada-bastarda-com-duas-mãos",
+  cimitarra: "cimitarra-curta",
 };
+
+export function migrateEquipmentId(id: string): string {
+  return PURCHASED_ITEM_ID_MIGRATION[id] ?? id;
+}
 
 export function migratePurchasedItems(purchased: PurchasedItems): PurchasedItems {
   const next: PurchasedItems = {};

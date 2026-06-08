@@ -11,8 +11,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MD_PATH = ROOT / "data" / "dinheiro-equipamento.md"
+LISTA_ARMAS_HTML_PATH = ROOT / "data" / "lista-armas.html"
 EQUIPAMENTO_HTML_PATH = ROOT / "data" / "equipamento.html"
 ARMOR_HTML_PATH = ROOT / "data" / "armaduras.html"
+WEAPON_PROFICIENCIES_PATH = ROOT / "src" / "data" / "weaponProficiencies.ts"
 OUT_PATH = ROOT / "src" / "data" / "equipmentCatalog.ts"
 
 EQUIPAMENTO_SECTION_KEYWORDS: list[tuple[str, str]] = [
@@ -75,6 +77,25 @@ WEAPON_GROUP_DESC_KEYS = {
     "besta": "besta",
     "lanca": "lanca",
     "haste": "armasdehaste",
+}
+
+PROFICIENCY_GROUP_TO_WEAPON_GROUP: dict[str, str] = {
+    "Arcos": "arco",
+    "Bestas": "besta",
+    "Armas de Haste": "haste",
+    "Adagas e Facas": "outras",
+    "Espadas Menores": "espada",
+    "Espadas Grandes (Uma Mão)": "espada",
+    "Espadas Grandes (Duas Mãos)": "espada",
+    "Machados Menores": "outras",
+    "Machados Grandes Simples": "outras",
+    "Machados Grandes Duplos": "outras",
+    "Maças e Armas de Impacto": "outras",
+    "Martelos": "outras",
+    "Manguais": "outras",
+    "Chicotes": "outras",
+    "Outras Armas Menores": "outras",
+    "Outras Armas Maiores": "outras",
 }
 
 # Nome do item (normalizado) → chave da descrição no MD
@@ -502,6 +523,282 @@ def parse_equipamento_html(path: Path) -> list[dict]:
     return items
 
 
+def clean_weapon_name(name: str) -> str:
+    kept_paren = ""
+    for paren in re.findall(r"\(([^)]*)\)", name):
+        if re.search(r"\b(uma|duas)\s+m[aã]os?\b", paren, re.I):
+            kept_paren = paren.strip()
+            break
+    base = re.sub(r"\s*\([^)]*\)\s*", " ", name)
+    base = re.sub(r"\s+", " ", base).strip()
+    if kept_paren:
+        return f"{base} ({kept_paren})"
+    return base
+
+
+def parse_weapon_groups_from_proficiencies(path: Path) -> dict[str, str]:
+    """Nome da arma → weaponGroup (arco, besta, espada, lanca, haste, outras)."""
+    if not path.exists():
+        return {}
+    text = path.read_text(encoding="utf-8")
+    groups: dict[str, str] = {}
+    current_group = "outras"
+    for line in text.splitlines():
+        group_match = re.search(r'^\s+name: "([^"]+)",\s*$', line)
+        if group_match and group_match.group(1) in PROFICIENCY_GROUP_TO_WEAPON_GROUP:
+            current_group = PROFICIENCY_GROUP_TO_WEAPON_GROUP[group_match.group(1)]
+            continue
+        weapon_match = re.search(
+            r'name: "([^"]+)".*damagePM:', line
+        ) or re.search(r'\{ name: "([^"]+)", weight:', line)
+        if not weapon_match:
+            continue
+        weapon_name = weapon_match.group(1)
+        lower = weapon_name.lower()
+        if "lança" in lower or "lanca" in lower:
+            groups[weapon_name] = "lanca"
+        else:
+            groups[weapon_name] = current_group
+    return groups
+
+
+def parse_md_weapon_groups(content: str) -> dict[str, str]:
+    groups: dict[str, str] = {}
+    section = ""
+    in_weapons = False
+    weapon_group = "outras"
+    for line in content.splitlines():
+        if line.startswith("## "):
+            section = line[3:].strip().lower()
+            in_weapons = "armas" in section
+            continue
+        if line.startswith("### "):
+            section = line[4:].strip().lower()
+            if section in SKIP_SECTIONS:
+                continue
+            in_weapons = section == "lista de armas"
+            continue
+        if not in_weapons or not line.startswith("|") or line.startswith("| ---"):
+            continue
+        cells = [c.strip() for c in line.strip("|").split("|")]
+        if not cells:
+            continue
+        name = cells[0]
+        if name.startswith("**") and name.endswith("**"):
+            weapon_group = normalize_weapon_group(name.strip("* "))
+            continue
+        if not name or name in {"Arma", "Item"}:
+            continue
+        groups[normalize_key(name)] = weapon_group
+        groups[normalize_key(clean_weapon_name(name))] = weapon_group
+    return groups
+
+
+def resolve_weapon_group(
+    name: str,
+    proficiency_groups: dict[str, str],
+    md_groups: dict[str, str],
+) -> str:
+    for candidate in (name, clean_weapon_name(name)):
+        if candidate in proficiency_groups:
+            return proficiency_groups[candidate]
+        key = normalize_key(candidate)
+        if key in md_groups:
+            return md_groups[key]
+    lower = name.lower()
+    if "arco" in lower or "flecha" in lower:
+        return "arco"
+    if any(k in lower for k in ("besta", "quadrelo", "balestra", "virote")):
+        return "besta"
+    if "lança" in lower or "lanca" in lower or "azagaia" in lower:
+        return "lanca"
+    if any(
+        k in lower
+        for k in (
+            "alabarda",
+            "bardiche",
+            "bec de",
+            "bidente",
+            "bill",
+            "bordona",
+            "fauchard",
+            "glaive",
+            "guisarme",
+            "lucerno",
+            "partisan",
+            "pique",
+            "pike",
+            "ranseur",
+            "spetum",
+            "voulge",
+            "halberd",
+            "glefe",
+            "dragonlance",
+            "dreizak",
+            "kumade",
+            "naginata",
+            "pailos",
+            "schnitter",
+            "sturmsense",
+            "tridente",
+            "arpão",
+            "arpao",
+        )
+    ):
+        return "haste"
+    if "espada" in lower or "sabre" in lower or "rapier" in lower or "katana" in lower:
+        return "espada"
+    return "outras"
+
+
+def _make_weapon_entry(
+    name: str,
+    price_raw: str,
+    weight_raw: str,
+    size: str,
+    tipo: str,
+    speed: str,
+    damage_pm: str,
+    damage_g: str,
+    weapon_group: str,
+    seen_ids: set[str],
+    id_overrides: dict[str, str],
+) -> dict | None:
+    price_pc = parse_price_pc(price_raw)
+    if price_pc is None:
+        return None
+    display_name = clean_weapon_name(name) or name.strip()
+    key = normalize_key(name)
+    base_id = id_overrides.get(key) or slugify(display_name)
+    item_id = base_id
+    n = 2
+    while item_id in seen_ids:
+        item_id = f"{base_id}-{n}"
+        n += 1
+    seen_ids.add(item_id)
+    weight = parse_weight_kg(weight_raw)
+    tipo_norm = tipo.strip().lower() if tipo.strip() not in {"-", "—"} else "-"
+    return {
+        "id": item_id,
+        "name": display_name,
+        "category": "arma",
+        "tab": "armas",
+        "pricePc": price_pc,
+        "weightKg": weight,
+        "section": "lista de armas",
+        "weaponGroup": weapon_group,
+        "weaponStats": {
+            "size": size.strip(),
+            "type": tipo_norm,
+            "speed": speed.strip(),
+            "damagePM": damage_pm.strip(),
+            "damageG": damage_g.strip(),
+        },
+    }
+
+
+def parse_lista_armas_html(
+    path: Path,
+    proficiency_groups: dict[str, str],
+    md_groups: dict[str, str],
+    id_overrides: dict[str, str],
+) -> list[dict]:
+    content = path.read_text(encoding="utf-8")
+    tables = re.findall(r"<table[^>]*>(.*?)</table>", content, re.S)
+    if not tables:
+        return []
+
+    items: list[dict] = []
+    seen_ids: set[str] = set()
+    seen_names: set[str] = set()
+
+    def add_entry(entry: dict | None, raw_name: str) -> None:
+        if not entry:
+            return
+        key = normalize_key(raw_name)
+        if key in seen_names:
+            return
+        seen_names.add(key)
+        seen_names.add(normalize_key(entry["name"]))
+        items.append(entry)
+
+    # Tabela principal (8 colunas)
+    for row in re.finditer(r"<tr[^>]*>(.*?)</tr>", tables[0], re.S):
+        tds = re.findall(r"<td[^>]*>(.*?)</td>", row.group(1), re.S)
+        cells = [_extract_font_text(td) for td in tds]
+        if len(cells) < 8:
+            continue
+        name = cells[0].strip()
+        if not name or name.lower() in {"nome", "arma"}:
+            continue
+        group = resolve_weapon_group(name, proficiency_groups, md_groups)
+        add_entry(
+            _make_weapon_entry(
+                name,
+                cells[7],
+                cells[1],
+                cells[2],
+                cells[3],
+                cells[4],
+                cells[5],
+                cells[6],
+                group,
+                seen_ids,
+                id_overrides,
+            ),
+            name,
+        )
+
+    # Tabela de arcos (sem colunas de dano)
+    if len(tables) > 1:
+        for row in re.finditer(r"<tr[^>]*>(.*?)</tr>", tables[1], re.S):
+            tds = re.findall(r"<td[^>]*>(.*?)</td>", row.group(1), re.S)
+            cells = [_extract_font_text(td) for td in tds]
+            if len(cells) < 11:
+                continue
+            name = cells[0].strip()
+            if not name or name.lower() in {"nome", "dados do arco"}:
+                continue
+            if "arco" not in name.lower():
+                continue
+            group = "arco"
+            add_entry(
+                _make_weapon_entry(
+                    name,
+                    cells[10],
+                    cells[2],
+                    cells[1],
+                    cells[4],
+                    cells[5],
+                    "-",
+                    "-",
+                    group,
+                    seen_ids,
+                    id_overrides,
+                ),
+                name,
+            )
+
+    return items
+
+
+def load_weapon_id_overrides() -> dict[str, str]:
+    """Preserva IDs do catálogo atual quando o nome normalizado coincide."""
+    overrides: dict[str, str] = {}
+    catalog_path = ROOT / "src" / "data" / "equipmentCatalog.ts"
+    if catalog_path.exists():
+        catalog = catalog_path.read_text(encoding="utf-8")
+        for match in re.finditer(
+            r'"id": "([^"]+)".*?"name": "([^"]+)".*?"tab": "armas"',
+            catalog,
+            re.S,
+        ):
+            item_id, name = match.group(1), match.group(2)
+            overrides[normalize_key(name)] = item_id
+            overrides[normalize_key(clean_weapon_name(name))] = item_id
+    return overrides
+
+
 def parse_md_weapons(content: str) -> list[dict]:
     """Extrai apenas armas de data/dinheiro-equipamento.md."""
     items: list[dict] = []
@@ -664,9 +961,66 @@ def extra_shields() -> list[dict]:
     ]
 
 
+MD_WEAPON_SUPPLEMENT_HINTS = (
+    "flecha",
+    "quadrelo",
+    "chumbo de funda",
+    "pedra de funda",
+    "dardo agulha",
+    "dardo farpado",
+    "virote",
+)
+
+
+def is_md_weapon_supplement(name: str) -> bool:
+    lower = name.lower()
+    return any(hint in lower for hint in MD_WEAPON_SUPPLEMENT_HINTS)
+
+
+def merge_md_weapon_supplements(
+    html_weapons: list[dict],
+    md_weapons: list[dict],
+) -> list[dict]:
+    """Inclui munição ausente em lista-armas.html (flechas, quadrelos, etc.)."""
+    html_keys = {normalize_key(w["name"]) for w in html_weapons}
+    merged = list(html_weapons)
+    seen_ids = {w["id"] for w in html_weapons}
+    for weapon in md_weapons:
+        name = weapon["name"]
+        if normalize_key(name) in html_keys:
+            continue
+        if not is_md_weapon_supplement(name):
+            continue
+        item_id = weapon["id"]
+        n = 2
+        while item_id in seen_ids:
+            item_id = f"{weapon['id']}-{n}"
+            n += 1
+        weapon = {**weapon, "id": item_id}
+        seen_ids.add(item_id)
+        merged.append(weapon)
+    return merged
+
+
 def main() -> None:
     content = MD_PATH.read_text(encoding="utf-8")
-    items = parse_md_weapons(content)
+    proficiency_groups = parse_weapon_groups_from_proficiencies(WEAPON_PROFICIENCIES_PATH)
+    md_groups = parse_md_weapon_groups(content)
+    id_overrides = load_weapon_id_overrides()
+
+    if LISTA_ARMAS_HTML_PATH.exists():
+        items = parse_lista_armas_html(
+            LISTA_ARMAS_HTML_PATH,
+            proficiency_groups,
+            md_groups,
+            id_overrides,
+        )
+        md_weapons = parse_md_weapons(content)
+        items = merge_md_weapon_supplements(items, md_weapons)
+        print(f"Armas: {len(items)} ({LISTA_ARMAS_HTML_PATH.name} + suplementos do MD)")
+    else:
+        items = parse_md_weapons(content)
+        print(f"Aviso: {LISTA_ARMAS_HTML_PATH} não encontrado; usando MD para armas.")
 
     if EQUIPAMENTO_HTML_PATH.exists():
         items.extend(parse_equipamento_html(EQUIPAMENTO_HTML_PATH))

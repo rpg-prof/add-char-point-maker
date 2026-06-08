@@ -1,5 +1,5 @@
-import { useState, useMemo, useRef, useCallback } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Coins } from "lucide-react";
+import { useState, useMemo, useRef, useCallback, useEffect } from "react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Coins, Award } from "lucide-react";
 import AppLogo from "@/components/AppLogo";
 import {
   Dialog,
@@ -20,6 +20,7 @@ import MagicPanel from "@/components/MagicPanel";
 import MagicAccessPanel, { type DivineAccessLevel, type ArcaneAccessLevel } from "@/components/MagicAccessPanel";
 import ResistancePanel from "@/components/ResistancePanel";
 import EquipmentShopPanel from "@/components/EquipmentShopPanel";
+import CombatPanel from "@/components/CombatPanel";
 import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
   attributeNames,
@@ -55,6 +56,12 @@ import {
   GRIMOIRE_SPELL_POINT_COST,
 } from "@/lib/pointBreakdown";
 import { clampAttributesForRace } from "@/lib/clampAttributesForRace";
+import {
+  computeArmorClassBreakdown,
+  defaultCombatLoadout,
+  sanitizeCombatLoadout,
+  type CombatLoadout,
+} from "@/lib/combatStats";
 
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
@@ -71,10 +78,11 @@ const BASE_STEPS = [
   { label: "Dinheiro & Equipamento", icon: Coins, desc: "Comprar equipamento com o capital da classe social" },
 ];
 
+const COMBAT_STEP = { label: "Combate", icon: Swords, desc: "Categoria de Armadura e equipamento vestido" };
 const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
 const ADVANTAGES_STEP = {
   label: "Vantagens",
-  icon: Swords,
+  icon: Award,
   desc: "Vantagens, desvantagens, poderes e antecedentes",
   hasSubTabs: true as const,
 };
@@ -153,7 +161,7 @@ const Index = () => {
   const STEPS = useMemo(() => {
     const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP];
     if (hasMagicAccess) steps.push(MAGIC_STEP);
-    steps.push(SUMMARY_STEP);
+    steps.push(COMBAT_STEP, SUMMARY_STEP);
     return steps;
   }, [hasMagicAccess]);
 
@@ -169,6 +177,11 @@ const Index = () => {
   const [selectedShields, setSelectedShields] = useState<string[]>([]);
   const [grimoire, setGrimoire] = useState<string[]>([]);
   const [purchasedItems, setPurchasedItems] = useState<PurchasedItems>({});
+  const [combatLoadout, setCombatLoadout] = useState<CombatLoadout>(defaultCombatLoadout);
+
+  useEffect(() => {
+    setCombatLoadout((prev) => sanitizeCombatLoadout(prev, purchasedItems));
+  }, [purchasedItems]);
 
   // Progression system
   interface ProgressionEntry {
@@ -184,6 +197,11 @@ const Index = () => {
     () => progressionHistory.reduce((sum, e) => sum + e.points, 0),
     [progressionHistory]
   );
+
+  const characterLevel = useMemo(() => {
+    if (progressionHistory.length === 0) return 1;
+    return Math.max(...progressionHistory.map((e) => e.level));
+  }, [progressionHistory]);
 
   const handleEvolve = useCallback(() => {
     const points = evolveLevel * 10;
@@ -521,6 +539,7 @@ const Index = () => {
       divineAccess, arcaneAccess, arcaneSpecialist,
       progressionHistory,
       purchasedItems,
+      combatLoadout,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -529,7 +548,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems]);
+  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems, combatLoadout]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -582,8 +601,20 @@ const Index = () => {
           const maxLevel = data.progressionHistory.reduce((max: number, e: ProgressionEntry) => Math.max(max, e.level), 1);
           setEvolveLevel(maxLevel + 1);
         }
-        if (data.purchasedItems) setPurchasedItems(migratePurchasedItems(data.purchasedItems));
-        else setPurchasedItems({});
+        const migratedPurchased = data.purchasedItems
+          ? migratePurchasedItems(data.purchasedItems)
+          : {};
+        setPurchasedItems(migratedPurchased);
+        if (data.combatLoadout) {
+          setCombatLoadout(
+            sanitizeCombatLoadout(
+              { ...defaultCombatLoadout(), ...data.combatLoadout },
+              migratedPurchased
+            )
+          );
+        } else {
+          setCombatLoadout(defaultCombatLoadout());
+        }
         setCurrentStep(0);
       } catch {
         alert("Arquivo JSON inválido.");
@@ -727,6 +758,24 @@ const Index = () => {
             />
           </div>
         );
+      case "Combate":
+        return (
+          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-sm">
+              Monte a Categoria de Armadura (CA): base 10, ajuste defensivo de Equilíbrio, armadura e escudo comprados,
+              bônus de vantagens e magias.
+            </p>
+            <CombatPanel
+              subAttributes={subAttributes}
+              attributes={attributes}
+              purchased={purchasedItems}
+              selectedRaceClassAdv={selectedRaceClassAdv}
+              characterLevel={characterLevel}
+              loadout={combatLoadout}
+              onLoadoutChange={setCombatLoadout}
+            />
+          </div>
+        );
       case "Vantagens": {
         const subTab = ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)!;
         const panelProps = {
@@ -830,6 +879,7 @@ const Index = () => {
             attributes={attributes}
             subAttributes={subAttributes}
             purchasedItems={purchasedItems}
+            combatLoadout={combatLoadout}
             selectedAdvantages={selectedAdvantages}
             selectedRaceClassAdv={selectedRaceClassAdv}
             selectedSkills={selectedSkills}
@@ -1165,6 +1215,7 @@ interface SummaryPanelProps {
   attributes: Record<AttributeName, number>;
   subAttributes: Record<string, number>;
   purchasedItems: PurchasedItems;
+  combatLoadout: CombatLoadout;
   selectedAdvantages: string[];
   selectedRaceClassAdv: string[];
   selectedSkills: string[];
@@ -1181,6 +1232,7 @@ const SummaryPanel = ({
   attributes,
   subAttributes,
   purchasedItems,
+  combatLoadout,
   selectedAdvantages,
   selectedRaceClassAdv,
   selectedSkills,
@@ -1188,6 +1240,13 @@ const SummaryPanel = ({
   characterPointsSpent,
 }: SummaryPanelProps) => {
   const allAdvItems = [...generalAdvantages, ...generalDisadvantages];
+  const caBreakdown = computeArmorClassBreakdown({
+    subAttributes,
+    purchased: purchasedItems,
+    selectedRaceClassAdv,
+    destrezaMain: attributes.Destreza,
+    loadout: combatLoadout,
+  });
   const resistenciaValue = subAttributes["Resistência"] ?? 10;
   const cargaBonus = getSubAttributeBonuses("Resistência", resistenciaValue)["Carga Permitida"] ?? "—";
   const cargaKg = parseCargaKg(cargaBonus);
@@ -1235,6 +1294,24 @@ const SummaryPanel = ({
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="rounded-lg border border-border p-3">
+        <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
+          Categoria de Armadura
+        </h4>
+        <p className="font-display text-2xl font-bold text-gold mb-2">{caBreakdown.total}</p>
+        <p className="text-xs text-muted-foreground font-body">
+          10 + {caBreakdown.destreza} (Dest) + {caBreakdown.armadura} (Arm) + {caBreakdown.elmo} (Elmo) +{" "}
+          {caBreakdown.escudo} (Esc) + {caBreakdown.outros} (Outros) + {caBreakdown.magia} (Magia)
+          {caBreakdown.hasWisdomDefense ? ` + ${caBreakdown.sabedoria} (Sab)` : ""}
+        </p>
+        {(caBreakdown.equippedArmorName || caBreakdown.equippedShieldName) && (
+          <p className="text-xs text-muted-foreground mt-1">
+            {caBreakdown.equippedArmorName && <>Armadura: {caBreakdown.equippedArmorName}. </>}
+            {caBreakdown.equippedShieldName && <>Escudo: {caBreakdown.equippedShieldName}.</>}
+          </p>
+        )}
       </div>
 
       {selectedAdvantages.length > 0 && (

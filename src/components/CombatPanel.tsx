@@ -1,0 +1,723 @@
+import { Fragment, useMemo, useState } from "react";
+import { Minus, Plus, Shield, Swords, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  computeArmorClassBreakdown,
+  computeAttackRollBreakdown,
+  getPurchasedBodyArmors,
+  getPurchasedShields,
+  getPurchasedWeapons,
+  weaponSlotFromEquipment,
+  type CombatLoadout,
+  type MagicCaBonus,
+  type WeaponAttackSlot,
+} from "@/lib/combatStats";
+import { formatArmorClass } from "@/data/equipment";
+import type { PurchasedItems } from "@/data/equipment";
+import type { AttributeName } from "@/data/characterData";
+
+interface CombatPanelProps {
+  subAttributes: Record<string, number>;
+  attributes: Record<AttributeName, number>;
+  purchased: PurchasedItems;
+  selectedRaceClassAdv: string[];
+  characterLevel: number;
+  loadout: CombatLoadout;
+  onLoadoutChange: (loadout: CombatLoadout) => void;
+}
+
+const COL_W = "w-[4.25rem] sm:w-[4.75rem]";
+const OP_W = "w-5 sm:w-6 shrink-0";
+const boxCls = `h-14 sm:h-16 ${COL_W} flex items-center justify-center rounded border-2 border-foreground/80 bg-card font-display text-lg sm:text-xl font-bold tabular-nums shrink-0`;
+const totalBoxCls = `h-14 sm:h-16 ${COL_W} flex items-center justify-center rounded border-[3px] border-foreground bg-gold/15 font-display text-lg sm:text-xl font-bold tabular-nums text-gold shrink-0`;
+const labelCls =
+  "font-display text-[10px] sm:text-xs tracking-wider uppercase text-center text-muted-foreground leading-tight";
+const hintCls =
+  "text-[9px] sm:text-[10px] text-muted-foreground text-center leading-tight line-clamp-2 min-h-[2rem]";
+
+interface CaField {
+  label: string;
+  value: number | string;
+  hint?: string;
+  isTotal?: boolean;
+}
+
+function CaFormulaRow({ fields }: { fields: CaField[] }) {
+  return (
+    <div className="overflow-x-auto pb-1">
+      <div className="flex flex-col items-center w-max mx-auto">
+        <div className="flex items-center justify-center">
+          {fields.map((field, i) => (
+            <Fragment key={field.label}>
+              {i > 0 && <span className={OP_W} aria-hidden />}
+              <div className={`${COL_W} px-0.5 ${labelCls}`}>{field.label}</div>
+            </Fragment>
+          ))}
+        </div>
+
+        <div className="flex items-center justify-center my-1">
+          {fields.map((field, i) => (
+            <Fragment key={field.label}>
+              {i > 0 && (
+                <span className={`${OP_W} text-center font-display text-base sm:text-lg text-muted-foreground leading-none`}>
+                  {field.isTotal ? "=" : "+"}
+                </span>
+              )}
+              <div className={field.isTotal ? totalBoxCls : boxCls}>{field.value}</div>
+            </Fragment>
+          ))}
+        </div>
+
+        <div className="flex items-start justify-center">
+          {fields.map((field, i) => (
+            <Fragment key={field.label}>
+              {i > 0 && <span className={OP_W} aria-hidden />}
+              <div className={`${COL_W} px-0.5 ${hintCls}`}>{field.hint ?? "\u00A0"}</div>
+            </Fragment>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const atkThCls =
+  "font-display text-[9px] sm:text-[10px] tracking-wider uppercase text-muted-foreground text-center border border-border bg-muted/25 px-1.5 py-1.5 leading-tight";
+const atkTdCls = "border border-border px-1 py-1 align-middle h-10 sm:h-11";
+const atkOpTdCls =
+  "border border-border px-0 py-1 align-middle h-10 sm:h-11 w-5 sm:w-6 text-center font-display text-xs sm:text-sm text-muted-foreground";
+const atkInputCls =
+  "h-8 sm:h-9 w-full min-w-[2.5rem] bg-background/50 border border-border rounded px-1 text-center text-xs sm:text-sm font-display tabular-nums";
+const atkReadonlyCls =
+  "h-8 sm:h-9 w-full min-w-[2.5rem] flex items-center justify-center bg-muted/30 border border-border rounded text-xs sm:text-sm font-display tabular-nums";
+const atkTotalCls =
+  "h-8 sm:h-9 w-full min-w-[2.5rem] flex items-center justify-center rounded border-[3px] border-foreground bg-gold/15 font-display text-sm font-bold tabular-nums text-gold";
+
+function AttackOpCell({ children }: { children: string }) {
+  return <td className={atkOpTdCls}>{children}</td>;
+}
+
+const CombatPanel = ({
+  subAttributes,
+  attributes,
+  purchased,
+  selectedRaceClassAdv,
+  characterLevel,
+  loadout,
+  onLoadoutChange,
+}: CombatPanelProps) => {
+  const [newMagicLabel, setNewMagicLabel] = useState("");
+  const [newMagicValue, setNewMagicValue] = useState("0");
+
+  const bodyArmors = useMemo(() => getPurchasedBodyArmors(purchased), [purchased]);
+  const shields = useMemo(() => getPurchasedShields(purchased), [purchased]);
+  const weapons = useMemo(() => getPurchasedWeapons(purchased), [purchased]);
+
+  const breakdown = useMemo(
+    () =>
+      computeArmorClassBreakdown({
+        subAttributes,
+        purchased,
+        selectedRaceClassAdv,
+        destrezaMain: attributes.Destreza,
+        loadout,
+      }),
+    [subAttributes, purchased, selectedRaceClassAdv, attributes.Destreza, loadout]
+  );
+
+  const update = (patch: Partial<CombatLoadout>) => {
+    onLoadoutChange({ ...loadout, ...patch });
+  };
+
+  const updateWeaponSlot = (index: number, patch: Partial<WeaponAttackSlot>) => {
+    const slots = loadout.weaponSlots.map((slot, i) => {
+      if (i !== index) return slot;
+      const next = { ...slot, ...patch };
+      if (patch.equipmentId !== undefined) {
+        if (patch.equipmentId) {
+          const item = weapons.find((w) => w.id === patch.equipmentId);
+          if (item) {
+            return {
+              ...next,
+              ...weaponSlotFromEquipment(item),
+              forcaOverride: null,
+              destrezaOverride: null,
+              baseOverride: null,
+            };
+          }
+        } else {
+          return {
+            ...next,
+            equipmentId: null,
+          };
+        }
+      }
+      return next;
+    });
+    update({ weaponSlots: slots });
+  };
+
+  const addMagicBonus = () => {
+    const label = newMagicLabel.trim();
+    const value = Number(newMagicValue);
+    if (!label || Number.isNaN(value) || value === 0) return;
+    const entry: MagicCaBonus = {
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+      label,
+      value,
+    };
+    update({ magicBonuses: [...loadout.magicBonuses, entry] });
+    setNewMagicLabel("");
+    setNewMagicValue("0");
+  };
+
+  const removeMagicBonus = (id: string) => {
+    update({ magicBonuses: loadout.magicBonuses.filter((b) => b.id !== id) });
+  };
+
+  const formatSigned = (n: number) => (n > 0 ? `+${n}` : `${n}`);
+
+  const caFields: CaField[] = [
+    { label: "Base", value: breakdown.base },
+    {
+      label: "Destreza",
+      value: formatSigned(breakdown.destreza),
+      hint: `Equilíbrio ${subAttributes["Equilíbrio"] ?? attributes.Destreza}`,
+    },
+    {
+      label: "Armadura",
+      value: formatSigned(breakdown.armadura),
+      hint: breakdown.equippedArmorName ?? "Nenhuma",
+    },
+    { label: "Elmo", value: formatSigned(breakdown.elmo) },
+    {
+      label: "Escudo",
+      value: formatSigned(breakdown.escudo),
+      hint: breakdown.equippedShieldName ?? "Nenhum",
+    },
+    { label: "Outros", value: formatSigned(breakdown.outros) },
+    { label: "Magia", value: formatSigned(breakdown.magia) },
+    ...(breakdown.hasWisdomDefense
+      ? [
+          {
+            label: "Sabedoria",
+            value: formatSigned(breakdown.sabedoria),
+            hint: `Intuição ${subAttributes["Intuição"] ?? "—"}`,
+          } satisfies CaField,
+        ]
+      : []),
+    { label: "Total", value: breakdown.total, isTotal: true },
+  ];
+
+  return (
+    <div className="space-y-6">
+      <div className="rounded-lg border border-border bg-card/60 p-4 sm:p-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+          <h3 className="font-display text-center sm:text-left text-base sm:text-lg tracking-widest uppercase">
+            Jogada de Ataque
+          </h3>
+          <div className="flex items-center justify-center sm:justify-end gap-2">
+            <span className="font-display text-xs tracking-wider uppercase text-muted-foreground">
+              Base de Ataque
+            </span>
+            <button
+              type="button"
+              onClick={() =>
+                update({ attackBaseBonus: Math.max(0, loadout.attackBaseBonus - 1) })
+              }
+              className="w-8 h-8 rounded border border-border flex items-center justify-center hover:bg-muted"
+            >
+              <Minus className="w-4 h-4" />
+            </button>
+            <input
+              type="number"
+              min={0}
+              value={loadout.attackBaseBonus}
+              onChange={(e) =>
+                update({
+                  attackBaseBonus: Math.max(0, Number(e.target.value) || 0),
+                })
+              }
+              className="w-14 text-center bg-background/50 border border-border rounded px-2 py-1.5 font-display text-sm"
+            />
+            <button
+              type="button"
+              onClick={() => update({ attackBaseBonus: loadout.attackBaseBonus + 1 })}
+              className="w-8 h-8 rounded border border-border flex items-center justify-center hover:bg-muted"
+            >
+              <Plus className="w-4 h-4" />
+            </button>
+            <span className="text-xs text-muted-foreground font-body">
+              Nível {characterLevel}
+            </span>
+          </div>
+        </div>
+        <p className="text-xs text-muted-foreground font-body text-center sm:text-left mb-4">
+          A base de ataque começa em 0. Aumente conforme o personagem evolui de nível.
+        </p>
+
+        <div className="overflow-x-auto pb-1">
+          <div className="inline-flex items-start gap-8 sm:gap-14 min-w-full justify-center">
+            <table className="border-collapse shrink-0">
+              <thead>
+                <tr>
+                  <th rowSpan={2} className={`${atkThCls} min-w-[8rem] sm:min-w-[10rem] text-left`}>
+                    Arma
+                  </th>
+                  <th rowSpan={2} className={`${atkThCls} w-10 sm:w-12`}>
+                    Tipo
+                  </th>
+                  <th colSpan={3} className={atkThCls}>
+                    Dano
+                  </th>
+                </tr>
+                <tr>
+                  <th className={`${atkThCls} w-14 sm:w-16`}>P/M</th>
+                  <th className={`${atkThCls} w-14 sm:w-16`}>G</th>
+                  <th className={`${atkThCls} w-12 sm:w-14`}>Bônus</th>
+                </tr>
+              </thead>
+              <tbody>
+                {loadout.weaponSlots.map((slot, index) => {
+                  const attackBreakdown = computeAttackRollBreakdown({
+                    slot,
+                    subAttributes,
+                    forcaMain: attributes.Força,
+                    destrezaMain: attributes.Destreza,
+                    selectedRaceClassAdv,
+                    attackBaseBonus: loadout.attackBaseBonus,
+                  });
+
+                  return (
+                    <tr key={slot.id}>
+                      <td className={atkTdCls}>
+                        {slot.equipmentId ? (
+                          <select
+                            value={slot.equipmentId}
+                            onChange={(e) =>
+                              updateWeaponSlot(index, {
+                                equipmentId: e.target.value || null,
+                              })
+                            }
+                            className="w-full h-8 sm:h-9 bg-background/50 border border-border rounded px-2 text-xs font-body"
+                          >
+                            <option value="">Arma personalizada</option>
+                            {weapons.map((w) => (
+                              <option key={w.id} value={w.id}>
+                                {w.name}
+                              </option>
+                            ))}
+                          </select>
+                        ) : (
+                          <div className="flex gap-1 min-w-0">
+                            <input
+                              type="text"
+                              value={slot.name}
+                              onChange={(e) =>
+                                updateWeaponSlot(index, { name: e.target.value })
+                              }
+                              placeholder="Nome da arma"
+                              className="flex-1 min-w-0 h-8 sm:h-9 bg-background/50 border border-border rounded px-2 text-xs font-body"
+                            />
+                            <select
+                              value=""
+                              onChange={(e) => {
+                                if (e.target.value) {
+                                  updateWeaponSlot(index, {
+                                    equipmentId: e.target.value,
+                                  });
+                                }
+                              }}
+                              className="w-8 shrink-0 h-8 sm:h-9 bg-background/50 border border-border rounded text-[10px] text-muted-foreground"
+                              title="Escolher do inventário"
+                            >
+                              <option value="">▼</option>
+                              {weapons.map((w) => (
+                                <option key={w.id} value={w.id}>
+                                  {w.name}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+                        )}
+                      </td>
+                      <td className={atkTdCls}>
+                        <input
+                          type="text"
+                          value={slot.tipo}
+                          onChange={(e) =>
+                            updateWeaponSlot(index, { tipo: e.target.value })
+                          }
+                          placeholder="—"
+                          className={`${atkInputCls} uppercase`}
+                          title="Tipo (p, c, e…)"
+                        />
+                      </td>
+                      <td className={atkTdCls}>
+                        <input
+                          type="text"
+                          value={slot.damageSm}
+                          onChange={(e) =>
+                            updateWeaponSlot(index, { damageSm: e.target.value })
+                          }
+                          placeholder="P/M"
+                          className={atkInputCls}
+                          title="Dano P/M"
+                        />
+                      </td>
+                      <td className={atkTdCls}>
+                        <input
+                          type="text"
+                          value={slot.damageLg}
+                          onChange={(e) =>
+                            updateWeaponSlot(index, { damageLg: e.target.value })
+                          }
+                          placeholder="G"
+                          className={atkInputCls}
+                          title="Dano G"
+                        />
+                      </td>
+                      <td className={atkTdCls}>
+                        <div
+                          className={atkReadonlyCls}
+                          title={
+                            attackBreakdown.usesAtaqueDestro
+                              ? "Ajuste de Dano: maior entre Músculos e Ajuste Defensivo (Equilíbrio)"
+                              : "Ajuste de Dano (Músculos)"
+                          }
+                        >
+                          {formatSigned(attackBreakdown.damageBonus)}
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+
+            <table className="border-collapse shrink-0">
+              <thead>
+                <tr>
+                  <th colSpan={11} className={atkThCls}>
+                    Jogada de Ataque
+                  </th>
+                </tr>
+                <tr>
+                  <th className={`${atkThCls} w-12 sm:w-14`}>Base</th>
+                  <th className={`${atkThCls} w-5 sm:w-6 border-0 bg-transparent`} aria-hidden />
+                  <th className={`${atkThCls} w-12 sm:w-14`}>Força</th>
+                  <th className={`${atkThCls} w-5 sm:w-6 border-0 bg-transparent`} aria-hidden />
+                  <th className={`${atkThCls} w-12 sm:w-14`}>Destreza</th>
+                  <th className={`${atkThCls} w-5 sm:w-6 border-0 bg-transparent`} aria-hidden />
+                  <th className={`${atkThCls} w-12 sm:w-14`}>Perícia</th>
+                  <th className={`${atkThCls} w-5 sm:w-6 border-0 bg-transparent`} aria-hidden />
+                  <th className={`${atkThCls} w-12 sm:w-14`}>Magia</th>
+                  <th className={`${atkThCls} w-5 sm:w-6 border-0 bg-transparent`} aria-hidden />
+                  <th className={`${atkThCls} w-12 sm:w-14`}>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {loadout.weaponSlots.map((slot, index) => {
+                  const attackBreakdown = computeAttackRollBreakdown({
+                    slot,
+                    subAttributes,
+                    forcaMain: attributes.Força,
+                    destrezaMain: attributes.Destreza,
+                    selectedRaceClassAdv,
+                    attackBaseBonus: loadout.attackBaseBonus,
+                  });
+
+                  return (
+                    <tr key={slot.id}>
+                      <td className={atkTdCls}>
+                        <input
+                          type="number"
+                          value={slot.baseOverride ?? attackBreakdown.base}
+                          onChange={(e) =>
+                            updateWeaponSlot(index, {
+                              baseOverride:
+                                e.target.value === "" ? null : Number(e.target.value),
+                            })
+                          }
+                          className={atkInputCls}
+                        />
+                      </td>
+                      <AttackOpCell>+</AttackOpCell>
+                      <td className={atkTdCls}>
+                        <input
+                          type="number"
+                          value={slot.forcaOverride ?? attackBreakdown.forca}
+                          onChange={(e) =>
+                            updateWeaponSlot(index, {
+                              forcaOverride:
+                                e.target.value === "" ? null : Number(e.target.value),
+                            })
+                          }
+                          title={
+                            attackBreakdown.isRanged
+                              ? "Somente armas de mão — use Destreza para ataque à distância"
+                              : attackBreakdown.usesAtaqueDestro
+                                ? "Ataque Destro: maior entre Chance de Acerto (Músculos) e Equilíbrio"
+                                : "Chance de Acerto (Músculos)"
+                          }
+                          className={atkInputCls}
+                        />
+                      </td>
+                      <AttackOpCell>+</AttackOpCell>
+                      <td className={atkTdCls}>
+                        <input
+                          type="number"
+                          value={slot.destrezaOverride ?? attackBreakdown.destreza}
+                          onChange={(e) =>
+                            updateWeaponSlot(index, {
+                              destrezaOverride:
+                                e.target.value === "" ? null : Number(e.target.value),
+                            })
+                          }
+                          title={
+                            attackBreakdown.isRanged
+                              ? "Atq. Dist. (Precisão) — arcos, bestas e ataque à distância"
+                              : "Somente ataque à distância — use Força em armas de mão"
+                          }
+                          className={atkInputCls}
+                        />
+                      </td>
+                      <AttackOpCell>+</AttackOpCell>
+                      <td className={atkTdCls}>
+                        <input
+                          type="number"
+                          value={slot.periciaOverride ?? attackBreakdown.pericia}
+                          onChange={(e) =>
+                            updateWeaponSlot(index, {
+                              periciaOverride:
+                                e.target.value === "" ? null : Number(e.target.value),
+                            })
+                          }
+                          className={atkInputCls}
+                        />
+                      </td>
+                      <AttackOpCell>+</AttackOpCell>
+                      <td className={atkTdCls}>
+                        <input
+                          type="number"
+                          value={slot.magiaAttack}
+                          onChange={(e) =>
+                            updateWeaponSlot(index, {
+                              magiaAttack: Number(e.target.value) || 0,
+                            })
+                          }
+                          className={atkInputCls}
+                        />
+                      </td>
+                      <AttackOpCell>=</AttackOpCell>
+                      <td className={atkTdCls}>
+                        <div className={atkTotalCls}>{attackBreakdown.total}</div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p className="text-xs text-muted-foreground font-body mt-4 text-center">
+          <Swords className="w-3.5 h-3.5 inline mr-1 -mt-0.5" />
+          Força soma em armas de mão (Chance de Acerto / Músculos). Destreza soma só em
+          ataque à distância (Atq. Dist. / Precisão). O bônus ao lado do dano é o Ajuste de
+          Dano (Músculos). Ataque Destro, em corpo a corpo, usa o maior entre Músculos e
+          Equilíbrio na jogada e no ajuste de dano.
+        </p>
+      </div>
+
+      <div className="rounded-lg border border-border bg-card/60 p-4 sm:p-6">
+        <h3 className="font-display text-center text-base sm:text-lg tracking-widest uppercase mb-6">
+          Categoria de Armadura (CA)
+        </h3>
+
+        <CaFormulaRow fields={caFields} />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <section className="rounded-lg border border-border bg-card/50 p-4 space-y-3">
+          <h4 className="font-display text-sm tracking-wider uppercase flex items-center gap-2">
+            <Shield className="w-4 h-4 text-gold" />
+            Equipamento vestido
+          </h4>
+
+          <div>
+            <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
+              Armadura
+            </label>
+            <select
+              value={loadout.equippedArmorId ?? ""}
+              onChange={(e) =>
+                update({ equippedArmorId: e.target.value || null })
+              }
+              className="w-full bg-background/50 border border-border rounded px-3 py-2 text-sm font-body"
+            >
+              <option value="">Sem armadura</option>
+              {bodyArmors.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {item.name}
+                  {item.armorClass != null ? ` (${formatArmorClass(item.armorClass)})` : ""}
+                </option>
+              ))}
+            </select>
+            {bodyArmors.length === 0 && (
+              <p className="text-xs text-muted-foreground mt-1">
+                Compre armaduras na aba Dinheiro & Equipamento.
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
+              Escudo
+            </label>
+            <select
+              value={loadout.equippedShieldId ?? ""}
+              onChange={(e) =>
+                update({ equippedShieldId: e.target.value || null })
+              }
+              className="w-full bg-background/50 border border-border rounded px-3 py-2 text-sm font-body"
+            >
+              <option value="">Sem escudo</option>
+              {shields.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {item.name}
+                  {item.armorClass != null ? ` (${formatArmorClass(item.armorClass)})` : ""}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
+              Elmo (bônus)
+            </label>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() =>
+                  update({ helmetBonus: loadout.helmetBonus - 1 })
+                }
+                className="w-8 h-8 rounded border border-border flex items-center justify-center hover:bg-muted"
+              >
+                <Minus className="w-4 h-4" />
+              </button>
+              <input
+                type="number"
+                value={loadout.helmetBonus}
+                onChange={(e) =>
+                  update({ helmetBonus: Number(e.target.value) || 0 })
+                }
+                className="w-20 text-center bg-background/50 border border-border rounded px-2 py-1.5 font-display"
+              />
+              <button
+                type="button"
+                onClick={() =>
+                  update({ helmetBonus: loadout.helmetBonus + 1 })
+                }
+                className="w-8 h-8 rounded border border-border flex items-center justify-center hover:bg-muted"
+              >
+                <Plus className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="rounded-lg border border-border bg-card/50 p-4 space-y-3">
+          <h4 className="font-display text-sm tracking-wider uppercase">Outros bônus</h4>
+
+          {breakdown.outrosAuto.length > 0 ? (
+            <ul className="text-sm font-body space-y-1">
+              {breakdown.outrosAuto.map((entry) => (
+                <li key={entry.label} className="flex justify-between text-muted-foreground">
+                  <span>{entry.label}</span>
+                  <span className="text-gold font-display">+{entry.value}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="text-xs text-muted-foreground">
+              Nenhum bônus automático (Pele dura, Bom de esquiva, etc.).
+            </p>
+          )}
+
+          <div>
+            <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
+              Ajuste manual em Outros
+            </label>
+            <input
+              type="number"
+              value={loadout.outrosBonus}
+              onChange={(e) =>
+                update({ outrosBonus: Number(e.target.value) || 0 })
+              }
+              className="w-full bg-background/50 border border-border rounded px-3 py-2 text-sm font-body"
+            />
+          </div>
+
+          <div className="pt-2 border-t border-border/60">
+            <h5 className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-2">
+              Magia
+            </h5>
+            {loadout.magicBonuses.length > 0 && (
+              <ul className="space-y-1.5 mb-3">
+                {loadout.magicBonuses.map((bonus) => (
+                  <li
+                    key={bonus.id}
+                    className="flex items-center justify-between gap-2 text-sm font-body bg-background/40 rounded px-2 py-1.5"
+                  >
+                    <span className="truncate">
+                      {bonus.label}{" "}
+                      <span className="text-gold font-display">
+                        {formatSigned(bonus.value)}
+                      </span>
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => removeMagicBonus(bonus.id)}
+                      className="text-destructive hover:text-destructive/80 shrink-0"
+                      title="Remover"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <div className="flex flex-wrap gap-2">
+              <input
+                type="text"
+                placeholder="Descrição"
+                value={newMagicLabel}
+                onChange={(e) => setNewMagicLabel(e.target.value)}
+                className="flex-1 min-w-[8rem] bg-background/50 border border-border rounded px-2 py-1.5 text-sm"
+              />
+              <input
+                type="number"
+                value={newMagicValue}
+                onChange={(e) => setNewMagicValue(e.target.value)}
+                className="w-16 bg-background/50 border border-border rounded px-2 py-1.5 text-sm text-center"
+              />
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={addMagicBonus}
+                className="font-display text-xs"
+              >
+                <Plus className="w-3.5 h-3.5 mr-1" />
+                Adicionar
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default CombatPanel;
