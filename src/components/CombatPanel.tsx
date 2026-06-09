@@ -5,6 +5,8 @@ import {
   computeArmorClassBreakdown,
   computeAttackRollBreakdown,
   computeHitPointsBreakdown,
+  getMartialArtsDamageByLevel,
+  hasArtesMarciais,
   resolveCurrentHp,
   getPurchasedBodyArmors,
   getPurchasedShields,
@@ -220,6 +222,8 @@ const CombatPanel = ({
   const bodyArmors = useMemo(() => getPurchasedBodyArmors(purchased), [purchased]);
   const shields = useMemo(() => getPurchasedShields(purchased), [purchased]);
   const weapons = useMemo(() => getPurchasedWeapons(purchased), [purchased]);
+  const artesMarciaisAtivas = hasArtesMarciais(selectedRaceClassAdv);
+  const martialArtsDamage = getMartialArtsDamageByLevel(characterLevel);
 
   const breakdown = useMemo(
     () =>
@@ -228,9 +232,10 @@ const CombatPanel = ({
         purchased,
         selectedRaceClassAdv,
         destrezaMain: attributes.Destreza,
+        sabedoriaMain: attributes.Sabedoria,
         loadout,
       }),
-    [subAttributes, purchased, selectedRaceClassAdv, attributes.Destreza, loadout]
+    [subAttributes, purchased, selectedRaceClassAdv, attributes.Destreza, attributes.Sabedoria, loadout]
   );
 
   const hpBreakdown = useMemo(
@@ -332,7 +337,7 @@ const CombatPanel = ({
           {
             label: "Sabedoria",
             value: formatSigned(breakdown.sabedoria),
-            hint: `Intuição ${subAttributes["Intuição"] ?? "—"}`,
+            hint: `Força de Vontade ${subAttributes["Força de Vontade"] ?? attributes.Sabedoria}`,
           } satisfies CaField,
         ]
       : []),
@@ -452,6 +457,7 @@ const CombatPanel = ({
               </thead>
               <tbody>
                 {loadout.weaponSlots.map((slot, index) => {
+                  const isMartialArtsRow = artesMarciaisAtivas && index === 0;
                   const attackBreakdown = computeAttackRollBreakdown({
                     slot,
                     subAttributes,
@@ -459,12 +465,20 @@ const CombatPanel = ({
                     destrezaMain: attributes.Destreza,
                     selectedRaceClassAdv,
                     attackBaseBonus: loadout.attackBaseBonus,
+                    isMartialArts: isMartialArtsRow,
                   });
 
                   return (
                     <tr key={slot.id}>
                       <td className={atkTdCls}>
-                        {slot.equipmentId ? (
+                        {isMartialArtsRow ? (
+                          <div
+                            className="h-8 sm:h-9 flex items-center px-2 text-xs font-body font-medium text-foreground"
+                            title="Golpes desarmados ou com armas marciais"
+                          >
+                            Artes Marciais
+                          </div>
+                        ) : slot.equipmentId ? (
                           <select
                             value={slot.equipmentId}
                             onChange={(e) =>
@@ -515,47 +529,69 @@ const CombatPanel = ({
                         )}
                       </td>
                       <td className={atkTdCls}>
-                        <input
-                          type="text"
-                          value={slot.tipo}
-                          onChange={(e) =>
-                            updateWeaponSlot(index, { tipo: e.target.value })
-                          }
-                          placeholder="—"
-                          className={`${atkInputCls} uppercase`}
-                          title="Tipo (p, c, e…)"
-                        />
+                        {isMartialArtsRow ? (
+                          <div className={atkReadonlyCls}>—</div>
+                        ) : (
+                          <input
+                            type="text"
+                            value={slot.tipo}
+                            onChange={(e) =>
+                              updateWeaponSlot(index, { tipo: e.target.value })
+                            }
+                            placeholder="—"
+                            className={`${atkInputCls} uppercase`}
+                            title="Tipo (p, c, e…)"
+                          />
+                        )}
                       </td>
                       <td className={atkTdCls}>
-                        <input
-                          type="text"
-                          value={slot.damageSm}
-                          onChange={(e) =>
-                            updateWeaponSlot(index, { damageSm: e.target.value })
-                          }
-                          placeholder="P/M"
-                          className={atkInputCls}
-                          title="Dano P/M"
-                        />
+                        {isMartialArtsRow ? (
+                          <div
+                            className={atkReadonlyCls}
+                            title={`Dano evolutivo (nível ${characterLevel})`}
+                          >
+                            {martialArtsDamage}
+                          </div>
+                        ) : (
+                          <input
+                            type="text"
+                            value={slot.damageSm}
+                            onChange={(e) =>
+                              updateWeaponSlot(index, { damageSm: e.target.value })
+                            }
+                            placeholder="P/M"
+                            className={atkInputCls}
+                            title="Dano P/M"
+                          />
+                        )}
                       </td>
                       <td className={atkTdCls}>
-                        <input
-                          type="text"
-                          value={slot.damageLg}
-                          onChange={(e) =>
-                            updateWeaponSlot(index, { damageLg: e.target.value })
-                          }
-                          placeholder="G"
-                          className={atkInputCls}
-                          title="Dano G"
-                        />
+                        {isMartialArtsRow ? (
+                          <div
+                            className={atkReadonlyCls}
+                            title={`Dano evolutivo (nível ${characterLevel})`}
+                          >
+                            {martialArtsDamage}
+                          </div>
+                        ) : (
+                          <input
+                            type="text"
+                            value={slot.damageLg}
+                            onChange={(e) =>
+                              updateWeaponSlot(index, { damageLg: e.target.value })
+                            }
+                            placeholder="G"
+                            className={atkInputCls}
+                            title="Dano G"
+                          />
+                        )}
                       </td>
                       <td className={atkTdCls}>
                         <div
                           className={atkReadonlyCls}
                           title={
-                            attackBreakdown.usesAtaqueDestro
-                              ? "Ajuste de Dano: maior entre Músculos e Ajuste Defensivo (Equilíbrio)"
+                            attackBreakdown.martialArtsUsesAtaqueDestro
+                              ? "Ataque Destro: maior entre Chance de Acerto (Músculos) e Ajuste de Defesa (Equilíbrio)"
                               : "Ajuste de Dano (Músculos)"
                           }
                         >
@@ -591,6 +627,7 @@ const CombatPanel = ({
               </thead>
               <tbody>
                 {loadout.weaponSlots.map((slot, index) => {
+                  const isMartialArtsRow = artesMarciaisAtivas && index === 0;
                   const attackBreakdown = computeAttackRollBreakdown({
                     slot,
                     subAttributes,
@@ -598,6 +635,7 @@ const CombatPanel = ({
                     destrezaMain: attributes.Destreza,
                     selectedRaceClassAdv,
                     attackBaseBonus: loadout.attackBaseBonus,
+                    isMartialArts: isMartialArtsRow,
                   });
 
                   return (
@@ -697,9 +735,10 @@ const CombatPanel = ({
         <p className="text-xs text-muted-foreground font-body mt-4 text-center">
           <Swords className="w-3.5 h-3.5 inline mr-1 -mt-0.5" />
           Força soma em armas de mão (Chance de Acerto / Músculos). Destreza soma só em
-          ataque à distância (Atq. Dist. / Precisão). O bônus ao lado do dano é o Ajuste de
-          Dano (Músculos). Ataque Destro, em corpo a corpo, usa o maior entre Músculos e
-          Equilíbrio na jogada e no ajuste de dano.
+          ataque à distância (Atq. Dist. / Precisão). Nas demais linhas, o bônus ao lado do
+          dano é o Ajuste de Dano (Músculos). Com Artes Marciais, a primeira linha mostra o
+          dano evolutivo; com Ataque Destro, ataque e bônus de dano usam o maior entre
+          Chance de Acerto (Músculos) e Ajuste de Defesa (Equilíbrio).
         </p>
       </div>
 

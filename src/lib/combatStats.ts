@@ -5,7 +5,6 @@ import {
   type PurchasedItems,
 } from "@/data/equipment";
 import { getSubAttributeBonuses } from "@/data/subAttributes";
-import { clampSubAttributeTableValue, tabelaIntuicao } from "@/data/subAttributeTables";
 
 export const CA_BASE = 10;
 export const HP_BASE = 8;
@@ -160,18 +159,57 @@ export function getEquilibrioDefensiveAdj(equilibrioValue: number): number {
   return parseSignedStat(getSubAttributeBonuses("Equilíbrio", equilibrioValue).Defesa ?? "0");
 }
 
-/** Bônus de dano ao lado do dano da arma: Ajuste de Dano (Músculos), ou maior com Ataque Destro. */
-export function getWeaponDamageBonus(
+/**
+ * Ajuste de Defesa (Equilíbrio) como bônus positivo para ataque e dano (Ataque Destro e CA).
+ * Na tabela AD&D, valor negativo indica melhor defesa; na ficha, alto Equilíbrio vira bônus +.
+ */
+export function getEquilibrioAtaqueDestroBonus(equilibrioValue: number): number {
+  return -getEquilibrioDefensiveAdj(equilibrioValue);
+}
+
+export function hasArtesMarciais(selectedRaceClassAdv: string[]): boolean {
+  return selectedRaceClassAdv.includes("Artes Marciais");
+}
+
+/** Dano de artes marciais por nível (inicia em 1d6, evolui a cada 4 níveis). */
+export function getMartialArtsDamageByLevel(level: number): string {
+  const lv = Math.max(1, Math.floor(level));
+  if (lv <= 4) return "1d6";
+  if (lv <= 8) return "1d8";
+  if (lv <= 12) return "1d10";
+  if (lv <= 16) return "2d6";
+  if (lv <= 20) return "2d8";
+  return "3d6";
+}
+
+export function getForcaVontadeDefMagiaAdj(forcaVontadeValue: number): number {
+  return parseSignedStat(
+    getSubAttributeBonuses("Força de Vontade", forcaVontadeValue)["Def. Magia"] ?? "0"
+  );
+}
+
+/**
+ * Bônus de dano na linha de artes marciais: Ajuste de Dano (Músculos), ou com Ataque Destro
+ * o maior entre Chance de Acerto (Músculos) e Ajuste de Defesa (Equilíbrio).
+ */
+export function getMartialArtsDamageBonus(
   musculosValue: number,
   equilibrioValue: number,
-  selectedRaceClassAdv: string[],
-  isRanged: boolean
+  selectedRaceClassAdv: string[]
 ): number {
-  const muscles = getMusculosDamageBonus(musculosValue);
-  if (!selectedRaceClassAdv.includes("Ataque Destro") || isRanged) {
-    return muscles;
+  const musclesDamage = getMusculosDamageBonus(musculosValue);
+  if (!selectedRaceClassAdv.includes("Ataque Destro")) {
+    return musclesDamage;
   }
-  return Math.max(muscles, getEquilibrioDefensiveAdj(equilibrioValue));
+  return Math.max(
+    getForcaAttackBonus(musculosValue),
+    getEquilibrioAtaqueDestroBonus(equilibrioValue)
+  );
+}
+
+/** Bônus de dano ao lado do dano da arma: Ajuste de Dano (Músculos). */
+export function getWeaponDamageBonus(musculosValue: number): number {
+  return getMusculosDamageBonus(musculosValue);
 }
 
 /** Precisão → Atq. Dist.; somente armas à distância. */
@@ -189,17 +227,20 @@ export function getForcaAttackBonusWithAdvantages(
   musculosValue: number,
   equilibrioValue: number,
   selectedRaceClassAdv: string[],
-  isRanged: boolean
+  isRanged: boolean,
+  applyAtaqueDestro = false
 ): number {
   if (isRanged) {
     return 0;
   }
   const muscles = getForcaAttackBonus(musculosValue);
-  if (!selectedRaceClassAdv.includes("Ataque Destro")) {
+  if (
+    !applyAtaqueDestro ||
+    !selectedRaceClassAdv.includes("Ataque Destro")
+  ) {
     return muscles;
   }
-  const equilibrioAtk = getDestrezaCaBonus(equilibrioValue);
-  return Math.max(muscles, equilibrioAtk);
+  return Math.max(muscles, getEquilibrioAtaqueDestroBonus(equilibrioValue));
 }
 
 export interface AttackRollBreakdown {
@@ -213,6 +254,9 @@ export interface AttackRollBreakdown {
   total: number;
   isRanged: boolean;
   usesAtaqueDestro: boolean;
+  isMartialArts: boolean;
+  /** Artes marciais + Ataque Destro: bônus de dano usa Músculos Acerto vs Equilíbrio. */
+  martialArtsUsesAtaqueDestro: boolean;
 }
 
 export function computeAttackRollBreakdown(params: {
@@ -222,24 +266,34 @@ export function computeAttackRollBreakdown(params: {
   destrezaMain: number;
   selectedRaceClassAdv: string[];
   attackBaseBonus: number;
+  isMartialArts?: boolean;
 }): AttackRollBreakdown {
-  const { slot, subAttributes, forcaMain, destrezaMain, selectedRaceClassAdv, attackBaseBonus } =
-    params;
+  const {
+    slot,
+    subAttributes,
+    forcaMain,
+    destrezaMain,
+    selectedRaceClassAdv,
+    attackBaseBonus,
+    isMartialArts = false,
+  } = params;
 
   const musculosVal = subAttributes["Músculos"] ?? forcaMain;
   const precisaoVal = subAttributes["Precisão"] ?? destrezaMain;
   const equilibrioVal = subAttributes["Equilíbrio"] ?? destrezaMain;
 
   const equipment = slot.equipmentId ? equipmentById[slot.equipmentId] : undefined;
-  const isRanged = equipment ? isRangedWeapon(equipment) : false;
-  const usesAtaqueDestro =
-    selectedRaceClassAdv.includes("Ataque Destro") && !isRanged;
+  const isRanged = isMartialArts ? false : equipment ? isRangedWeapon(equipment) : false;
+  const martialArtsUsesAtaqueDestro =
+    isMartialArts && selectedRaceClassAdv.includes("Ataque Destro") && !isRanged;
+  const usesAtaqueDestro = martialArtsUsesAtaqueDestro;
 
   const autoForca = getForcaAttackBonusWithAdvantages(
     musculosVal,
     equilibrioVal,
     selectedRaceClassAdv,
-    isRanged
+    isRanged,
+    isMartialArts
   );
   const autoDestreza = getDestrezaAttackBonus(precisaoVal, isRanged);
 
@@ -248,12 +302,9 @@ export function computeAttackRollBreakdown(params: {
   const destreza = slot.destrezaOverride ?? autoDestreza;
   const pericia = slot.periciaOverride ?? 0;
   const magia = slot.magiaAttack;
-  const damageBonus = getWeaponDamageBonus(
-    musculosVal,
-    equilibrioVal,
-    selectedRaceClassAdv,
-    isRanged
-  );
+  const damageBonus = isMartialArts
+    ? getMartialArtsDamageBonus(musculosVal, equilibrioVal, selectedRaceClassAdv)
+    : getWeaponDamageBonus(musculosVal);
 
   const total = base + forca + destreza + pericia + magia;
 
@@ -267,6 +318,8 @@ export function computeAttackRollBreakdown(params: {
     total,
     isRanged,
     usesAtaqueDestro,
+    isMartialArts,
+    martialArtsUsesAtaqueDestro,
   };
 }
 
@@ -335,8 +388,7 @@ export function computeHitPointsBreakdown(params: {
  * na ficha, Destreza alto deve aparecer como bônus positivo e baixo como negativo.
  */
 export function getDestrezaCaBonus(equilibrioValue: number): number {
-  const raw = getSubAttributeBonuses("Equilíbrio", equilibrioValue).Defesa ?? "0";
-  return -parseSignedStat(raw);
+  return getEquilibrioAtaqueDestroBonus(equilibrioValue);
 }
 
 /** Converte C.A. do catálogo em bônus numérico para a soma da CA. */
@@ -374,11 +426,9 @@ export function getAutoOutrosBonuses(
   return entries;
 }
 
-/** Bônus de CA por Defesa por Sabedoria (quantidade de Magias Bônus da Intuição). */
-export function getWisdomDefenseBonus(intuicaoValue: number): number {
-  const row = tabelaIntuicao[clampSubAttributeTableValue(intuicaoValue)];
-  if (!row?.bonus || row.bonus === "0") return 0;
-  return row.bonus.split(",").map((s) => s.trim()).filter(Boolean).length;
+/** Bônus de CA por Defesa por Sabedoria (Ajst. Defesa Contra Magias / Força de Vontade). */
+export function getSabedoriaCaBonus(forcaVontadeValue: number): number {
+  return getForcaVontadeDefMagiaAdj(forcaVontadeValue);
 }
 
 export interface ArmorClassBreakdown {
@@ -403,9 +453,11 @@ export function computeArmorClassBreakdown(params: {
   purchased: PurchasedItems;
   selectedRaceClassAdv: string[];
   destrezaMain: number;
+  sabedoriaMain?: number;
   loadout: CombatLoadout;
 }): ArmorClassBreakdown {
-  const { subAttributes, purchased, selectedRaceClassAdv, destrezaMain, loadout } = params;
+  const { subAttributes, purchased, selectedRaceClassAdv, destrezaMain, sabedoriaMain = 10, loadout } =
+    params;
 
   const equilibrioVal = subAttributes["Equilíbrio"] ?? destrezaMain;
   const destreza = getDestrezaCaBonus(equilibrioVal);
@@ -432,8 +484,8 @@ export function computeArmorClassBreakdown(params: {
   const magia = loadout.magicBonuses.reduce((sum, b) => sum + b.value, 0);
 
   const hasWisdomDefense = selectedRaceClassAdv.includes("Defesa por Sabedoria");
-  const intuicaoVal = subAttributes["Intuição"] ?? 10;
-  const sabedoria = hasWisdomDefense ? getWisdomDefenseBonus(intuicaoVal) : 0;
+  const forcaVontadeVal = subAttributes["Força de Vontade"] ?? sabedoriaMain;
+  const sabedoria = hasWisdomDefense ? getSabedoriaCaBonus(forcaVontadeVal) : 0;
 
   const total =
     CA_BASE +

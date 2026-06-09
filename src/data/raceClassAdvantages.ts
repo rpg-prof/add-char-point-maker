@@ -232,7 +232,7 @@ export const raceClassAdvantages: RaceClassAdvantage[] = [
     applicableClasses: ["Monge"],
     cost: 15,
     costOthers: 40,
-    description: "Usa os pontos de \"Magias Bônus\" (Sabedoria / Intuição) como bônus de CA (além da destreza)",
+    description: "Usa o Ajst. Defesa Contra Magias (Sabedoria / Força de Vontade) como bônus de CA (além da destreza)",
     type: "advantage",
   },
   {

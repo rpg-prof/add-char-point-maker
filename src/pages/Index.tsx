@@ -1242,6 +1242,7 @@ const SummaryPanel = ({
     purchased: purchasedItems,
     selectedRaceClassAdv,
     destrezaMain: attributes.Destreza,
+    sabedoriaMain: attributes.Sabedoria,
     loadout: combatLoadout,
   });
   const resistenciaValue = subAttributes["Resistência"] ?? 10;
