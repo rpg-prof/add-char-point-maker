@@ -8,7 +8,10 @@ import { getSubAttributeBonuses } from "@/data/subAttributes";
 import { clampSubAttributeTableValue, tabelaIntuicao } from "@/data/subAttributeTables";
 
 export const CA_BASE = 10;
+export const HP_BASE = 8;
 export const WEAPON_SLOT_COUNT = 4;
+
+const FIGHTER_CLASSES = new Set(["Guerreiro", "Paladino", "Ranger"]);
 
 export interface MagicCaBonus {
   id: string;
@@ -40,6 +43,8 @@ export interface CombatLoadout {
   attackBaseBonus: number;
   magicBonuses: MagicCaBonus[];
   weaponSlots: WeaponAttackSlot[];
+  /** PV atuais; null = igual ao máximo calculado. */
+  currentHp: number | null;
 }
 
 export function createEmptyWeaponSlot(index: number): WeaponAttackSlot {
@@ -70,6 +75,7 @@ export const defaultCombatLoadout = (): CombatLoadout => ({
   attackBaseBonus: 0,
   magicBonuses: [],
   weaponSlots: defaultWeaponSlots(),
+  currentHp: null,
 });
 
 export function isShieldItem(item: EquipmentItem): boolean {
@@ -273,6 +279,56 @@ export function parseSignedStat(value: string): number {
   return sign * Number(match[2]);
 }
 
+/** Interpreta Ajst. PV: valor padrão e valor entre parênteses (classes marciais). */
+export function parseAjstPV(ajstPV: string): { standard: number; fighter: number } {
+  const text = ajstPV.replace(/[¹²³⁴⁵⁶⁷⁸⁹⁰]+/g, "").trim();
+  const match = text.match(/^([+-]?\d+)\(([+-]?\d+)\)$/);
+  if (match) {
+    return {
+      standard: parseSignedStat(match[1]),
+      fighter: parseSignedStat(match[2]),
+    };
+  }
+  const single = parseSignedStat(text);
+  return { standard: single, fighter: single };
+}
+
+export function isFighterClass(className: string): boolean {
+  return FIGHTER_CLASSES.has(className);
+}
+
+export interface HitPointsBreakdown {
+  base: number;
+  condicionamentoBonus: number;
+  total: number;
+  condicionamentoValue: number;
+  ajstPVRaw: string;
+  usesFighterModifier: boolean;
+}
+
+export function computeHitPointsBreakdown(params: {
+  subAttributes: Record<string, number>;
+  constMain: number;
+  selectedClass: string;
+}): HitPointsBreakdown {
+  const { subAttributes, constMain, selectedClass } = params;
+  const condicionamentoValue = subAttributes["Condicionamento"] ?? constMain;
+  const ajstPVRaw =
+    getSubAttributeBonuses("Condicionamento", condicionamentoValue)["Ajst. PV"] ?? "0";
+  const { standard, fighter } = parseAjstPV(ajstPVRaw);
+  const usesFighterModifier = isFighterClass(selectedClass);
+  const condicionamentoBonus = usesFighterModifier ? fighter : standard;
+
+  return {
+    base: HP_BASE,
+    condicionamentoBonus,
+    total: HP_BASE + condicionamentoBonus,
+    condicionamentoValue,
+    ajstPVRaw,
+    usesFighterModifier,
+  };
+}
+
 /**
  * Bônus de Destreza para a soma da CA.
  * A tabela de Equilíbrio usa "ajuste defensivo" no sentido AD&D (negativo = melhor CA);
@@ -461,5 +517,16 @@ export function sanitizeCombatLoadout(
     attackBaseBonus: loadout.attackBaseBonus ?? 0,
     magicBonuses: loadout.magicBonuses ?? [],
     weaponSlots,
+    currentHp:
+      loadout.currentHp == null || Number.isNaN(loadout.currentHp)
+        ? null
+        : Math.max(0, loadout.currentHp),
   };
+}
+
+export function resolveCurrentHp(currentHp: number | null | undefined, maxHp: number): number {
+  if (currentHp == null || Number.isNaN(currentHp)) {
+    return maxHp;
+  }
+  return Math.max(0, currentHp);
 }

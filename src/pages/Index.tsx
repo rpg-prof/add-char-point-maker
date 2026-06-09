@@ -78,7 +78,7 @@ const BASE_STEPS = [
   { label: "Dinheiro & Equipamento", icon: Coins, desc: "Comprar equipamento com o capital da classe social" },
 ];
 
-const COMBAT_STEP = { label: "Combate", icon: Swords, desc: "Categoria de Armadura e equipamento vestido" };
+const COMBAT_STEP = { label: "Combate", icon: Swords, desc: "Pontos de Vida / Ataque / Categoria de Armadura" };
 const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
 const ADVANTAGES_STEP = {
   label: "Vantagens",
@@ -761,15 +761,12 @@ const Index = () => {
       case "Combate":
         return (
           <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-            <p className="font-body text-muted-foreground text-sm">
-              Monte a Categoria de Armadura (CA): base 10, ajuste defensivo de Equilíbrio, armadura e escudo comprados,
-              bônus de vantagens e magias.
-            </p>
             <CombatPanel
               subAttributes={subAttributes}
               attributes={attributes}
               purchased={purchasedItems}
               selectedRaceClassAdv={selectedRaceClassAdv}
+              selectedClass={selectedClass}
               characterLevel={characterLevel}
               loadout={combatLoadout}
               onLoadoutChange={setCombatLoadout}

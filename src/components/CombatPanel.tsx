@@ -1,9 +1,11 @@
 import { Fragment, useMemo, useState } from "react";
-import { Minus, Plus, Shield, Swords, Trash2 } from "lucide-react";
+import { Heart, Minus, Plus, Shield, Swords, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   computeArmorClassBreakdown,
   computeAttackRollBreakdown,
+  computeHitPointsBreakdown,
+  resolveCurrentHp,
   getPurchasedBodyArmors,
   getPurchasedShields,
   getPurchasedWeapons,
@@ -21,25 +23,130 @@ interface CombatPanelProps {
   attributes: Record<AttributeName, number>;
   purchased: PurchasedItems;
   selectedRaceClassAdv: string[];
+  selectedClass: string;
   characterLevel: number;
   loadout: CombatLoadout;
   onLoadoutChange: (loadout: CombatLoadout) => void;
 }
 
-const COL_W = "w-[4.25rem] sm:w-[4.75rem]";
-const OP_W = "w-5 sm:w-6 shrink-0";
-const boxCls = `h-14 sm:h-16 ${COL_W} flex items-center justify-center rounded border-2 border-foreground/80 bg-card font-display text-lg sm:text-xl font-bold tabular-nums shrink-0`;
-const totalBoxCls = `h-14 sm:h-16 ${COL_W} flex items-center justify-center rounded border-[3px] border-foreground bg-gold/15 font-display text-lg sm:text-xl font-bold tabular-nums text-gold shrink-0`;
+const COL_W = "w-[3rem] sm:w-[3.25rem]";
+const OP_W = "w-4 sm:w-5 shrink-0";
+const boxCls = `h-9 sm:h-10 ${COL_W} flex items-center justify-center rounded border-2 border-foreground/80 bg-card font-display text-sm sm:text-base font-bold tabular-nums shrink-0`;
+const totalBoxCls = `h-9 sm:h-10 ${COL_W} flex items-center justify-center rounded border-2 border-foreground bg-gold/15 font-display text-sm sm:text-base font-bold tabular-nums text-gold shrink-0`;
 const labelCls =
-  "font-display text-[10px] sm:text-xs tracking-wider uppercase text-center text-muted-foreground leading-tight";
+  "font-display text-[9px] sm:text-[10px] tracking-wider uppercase text-center text-muted-foreground leading-tight";
 const hintCls =
-  "text-[9px] sm:text-[10px] text-muted-foreground text-center leading-tight line-clamp-2 min-h-[2rem]";
+  "text-[8px] sm:text-[9px] text-muted-foreground text-center leading-tight line-clamp-2 min-h-[1.25rem]";
+const sectionTitleCls =
+  "font-display text-xs sm:text-sm tracking-widest uppercase mb-2 flex items-center justify-center gap-1.5";
 
 interface CaField {
   label: string;
   value: number | string;
   hint?: string;
   isTotal?: boolean;
+}
+
+const HP_COL_W = "w-[2.5rem] sm:w-[2.65rem]";
+const HP_BOX_CLS = `h-9 sm:h-10 ${HP_COL_W} flex items-center justify-center rounded border-2 border-foreground/80 bg-card font-display text-sm font-bold tabular-nums shrink-0`;
+const HP_TOTAL_CLS = `h-9 sm:h-10 ${HP_COL_W} flex items-center justify-center rounded border-2 border-foreground bg-gold/15 font-display text-sm font-bold tabular-nums text-gold shrink-0`;
+const HP_GRID_COLS = "2.65rem 0.85rem 3.5rem 0.85rem 2.65rem";
+
+function HitPointsFormulaRow({
+  base,
+  condBonus,
+  total,
+  condHint,
+  currentHp,
+  maxHp,
+  tracksCurrentHp,
+  formatSigned,
+  onCurrentHpChange,
+  onAdjustCurrentHp,
+  onFollowMax,
+}: {
+  base: number;
+  condBonus: number;
+  total: number;
+  condHint: string;
+  currentHp: number;
+  maxHp: number;
+  tracksCurrentHp: boolean;
+  formatSigned: (n: number) => string;
+  onCurrentHpChange: (value: number) => void;
+  onAdjustCurrentHp: (delta: number) => void;
+  onFollowMax: () => void;
+}) {
+  const gridStyle = { gridTemplateColumns: HP_GRID_COLS };
+  const valueRowCls = "h-9 sm:h-10 flex items-center";
+
+  return (
+    <div className="overflow-x-auto pb-0.5">
+      <div className="flex items-end justify-center gap-2.5 sm:gap-3 mx-auto w-max">
+        <div className="grid gap-x-0 items-end" style={gridStyle}>
+          <div className={`${labelCls} col-start-1`}>Base</div>
+          <div className={`${labelCls} col-start-3`}>Cond.</div>
+          <div className={`${labelCls} col-start-5`}>Total</div>
+
+          <div className={`${HP_BOX_CLS} col-start-1 row-start-2`}>{base}</div>
+          <span className="col-start-2 row-start-2 self-center text-center font-display text-xs text-muted-foreground leading-none">
+            +
+          </span>
+          <div className={`${HP_BOX_CLS} col-start-3 row-start-2`}>{formatSigned(condBonus)}</div>
+          <span className="col-start-4 row-start-2 self-center text-center font-display text-xs text-muted-foreground leading-none">
+            =
+          </span>
+          <div className={`${HP_TOTAL_CLS} col-start-5 row-start-2`}>{total}</div>
+
+          <div className={`${hintCls} col-start-3 row-start-3`}>{condHint}</div>
+        </div>
+
+        <div className="flex flex-col items-center shrink-0">
+          <div className={`${labelCls} w-full text-center`}>Atuais</div>
+          <div className={`${valueRowCls} gap-0.5 my-0.5`}>
+            <button
+              type="button"
+              onClick={() => onAdjustCurrentHp(-1)}
+              className="w-6 h-6 shrink-0 rounded border border-border flex items-center justify-center hover:bg-muted"
+              title="Dano"
+            >
+              <Minus className="w-3 h-3" />
+            </button>
+            <input
+              type="number"
+              min={0}
+              value={currentHp}
+              onChange={(e) => onCurrentHpChange(Number(e.target.value) || 0)}
+              className="w-9 sm:w-10 h-7 text-center bg-background/50 border border-border rounded px-0.5 font-display text-sm font-bold tabular-nums"
+            />
+            <button
+              type="button"
+              onClick={() => onAdjustCurrentHp(1)}
+              className="w-6 h-6 shrink-0 rounded border border-border flex items-center justify-center hover:bg-muted"
+              title="Cura"
+            >
+              <Plus className="w-3 h-3" />
+            </button>
+          </div>
+          <div className={`${hintCls} text-center max-w-[5.5rem]`}>
+            de <span className="font-display text-gold font-semibold">{maxHp}</span> máx.
+            {tracksCurrentHp && (
+              <>
+                {" "}
+                <button
+                  type="button"
+                  onClick={onFollowMax}
+                  className="underline hover:text-foreground"
+                >
+                  Seguir máx.
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function CaFormulaRow({ fields }: { fields: CaField[] }) {
@@ -55,11 +162,11 @@ function CaFormulaRow({ fields }: { fields: CaField[] }) {
           ))}
         </div>
 
-        <div className="flex items-center justify-center my-1">
+        <div className="flex items-center justify-center my-0.5">
           {fields.map((field, i) => (
             <Fragment key={field.label}>
               {i > 0 && (
-                <span className={`${OP_W} text-center font-display text-base sm:text-lg text-muted-foreground leading-none`}>
+                <span className={`${OP_W} text-center font-display text-sm text-muted-foreground leading-none`}>
                   {field.isTotal ? "=" : "+"}
                 </span>
               )}
@@ -102,6 +209,7 @@ const CombatPanel = ({
   attributes,
   purchased,
   selectedRaceClassAdv,
+  selectedClass,
   characterLevel,
   loadout,
   onLoadoutChange,
@@ -123,6 +231,16 @@ const CombatPanel = ({
         loadout,
       }),
     [subAttributes, purchased, selectedRaceClassAdv, attributes.Destreza, loadout]
+  );
+
+  const hpBreakdown = useMemo(
+    () =>
+      computeHitPointsBreakdown({
+        subAttributes,
+        constMain: attributes.Constituição,
+        selectedClass,
+      }),
+    [subAttributes, attributes.Constituição, selectedClass]
   );
 
   const update = (patch: Partial<CombatLoadout>) => {
@@ -177,6 +295,18 @@ const CombatPanel = ({
 
   const formatSigned = (n: number) => (n > 0 ? `+${n}` : `${n}`);
 
+  const maxHp = hpBreakdown.total;
+  const currentHp = resolveCurrentHp(loadout.currentHp, maxHp);
+
+  const setCurrentHp = (value: number) => {
+    update({ currentHp: Math.max(0, value) });
+  };
+
+  const adjustCurrentHp = (delta: number) => {
+    const base = resolveCurrentHp(loadout.currentHp, maxHp);
+    setCurrentHp(base + delta);
+  };
+
   const caFields: CaField[] = [
     { label: "Base", value: breakdown.base },
     {
@@ -210,10 +340,53 @@ const CombatPanel = ({
   ];
 
   return (
-    <div className="space-y-6">
-      <div className="rounded-lg border border-border bg-card/60 p-4 sm:p-6">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-          <h3 className="font-display text-center sm:text-left text-base sm:text-lg tracking-widest uppercase">
+    <div className="space-y-4">
+      <div className="rounded-lg border border-border bg-card/60 p-3 sm:p-4">
+        <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-4">
+          <div className="shrink-0 min-w-0">
+            <h3 className={sectionTitleCls}>
+              <Heart className="w-4 h-4 text-gold" />
+              Pontos de Vida
+            </h3>
+            <HitPointsFormulaRow
+              base={hpBreakdown.base}
+              condBonus={hpBreakdown.condicionamentoBonus}
+              total={maxHp}
+              condHint={`Cond. ${hpBreakdown.condicionamentoValue} — ${hpBreakdown.ajstPVRaw}${
+                hpBreakdown.usesFighterModifier ? " (marcial)" : ""
+              }`}
+              currentHp={currentHp}
+              maxHp={maxHp}
+              tracksCurrentHp={loadout.currentHp != null}
+              formatSigned={formatSigned}
+              onCurrentHpChange={setCurrentHp}
+              onAdjustCurrentHp={adjustCurrentHp}
+              onFollowMax={() => update({ currentHp: null })}
+            />
+            <p className="text-[10px] text-muted-foreground font-body mt-2 text-center md:text-left">
+              8 PV base + Ajst. PV (Cond.).
+              {hpBreakdown.usesFighterModifier
+                ? " Marciais usam o valor entre parênteses."
+                : " Demais classes usam o valor normal."}
+            </p>
+          </div>
+
+          <div className="hidden md:block w-px self-stretch bg-border/60 shrink-0" />
+
+          <div className="flex-1 min-w-0 md:border-0 border-t border-border/60 pt-4 md:pt-0">
+            <h3 className={sectionTitleCls}>
+              <Shield className="w-4 h-4 text-gold" />
+              Categoria de Armadura (CA)
+            </h3>
+            <CaFormulaRow fields={caFields} />
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-lg border border-border bg-card/60 p-3 sm:p-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+          <h3 className={`${sectionTitleCls} sm:justify-start mb-0`}>
+            <Swords className="w-4 h-4 text-gold" />
             Jogada de Ataque
           </h3>
           <div className="flex items-center justify-center sm:justify-end gap-2">
@@ -530,15 +703,7 @@ const CombatPanel = ({
         </p>
       </div>
 
-      <div className="rounded-lg border border-border bg-card/60 p-4 sm:p-6">
-        <h3 className="font-display text-center text-base sm:text-lg tracking-widest uppercase mb-6">
-          Categoria de Armadura (CA)
-        </h3>
-
-        <CaFormulaRow fields={caFields} />
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <section className="rounded-lg border border-border bg-card/50 p-4 space-y-3">
           <h4 className="font-display text-sm tracking-wider uppercase flex items-center gap-2">
             <Shield className="w-4 h-4 text-gold" />
