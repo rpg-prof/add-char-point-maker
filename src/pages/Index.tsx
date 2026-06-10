@@ -884,27 +884,26 @@ const Index = () => {
     <div className="min-h-screen parchment-bg">
       {/* Header */}
       <header className="dark-panel border-b border-gold/30">
-        <div className="container max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <AppLogo size={44} />
-              <div>
-                <h1 className="font-display text-xl md:text-2xl tracking-widest text-parchment">
-                  AD&D 2.5 Edition - Criação de Personagens
-                </h1>
-                <p className="text-sm font-body">
-                  <a
-                    href="http://adeide25.net.uztec.com.br/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-parchment/60 hover:text-gold hover:underline transition-colors"
-                  >
-                    Sistema AD&D 2.5 - Pontos por Personagem v0.8
-                  </a>
-                </p>
-              </div>
+        <div className="container max-w-6xl mx-auto px-4 py-4 space-y-3">
+          <div className="flex items-center gap-3 min-w-0">
+            <AppLogo size={44} className="shrink-0" />
+            <div className="min-w-0">
+              <h1 className="font-display text-xl md:text-2xl tracking-widest text-parchment">
+                AD&D 2.5 Edition - Criação de Personagens
+              </h1>
+              <p className="text-sm font-body">
+                <a
+                  href="http://adeide25.net.uztec.com.br/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-parchment/60 hover:text-gold hover:underline transition-colors"
+                >
+                  Sistema AD&D 2.5 - Pontos por Personagem v0.8
+                </a>
+              </p>
             </div>
-            <div className="flex items-center gap-2">
+          </div>
+          <div className="flex flex-wrap items-center justify-end gap-2">
               <input
                 ref={fileInputRef}
                 type="file"
@@ -938,12 +937,28 @@ const Index = () => {
                     selectedClass,
                     selectedSocialClass,
                     selectedReputation,
+                    characterLevel,
+                    sexo,
+                    idade,
+                    peso,
+                    altura,
+                    cabelos,
+                    olhos,
+                    tendencia,
                     attributes,
                     subAttributes,
                     purchasedItems,
+                    combatLoadout,
                     selectedAdvantages,
                     selectedRaceClassAdv,
                     selectedSkills,
+                    selectedWeapons,
+                    selectedWeaponGroups,
+                    selectedShields,
+                    grimoire,
+                    divineAccess,
+                    arcaneAccess,
+                    arcaneSpecialist,
                     attributePointsSpent,
                     characterPointsSpent,
                   })
@@ -972,7 +987,6 @@ const Index = () => {
                   <Undo2 className="w-4 h-4" />
                 </Button>
               )}
-            </div>
           </div>
         </div>
       </header>
