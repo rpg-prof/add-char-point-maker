@@ -82,7 +82,7 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     multiline?: boolean;
     color?: [number, number, number];
   }) => {
-    const f = new TextField();
+    const f = new AcroFormTextField();
     f.fieldName = `f_${++fieldSeq}`;
     f.value = opts.value;
     f.fontSize = opts.fontSize ?? 9;
