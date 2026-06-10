@@ -1,5 +1,6 @@
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Coins, Award } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Coins, Award, FileText } from "lucide-react";
+import { exportCharacterPdf } from "@/lib/exportCharacterPdf";
 import AppLogo from "@/components/AppLogo";
 import {
   Dialog,
@@ -926,6 +927,32 @@ const Index = () => {
               >
                 <Save className="w-4 h-4 mr-1" />
                 Salvar
+              </Button>
+              <Button
+                size="sm"
+                onClick={() =>
+                  exportCharacterPdf({
+                    charName,
+                    playerName,
+                    selectedRace,
+                    selectedClass,
+                    selectedSocialClass,
+                    selectedReputation,
+                    attributes,
+                    subAttributes,
+                    purchasedItems,
+                    selectedAdvantages,
+                    selectedRaceClassAdv,
+                    selectedSkills,
+                    attributePointsSpent,
+                    characterPointsSpent,
+                  })
+                }
+                className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider"
+                title="Gerar ficha em PDF"
+              >
+                <FileText className="w-4 h-4 mr-1" />
+                PDF
               </Button>
               <Button
                 size="sm"

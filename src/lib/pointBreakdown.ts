@@ -133,6 +133,7 @@ export function getCharacterPointBreakdown(ctx: CharacterPointContext): PointBre
   }
 
   for (const [name, level] of Object.entries(ctx.divineAccess)) {
+    if (level !== "major" && level !== "minor") continue;
     const sphere = divineSpheres.find((s) => s.name === name);
     if (sphere) {
       const cost = divineSphereCost(sphere, level, ctx.selectedClass);
