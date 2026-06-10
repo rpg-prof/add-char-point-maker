@@ -930,6 +930,31 @@ const Index = () => {
               </Button>
               <Button
                 size="sm"
+                onClick={() =>
+                  exportCharacterPdf({
+                    charName,
+                    playerName,
+                    selectedRace,
+                    selectedClass,
+                    selectedSocialClass,
+                    selectedReputation,
+                    attributes,
+                    subAttributes,
+                    purchasedItems,
+                    selectedAdvantages,
+                    selectedRaceClassAdv,
+                    selectedSkills,
+                    attributePointsSpent,
+                    characterPointsSpent,
+                  })
+                }
+                className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider"
+                title="Gerar ficha em PDF"
+              >
+                <FileText className="w-4 h-4 mr-1" />
+                PDF
+              <Button
+                size="sm"
                 onClick={() => setShowEvolveDialog(true)}
                 className="bg-accent text-accent-foreground hover:bg-accent/80 font-display text-xs tracking-wider"
               >
