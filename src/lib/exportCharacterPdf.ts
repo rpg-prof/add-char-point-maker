@@ -85,14 +85,14 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     const f = new AcroFormTextField();
     f.fieldName = `f_${++fieldSeq}`;
     f.value = opts.value;
+    f.defaultValue = opts.value;
     f.fontSize = opts.fontSize ?? 9;
     f.multiline = !!opts.multiline;
-    f.Rect = [opts.x, opts.y, opts.w, opts.h];
-    // alignment: 0 left, 1 center, 2 right
-    (f as any).textAlign = opts.align ?? "left";
-    if (opts.color) {
-      (f as any).color = opts.color;
-    }
+    f.x = opts.x;
+    f.y = opts.y;
+    f.width = opts.w;
+    f.height = opts.h;
+    f.textAlign = opts.align ?? "left";
     doc.addField(f);
   };
 
