@@ -1,5 +1,6 @@
 import jsPDF from "jspdf";
-import autoTable from "jspdf-autotable";
+import { TextField } from "jspdf";
+import autoTable, { type CellHookData } from "jspdf-autotable";
 import {
   generalAdvantages,
   generalDisadvantages,
@@ -69,6 +70,33 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
   const margin = 32;
   let y = margin;
 
+  // Sequential field naming to guarantee uniqueness
+  let fieldSeq = 0;
+  const addTextField = (opts: {
+    value: string;
+    x: number;
+    y: number;
+    w: number;
+    h: number;
+    fontSize?: number;
+    align?: "left" | "center" | "right";
+    multiline?: boolean;
+    color?: [number, number, number];
+  }) => {
+    const f = new TextField();
+    f.fieldName = `f_${++fieldSeq}`;
+    f.value = opts.value;
+    f.fontSize = opts.fontSize ?? 9;
+    f.multiline = !!opts.multiline;
+    f.Rect = [opts.x, opts.y, opts.w, opts.h];
+    // alignment: 0 left, 1 center, 2 right
+    (f as any).textAlign = opts.align ?? "left";
+    if (opts.color) {
+      (f as any).color = opts.color;
+    }
+    doc.addField(f);
+  };
+
   const setColor = (rgb: [number, number, number]) =>
     doc.setTextColor(rgb[0], rgb[1], rgb[2]);
 
@@ -87,6 +115,38 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     y += 12;
   };
 
+  /**
+   * Replace cell content with an editable text field for the listed column
+   * indexes. The default cell text is suppressed so the field shows the value.
+   */
+  const makeEditableHooks = (
+    editableCols: number[],
+    perColAlign?: Record<number, "left" | "center" | "right">,
+  ) => ({
+    willDrawCell: (data: CellHookData) => {
+      if (data.section === "body" && editableCols.includes(data.column.index)) {
+        // suppress default text — field will show value
+        data.cell.text = [] as unknown as string[];
+      }
+    },
+    didDrawCell: (data: CellHookData) => {
+      if (data.section !== "body") return;
+      if (!editableCols.includes(data.column.index)) return;
+      const raw = data.cell.raw;
+      const value = raw == null ? "" : String(raw);
+      const pad = 1.5;
+      addTextField({
+        value,
+        x: data.cell.x + pad,
+        y: data.cell.y + pad,
+        w: data.cell.width - pad * 2,
+        h: data.cell.height - pad * 2,
+        fontSize: (data.cell.styles.fontSize as number) ?? 9,
+        align: perColAlign?.[data.column.index] ?? "left",
+      });
+    },
+  });
+
   // ===== HEADER =====
   doc.setFillColor(...DARK);
   doc.rect(0, 0, pageW, 70, "F");
@@ -94,41 +154,60 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
   doc.setFontSize(9);
   doc.setTextColor(180, 150, 90);
   doc.text("FICHA DE PERSONAGEM · AD&D 2.5", margin, 22);
-  doc.setFontSize(18);
-  doc.setTextColor(225, 200, 130);
-  doc.text(input.charName.trim() || "Personagem Sem Nome", margin, 44);
-  doc.setFont("helvetica", "normal");
-  doc.setFontSize(9);
-  doc.setTextColor(210, 200, 180);
-  if (input.playerName.trim()) {
-    doc.text(`Jogador: ${input.playerName}`, margin, 60);
-  }
 
+  // Editable: character name (large) and player name
+  addTextField({
+    value: input.charName.trim() || "Personagem Sem Nome",
+    x: margin,
+    y: 30,
+    w: pageW - margin * 2,
+    h: 22,
+    fontSize: 16,
+    align: "left",
+  });
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(8);
+  doc.setTextColor(210, 200, 180);
+  doc.text("JOGADOR", margin, 64);
+  addTextField({
+    value: input.playerName,
+    x: margin + 50,
+    y: 54,
+    w: pageW - margin * 2 - 50,
+    h: 14,
+    fontSize: 9,
+  });
+  y = 80;
+
+  // 4-col facts (label above, editable value below)
   const reputationLabel =
     reputations.find((r) => r.level === input.selectedReputation)?.description ?? "";
   const facts: { label: string; value: string }[] = [
-    { label: "Raça", value: input.selectedRace || "—" },
-    { label: "Classe", value: input.selectedClass || "—" },
-    { label: "Classe Social", value: input.selectedSocialClass || "—" },
-    { label: "Reputação", value: `Nv ${input.selectedReputation}${reputationLabel ? ` — ${reputationLabel}` : ""}` },
+    { label: "Raça", value: input.selectedRace || "" },
+    { label: "Classe", value: input.selectedClass || "" },
+    { label: "Classe Social", value: input.selectedSocialClass || "" },
+    {
+      label: "Reputação",
+      value: `Nv ${input.selectedReputation}${reputationLabel ? ` — ${reputationLabel}` : ""}`,
+    },
   ];
   const factW = (pageW - margin * 2) / 4;
   facts.forEach((f, i) => {
     const fx = margin + i * factW;
-    doc.setFontSize(7);
-    doc.setTextColor(180, 160, 100);
-    doc.text(f.label.toUpperCase(), fx, 60);
-  });
-  y = 80;
-  facts.forEach((f, i) => {
-    const fx = margin + i * factW;
     doc.setFont("helvetica", "bold");
-    doc.setFontSize(10);
-    setColor(DARK);
-    const lines = doc.splitTextToSize(f.value, factW - 6);
-    doc.text(lines, fx, y);
+    doc.setFontSize(7);
+    setColor(GOLD);
+    doc.text(f.label.toUpperCase(), fx + 2, y);
+    addTextField({
+      value: f.value,
+      x: fx + 1,
+      y: y + 3,
+      w: factW - 4,
+      h: 14,
+      fontSize: 9,
+    });
   });
-  y += 22;
+  y += 28;
 
   // ===== ATRIBUTOS =====
   sectionHeader("Atributos");
@@ -150,6 +229,7 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
       1: { halign: "center", cellWidth: 40, textColor: GOLD, fontStyle: "bold" },
     },
     margin: { left: margin, right: margin },
+    ...makeEditableHooks([1, 2, 3], { 1: "center" }),
   });
   y = (doc as any).lastAutoTable.finalY + 14;
 
@@ -180,6 +260,12 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
       4: { halign: "center" },
     },
     margin: { left: margin, right: margin },
+    ...makeEditableHooks([1, 2, 3, 4, 5], {
+      1: "center",
+      3: "center",
+      4: "center",
+      5: "right",
+    }),
   });
   y = (doc as any).lastAutoTable.finalY + 14;
 
@@ -198,6 +284,7 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
       headStyles: { fillColor: DARK, textColor: [225, 200, 130], fontStyle: "bold", fontSize: 8 },
       columnStyles: { 1: { halign: "center", cellWidth: 60 } },
       margin: { left: margin, right: margin },
+      ...makeEditableHooks([0, 1], { 1: "center" }),
     });
     y = (doc as any).lastAutoTable.finalY + 14;
   }
@@ -234,6 +321,7 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
       headStyles: { fillColor: DARK, textColor: [225, 200, 130], fontStyle: "bold", fontSize: 8 },
       columnStyles: { 1: { halign: "center", cellWidth: 60 } },
       margin: { left: margin, right: margin },
+      ...makeEditableHooks([0, 1], { 1: "center" }),
     });
     y = (doc as any).lastAutoTable.finalY + 14;
   }
@@ -249,6 +337,7 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
       headStyles: { fillColor: BLOOD, textColor: [245, 230, 210], fontStyle: "bold", fontSize: 8 },
       columnStyles: { 1: { halign: "center", cellWidth: 60, textColor: BLOOD, fontStyle: "bold" } },
       margin: { left: margin, right: margin },
+      ...makeEditableHooks([0, 1], { 1: "center" }),
     });
     y = (doc as any).lastAutoTable.finalY + 14;
   }
@@ -282,6 +371,12 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     styles: { font: "helvetica", fontSize: 9, cellPadding: 4, halign: "center", textColor: DARK },
     headStyles: { fillColor: DARK, textColor: [225, 200, 130], fontStyle: "bold", fontSize: 8 },
     margin: { left: margin, right: margin },
+    ...makeEditableHooks([0, 1, 2, 3], {
+      0: "center",
+      1: "center",
+      2: "center",
+      3: "center",
+    }),
   });
   y = (doc as any).lastAutoTable.finalY + 8;
 
@@ -308,9 +403,31 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
         2: { halign: "right", cellWidth: 70 },
       },
       margin: { left: margin, right: margin },
+      ...makeEditableHooks([0, 1, 2], { 1: "center", 2: "right" }),
     });
     y = (doc as any).lastAutoTable.finalY + 14;
   }
+
+  // ===== ANOTAÇÕES =====
+  sectionHeader("Anotações");
+  if (y > pageH - 140) {
+    doc.addPage();
+    y = margin;
+  }
+  const notesH = Math.min(160, pageH - y - 120);
+  doc.setDrawColor(...MUTED);
+  doc.setLineWidth(0.4);
+  doc.rect(margin, y, pageW - margin * 2, notesH);
+  addTextField({
+    value: "",
+    x: margin + 2,
+    y: y + 2,
+    w: pageW - margin * 2 - 4,
+    h: notesH - 4,
+    fontSize: 10,
+    multiline: true,
+  });
+  y += notesH + 14;
 
   // ===== PONTOS =====
   sectionHeader("Total de Pontos");
