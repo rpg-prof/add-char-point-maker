@@ -21,6 +21,7 @@ import MagicAccessPanel, { type DivineAccessLevel, type ArcaneAccessLevel } from
 import ResistancePanel from "@/components/ResistancePanel";
 import EquipmentShopPanel from "@/components/EquipmentShopPanel";
 import CombatPanel from "@/components/CombatPanel";
+import SummaryPanel from "@/components/SummaryPanel";
 import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
   attributeNames,
@@ -36,18 +37,8 @@ import {
   type AttributeName,
 } from "@/data/characterData";
 import { weaponGroups, shieldProficiencies } from "@/data/weaponProficiencies";
-import { subAttributeMap, getSubAttributeBonuses } from "@/data/subAttributes";
-import {
-  equipmentById,
-  formatMoney,
-  getRemainingCopper,
-  getSpentCopper,
-  getStartingCapitalPc,
-  getTotalWeightKg,
-  migratePurchasedItems,
-  type PurchasedItems,
-} from "@/data/equipment";
-import { parseCargaKg } from "@/data/currency";
+import { subAttributeMap } from "@/data/subAttributes";
+import { migratePurchasedItems, type PurchasedItems } from "@/data/equipment";
 import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 import {
   getAttributeBreakdown,
@@ -57,7 +48,6 @@ import {
 } from "@/lib/pointBreakdown";
 import { clampAttributesForRace } from "@/lib/clampAttributesForRace";
 import {
-  computeArmorClassBreakdown,
   defaultCombatLoadout,
   sanitizeCombatLoadout,
   type CombatLoadout,
@@ -873,10 +863,10 @@ const Index = () => {
             selectedRace={selectedRace}
             selectedClass={selectedClass}
             selectedSocialClass={selectedSocialClass}
+            selectedReputation={selectedReputation}
             attributes={attributes}
             subAttributes={subAttributes}
             purchasedItems={purchasedItems}
-            combatLoadout={combatLoadout}
             selectedAdvantages={selectedAdvantages}
             selectedRaceClassAdv={selectedRaceClassAdv}
             selectedSkills={selectedSkills}
@@ -1198,256 +1188,6 @@ const Index = () => {
           </div>
         </div>
       </main>
-    </div>
-  );
-};
-
-// Summary Panel Component
-interface SummaryPanelProps {
-  charName: string;
-  playerName: string;
-  selectedRace: string;
-  selectedClass: string;
-  selectedSocialClass: string;
-  attributes: Record<AttributeName, number>;
-  subAttributes: Record<string, number>;
-  purchasedItems: PurchasedItems;
-  combatLoadout: CombatLoadout;
-  selectedAdvantages: string[];
-  selectedRaceClassAdv: string[];
-  selectedSkills: string[];
-  attributePointsSpent: number;
-  characterPointsSpent: number;
-}
-
-const SummaryPanel = ({
-  charName,
-  playerName,
-  selectedRace,
-  selectedClass,
-  selectedSocialClass,
-  attributes,
-  subAttributes,
-  purchasedItems,
-  combatLoadout,
-  selectedAdvantages,
-  selectedRaceClassAdv,
-  selectedSkills,
-  attributePointsSpent,
-  characterPointsSpent,
-}: SummaryPanelProps) => {
-  const allAdvItems = [...generalAdvantages, ...generalDisadvantages];
-  const caBreakdown = computeArmorClassBreakdown({
-    subAttributes,
-    purchased: purchasedItems,
-    selectedRaceClassAdv,
-    destrezaMain: attributes.Destreza,
-    sabedoriaMain: attributes.Sabedoria,
-    loadout: combatLoadout,
-  });
-  const resistenciaValue = subAttributes["Resistência"] ?? 10;
-  const cargaBonus = getSubAttributeBonuses("Resistência", resistenciaValue)["Carga Permitida"] ?? "—";
-  const cargaKg = parseCargaKg(cargaBonus);
-  const startingPc = getStartingCapitalPc(selectedSocialClass, socialClasses);
-  const spentPc = getSpentCopper(purchasedItems);
-  const remainingPc = getRemainingCopper(selectedSocialClass, socialClasses, purchasedItems);
-  const totalWeight = getTotalWeightKg(purchasedItems);
-  const ownedItems = Object.entries(purchasedItems)
-    .filter(([, qty]) => qty > 0)
-    .map(([id, qty]) => ({ item: equipmentById[id], qty }))
-    .filter((e) => e.item)
-    .sort((a, b) => a.item!.name.localeCompare(b.item!.name, "pt"));
-
-  return (
-    <div className="space-y-4">
-      <div className="dark-panel rounded-lg p-4">
-        <h3 className="font-display text-lg tracking-wider text-gold mb-3">
-          {charName || "Personagem Sem Nome"}
-        </h3>
-        {playerName && (
-          <p className="text-sm text-parchment/70 mb-2">Jogador: {playerName}</p>
-        )}
-        <div className="grid grid-cols-3 gap-2 text-sm text-parchment/80">
-          <div>
-            <span className="text-parchment/50">Raça:</span> {selectedRace}
-          </div>
-          <div>
-            <span className="text-parchment/50">Classe:</span> {selectedClass}
-          </div>
-          <div>
-            <span className="text-parchment/50">Social:</span> {selectedSocialClass}
-          </div>
-        </div>
-      </div>
-
-      <div className="rounded-lg border border-border p-3">
-        <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
-          Atributos ({attributePointsSpent}/75 pts)
-        </h4>
-        <div className="grid grid-cols-3 gap-2">
-          {attributeNames.map((attr) => (
-            <div key={attr} className="flex justify-between text-sm">
-              <span className="font-display text-xs">{attr}</span>
-              <span className="font-bold text-foreground">{attributes[attr]}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="rounded-lg border border-border p-3">
-        <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
-          Categoria de Armadura
-        </h4>
-        <p className="font-display text-2xl font-bold text-gold mb-2">{caBreakdown.total}</p>
-        <p className="text-xs text-muted-foreground font-body">
-          10 + {caBreakdown.destreza} (Dest) + {caBreakdown.armadura} (Arm) + {caBreakdown.elmo} (Elmo) +{" "}
-          {caBreakdown.escudo} (Esc) + {caBreakdown.outros} (Outros) + {caBreakdown.magia} (Magia)
-          {caBreakdown.hasWisdomDefense ? ` + ${caBreakdown.sabedoria} (Sab)` : ""}
-        </p>
-        {(caBreakdown.equippedArmorName || caBreakdown.equippedShieldName) && (
-          <p className="text-xs text-muted-foreground mt-1">
-            {caBreakdown.equippedArmorName && <>Armadura: {caBreakdown.equippedArmorName}. </>}
-            {caBreakdown.equippedShieldName && <>Escudo: {caBreakdown.equippedShieldName}.</>}
-          </p>
-        )}
-      </div>
-
-      {selectedAdvantages.length > 0 && (
-        <div className="rounded-lg border border-border p-3">
-          <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
-            Vantagens & Desvantagens
-          </h4>
-          <div className="flex flex-wrap gap-1.5">
-            {selectedAdvantages.map((name) => {
-              const item = allAdvItems.find((a) => a.name === name);
-              const isAdv = item?.type === "advantage";
-              return (
-                <span
-                  key={name}
-                  className={`px-2 py-0.5 rounded text-xs font-body border ${
-                    isAdv
-                      ? "bg-gold/10 border-gold/30 text-gold-dark"
-                      : "bg-blood/10 border-blood/30 text-blood"
-                  }`}
-                >
-                  {name} ({item?.cost})
-                </span>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {selectedRaceClassAdv.length > 0 && (
-        <div className="rounded-lg border border-border p-3">
-          <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
-            Vantagens por Raça/Classe
-          </h4>
-          <div className="flex flex-wrap gap-1.5">
-            {selectedRaceClassAdv.map((name) => {
-              const item = raceClassAdvantages.find((a) => a.name === name);
-              const isAdv = item?.type === "advantage";
-              const matchesRace = item?.applicableRaces?.includes(selectedRace);
-              const matchesClass = item?.applicableClasses?.includes(selectedClass);
-              const cost = (matchesRace || matchesClass) ? item?.cost : (item?.costOthers ?? item?.cost);
-              return (
-                <span
-                  key={name}
-                  className={`px-2 py-0.5 rounded text-xs font-body border ${
-                    isAdv
-                      ? "bg-gold/10 border-gold/30 text-gold-dark"
-                      : "bg-blood/10 border-blood/30 text-blood"
-                  }`}
-                >
-                  {name} ({cost})
-                </span>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {selectedSkills.length > 0 && (
-        <div className="rounded-lg border border-border p-3">
-          <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
-            Perícias
-          </h4>
-          <div className="flex flex-wrap gap-1.5">
-            {selectedSkills.map((name) => (
-              <span
-                key={name}
-                className="px-2 py-0.5 rounded text-xs font-body border bg-gold/10 border-gold/30 text-gold-dark"
-              >
-                {name}
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
-
-      <div className="rounded-lg border border-border p-3">
-        <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2">
-          Dinheiro & Equipamento
-        </h4>
-        <div className="grid grid-cols-2 gap-2 text-sm mb-2">
-          <div>
-            <span className="text-muted-foreground">Capital:</span> {formatMoney(startingPc)}
-          </div>
-          <div>
-            <span className="text-muted-foreground">Restante:</span>{" "}
-            <span className={remainingPc < 0 ? "text-blood font-bold" : "font-bold"}>
-              {formatMoney(remainingPc)}
-            </span>
-          </div>
-          <div>
-            <span className="text-muted-foreground">Gasto:</span> {formatMoney(spentPc)}
-          </div>
-          <div>
-            <span className="text-muted-foreground">Peso:</span>{" "}
-            <span className={cargaKg > 0 && totalWeight > cargaKg ? "text-blood font-bold" : ""}>
-              {totalWeight.toFixed(1).replace(".", ",")} kg
-              {cargaKg > 0 && ` / ${cargaKg.toFixed(1).replace(".", ",")} kg`}
-            </span>
-            <span className="text-xs text-muted-foreground block">
-              (Resistência {resistenciaValue} — {cargaBonus})
-            </span>
-          </div>
-        </div>
-        {ownedItems.length > 0 ? (
-          <div className="flex flex-wrap gap-1.5">
-            {ownedItems.map(({ item, qty }) => (
-              <span
-                key={item!.id}
-                className="px-2 py-0.5 rounded text-xs font-body border bg-card border-border"
-              >
-                {item!.name} ×{qty}
-              </span>
-            ))}
-          </div>
-        ) : (
-          <p className="text-xs text-muted-foreground">Nenhum item comprado.</p>
-        )}
-      </div>
-
-      <div className="rounded-lg border-2 border-gold/40 p-3 bg-gold/5">
-        <h4 className="font-display text-sm tracking-wider uppercase text-gold mb-2">
-          Total de Pontos
-        </h4>
-        <div className="grid grid-cols-2 gap-4 text-sm">
-          <div>
-            <span className="text-muted-foreground">Atributos:</span>{" "}
-            <span className={attributePointsSpent > 75 ? "text-blood font-bold" : "font-bold"}>
-              {attributePointsSpent} / 75
-            </span>
-          </div>
-          <div>
-            <span className="text-muted-foreground">Personagem:</span>{" "}
-            <span className={characterPointsSpent > 100 ? "text-blood font-bold" : "font-bold"}>
-              {characterPointsSpent} / 100
-            </span>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
