@@ -65,6 +65,8 @@ export interface ExportCharacterPdfInput {
   arcaneSpecialist: string | null;
   attributePointsSpent: number;
   characterPointsSpent: number;
+  notesItems?: string;
+  notesGeneral?: string;
 }
 
 const formatSigned = (n: number) => (n > 0 ? `+${n}` : `${n}`);
@@ -1213,27 +1215,42 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
   }
 
   // ===== ANOTAÇÕES =====
-  const notesH = 160;
-  beginSection("Anotações", notesH);
-  doc.setFillColor(255, 252, 246);
-  doc.setDrawColor(...BORDER);
-  doc.setLineWidth(0.6);
-  doc.roundedRect(margin, y, pageW - margin * 2, notesH, 3, 3, "FD");
-  doc.setDrawColor(220, 210, 195);
-  doc.setLineWidth(0.25);
-  for (let lineY = y + 16; lineY < y + notesH - 6; lineY += 14) {
-    doc.line(margin + 8, lineY, pageW - margin - 8, lineY);
-  }
-  addTextField({
-    value: "",
-    x: margin + 6,
-    y: y + 4,
-    w: pageW - margin * 2 - 12,
-    h: notesH - 8,
-    fontSize: 10,
-    multiline: true,
-  });
-  y += notesH + 14;
+  const notesBoxH = 120;
+  const notesGap = 12;
+  const notesBlockH = notesBoxH * 2 + notesGap + 16;
+  beginSection("Anotações", notesBlockH);
+
+  const drawNotesBox = (label: string, value: string, boxY: number) => {
+    const boxW = pageW - margin * 2;
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(8);
+    setColor(GOLD_DARK);
+    doc.text(label.toUpperCase(), margin + 4, boxY - 2);
+
+    doc.setFillColor(255, 252, 246);
+    doc.setDrawColor(...BORDER);
+    doc.setLineWidth(0.6);
+    doc.roundedRect(margin, boxY, boxW, notesBoxH, 3, 3, "FD");
+    doc.setDrawColor(220, 210, 195);
+    doc.setLineWidth(0.25);
+    for (let lineY = boxY + 16; lineY < boxY + notesBoxH - 6; lineY += 14) {
+      doc.line(margin + 8, lineY, pageW - margin - 8, lineY);
+    }
+    addTextField({
+      value: value.trim(),
+      x: margin + 6,
+      y: boxY + 4,
+      w: boxW - 12,
+      h: notesBoxH - 8,
+      fontSize: 9,
+      multiline: true,
+    });
+  };
+
+  drawNotesBox("Itens", input.notesItems ?? "", y + 10);
+  y += 10 + notesBoxH + notesGap;
+  drawNotesBox("Geral", input.notesGeneral ?? "", y + 10);
+  y += 10 + notesBoxH + 14;
 
   // ===== PONTOS =====
   beginSection("Total de Pontos", estimateTableHeight(2, { rowH: 20 }));

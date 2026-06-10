@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Coins, Award, FileText } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Coins, Award, FileText, NotebookPen } from "lucide-react";
 import { exportCharacterPdf } from "@/lib/exportCharacterPdf";
 import AppLogo from "@/components/AppLogo";
 import {
@@ -23,6 +23,7 @@ import ResistancePanel from "@/components/ResistancePanel";
 import EquipmentShopPanel from "@/components/EquipmentShopPanel";
 import CombatPanel from "@/components/CombatPanel";
 import SummaryPanel from "@/components/SummaryPanel";
+import NotesPanel from "@/components/NotesPanel";
 import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
   attributeNames,
@@ -78,6 +79,7 @@ const ADVANTAGES_STEP = {
   hasSubTabs: true as const,
 };
 const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
+const NOTES_STEP = { label: "Anotações", icon: NotebookPen, desc: "Itens e anotações gerais" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
 
 type AdvantageSubTab =
@@ -152,7 +154,7 @@ const Index = () => {
   const STEPS = useMemo(() => {
     const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP];
     if (hasMagicAccess) steps.push(MAGIC_STEP);
-    steps.push(COMBAT_STEP, SUMMARY_STEP);
+    steps.push(COMBAT_STEP, NOTES_STEP, SUMMARY_STEP);
     return steps;
   }, [hasMagicAccess]);
 
@@ -169,6 +171,8 @@ const Index = () => {
   const [grimoire, setGrimoire] = useState<string[]>([]);
   const [purchasedItems, setPurchasedItems] = useState<PurchasedItems>({});
   const [combatLoadout, setCombatLoadout] = useState<CombatLoadout>(defaultCombatLoadout);
+  const [notesItems, setNotesItems] = useState("");
+  const [notesGeneral, setNotesGeneral] = useState("");
 
   useEffect(() => {
     setCombatLoadout((prev) => sanitizeCombatLoadout(prev, purchasedItems));
@@ -531,6 +535,8 @@ const Index = () => {
       progressionHistory,
       purchasedItems,
       combatLoadout,
+      notesItems,
+      notesGeneral,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -539,7 +545,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems, combatLoadout]);
+  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems, combatLoadout, notesItems, notesGeneral]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -606,6 +612,10 @@ const Index = () => {
         } else {
           setCombatLoadout(defaultCombatLoadout());
         }
+        if (data.notesItems !== undefined) setNotesItems(data.notesItems);
+        else setNotesItems("");
+        if (data.notesGeneral !== undefined) setNotesGeneral(data.notesGeneral);
+        else setNotesGeneral("");
         setCurrentStep(0);
       } catch {
         alert("Arquivo JSON inválido.");
@@ -856,6 +866,17 @@ const Index = () => {
             />
           </div>
         );
+      case "Anotações":
+        return (
+          <div className="max-h-[55vh] overflow-y-auto pr-2">
+            <NotesPanel
+              notesItems={notesItems}
+              notesGeneral={notesGeneral}
+              onNotesItemsChange={setNotesItems}
+              onNotesGeneralChange={setNotesGeneral}
+            />
+          </div>
+        );
       case "Resumo":
         return (
           <SummaryPanel
@@ -961,6 +982,8 @@ const Index = () => {
                     arcaneSpecialist,
                     attributePointsSpent,
                     characterPointsSpent,
+                    notesItems,
+                    notesGeneral,
                   })
                 }
                 className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider"
