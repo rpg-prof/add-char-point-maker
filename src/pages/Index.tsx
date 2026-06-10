@@ -953,6 +953,7 @@ const Index = () => {
               >
                 <FileText className="w-4 h-4 mr-1" />
                 PDF
+              </Button>
               <Button
                 size="sm"
                 onClick={() => setShowEvolveDialog(true)}
