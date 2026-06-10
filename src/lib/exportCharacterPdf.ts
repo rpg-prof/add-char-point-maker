@@ -1,5 +1,4 @@
-import jsPDF from "jspdf";
-import { TextField } from "jspdf";
+import jsPDF, { AcroFormTextField } from "jspdf";
 import autoTable, { type CellHookData } from "jspdf-autotable";
 import {
   generalAdvantages,
