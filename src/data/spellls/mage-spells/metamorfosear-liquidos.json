@@ -6,5 +6,5 @@
     "duration": "Permanente",
     "range": "Toque",
     "area": "1 metro cúbico/nível",
-    "description": "Transforma líquidos não mágicos em outros líquidos não mágicos. Exemplos: - água - vinho - sangue - óleo Necessário tocar o líquido. Líquidos mágicos: teste contra desintegração com +3. Não pode: transformar líquido mágico em outro líquido mágico. Venenos: podem ser neutralizados. Não afeta: venenos já ingeridos. Elementais da água: afetados. Dano: 1d4 por nível Sucesso: metade. Componente material: gota do líquido desejado."
+    "description": "Transforma líquidos não mágicos em outros líquidos não mágicos. Exemplos: - água - vinho - sangue - óleo Necessário tocar o líquido. Líquidos mágicos: teste contra desintegração com +3. Não pode: transformar líquido mágico em outro líquido mágico. Venenos: podem ser neutralizados. Não afeta: venenos já ingeridos. Elementais da água: afetados.\n\nDano: 1d4 por nível Sucesso: metade. Componente material: gota do líquido desejado."
 }

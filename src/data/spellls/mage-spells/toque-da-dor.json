@@ -5,6 +5,5 @@
     "castingTime": "3",
     "duration": "1 rodada/nível",
     "range": "Toque",
-    "area": "",
-    "description": "Toque da Dor permite ao mago tocar um adversário de forma a provocar dor extrema. Amagia funciona se o mago toca qualquer parte exposta do corpo de um oponente. Omago deve estar ao alcance do braço do adversário para a magia funcionar. Amagia exige uma jogada de ataque normal. Ador não causa nenhum dano, mas pelas próximas 1d4 rodadas, a vítima sofrerá penalidade de –2 em suas jogadas de ataque e sua CA aumenta em 2. Omago pode realizar a magia e tocar a vítima na mesma rodada. Toque da Dor só é eficaz em humanos, semi-humanos e oponentes humanoides. Os componentes materiais para esta magia são uma agulha e o dedo de uma luva queimada."
+    "description": "Toque da Dor permite ao mago tocar um adversário de forma a provocar dor extrema. Amagia funciona se o mago toca qualquer parte exposta do corpo de um oponente. Omago deve estar ao alcance do braço do adversário para a magia funcionar. Amagia exige uma jogada de ataque normal. Ador não causa nenhum dano, mas pelas próximas 1d4 rodadas, a vítima sofrerá penalidade de –2 em suas jogadas de ataque e sua CA aumenta em 2. Omago pode realizar a magia e tocar a vítima na mesma rodada. Toque da Dor só é eficaz em humanos, semi-humanos e oponentes humanoides.\n\nOs componentes materiais para esta magia são uma agulha e o dedo de uma luva queimada."
 }

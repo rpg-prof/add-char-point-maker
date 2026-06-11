@@ -225,3 +225,99 @@ export function mergeMetadata(spell, fromHtml, inferred) {
 export function countMissingMeta(spell) {
   return META_FIELDS.filter((f) => isEmptyMeta(spell[f])).length;
 }
+
+const BULLET_CHARS = /[\uF0B7\uF097\u2022\u25CF\u25AA]/g;
+
+const PARAGRAPH_BREAK_BEFORE =
+  /(?<=\.)\s+(?=(?:O componente|Os componentes|O reverso|A versão reversa|Observe que|Note que|Veja |Clérigos |Mortos-vivos |Portanto,|Logo,|Assim,|Além disso,|Dessa forma,|Finalmente,|Utilizá-la |Se o |Se a |Se houver |Quando |Durante |Após |Antes ))/gi;
+
+/** Descrição já veio do grimório HTML com seções nomeadas. */
+export function isAlreadyFormatted(text) {
+  if (!text?.trim()) return true;
+  if (/^\s*Descrição\s*\n/i.test(text)) return true;
+  return /\n\n(?:Aplicações(?: Táticas)?|Exemplo|Uso em Campanha|Aparência|Combinações)\n/i.test(
+    text,
+  );
+}
+
+function stripEmbeddedMetadata(text) {
+  return text
+    .replace(/\s+Componentes:\s*.+$/i, "")
+    .replace(/\s+Tempo de Execução:\s*.+$/i, "")
+    .replace(/\s+Resistência(?: à Magia)?:\s*.+$/i, "")
+    .trim();
+}
+
+function formatLetteredLists(text) {
+  let out = text.replace(/:\s*([A-Z]\))/g, ":\n\n$1");
+  out = out.replace(/\s+([B-Z]\))\s/g, "\n\n$1 ");
+  return out;
+}
+
+function formatBulletLists(text) {
+  let out = text.replace(/:\s*[\uF0B7\uF097\u2022\u25CF\u25AA]\s*/g, ":\n\n• ");
+  out = out.replace(/([.!?])\s*[\uF0B7\uF097\u2022\u25CF\u25AA]\s*/g, "$1\n\n• ");
+  out = out.replace(BULLET_CHARS, "\n• ");
+  out = out.replace(/\n•\s+/g, "\n• ");
+  return out;
+}
+
+function formatIntoParagraphs(text) {
+  if (text.includes("\n")) {
+    return text
+      .split(/\n+/)
+      .map((line) => line.trim())
+      .filter(Boolean)
+      .join("\n\n");
+  }
+
+  const sentences = text.match(/[^.!?]+[.!?]+(?:\s+|$)|[^.!?]+$/g) || [text];
+  const paragraphs = [];
+  let current = "";
+
+  for (const raw of sentences) {
+    const sentence = raw.trim();
+    if (!sentence) continue;
+    const next = current ? `${current} ${sentence}` : sentence;
+    if (current && next.length > 380) {
+      paragraphs.push(current.trim());
+      current = sentence;
+    } else {
+      current = next;
+    }
+  }
+  if (current) paragraphs.push(current.trim());
+  return paragraphs.join("\n\n");
+}
+
+/** Formata descrições em parágrafo único para texto legível com quebras. */
+export function formatSpellDescription(text) {
+  if (!text?.trim() || isAlreadyFormatted(text)) return text?.trim() ?? "";
+
+  let t = text.replace(/\s+/g, " ").trim();
+  t = stripEmbeddedMetadata(t);
+  t = formatBulletLists(t);
+  t = formatLetteredLists(t);
+  t = t.replace(PARAGRAPH_BREAK_BEFORE, "\n\n");
+  t = t.replace(/\.{2,}/g, ".");
+  t = formatIntoParagraphs(t);
+  t = t.replace(/\n{3,}/g, "\n\n").trim();
+
+  return t;
+}
+
+export function serializeSpellJson(spell) {
+  return {
+    name: spell.name,
+    level: spell.level,
+    school: spell.school,
+    ...(spell.sphere ? { sphere: spell.sphere } : {}),
+    ...(spell.castingTime ? { castingTime: spell.castingTime } : {}),
+    ...(spell.duration ? { duration: spell.duration } : {}),
+    ...(spell.range ? { range: spell.range } : {}),
+    ...(spell.components ? { components: spell.components } : {}),
+    ...(spell.area ? { area: spell.area } : {}),
+    ...(spell.savingThrow ? { savingThrow: spell.savingThrow } : {}),
+    description: spell.description,
+  };
+}
