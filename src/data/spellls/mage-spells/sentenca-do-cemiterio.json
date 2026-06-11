@@ -8,5 +8,5 @@
     "components": "V, S",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "description": "O necromante aponta para um alvo e pronuncia uma sentença. Durante a duração, toda cura recebida é reduzida. A vítima sente uma proximidade constante da morte."
+    "description": "Descrição\n\nO necromante aponta para um alvo e pronuncia uma sentença.\n\nDurante a duração, toda cura recebida é reduzida.\n\nA vítima sente uma proximidade constante da morte."
 }

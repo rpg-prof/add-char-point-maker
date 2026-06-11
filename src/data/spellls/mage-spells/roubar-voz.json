@@ -8,5 +8,5 @@
     "components": "V, S",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "description": "A voz da vítima é arrancada temporariamente. Durante a duração: Não pode falar. Não pode lançar magias verbais. Não pode ativar palavras de comando. O necromante pode reproduzir a voz roubada."
+    "description": "Descrição\n\nA voz da vítima é arrancada temporariamente.\n\nDurante a duração:\n\n• Não pode falar.\n\n• Não pode lançar magias verbais.\n\n• Não pode ativar palavras de comando.\n\nO necromante pode reproduzir a voz roubada."
 }

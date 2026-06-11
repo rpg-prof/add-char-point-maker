@@ -8,5 +8,5 @@
     "components": "V, S",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "description": "Uma palavra proibida ensinada pelos escribas da morte. Ao pronunciá-la, o necromante pode aprender um segredo que nenhuma criatura viva conhece."
+    "description": "Descrição\n\nUma palavra proibida ensinada pelos escribas da morte.\n\nAo pronunciá-la, o necromante pode aprender um segredo que\nnenhuma criatura viva conhece.\n\nLimitação\n\nA resposta nunca é completa.\n\nJergal sempre guarda parte da verdade para si."
 }

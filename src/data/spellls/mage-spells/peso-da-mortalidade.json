@@ -8,5 +8,5 @@
     "components": "V, S",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "description": "O alvo sente, por alguns instantes, a inevitabilidade da própria morte. Não sofre dano. Mas perde parte da confiança e determinação."
+    "description": "Descrição\n\nO alvo sente, por alguns instantes, a inevitabilidade da própria\nmorte.\n\nNão sofre dano.\n\nMas perde parte da confiança e determinação."
 }

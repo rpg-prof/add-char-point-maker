@@ -8,5 +8,5 @@
     "components": "V, S",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "description": "O alvo sente seu corpo tornar-se pesado e cansado. Não sofre dano, mas recebe penalidades em deslocamento e combate."
+    "description": "Descrição\n\nO alvo sente seu corpo tornar-se pesado e cansado.\n\nNão sofre dano, mas recebe penalidades em deslocamento e combate."
 }

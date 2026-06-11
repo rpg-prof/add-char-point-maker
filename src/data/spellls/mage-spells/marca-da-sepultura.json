@@ -8,5 +8,5 @@
     "components": "V, S",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "description": "O necromante marca magicamente uma criatura. Enquanto a marca permanecer ativa, sempre saberá a direção aproximada do alvo."
+    "description": "Descrição\n\nO necromante marca magicamente uma criatura.\n\nEnquanto a marca permanecer ativa, sempre saberá a direção\naproximada do alvo.\n\nAplicações\n\n• Caçadas.\n\n• Rastreamento.\n\n• Captura de fugitivos."
 }

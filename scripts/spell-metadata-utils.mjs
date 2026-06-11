@@ -53,15 +53,60 @@ export function parseField(block, field) {
   return stripHtml(m[1].replace(/<br\s*\/?>/gi, " ")).trim();
 }
 
+export function htmlToReadableText(html) {
+  return html
+    .replace(/<h3[^>]*>\s*([^<]+)\s*<\/h3>/gi, "\n\n$1\n")
+    .replace(/<br\s*\/?>/gi, " ")
+    .replace(/<\/p>/gi, "\n")
+    .replace(/<li[^>]*>/gi, "• ")
+    .replace(/<\/li>/gi, "\n")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/\n\t*•\s*/g, "\n• ")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/[ \t]{2,}/g, " ")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+/** Texto completo do bloco: Descrição + Aplicações, Exemplos, etc. */
 export function parseDescription(block) {
-  const idx = block.search(/<h3[^>]*>\s*Descrição\s*<\/h3>/i);
-  if (idx === -1) return "";
-  const afterDesc = block
-    .slice(idx)
-    .replace(/<h3[^>]*>\s*Descrição\s*<\/h3>/i, "");
-  const end = afterDesc.search(/<h3[^>]*>/i);
-  const section = end >= 0 ? afterDesc.slice(0, end) : afterDesc.slice(0, 2000);
-  return stripHtml(section);
+  const descHeading = /<h3[^>]*>\s*Descrição\s*<\/h3>/i;
+  const anyHeading = /<h3[^>]*>/i;
+  let content;
+  if (descHeading.test(block)) {
+    const idx = block.search(descHeading);
+    content = block.slice(idx).replace(descHeading, "\n\nDescrição\n");
+  } else {
+    const idx = block.search(anyHeading);
+    if (idx === -1) return "";
+    content = block.slice(idx);
+  }
+  return htmlToReadableText(content);
+}
+
+const SKIP_TITLE =
+  /^(Capítulo|Grimório|Tomo|Volume|Magias de |Considerações|O Significado|Os Quatro|Táticas|Estratégias|Combinações|Filosofia|Problemas|Lendas|Preparação|Reações|Histórias|O Necromante|Estudos|O Caminho|O Medo|Conclusão|Magias Lendárias|Magias Icônicas|Magias Raras|Cem Magias|1º Círculo|2º Círculo|3º Círculo|4º Círculo|5º Círculo|6º Círculo|7º Círculo|8º Círculo|9º Círculo|Mestre dos|Mestre do|Predador da|Investigador do|A Fraqueza|O Terror|A Decadência|A Proteção|O Ceifador|O Arauto|O General|O Sobrevivente|O Infiltrador|A Criação|A Extinção|O Senhor|O Guardião|O Executor|O Caçador|O Direito|O Imortal|O Arquinecromante|A Preservação|A Degradação|Roubar$|Ceifar$|Possuir$|Excesso|Dependência|Atenção|Igrejas$|Reis$|Magos$|Mortos-Vivos Inteligentes|O Corpo Não|A Morte Não|O Arquinecromante$)/i;
+
+export function parseGrimoireSpellsByKey(html) {
+  const byKey = new Map();
+  const re =
+    /<(h1|h2) class="western">([^<]+)<\/\1>([\s\S]*?)(?=<(?:h1|h2) class="western">|<hr\/>|$)/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const title = stripHtml(m[2]);
+    const body = m[3];
+    if (SKIP_TITLE.test(title)) continue;
+    if (!/<strong>\s*Escola:\s*<\/strong>\s*Necromancia/i.test(body)) continue;
+    const level = parseInt(parseField(body, "Nível"), 10);
+    if (!level) continue;
+    const description = parseDescription(body);
+    if (!description) continue;
+    const name = EN_TO_PT[title] ?? title;
+    byKey.set(`${name}::${level}`, { name, level, description });
+  }
+  return byKey;
 }
 
 export function parseMetadataFromBlock(body) {

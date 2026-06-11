@@ -8,5 +8,5 @@
     "components": "V, S",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "description": "O necromante percebe quanto tempo resta para uma criatura morrer por causas naturais. Não revela acidentes ou assassinatos futuros. Apenas o limite natural de sua vida."
+    "description": "Descrição\n\nO necromante percebe quanto tempo resta para uma criatura morrer\npor causas naturais.\n\nNão revela acidentes ou assassinatos futuros.\n\nApenas o limite natural de sua vida.\n\nConsequência\n\nMuitos magos enlouquecem após utilizar esta magia repetidamente."
 }

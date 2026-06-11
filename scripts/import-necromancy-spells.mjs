@@ -107,13 +107,36 @@ function parseField(block, field) {
   return stripHtml(m[1].replace(/<br\s*\/?>/gi, " ")).trim();
 }
 
+function htmlToReadableText(html) {
+  return html
+    .replace(/<h3[^>]*>\s*([^<]+)\s*<\/h3>/gi, "\n\n$1\n")
+    .replace(/<br\s*\/?>/gi, " ")
+    .replace(/<\/p>/gi, "\n")
+    .replace(/<li[^>]*>/gi, "• ")
+    .replace(/<\/li>/gi, "\n")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/\n\t*•\s*/g, "\n• ")
+    .replace(/[ \t]+\n/g, "\n")
+    .replace(/[ \t]{2,}/g, " ")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 function parseDescription(block) {
-  const idx = block.search(/<h3[^>]*>\s*Descrição\s*<\/h3>/i);
-  if (idx === -1) return "";
-  const afterDesc = block.slice(idx).replace(/<h3[^>]*>\s*Descrição\s*<\/h3>/i, "");
-  const end = afterDesc.search(/<h3[^>]*>/i);
-  const section = end >= 0 ? afterDesc.slice(0, end) : afterDesc.slice(0, 2000);
-  return stripHtml(section);
+  const descHeading = /<h3[^>]*>\s*Descrição\s*<\/h3>/i;
+  const anyHeading = /<h3[^>]*>/i;
+  let content;
+  if (descHeading.test(block)) {
+    const idx = block.search(descHeading);
+    content = block.slice(idx).replace(descHeading, "\n\nDescrição\n");
+  } else {
+    const idx = block.search(anyHeading);
+    if (idx === -1) return "";
+    content = block.slice(idx);
+  }
+  return htmlToReadableText(content);
 }
 
 function parseSpellsFromHtml(html) {

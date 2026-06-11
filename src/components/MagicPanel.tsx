@@ -66,7 +66,7 @@ const SpellItem = ({
             {spell.savingThrow && <span><span className="text-foreground font-semibold">Resistência:</span> {spell.savingThrow}</span>}
             {spell.sphere && <span><span className="text-foreground font-semibold">Esfera:</span> {spell.sphere}</span>}
           </div>
-          <p className="pt-1 border-t border-border/50">{spell.description}</p>
+          <p className="pt-1 border-t border-border/50 whitespace-pre-wrap">{spell.description}</p>
         </div>
       )}
     </div>
