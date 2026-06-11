@@ -5,6 +5,8 @@
     "castingTime": "1",
     "duration": "5 rodadas/nível",
     "range": "0",
-    "area": "Especial",
-    "description": "Quando essa magia é executada, uma barreira invisível surge diante do mago. Esse escudo anula totalmente os ataques de projéteis criados magicamente. ) e CA 4 contra outras formas de ataque. O escudo também oferece ao mago um bônus de +1 nos testes de resistência contra ataques que sejam basicamente frontais.\n\nPerceba que todos esses benefícios aplicam-se apenas se o mago sofrer ataques frontais."
+    "components": "V, S",
+    "area": "O conjurador",
+    "savingThrow": "Não",
+    "description": "Quando essa magia é executada, uma barreira invisível surge diante do mago. Esse escudo anula totalmente os ataques de Dardos Místicos.\n\nConcede o equivalente a CA 2 contra projéteis arremessados à mão (machados, dardos, azagaias, lanças, etc.), CA 3 contra projéteis disparados por dispositivos (flechas, virotes, balas de funda, etc.) e CA 4 contra todas as outras formas de ataque.\n\nO escudo também oferece ao mago um bônus de +1 nos testes de resistência contra ataques que sejam basicamente frontais.\n\nPerceba que todos esses benefícios aplicam-se apenas se o mago sofrer ataques frontais, de modo que o escudo possa interpor-se entre ele e o atacante."
 }
