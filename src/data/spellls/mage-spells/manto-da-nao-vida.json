@@ -2,5 +2,11 @@
     "name": "Manto da Não-Vida",
     "level": 7,
     "school": "Necromancia",
-    "description": "O necromante passa a emitir uma aura semelhante à dos mortos-vivos. Durante a duração da magia, muitas criaturas mortas-vivas o ignoram."
+    "castingTime": "7",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "O necromante passa a emitir uma aura semelhante à dos mortos-vivos. Durante a duração da magia, muitas criaturas mortas-vivas o ignoram.",
+    "area": "Especial"
 }

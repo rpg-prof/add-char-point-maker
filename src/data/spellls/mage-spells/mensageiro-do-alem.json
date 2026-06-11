@@ -2,5 +2,11 @@
     "name": "Mensageiro do Além",
     "level": 3,
     "school": "Necromancia",
-    "description": "Permite enviar uma mensagem curta através do Reino dos Mortos. O destinatário pode estar: Vivo. Morto. Em outro plano. Desde que sua alma ainda exista."
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Permite enviar uma mensagem curta através do Reino dos Mortos. O destinatário pode estar: Vivo. Morto. Em outro plano. Desde que sua alma ainda exista.",
+    "area": "Especial"
 }

@@ -2,5 +2,11 @@
     "name": "Corpo Transitório",
     "level": 8,
     "school": "Necromancia",
+    "castingTime": "8",
+    "duration": "Especial",
+    "range": "0",
+    "components": "V, S",
+    "area": "O conjurador",
+    "savingThrow": "Especial",
     "description": "Permite que o conjurador abandone temporariamente seu corpo físico e exista como espírito."
 }

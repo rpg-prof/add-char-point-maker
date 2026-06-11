@@ -2,5 +2,11 @@
     "name": "Nome de Jergal",
     "level": 9,
     "school": "Necromancia",
+    "castingTime": "9",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "Uma palavra proibida ensinada pelos escribas da morte. Ao pronunciá-la, o necromante pode aprender um segredo que nenhuma criatura viva conhece."
 }

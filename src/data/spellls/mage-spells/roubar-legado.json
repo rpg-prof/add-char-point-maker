@@ -2,5 +2,11 @@
     "name": "Roubar Legado",
     "level": 8,
     "school": "Necromancia",
+    "castingTime": "8",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "O necromante absorve temporariamente uma habilidade de uma criatura morta. Exemplos: Idiomas. Conhecimentos. Talentos artesanais. Técnicas marciais simples."
 }

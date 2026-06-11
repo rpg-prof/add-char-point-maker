@@ -2,5 +2,11 @@
     "name": "Roubar Destino",
     "level": 5,
     "school": "Necromancia",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "0",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "Uma magia rara que interfere nos fios do destino. O necromante retira parte da sorte de uma criatura e a transfere para si. Durante a duração: O alvo sofre azar sobrenatural. O conjurador recebe pequenos benefícios. Visualmente, sombras semelhantes a fios negros conectam ambos."
 }

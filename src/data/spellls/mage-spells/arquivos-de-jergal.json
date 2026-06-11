@@ -2,5 +2,11 @@
     "name": "Arquivos de Jergal",
     "level": 9,
     "school": "Necromancia",
+    "castingTime": "9",
+    "duration": "Especial",
+    "range": "0",
+    "components": "V, S",
+    "area": "O conjurador",
+    "savingThrow": "Especial",
     "description": "O conjurador acessa temporariamente os registros mantidos pelos escribas da morte. Pode obter informações sobre: Mortes antigas. Linhagens. Pactos esquecidos. Espíritos desaparecidos."
 }

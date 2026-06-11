@@ -2,5 +2,11 @@
     "name": "Roubar Coragem",
     "level": 5,
     "school": "Necromancia",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "Extrai a coragem de uma criatura. A vítima torna-se hesitante e insegura. O necromante absorve essa confiança."
 }

@@ -270,6 +270,7 @@ function getSpellDetailLines(spell: Spell): string[] {
   if (spell.castingTime) details.push(`Conjuração: ${spell.castingTime}`);
   if (spell.components) details.push(`Componentes: ${spell.components}`);
   if (spell.area) details.push(`Área: ${spell.area}`);
+  if (spell.savingThrow) details.push(`Resistência: ${spell.savingThrow}`);
   return details;
 }
 

@@ -2,5 +2,11 @@
     "name": "Legião dos Esquecidos",
     "level": 6,
     "school": "Necromancia",
-    "description": "Anima diversos esqueletos frágeis simultaneamente. São inferiores aos criados por Animate Dead, mas úteis para tarefas militares."
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Anima diversos esqueletos frágeis simultaneamente. São inferiores aos criados por Animate Dead, mas úteis para tarefas militares.",
+    "area": "Especial"
 }

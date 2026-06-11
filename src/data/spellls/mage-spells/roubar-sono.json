@@ -2,5 +2,11 @@
     "name": "Roubar Sono",
     "level": 3,
     "school": "Necromancia",
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "O alvo perde a capacidade de descansar adequadamente. Cada noite torna-se menos restauradora. Após vários dias surgem: Exaustão. Irritabilidade. Alucinações."
 }

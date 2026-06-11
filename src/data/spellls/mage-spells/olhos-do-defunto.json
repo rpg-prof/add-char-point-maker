@@ -2,5 +2,11 @@
     "name": "Olhos do Defunto",
     "level": 1,
     "school": "Necromancia",
+    "castingTime": "1",
+    "duration": "Alguns minutos",
+    "range": "Toque",
+    "components": "V, S",
+    "area": "Um cadáver",
+    "savingThrow": "Especial",
     "description": "O conjurador toca um cadáver recentemente morto e passa a enxergar através dos olhos da criatura por alguns minutos. A magia não restaura a vida nem a consciência. Permite apenas observar o ambiente ao redor do corpo."
 }

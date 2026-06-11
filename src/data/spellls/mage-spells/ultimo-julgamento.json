@@ -2,5 +2,11 @@
     "name": "Último Julgamento",
     "level": 9,
     "school": "Necromancia",
-    "description": "A criatura alvo é confrontada por todas as almas que prejudicou durante sua existência. As consequências dependem dos atos cometidos."
+    "castingTime": "9",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "A criatura alvo é confrontada por todas as almas que prejudicou durante sua existência. As consequências dependem dos atos cometidos.",
+    "area": "Especial"
 }

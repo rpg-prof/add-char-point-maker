@@ -2,5 +2,11 @@
     "name": "Juramento dos Mortos",
     "level": 5,
     "school": "Necromancia",
-    "description": "Um acordo é selado diante dos espíritos. Quem quebrar o juramento sofre uma maldição automática. Muito usada por: Reis. Guildas. Cultos."
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Um acordo é selado diante dos espíritos. Quem quebrar o juramento sofre uma maldição automática. Muito usada por: Reis. Guildas. Cultos.",
+    "area": "Especial"
 }

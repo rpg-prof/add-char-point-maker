@@ -2,5 +2,11 @@
     "name": "Vigília dos Ancestrais",
     "level": 5,
     "school": "Necromancia",
-    "description": "Espíritos familiares vigiam o local durante toda a noite. Eles alertam sobre: Intrusos. Mortos-vivos. Espíritos hostis."
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Espíritos familiares vigiam o local durante toda a noite. Eles alertam sobre: Intrusos. Mortos-vivos. Espíritos hostis.",
+    "area": "Especial"
 }

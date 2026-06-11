@@ -2,5 +2,11 @@
     "name": "Corte dos Ancestrais",
     "level": 8,
     "school": "Necromancia",
-    "description": "Espíritos de heróis, reis e sábios falecidos são convocados para deliberar sobre uma questão. O julgamento costuma ser respeitado por diversas culturas."
+    "castingTime": "8",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Espíritos de heróis, reis e sábios falecidos são convocados para deliberar sobre uma questão. O julgamento costuma ser respeitado por diversas culturas.",
+    "area": "Especial"
 }

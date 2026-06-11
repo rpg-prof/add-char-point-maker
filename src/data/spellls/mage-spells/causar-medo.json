@@ -7,5 +7,6 @@
     "range": "60 metros",
     "components": "V, S",
     "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "O necromante desperta no alvo um terror primordial. A vítima acredita estar diante de sua própria morte inevitável. O medo não possui origem física; surge diretamente da mente e da alma da criatura. Alvos que falham em sua resistência abandonam qualquer intenção ofensiva e procuram fugir imediatamente. Criaturas extremamente corajosas ou acostumadas ao sobrenatural podem resistir melhor aos efeitos."
 }

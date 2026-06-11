@@ -2,5 +2,11 @@
     "name": "Os Sete Nomes da Morte",
     "level": 9,
     "school": "Necromancia",
+    "castingTime": "9",
+    "duration": "Especial",
+    "range": "0",
+    "components": "V, S",
+    "area": "O conjurador",
+    "savingThrow": "Especial",
     "description": "Uma magia lendária. O conjurador aprende sete nomes secretos associados à própria Morte. Cada nome pode ser pronunciado uma única vez. E cada um produz um efeito diferente. Nenhum tomo conhecido registra os sete efeitos completos. Talvez por um bom motivo."
 }

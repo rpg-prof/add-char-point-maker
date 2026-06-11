@@ -2,5 +2,11 @@
     "name": "Palavra Fúnebre",
     "level": 2,
     "school": "Necromancia",
-    "description": "Uma única palavra carregada de energia mortuária. A criatura atingida sofre uma súbita sensação de mortalidade. Recebe penalidades em: Moral. Ataques. Testes de resistência contra medo."
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Uma única palavra carregada de energia mortuária. A criatura atingida sofre uma súbita sensação de mortalidade. Recebe penalidades em: Moral. Ataques. Testes de resistência contra medo.",
+    "area": "Especial"
 }

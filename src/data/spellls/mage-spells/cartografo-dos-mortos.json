@@ -2,5 +2,11 @@
     "name": "Cartógrafo dos Mortos",
     "level": 6,
     "school": "Necromancia",
-    "description": "Permite criar um mapa sobrenatural de todos os túmulos, criptas e sepulturas existentes em uma vasta região. Extremamente valorizada por saqueadores e historiadores."
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Permite criar um mapa sobrenatural de todos os túmulos, criptas e sepulturas existentes em uma vasta região. Extremamente valorizada por saqueadores e historiadores.",
+    "area": "Especial"
 }

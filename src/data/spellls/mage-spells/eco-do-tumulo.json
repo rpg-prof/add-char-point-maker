@@ -2,5 +2,11 @@
     "name": "Eco do Túmulo",
     "level": 1,
     "school": "Necromancia",
+    "castingTime": "1",
+    "duration": "Especial",
+    "range": "0",
+    "components": "V, S",
+    "area": "O conjurador",
+    "savingThrow": "Especial",
     "description": "Ao permanecer em um local onde alguém morreu, o conjurador escuta ecos emocionais deixados pela morte. Pode perceber: Medo. Ódio. Desespero. Alívio. Arrependimento. Não revela fatos, apenas emoções."
 }

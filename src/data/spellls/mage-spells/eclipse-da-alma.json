@@ -2,5 +2,11 @@
     "name": "Eclipse da Alma",
     "level": 6,
     "school": "Necromancia",
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "Uma sombra espiritual envolve a vítima. Sua conexão com forças divinas e extraplanares torna-se instável. Durante a duração: Clérigos têm dificuldade para conjurar. Paladinos perdem parte de suas bênçãos. Criaturas celestiais enfraquecem. A alma permanece presente, mas obscurecida."
 }

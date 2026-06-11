@@ -2,5 +2,11 @@
     "name": "Convocar Espírito Ancestral",
     "level": 5,
     "school": "Necromancia",
-    "description": "Permite convocar temporariamente o espírito de um antepassado. O espírito não combate. Pode: Responder perguntas. Traduzir idiomas antigos. Identificar relíquias."
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Permite convocar temporariamente o espírito de um antepassado. O espírito não combate. Pode: Responder perguntas. Traduzir idiomas antigos. Identificar relíquias.",
+    "area": "Especial"
 }

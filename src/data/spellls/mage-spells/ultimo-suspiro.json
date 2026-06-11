@@ -2,5 +2,11 @@
     "name": "Último Suspiro",
     "level": 1,
     "school": "Necromancia",
+    "castingTime": "1",
+    "duration": "Especial (até 24 h)",
+    "range": "Toque",
+    "components": "V, S",
+    "area": "Um cadáver",
+    "savingThrow": "Especial",
     "description": "Ao tocar um cadáver morto há no máximo 24 horas, o necromante experimenta os últimos instantes de sua vida. A visão é fragmentada, emocional e frequentemente perturbadora. O conjurador vê: O que a vítima estava olhando. Sons próximos. Emoções intensas. A causa imediata da morte. Não é possível fazer perguntas. É apenas uma lembrança."
 }

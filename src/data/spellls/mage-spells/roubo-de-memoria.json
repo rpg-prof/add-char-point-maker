@@ -2,5 +2,11 @@
     "name": "Roubo de Memória",
     "level": 6,
     "school": "Necromancia",
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "Permite apagar ou extrair lembranças específicas de uma criatura."
 }

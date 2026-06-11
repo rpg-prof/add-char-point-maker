@@ -2,5 +2,11 @@
     "name": "Convocar Lembrança",
     "level": 4,
     "school": "Necromancia",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "0",
+    "components": "V, S",
+    "area": "O conjurador",
+    "savingThrow": "Especial",
     "description": "O conjurador materializa uma memória importante de um espírito. A lembrança surge como uma cena fantasmagórica. Os participantes podem observar, mas não interagir."
 }

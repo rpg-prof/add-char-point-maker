@@ -2,5 +2,11 @@
     "name": "Prisão Espectral",
     "level": 7,
     "school": "Necromancia",
-    "description": "Aprisiona temporariamente um espírito ou morto-vivo incorpóreo."
+    "castingTime": "7",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Aprisiona temporariamente um espírito ou morto-vivo incorpóreo.",
+    "area": "Especial"
 }

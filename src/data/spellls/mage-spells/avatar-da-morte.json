@@ -2,5 +2,11 @@
     "name": "Avatar da Morte",
     "level": 8,
     "school": "Necromancia",
-    "description": "O necromante torna-se temporariamente um receptáculo das energias da morte. Durante a transformação: Seus olhos tornam-se poços de escuridão. Sua voz ecoa como múltiplos sussurros. Mortos-vivos o reverenciam instintivamente. Ele não se torna um morto-vivo, mas algo próximo."
+    "castingTime": "8",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "O necromante torna-se temporariamente um receptáculo das energias da morte. Durante a transformação: Seus olhos tornam-se poços de escuridão. Sua voz ecoa como múltiplos sussurros. Mortos-vivos o reverenciam instintivamente. Ele não se torna um morto-vivo, mas algo próximo.",
+    "area": "Especial"
 }

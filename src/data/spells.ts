@@ -11,6 +11,7 @@ export interface Spell {
   castingTime: string;
   components?: string;
   area?: string;
+  savingThrow?: string;
   description: string;
 }
 
@@ -31,6 +32,7 @@ const mageSpellFiles = import.meta.glob<{
   range: string;
   area?: string;
   components?: string;
+  savingThrow?: string;
   description: string;
 }>("./spellls/mage-spells/*.json", { eager: true });
 
@@ -45,6 +47,7 @@ const clericSpellFiles = import.meta.glob<{
   range: string;
   area?: string;
   components?: string;
+  savingThrow?: string;
   description: string;
 }>("./spellls/cleric-spells/*.json", { eager: true });
 
@@ -71,6 +74,7 @@ function loadSpells(
           castingTime: detail.castingTime || "",
           components: detail.components,
           area: detail.area,
+          savingThrow: detail.savingThrow,
           description: detail.description || "",
         });
       } else {

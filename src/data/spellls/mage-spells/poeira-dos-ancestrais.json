@@ -2,5 +2,11 @@
     "name": "Poeira dos Ancestrais",
     "level": 1,
     "school": "Necromancia",
-    "description": "Ao espalhar cinzas funerárias, o necromante pode determinar se um local foi profanado recentemente. As cinzas movem-se sozinhas apontando para a fonte da perturbação."
+    "castingTime": "1",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Ao espalhar cinzas funerárias, o necromante pode determinar se um local foi profanado recentemente. As cinzas movem-se sozinhas apontando para a fonte da perturbação.",
+    "area": "Especial"
 }

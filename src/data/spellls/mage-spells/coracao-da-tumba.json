@@ -2,5 +2,11 @@
     "name": "Coração da Tumba",
     "level": 4,
     "school": "Necromancia",
-    "description": "O coração do alvo desacelera drasticamente. Ele sente frio constante e lentidão crescente. Não causa dano imediato, mas reduz eficiência física."
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "O coração do alvo desacelera drasticamente. Ele sente frio constante e lentidão crescente. Não causa dano imediato, mas reduz eficiência física.",
+    "area": "Especial"
 }

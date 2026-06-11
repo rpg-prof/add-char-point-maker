@@ -2,5 +2,11 @@
     "name": "Última Testemunha",
     "level": 7,
     "school": "Necromancia",
-    "description": "Permite convocar a alma da última criatura que viu determinado evento. Mesmo que ela não tenha participado diretamente. Excelente para mistérios."
+    "castingTime": "7",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Permite convocar a alma da última criatura que viu determinado evento. Mesmo que ela não tenha participado diretamente. Excelente para mistérios.",
+    "area": "Especial"
 }

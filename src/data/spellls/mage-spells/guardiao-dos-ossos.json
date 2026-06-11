@@ -2,5 +2,11 @@
     "name": "Guardião dos Ossos",
     "level": 4,
     "school": "Necromancia",
-    "description": "Anima permanentemente um esqueleto especializado. Escolha uma função: Bibliotecário Mensageiro Vigia Escriba Diferente dos mortos-vivos comuns, ele recebe treinamento específico."
+    "castingTime": "4",
+    "duration": "Permanente",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Anima permanentemente um esqueleto especializado. Escolha uma função: Bibliotecário Mensageiro Vigia Escriba Diferente dos mortos-vivos comuns, ele recebe treinamento específico.",
+    "area": "Especial"
 }

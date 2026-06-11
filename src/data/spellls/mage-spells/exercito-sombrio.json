@@ -2,5 +2,11 @@
     "name": "Exército Sombrio",
     "level": 8,
     "school": "Necromancia",
-    "description": "Invoca sombras temporárias formadas por energia negativa. São menos poderosas que mortos-vivos verdadeiros, mas podem sobrecarregar adversários."
+    "castingTime": "8",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Invoca sombras temporárias formadas por energia negativa. São menos poderosas que mortos-vivos verdadeiros, mas podem sobrecarregar adversários.",
+    "area": "Especial"
 }

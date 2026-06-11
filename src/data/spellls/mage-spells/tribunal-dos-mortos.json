@@ -2,5 +2,11 @@
     "name": "Tribunal dos Mortos",
     "level": 6,
     "school": "Necromancia",
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "Espíritos da região são convocados para julgar uma criatura. Os fantasmas manifestam opiniões sobre seus atos. Dependendo do histórico do alvo, ele pode receber: Bênçãos. Maldições. Informações ocultas."
 }

@@ -2,5 +2,11 @@
     "name": "Coroa dos Esquecidos",
     "level": 7,
     "school": "Necromancia",
+    "castingTime": "7",
+    "duration": "Especial",
+    "range": "0",
+    "components": "V, S",
+    "area": "O conjurador",
+    "savingThrow": "Especial",
     "description": "Uma coroa fantasmagórica surge sobre a cabeça do conjurador. Espíritos menores tornam-se automaticamente amistosos. Mortos-vivos inteligentes reconhecem sua autoridade."
 }

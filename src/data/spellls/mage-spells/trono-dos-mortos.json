@@ -2,5 +2,11 @@
     "name": "Trono dos Mortos",
     "level": 9,
     "school": "Necromancia",
-    "description": "Uma das magias mais lendárias da escola. Durante um breve período, o necromante assume autoridade absoluta sobre mortos-vivos presentes em uma vasta área. Mesmo criaturas normalmente resistentes podem ser afetadas."
+    "castingTime": "9",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "Uma das magias mais lendárias da escola. Durante um breve período, o necromante assume autoridade absoluta sobre mortos-vivos presentes em uma vasta área. Mesmo criaturas normalmente resistentes podem ser afetadas.",
+    "area": "Especial"
 }

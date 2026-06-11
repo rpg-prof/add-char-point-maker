@@ -2,5 +2,11 @@
     "name": "Cicatriz da Alma",
     "level": 3,
     "school": "Necromancia",
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "Permite enxergar traumas espirituais. Ao observar uma criatura, o necromante percebe marcas invisíveis causadas por: Possessão. Maldições. Mortos-vivos. Artefatos malignos. Contato extraplanar."
 }

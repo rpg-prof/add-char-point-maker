@@ -2,5 +2,11 @@
     "name": "Trono de Velsharoon",
     "level": 9,
     "school": "Necromancia",
+    "castingTime": "9",
+    "duration": "Alguns minutos",
+    "range": "0",
+    "components": "V, S",
+    "area": "O conjurador",
+    "savingThrow": "Especial",
     "description": "A mais poderosa magia associada ao Deus da Necromancia. Durante alguns minutos o conjurador assume o papel de soberano dos mortos. Todos os mortos-vivos próximos sentem sua presença. Mesmo criaturas inteligentes hesitam em desafiar suas ordens."
 }

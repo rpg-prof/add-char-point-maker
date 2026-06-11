@@ -2,5 +2,11 @@
     "name": "Vozes da Necrópole",
     "level": 5,
     "school": "Necromancia",
-    "description": "O necromante escuta todos os espíritos presentes em uma vasta área. As vozes falam simultaneamente. Encontrar informações úteis exige concentração."
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "savingThrow": "Especial",
+    "description": "O necromante escuta todos os espíritos presentes em uma vasta área. As vozes falam simultaneamente. Encontrar informações úteis exige concentração.",
+    "area": "Especial"
 }

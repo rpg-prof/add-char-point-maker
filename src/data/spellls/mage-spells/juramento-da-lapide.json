@@ -2,5 +2,11 @@
     "name": "Juramento da Lápide",
     "level": 4,
     "school": "Necromancia",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "Uma criatura promete algo diante dos espíritos dos mortos. Caso descumpra a promessa, sofre uma maldição crescente."
 }

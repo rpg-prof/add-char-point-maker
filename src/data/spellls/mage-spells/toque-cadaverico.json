@@ -2,5 +2,11 @@
     "name": "Toque Cadavérico",
     "level": 1,
     "school": "Necromancia",
+    "castingTime": "1",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Um cadáver",
+    "savingThrow": "Especial",
     "description": "A mão do necromante torna-se gelada como um cadáver. O alvo sofre dano leve e recebe penalidades em testes físicos por algumas rodadas."
 }

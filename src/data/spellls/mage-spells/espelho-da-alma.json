@@ -2,5 +2,11 @@
     "name": "Espelho da Alma",
     "level": 8,
     "school": "Necromancia",
+    "castingTime": "8",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "O alvo vê sua própria essência refletida. Nenhuma mentira é possível. Todos os seus segredos tornam-se evidentes para ele. Muitos enlouquecem após a experiência."
 }

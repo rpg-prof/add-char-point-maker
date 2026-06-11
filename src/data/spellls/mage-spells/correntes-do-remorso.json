@@ -2,5 +2,11 @@
     "name": "Correntes do Remorso",
     "level": 4,
     "school": "Necromancia",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
     "description": "As culpas da vítima manifestam-se como correntes espectrais. Quanto mais graves os pecados do alvo, mais fortes as correntes. Criaturas sem remorso resistem melhor."
 }

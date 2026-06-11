@@ -5,6 +5,8 @@
     "castingTime": "2",
     "duration": "Especial",
     "range": "60 metros",
+    "components": "V",
     "area": "1 criatura",
+    "savingThrow": "Sim",
     "description": "Surdez torna o receptor incapaz de ouvir qualquer tipo de som. O receptor tem direito a testar sua resistência à magia para evitar este efeito. Uma criatura surda tem uma penalidade de -1 em todos os testes de surpresa e 20% de chance de erro, se for um mago, quando for lançar uma magia com componente verbal. Esta surdez mágica só poderá ser removida pelo próprio mago que a colocou ou por Dissipar Magia. O componente material é cera de abelha."
 }

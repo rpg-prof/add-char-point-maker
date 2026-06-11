@@ -5,6 +5,8 @@
     "castingTime": "1",
     "duration": "Instantânea",
     "range": "10 metros/nível",
+    "components": "V, S",
     "area": "uma criatura/nível",
+    "savingThrow": "Sim",
     "description": "Com esta magia, o mago pode forçar qualquer criatura transmorfa ou usuário de magia que esteja usando qualquer magia de metamorfose a reverter instantaneamente a sua forma verdadeira (ou sua forma mais comum). Para usar a magia, o mago deve apontar para as criaturas que ele conhece ou acredita serem transmorfas. Se as criaturas são, efetivamente, transmorfas, elas devem ser bem-sucedidas em um teste de resistência ou voltam imediatamente à sua forma verdadeira e sofrem 3d10 pontos de dano pela dor causada pela mudança forçada. Atransformação completa-se em 1 rodada, período durante o qual uma vítima não pode tomar nenhuma outra ação. Se o teste 104de resistência foi bem-sucedido, a vítima não altera a forma, mas ainda sofre metade do dano (2d10/2). Os componentes materiais para esta magia são um pelo de qualquer licantropo e uma borboleta viva, libertada quando o componente verbal for proferido."
 }

@@ -145,6 +145,7 @@ function parseSpellsFromHtml(html) {
       castingTime: parseField(body, "Tempo de Execução") || "—",
       components: parseField(body, "Componentes") || undefined,
       area: parseField(body, "Área de Efeito") || undefined,
+      savingThrow: parseField(body, "Resistência à Magia") || undefined,
       description: desc,
     });
   }
@@ -309,6 +310,7 @@ for (const spell of parsed) {
     range: spell.range,
     ...(spell.components ? { components: spell.components } : {}),
     ...(spell.area ? { area: spell.area } : {}),
+    ...(spell.savingThrow ? { savingThrow: spell.savingThrow } : {}),
     description: spell.description,
   };
 
