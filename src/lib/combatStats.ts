@@ -5,6 +5,10 @@ import {
   type PurchasedItems,
 } from "@/data/equipment";
 import { getSubAttributeBonuses } from "@/data/subAttributes";
+import {
+  normalizeResourceCurrent,
+  normalizeResourceMax,
+} from "@/lib/combatResources";
 
 export const CA_BASE = 10;
 export const HP_BASE = 8;
@@ -44,6 +48,20 @@ export interface CombatLoadout {
   weaponSlots: WeaponAttackSlot[];
   /** PV atuais; null = igual ao máximo calculado. */
   currentHp: number | null;
+  /** Máximo de pontos de magia (editável conforme evolução). */
+  maxMana: number;
+  /** Pontos de magia atuais; null = igual ao máximo. */
+  currentMana: number | null;
+  /** Máximo de pontos da escola especialista. */
+  maxSpecialistMana: number;
+  /** Pontos da escola atuais; null = igual ao máximo. */
+  currentSpecialistMana: number | null;
+  /** Máximo de pontos de Chi (editável conforme evolução). */
+  maxChi: number;
+  /** Chi atual; null = igual ao máximo. */
+  currentChi: number | null;
+  /** Exibir o pool de Chi na aba Combate. */
+  showChi: boolean;
 }
 
 export function createEmptyWeaponSlot(index: number): WeaponAttackSlot {
@@ -75,6 +93,13 @@ export const defaultCombatLoadout = (): CombatLoadout => ({
   magicBonuses: [],
   weaponSlots: defaultWeaponSlots(),
   currentHp: null,
+  maxMana: 0,
+  currentMana: null,
+  maxSpecialistMana: 0,
+  currentSpecialistMana: null,
+  maxChi: 0,
+  currentChi: null,
+  showChi: false,
 });
 
 export function isShieldItem(item: EquipmentItem): boolean {
@@ -573,6 +598,13 @@ export function sanitizeCombatLoadout(
       loadout.currentHp == null || Number.isNaN(loadout.currentHp)
         ? null
         : Math.max(0, loadout.currentHp),
+    maxMana: normalizeResourceMax(loadout.maxMana),
+    currentMana: normalizeResourceCurrent(loadout.currentMana),
+    maxSpecialistMana: normalizeResourceMax(loadout.maxSpecialistMana),
+    currentSpecialistMana: normalizeResourceCurrent(loadout.currentSpecialistMana),
+    maxChi: normalizeResourceMax(loadout.maxChi),
+    currentChi: normalizeResourceCurrent(loadout.currentChi),
+    showChi: loadout.showChi === true,
   };
 }
 

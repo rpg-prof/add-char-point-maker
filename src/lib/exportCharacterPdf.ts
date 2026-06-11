@@ -32,6 +32,11 @@ import {
   type CombatLoadout,
   type WeaponAttackSlot,
 } from "@/lib/combatStats";
+import {
+  computeSuggestedManaMax,
+  computeSuggestedSpecialistManaMax,
+  resolveResourceCurrent,
+} from "@/lib/combatResources";
 import { computeResistanceBreakdown } from "@/lib/resistanceStats";
 
 export interface ExportCharacterPdfInput {
@@ -67,6 +72,7 @@ export interface ExportCharacterPdfInput {
   characterPointsSpent: number;
   notesItems?: string;
   notesGeneral?: string;
+  characterHistory?: string;
 }
 
 const formatSigned = (n: number) => (n > 0 ? `+${n}` : `${n}`);
@@ -728,6 +734,10 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
   }
 
   const loadout = sanitizeCombatLoadout(input.combatLoadout, input.purchasedItems);
+  const hasMagicAccess =
+    Object.keys(input.divineAccess).length > 0 ||
+    Object.keys(input.arcaneAccess).length > 0 ||
+    input.arcaneSpecialist !== null;
   const artesMarciaisAtivas = hasArtesMarciais(input.selectedRaceClassAdv);
   const martialArtsDamage = getMartialArtsDamageByLevel(input.characterLevel);
 
@@ -832,6 +842,62 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     y,
   );
   y += 14;
+
+  const resourceRows: string[][] = [];
+  if (hasMagicAccess) {
+    const maxMana = loadout.maxMana;
+    resourceRows.push([
+      "Pontos de Magia",
+      String(maxMana),
+      String(resolveResourceCurrent(loadout.currentMana, maxMana)),
+    ]);
+  }
+  if (input.arcaneSpecialist) {
+    const maxSpecialist = loadout.maxSpecialistMana;
+    resourceRows.push([
+      `Magia — ${input.arcaneSpecialist}`,
+      String(maxSpecialist),
+      String(resolveResourceCurrent(loadout.currentSpecialistMana, maxSpecialist)),
+    ]);
+  }
+  if (loadout.showChi) {
+    resourceRows.push([
+      "Chi",
+      String(loadout.maxChi),
+      String(resolveResourceCurrent(loadout.currentChi, loadout.maxChi)),
+    ]);
+  }
+
+  if (resourceRows.length > 0) {
+    beginSection("Recursos", estimateTableHeight(resourceRows.length));
+    autoTable(doc, {
+      startY: y,
+      head: [["Recurso", "Máximo", "Atuais"]],
+      body: resourceRows,
+      theme: "grid",
+      ...tableBase,
+      columnStyles: {
+        1: { halign: "center", fontStyle: "bold", textColor: GOLD },
+        2: { halign: "center", fontStyle: "bold", textColor: BLOOD },
+      },
+      ...makeEditableHooks([1, 2], { 1: "center", 2: "center" }),
+    });
+    y = (doc as any).lastAutoTable.finalY + 6;
+    const suggestedMana = computeSuggestedManaMax(hasMagicAccess, input.selectedRaceClassAdv);
+    const suggestedSchool = computeSuggestedSpecialistManaMax(
+      input.arcaneSpecialist,
+      input.selectedRaceClassAdv
+    );
+    doc.setFont("helvetica", "italic");
+    doc.setFontSize(7);
+    setColor(MUTED);
+    const hints: string[] = [];
+    if (hasMagicAccess) hints.push(`Magia sugerida (inicial): ${suggestedMana}`);
+    if (input.arcaneSpecialist) hints.push(`Escola sugerida: ${suggestedSchool}`);
+    if (loadout.showChi) hints.push("Chi inicia em 0; máximos editáveis conforme evolução.");
+    doc.text(hints.join(" · "), margin, y);
+    y += 14;
+  }
 
   // ===== COMBATE (CA) =====
   const caBreakdown = computeArmorClassBreakdown({
@@ -1051,10 +1117,6 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
   }
 
   // ===== MAGIA =====
-  const hasMagicAccess =
-    Object.keys(input.divineAccess).length > 0 ||
-    Object.keys(input.arcaneAccess).length > 0 ||
-    input.arcaneSpecialist !== null;
   if (hasMagicAccess) {
     const accessRows: string[][] = [];
     Object.entries(input.divineAccess)
@@ -1214,6 +1276,30 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     });
     y = (doc as any).lastAutoTable.finalY + 14;
   }
+
+  // ===== HISTÓRICO =====
+  const historyBoxH = 160;
+  beginSection("Histórico", historyBoxH + 16);
+  const historyBoxW = pageW - margin * 2;
+  doc.setFillColor(255, 252, 246);
+  doc.setDrawColor(...BORDER);
+  doc.setLineWidth(0.6);
+  doc.roundedRect(margin, y + 10, historyBoxW, historyBoxH, 3, 3, "FD");
+  doc.setDrawColor(220, 210, 195);
+  doc.setLineWidth(0.25);
+  for (let lineY = y + 26; lineY < y + 10 + historyBoxH - 6; lineY += 14) {
+    doc.line(margin + 8, lineY, pageW - margin - 8, lineY);
+  }
+  addTextField({
+    value: (input.characterHistory ?? "").trim(),
+    x: margin + 6,
+    y: y + 14,
+    w: historyBoxW - 12,
+    h: historyBoxH - 8,
+    fontSize: 9,
+    multiline: true,
+  });
+  y += 10 + historyBoxH + 14;
 
   // ===== ANOTAÇÕES =====
   const notesBoxH = 120;

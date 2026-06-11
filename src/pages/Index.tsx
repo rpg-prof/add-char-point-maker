@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Coins, Award, FileText, NotebookPen } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Coins, Award, FileText, NotebookPen, BookHeart } from "lucide-react";
 import { exportCharacterPdf } from "@/lib/exportCharacterPdf";
 import AppLogo from "@/components/AppLogo";
 import {
@@ -24,6 +24,7 @@ import EquipmentShopPanel from "@/components/EquipmentShopPanel";
 import CombatPanel from "@/components/CombatPanel";
 import SummaryPanel from "@/components/SummaryPanel";
 import NotesPanel from "@/components/NotesPanel";
+import HistoryPanel from "@/components/HistoryPanel";
 import { divineSpheres, arcaneSchools, divineSphereCost, arcaneSchoolCost } from "@/data/magicAccess";
 import {
   attributeNames,
@@ -70,7 +71,7 @@ const BASE_STEPS = [
   { label: "Dinheiro & Equipamento", icon: Coins, desc: "Comprar equipamento com o capital da classe social" },
 ];
 
-const COMBAT_STEP = { label: "Combate", icon: Swords, desc: "Pontos de Vida / Ataque / Categoria de Armadura" };
+const COMBAT_STEP = { label: "Combate", icon: Swords, desc: "PV, CA, magia, Chi e ataques" };
 const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
 const ADVANTAGES_STEP = {
   label: "Vantagens",
@@ -79,6 +80,7 @@ const ADVANTAGES_STEP = {
   hasSubTabs: true as const,
 };
 const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
+const HISTORY_STEP = { label: "Histórico", icon: BookHeart, desc: "Passado e história do personagem" };
 const NOTES_STEP = { label: "Anotações", icon: NotebookPen, desc: "Itens e anotações gerais" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
 
@@ -154,7 +156,7 @@ const Index = () => {
   const STEPS = useMemo(() => {
     const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP];
     if (hasMagicAccess) steps.push(MAGIC_STEP);
-    steps.push(COMBAT_STEP, NOTES_STEP, SUMMARY_STEP);
+    steps.push(COMBAT_STEP, HISTORY_STEP, NOTES_STEP, SUMMARY_STEP);
     return steps;
   }, [hasMagicAccess]);
 
@@ -173,6 +175,7 @@ const Index = () => {
   const [combatLoadout, setCombatLoadout] = useState<CombatLoadout>(defaultCombatLoadout);
   const [notesItems, setNotesItems] = useState("");
   const [notesGeneral, setNotesGeneral] = useState("");
+  const [characterHistory, setCharacterHistory] = useState("");
 
   useEffect(() => {
     setCombatLoadout((prev) => sanitizeCombatLoadout(prev, purchasedItems));
@@ -537,6 +540,7 @@ const Index = () => {
       combatLoadout,
       notesItems,
       notesGeneral,
+      characterHistory,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -545,7 +549,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems, combatLoadout, notesItems, notesGeneral]);
+  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems, combatLoadout, notesItems, notesGeneral, characterHistory]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -616,6 +620,8 @@ const Index = () => {
         else setNotesItems("");
         if (data.notesGeneral !== undefined) setNotesGeneral(data.notesGeneral);
         else setNotesGeneral("");
+        if (data.characterHistory !== undefined) setCharacterHistory(data.characterHistory);
+        else setCharacterHistory("");
         setCurrentStep(0);
       } catch {
         alert("Arquivo JSON inválido.");
@@ -769,6 +775,8 @@ const Index = () => {
               selectedRaceClassAdv={selectedRaceClassAdv}
               selectedClass={selectedClass}
               characterLevel={characterLevel}
+              hasMagicAccess={hasMagicAccess}
+              arcaneSpecialist={arcaneSpecialist}
               loadout={combatLoadout}
               onLoadoutChange={setCombatLoadout}
             />
@@ -863,6 +871,15 @@ const Index = () => {
               divineAccess={divineAccess}
               arcaneAccess={arcaneAccess}
               arcaneSpecialist={arcaneSpecialist}
+            />
+          </div>
+        );
+      case "Histórico":
+        return (
+          <div className="max-h-[55vh] overflow-y-auto pr-2">
+            <HistoryPanel
+              characterHistory={characterHistory}
+              onCharacterHistoryChange={setCharacterHistory}
             />
           </div>
         );
@@ -984,6 +1001,7 @@ const Index = () => {
                     characterPointsSpent,
                     notesItems,
                     notesGeneral,
+                    characterHistory,
                   })
                 }
                 className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider"

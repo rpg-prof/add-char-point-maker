@@ -46,7 +46,7 @@ const NotesPanel = ({
           </h3>
         </div>
         <p className="font-body text-xs text-muted-foreground">
-          História, contatos, objetivos, lembretes de sessão e outras anotações.
+          Contatos, objetivos, lembretes de sessão e outras anotações de campanha.
         </p>
         <textarea
           value={notesGeneral}
