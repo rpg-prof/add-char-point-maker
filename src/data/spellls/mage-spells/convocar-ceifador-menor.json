@@ -2,11 +2,11 @@
     "name": "Convocar Ceifador Menor",
     "level": 7,
     "school": "Necromancia",
-    "castingTime": "7",
-    "duration": "Especial",
-    "range": "Médio",
-    "components": "V, S",
-    "savingThrow": "Especial",
-    "description": "Descrição\n\nUma entidade psicopompa menor surge temporariamente.\n\nEla não luta por ouro nem poder.\n\nApenas cumpre tarefas ligadas à morte.\n\nExemplos\n\n• Encontrar um espírito.\n\n• Localizar uma tumba.\n\n• Identificar uma maldição mortal.",
-    "area": "Especial"
+    "castingTime": "1 turno",
+    "duration": "1 turno por nível",
+    "range": "10 metros",
+    "components": "V, S, M",
+    "area": "Especial",
+    "savingThrow": "Não",
+    "description": "Mecânica de jogo\n\nO conjurador convoca uma entidade psicopompa menor.\n\nO Ceifador não combate.\n\nPode realizar uma tarefa dentre as seguintes:\n\n• Localizar um espírito.\n\n• Encontrar uma tumba.\n\n• Identificar uma maldição ligada à morte.\n\n• Localizar restos mortais.\n\nLimitações\n\nA entidade jamais revela informações sobre o futuro.\n\nComponente Material\n\nUma moeda de prata colocada sob a língua de um cadáver.\n\nDescrição\n\nUma entidade psicopompa menor surge temporariamente.\n\nEla não luta por ouro nem poder.\n\nApenas cumpre tarefas ligadas à morte.\n\nExemplos\n\n• Encontrar um espírito.\n\n• Localizar uma tumba.\n\n• Identificar uma maldição mortal."
 }

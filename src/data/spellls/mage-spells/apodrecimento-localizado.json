@@ -1,0 +1,9 @@
+{
+    "name": "Apodrecimento Localizado",
+    "level": 4,
+    "school": "Necromancia",
+    "castingTime": "4",
+    "duration": "—",
+    "range": "—",
+    "description": "Mecânica de jogo\n\nUma parte do corpo começa a necrosar.\n\nDano:\n\n1d6 por rodada\n\nDuração:\n\n1 rodada por nível\n\nJP bem-sucedida reduz o dano pela metade."
+}

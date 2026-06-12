@@ -206,6 +206,12 @@
                 "school": "Alteração"
             },
             {
+                "name": "Mãos da Sepultura",
+                "file": "mage-spells/maos-da-sepultura.json",
+                "level": 1,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Mãos Flamejantes",
                 "file": "mage-spells/maos-flamejantes.json",
                 "level": 1,
@@ -354,6 +360,12 @@
                 "file": "mage-spells/toque-chocante.json",
                 "level": 1,
                 "school": "Alteração"
+            },
+            {
+                "name": "Toque Exangue",
+                "file": "mage-spells/toque-exangue.json",
+                "level": 1,
+                "school": "Necromancia"
             },
             {
                 "name": "Toque Macabro",
@@ -734,6 +746,18 @@
                 "file": "mage-spells/revelar-tendencias.json",
                 "level": 2,
                 "school": "Adivinhação"
+            },
+            {
+                "name": "Roubo de Vigor",
+                "file": "mage-spells/roubo-de-vigor.json",
+                "level": 2,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Sangue Congelado",
+                "file": "mage-spells/sangue-congelado.json",
+                "level": 2,
+                "school": "Necromancia"
             },
             {
                 "name": "Sede Insaciável",
@@ -1188,6 +1212,12 @@
                 "school": "Encantamento/Feitiço"
             },
             {
+                "name": "Terror Sepulcral",
+                "file": "mage-spells/terror-sepulcral.json",
+                "level": 3,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Toque da Dor",
                 "file": "mage-spells/toque-da-dor.json",
                 "level": 3,
@@ -1236,6 +1266,12 @@
                 "file": "mage-spells/ampliar-plantas.json",
                 "level": 4,
                 "school": "Alteração"
+            },
+            {
+                "name": "Apodrecimento Localizado",
+                "file": "mage-spells/apodrecimento-localizado.json",
+                "level": 4,
+                "school": "Necromancia"
             },
             {
                 "name": "Aprimoramento de Adivinhação",
@@ -1326,6 +1362,12 @@
                 "file": "mage-spells/criar-itens-efemeros.json",
                 "level": 4,
                 "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Definhar Membros",
+                "file": "mage-spells/definhar-membros.json",
+                "level": 4,
+                "school": "Necromancia"
             },
             {
                 "name": "Detectar Observação",
@@ -1460,12 +1502,6 @@
                 "school": "Necromancia"
             },
             {
-                "name": "Sepultura Antecipada",
-                "file": "mage-spells/sepultura-antecipada.json",
-                "level": 4,
-                "school": "Necromancia"
-            },
-            {
                 "name": "Máscara da Morte",
                 "file": "mage-spells/mascara-da-morte.json",
                 "level": 4,
@@ -1592,6 +1628,12 @@
                 "school": "Abjuração"
             },
             {
+                "name": "Sepultura Antecipada",
+                "file": "mage-spells/sepultura-antecipada.json",
+                "level": 4,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Sopro do Vento",
                 "file": "mage-spells/sopro-do-vento.json",
                 "level": 4,
@@ -1682,6 +1724,12 @@
                 "file": "mage-spells/ar-liquido.json",
                 "level": 5,
                 "school": "Alteração"
+            },
+            {
+                "name": "Beijo da Noite",
+                "file": "mage-spells/beijo-da-noite.json",
+                "level": 5,
+                "school": "Necromancia"
             },
             {
                 "name": "Cajado Mágico",
@@ -1868,6 +1916,12 @@
                 "file": "mage-spells/monstros-sombrios.json",
                 "level": 5,
                 "school": "Ilusão/Visão"
+            },
+            {
+                "name": "Morte Lenta",
+                "file": "mage-spells/morte-lenta.json",
+                "level": 5,
+                "school": "Necromancia"
             },
             {
                 "name": "Muralha de Energia",
@@ -2172,6 +2226,12 @@
                 "school": "Necromancia"
             },
             {
+                "name": "Definhamento Supremo",
+                "file": "mage-spells/definhamento-supremo.json",
+                "level": 6,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Desintegração",
                 "file": "mage-spells/desintegracao.json",
                 "level": 6,
@@ -2394,6 +2454,12 @@
                 "school": "Conjuração, Alteração"
             },
             {
+                "name": "Toque da Entropia",
+                "file": "mage-spells/toque-da-entropia.json",
+                "level": 6,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Tornar Raso",
                 "file": "mage-spells/tornar-raso.json",
                 "level": 6,
@@ -2570,6 +2636,12 @@
                 "school": "Alteração"
             },
             {
+                "name": "Dilacerar Espírito",
+                "file": "mage-spells/dilacerar-espirito.json",
+                "level": 7,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Direcionar Magia",
                 "file": "mage-spells/direcionar-magia.json",
                 "level": 7,
@@ -2670,6 +2742,12 @@
                 "file": "mage-spells/moldar-magia.json",
                 "level": 7,
                 "school": "Alteração"
+            },
+            {
+                "name": "Olhar da Morte",
+                "file": "mage-spells/olhar-da-morte.json",
+                "level": 7,
+                "school": "Necromancia"
             },
             {
                 "name": "Palavra de Poder, Atordoar",
@@ -2916,6 +2994,12 @@
             {
                 "name": "Exército Sombrio",
                 "file": "mage-spells/exercito-sombrio.json",
+                "level": 8,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Fome Eterna",
+                "file": "mage-spells/fome-eterna.json",
                 "level": 8,
                 "school": "Necromancia"
             },
@@ -3178,6 +3262,12 @@
                 "file": "mage-spells/portal.json",
                 "level": 9,
                 "school": "Conjuração/Convocação"
+            },
+            {
+                "name": "Reino da Morte",
+                "file": "mage-spells/reino-da-morte.json",
+                "level": 9,
+                "school": "Necromancia"
             },
             {
                 "name": "Sexto Sentido",
@@ -5940,6 +6030,12 @@
                 "school": "Necromancia"
             },
             {
+                "name": "Apodrecimento Localizado",
+                "file": "mage-spells/apodrecimento-localizado.json",
+                "level": 4,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Armadura do Cemitério",
                 "file": "mage-spells/armadura-do-cemiterio.json",
                 "level": 4,
@@ -5973,6 +6069,12 @@
                 "name": "Banquete dos Vermes",
                 "file": "mage-spells/banquete-dos-vermes.json",
                 "level": 6,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Beijo da Noite",
+                "file": "mage-spells/beijo-da-noite.json",
+                "level": 5,
                 "school": "Necromancia"
             },
             {
@@ -6126,6 +6228,18 @@
                 "school": "Necromancia"
             },
             {
+                "name": "Definhamento Supremo",
+                "file": "mage-spells/definhamento-supremo.json",
+                "level": 6,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Definhar Membros",
+                "file": "mage-spells/definhar-membros.json",
+                "level": 4,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Desfolhar",
                 "file": "mage-spells/desfolhar.json",
                 "level": 8,
@@ -6136,6 +6250,12 @@
                 "file": "mage-spells/desidratacao-horrivel-de-abi-dalzim.json",
                 "level": 7,
                 "school": "Alteração/Necromancia"
+            },
+            {
+                "name": "Dilacerar Espírito",
+                "file": "mage-spells/dilacerar-espirito.json",
+                "level": 7,
+                "school": "Necromancia"
             },
             {
                 "name": "Drenar Energia",
@@ -6189,6 +6309,12 @@
                 "name": "Falar com Mortos",
                 "file": "mage-spells/falar-com-mortos.json",
                 "level": 3,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Fome Eterna",
+                "file": "mage-spells/fome-eterna.json",
+                "level": 8,
                 "school": "Necromancia"
             },
             {
@@ -6288,14 +6414,14 @@
                 "school": "Necromancia"
             },
             {
-                "name": "Marca da Sepultura",
-                "file": "mage-spells/marca-da-sepultura.json",
-                "level": 4,
+                "name": "Mãos da Sepultura",
+                "file": "mage-spells/maos-da-sepultura.json",
+                "level": 1,
                 "school": "Necromancia"
             },
             {
-                "name": "Sepultura Antecipada",
-                "file": "mage-spells/sepultura-antecipada.json",
+                "name": "Marca da Sepultura",
+                "file": "mage-spells/marca-da-sepultura.json",
                 "level": 4,
                 "school": "Necromancia"
             },
@@ -6327,6 +6453,12 @@
                 "name": "Morte Aparente",
                 "file": "mage-spells/morte-aparente.json",
                 "level": 3,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Morte Lenta",
+                "file": "mage-spells/morte-lenta.json",
+                "level": 5,
                 "school": "Necromancia"
             },
             {
@@ -6376,6 +6508,12 @@
                 "file": "mage-spells/obstrucao.json",
                 "level": 2,
                 "school": "Necromancia; Conjuração/Convocação"
+            },
+            {
+                "name": "Olhar da Morte",
+                "file": "mage-spells/olhar-da-morte.json",
+                "level": 7,
+                "school": "Necromancia"
             },
             {
                 "name": "Olhos do Defunto",
@@ -6453,6 +6591,12 @@
                 "name": "Reencarnação",
                 "file": "mage-spells/reencarnacao.json",
                 "level": 6,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Reino da Morte",
+                "file": "mage-spells/reino-da-morte.json",
+                "level": 9,
                 "school": "Necromancia"
             },
             {
@@ -6534,6 +6678,18 @@
                 "school": "Necromancia"
             },
             {
+                "name": "Roubo de Vigor",
+                "file": "mage-spells/roubo-de-vigor.json",
+                "level": 2,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Sangue Congelado",
+                "file": "mage-spells/sangue-congelado.json",
+                "level": 2,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Sentença do Cemitério",
                 "file": "mage-spells/sentenca-do-cemiterio.json",
                 "level": 6,
@@ -6543,6 +6699,12 @@
                 "name": "Sentir Cadáver",
                 "file": "mage-spells/sentir-cadaver.json",
                 "level": 1,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Sepultura Antecipada",
+                "file": "mage-spells/sepultura-antecipada.json",
+                "level": 4,
                 "school": "Necromancia"
             },
             {
@@ -6570,15 +6732,33 @@
                 "school": "Necromancia"
             },
             {
+                "name": "Terror Sepulcral",
+                "file": "mage-spells/terror-sepulcral.json",
+                "level": 3,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Toque Cadavérico",
                 "file": "mage-spells/toque-cadaverico.json",
                 "level": 1,
                 "school": "Necromancia"
             },
             {
+                "name": "Toque da Entropia",
+                "file": "mage-spells/toque-da-entropia.json",
+                "level": 6,
+                "school": "Necromancia"
+            },
+            {
                 "name": "Toque do Carniçal",
                 "file": "mage-spells/toque-do-carnical.json",
                 "level": 2,
+                "school": "Necromancia"
+            },
+            {
+                "name": "Toque Exangue",
+                "file": "mage-spells/toque-exangue.json",
+                "level": 1,
                 "school": "Necromancia"
             },
             {

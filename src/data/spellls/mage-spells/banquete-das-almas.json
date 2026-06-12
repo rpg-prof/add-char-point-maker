@@ -2,11 +2,11 @@
     "name": "Banquete das Almas",
     "level": 7,
     "school": "Necromancia",
-    "castingTime": "7",
-    "duration": "Especial",
-    "range": "Médio",
-    "components": "V, S",
-    "savingThrow": "Especial",
-    "description": "Descrição\n\nApós uma grande batalha, o necromante absorve ecos das almas\nrecém-libertadas.\n\nRecebe temporariamente:\n\n• Conhecimentos.\n\n• Idiomas.\n\n• Memórias fragmentadas.",
-    "area": "Especial"
+    "castingTime": "1 turno",
+    "duration": "1 hora por nível",
+    "range": "Pessoal",
+    "components": "V, S, M",
+    "area": "Especial",
+    "savingThrow": "Não",
+    "description": "Mecânica de jogo\n\nApós uma batalha recente, o necromante absorve fragmentos das\nalmas dos mortos.\n\nRecebe um dos seguintes benefícios:\n\n• Idioma conhecido por uma vítima.\n\n• Proficiência não-combativa.\n\n• Conhecimento histórico específico.\n\nO Mestre determina exatamente o que pode ser obtido.\n\nLimitação\n\nNunca concede níveis ou habilidades de classe.\n\nComponente Material\n\nUm fragmento ósseo de cada criatura estudada.\n\nDescrição\n\nApós uma grande batalha, o necromante absorve ecos das almas\nrecém-libertadas.\n\nRecebe temporariamente:\n\n• Conhecimentos.\n\n• Idiomas.\n\n• Memórias fragmentadas."
 }

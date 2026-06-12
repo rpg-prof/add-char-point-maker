@@ -1,0 +1,12 @@
+{
+    "name": "Toque Exangue",
+    "level": 1,
+    "school": "Necromancia",
+    "castingTime": "1",
+    "duration": "Instantânea",
+    "range": "Toque",
+    "components": "V,S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "description": "Mecânica de jogo\n\nA vítima sofre:\n\n1d6 pontos de dano\n\nO conjurador recupera:\n\n1 ponto de vida para cada 2 pontos de dano causados.\n\nMáximo de cura:\n\n5 PV.\n\nMortos-vivos são imunes."
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Toque da Entropia",
+    "level": 6,
+    "school": "Necromancia",
+    "castingTime": "6",
+    "duration": "—",
+    "range": "—",
+    "description": "Mecânica de jogo\n\nDano:\n\n1d8 por nível\n\nMáximo:\n\n15d8\n\nAtinge matéria viva e não-viva.\n\nArmaduras não mágicas devem testar destruição."
+}

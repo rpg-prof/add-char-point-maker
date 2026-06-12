@@ -1,0 +1,9 @@
+{
+    "name": "Reino da Morte",
+    "level": 9,
+    "school": "Necromancia",
+    "castingTime": "9",
+    "duration": "—",
+    "range": "—",
+    "description": "Mecânica de jogo\n\nRaio de 30 metros.\n\nDurante:\n\n1 rodada por nível\n\nTodos os inimigos sofrem:\n\n1d6 dano por rodada\n\nToda cura recebida é reduzida pela metade.\n\nMortos-vivos recebem:\n\n+2 ataque\n+2 dano\n+2 testes de resistência"
+}

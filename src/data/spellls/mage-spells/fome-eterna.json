@@ -1,0 +1,9 @@
+{
+    "name": "Fome Eterna",
+    "level": 8,
+    "school": "Necromancia",
+    "castingTime": "8",
+    "duration": "—",
+    "range": "—",
+    "description": "Mecânica de jogo\n\nRaio de energia negativa.\n\nDano:\n\n2d8 por nível\n\nMáximo:\n\n20d8\n\nO conjurador recebe PV temporários iguais a 25% do dano causado.\n\nDuração:\n\n1 hora."
+}

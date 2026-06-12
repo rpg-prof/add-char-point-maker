@@ -2,11 +2,11 @@
     "name": "Último Suspiro",
     "level": 1,
     "school": "Necromancia",
-    "castingTime": "1",
-    "duration": "Especial (até 24 h)",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
     "range": "Toque",
-    "components": "V, S",
+    "components": "V, S, M",
     "area": "Um cadáver",
-    "savingThrow": "Especial",
-    "description": "Descrição\n\nAo tocar um cadáver morto há no máximo 24 horas, o necromante\nexperimenta os últimos instantes de sua vida.\n\nA visão é fragmentada, emocional e frequentemente perturbadora.\n\nO conjurador vê:\n\n• O que a vítima estava olhando.\n\n• Sons próximos.\n\n• Emoções intensas.\n\n• A causa imediata da morte.\n\nNão é possível fazer perguntas.\n\nÉ apenas uma lembrança.\n\nUso em Campanha\n\nExcelente para:\n\n• Investigações.\n\n• Descobrir assassinos.\n\n• Encontrar passagens secretas.\n\n• Identificar monstros desconhecidos."
+    "savingThrow": "Não",
+    "description": "Mecânica de jogo\n\nAo tocar um cadáver morto há até 24 horas por nível do\nconjurador, o mago experimenta os últimos momentos de vida da\ncriatura.\n\nO conjurador vê e ouve aproximadamente os últimos 10 segundos\npor nível de experiência.\n\nAs percepções são apresentadas do ponto de vista da vítima.\n\nLimitações\n\n• Não permite fazer perguntas.\n\n• Não revela pensamentos.\n\n• Não funciona em mortos-vivos.\n\n• Corpos muito danificados podem gerar visões incompletas.\n\nComponente Material\n\nUma moeda de cobre colocada sobre os olhos do morto.\n\nDescrição\n\nAo tocar um cadáver morto há no máximo 24 horas, o necromante\nexperimenta os últimos instantes de sua vida.\n\nA visão é fragmentada, emocional e frequentemente perturbadora.\n\nO conjurador vê:\n\n• O que a vítima estava olhando.\n\n• Sons próximos.\n\n• Emoções intensas.\n\n• A causa imediata da morte.\n\nNão é possível fazer perguntas.\n\nÉ apenas uma lembrança.\n\nUso em Campanha\n\nExcelente para:\n\n• Investigações.\n\n• Descobrir assassinos.\n\n• Encontrar passagens secretas.\n\n• Identificar monstros desconhecidos."
 }

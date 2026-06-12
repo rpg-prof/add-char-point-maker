@@ -2,11 +2,11 @@
     "name": "Biblioteca das Almas",
     "level": 9,
     "school": "Necromancia",
-    "castingTime": "9",
-    "duration": "Especial",
-    "range": "0",
-    "components": "V, S",
-    "area": "O conjurador",
-    "savingThrow": "Especial",
-    "description": "Descrição\n\nUma imensa biblioteca espectral surge ao redor do conjurador.\n\nCada livro contém a história de uma vida já encerrada.\n\nEncontrar o volume correto exige tempo e sabedoria."
+    "castingTime": "1 hora",
+    "duration": "1 turno por nível",
+    "range": "Pessoal",
+    "components": "V, S, M",
+    "area": "Especial",
+    "savingThrow": "Não",
+    "description": "Mecânica de jogo\n\nO conjurador acessa uma dimensão espiritual composta pelas\nmemórias dos mortos.\n\nDurante a duração, pode pesquisar informações sobre:\n\n• Pessoas falecidas.\n\n• Civilizações extintas.\n\n• Artefatos perdidos.\n\n• Eventos esquecidos.\n\nMecânica\n\nCada pergunta exige:\n\n• 1 turno de pesquisa.\n\n• 70% de chance de resposta correta.\n\n• +1% por nível do conjurador.\n\nRisco\n\nFalha crítica (96-00):\n\nUma entidade da biblioteca percebe a presença do conjurador.\n\nDescrição\n\nUma imensa biblioteca espectral surge ao redor do conjurador.\n\nCada livro contém a história de uma vida já encerrada.\n\nEncontrar o volume correto exige tempo e sabedoria."
 }
