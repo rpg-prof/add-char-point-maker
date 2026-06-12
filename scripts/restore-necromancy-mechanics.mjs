@@ -68,13 +68,10 @@ function gitSpell(file) {
   }
 }
 
-function stripFlavorHeader(text) {
-  return text.replace(/^Descrição\s*\n+/i, "").trim();
-}
-
 function mergeDescription(mechanics, flavor) {
-  const body = stripFlavorHeader(flavor);
-  return `Mecânica de jogo\n\n${mechanics.trim()}\n\nDescrição\n\n${body}`;
+  if (/Mecânica de jogo/i.test(flavor)) return flavor;
+  const mech = mechanics.replace(/^(Efeito|Descrição)\s*\n+/i, "").trim();
+  return `${flavor.trim()}\n\nMecânica de jogo\n\n${mech}`;
 }
 
 function needsMechanics(text) {

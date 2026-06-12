@@ -93,18 +93,13 @@ function mergeMetadata(current, fromHtml) {
   return out;
 }
 
-function stripFlavorHeader(text) {
-  return text.replace(/^Descrição\s*\n+/i, "").trim();
-}
-
 function mergeDescription(mechanics, flavor) {
   if (/Mecânica de jogo/i.test(flavor)) return flavor;
-  const body = stripFlavorHeader(flavor);
   const mech = mechanics.replace(/^(Efeito|Descrição)\s*\n+/i, "").trim();
-  if (body.startsWith("Descrição\n") || /^Descrição\s*\n/i.test(flavor)) {
-    return `Mecânica de jogo\n\n${mech}\n\n${flavor.trim()}`;
+  if (/^Descrição\s*\n/i.test(flavor) || flavor.includes("\n\nDescrição\n")) {
+    return `${flavor.trim()}\n\nMecânica de jogo\n\n${mech}`;
   }
-  return `Mecânica de jogo\n\n${mech}\n\nDescrição\n\n${body}`;
+  return `${flavor.trim()}\n\nMecânica de jogo\n\n${mech}`;
 }
 
 function loadIndex() {
