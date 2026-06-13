@@ -1,0 +1,14 @@
+{
+    "name": "Resistir ao Repelir",
+    "level": 2,
+    "school": "Abjuração",
+    "sphere": "Necromântica",
+    "castingTime": "2",
+    "duration": "1 turno + 2 rodadas/nível",
+    "range": "Touch",
+    "components": "V, S",
+    "area": "3\" diameter circle",
+    "savingThrow": "Não",
+    "source": "The Complete Book of Necromancers (AD&D 2ª Ed.)",
+    "description": "Descrição\n\nWhile this spell is in effect, all undead within a 15- yard radius of the affected object or creature gain a\n\nresistance to being turned (or commanded) by the clerics and paladins of an opposing religion (compared to that of the caster). The base resistance of the undead to being turned is 20%, plus 5% for every two levels of experience of the caster (60% at 4th, 65% at 6th, 70% at 8th, up to a maximum of 95% at 18th level).\n\nThis resistance roll is made secretly by the DM before each turning attempt is made. A single priest can\n\ncontinue attempting to turn or command the resistant undead creatures each round until either the resistance is overcome or the turn roll indicates failure. The spell can be centered on a stationary object or upon any moving creature, including the caster."
+}

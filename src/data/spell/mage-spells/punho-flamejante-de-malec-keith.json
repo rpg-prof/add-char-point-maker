@@ -1,0 +1,11 @@
+{
+    "name": "Punho Flamejante de Malec-Keith",
+    "level": 7,
+    "school": "Evocação",
+    "castingTime": "1",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "uma criatura ou objeto",
+    "source": "Tome of Magic (AD&D 2ª Ed.)",
+    "description": "Quando este feitiço é concluído, uma das mãos do mago (de sua escolha) rompe em luz e é cercada por uma aura de chama. O mago não sofre nenhum dano por isso. A iluminação é igual a de uma lanterna.\n\nSe o mago toca com êxito em um adversário, o alvo deverá tentar um Teste de Resistência.\n\nSe o lançamento for bem-sucedido, a chama permanece sobre mão do mago (e ele poderá utilizá-la para fazer mais ataques até que expire a duração do feitiço) e a criatura tocada sofre 1d4+2 pontos de dano de fogo.\n\nSe o teste falhar, a chama deixa mão do mago para cercar o corpo da vítima em uma aura de fogo. A aura superaquecida de chamas queima por 1 rodada, causando 1d4 pontos de dano por nível do mago. Em vez de atacar uma criatura, o mago pode optar por tocar qualquer objeto, que automaticamente é cercado pela aura de chamas por 1 rodada e deve ser bem sucedidos em um Teste de Resistência contra fogo mágico ou será destruído. A aura pode envolver um objeto até 5 metros cúbicos de volume por nível do mago."
+}

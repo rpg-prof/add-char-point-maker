@@ -1,0 +1,13 @@
+{
+    "name": "Convocar Coveiro Espectral",
+    "level": 3,
+    "school": "Necromancia",
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Um cadáver",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nInvoca um antigo servidor dos mortos.\n\nEle pode:\n\n• Escavar.\n\n• Transportar cadáveres.\n\n• Organizar sepulturas.\n\n• Localizar tumbas esquecidas."
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Dança dos Ossos",
+    "level": 3,
+    "school": "Necromancia",
+    "castingTime": "3",
+    "duration": "3 turnos/nível",
+    "range": "9 metros/nível",
+    "components": "S, M",
+    "area": "Especial",
+    "savingThrow": "Não",
+    "source": "The Complete Book of Necromancers (AD&D 2ª Ed.)",
+    "description": "Descrição\n\nThis spell temporarily animates the physical remains of a human, demihuman, or humanoid. Bone dance\n\nforges a mystical link with the newly made undead creature, enabling the caster to mentally control its movements, just as a master puppeteer manipulates the actions of a wooden puppet. The skeleton or zombie animated by this spell is incapable of carrying out any independent actions the wizard must mentally command his or her undead puppet to walk forward, pick up a sword, strike an opponent with it, and so on. While the caster concentrates on maintaining the bone dance, he or she may not speak, cast other spells, or actively engage in melee. The spell occupies the greater part of the caster's attention.\n\nThe skeleton or zombie created by this spell conforms to the normal variety described in the MM. It is\n\ncompatible with (can be affected by) other necromantic spells that affect undead, and the creature may perform all of the simple actions outlined in the skeletal hands spell. If directed into combat, it fights as a regular skeleton (even if it still has some flesh on its bones).\n\nWhen combined with spectral voice, bone dance can make for an effective decoy, a menacing bluff, or at\n\nleast a ghastly form of entertainment. When augmented by corpse link, a dancing cadaver may serve as an effec- tive (and ultimately expendable) scout that can work beyond the immediate visual range of the caster.\n\nNormally, the bone dance progresses for the duration of the spell or until the caster loses concentration.\n\nThe dance also ends prematurely if the caster causes the skeleton to move beyond spell range or out of direct sight (certain divinations, such as corpse link or clairvoyance, may lift this hindrance). The bone dance may be de- stroyed in combat, or broken by a successful dispel magic. The material component is an intact skeleton or corpse and a small, crude puppet which the caster must manipulate with both hands to choreograph the bone dance."
+}

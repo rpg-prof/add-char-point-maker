@@ -1,9 +1,0 @@
-{
-    "name": "Roubo de Vigor",
-    "level": 2,
-    "school": "Necromancia",
-    "castingTime": "2",
-    "duration": "—",
-    "range": "—",
-    "description": "Mecânica de jogo\n\nA vítima perde:\n\n1d4 pontos de Força\n\nDuração:\n\n1 turno por nível.\n\nO conjurador recebe metade do valor drenado.\n\nNunca ultrapassa seu atributo normal."
-}

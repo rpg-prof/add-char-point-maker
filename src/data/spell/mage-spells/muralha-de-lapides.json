@@ -1,0 +1,13 @@
+{
+    "name": "Muralha de Lápides",
+    "level": 6,
+    "school": "Necromancia",
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Especial",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nLápides espectrais emergem do solo formando uma barreira\nprotetora.\n\nCada lápide representa uma alma esquecida."
+}

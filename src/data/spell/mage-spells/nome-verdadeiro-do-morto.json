@@ -1,0 +1,13 @@
+{
+    "name": "Nome Verdadeiro do Morto",
+    "level": 2,
+    "school": "Necromancia",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "Toque",
+    "components": "V, S",
+    "area": "Um cadáver",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nAo tocar restos mortais, o necromante descobre o verdadeiro nome\nda criatura em vida.\n\nA magia ignora apelidos, títulos e identidades falsas.\n\nConhecer o nome verdadeiro concede bônus em futuras magias\nespirituais direcionadas ao falecido.\n\nAplicações\n\n• Investigações.\n\n• Convocação de espíritos.\n\n• Pesquisa histórica."
+}

@@ -1,0 +1,13 @@
+{
+    "name": "A Última Página",
+    "level": 9,
+    "school": "Necromancia",
+    "castingTime": "9",
+    "duration": "Instantânea",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nO necromante contempla o último capítulo da vida de uma\ncriatura.\n\nEle descobre:\n\n• Como ela morrerá.\n\n• Onde morrerá.\n\n• O que acontecerá imediatamente depois.\n\nO conhecimento pode ou não ser alterável."
+}

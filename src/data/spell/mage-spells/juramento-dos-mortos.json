@@ -1,0 +1,13 @@
+{
+    "name": "Juramento dos Mortos",
+    "level": 5,
+    "school": "Necromancia",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Especial",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nUm acordo é selado diante dos espíritos.\n\nQuem quebrar o juramento sofre uma maldição automática.\n\nMuito usada por:\n\n• Reis.\n\n• Guildas.\n\n• Cultos."
+}

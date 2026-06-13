@@ -14,13 +14,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
 
 const DIRS = [
-  { dir: path.join(ROOT, "src/data/spellls/mage-spells"), git: "mage-spells" },
-  { dir: path.join(ROOT, "src/data/spellls/cleric-spells"), git: "cleric-spells" },
+  { dir: path.join(ROOT, "src/data/spell/mage-spells"), git: "mage-spells" },
+  { dir: path.join(ROOT, "src/data/spell/cleric-spells"), git: "cleric-spells" },
 ];
 
 function gitDescription(gitSubdir, file) {
   try {
-    const raw = execSync(`git show HEAD:src/data/spellls/${gitSubdir}/${file}`, {
+    const raw = execSync(`git show HEAD:src/data/spell/${gitSubdir}/${file}`, {
       encoding: "utf8",
       cwd: ROOT,
     });

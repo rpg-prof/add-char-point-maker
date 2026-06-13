@@ -1,0 +1,13 @@
+{
+    "name": "Mão da Exaustão",
+    "level": 2,
+    "school": "Necromancia",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nO alvo sente seu corpo tornar-se pesado e cansado.\n\nNão sofre dano, mas recebe penalidades em deslocamento e combate."
+}

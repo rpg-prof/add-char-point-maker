@@ -1,0 +1,12 @@
+{
+    "name": "Dissipar Fadiga",
+    "level": 1,
+    "school": "Necromancia",
+    "sphere": "Necromancia",
+    "castingTime": "4",
+    "duration": "Instantânea",
+    "range": "30 metros",
+    "area": "1 criatura",
+    "source": "Opções para Jogadores — Habilidades e Poderes (AD&D 2ª Ed.)",
+    "description": "Essa magia remove toda fadiga física e exaustão do sujeito e desfaz efeitos fisiológicos derivados de esforço. O sujeito instantaneamente volta ao normal, restaurando completamente seu nível de resistência e vigor.\n\nEssa magia pode anular efeitos negativos de forçar marcha, longas distâncias de natação, corrida, acrobacias, ou corridas em alta velocidade ou qualquer ponto de fadiga acumulado tanto das regras do Opções dos Jogadores Combate e Táticas quanto da regra de magia e fadiga do Opções dos Jogadores Magia e Misticismo.\n\nUma vez conjurada, o personagem pode começar a acumular pontos de fadiga baseado em suas penalidades novamente. Componente material: uma pequena quantidade de água doce, abençoada e purificada."
+}

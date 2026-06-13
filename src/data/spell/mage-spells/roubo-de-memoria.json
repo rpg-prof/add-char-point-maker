@@ -1,0 +1,13 @@
+{
+    "name": "Roubo de Memória",
+    "level": 6,
+    "school": "Necromancia",
+    "castingTime": "6",
+    "duration": "Permanente",
+    "range": "Toque",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nPermite apagar ou extrair lembranças específicas de uma\ncriatura.\n\nAplicações\n\n• Espionagem.\n\n• Interrogatórios.\n\n• Intrigas políticas.\n\nMecânica de jogo\n\nO necromante remove uma memória específica da mente da vítima.\n\nA memória pode envolver:\n\n• Uma pessoa.\n\n• Um local.\n\n• Um objeto.\n\n• Um acontecimento.\n\nA vítima recebe uma Jogada de Proteção contra Magia.\n\nLimitação\n\nNão pode apagar mais do que um evento específico por conjuração.\n\nRecuperação\n\nHeal, Wish ou intervenção divina podem restaurar a memória."
+}

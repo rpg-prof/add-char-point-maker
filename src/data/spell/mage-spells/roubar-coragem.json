@@ -1,0 +1,13 @@
+{
+    "name": "Roubar Coragem",
+    "level": 5,
+    "school": "Necromancia",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nExtrai a coragem de uma criatura.\n\nA vítima torna-se hesitante e insegura.\n\nO necromante absorve essa confiança.\n\nAplicações\n\n• Duelos.\n\n• Negociações.\n\n• Intimidação."
+}

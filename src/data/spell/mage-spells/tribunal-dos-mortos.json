@@ -1,0 +1,13 @@
+{
+    "name": "Tribunal dos Mortos",
+    "level": 6,
+    "school": "Necromancia",
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nEspíritos da região são convocados para julgar uma criatura.\n\nOs fantasmas manifestam opiniões sobre seus atos.\n\nDependendo do histórico do alvo, ele pode receber:\n\n• Bênçãos.\n\n• Maldições.\n\n• Informações ocultas.\n\nAplicações\n\nPerfeito para campanhas envolvendo Kelemvor."
+}

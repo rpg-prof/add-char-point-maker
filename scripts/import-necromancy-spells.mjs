@@ -3,7 +3,7 @@
  * Importa magias de data/magias-necromanticas.html:
  * - Traduz títulos em inglês no HTML
  * - Compara com a base existente (nome + similaridade de descrição)
- * - Adiciona magias novas em src/data/spellls/mage-spells/
+ * - Adiciona magias novas em src/data/spell/mage-spells/
  */
 import fs from "fs";
 import path from "path";
@@ -11,9 +11,9 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const HTML_PATH = path.join(ROOT, "data/magias-necromanticas.html");
-const INDEX_PATH = path.join(ROOT, "src/data/spellls/mage-spells.json");
-const SPELLS_DIR = path.join(ROOT, "src/data/spellls/mage-spells");
+const HTML_PATH = path.join(ROOT, "data/spells/magias-necromanticas.html");
+const INDEX_PATH = path.join(ROOT, "src/data/spell/mage-spells.json");
+const SPELLS_DIR = path.join(ROOT, "src/data/spell/mage-spells");
 
 const EN_TO_PT = {
   "Chill Touch": "Toque Macabro",
@@ -180,7 +180,7 @@ function loadExistingSpells() {
   const spells = [];
   for (const entries of Object.values(index["by-level"])) {
     for (const e of entries) {
-      const filePath = path.join(ROOT, "src/data/spellls", e.file);
+      const filePath = path.join(ROOT, "src/data/spell", e.file);
       let detail = {};
       if (fs.existsSync(filePath)) {
         detail = JSON.parse(fs.readFileSync(filePath, "utf8"));

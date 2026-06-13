@@ -8,7 +8,7 @@ import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const SPELLS_ROOT = path.join(ROOT, "src/data/spellls");
+const SPELLS_ROOT = path.join(ROOT, "src/data/spell");
 
 const SKIP = new Set(["mage-spells.json", "cleric-spells.json"]);
 

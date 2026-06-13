@@ -1,0 +1,13 @@
+{
+    "name": "Armadura Espiritual",
+    "level": 3,
+    "school": "Necromancia",
+    "castingTime": "3",
+    "duration": "2 rodadas /nível",
+    "range": "0",
+    "components": "V, S, M",
+    "area": "o mago",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Este feitiço permite ao mago cercar-se com uma porção de sua própria essência de vida, que assume a forma de uma aura trêmula. A Armadura Espiritual oferece proteção equivalente a Cota de Talas (AC 4) e concede ao mago um bônus de +3 nos Testes de Resistência contra ataques mágicos. Os efeitos da Armadura Espiritual não são cumulativos com outros tipos de armadura ou proteção mágica, mas os bônus de Destreza se aplicam. A Armadura Espiritual é eficaz contra ataques e armas mágicas e não mágicas. Não trancam a circulação ou adicionam peso ou estorvo. Ela não interfere na realização de mágicas.\n\nQuando a magia chega ao fim, a aura dissipa- se e o mago perde temporariamente um pouco de sua essência de vida, sofrendo 2d3 pontos de dano a menos que ele seja bem-sucedido em um Teste de Resistência contra magia. Nenhum dano é sofrido se o salvamento for bem-sucedido. Os pontos de vida perdidos podem ser recuperados apenas através de cura mágica. Enquadrar o Círculo (Alteração) Alcance: 0"
+}

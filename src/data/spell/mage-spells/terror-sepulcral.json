@@ -1,0 +1,10 @@
+{
+    "name": "Terror Sepulcral",
+    "level": 3,
+    "school": "Necromancia",
+    "castingTime": "3",
+    "duration": "—",
+    "range": "—",
+    "source": "Grimório do Necromante",
+    "description": "Mecânica de jogo\n\nCone de 9 metros.\n\nTodos os alvos:\n\nJP contra Magia.\n\nFalha:\n\n• fogem por 2d4 rodadas.\n\nSucesso:\n\n• sofrem -2 em ataques."
+}

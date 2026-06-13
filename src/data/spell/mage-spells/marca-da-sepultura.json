@@ -1,0 +1,13 @@
+{
+    "name": "Marca da Sepultura",
+    "level": 4,
+    "school": "Necromancia",
+    "castingTime": "4",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nO necromante marca magicamente uma criatura.\n\nEnquanto a marca permanecer ativa, sempre saberá a direção\naproximada do alvo.\n\nAplicações\n\n• Caçadas.\n\n• Rastreamento.\n\n• Captura de fugitivos."
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Toque Cadavérico",
+    "level": 1,
+    "school": "Necromancia",
+    "castingTime": "1",
+    "duration": "1 rodada/nível",
+    "range": "Toque",
+    "components": "V, S",
+    "area": "1 criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nA mão do necromante torna-se gelada como um cadáver.\n\nO alvo sofre dano leve e recebe penalidades em testes físicos por\nalgumas rodadas.\n\nAplicações\n\n• Duelos.\n\n• Combate inicial.\n\n• Interrupção de conjuradores.\n\nMecânica de jogo\n\nAo completar a magia, a mão do conjurador permanece carregada com\nenergia necromântica por 1 rodada por nível, ou até descarregar em\num toque bem-sucedido, o que ocorrer primeiro.\n\nTocar uma criatura em combate exige uma jogada de ataque normal.\n\nCom um toque bem-sucedido, a vítima sofre 1d4 pontos de dano e\ndeve fazer um teste de resistência à magia.\n\nFalha: sofre -1 em jogadas de ataque, de dano e em testes de\nForça e Destreza por 1d4 rodadas.\n\nSucesso: sofre metade do dano (arredondado para baixo) e nenhuma\npenalidade.\n\nMortos-vivos são imunes."
+}

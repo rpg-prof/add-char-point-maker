@@ -7,8 +7,8 @@ import { parseGrimoireSpellsByKey } from "./spell-metadata-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const HTML_PATH = path.join(ROOT, "data/magias-necromanticas.html");
-const SPELLS_DIR = path.join(ROOT, "src/data/spellls/mage-spells");
+const HTML_PATH = path.join(ROOT, "data/spells/magias-necromanticas.html");
+const SPELLS_DIR = path.join(ROOT, "src/data/spell/mage-spells");
 
 const html = fs.readFileSync(HTML_PATH, "utf8");
 const grimoire = parseGrimoireSpellsByKey(html);

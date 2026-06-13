@@ -1,5 +1,5 @@
-import mageSpellIndex from "./spellls/mage-spells.json";
-import clericSpellIndex from "./spellls/cleric-spells.json";
+import mageSpellIndex from "./spell/mage-spells.json";
+import clericSpellIndex from "./spell/cleric-spells.json";
 
 export interface Spell {
   name: string;
@@ -12,6 +12,7 @@ export interface Spell {
   components?: string;
   area?: string;
   savingThrow?: string;
+  source?: string;
   description: string;
 }
 
@@ -33,8 +34,9 @@ const mageSpellFiles = import.meta.glob<{
   area?: string;
   components?: string;
   savingThrow?: string;
+  source?: string;
   description: string;
-}>("./spellls/mage-spells/*.json", { eager: true });
+}>("./spell/mage-spells/*.json", { eager: true });
 
 // Eagerly import all individual cleric spell JSON files
 const clericSpellFiles = import.meta.glob<{
@@ -48,8 +50,9 @@ const clericSpellFiles = import.meta.glob<{
   area?: string;
   components?: string;
   savingThrow?: string;
+  source?: string;
   description: string;
-}>("./spellls/cleric-spells/*.json", { eager: true });
+}>("./spell/cleric-spells/*.json", { eager: true });
 
 // Generic loader from index + detail files
 function loadSpells(
@@ -61,7 +64,7 @@ function loadSpells(
 
   for (const [, entries] of Object.entries(index)) {
     for (const entry of entries) {
-      const filePath = `./spellls/${entry.file}`;
+      const filePath = `./spell/${entry.file}`;
       const detail = detailFiles[filePath];
       if (detail) {
         spells.push({
@@ -75,6 +78,7 @@ function loadSpells(
           components: detail.components,
           area: detail.area,
           savingThrow: detail.savingThrow,
+          source: detail.source,
           description: detail.description || "",
         });
       } else {

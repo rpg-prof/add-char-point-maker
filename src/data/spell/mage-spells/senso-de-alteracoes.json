@@ -1,0 +1,11 @@
+{
+    "name": "Senso de Alterações",
+    "level": 2,
+    "school": "Alteração",
+    "castingTime": "2",
+    "duration": "3 turnos",
+    "range": "0",
+    "area": "mago",
+    "source": "Opções para Jogadores — Habilidades e Poderes (AD&D 2ª Ed.)",
+    "description": "Permite alterar aspectos sensoriais de magias de 1º a 3º círculo. Pode modificar: - som - cor - aparência visual Não altera efeito mecânico. Exemplos: - bola de fogo verde - mísseis gritantes - orbes coloridas Não pode: - criar invisibilidade - tornar magia totalmente silenciosa Componente material: corda multicolorida + sino de prata."
+}

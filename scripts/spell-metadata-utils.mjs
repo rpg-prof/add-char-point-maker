@@ -306,6 +306,15 @@ export function formatSpellDescription(text) {
   return t;
 }
 
+export function slugify(name) {
+  return name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 export function serializeSpellJson(spell) {
   return {
     name: spell.name,
@@ -318,6 +327,7 @@ export function serializeSpellJson(spell) {
     ...(spell.components ? { components: spell.components } : {}),
     ...(spell.area ? { area: spell.area } : {}),
     ...(spell.savingThrow ? { savingThrow: spell.savingThrow } : {}),
+    ...(spell.source ? { source: spell.source } : {}),
     description: spell.description,
   };
 }

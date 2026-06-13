@@ -1,0 +1,13 @@
+{
+    "name": "Voz Espectral",
+    "level": 1,
+    "school": "Necromancia/Alteração",
+    "castingTime": "1",
+    "duration": "1 rum/nível",
+    "range": "9 metros/nível",
+    "components": "V, S, M",
+    "area": "O conjurador",
+    "savingThrow": "Não",
+    "source": "The Complete Book of Necromancers (AD&D 2ª Ed.)",
+    "description": "Descrição\n\nThis spell is similar to the 1st-level spell ventriloquism in that it allows the caster to throw his or her voice.\n\nHowever, the caster's voice issues only from the mouth of a specified corpse, skeleton, or zombie. The voice coming from the cadaver or undead creature will not sound like the caster's voice. In the case of a cadaver or zombie, it will sound similar to the hoarse, scratchy voice of the deceased individual. In the case of a skeleton, the voice will sound like a soft, raspy whisper. For the duration of the spell (which cannot be ended prematurely), the caster's voice emanates from the corpse or undead creature. As a result, the wizard is unable to cast any additional spells requiring verbal components until after the spectral voice has expired. The material component is a pre- served tongue."
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Falar com Mortos",
+    "level": 3,
+    "school": "Necromancia",
+    "sphere": "Necromântica",
+    "castingTime": "1 turno",
+    "duration": "Especial",
+    "range": "10 metros",
+    "components": "V, S, M",
+    "area": "Um cadáver",
+    "savingThrow": "Não",
+    "source": "Grimório do Necromante",
+    "description": "Ao contrário do que muitos acreditam, esta magia não chama a alma do falecido.\n\nEla desperta ecos residuais de memória presentes nos restos mortais.\n\nO cadáver responde perguntas com base apenas no conhecimento que possuía em vida.\n\nNão pode revelar:\n\n- Eventos ocorridos após sua morte.\n- Informações desconhecidas anteriormente.\n- Conhecimentos adquiridos por terceiros.\n\nA qualidade das respostas depende diretamente do estado dos restos mortais e da condição em que a criatura morreu.\n\nCorpos extremamente danificados podem fornecer respostas confusas ou incompletas.\n\nCriaturas destruídas há muito tempo podem possuir memórias fragmentadas."
+}

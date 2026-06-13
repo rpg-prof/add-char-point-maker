@@ -1,0 +1,11 @@
+{
+    "name": "Último Fôlego",
+    "level": 1,
+    "school": "Alteração",
+    "castingTime": "1",
+    "duration": "1d4 +1 rodada/nível",
+    "range": "5m/nível",
+    "area": "uma criatura/nível",
+    "source": "Tome of Magic (AD&D 2ª Ed.)",
+    "description": "Este feitiço aumenta a quantidade de tempo que um personagem pode manter sua respiração. Tal como descrito no Manual do Jogador, um personagem pode manter seu fôlego para um número de rodadas igual a um terço sua pontuação de Constituição. O efeito do presente feitiço é adicionado a essa figura.\n\nA duração da mágica é sempre desconhecida para o destinatário; o DM secretamente rola 1d4 para determinar a duração exata. No fim deste tempo, o personagem deve realizar um teste de Constituição ou ser forçado a tomar fôlego, de acordo com as regras."
+}

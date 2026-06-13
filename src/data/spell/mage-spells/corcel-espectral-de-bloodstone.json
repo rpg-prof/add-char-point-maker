@@ -1,0 +1,11 @@
+{
+    "name": "Corcel Espectral de Bloodstone",
+    "level": 6,
+    "school": "Adivinhação",
+    "castingTime": "1 rodada",
+    "duration": "1 hora/nível",
+    "range": "10 metros",
+    "area": "Especial",
+    "source": "Opções para Jogadores — Habilidades e Poderes (AD&D 2ª Ed.)",
+    "description": "Essa magia permite ao mago criar um espectro de aparência semelhante a um abutre. É um corcel voador que pode carregar o conjurador e outra pessoa a cada três níveis do conjurador. Exemplo: - nível 12 → 4 passageiros - nível 15 → 5 passageiros Todos os personagens devem ser especificados durante a conjuração. O corcel se parece com um urubu enorme esquelético com asas esfarrapadas.\n\nQuando voa, profere guinchos horrorosos. Movimento: 4 por nível, máximo 48. Possui sela e equipamentos apropriados. Animais normais evitam o corcel. Monstros podem atacá-lo. CA: 2 PV: 10 +1/nível Sem ataques. Componente material: osso oco da asa de um abutre esculpido como apito."
+}

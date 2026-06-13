@@ -1,0 +1,13 @@
+{
+    "name": "Vozes da Necrópole",
+    "level": 5,
+    "school": "Necromancia",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Especial",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nO necromante escuta todos os espíritos presentes em uma vasta\nárea.\n\nAs vozes falam simultaneamente.\n\nEncontrar informações úteis exige concentração."
+}

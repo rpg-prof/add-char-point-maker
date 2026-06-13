@@ -1,0 +1,13 @@
+{
+    "name": "Troca de Força Vital",
+    "level": 9,
+    "school": "Necromancia",
+    "castingTime": "9",
+    "duration": "Permanente",
+    "range": "54 metros",
+    "components": "V, S",
+    "area": "Two creatures",
+    "savingThrow": "Neg.",
+    "source": "The Complete Book of Necromancers (AD&D 2ª Ed.)",
+    "description": "Descrição\n\nThis spell permanently switches the life forces of two creatures (one of which may be the caster). Both\n\nrecipients must be within range at the time the spell is completed, or it fails automatically. When employed cor- rectly, both creatures are surrounded by a radiant green aura and must save vs. spells at -6 to avoid the effects (obviously, willing recipients may forego the saving throw to consciously accept the effect).\n\nThe spell only functions properly if both recipients fail their saving throws. If only one target of the spell\n\nfails the save, then the one who made the saving throw is automatically stunned (reeling and unable to take action) for 1 round. Meanwhile the other subject (the one who failed the save) is stunned for 1-4 rounds.\n\nIn the event of a successful transfer, both life forces retain all of their original mental abilities and behav-\n\nioral patterns, although their physical abilities are limited (or possibly enhanced) by their new forms. For instance, a decrepit necromancer uses this spell to exchange life forces with a hale, young warrior in the prime of his health. While the wizard gains a young and vigorous body (and all of the benefits that go with it), the unfortunate youth finds himself trapped in the withered shell of a dying, old man. Creatures unaccustomed to being shifted in this way are stunned for a minimum of 1 round after the transfer.\n\nThe effects of this spell are permanent and can only be reversed by a full wish or by the reverse of the spell,\n\nrevoke life force exchange. If one of the bodies is slain before reversal can take place, the life force currently inhabiting that body departs. That spirit and its new body are dead just as if the spirit was in the body that actually belonged to it in the first place. The life force originally belonging to the slain body is now irreversibly trapped in its new form. Short of expending two wishes (one to restore the slain body, and the second to transfer the life force), the only way to now restore the victim to his or her rightful body is by cloning the original body and castingrevoke life force exchange."
+}

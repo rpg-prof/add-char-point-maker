@@ -1,0 +1,14 @@
+{
+    "name": "Porta da Morte",
+    "level": 3,
+    "school": "Necromancia",
+    "sphere": "Necromântica",
+    "castingTime": "3",
+    "duration": "1 hour/nível",
+    "range": "Touch",
+    "components": "V, S, M",
+    "area": "One human or demihuman",
+    "savingThrow": "Não",
+    "source": "The Complete Book of Necromancers (AD&D 2ª Ed.)",
+    "description": "Descrição\n\nWhen a cleric employs this spell, he or she touches a subject who is injured, unconscious and \"at death's\n\ndoor\" (-1 to -9 hit points). The spell immediately brings the wounded individual back up to 0 hit points, bringing the subject back from death's door. Although the victim remains unconscious, bleeding and deterioration are stopped for the duration of the spell. The subject (now at 0 hit points) can be brought immediately to consciousness by clerical spells or items that restore lost hit points.\n\nThe DM should modify this spell if he or she disallows the optional rule for \"hovering on death's door\"\n\n(page 75 of the DMG). If the DM considers characters to be immediately dead once they reach 0 hit points, then this spell may bring mortally wounded (0 to -9 hit points) characters back to life, providing it is cast within 1-10 rounds of the victim's demise. The subject must make a system shock roll to survive the transition, and if success- ful, he or she permanently loses a point of Constitution.\n\nThis modified version restores the victim to 1 hit point, which may now be immediately increased by\n\nfurther magical healing, as outlined above. Once too much time elapses after an individual's death, the victim can only be brought back to life with a raise dead spell or some other, more powerful form of necromancy.\n\nThe material components of the spell are the cleric's holy/unholy symbol, a bit of white linen, and any form\n\nof unguent."
+}

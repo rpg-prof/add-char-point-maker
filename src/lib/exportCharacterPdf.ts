@@ -277,6 +277,7 @@ function getSpellDetailLines(spell: Spell): string[] {
   if (spell.components) details.push(`Componentes: ${spell.components}`);
   if (spell.area) details.push(`Área: ${spell.area}`);
   if (spell.savingThrow) details.push(`Resistência: ${spell.savingThrow}`);
+  if (spell.source) details.push(`Fonte: ${spell.source}`);
   return details;
 }
 

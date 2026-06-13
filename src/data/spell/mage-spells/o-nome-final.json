@@ -1,0 +1,13 @@
+{
+    "name": "O Nome Final",
+    "level": 9,
+    "school": "Necromancia",
+    "castingTime": "1 turno",
+    "duration": "1 mês por nível",
+    "range": "Especial",
+    "components": "V, S, M",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nUma das magias mais proibidas já registradas.\n\nO necromante descobre o nome que a morte utilizará para chamar\numa criatura quando seu tempo chegar.\n\nEnquanto conhecer esse nome:\n\n• Obtém bônus contra o alvo.\n\n• Pode rastreá-lo.\n\n• Pode afetar seus sonhos.\n\nSe abusar desse conhecimento, forças ligadas ao destino podem\nperceber sua interferência.\n\nMecânica de jogo\n\nO necromante descobre o nome espiritual utilizado pelo destino\npara identificar a vítima.\n\nDurante a duração:\n\n• +2 em todas as jogadas envolvendo a criatura.\n\n• +20% em tentativas de rastreamento.\n\n• A vítima sofre -1 em resistências contra magias do\n\tconjurador.\n\nLimitação\n\nA magia pode afetar uma mesma criatura apenas uma vez por ano.\n\nComponente Material\n\nUm objeto pessoal importante pertencente ao alvo."
+}

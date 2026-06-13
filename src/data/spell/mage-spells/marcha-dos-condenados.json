@@ -1,0 +1,13 @@
+{
+    "name": "Marcha dos Condenados",
+    "level": 9,
+    "school": "Necromancia",
+    "castingTime": "9",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Especial",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nAs sombras de guerreiros mortos emergem do solo.\n\nNão são mortos-vivos verdadeiros.\n\nSão ecos de batalhas antigas.\n\nLutam até o nascer do sol."
+}

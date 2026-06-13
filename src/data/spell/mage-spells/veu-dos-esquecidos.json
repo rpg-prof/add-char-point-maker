@@ -1,0 +1,13 @@
+{
+    "name": "Véu dos Esquecidos",
+    "level": 2,
+    "school": "Necromancia",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "0",
+    "components": "V, S",
+    "area": "O conjurador",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nOs mortos deixam de perceber a presença do conjurador.\n\nMortos-vivos sem inteligência ignoram o necromante enquanto a\nmagia durar."
+}

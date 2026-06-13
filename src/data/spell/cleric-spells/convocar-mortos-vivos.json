@@ -1,0 +1,14 @@
+{
+    "name": "Convocar Mortos-Vivos",
+    "level": 6,
+    "school": "Necromancia/Convocação",
+    "sphere": "Necromântica, Convocação",
+    "castingTime": "6",
+    "duration": "1 turno/nível",
+    "range": "54 metros",
+    "components": "V, S",
+    "area": "Especial",
+    "savingThrow": "Não",
+    "source": "The Complete Book of Necromancers (AD&D 2ª Ed.)",
+    "description": "Descrição\n\nThis spell summons one or more undead into the general vicinity of the priest. The creatures answer the\n\nsummons within 7-12 rounds (ld6+6). Upon their arrival, lesser undead will usually seek to eliminate the priest at once unless he (or she) is suitably fortified behind protection  from evil 10' radius. More powerful, intelligent undead may attempt to parley with the priest, but they will invariably end the conversation and attack once their initial curiosity has been satisfied. A priest must be prepared to command, cajole, entice, or destroy whatever creature has been called into his service.\n\nWhenever possible, the DM should choose what kind of undead answers the priest's summoning, based on\n\nthe caster's current surroundings, level of ability, and alignment. Alternatively, the DM may roll a d20 and consult the following table:\n\nSpecial undead might include sons of Kyuss, apparitions, crypt things, eyes of fear and flame, and any\n\nother unusual undead creature the DM may wish to introduce. In truly rare circumstances (for instance, if the spell is cast near a creature's lair), this spell might attract the attention of a more powerful undead, such as a death knight, vampire, or even a lich. These beings will seldom arrive in a predictable fashion and are the most likely to demand some form of nasty retribution or lavish sacrifice to appease.\n\nThe summoned undead remain in the vicinity of the priest for at least one turn per level and may be\n\ncommanded to assist the priest in his or her endeavors (including, possibly, attacking the caster's opponents). Unless fortified with resist turning, the undead summoned by this spell can be turned (or commanded) by priests other than the caster. Because it enlists the service of powerful and malicious undead, summon undead is granted only to priests serving evil deities."
+}

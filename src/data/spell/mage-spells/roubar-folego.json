@@ -1,0 +1,13 @@
+{
+    "name": "Roubar Fôlego",
+    "level": 3,
+    "school": "Necromancia",
+    "castingTime": "3",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nO alvo sente o ar desaparecer de seus pulmões.\n\nRecebe dano moderado e dificuldade temporária para falar ou\nconjurar magias.\n\nMecânica de jogo\n\nO alvo sente seus pulmões colapsarem.\n\nDano:\n\n3d6\n\nFalha na resistência:\n\n• incapaz de lançar magias verbais\n\n• incapaz de falar\n\nDurante:\n\n1d4 rodadas."
+}

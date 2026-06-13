@@ -15,7 +15,7 @@ import {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const HTML_PATH = path.join(ROOT, "data/magias-necromanticas.html");
+const HTML_PATH = path.join(ROOT, "data/spells/magias-necromanticas.html");
 
 function gitShow(file) {
   try {
@@ -26,13 +26,13 @@ function gitShow(file) {
 }
 
 function loadPreImportSpells() {
-  const raw = gitShow("src/data/spellls/mage-spells.json");
+  const raw = gitShow("src/data/spell/mage-spells.json");
   if (!raw) throw new Error("Não foi possível ler mage-spells.json do HEAD");
   const index = JSON.parse(raw);
   const spells = [];
   for (const entries of Object.values(index["by-level"])) {
     for (const e of entries) {
-      const gitPath = `src/data/spellls/${e.file}`;
+      const gitPath = `src/data/spell/${e.file}`;
       const detailRaw = gitShow(gitPath);
       const detail = detailRaw ? JSON.parse(detailRaw) : {};
       spells.push({

@@ -1,0 +1,11 @@
+{
+    "name": "Aura Elemental",
+    "level": 7,
+    "school": "Abjuração/Evocação",
+    "castingTime": "1 rodada",
+    "duration": "1 hora/nível",
+    "range": "0",
+    "area": "o mago",
+    "source": "Tome of Magic (AD&D 2ª Ed.)",
+    "description": "Este feitiço tem quatro efeitos muito diferentes, dependendo do tipo (ar, terra, fogo, água) de aura elemental evocada. Só o mago poderá receber uma aura elemental, e não é possível beneficiar mais de uma aura de uma só vez. Cada aura tem três polegadas de espessura e cobre corpo inteiro do mago. Uma aura de ar tem cor branca turva, uma aura de terra é opaca cinzenta, uma aura de fogo é vermelho cintilante e uma aura de água é azul trêmula. As auras têm esses efeitos: Ar\n\n• Imunidade a gases e ataques baseados em ar\n\n• Proteção total contra ataques físicos de criaturas do Plano Elemental do Ar\n\n• Habilidade de realizar as mágicas Voar e Proteção contra Projéteis, uma vez cada. Terra\n\n• Imunidade a ataques de armas não-mágicas feitas de pedra ou metal.\n\n• Proteção total contra ataques físicos de criaturas do Plano Elemental da Terra\n\n• Habilidade de respirar e mover-se junto a terra na velocidade normal.\n\n• Habilidade de realizar a mágica Muralha de Pedra uma vez. Fogo\n\n• Imunidade a fogo normal ou mágico\n\n• Proteção total contra ataques físicos de criaturas do Plano Elemental do Fogo\n\n• Habilidade de respirar e mover-se junto ao fogo na velocidade normal.\n\n• Proteção completa contra ambientes hostis enquanto viaja pelo Plano Elemental do Fogo\n\n• Habilidade de realizar a mágica Muralha de Fogo uma vez. Água\n\n• Imunidade a gases e ataques baseados em água\n\n• Proteção total contra ataques físicos de criaturas do Plano Elemental da Água\n\n• Habilidade de respirar e mover-se dentro da água na velocidade normal.\n\n• Habilidade de realizar a mágica Muralha de Gelo uma vez. As auras não restringem o mago de nenhuma forma. Ele é livre para mover e atuar normalmente enquanto está sob a influência de uma aura."
+}

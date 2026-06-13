@@ -1,0 +1,10 @@
+{
+    "name": "Sangue Congelado",
+    "level": 2,
+    "school": "Necromancia",
+    "castingTime": "2",
+    "duration": "—",
+    "range": "—",
+    "source": "Grimório do Necromante",
+    "description": "Mecânica de jogo\n\nO sangue da vítima torna-se sobrenaturalmente frio.\n\nDano:\n\n2d4\n\nFalha na resistência:\n\n• movimento reduzido em 50%\n\n• -1 em ataques\n\nDuração:\n\n1d4 rodadas."
+}

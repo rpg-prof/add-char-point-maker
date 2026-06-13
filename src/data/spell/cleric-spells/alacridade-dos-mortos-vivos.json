@@ -1,0 +1,14 @@
+{
+    "name": "Alacridade dos Mortos-Vivos",
+    "level": 1,
+    "school": "Necromancia",
+    "sphere": "Necromântica",
+    "castingTime": "1",
+    "duration": "1 turno + 2 rodadas/nível",
+    "range": "Touch",
+    "components": "V, S, M",
+    "area": "One undead/nível",
+    "savingThrow": "Não",
+    "source": "The Complete Book of Necromancers (AD&D 2ª Ed.)",
+    "description": "Descrição\n\nThis spell only affects skeletons and zombies, which temporarily gain the speed and agility of a living\n\nhuman in a peak, healthy state (a movement rate of 12). The undead also gain the same dexterity, initiative, and saving throws as the caster (providing, of course, that these attributes are better than those of the undead). Because of their alacrity, the armor class of the undead is automatically improved by 1 (and possibly further modified by the defense adjustment of the caster, if any). The material components are three drops of water, sinew of any mammal, and a drop of quicksilver."
+}

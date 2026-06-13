@@ -1,0 +1,13 @@
+{
+    "name": "Praga",
+    "level": 4,
+    "school": "Necromancia",
+    "castingTime": "4",
+    "duration": "Permanente",
+    "range": "30 metros",
+    "components": "V, S",
+    "area": "1 criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nEsta magia implanta uma doença sobrenatural no organismo da\nvítima.\n\nA enfermidade não surge naturalmente; ela é criada diretamente\npela energia necromântica do conjurador.\n\nOs sintomas podem variar:\n\n• Fraqueza extrema.\n\n• Tremores.\n\n• Febres intensas.\n\n• Perda de coordenação.\n\n• Dores constantes.\n\nA doença progride rapidamente e frequentemente exige intervenção\nmágica para ser removida.\n\nAplicações Táticas\n\n• Eliminar adversários gradualmente.\n\n• Punir inimigos derrotados.\n\n• Sabotar líderes ou governantes.\n\n• Criar distrações em fortalezas e cidades.\n\nConsiderações Morais\n\nMesmo necromantes de tendências neutras frequentemente evitam\nesta magia devido ao sofrimento prolongado que provoca.\n\nExemplo\n\nIncapaz de enfrentar diretamente um tirano protegido por guardas,\no necromante o infecta com uma doença sobrenatural que o enfraquece\nao longo das semanas seguintes.\n\nMecânica de jogo\n\nEssa magia provoca forte doença e grande fraqueza em uma criatura. O indivíduo afligido peia doença é imediatamente acometido por sintomas dolorosos e incômodos: bolhas, pústulas, lesões, feridas, etc. A Força, a Destreza e o Carisma são reduzidos em 2. As jogadas de ataque têm uma penalidade de -2. Os efeitos persistem até que Curar Doenças seja utilizada sobre a criatura, ou que a criatura passe 1d3 semanas recuperando-se Personagens que decidam ignorar a doença por mais de um dia são suscetíveis a doenças piores, a critério do Mestre."
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Sussurros da Sepultura",
+    "level": 2,
+    "school": "Necromancia",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Especial",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nO necromante escuta ecos emocionais deixados por mortos em uma\nárea.\n\nNão recebe palavras ou memórias.\n\nApenas impressões:\n\n• Medo.\n\n• Raiva.\n\n• Tristeza.\n\n• Dor.\n\nAplicações\n\n• Investigações.\n\n• Descoberta de assassinatos.\n\n• Exploração de ruínas."
+}

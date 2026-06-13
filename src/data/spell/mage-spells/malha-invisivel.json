@@ -1,0 +1,11 @@
+{
+    "name": "Malha Invisível",
+    "level": 3,
+    "school": "Evocação/ Abjuração",
+    "castingTime": "2",
+    "duration": "Especial",
+    "range": "0",
+    "area": "o mago",
+    "source": "Manual Completo do Arcano (AD&D 2ª Ed.)",
+    "description": "Uma variação da magia Armadura Arcana; esta magia permite ao mago cobrir seu corpo com uma peça invisível de armadura simples, baixando temporariamente sua CA para 3. Seus efeitos não são cumulativos com outras armaduras ou proteções mágicas (um personagem não pode melhorar sua CA mais do que 3 através do uso desta magia), mas os bônus de destreza ainda se aplicam. Para cada nível do mago, a Malha Invisível absorve 1 ponto do dano que normalmente atingiria CA 3; no entanto, a Malha Invisível não oferece proteção contra armas mágicas ou ataques.\n\nQuando a Malha Invisível tiver absorvido tantos pontos de danos quanto o mago tem níveis de experiência, ela desaparece. A Malha Invisível não compromete o movimento, nem faz peso extra ou estorvo. Ela não interfere na execução de magias. Exemplo: Um feiticeiro com uma CA normal de 10 protegeu seu corpo com a Malha Invisível. Oprimeiro adversário ataca com um punhal normal; o ataque é realizado contra CA 3 da Malha Invisível. Oataque foi bem-sucedido, causando 2 pontos de danos, mas este dano é absorvido pela Malha Invisível e o mago está ileso. Um segundo ataque é feito com uma espada +1. A Malha Invisível não oferece proteção contra esta arma magia, portanto, o ataque é contra a CA normal do mago, ou seja, 10. O componente material é um pequeno fragmento de armadura."
+}

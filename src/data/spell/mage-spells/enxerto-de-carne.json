@@ -1,0 +1,12 @@
+{
+    "name": "Enxerto de Carne",
+    "level": 5,
+    "school": "Necromancia/Alteração",
+    "castingTime": "5",
+    "duration": "Especial",
+    "range": "0",
+    "components": "V, S, M",
+    "savingThrow": "Não",
+    "source": "The Complete Book of Necromancers (AD&D 2ª Ed.)",
+    "description": "Descrição\n\nWith this spell, a wizard can graft any freshly harvested flesh to the body of the recipient, either replacing\n\na lost limb or serving as a disguise. The duration is limited only by the compatibility of the grafted flesh to the host's own body. Flesh harvested from the recipient him- or herself (such as a severed limb) can be permanently reattached with this spell. If the grafted limb were taken from a fresh corpse, however, the maximum duration of the spell would be 1 day/level of the caster. Only musculo-skelelal tissues are affected by this spell; it cannot be used to graft organs or attach additional appendages (such as an extra arm) to the recipient.\n\nGraft flesh can also disguise the subject (who may be the caster) with the flesh from a cadaver. While the\n\nsubject gains the facial and bodily appearance of the deceased individual, the transformation is only \"skin deep.\" The recipient retains his normal voice, knowledge, spells, and other abilities. Furthermore, the subject does not gain any physical or sensory abilities associated with his new appearance (the spell cannot, for instance, increase the host's physical strength or replace lost eyesight). This application lasts 1 day/level of the caster.\n\nFor the duration of the spell, grafted flesh literally becomes an extension of the host's own body (affected\n\ntissue radiates a faint aura of necromancy, however). The recipient has complete control over the flesh as if it were his or her own. At the conclusion of the spell, the grafted flesh slowly deadens and ultimately drops away. A successful dispel magic ends the spell prematurely.\n\nGraft flesh only functions on living human, demihuman, or humanoid subjects. The material component is\n\nthe host's own severed limb or else a suitable replacement from a fresh corpse (dead for no longer than 1 day per level of the caster). Grafted tissue must be harvested from the same species as the host. Graft flesh cannot be\n\ncombined with other enchantments (such asembalm or spirit bind) which are used to preserve a corpse. By the conclusion of the spell, all grafted flesh has decayed past all utility and cannot be used in a subsequent casting."
+}

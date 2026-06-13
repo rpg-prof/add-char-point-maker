@@ -11,7 +11,7 @@ import { serializeSpellJson } from "./spell-metadata-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
-const SPELLS_DIR = path.join(ROOT, "src/data/spellls/mage-spells");
+const SPELLS_DIR = path.join(ROOT, "src/data/spell/mage-spells");
 const SOURCE_COMMIT = "ff4dc9c";
 
 const MECH = /\d+d\d+|pontos de (vida|dano|força)|teste de resistência|jogada de ataque|penalidade/i;
@@ -58,7 +58,7 @@ const METADATA_OVERRIDES = {
 
 function gitSpell(file) {
   try {
-    const raw = execSync(`git show ${SOURCE_COMMIT}:src/data/spellls/mage-spells/${file}`, {
+    const raw = execSync(`git show ${SOURCE_COMMIT}:src/data/spell/mage-spells/${file}`, {
       encoding: "utf8",
       cwd: ROOT,
     });

@@ -1,0 +1,13 @@
+{
+    "name": "Cidade Fantasma",
+    "level": 8,
+    "school": "Necromancia",
+    "castingTime": "1 hora",
+    "duration": "1 noite",
+    "range": "100 metros",
+    "components": "V, S, M",
+    "area": "Até 1 milha quadrada",
+    "savingThrow": "Não",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nDurante uma noite inteira, o necromante recria uma cidade\ndesaparecida.\n\nSuas ruas, habitantes e eventos aparecem como ecos espectrais.\n\nPermite estudar civilizações perdidas.\n\nMecânica de jogo\n\nReconstrói ecos espirituais de uma cidade desaparecida.\n\nOs habitantes são ilusões espirituais incapazes de interagir\nfisicamente.\n\nEntretanto podem:\n\n• Conversar.\n\n• Trabalhar.\n\n• Repetir eventos históricos.\n\nUso Principal\n\nPesquisa histórica.\n\nComponente Material\n\nUm tijolo ou pedra proveniente da cidade original."
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Reino das Memórias",
+    "level": 8,
+    "school": "Necromancia",
+    "castingTime": "8",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Especial",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nCria uma região temporária formada por lembranças dos mortos.\n\nAs memórias tornam-se tangíveis.\n\nPode-se caminhar por elas como se fossem reais."
+}

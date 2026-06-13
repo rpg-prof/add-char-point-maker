@@ -1,9 +1,0 @@
-{
-    "name": "Mãos da Sepultura",
-    "level": 1,
-    "school": "Necromancia",
-    "castingTime": "1",
-    "duration": "—",
-    "range": "18 metros",
-    "description": "Mecânica de jogo\n\nMãos esqueléticas emergem do solo.\n\nAlvo deve realizar uma Jogada de Proteção contra Paralisia.\n\nFalha:\n\n• movimento reduzido à metade\n\n• -2 na CA\n\nDuração:\n\n1 rodada por nível."
-}

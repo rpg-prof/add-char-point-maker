@@ -1,0 +1,11 @@
+{
+    "name": "Escudo Selvagem",
+    "level": 6,
+    "school": "Alteração",
+    "castingTime": "1 rodada",
+    "duration": "Especial",
+    "range": "0",
+    "area": "o mago",
+    "source": "Tome of Magic (AD&D 2ª Ed.)",
+    "description": "Este feitiço encobre o mago numa banda de cores cintilantes, escondendo-o completamente. O mago é capaz de ver normalmente dentro e fora da blindagem. O Escudo Selvagem protege o mago dos efeitos de mágicas e itens mágicos. A blindagem pode absorver completamente 2d6 níveis de magia (isto é, se a jogada de 2d6 resulta em 10, o escudo poderia absorver dez magias de 1º nível, duas magias de 5º nível ou qualquer combinação semelhante), assim eliminando os seus efeitos sobre o mago. Tanto mágicas de área de efeito, quanto aquelas individualmente direcionado para o mago selvagem podem ser absorvidos. No caso de feitiços da área, o Escudo Selvagem protege apenas o mago. Todos os outros na área do efeito sofreram os efeitos normais da magia. Escudo Selvagem também protege contra oscilações selvagens, se causado pela magia do próprio mago ou por uma fonte externa. Cada oscilação selvagem é considerado igual a 1d6 níveis de magia. O feitiço permanece em vigor até que ele queira ser cancelado pelo mago ou atinja sua capacidade de níveis de magia.\n\nSe a capacidade for atendida exatamente, o Escudo Selvagem simplesmente deixa de funcionar. No entanto, se o Escudo Selvagem for atingido por níveis de magia maiores do que ele pode absorver, ele explode em uma oscilação selvagem. O feitiço que disparou a oscilação é completamente negado e sua energia é transformada em uma oscilação selvagem (ver quadro 2). A partir do momento que o escudo deixa de funcionar, o mago anteriormente protegido é sujeito a efeitos completos deste aumento de oscilações selvagens.\n\nO componente material é uma pequena esponja."
+}

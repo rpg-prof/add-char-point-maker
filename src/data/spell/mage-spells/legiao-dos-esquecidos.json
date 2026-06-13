@@ -1,0 +1,13 @@
+{
+    "name": "Legião dos Esquecidos",
+    "level": 6,
+    "school": "Necromancia",
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Especial",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nAnima diversos esqueletos frágeis simultaneamente.\n\nSão inferiores aos criados por Animate Dead, mas úteis para\ntarefas militares."
+}

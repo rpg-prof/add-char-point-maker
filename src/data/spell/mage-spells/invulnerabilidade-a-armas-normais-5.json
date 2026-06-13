@@ -1,0 +1,11 @@
+{
+    "name": "Invulnerabilidade à Armas Normais",
+    "level": 5,
+    "school": "Abjuração",
+    "castingTime": "1",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "area": "raio de 1,5 metro",
+    "source": "Opções para Jogadores — Habilidades e Poderes (AD&D 2ª Ed.)",
+    "description": "Versão contra armas normais. Mesmas regras gerais. Componente material: - arma não mágica quebrada - escama de dragão"
+}

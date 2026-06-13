@@ -1,0 +1,11 @@
+{
+    "name": "Anulação Absurda de Nahal",
+    "level": 2,
+    "school": "Abjuração",
+    "castingTime": "2",
+    "duration": "1d6 rodadas +1rodada/nível",
+    "range": "Toque",
+    "area": "criatura tocada",
+    "source": "Tome of Magic (AD&D 2ª Ed.)",
+    "description": "Este magia a aura de criatura afetada, dando resultados aleatórios para magias de Saber Alinhamento, Detectar Mal e Detectar Mentira lançadas sobre essa criatura.\n\nQuando uma criatura protegida é o foco de um destes feitiços de adivinhação, a informação adquirida aleatoriamente é determinada.\n\nAssim, se Saber Alinhamento é usado contra uma criatura Caótica Má, protegida pela Anulação Absurda de Nahal, a resposta pode ser qualquer combinação de alinhamento. Se dois personagens usam a adivinhação sobre o mesmo destino, dois resultados aleatórios são gerados. Um novo resultado aleatório é gerado a cada rodada; assim, observações continuadas em uma criatura protegida normalmente resultam em respostas diferentes. A tabela a seguir deve ser usada para determinar o alinhamento aleatório. D10 Roll Alignment 1 Lawful Good 2 Lawful Neutral 3 Lawful Evil 4 Neutral Good 5 Neutral 6 Neutral Evil 7 Chaotic Good 8 Chaotic Evil 9 Chaotic Neutral 10 No alignment O componente de material é uma pequena quantidade de gema de ovo manchada no cabelo do destinatário."
+}

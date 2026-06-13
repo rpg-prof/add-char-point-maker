@@ -1,0 +1,13 @@
+{
+    "name": "Sentença do Cemitério",
+    "level": 6,
+    "school": "Necromancia",
+    "castingTime": "6",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nO necromante aponta para um alvo e pronuncia uma sentença.\n\nDurante a duração, toda cura recebida é reduzida.\n\nA vítima sente uma proximidade constante da morte."
+}

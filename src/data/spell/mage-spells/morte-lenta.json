@@ -1,0 +1,10 @@
+{
+    "name": "Morte Lenta",
+    "level": 5,
+    "school": "Necromancia",
+    "castingTime": "5",
+    "duration": "—",
+    "range": "—",
+    "source": "Grimório do Necromante",
+    "description": "Mecânica de jogo\n\nDoença sobrenatural.\n\nDurante 1 dia por nível:\n\n• perde 1 PV por dia\n\n• -1 em ataques\n\n• -1 em testes\n\nCure Disease remove o efeito."
+}

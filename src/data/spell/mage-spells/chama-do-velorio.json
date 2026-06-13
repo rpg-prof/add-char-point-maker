@@ -1,0 +1,13 @@
+{
+    "name": "Chama do Velório",
+    "level": 1,
+    "school": "Necromancia",
+    "castingTime": "1",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Um cadáver",
+    "savingThrow": "Especial",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nUma pequena chama azul surge próxima a cadáveres.\n\nSua intensidade varia conforme:\n\n• Tempo desde a morte.\n\n• Presença espiritual.\n\n• Influência sobrenatural.\n\nMuito utilizada por coveiros e sacerdotes funerários."
+}

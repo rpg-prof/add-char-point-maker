@@ -1,0 +1,11 @@
+{
+    "name": "Celeridade de Mordenkhain",
+    "level": 4,
+    "school": "Alteração/Invocação",
+    "castingTime": "4",
+    "duration": "1 turno",
+    "range": "0",
+    "area": "Especial",
+    "source": "Tome of Magic (AD&D 2ª Ed.)",
+    "description": "Celeridade de Mordenkainen afeta magias dos níveis 1º-3º, que alteram a movimentação do mago, como Queda Suave, Salto, Patas de Aranha, Levitação, Voar e Velocidade. Magias a serem afetadas devem ser expressas no prazo de 1 rodada da execução de Celeridade. As magias não expiram quando expira Celeridade. Magias expressas na seqüência de Celeridade recebem um bônus de 25% de duração. Este efeito não pode ser adquirido em conjunto com outros meios de magicamente prolongar a duração de um feitiço.\n\nAlém disso, taxa de movimento do mago é aumentada em 25%. Queda Suave é uma exceção; a taxa de descida pode ser reduzida em 25% por opção do mago. A área de efeito é sempre o mago, exceto no caso da magia Velocidade, para os quais os efeitos de Celeridade irão operar em 1d4 criaturas além do mago. O Celeridade não afetará as outras criaturas de qualquer outra forma. O Celeridade dá ao mago um bônus em seus Testes de Resistência contra magias dos níveis 1º-3º que afetam diretamente o seu movimento. Isso inclui Teia, Imobilizar Pessoa e Lentidão. O mago também ganha um bônus em todos os Testes de Resistência contra ataques de paralisia mágica.\n\nO componente material é um pequeno pote ou vasilha contendo pernas de Centopéia."
+}

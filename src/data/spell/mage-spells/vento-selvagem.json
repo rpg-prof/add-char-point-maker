@@ -1,0 +1,7 @@
+{
+    "name": "Vento Selvagem",
+    "level": 7,
+    "school": "Conjuração/Convocação",
+    "source": "Tome of Magic (AD&D 2ª Ed.)",
+    "description": "Este feitiço é semelhante em efeito a Ataque Selvagem e Zona Selvagem.\n\nQuando expresso, um muro de luzes esmaecidas, multicoloridas espalham-se em existência no ponto indicado pelo mago. Estas luzes formam uma linha de 40m de comprimento.\n\nApós a primeira rodada da magia, o assistente pode mover o muro de luzes. Cada rodada, o mago pode mover a parede na mesma direção ou até 45° para ambos os lados. Depois que a parede é definida em movimento, ele poderá ser interrompido se a magia for cancelada ou dissolvida. As luzes podem mover 60m por rodada. O Vento Selvagem tem dois efeitos significativos. Em primeiro lugar, todas as criaturas impressionadas com as luzes mágicas sofrem 2d6 pontos de dano. Em segundo lugar, qualquer mago atingido ao tentar converter um feitiço automaticamente aciona uma oscilação selvagens (uso do quadro 2). Itens mágicos que gastam cargas que tocarem a parede de luzes automaticamente liberam uma carga, também resulta em uma oscilação selvagem."
+}

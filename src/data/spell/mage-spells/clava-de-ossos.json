@@ -1,0 +1,13 @@
+{
+    "name": "Clava de Ossos",
+    "level": 3,
+    "school": "Encantamento / Necromancia",
+    "castingTime": "1 rodada",
+    "duration": "1 rodada/nível",
+    "range": "0",
+    "components": "V, S, M",
+    "area": "um osso",
+    "savingThrow": "Especial",
+    "source": "Opções para Jogadores — Habilidades e Poderes (AD&D 2ª Ed.)",
+    "description": "Transforma osso em clava mágica. Contra mortos-vivos: +4 1d6+4 dano Contra demais: +1 1d6+1 dano O osso precisa ter formato adequado. Exemplo: - fêmur → válido - crânio → inválido Ao fim: retorna ao normal. Componente material: - osso apropriado - terra de sepultura"
+}

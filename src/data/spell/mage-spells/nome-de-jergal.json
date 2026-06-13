@@ -1,0 +1,13 @@
+{
+    "name": "Nome de Jergal",
+    "level": 9,
+    "school": "Necromancia",
+    "castingTime": "9",
+    "duration": "Especial",
+    "range": "Médio",
+    "components": "V, S",
+    "area": "Uma criatura",
+    "savingThrow": "Sim",
+    "source": "Grimório do Necromante",
+    "description": "Descrição\n\nUma palavra proibida ensinada pelos escribas da morte.\n\nAo pronunciá-la, o necromante pode aprender um segredo que\nnenhuma criatura viva conhece.\n\nLimitação\n\nA resposta nunca é completa.\n\nJergal sempre guarda parte da verdade para si."
+}
