@@ -128,12 +128,6 @@
                 "school": "Adivinhação / Augúrio / Necromancia"
             },
             {
-                "name": "Eco do Túmulo",
-                "file": "mage-spells/eco-do-tumulo.json",
-                "level": 1,
-                "school": "Necromancia"
-            },
-            {
                 "name": "Enfeitiçar Pessoas",
                 "file": "mage-spells/enfeiticar-pessoas.json",
                 "level": 1,
@@ -6465,12 +6459,6 @@
                 "name": "Eclipse da Alma",
                 "file": "mage-spells/eclipse-da-alma.json",
                 "level": 6,
-                "school": "Necromancia"
-            },
-            {
-                "name": "Eco do Túmulo",
-                "file": "mage-spells/eco-do-tumulo.json",
-                "level": 1,
                 "school": "Necromancia"
             },
             {
