@@ -88,16 +88,23 @@ def normalize_schools(raw: str) -> list[str]:
 
 
 def entry_from_spell(data: dict, rel_file: str) -> dict:
-    return {
+    entry = {
         "name": data["name"],
         "file": rel_file,
         "level": data["level"],
         "school": data["school"],
     }
+    if data.get("source"):
+        entry["source"] = data["source"]
+    return entry
+
+
+def spell_data_root() -> Path:
+    return Path(__file__).resolve().parent.parent / "src" / "data" / "spell"
 
 
 def main() -> None:
-    root = Path(__file__).resolve().parent
+    root = spell_data_root()
     spells_dir = root / "mage-spells"
     out_path = root / "mage-spells.json"
 
@@ -115,6 +122,7 @@ def main() -> None:
 
     by_level: dict[str, list] = defaultdict(list)
     by_school: dict[str, list] = defaultdict(list)
+    by_source: dict[str, list] = defaultdict(list)
     unrecognized: dict[str, list[str]] = defaultdict(list)
 
     for e in entries:
@@ -124,18 +132,24 @@ def main() -> None:
             by_school[s].append(e)
             if s not in CANONICAL_SCHOOLS:
                 unrecognized[s].append(e["name"])
+        source = e.get("source") or "Desconhecida"
+        by_source[source].append(e)
 
     for lst in by_level.values():
         lst.sort(key=sort_key)
     for lst in by_school.values():
         lst.sort(key=sort_key)
+    for lst in by_source.values():
+        lst.sort(key=sort_key)
 
     level_keys = sorted(by_level.keys(), key=int)
     school_keys = sorted(by_school.keys(), key=str.casefold)
+    source_keys = sorted(by_source.keys(), key=str.casefold)
 
     index = {
         "by-level": {k: by_level[k] for k in level_keys},
         "by-school": {k: by_school[k] for k in school_keys},
+        "by-source": {k: by_source[k] for k in source_keys},
     }
 
     with open(out_path, "w", encoding="utf-8") as f:
@@ -149,6 +163,10 @@ def main() -> None:
     for s in school_keys:
         tag = "  ✓" if s in CANONICAL_SCHOOLS else "  ?"
         print(f"    {tag} {s}: {len(by_school[s])} magias")
+
+    print(f"  Fontes no índice: {len(source_keys)}")
+    for s in source_keys:
+        print(f"      {s}: {len(by_source[s])} magias")
 
     if unrecognized:
         print(f"\n  ⚠ Escolas NÃO canônicas ({len(unrecognized)}):")
