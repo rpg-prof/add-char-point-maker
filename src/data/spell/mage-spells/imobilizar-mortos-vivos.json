@@ -8,6 +8,6 @@
     "components": "V, S, M",
     "area": "1d3 mortos-vivos",
     "savingThrow": "Especial",
-    "source": "Grimório do Necromante",
+    "source": "Livro do Jogador (AD&D 2ª Ed.)",
     "description": "Quando utilizada, essa magia deixa imóveis 1d3 mortos-vivos. cuja soma de DV não seja maior que o nível do mago. No máximo três mortos-vivos podem ser afetados pela utilização dessa magia. Para lançá-la, o mago escolhe um ponto dentro do alcance e os mortos-vivos mais próximos deste ponto são afetados, contanto que estejam também dentro do alcance da magia e do campo de visão do mago.\n\nMortos-vivos sem mente (esqueletos, zumbis) são afetados imediatamente. Outras formas de mortos-vivos têm direito a testar sua resistência à magia para evitar os efeitos da magia Imobilizar Mortos-Vivos. As criaturas afetadas ficam imóveis pela duração da magia.\n\nOs componentes materiais são uma pitada de enxofre misturada com alho amassado."
 }
