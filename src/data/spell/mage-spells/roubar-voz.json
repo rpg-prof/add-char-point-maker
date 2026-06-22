@@ -8,6 +8,5 @@
     "components": "V, S",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "source": "Grimório do Necromante",
-    "description": "Descrição\n\nA voz da vítima é arrancada temporariamente.\n\nDurante a duração:\n\n• Não pode falar.\n\n• Não pode lançar magias verbais.\n\n• Não pode ativar palavras de comando.\n\nO necromante pode reproduzir a voz roubada."
+    "source": "Grimório do Necromante"
 }

@@ -1,0 +1,3 @@
+Ao utilizar essa magia, o mago coloca o receptor num estado de animação suspensa. Essa interrupção de tempo significa que a criatura afetada não envelhece: seu metabolismo virtualmente cessa. Esse estado persiste até que o efeito seja removido por um Dissipar Magia, ou que o reverso da magia, Restabelecimento Temporal, seja recitado. O efeito reverso é composto por apenas uma palavra, e não requer componentes materiais e gestuais.
+
+O componente material dessa magia é um pó composto de diamante, esmeralda, rubi e safira, sendo que cada pedra esmagada deve valer pelo menos 100 po.

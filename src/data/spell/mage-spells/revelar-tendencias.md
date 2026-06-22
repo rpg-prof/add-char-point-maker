@@ -1,0 +1,5 @@
+Essa magia permite ao mago, através da leitura de aura, saber a tendência de uma criatura ou objeto. A magia não revela nada sobre criaturas e objetos que não possuam tendência. O mago precisa se manter estacionário e concentrar-se nas criaturas por duas rodadas. Caso a criatura passe num teste de resistência à magia, nada é descoberto.
+
+Se o mago concentrar-se no objeto ou criatura durante apenas uma rodada, somente a parte da tendência com respeito a ordem, ou caos, é descoberta. Algumas proteções mágicas podem anular essa magia.
+
+O reverso dessa magia, Esconder Tendência, esconde a tendência de uma criatura ou objeto, mesmo de Revelar Tendência, pelas próximas 24 horas.

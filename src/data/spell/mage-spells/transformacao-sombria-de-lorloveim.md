@@ -1,0 +1,5 @@
+Transforma alvo em matéria sombria intangível. Pode afetar: - objetos inanimados - criaturas Volume máximo: 30 cm cúbicos por nível Criaturas relutantes: teste de resistência.
+
+Criaturas afetadas: - tornam-se intangíveis - atravessam rachaduras - atravessam pequenos espaços Limitações: - não voam naturalmente - não atacam normalmente criaturas materiais Podem atacar: criaturas etéreas. Recebem dano apenas de: - armas mágicas +1 - criaturas semelhantes - magia - ataques especiais Mortos-vivos ignoram a criatura.
+
+Liches e similares: teste com penalidade -4 para perceber. Dissipar Magias encerra efeito.

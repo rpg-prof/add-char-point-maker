@@ -1,0 +1,5 @@
+Essa magia pode ser lançada apenas em áreas completamente cercadas ou fechadas por terra, rocha, areia ou materiais similares. O mago precisa também utilizar um Conjurar Elemental para invocar um elemental da terra. O elemental prestará seus serviços de livre e espontânea vontade, tão logo o mago anuncie que sua intenção é lançar Distorção de Distância. A magia coloca o elemental na área de efeito, e o ser extraplanar faz com que as dimensões da área dobrem ou caiam pela metade para aqueles que estiverem viajando sobre ela (à escolha do mago).
+
+Portanto, um corredor de 3 x 30 metros poderá aparentar 1,5 metro de largura por 15 metros de comprimento ou 6 metros de largura por 60 de comprimento.
+
+Quando a duração do efeito termina, o elemental retorna ao seu próprio plano. A verdadeira natureza de um local afetado pela Distorção de Distância é indetectável para qualquer criatura viajando sobre o espaço distorcido, mas a área irradia uma aura mágica muito leve, e Visão da Verdade pode revelar que um elemental da terra está fundido à região. O material necessário para essa magia é um pequeno pedaço de argila mole.

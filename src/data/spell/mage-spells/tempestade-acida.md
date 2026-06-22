@@ -1,0 +1,1 @@
+Cria chuva de ácido mágico gelatinoso. Remoção: - vinho - vinagre - dissipar magia Dano: rodadas 1–3 → 1d4 rodadas 4–6 → 1d6 depois → 1d8 Resistência inicial: metade do dano subsequente. Não pode ser curado com regeneração. Componente material: gota de ácido.

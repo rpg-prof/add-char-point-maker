@@ -1,0 +1,3 @@
+, que de outra forma seriam ininteligíveis. O grimoire do próprio mago e todas as obras que ele já leu com a magia serão sempre inteligíveis para ele, e não requerem nova utilização da magia. Sua utilização, normalmente, não aciona a magia contida na escrita, embora possa fazê-lo no caso de itens amaldiçoados.
+
+Uma vez utilizada em um determinado item, o mago pode voltar a ler os trechos em que já utilizou Ler Magias, sem a necessidade de executá-la novamente. A duração desta magia é duas rodadas por nível do mago, sendo que o mago lê o equivalente a uma página por rodada. O mago precisa ter um cristal ou prisma transparente, que não é consumido, para utilizar esta magia.

@@ -8,6 +8,5 @@
     "components": "V, S, M",
     "area": "Especial",
     "savingThrow": "Não",
-    "source": "Grimório do Necromante",
-    "description": "Descrição\n\nUm tomo espectral aparece diante do conjurador.\n\nAo abri-lo, surgem informações sobre criaturas falecidas nas\nproximidades.\n\nInformações possíveis\n\n• Nome.\n\n• Causa da morte.\n\n• Local de sepultamento.\n\n• Espíritos relacionados.\n\nMecânica de jogo\n\nUm tomo espectral surge diante do conjurador.\n\nDurante a duração, o mago pode consultar informações sobre\ncriaturas falecidas em um raio de 1 milha por nível.\n\nInformações Disponíveis\n\n• Nome.\n\n• Espécie.\n\n• Causa da morte.\n\n• Data aproximada da morte.\n\nExiste 5% de chance por nível de obter uma informação adicional\nrelevante.\n\nComponente Material\n\nUma página retirada de um livro funerário."
+    "source": "Grimório do Necromante"
 }

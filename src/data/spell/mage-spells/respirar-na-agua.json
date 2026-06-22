@@ -6,6 +6,5 @@
     "duration": "1 hora/nível + 1d4 horas",
     "range": "Toque",
     "area": "Criatura tocada",
-    "source": "Livro do Jogador (AD&D 2ª Ed.)",
-    "description": "O receptor de Respirar na Água adquire a capacidade de respirar na água livremente enquanto a magia durar. O mago pode tocar mais de uma criatura ao utilizar a magia, mas nesse caso a duração da magia é dividida pelo número de criaturas tocadas.\n\nO reverso dessa magia, Respirar no Ar, funciona de maneira similar, mas permite que criaturas que respirem água passem a respirar ar.\n\nO componente material é um pedaço de cana, bambu ou palha."
+    "source": "Livro do Jogador (AD&D 2ª Ed.)"
 }

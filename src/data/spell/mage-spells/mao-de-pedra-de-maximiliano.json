@@ -6,6 +6,5 @@
     "duration": "5 rodadas +1 rodada/nível",
     "range": "20,m + 10m/nível",
     "area": "uma criatura",
-    "source": "Tome of Magic (AD&D 2ª Ed.)",
-    "description": "Este feitiço deve ser expresso em terreno pedregoso, tais como um chão de pedra construído, uma palavra de caverna natural ou um campo de rochas espalhadas. Não é possível converter a mágica em um muro de pedra ou no teto. A mágica faz com que um braço feito de pedra (do mesmo tamanho que um membro humano normal), suba do solo abaixo de qualquer criatura visado pelo mago. A mão de pedra tenta agarrar a perna da criatura alvo, que tem direito a um Teste de Resistência para evitar o efeito; se o teste for bem-sucedido, a mão desaparece. Cada rodada posterior, a mão tem uma chance de 5 % por nível do mago de reaparecer e atacar. Criaturas agarradas pela mão sofrem uma taxa de movimento de 0, penalidade de -2 no AC e penalidade de -2 nas jogadas de ataque. Personagens agarrados perdem qualquer bônus de Destreza. A mão não causa nenhum dano à sua vítima. O membro de pedra tem AC 2 e pontos de vida igual ao triplo máximo de pontos de vida do mago. O número máximo de pontos de vida que pode ter uma mão de pedra é 60.\n\nO componente material é uma mão de miniatura esculpiram de pedra, que desfaz-se em poeira quando a mão conjurada é destruída ou a mágica termina."
+    "source": "Tome of Magic (AD&D 2ª Ed.)"
 }

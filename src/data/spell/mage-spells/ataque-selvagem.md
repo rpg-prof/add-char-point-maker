@@ -1,0 +1,7 @@
+Este feitiço é usado principalmente contra magos hostis. Ele distorce todas as tentativas de conjuração de mágicas, convertendo a energia mágica em oscilações selvagens. À vítima de um Ataque Selvagem é permitida um Teste de Resistência; se for bem-sucedida, o feitiço não tem efeito.
+
+Se o Teste de resistência falhar, o alvo está contido dentro de um campo de magia selvagem.
+
+Se a vítima lança mágicas ou usa cargas de um item mágico, uma súbita oscilação selvagem é criada automaticamente (consulte a tabela 2). Ao determinar os efeitos desta oscilação, o nível real do mago que lançou o Ataque Selvagem deve ser subtraído da jogada de dados, tornando os efeitos da oscilação selvagem mais suscetíveis de afetar a vítima.
+
+O componente material é um tubo de vidro pequeno que é quebrado na realização da mágica. Mágicas do 7º Círculo

@@ -1,0 +1,21 @@
+## Descrição
+
+A mortalha da morte recorre ao Plano Material Negativo para envolver o lançador em uma aura escura e sombria de
+
+energia que drena a vida. Embora o conjurador não sofra efeitos nocivos deste brilho nocivo, ele pode ter consequências terríveis para qualquer um que entre em contato com a aura.
+
+A mortalha pode ser usada ativamente no ataque e passivamente na defesa. Em combate, o mago pode
+
+ativar o poder mortal do magia tocando uma vítima (exigindo uma jogada de ataque bem-sucedida). Qualquer criatura tocada deve imediatamente realizar um teste de resistência contra magia mortal com uma penalidade de -4. Se o teste for bem sucedido, a vítima sai ilesa. Se o salvamento falhar, uma névoa negra se forma ao redor da vítima, drenando 20% de seus pontos de vida atuais a cada rodada até que o infeliz indivíduo morra no final da quinta rodada. A mortalha também serve como proteção passiva ou proteção para o lançador. Qualquer um que tocar o mago ou tentar acertá-lo com qualquer objeto portátil ou arma branca deve fazer um teste de resistência contra magia da morte (sem penalidades) ou será atingido pela mortalha de maneira semelhante.
+
+Os seguintes magias removem a mortalha de um indivíduo aflito: curar ferimentos críticos, curar,
+
+desejo limitado, desejo ou dissipação de magia bem-sucedida. magias de cura menores e poções de cura atrasam a morte apenas em uma rodada. Múltiplas aplicações desses magias ou poções podem prolongar a vida da vítima até que a duração da magia expire. a magia também pode ser encerrado prematuramente matando ou empregando com sucesso dissipar magia no lançador (isso libera imediatamente todas as criaturas afetadas pela magia).
+
+A mortalha permanece em vigor até que o mago tenha atacado ou sido atacado com sucesso por um número
+
+de criaturas igual ao seu nível atual (ou a duração máxima da magia de duas rodadas por nível tenha decorrido). Mortos-vivos não são afetados por Esta magia. Na verdade, se uma criatura morta-viva for atacada por uma mortalha, ela imediatamente ganha 1 DV, e o mago deve salvar contra magia da morte ou sofrerá os efeitos da mortalha por si mesmo.
+
+This dreadful spell is known only to a select cadre of necromancers who purportedly learned it from a
+
+misterioso livro encadernado em bronze de origem extraplanar. A proteção requer os seguintes componentes materiais: opala negra triturada e diamante (no valor de 5.000 PO), pó de um morto-vivo corpóreo com fortes laços com o Plano Material Negativo (como um vampiro ou criatura) e um pedaço de quartzo fumegante. Esses ingredientes são consumidos na fundição.

@@ -1,0 +1,5 @@
+Esta magia permite ao usuário realizar magias que normalmente requereriam um componente verbal sem que o mago precise fazer um som. Tais magias devem ser realizadas no prazo de duração da magia Vocalizar. Esta magia também é útil em situações onde o silêncio é desejado, ou quando o usuário está sob a influência de uma magia de silêncio.
+
+Vocalizar não nega uma magia silêncio, mas simplesmente contrabalanceia para efeitos de realização de magias; se um mago sob o efeito da Vocalizar realiza uma magia que tem alguns efeitos sonoros, esse som vai ser mascarado, enquanto que a silêncio continua em vigor. Vocalizar não afeta a comunicação vocal normal.
+
+O componente material para esta magia é um pequeno sino dourado sem o badalo.

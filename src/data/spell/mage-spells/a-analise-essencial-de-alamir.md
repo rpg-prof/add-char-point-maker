@@ -1,0 +1,5 @@
+Revela ingredientes e fórmulas de: - misturas químicas - itens mágicos Informação aparece instantaneamente. Teste de Inteligência/Razão: - sucesso → compreende - falha → informação perdida Nova tentativa: somente após subir de nível.
+
+Informações por nível: Aprende: - ingredientes - quantidades - preparação de misturas não mágicas Exemplos: - fogo grego - pólvora - receitas Aprende: - poções - líquidos mágicos - tinta mágica Aprende: fórmulas para itens mágicos (não artefatos/reliquias) Risco: itens mágicos podem ser destruídos. Itens de uso único: destruídos automaticamente.
+
+Itens reutilizáveis: teste contra desintegração. Falha: explosão mágica. Dano: 4d8 Componente material: varinha de carvalho centenário.

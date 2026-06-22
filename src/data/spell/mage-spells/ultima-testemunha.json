@@ -8,6 +8,5 @@
     "components": "V, S, M",
     "area": "Especial",
     "savingThrow": "Não",
-    "source": "Grimório do Necromante",
-    "description": "Descrição\n\nPermite convocar a alma da última criatura que viu determinado\nevento.\n\nMesmo que ela não tenha participado diretamente.\n\nExcelente para mistérios.\n\nMecânica de jogo\n\nO conjurador invoca temporariamente o espírito da última\ncriatura que testemunhou um evento específico.\n\nO espírito pode responder um número de perguntas igual ao nível\ndo conjurador dividido por 3 (mínimo 1).\n\nLimitações\n\n• O espírito deve ter presenciado o evento.\n\n• Não é obrigado a cooperar.\n\n• Não conhece informações posteriores à sua morte.\n\nComponente Material\n\nUma vela feita com gordura funerária."
+    "source": "Grimório do Necromante"
 }

@@ -1,0 +1,1 @@
+Detectar Doença revela ao mago se um indivíduo ou criatura está infectado por alguma doença, sendo ela normal ou magia. Adicionalmente, há uma chance de 10% por nível do mago de identificar com precisão qual o tipo de doença. O componente material para esta magia é um graveto ou pequeno galho de árvore.

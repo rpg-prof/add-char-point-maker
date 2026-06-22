@@ -1,0 +1,1 @@
+Este feitiço funciona exatamente como a magia Dilatação I, do 4º nível, exceto que a área de efeito de uma mágica de 1º, 2º, ou 3º nível é estendida em 50%. Alternativamente, o mago pode estender a área de efeito de uma magia de nível 4º ou 5º em 25%.

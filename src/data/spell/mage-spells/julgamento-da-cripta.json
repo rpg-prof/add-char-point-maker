@@ -8,6 +8,5 @@
     "components": "V, S, M",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "source": "Grimório do Necromante",
-    "description": "Descrição\n\nA criatura alvo é confrontada por manifestações de todas as\nvidas que tirou.\n\nDependendo da resistência e da interpretação do Mestre, pode\nsofrer:\n\n• Paralisia.\n\n• Terror.\n\n• Dano espiritual.\n\n• Morte.\n\nAplicações\n\nExcelente contra vilões e criaturas malignas.\n\nMecânica de jogo\n\nEspíritos das vítimas do alvo manifestam-se para julgá-lo.\n\nA vítima realiza uma Jogada de Proteção contra Magia com\npenalidade de -2.\n\nFalha:\n\n• sofre 10d6 pontos de dano espiritual;\n\n• fica paralisada por 1d4 rodadas.\n\nSucesso:\n\n• sofre metade do dano;\n\n• não fica paralisada.\n\nMortos-vivos sofrem dano integral mesmo em caso de sucesso.\n\nComponente Material\n\nUm osso humano gravado com o nome do alvo."
+    "source": "Grimório do Necromante"
 }

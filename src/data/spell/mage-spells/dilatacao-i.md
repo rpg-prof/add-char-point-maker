@@ -1,0 +1,3 @@
+Dilatação permite a um mago aumentar a área de efeito de qualquer magia de níveis 1º-3º. A área de efeito é aumentada em 25 %; assim, uma Nuvem Fétida iria preencher um cubo de 9 metros, enquanto um feitiço Lentidão afetaria criaturas em um cubo de 15m. Frações de metros ou jardas (conforme apropriado para o mago) são descartadas.
+
+Dilatação I deve ser lançada imediatamente antes da magia a ser dilatada; se, uma rodada completa ou mais expirar, a Dilatação é desperdiçada. O feitiço de dilatação afeta apenas mágicas que têm áreas de efeito definidas em metros (números de criaturas afetadas não podem ser aumentados). A Dilatação afeta apenas as mágicas expressos pelo mesmo mago.

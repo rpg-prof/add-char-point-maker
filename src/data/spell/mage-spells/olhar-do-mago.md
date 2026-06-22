@@ -1,0 +1,9 @@
+Na conclusão desta mágica, olhos da mago reluzem com um brilho azul e ele é capaz de ver as auras mágicas de feitiçaria e objetos encantados. Apenas as auras das coisas normalmente visíveis para o mago são vistos; esta magia não concede o mago a capacidade de ver objetos invisíveis, nem dá-lhe visão de raios X.
+
+Esta magia não revela a presença do bem ou mal ou não revela o alinhamento. Enquanto o Olhar do Mago está em vigor, um mago é capaz de ver se alguém é um feiticeiro e se essa pessoa é um sacerdote ou um mago (e que tipo de especialista, se houver).
+
+Ele pode detectar se um não-mago tem o potencial de aprender e realizar magias (por exemplo, se um lutador algum dia ganhará a capacidade de lançar um feitiço). Apesar do nível do feiticeiro não poder ser descoberto, o mago pode ver a intensidade da aura do feiticeiro e apostar no poder mágico do indivíduo (diminuto, fraco, moderado, forte, esmagador).
+
+Isso pode ser extremamente ambíguo mesmo quando um mago tem algum método de comparação; o DM pode anunciar que a intensidade do sujeito é aproximadamente equivalente a de um companheiro, ou ele pode anunciar que a aura do sujeito é tão forte como ele nunca se deparou. Habilidades mágicas do objeto não podem ser descobertas. ) são evidentes.
+
+O mago pode ver a intensidade da aura mágica de um item e apostar em seu poder, mas não pode dizer se um item mágico é amaldiçoado ou não. Mágicas do 4º Círculo

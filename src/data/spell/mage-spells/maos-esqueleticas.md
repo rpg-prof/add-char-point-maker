@@ -1,0 +1,13 @@
+## Descrição
+
+Ao lançar Esta magia, um mago anima um par de mãos esqueléticas que levitam no ar e se movem conforme as instruções.
+
+pelo conjurador, que usa comandos verbais e gestos somáticos para guiá-los. As mãos podem realizar apenas atividades simples de agarrar, levantar e carregar. Eles não conseguem realizar movimentos complexos que exijam grande destreza, como arrombar fechaduras. Eles podem, no entanto, abrir portas e baús destrancados ou virar páginas de um livro de magias. As mãos também podem fazer dois ataques de garras por rodada, cada ataque direcionado contra um alvo diferente. Eles atacam usando a mesa do mago no mesmo nível do conjurador, e cada um inflige 1-3 HP de dano em um acerto bem-sucedido. As mãos podem ser atacadas fisicamente por sua vez (cada mão tem CA 5, PV 4 e VM 6) e podem se mover para qualquer lugar dentro de seu alcance.
+
+As mãos podem carregar até 5 quilos cada; juntos, eles podem carregar um objeto de até 20 quilos. As mãos
+
+podem empunhar armas dentro desses limites de peso. Ao usar armas, as mãos esqueléticas atacam a mesa de combate do mago, com nível metade do nível do conjurador e com penalidades aplicáveis ​​por não proficiência. Armas brancas portáteis causam metade do dano normal (arredondando frações), porque as mãos não conseguem gerar as forças adequadas que as armas precisam para infligir danos normais. As mãos podem disparar uma besta já carregada e causar danos normais, porque a besta fornece a força necessária para impulsionar a flecha. Todas as outras armas de mísseis têm seu alcance reduzido a um quarto e infligem seus danos normais (arredondar frações).
+
+Os componentes materiais são as mãos esqueléticas completas de qualquer humano, demi-humano ou humanóide. Esses
+
+Os ossos das mãos podem ser reutilizados em múltiplas conjurações da magia, desde que as mãos não tenham sido danificadas ou destruídas em combate.

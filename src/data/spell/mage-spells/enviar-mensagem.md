@@ -1,0 +1,7 @@
+Com esse efeito, o mago pode contatar uma criatura com a qual esteja familiarizado, e cujo nome e aparência sejam conhecidos.
+
+Se a criatura em questão não estiver no mesmo plano de existência do mago, há uma possibilidade de 5% de que a transmissão falhe. Condições locais em outros planos podem aumentar essa porcentagem razoavelmente, se o Mestre assim desejar.
+
+Se a mensagem chegar com sucesso, ela poderá ser entendida mesmo por uma criatura com Inteligência 1 (animal). O mago pode enviar uma mensagem curta, de 25 palavras ou menos, para o receptor, que não é obrigado a obedecer a eventuais ordens formuladas pelo mago.
+
+O componente material consiste em dois cilindros, cada um com uma extremidade aberta, conectados por um pedaço de fio de cobre.

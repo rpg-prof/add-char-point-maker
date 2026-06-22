@@ -1,0 +1,3 @@
+Este feitiço requer imenso esforço mágico para converter, relegando-o para o mais alto círculo de magia. Estabilizar nega os efeitos das regiões de Magia Selvagem, permitindo ao mago e todas as criaturas num raio de 9m fazer magias e usar normalmente itens mágicos. A mágica está centralizada sobre o mago e segue seus movimentos. As magias do próprio mago nunca causam oscilações selvagens quando utilizadas dentro da duração de um feitiço Estabilizar, nem fazem com que os efeitos das oscilações selvagens estendam-se à área protegida.
+
+Além disso, as magias d um mago selvagem funcionam em seus verdadeiros níveis. O quadro 2 não é usado para determinar o nível de variação. O feitiço afeta Ataque Selvagem, Zona Selvagem e Vento Selvagem.

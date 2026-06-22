@@ -1,0 +1,3 @@
+Essa magia dá ao mago o poder de mover objetos com a Força da mente. Ele pode mover um peso de até 10 quilos a uma distância de até 5 metros por rodada. A magia dura duas rodadas, mais uma rodada por nível do mago, O peso pode ser movido verticalmente, horizontalmente ou os dois. Um objeto movido além do alcance da magia cai ou pára.
+
+O objeto pode ser manipulado telecineticamente como se fosse tocado por uma mão. Por exemplo, uma alavanca ou corda poderiam ser puxadas, uma chave poderia ser girada, um objeto rotacionado, e

@@ -6,6 +6,5 @@
     "duration": "Permanente",
     "range": "30 metros",
     "area": "1 objeto",
-    "source": "Livro do Jogador (AD&D 2ª Ed.)",
-    "description": "Essa magia repara pequenas rachaduras em objetos. Ela soldará um anel, um elo de corrente, uma adaga, desde que apenas uma rachadura exista. Objetos de madeira ou de cerâmica, com diversas rachaduras, podem ser colados de tal forma que parecerão novos, como se nunca houvessem sido quebrados.\n\nUm buraco em uma bolsa ou em um cantil de couro é completamente consertado por Consertar. Entretanto, esta magia não pode consertar itens mágicos de tipo algum. Depois da magia ter sido utilizada em um turno, o poder mago presente na emenda consolida-se, e a magia não pode mais ser desfeita.\n\nO volume máximo que um mago pode consertar é 30 centímetros cúbicos por nível de experiência, Os componentes materiais são dois pequenos magnetos de qualquer tipo ou dois carrapichos."
+    "source": "Livro do Jogador (AD&D 2ª Ed.)"
 }

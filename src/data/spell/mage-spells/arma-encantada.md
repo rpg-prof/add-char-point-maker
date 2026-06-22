@@ -1,0 +1,5 @@
+Essa magia transforma temporariamente uma arma normal em uma arma mágica. A arma afetada torna-se equivalente a uma arma +1. concedendo um bônus de +1 em suas jogadas de ataque o dano. Duas armas pequenas (flechas, setas, adagas, facas, pedras de funda, ele.) ou uma arma grande (machado, espada, lança, mangual) podem ser encantadas com essa magia. Ela funciona em armas já mágicas, contanto que o bônus total combinado não exceda +3. Projeteis encantados desta forma perdem seu poder quando atingem um alvo com sucesso, ou quando se quebram.
+
+Se o disparo errou, a flecha geralmente pode ser reutilizada, ainda com o bônus mágico. Essa magia é normalmente utilizada em conjunto com Encantar item e Permanência para criar armas permanentemente mágicas, sendo que Arma Encantada deve ser utilizada uma vez para cada ponto de bônus desejado, num máximo de +3.
+
+Os componentes materiais são pó de cal e carbono.

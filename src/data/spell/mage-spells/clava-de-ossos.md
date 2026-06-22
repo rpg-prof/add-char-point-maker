@@ -1,0 +1,1 @@
+Transforma osso em clava mágica. Contra mortos-vivos: +4 1d6+4 dano Contra demais: +1 1d6+1 dano O osso precisa ter formato adequado. Exemplo: - fêmur → válido - crânio → inválido Ao fim: retorna ao normal. Componente material: - osso apropriado - terra de sepultura

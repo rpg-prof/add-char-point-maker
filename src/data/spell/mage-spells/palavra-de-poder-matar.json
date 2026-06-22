@@ -6,6 +6,5 @@
     "duration": "Permanente",
     "range": "5 metros a cada dois níveis",
     "area": "3 metros de raio",
-    "source": "Livro do Jogador (AD&D 2ª Ed.)",
-    "description": "Essa magia mata instantaneamente uma ou mais criaturas de qualquer tipo. O efeito elimina uma criatura que tenha menos de 60 pontos de vida, ou duas ou mais criaturas com 10 ou menos pontos de vida. até um máximo de 120 pontos. A opção de atacar uma criatura ou múltiplas vítimas deve ser pronunciada juntamente com o alcance e o centro da área de efeito.\n\nOs pontos de vida utilizados são os que a criatura possui no momento em que é atingida pela magia, não o máximo."
+    "source": "Livro do Jogador (AD&D 2ª Ed.)"
 }

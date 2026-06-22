@@ -1,0 +1,3 @@
+Esse efeito é utilizado apenas contra pessoas ou criaturas que se valem de magias. Enfraquecer o Intelecto faz com que o intelecto da vítima se degenere, caindo ao nível de uma criança excepcional. O receptor permanece nesse estado até que Cura Completa ou Desejo sejam usados para cancelar a magia. Seres que utilizam magia são muito vulneráveis a esse encanto, e seus testes de resistência sofrem as seguintes penalidades: Alvo da Magia Clérigo Mago (humano) Combinação ou não-humano Ajustes de Sabedoria devem ser aplicados.
+
+O componente material é um punhado de esferas de argila, cristal, vidro ou outra substância mineral, que desaparece quando a magia é lançada.

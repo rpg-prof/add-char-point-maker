@@ -1,0 +1,1 @@
+Força Espectral cria uma ilusão onde sons, cheiros e temperaturas estão incluídos. No restante, é semelhante à Criação Fantasmagórica. Essa magia dura por três níveis após o término da concentração do mago.

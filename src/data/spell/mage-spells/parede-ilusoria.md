@@ -1,0 +1,5 @@
+Essa magia cria a ilusão de uma parede, telhado, chão, ou qualquer superfície similar, que dura até que seja desfeita. A ilusão Tem uma aparência absolutamente real quando vista, mesmo que magicamente, por exemplo, pela Visão da Verdade, mas objetos podem atravessá-la sem problema.
+
+Quando essa magia é utilizada para esconder buracos, armadilhas e portas normais, as capacidades de detecção possuídas pelos semi-humanos e as capacidades mágicas de localização funcionam normalmente; o toque revela a natureza da ilusão, embora a ilusão não desapareça.
+
+O componente material é um pó especial que custa 400 po e leva pelo menos quatro dias para ser preparado.

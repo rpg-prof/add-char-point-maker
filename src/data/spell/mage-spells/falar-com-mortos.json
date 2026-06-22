@@ -8,6 +8,5 @@
     "components": "V, S, M",
     "area": "Um cadáver",
     "savingThrow": "Não",
-    "source": "Grimório do Necromante",
-    "description": "Descrição\n\nAo contrário do que muitos acreditam, esta magia não chama a\nalma do falecido.\n\nEla desperta ecos residuais de memória presentes nos restos\nmortais.\n\nO cadáver responde perguntas com base apenas no conhecimento que\npossuía em vida.\n\nNão pode revelar:\n\n• Eventos ocorridos após sua morte.\n\n• Informações desconhecidas anteriormente.\n\n• Conhecimentos adquiridos por terceiros.\n\nA qualidade das respostas depende diretamente do estado dos restos\nmortais e da condição em que a criatura morreu.\n\nAplicações Táticas\n\n• Resolver mistérios.\n\n• Investigar assassinatos.\n\n• Descobrir passagens secretas.\n\n• Identificar traidores.\n\nLimitações\n\nCorpos extremamente danificados podem fornecer respostas confusas\nou incompletas.\n\nCriaturas destruídas há muito tempo podem possuir memórias\nfragmentadas.\n\nExemplo\n\nApós encontrar um nobre assassinado, o grupo utiliza Speak with\nDead para descobrir o símbolo gravado na capa do responsável pelo\ncrime."
+    "source": "Grimório do Necromante"
 }

@@ -8,6 +8,5 @@
     "components": "V, S",
     "area": "1 criatura",
     "savingThrow": "Sim",
-    "source": "Grimório do Necromante",
-    "description": "Descrição\n\nO necromante concentra energia necromântica em um único ponto do\ncorpo da vítima — um braço, uma perna, o rosto ou o tronco.\n\nA pele escurece, fede e se desfaz como carne exposta por dias sob\na terra. Veias escurecidas se espalham a partir do ponto afetado,\nmas o restante do corpo permanece intacto enquanto a magia durar.\n\nÉ uma maldição cirúrgica: sofrimento intenso, debilitante, porém\ncontida a uma região escolhida pelo conjurador.\n\nAplicações Táticas\n\n• Enfraquecer guerreiros sem matá-los imediatamente.\n\n• Interromper conjuradores que dependem de gestos ou fala.\n\n• Marcar adversários capturados como aviso.\n\n• Complementar Definhar Membros em combates prolongados.\n\nMecânica de jogo\n\nAo tocar uma criatura viva, o conjurador escolhe uma parte do\ncorpo que começa a necrosar.\n\nDano:\n\n1d6 por rodada\n\nDuração:\n\n1 rodada/nível\n\nTeste de resistência à magia:\n\n• Sucesso: o dano de cada rodada é reduzido pela metade.\n\n• Falha: sofre o dano integral a cada rodada.\n\nO efeito termina ao fim da duração ou se Dissipar Magia for\nutilizada com sucesso sobre a vítima."
+    "source": "Grimório do Necromante"
 }

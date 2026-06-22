@@ -1,0 +1,1 @@
+Cria aura de imunidade total a medo. Inclui: medo de dragões Protege conjurador contra ataques de mortos-vivos: - físicos - mágicos Dissipar Magia não funciona. Somente Desejo encerra. Componente material: - presas de aranha - cabelo de carniçal

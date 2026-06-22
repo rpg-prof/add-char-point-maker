@@ -1,0 +1,3 @@
+Este feitiço permite ao mago estender a duração e o alcance dos feitiços de Olho Mágico e as magias de adivinhação dos níveis 1º-4º. Duração e gama são ambos aumentados em 50% pela duração do Aprimoramento de Adivinhação. Todas as mágicas de adivinhação expressos no prazo de duração do Aprimoramento são aumentadas.
+
+A expiração do aprimoramento cancela todas as mágicas de adivinhação em vigor.

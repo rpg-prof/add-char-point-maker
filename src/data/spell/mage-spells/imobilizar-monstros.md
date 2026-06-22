@@ -1,0 +1,1 @@
+Esse efeito imobiliza de uma a quatro criaturas, de qualquer tipo, que estejam dentro do alcance da magia e no campo de visão do mago. O mago pode optar por imobilizar apenas uma, duas, três ou todas as quatro criaturas. Se três ou quatro forem atacadas, cada teste de

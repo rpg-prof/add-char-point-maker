@@ -1,0 +1,3 @@
+Essa magia é muito semelhante à Convocar Criaturas I, com a diferença de que este efeito convoca 1d4 monstros de 3º nível. Eles aparecem dentro do alcance da magia e atacam os oponentes do mago. até que recebam ordem em contrário, a duração da magia termine, ou que os monstros sejam mortos. Essas criaturas não fazem teste de moral, e desaparecem quando destruídas. Se não houver oponentes a enfrentar, e o mago puder se comunicar com as criaturas convocadas, elas podem prestar outros serviços.
+
+Os componentes materiais são um saquinho e uma pequena vela.

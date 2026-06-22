@@ -1,0 +1,3 @@
+A sombra do conjurador se alonga. Velocidade: 15 metros por rodada Distância máxima: 10 metros por nível A sombra pode mover-se: - por quartos - paredes - janelas - superfícies Aplicações: espionagem, observação, escuta.
+
+Enquanto ativa, o conjurador: - vê pela sombra - ouve pela sombra - fala pela sombra A sombra: - não pode ser agarrada - não pode ser tocada - não sofre ataques físicos normais Pode ser afetada apenas por: - magia - armas +1 - ataques especiais PV perdidos pela sombra afetam o conjurador. Pré-requisito: fonte de luz mínima equivalente a vela. 000 po.

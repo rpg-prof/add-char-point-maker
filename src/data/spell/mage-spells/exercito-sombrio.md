@@ -1,0 +1,6 @@
+## Descrição
+
+Invoca sombras temporárias formadas por energia negativa.
+
+São menos poderosas que mortos-vivos verdadeiros, mas podem
+sobrecarregar adversários.

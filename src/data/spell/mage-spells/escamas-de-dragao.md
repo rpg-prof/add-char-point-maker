@@ -1,0 +1,3 @@
+Esta magia faz com que o corpo do mago (ou uma pessoa qualquer ou criatura tocada pelo mago) torne-se completamente coberto com escamas de Dragão, efetivamente diminuindo a classe de armadura do alvo em 2 pela duração da magia; esta modificação adiciona-se a CA normal do alvo (por exemplo, se a CA do alvo for 6, escamas de dragão garantem CA 4).
+
+Acor das escamas de Dragão é a mesma que a escama utilizada como componente material da magia; no entanto, a cor não tem nenhuma relação com o efeito da magia. Escamas de Dragão também reduz temporariamente o carisma do alvo em 2 pontos. O componente material da magia é uma escama de qualquer dragão.

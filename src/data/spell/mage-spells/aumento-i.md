@@ -1,0 +1,3 @@
+Este feitiço aumenta os danos causados por qualquer feitiço de níveis 1-3. Para cada dado de danos lançado, o mago adiciona um ponto para o total de danos. A mágica Aumento I afeta apenas um feitiço lançado na rodada imediatamente após a realização dela. Se uma rodada inteira ou mais expirar, o Aumento é desperdiçado. Apenas as magias que causar dano físico direto são afetadas pelo Aumento; por exemplo, monstros adquiridos por meio de Convocar Monstro eu não ganham nenhum bônus aos seus danos.
+
+O componente material é um par de círculos concêntricos de bronze ou prata.

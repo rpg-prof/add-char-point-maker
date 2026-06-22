@@ -1,0 +1,3 @@
+No ponto culminante dessa mortal magia, o mago grita como uma Banshee (um espírito lamurioso). Para cada nível de conjurador, um ouvinte dentro da área de 9,5 de raio ouve o lamurio. E caso falhem em um teste de resistência magia, morre instantaneamente. O mago não pode escolher que é vítima dessa magia, ou quem será afetado. Se há mais vítimas potenciais que o nível de conjurador do mago, o mestre escolhe que será a vítima de forma aleatória. Criaturas que não tiverem como ouvir poderão ser alvos, mas não serão afetadas e serão consideradas como se tivessem passado automaticamente no teste de resistência.
+
+O Componente material é uma mecha de cabelo de uma Elfa Maligna.

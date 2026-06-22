@@ -1,0 +1,3 @@
+Essa magia cria um espaço extradimensional, um labirinto formado por planos de Força indestrutíveis. O receptor desaparece no Labirinto por um período de tempo que depende de seu nível de Inteligência.
+
+) Inteligência da Criatura menor que 3 de 3 a 5 de 6 a 8 de 9 a 11 de 12 a 14 de 15 a 17 18 ou maior Note que Teleportação, Porta Dimensional, Criar Passagens e poderes semelhantes não ajudarão uma criatura aprisionada por essa magia, mas Mudança de Plano, ou a capacidade de se transportar entre planos de existência, podem ser úteis.

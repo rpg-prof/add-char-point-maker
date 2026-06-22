@@ -1,0 +1,1 @@
+Cria esfera protetora cintilante. Bloqueia: - armas mágicas físicas - projéteis Não protege contra: - criaturas mágicas - ataques de olhar - magia pura O conjurador pode atacar de dentro. Pode ser anulada por Dissipar Magia. Componente material: arma mágica quebrada.

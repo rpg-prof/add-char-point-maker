@@ -8,6 +8,5 @@
     "components": "V, S, M",
     "area": "raio de 4,5 metros",
     "savingThrow": "Especial",
-    "source": "Opções para Jogadores — Habilidades e Poderes (AD&D 2ª Ed.)",
-    "description": "Cria uma aura cintilante ao redor das criaturas afetadas. Enquanto ativa: - nenhuma cura funciona - nenhuma regeneração funciona Afeta: - cura normal - cura mágica - poções - regeneração natural - regeneração monstruosa Exemplos: - troll não regenera - curar ferimentos falha - poções não funcionam Se a criatura sobreviver até o término: a cura volta ao normal.\n\nItens instantâneos não são consumidos se bloqueados. )."
+    "source": "Opções para Jogadores — Habilidades e Poderes (AD&D 2ª Ed.)"
 }

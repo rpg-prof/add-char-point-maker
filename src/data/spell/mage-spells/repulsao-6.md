@@ -1,0 +1,3 @@
+Quando essa magia é lançada, o mago faz com que todas as criaturas na área de efeito sejam repelidas. A Repulsão ocorre na mesma velocidade em que a criatura tentar se aproximar do mago. A vítima continua a afastar-se por uma rodada completa, mesmo que isso a leve para fora do alcance. O mago pode designar uma nova direção para a área de efeito a cada rodada, mas o uso desse poder conta como ação principal na rodada.
+
+O componente material é um par de pequenas barras de ferro magnetizadas, presas a duas estatuetas caninas, uma de marfim e a outra de ébano. Ogro mago Troll

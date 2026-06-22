@@ -8,6 +8,5 @@
     "components": "V, S, M",
     "area": "Um cubo de 10 metros/nível",
     "savingThrow": "Não",
-    "source": "Grimório do Necromante",
-    "description": "QUENTE CALMO Calor sufocante Sem vento Quando essa magia é lançada, ela retira a força vital das criaturas na Morno Brisa leve área de efeito instantânea e irrevogavelmente. Tais criaturas só poderão Vento Moderado ser ressuscitadas por Desejo. O número de criaturas afetadas depende MORNO VENTO MODERADO dos dados de vida.\n\nQuente Calmo Frio Vento Forte Dados de Vida da Criatura Máximo de criaturas afetadas FRIO VENTO FORTE Menos de 2 4d20 Quente Vento Moderado 2 a 4 2d20 Gelado Vendaval 4+1 a 6+3 2d4 GELADO VENDAVAL 6+4 a 8+3 1d4 Frio VENTO FORTE Ártico Se criaturas com dados de vida diferentes forem atacadas pela Magia da Tempestade Morte, jogue os dados (4d20) para determinar o número de criaturas de menos de 2 DV que são afetadas- Se o número obtido for maior que o TEMPESTADE número de seres, aplique o que sobrar para as criaturas com mais dados Vendaval de vida, de acordo com a tabela.\n\nDados de Vida da Criatura Fator de Conversão (FC) Menos de 2 1 2 a 4 2 4+1 a 6+3 10 6+4 a 8+3 20 Em outras palavras, subtraia do resultado dos 4d20 o número de criaturas com menos de 2 dados de vida (essas criaturas morrem)."
+    "source": "Grimório do Necromante"
 }

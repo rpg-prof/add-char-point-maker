@@ -1,0 +1,3 @@
+Por meio desta magia, o conjurador transforma-se temporariamente em uma sombra. Ganha: - taxa de movimento - classe de armadura - dado de vida - habilidades de sombra Ataque de dreno: 2–5 dano (1d4+1) e drena 1 ponto de Força. A Força retorna em 2d4 turnos. Se humano/semi-humano chegar a 0 PV ou 0 Força: torna-se sombra permanentemente no Plano Material Negativo.
+
+Equipamentos permanecem mas ficam inúteis. Não pode conjurar magias nessa forma. Imunidades: - sono - encantamentos - paralisia - frio 90% indetectável exceto ambientes muito iluminados. 5% chance de transformação permanente. Somente Desejo reverte. Componente material: parte decomposta de cadáver com mais de 100 anos + mármore com vidro negro.

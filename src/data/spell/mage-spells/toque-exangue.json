@@ -8,6 +8,5 @@
     "components": "V,S",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "source": "Grimório do Necromante",
-    "description": "Mecânica de jogo\n\nA vítima sofre:\n\n1d6 pontos de dano\n\nO conjurador recupera:\n\n1 ponto de vida para cada 2 pontos de dano causados.\n\nMáximo de cura:\n\n5 PV.\n\nMortos-vivos são imunes."
+    "source": "Grimório do Necromante"
 }

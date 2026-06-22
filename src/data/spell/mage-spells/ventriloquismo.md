@@ -1,0 +1,3 @@
+Essa magia permite ao mago fazer com que sua voz, a de outra pessoa, ou um som similar pareça originar-se de um outro lugar, ou de uma criatura, uma estátua, etc. O mago pode falar em qualquer língua que conheça, produzir sons a que esteja habituado, ou utilizar a magia Som Ilusório, Com respeito a tais sons e vozes, qualquer criatura que passar num teste de resistência à magia (com uma penalidade de -2) detecta a ilusão. Se utilizado em conjunto com outras ilusões, o Mestre pode conferir penalidades maiores, ou não permitir um teste de resistência graças ao efeito combinado.
+
+O componente material é um pergaminho enrolado em forma de cone.

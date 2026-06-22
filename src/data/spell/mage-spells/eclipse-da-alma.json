@@ -8,6 +8,5 @@
     "components": "V, S, M",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "source": "Grimório do Necromante",
-    "description": "Descrição\n\nUma sombra espiritual envolve a vítima.\n\nSua conexão com forças divinas e extraplanares torna-se\ninstável.\n\nDurante a duração:\n\n• Clérigos têm dificuldade para conjurar.\n\n• Paladinos perdem parte de suas bênçãos.\n\n• Criaturas celestiais enfraquecem.\n\nA alma permanece presente, mas obscurecida.\n\nUso em Campanha\n\nParticularmente eficaz contra:\n\n• Clérigos.\n\n• Paladinos.\n\n• Campeões divinos.\n\n• Celestiais.\n\nAparência\n\nA vítima parece perder o brilho espiritual que normalmente a\ncerca.\n\nMecânica de jogo\n\nA conexão espiritual da vítima com fontes divinas torna-se\nobscurecida.\n\nClérigos, druidas, paladinos e rangers afetados:\n\n• lançam magias como se fossem 4 níveis inferiores;\n\n• sofrem -2 em Jogadas de Proteção;\n\n• não podem utilizar habilidades de virar mortos-vivos.\n\nCriaturas extraplanares boas sofrem:\n\n• -1 em ataques;\n\n• -1 na CA.\n\nComponente Material\n\nCinzas retiradas de um altar abandonado."
+    "source": "Grimório do Necromante"
 }

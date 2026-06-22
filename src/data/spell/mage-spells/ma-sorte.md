@@ -1,0 +1,5 @@
+Com este feitiço, o mago selvagem cria um padrão negativo nas forças aleatórias em torno de uma criatura. Um Teste de Resistência é permitido à criatura; se for bem-sucedido, o feitiço falha.
+
+Se o Teste de Resistência falhar, a chance aleatória se enquadra em um padrão de má sorte. Qualquer ação que envolva chance aleatória (ou seja, qualquer jogada de dados) realizadas pela vítima durante as próximas 2-20 rodadas requer duas tentativas separadas; o pior resultado é sempre aplicado. (A vítima rola duas vezes seus ataques, danos, Testes de Resistência, etc., sempre usando o pior resultado). Uma pedra da sorte ou um dispositivo mágico semelhante irá negar a Má Sorte. Ao fazê-lo, no entanto, impede que o item mágico funcione por 2d10 rodadas.
+
+O componente material é um pedaço de um espelho quebrado. Mágicas do 5º Círculo

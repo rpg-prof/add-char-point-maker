@@ -1,0 +1,10 @@
+## Descrição
+
+Abre temporariamente uma passagem para o limiar entre vida e
+morte.
+
+Não é um portal para o Plano dos Mortos.
+
+É o caminho que as almas percorrem para chegar até ele.
+
+Pouquíssimos conjuradores ousam atravessá-lo.

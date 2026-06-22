@@ -1,0 +1,3 @@
+Essa magia barra uma porta ou portão de madeira, metal ou pedra. A magia trava firmemente o portão, como se ele estivesse fechado e trancado. ) de quatro ou mais dados de vida, pode arrebentar o portão e destruir a magia. Um mago que tenha quatro níveis de experiência a mais do que aquele que utilizou a magia, pode abrir o portão à vontade.
+
+Arrombar ou Dissipar Magia bem-sucedidas, podem anular Cerrar Portas. Portões fechados com esta magia podem ser derrubados ou quebrados normalmente.

@@ -1,0 +1,1 @@
+Cria cópia perfeita de: - mapas - projetos - escritos - magias Necessário: papel ou livro em branco. A cópia surge instantaneamente. Também serve para copiar magias entre grimórios. Pré-requisito: teste de aprendizado normal. Componente material: - páginas em branco - tinta preta

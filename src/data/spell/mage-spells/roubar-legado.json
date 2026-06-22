@@ -8,6 +8,5 @@
     "components": "V, S",
     "area": "Uma criatura",
     "savingThrow": "Sim",
-    "source": "Grimório do Necromante",
-    "description": "Descrição\n\nO necromante absorve temporariamente uma habilidade de uma\ncriatura morta.\n\nExemplos:\n\n• Idiomas.\n\n• Conhecimentos.\n\n• Talentos artesanais.\n\n• Técnicas marciais simples."
+    "source": "Grimório do Necromante"
 }

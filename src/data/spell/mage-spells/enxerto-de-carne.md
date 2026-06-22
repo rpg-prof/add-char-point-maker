@@ -1,0 +1,19 @@
+## Descrição
+
+Com Esta magia, um mago pode enxertar qualquer carne recém-colhida no corpo do destinatário, seja substituindo
+
+um membro perdido ou servindo como disfarce. A duração é limitada apenas pela compatibilidade da carne enxertada com o corpo do hospedeiro. A carne colhida do próprio destinatário (como um membro decepado) pode ser permanentemente recolocada com Esta magia. Entretanto, se o membro enxertado fosse retirado de um cadáver fresco, a duração máxima do magia seria de 1 dia/nível do lançador. Apenas os tecidos músculo-esqueléticos são afetados por Esta magia; não pode ser usado para enxertar órgãos ou anexar apêndices adicionais (como um braço extra) ao receptor.
+
+A carne enxertada também pode disfarçar o alvo (que pode ser o conjurador) com a carne de um cadáver. Enquanto o
+
+sujeito ganha a aparência facial e corporal do indivíduo falecido, a transformação é apenas "superficial". O destinatário mantém sua voz normal, conhecimento, magias e outras habilidades. Além disso, o alvo não ganha nenhuma habilidade física ou sensorial associada à sua nova aparência (a magia não pode, por exemplo, aumentar a força física do hospedeiro ou substituir a visão perdida). Esta aplicação dura 1 dia/nível do lançador.
+
+Durante a magia, a carne enxertada torna-se literalmente uma extensão do próprio corpo do hospedeiro (afetado
+
+entretanto, o tecido irradia uma leve aura de necromancia). O destinatário tem controle total sobre a carne como se fosse sua. Na conclusão do magia, a carne enxertada lentamente amortece e finalmente desaparece. Uma dissipação de magia bem-sucedida encerra a magia prematuramente.
+
+A carne enxertada funciona apenas em seres humanos vivos, demi-humanos ou humanóides. O componente material é
+
+o próprio membro decepado do hospedeiro ou então um substituto adequado de um cadáver fresco (morto por não mais que 1 dia por nível do conjurador). O tecido enxertado deve ser colhido da mesma espécie do hospedeiro. A carne enxertada não pode ser
+
+combinado com outros encantamentos (como embalsamamento ou ligação espiritual) que são usados ​​para preservar um cadáver. Ao final do magia, toda a carne enxertada se deteriorou além de toda utilidade e não pode ser usada em uma conjuração subsequente.

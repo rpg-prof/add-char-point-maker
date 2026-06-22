@@ -1,0 +1,1 @@
+Essa magia cria Bola de Fogo especial, com um bônus de +1 em cada dado de dano, e que pode explodir imediatamente, ou em até cinco rodadas depois de lançada, de acordo com o desejo do mago. Em outros aspectos, é exatamente igual ao efeito de Bola de Fogo.

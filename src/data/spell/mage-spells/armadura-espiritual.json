@@ -8,6 +8,5 @@
     "components": "V, S, M",
     "area": "o mago",
     "savingThrow": "Sim",
-    "source": "Grimório do Necromante",
-    "description": "Este feitiço permite ao mago cercar-se com uma porção de sua própria essência de vida, que assume a forma de uma aura trêmula. A Armadura Espiritual oferece proteção equivalente a Cota de Talas (AC 4) e concede ao mago um bônus de +3 nos Testes de Resistência contra ataques mágicos. Os efeitos da Armadura Espiritual não são cumulativos com outros tipos de armadura ou proteção mágica, mas os bônus de Destreza se aplicam. A Armadura Espiritual é eficaz contra ataques e armas mágicas e não mágicas. Não trancam a circulação ou adicionam peso ou estorvo. Ela não interfere na realização de mágicas."
+    "source": "Grimório do Necromante"
 }

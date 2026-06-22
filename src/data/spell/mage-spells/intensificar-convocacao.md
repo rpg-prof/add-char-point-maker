@@ -1,0 +1,3 @@
+Este feitiço aumenta a força das criaturas convocados pelo mago através de mágicas de Conjuração/Convocação de 1º a 6º nível. Apenas as magias que trazem criaturas convocadas até o mago são afetadas. As duas primeiras magias de Conjuração/Convocação realizadas pelo mago na jogada seguinte ao lançamento de Intensificar Convocação são afetadas. Criaturas convocadas ganham mais 2 pontos de vida por HD. As criaturas afetadas retém seus bônus nos pontos de vida até a expiração normal do feitiço que os convocou.
+
+Os componentes materiais são uma bolsa de couro pequena e um candelabro de prata em miniatura.

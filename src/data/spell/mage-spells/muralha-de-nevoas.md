@@ -1,0 +1,3 @@
+Ao utilizar essa magia, o mago cria uma grande quantidade de brumas, que ocupam toda a área de efeito. As brumas obscurecem a visão além de meio metro, mesmo com a utilização de Infravisão. O mago pode criar uma quantidade menor de brumas, se assim o desejar. A parede de brumas deve ser vagamente cúbica, com 3 metros de largura em sua menor dimensão. As brumas persistem por, no mínimo, três rodadas. A sua duração pode ser reduzida à metade por um vento moderado, e podem ser dispersadas por um vento forte.
+
+O componente material é um punhado de ervilhas secas.

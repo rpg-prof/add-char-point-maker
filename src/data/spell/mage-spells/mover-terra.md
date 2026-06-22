@@ -1,0 +1,1 @@
+Quando lançado, esse efeito desloca terra (argila, barro, areia) e os seus outros componentes. Com essa magia, aterros podem ser derrubados, pequenas colinas podem ser deslocadas e dunas, trocadas de lugar. Entretanto, saliências rochosas jamais podem ser derrubadas ou movidas. A área afetada determina o

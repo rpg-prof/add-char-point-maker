@@ -1,0 +1,1 @@
+Essa magia é muito semelhante ao Convocar Criaturas I, mas essa versão chama um ou dois monstros de 7º nível, que aparecem uma rodada depois da magia ser lançada, ou um monstro de 8º nível duas rodadas depois do efeito ser executado.

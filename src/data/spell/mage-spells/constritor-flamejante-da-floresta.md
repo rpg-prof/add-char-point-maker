@@ -1,0 +1,7 @@
+Este feitiço cria um tentáculo de chamas mágicas a serpentear diante de qualquer fonte existente de fogo natural ou mágico. A gavinha flamejante tem 3m de comprimento, tem AC 7, pode ser atingida apenas por armas mágicas +2 ou superiores e tem pontos de vida iguais ao dobro nível do mago. Qualquer criatura dentro de 7m do tentáculo está sujeito ao ataque, dirigido pelo mago. A vítima deve tentar um Teste e Resistência; se for bem- sucedida, a vítima evita o entrelaçamento, mas sofre 1d6 pontos de dano de fogo do contato com a gavinha.
+
+Se o Teste de Resistência falhar, a vítima é enredada pela serpente flamejante e sofre 3d6 pontos de dano de fogo a cada rodada, até a Gavinha ser destruída ou a duração de magia expirar.
+
+Se a origem do incêndio do qual emana o tentáculo se extingue, o tempo restante que pode existir o constritor flamejante é cortado pela metade.
+
+O componente material são escamas de um dragão vermelho.

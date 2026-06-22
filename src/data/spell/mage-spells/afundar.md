@@ -1,0 +1,11 @@
+Essa magia permite que o mago force uma criatura ou objeto a afundar no chão.
+
+Quando utiliza esse efeito, o mago precisa recitar a fórmula pelo menos até o final da rodada.
+
+Quando a rodada termina, a criatura ou objeto fica presa no ponto em que está, a não ser que obtenha sucesso em um teste de resistência contra magia (para uma criatura) ou contra Desintegração (para um objeto com propriedades mágicas). Itens não mágicos não podem resistir à essa magia. O receptor fica um pouco mais denso que o chão que o sustenta, se não obtiver sucesso. O mago tem agora a opção de interromper a magia, e deixar a vítima como está. Nesse caso, o efeito dura quatro turnos, e então o receptor voltará ao normal.
+
+Se o mago decidir continuar a magia durante a nova rodada, o receptor continua afundando.
+
+Antes de qualquer ação na rodada, a vítima afunda um quarto de sua altura. Depois das ações do primeiro grupo, ela afunda metade de sua altura. Depois das ações do outro grupo, ela está soterrada até três quartos de sua altura. Ao final da rodada, a vítima afunda. Esse sepultamento deixa a vítima num estado de animação suspensa. Isso significa que ela não envelhece. O metabolismo da criatura virtualmente cessa, mas a vítima não é prejudicada. O ponto mais alto da vítima afunda tantos metros quantos o receptor tiver de altura. Um ser de 1,80 metro de altura fica com seu ponto mais alto a 1,80 metro abaixo da superfície, um objeto de 15 metros de altura fica com seu ponto mais alto a 15 metros abaixo do solo.
+
+Se o solo ao redor do receptor for removido de alguma forma, o receptor volta ao normal, mas não emerge sozinho. Magias como Escavar, Pedra em Lama e

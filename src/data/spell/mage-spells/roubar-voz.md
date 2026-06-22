@@ -1,0 +1,13 @@
+## Descrição
+
+A voz da vítima é arrancada temporariamente.
+
+Durante a duração:
+
+- Não pode falar.
+
+- Não pode lançar magias verbais.
+
+- Não pode ativar palavras de comando.
+
+O necromante pode reproduzir a voz roubada.

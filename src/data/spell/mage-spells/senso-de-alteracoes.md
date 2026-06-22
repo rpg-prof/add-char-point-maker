@@ -1,0 +1,1 @@
+Permite alterar aspectos sensoriais de magias de 1º a 3º círculo. Pode modificar: - som - cor - aparência visual Não altera efeito mecânico. Exemplos: - bola de fogo verde - mísseis gritantes - orbes coloridas Não pode: - criar invisibilidade - tornar magia totalmente silenciosa Componente material: corda multicolorida + sino de prata.

@@ -1,0 +1,3 @@
+Este feitiço evapora umidade junto dos organismos de cada criatura de vida dentro da área de efeito, causando 1d8 pontos de dano por nível do mago. Um Teste de Resistência é permitido às criaturas afetadas, sucesso indica metade do dano. Este feitiço é especialmente devastador contra Elementais de Água e criaturas vegetais, que recebem uma penalidade de -2 para seus Testes de Resistência.
+
+O componente material é um pouco de esponja.

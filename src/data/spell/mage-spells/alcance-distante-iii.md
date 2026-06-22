@@ -1,0 +1,1 @@
+Esta magia funciona exatamente como a magia de 3º nível Alcance Distante I, exceto que o alcance de qualquer mágica dos níveis 1º-3º é aumentado em 150 % e o alcance de qualquer mágica de 4º ou 5º níveis é aumentada em 50 %.

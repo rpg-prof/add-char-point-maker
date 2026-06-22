@@ -8,6 +8,5 @@
     "components": "V, S, M",
     "area": "Todos os mortos-vivos da área",
     "savingThrow": "Especial",
-    "source": "Grimório do Necromante",
-    "description": "Descrição\n\nUma das magias mais lendárias da escola.\n\nDurante um breve período, o necromante assume autoridade absoluta\nsobre mortos-vivos presentes em uma vasta área.\n\nMesmo criaturas normalmente resistentes podem ser afetadas.\n\nAplicações\n\n• Guerras.\n\n• Defesa de necrópoles.\n\n• Confrontos épicos.\n\nMecânica de jogo\n\nO conjurador assume autoridade sobrenatural sobre os mortos.\n\nTodos os mortos-vivos com DV inferiores ao nível do conjurador\ntornam-se automaticamente obedientes.\n\nMortos-vivos mais poderosos recebem uma Jogada de Proteção\ncontra Magia.\n\nFalha:\n\n• tornam-se controlados.\n\nSucesso:\n\n• permanecem livres, mas não podem atacar diretamente o\n\tconjurador durante 1 rodada por nível.\n\nComponente Material\n\nUma coroa feita com ossos de pelo menos três espécies\ninteligentes diferentes."
+    "source": "Grimório do Necromante"
 }

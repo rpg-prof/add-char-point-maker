@@ -1,0 +1,3 @@
+Essa alteração permite ao mago conceder o poder de voar. A criatura afetada tem a capacidade de voar em qualquer direção com uma Movimentação de 18 (metade se estiver subindo, o dobro se descendo num mergulho). A categoria de manobra da criatura é B. Voar através dessa magia requer tanta concentração quanto andar, de forma que a maior parte das magias pode ser utilizada se o receptor flutuar no ar, ou voar devagar (com uma Movimentação de 3). Penalidades para combates durante o vôo estão descritas no Livro do Mestre, na seção Combate Aéreo. O Mestre deve determinar secretamente a duração exata da magia, que não deve ser conhecida pelo mago.
+
+O componente material é uma pena da asa de qualquer pássara.

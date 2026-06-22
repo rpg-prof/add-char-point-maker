@@ -8,6 +8,5 @@
     "components": "V",
     "area": "1 criatura",
     "savingThrow": "Sim",
-    "source": "Livro do Jogador (AD&D 2ª Ed.)",
-    "description": "A magia Cegueira faz com que a vítima fique cega, enxergando apenas um borrão cinza diante de seus olhos. As magias de cura não são capazes de remover esse efeito, e só a Dissipar Magia ou o mago que usou a magia podem remover a cegueira, caso a criatura falhe em seu teste de resistência à magia.\n\nUma criatura cega tem uma penalidade de -4 para as suas jogadas de ataque e resistência, e seus oponentes têm um bônus de +4 para suas jogadas de ataque contra a vítima."
+    "source": "Livro do Jogador (AD&D 2ª Ed.)"
 }

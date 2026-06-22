@@ -6,6 +6,5 @@
     "duration": "1 rodada/nível",
     "range": "5 metros/nível",
     "area": "1-4 criaturas em um cubo de 12 metros de aresta",
-    "source": "Livro do Jogador (AD&D 2ª Ed.)",
-    "description": "Esse efeito imobiliza de uma a quatro criaturas, de qualquer tipo, que estejam dentro do alcance da magia e no campo de visão do mago. O mago pode optar por imobilizar apenas uma, duas, três ou todas as quatro criaturas. Se três ou quatro forem atacadas, cada teste de"
+    "source": "Livro do Jogador (AD&D 2ª Ed.)"
 }

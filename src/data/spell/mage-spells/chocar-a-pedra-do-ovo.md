@@ -1,0 +1,1 @@
+Usada na criação da pedra filosofal. Pré-requisitos: - descobrir fórmula - reunir ingredientes - preparar mistura A magia: transforma lentamente a mistura. Conclusão: após conjuração de Permanência. Componente material: ovo filosofal. Não é consumido. Funções: 1. Reduz pela metade o tempo de criação de líquidos. 2. Necessário para criar pedra filosofal.
