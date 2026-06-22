@@ -21,6 +21,7 @@ import { parseCargaKg } from "@/data/currency";
 import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 import { getSubAttributeBonuses, subAttributeMap } from "@/data/subAttributes";
 import { arcaneSpells, divineSpells, type Spell } from "@/data/spells";
+import { stripMarkdown } from "@/lib/stripMarkdown";
 import {
   computeArmorClassBreakdown,
   computeAttackRollBreakdown,
@@ -318,7 +319,7 @@ function measureSpellCardHeight(
     h += measureWrappedLines(doc, getSpellDetailLines(spell), innerW, detailLineH);
     h += 6;
     doc.setFontSize(8);
-    const desc = spell.description?.trim() || "—";
+    const desc = stripMarkdown(spell.description?.trim() || "") || "—";
     h += measureWrappedLines(doc, [desc], innerW, descLineH);
   } else {
     h += detailLineH + descLineH;
@@ -390,7 +391,7 @@ function drawSpellCard(
     doc.setFont("helvetica", "normal");
     doc.setFontSize(8);
     doc.setTextColor(...PARCHMENT_INK);
-    const desc = spell.description?.trim() || "—";
+    const desc = stripMarkdown(spell.description?.trim() || "") || "—";
     const descLines = doc.splitTextToSize(desc, w - pad * 2) as string[];
     doc.text(descLines, x + pad, cy);
   } else {

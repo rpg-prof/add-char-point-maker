@@ -1,0 +1,11 @@
+Com essa magia, o clérigo pode moldar um pedaço de rocha em uma forma que sirva a seus propósitos. Por exemplo, uma arma de pedra, um alçapão especial ou um ídolo de pedra podem ser feitos. O efeito também permite ao clérigo remodelar uma porta de pedra para escapar da prisão, desde que o volume de pedra envolvido esteja dentro dos limites impostos pela magia. Arcas e portas de pedra podem ser construídas, mas a qualidade dos detalhes não é muito grande. Por exemplo, se a construção envolver pequenas partes móveis, há uma chance de 30% de que elas não funcionem.
+
+O tempo de execução depende da temperatura ambiente:
+
+- Abaixo de 0º: 1 turno
+- De 1º a 8º: 3 rodadas
+- De 9º a 15º: 2 turnos
+- De 16º a 20º: 3 turnos
+- De 21º em diante: 1 hora
+
+O componente material é argila, que deve ser modelada na forma aproximada do objeto desejado, e então encostada na rocha enquanto a magia é formulada.

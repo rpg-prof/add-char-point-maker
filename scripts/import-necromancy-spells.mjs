@@ -8,6 +8,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { writeSpellPair } from "./spell-io.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -334,10 +335,9 @@ for (const spell of parsed) {
     ...(spell.components ? { components: spell.components } : {}),
     ...(spell.area ? { area: spell.area } : {}),
     ...(spell.savingThrow ? { savingThrow: spell.savingThrow } : {}),
-    description: spell.description,
   };
 
-  fs.writeFileSync(filePath, JSON.stringify(json, null, 4) + "\n");
+  writeSpellPair(filePath, { ...json, description: spell.description });
   addToIndex(index, spell, filename);
   existing.push({ ...spell, file: filename, description: spell.description });
   added.push(spell);

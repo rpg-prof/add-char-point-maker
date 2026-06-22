@@ -1,0 +1,3 @@
+Essa magia permite ao clérigo determinar se algum objeto foi coberto com veneno, ou se é venenoso. Um objeto ou 1,5 metro de superfície pode ser examinado a cada rodada. O clérigo tem 5% de chance por nível de determinar o tipo exato de veneno.
+
+O componente material necessário é um velocino, que ficará preto no caso de ter veneno.

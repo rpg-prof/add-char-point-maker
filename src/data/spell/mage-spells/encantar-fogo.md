@@ -1,0 +1,3 @@
+Essa magia permite que o mago controle fogo natural manipulando sua dispersão e mudando sua direção como desejar.
+
+Quando conjurado, os pontos arcanos de qualquer chama devem estar no alcance da magia, entretanto o fogo precisa estar sobre superfície sólida. Uma chama não pode ser erguida no ar. O mago precisa manter concentração. O fogo pode: - dispersar-se por 4,5 metros quadrados ou - mover-se satisfatoriamente por 1,5 a 3 metros quadrados por rodada. As chamas podem atravessar: - água - neve - gelo - superfícies não inflamáveis A superfície não sofre dano. Criaturas e objetos expostos sofrem dano equivalente ao da fonte original. Exemplo: - candelabro → dano pequeno - fogueira → dano severo Componente material: pequeno pincel + pote de piche.

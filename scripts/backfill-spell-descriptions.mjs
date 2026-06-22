@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { parseGrimoireSpellsByKey } from "./spell-metadata-utils.mjs";
+import { readSpellPair, writeSpellPair } from "./spell-io.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -17,7 +18,7 @@ let updated = 0;
 
 for (const file of fs.readdirSync(SPELLS_DIR).filter((f) => f.endsWith(".json"))) {
   const fp = path.join(SPELLS_DIR, file);
-  const spell = JSON.parse(fs.readFileSync(fp, "utf8"));
+  const spell = readSpellPair(fp);
   const fromHtml = grimoire.get(`${spell.name}::${spell.level}`);
   if (!fromHtml) continue;
 
@@ -25,11 +26,9 @@ for (const file of fs.readdirSync(SPELLS_DIR).filter((f) => f.endsWith(".json"))
   const next = fromHtml.description.trim();
   if (!next) continue;
   if (next === current) continue;
-  // Atualiza se o HTML trouxer mais conteúdo ou formatação (seções, listas, exemplos).
   if (next.length < current.length && !current.startsWith("Descrição")) continue;
 
-  const ordered = { ...spell, description: next };
-  fs.writeFileSync(fp, JSON.stringify(ordered, null, 4) + "\n");
+  writeSpellPair(fp, { ...spell, description: next });
   updated++;
   console.log(
     `  ${spell.name} (nv${spell.level}): ${current.length} → ${next.length} chars`,

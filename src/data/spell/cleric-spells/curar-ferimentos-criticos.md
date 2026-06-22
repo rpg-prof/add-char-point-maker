@@ -1,0 +1,3 @@
+Curar Ferimentos Críticos é uma versão mais potente de Curar Ferimentos Leves. O clérigo coloca a mão sobre uma criatura e cicatriza 3d8 + 3 pontos de dano decorrentes de feridas ou outros estragos.
+
+O efeito não atua sobre criaturas sem forma corporal, de origem extraplanar ou mortos-vivos O reverso, Provocar Ferimentos Críticos, opera do mesmo modo que outras Provocar Ferimentos, requerendo uma jogada de ataque bem sucedida a fim de infligir 3d8 + 3 pontos de dano. Os danos causados são curados do mesmo modo que ferimentos normais.

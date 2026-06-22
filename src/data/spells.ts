@@ -23,23 +23,7 @@ export interface SpellList {
   spells: Spell[];
 }
 
-// Eagerly import all individual mage spell JSON files
-const mageSpellFiles = import.meta.glob<{
-  name: string;
-  level: number;
-  school: string;
-  castingTime: string;
-  duration: string;
-  range: string;
-  area?: string;
-  components?: string;
-  savingThrow?: string;
-  source?: string;
-  description: string;
-}>("./spell/mage-spells/*.json", { eager: true });
-
-// Eagerly import all individual cleric spell JSON files
-const clericSpellFiles = import.meta.glob<{
+interface SpellMetadata {
   name: string;
   level: number;
   school: string;
@@ -51,21 +35,62 @@ const clericSpellFiles = import.meta.glob<{
   components?: string;
   savingThrow?: string;
   source?: string;
-  description: string;
-}>("./spell/cleric-spells/*.json", { eager: true });
+  /** Legado: descrição ainda embutida em JSON antigos. */
+  description?: string;
+}
+
+// Eagerly import all individual mage spell JSON files
+const mageSpellFiles = import.meta.glob<{ default: SpellMetadata }>(
+  "./spell/mage-spells/*.json",
+  { eager: true },
+);
+
+const mageSpellDescriptions = import.meta.glob<string>(
+  "./spell/mage-spells/*.md",
+  { query: "?raw", import: "default", eager: true },
+);
+
+// Eagerly import all individual cleric spell JSON files
+const clericSpellFiles = import.meta.glob<{ default: SpellMetadata }>(
+  "./spell/cleric-spells/*.json",
+  { eager: true },
+);
+
+const clericSpellDescriptions = import.meta.glob<string>(
+  "./spell/cleric-spells/*.md",
+  { query: "?raw", import: "default", eager: true },
+);
+
+function unwrapSpellModule(
+  module: SpellMetadata | { default: SpellMetadata } | undefined,
+): SpellMetadata | undefined {
+  if (!module) return undefined;
+  if ("default" in module && module.default) return module.default;
+  return module as SpellMetadata;
+}
+
+function resolveDescription(
+  filePath: string,
+  detail: SpellMetadata,
+  descriptionFiles: Record<string, string>,
+): string {
+  const mdPath = filePath.replace(/\.json$/, ".md");
+  if (descriptionFiles[mdPath]) return descriptionFiles[mdPath];
+  return detail.description ?? "";
+}
 
 // Generic loader from index + detail files
 function loadSpells(
   index: Record<string, Array<{ name: string; file: string; level: number; school: string; sphere?: string }>>,
-  detailFiles: Record<string, any>,
-  pathPrefix: string
+  detailFiles: Record<string, { default: SpellMetadata }>,
+  descriptionFiles: Record<string, string>,
 ): Spell[] {
   const spells: Spell[] = [];
 
   for (const [, entries] of Object.entries(index)) {
     for (const entry of entries) {
       const filePath = `./spell/${entry.file}`;
-      const detail = detailFiles[filePath];
+      const detail = unwrapSpellModule(detailFiles[filePath]);
       if (detail) {
         spells.push({
           name: detail.name || entry.name,
@@ -79,7 +104,7 @@ function loadSpells(
           area: detail.area,
           savingThrow: detail.savingThrow,
           source: detail.source,
-          description: detail.description || "",
+          description: resolveDescription(filePath, detail, descriptionFiles),
         });
       } else {
         // Fallback: use index data only
@@ -103,8 +128,8 @@ function loadSpells(
 const mageIndex = mageSpellIndex["by-level"] as Record<string, Array<{ name: string; file: string; level: number; school: string }>>;
 const clericIndex = clericSpellIndex["by-level"] as Record<string, Array<{ name: string; file: string; level: number; school: string; sphere?: string }>>;
 
-export const arcaneSpells: Spell[] = loadSpells(mageIndex, mageSpellFiles, "mage-spells");
-export const divineSpells: Spell[] = loadSpells(clericIndex, clericSpellFiles, "cleric-spells");
+export const arcaneSpells: Spell[] = loadSpells(mageIndex, mageSpellFiles, mageSpellDescriptions);
+export const divineSpells: Spell[] = loadSpells(clericIndex, clericSpellFiles, clericSpellDescriptions);
 
 export const spellLists: SpellList[] = [
   {

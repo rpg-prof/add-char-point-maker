@@ -5,6 +5,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { readSpellPair, writeSpellPair } from "./spell-io.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -41,12 +42,11 @@ const isMain = process.argv[1] === fileURLToPath(import.meta.url);
 if (isMain) {
   let updated = 0;
   for (const fp of walkJsonFiles(SPELLS_ROOT)) {
-    const spell = JSON.parse(fs.readFileSync(fp, "utf8"));
+    const spell = readSpellPair(fp);
     if (!spell.description) continue;
     const reordered = reorderDescription(spell.description);
     if (reordered === spell.description) continue;
-    spell.description = reordered;
-    fs.writeFileSync(fp, JSON.stringify(spell, null, 4) + "\n");
+    writeSpellPair(fp, { ...spell, description: reordered });
     console.log(`  ~ ${spell.name} (${path.relative(SPELLS_ROOT, fp)})`);
     updated++;
   }

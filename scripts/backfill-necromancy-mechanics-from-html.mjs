@@ -13,6 +13,7 @@ import {
   parseDescription,
   serializeSpellJson,
 } from "./spell-metadata-utils.mjs";
+import { readSpellPair, writeSpellPair } from "./spell-io.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -146,7 +147,7 @@ function addToIndex(index, spell, file) {
 
 function findJsonByName(name) {
   for (const file of fs.readdirSync(SPELLS_DIR).filter((f) => f.endsWith(".json"))) {
-    const spell = JSON.parse(fs.readFileSync(path.join(SPELLS_DIR, file), "utf8"));
+    const spell = readSpellPair(path.join(SPELLS_DIR, file));
     if (normalize(spell.name) === normalize(name)) {
       return { file, spell, path: path.join(SPELLS_DIR, file) };
     }
@@ -171,10 +172,7 @@ for (const fromHtml of parsed) {
     const merged = mergeMetadata(hit.spell, fromHtml);
     merged.description = mergeDescription(fromHtml.description, hit.spell.description);
 
-    fs.writeFileSync(
-      hit.path,
-      JSON.stringify(serializeSpellJson(merged), null, 4) + "\n",
-    );
+    writeSpellPair(hit.path, merged);
 
     const fileRef = `mage-spells/${hit.file}`;
     addToIndex(index, { ...merged, level: oldLevel }, fileRef);
@@ -198,7 +196,7 @@ for (const fromHtml of parsed) {
     json.description = `Mecânica de jogo\n\n${json.description}`;
   }
 
-  fs.writeFileSync(filePath, JSON.stringify(serializeSpellJson(json), null, 4) + "\n");
+  writeSpellPair(filePath, json);
   addToIndex(index, json, `mage-spells/${filename}`);
   added.push(fromHtml.name);
 }

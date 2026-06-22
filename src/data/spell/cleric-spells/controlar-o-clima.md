@@ -1,0 +1,1 @@
+Controlar o Clima torna o clérigo capaz de modificar o clima na área local. A magia aleta o tempo por 4d12 horas em uma área de 8d4 quilômetros quadrados. O efeito requer um turno para a execução, e 1d4 turnos adicionais para seus eleitos aparecerem. e possuem três

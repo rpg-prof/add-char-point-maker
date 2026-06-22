@@ -1,0 +1,3 @@
+Essa magia permite que o clérigo transforme sua clava ou bastão de carvalho que não pode possuir parte ou peça de metal em urna arma mágica com bônus de +1 na jogada de ataque. Esta arma inflige dano de 2d4 pontos em oponentes de tamanho humano ou menor, e 1d4+1 em oponentes maiores. A magia não causa dano algum à arma utilizada. O clérigo deverá ter perícia no uso da arma, e ele mesmo precisa manuseá-la.
+
+O componente material é uma folha de um trevo, e o símbolo sagrado do clérigo.

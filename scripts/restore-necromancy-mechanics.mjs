@@ -7,7 +7,7 @@ import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
 import { fileURLToPath } from "url";
-import { serializeSpellJson } from "./spell-metadata-utils.mjs";
+import { readSpellPair, writeSpellPair } from "./spell-io.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -82,7 +82,7 @@ let updated = 0;
 
 for (const file of fs.readdirSync(SPELLS_DIR).filter((f) => f.endsWith(".json") && TARGET_FILES.has(f))) {
   const fp = path.join(SPELLS_DIR, file);
-  const current = JSON.parse(fs.readFileSync(fp, "utf8"));
+  const current = readSpellPair(fp);
   const old = gitSpell(file);
   if (!old?.description?.trim()) continue;
   if (!needsMechanics(current.description)) continue;
@@ -94,7 +94,7 @@ for (const file of fs.readdirSync(SPELLS_DIR).filter((f) => f.endsWith(".json") 
     ...(METADATA_OVERRIDES[file] ?? {}),
   };
 
-  fs.writeFileSync(fp, JSON.stringify(serializeSpellJson(merged), null, 4) + "\n");
+  writeSpellPair(fp, merged);
   console.log(`  + ${merged.name} (${file})`);
   updated++;
 }

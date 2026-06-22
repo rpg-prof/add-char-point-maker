@@ -17,6 +17,7 @@ import {
   formatSpellDescription,
   serializeSpellJson,
 } from "./spell-metadata-utils.mjs";
+import { readSpellPair, writeSpellPair } from "./spell-io.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -212,7 +213,7 @@ async function translateMetaValue(value) {
 function listCbnSpells() {
   return walkJsonFiles(SPELLS_ROOT).filter((fp) => {
     if (ONLY && !ONLY.has(path.basename(fp, ".json"))) return false;
-    const spell = JSON.parse(fs.readFileSync(fp, "utf8"));
+    const spell = readSpellPair(fp);
     return spell.source === SOURCE_CBN;
   });
 }
@@ -225,7 +226,7 @@ async function main() {
   let skipped = 0;
 
   for (const fp of files) {
-    const spell = JSON.parse(fs.readFileSync(fp, "utf8"));
+    const spell = readSpellPair(fp);
     const descNeeds = needsTranslation(spell.description ?? "");
     const metaNeeds = META_FIELDS.some((f) => needsTranslation(spell[f] ?? ""));
 
@@ -264,10 +265,7 @@ async function main() {
       continue;
     }
 
-    fs.writeFileSync(
-      fp,
-      JSON.stringify(serializeSpellJson(next), null, 4) + "\n",
-    );
+    writeSpellPair(fp, next);
     updated++;
   }
 

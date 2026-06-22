@@ -1,0 +1,3 @@
+Essa magia, para todos os efeitos, é idêntica à Proteção ao Mal, exceto no que diz respeito à área de efeito e à duração, que são maiores. O efeito é centrado em uma criatura, e move-se com ela. Se qualquer um dos personagens protegidos atacar um monstro encantado/convocado, a proteção contra esse tipo de criatura deixa de existir.
+
+Um ser grande demais para caber na área de eleito (um Titã, por exemplo) permanece parcialmente exposto, a menos que ele próprio seja o receptor do efeito. Nesse caso. a magia atua como uma Proteção ao Mal comum, e apenas para essa criatura.

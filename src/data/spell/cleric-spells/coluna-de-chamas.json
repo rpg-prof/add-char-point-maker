@@ -7,6 +7,5 @@
     "duration": "Instantânea",
     "range": "60 metros",
     "area": "Coluna com raio de 2 metros por altura de 10 metros",
-    "source": "Livro do Jogador (AD&D 2ª Ed.)",
-    "description": "Quando essa magia é lançada, uma coluna vertical de fogo aparece no local determinado pelo clérigo. Qualquer criatura dentro da área de efeito deve passar por um teste de resistência à magia. Fracasso significa que a vítima sofrerá 6d8 pontos de dano. Do contrário, o dano cai pela metade.\n\nO componente material é uma pitada de enxofre."
+    "source": "Livro do Jogador (AD&D 2ª Ed.)"
 }

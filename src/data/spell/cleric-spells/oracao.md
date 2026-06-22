@@ -1,0 +1,15 @@
+A mais básica das magias sacerdotais é a oração, é o pedido e invocação de natureza mais branda. Tipicamente, clérigos aprendem um número de orações na mesma velocidade que um estudante aprende habilidades mágicas e ênfases conceituais, ideologias, ou brasões importantes para sua fé. Orações não são como as demais magias de 1º círculo.
+
+Sacerdotes memorizam um número particularizado de orações igual a três +1 por nível (no máximo nove) quando devotam espaços para a oração. Em outras palavras, um clérigo de primeiro nível decora quatro orações por magia de 1° círculo gasto, oito para dois espaços gastos, e assim por diante.
+
+Diferente da magia arcana truque, oração possui efeitos mais específicos, apesar de clérigos não precisarem decidir o tipo de oração que irão usar até a hora de conjurar a magia. Independente da escolha do jogador, nenhuma oração dura mais que uma rodada por nível do sacerdote. Uma criatura que está sofrendo náuseas, relativa dor e desconforto.
+
+Dores e náuseas induzidas magicamente só serão aliviadas caso a vítima passe em teste de resistência à magia com penalidade de -2. Uma criatura que esteja amedrontada ou atemorizada será acalmada. Vítimas sofrendo de efeitos mágicos só serão acalmadas com teste de resistência à magia com penalidade de -2.
+
+Pela duração da oração, um clérigo discursa de forma clara e livre de impedimentos. Normalmente usado para ensinamentos de textos sacros e ritos. Condições mágicas como confundir linguagens não são afetadas. O sacerdote ganha +1 para a próxima jogada de ataque, desde que ocorra durante a duração da magia.
+
+O clérigo ganha +1 nos testes de Inteligência e Sabedoria para solucionar enigmas ou resolver problemas. Com um toque, o sacerdote cura 1 ponto de vida da criatura. Magias persistentes ou itens mágicos dentro de 10 metros produzem sensação perceptível. Não identifica natureza específica do efeito.
+
+Qualquer item submetido à memória do mago durante a duração da magia é completamente compreendido. Recebe +2 em testes para lembrar aparência, funcionalidade ou significado. +1 no próximo teste de resistência à magia. +2 no próximo teste de resistência a veneno. Outros poderes podem ser permitidos pelo Mestre.
+
+Normalmente uma oração não é efetiva em mais que uma criatura ou dado de vida por vez. Orações ofensivas são raras.

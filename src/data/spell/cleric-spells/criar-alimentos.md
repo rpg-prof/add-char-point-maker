@@ -1,0 +1,5 @@
+Quando essa magia é executada, o clérigo cria comida e bebida. A comida, apesar de ser insípida, é muito nutritiva. Cada 30 litros sustentam por um dia inteiro três criaturas de tamanho humano, ou uma criatura do tamanho de um cavalo.
+
+Após 24 horas, a substância apodrece e deixa de ser comestível, embora o uso da magia Purificar Alimentos, possa restaurar o alimento por mais 24 horas. Para cada nível de experiência do clérigo podem ser criados 30 litros de comida ou água.
+
+Assim, um clérigo de 5º nível poderá criar cinco porções, que podem ser todas de água, todas de alimento, ou uma combinação das duas.

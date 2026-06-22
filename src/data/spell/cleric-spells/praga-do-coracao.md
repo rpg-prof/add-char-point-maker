@@ -1,0 +1,29 @@
+## Descrição
+
+Com Esta magia, um sacerdote necromante maligno pode exercer sua vontade sombria no coração ainda pulsante de qualquer
+
+vítima viva, desde que o alvo permaneça claramente visível (linha de visão) e dentro do alcance da magia. Depois de lançar a magia, o sacerdote deve concentrar toda a sua concentração no coração da vítima por três rodadas, durante as quais o lançador não pode lançar outros magias ou se envolver em combate corpo a corpo. O sacerdote pode, no entanto, andar, falar e tomar precauções defensivas comuns enquanto a magia percorre a vítima.
+
+Durante a primeira rodada do magia, a vítima deve fazer um teste de resistência contra magia mortal com penalidade de -2.
+
+Este teste de resistência é modificado de acordo com o ajuste do ponto de vida da vítima devido à Constituição (+1 bônus para 15 Con, +2 para 16 Con e assim por diante; consulte a página 15 no PHB para mais informações).
+
+Se a vítima fizer este primeiro teste de resistência, a magia não consegue dominar seu coração e não tem mais efeito.
+
+efeito. Se a vítima falhar no teste, entretanto, ela sofrerá um enorme espasmo de dor no peito (semelhante à sentida em um ataque cardíaco), infligindo de 1 a 8 pontos de dano à vítima e incapacitando completamente o indivíduo por uma rodada excruciante.
+
+Durante a segunda rodada, a vítima tem direito a outro teste de resistência, desta vez com penalidade de -1 (mais qualquer
+
+bônus para Con). Como antes, se a vítima fizer o teste de resistência, a magia termina sem nenhum efeito adicional. Se falhar, porém, a dor no peito da vítima se intensifica, como se uma faixa abrasadora de ferro estivesse sendo lentamente apertada ao redor do coração. O personagem sente fortes tonturas, desorientação e dores terríveis nos braços, mandíbula e ombro esquerdo.
+
+Enquanto isso, a vítima perde 25% de quaisquer pontos de vida restantes, fica paralisada de dor por 2 a 5 rodadas e
+
+perde imediatamente 2 a 5 pontos de Força, Constituição e Destreza. Desde que a vítima sobreviva ao estágio final da magia (veja abaixo), esses pontos perdidos são recuperados a uma taxa de 1 ponto em cada um desses três valores de habilidade por dia.
+
+Na terceira rodada do magia, o alvo deve fazer um teste de resistência (terceiro, não modificado) contra magia da morte ou
+
+sofrer um ataque cardíaco fulminante, resultando em morte imediata (o tempo de início é de 1 rodada, durante o qual a vítima fica completamente incapacitada). Alternativamente, um Mestre gentil pode decidir que a fase final do magia meramente mergulha a vítima em um coma profundo, semelhante à morte, durando de 1 a 4 dias e resultando na perda permanente de 1 ponto de Constituição.
+
+Esta magia mortal pode ser frustrado de várias maneiras. Conjurando dissipar magia com sucesso em qualquer um dos
+
+a vítima ou o sacerdote interromperão a praga do coração, assim como lançar um simples magia de proteção contra o mal na vítima ou usar um escaravelho de proteção (isso drena uma carga, no entanto). Além disso, a vítima pode ter o direito de repetir um teste de resistência com um bônus de +2 se for tratada por outro personagem com proficiência em cura com armas comuns. Finalmente, a magia é imediatamente quebrado se a vítima for transportada para fora do alcance ou removida da linha de visão do sacerdote. Devido ao seu efeito assassino, Esta magia só é concedido a sacerdotes perversos pelos deuses da Morte, da Doença e do Mal.

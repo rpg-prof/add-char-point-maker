@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Formata descrições de magias (parágrafos, listas, remoção de metadados duplicados). */
+/** Formata descrições de magias em arquivos .md (parágrafos, listas, remoção de metadados duplicados). */
 import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
@@ -7,8 +7,8 @@ import { fileURLToPath } from "url";
 import {
   formatSpellDescription,
   isAlreadyFormatted,
-  serializeSpellJson,
 } from "./spell-metadata-utils.mjs";
+import { readSpellPair, writeSpellPair } from "./spell-io.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -24,9 +24,18 @@ function gitDescription(gitSubdir, file) {
       encoding: "utf8",
       cwd: ROOT,
     });
-    return JSON.parse(raw).description?.trim() || "";
+    const parsed = JSON.parse(raw);
+    return parsed.description?.trim() || "";
   } catch {
-    return "";
+    try {
+      const mdFile = file.replace(/\.json$/, ".md");
+      return execSync(`git show HEAD:src/data/spell/${gitSubdir}/${mdFile}`, {
+        encoding: "utf8",
+        cwd: ROOT,
+      }).trim();
+    } catch {
+      return "";
+    }
   }
 }
 
@@ -38,7 +47,7 @@ for (const { dir, git } of DIRS) {
 
   for (const file of fs.readdirSync(dir).filter((f) => f.endsWith(".json"))) {
     const fp = path.join(dir, file);
-    const spell = JSON.parse(fs.readFileSync(fp, "utf8"));
+    const spell = readSpellPair(fp);
     if (!spell.description?.trim()) continue;
     if (isAlreadyFormatted(spell.description)) continue;
 
@@ -49,8 +58,7 @@ for (const { dir, git } of DIRS) {
     const formatted = formatSpellDescription(source);
     if (formatted === spell.description.trim()) continue;
 
-    spell.description = formatted;
-    fs.writeFileSync(fp, JSON.stringify(serializeSpellJson(spell), null, 4) + "\n");
+    writeSpellPair(fp, { ...spell, description: formatted });
     updated++;
     dirCount++;
   }

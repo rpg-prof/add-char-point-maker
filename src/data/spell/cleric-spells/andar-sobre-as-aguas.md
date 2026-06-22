@@ -1,0 +1,3 @@
+Com esta magia, o clérigo faz com que a criatura tocada possa caminhar sobre líquidos (água, óleo, lodo, etc.) como se fosse solo firme. Os pés da criatura afetada, na realidade, não tocam a superfície do líquido, embora depressões ovais de tamanho (e profundidade não superior a 5 centímetros) adequado formem-se sobre neve ou lama. A movimentação mantém-se estável. Se este efeito é executado embaixo da água, a criatura afetada projeta-se em direção à superfície, onde começa a boiar.
+
+Para cada nível do clérigo acima do 5º, uma pessoa extra pode ser afetada. Esta magia requer, além do símbolo sagrado (que não é consumido), um pedaço de cortiça.

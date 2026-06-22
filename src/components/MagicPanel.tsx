@@ -4,6 +4,7 @@ import { spellLists, type Spell } from "@/data/spells";
 import { GRIMOIRE_SPELL_POINT_COST } from "@/lib/pointBreakdown";
 import { spellMatchesArcane, spellMatchesDivine } from "@/data/magicAccess";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import SpellDescription from "@/components/SpellDescription";
 
 interface MagicPanelProps {
   grimoire: string[];
@@ -67,7 +68,7 @@ const SpellItem = ({
             {spell.sphere && <span><span className="text-foreground font-semibold">Esfera:</span> {spell.sphere}</span>}
             {spell.source && <span className="col-span-2"><span className="text-foreground font-semibold">Fonte:</span> {spell.source}</span>}
           </div>
-          <p className="pt-1 border-t border-border/50 whitespace-pre-wrap">{spell.description}</p>
+          <SpellDescription description={spell.description} />
         </div>
       )}
     </div>

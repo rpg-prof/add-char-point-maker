@@ -1,0 +1,7 @@
+Quando o clérigo lança Santuário, qualquer um que procure atacar diretamente o receptor precisará de sucesso num teste de resistência à magia. Se for bem-sucedido, o adversário poderá atacar normalmente. Porém, se falhar, ele esquecerá a criatura até o final do efeito. Aqueles que não quiserem atacar o receptor não serão afetados.
+
+Note que esta magia não previne ataques de área (Bola de Fogo, Tempestade Glacial, etc.).
+
+Se o receptor realizar um ataque, o efeito será anulado, mas a criatura ainda poderá fazer magias que não sejam de ataque, ou qualquer outra coisa que não viole a proibição contra ações ofensivas. Isto permite, por exemplo, que um clérigo protegido por esta magia cure ferimentos, ofereça uma bênção, profetize, lance uma magia de Cântico ou Luzem uma área (não em um oponente).
+
+Os componentes são o símbolo sagrado do clérigo e um pequeno espelho de prata.

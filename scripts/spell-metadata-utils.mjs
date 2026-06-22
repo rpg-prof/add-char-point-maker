@@ -328,6 +328,5 @@ export function serializeSpellJson(spell) {
     ...(spell.area ? { area: spell.area } : {}),
     ...(spell.savingThrow ? { savingThrow: spell.savingThrow } : {}),
     ...(spell.source ? { source: spell.source } : {}),
-    description: spell.description,
   };
 }

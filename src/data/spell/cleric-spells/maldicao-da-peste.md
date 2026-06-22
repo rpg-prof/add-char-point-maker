@@ -1,0 +1,17 @@
+## Descrição
+
+Por meio deste magia, um necromante lança uma poderosa maldição sobre uma pessoa ou objeto que se torna um
+
+portador de peste e contágio. Cada pessoa ou animal que entra em contato físico direto com o portador amaldiçoado deve fazer um teste de resistência contra magia da morte ou contrair uma doença fatal (conforme descrito no magia de sacerdote de 3º nível causar doença nas páginas 209-10 do PHB), resultando na morte lenta e agonizante da vítima dentro de 2 a 5 semanas. O foco vivo de uma maldição de peste é completamente imune aos efeitos da doença que carrega. Em muitos casos, o transportador estará alheio à sua maldita condição – especialmente se o transportador for um viajante frequente e não permanecer num único local o tempo suficiente para que os sintomas da peste surjam naqueles com quem contacta.
+
+O portador de uma maldição de peste não exibe sinais externos de doença e irradia apenas uma aura muito fraca de
+
+necromancia (apenas 5% de chance de detecção por nível). A maldição só pode ser removida de um indivíduo por um sacerdote de nível superior ao do conjurador (dissipar magia não tem efeito); alternativamente, um objeto amaldiçoado pode ser limpo pela destruição no fogo.
+
+Normalmente, a maldição só expira depois de ter reivindicado uma vida para cada nível do lançador original. Quanto ao
+
+deadly affliction caused by a plague curse, it may be successfully treated with a paladin's healing touch or with such spells as cure disease, heal, or restoration.
+
+Os segredos deste encantamento maligno são conhecidos apenas pelos poucos sacerdotes que servem os deuses frios.
+
+de pestilência e decadência. Há rumores de que alguns Sacerdotes da Peste devem aceitar voluntariamente esta maldição para sua religião. Invocar uma maldição de peste envelhece o lançador em um ano. O componente material é o símbolo profano do sacerdote e uma pequena bola de mirra.

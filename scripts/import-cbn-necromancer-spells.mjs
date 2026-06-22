@@ -11,6 +11,7 @@ import {
   SOURCE_CBN,
 } from "./cbn-spell-translations.mjs";
 import { serializeSpellJson, slugify } from "./spell-metadata-utils.mjs";
+import { readSpellPair, writeSpellPair } from "./spell-io.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -348,11 +349,12 @@ function importSpells(spells, config) {
 
     if (existing) {
       const merged = {
-        ...JSON.parse(fs.readFileSync(existing.path, "utf8")),
+        ...readSpellPair(existing.path),
         ...json,
+        description: spell.description,
         source: spell.source,
       };
-      fs.writeFileSync(existing.path, JSON.stringify(serializeSpellJson(merged), null, 4) + "\n");
+      writeSpellPair(existing.path, merged);
       addToIndex(index, merged, `${filePrefix}/${existing.file}`, isCleric);
       updated.push(spell.name);
       continue;
@@ -367,7 +369,7 @@ function importSpells(spells, config) {
       }
     }
 
-    fs.writeFileSync(filePath, JSON.stringify(json, null, 4) + "\n");
+    writeSpellPair(filePath, { ...json, description: spell.description });
     addToIndex(index, spell, `${filePrefix}/${filename}`, isCleric);
     added.push(spell.name);
   }

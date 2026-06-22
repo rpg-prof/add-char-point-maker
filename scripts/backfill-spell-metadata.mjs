@@ -11,8 +11,8 @@ import {
   inferMetadata,
   mergeMetadata,
   countMissingMeta,
-  isEmptyMeta,
 } from "./spell-metadata-utils.mjs";
+import { readSpellPair, writeSpellPair } from "./spell-io.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -28,7 +28,7 @@ let inferred = 0;
 
 for (const file of fs.readdirSync(SPELLS_DIR).filter((f) => f.endsWith(".json"))) {
   const fp = path.join(SPELLS_DIR, file);
-  const spell = JSON.parse(fs.readFileSync(fp, "utf8"));
+  const spell = readSpellPair(fp);
   const beforeMissing = countMissingMeta(spell);
 
   const htmlMeta = grimoireMeta.get(`${spell.name}::${spell.level}`) ?? null;
@@ -44,21 +44,7 @@ for (const file of fs.readdirSync(SPELLS_DIR).filter((f) => f.endsWith(".json"))
 
   if (afterMissing === beforeMissing) continue;
 
-  const ordered = {
-    name: merged.name,
-    level: merged.level,
-    school: merged.school,
-    ...(merged.sphere ? { sphere: merged.sphere } : {}),
-    ...(merged.castingTime ? { castingTime: merged.castingTime } : {}),
-    ...(merged.duration ? { duration: merged.duration } : {}),
-    ...(merged.range ? { range: merged.range } : {}),
-    ...(merged.components ? { components: merged.components } : {}),
-    ...(merged.area ? { area: merged.area } : {}),
-    ...(merged.savingThrow ? { savingThrow: merged.savingThrow } : {}),
-    description: merged.description,
-  };
-
-  fs.writeFileSync(fp, JSON.stringify(ordered, null, 4) + "\n");
+  writeSpellPair(fp, { ...merged, description: spell.description });
   updated++;
   if (htmlMeta) fromHtml++;
   if (inferredMeta && afterMissing < beforeMissing) inferred++;

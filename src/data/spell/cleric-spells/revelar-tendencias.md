@@ -1,0 +1,5 @@
+Revelar Tendência dá ao clérigo capacidade de ler com exatidão a aura de uma criatura ou objeto (objetos sem tendências não revelam nada). O clérigo deverá parar e se concentrar no que quer ler por uma rodada.
+
+Se a criatura passar no teste de resistência à magia, nada será revelado. Certos artifícios mágicos podem neutralizar o poder desta magia.
+
+O reverso. Dissimular Tendência, oculta a tendência de um objeto ou criatura por 24 horas.

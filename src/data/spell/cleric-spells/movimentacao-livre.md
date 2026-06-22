@@ -1,0 +1,3 @@
+Essa magia permite que a criatura afetada mova-se e ataque normalmente por toda a duração do efeito, mesmo que sofra a influência de magias que impediriam a movimentação (como os efeitos arcanos Lentidão e Teia), ou embaixo da água. Ela também previne e desfaz efeitos mágicos de imobilização. Embaixo d’água. a criatura afetada mantém sua movimentação normal, e em combate causa o dano usual, desde que a arma utilizada não seja de arremesso. Esta magia não fornece ao seu receptor a capacidade de respirar embaixo da água, sendo necessário o uso de outro efeito para esse fim.
+
+O componente material, que deve ser atado ao braço (ou a outro membro) do receptor é uma faixa de couro (que se desintegra ao final do eleito).

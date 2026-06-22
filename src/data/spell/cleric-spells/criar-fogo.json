@@ -7,6 +7,5 @@
     "duration": "1 rodada",
     "range": "40 metros",
     "area": "Quadrado de 4 metros de lado",
-    "source": "Livro do Jogador (AD&D 2ª Ed.)",
-    "description": "O clérigo, ao usar essa magia, cria fogo comum (não mágico) numa área de até 16 metros quadrados. Apesar das chamas durarem apenas uma rodada, elas pode incendiar materiais inflamáveis, e causam dano de 1d4 pontos +1 ponto/nível em criaturas na área afetada. A magia reversa, Extinguir Fogo, apaga todo fogo normal (carvão, óleo, cera, etc.) na área de efeito.\n\nO componente material para ambas as versões é uma pasta de enxofre e cera, moldada na forma de uma bola, que deve ser arremessada no alvo da magia."
+    "source": "Livro do Jogador (AD&D 2ª Ed.)"
 }

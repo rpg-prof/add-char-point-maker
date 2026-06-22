@@ -1,0 +1,11 @@
+Usando a Transferência do Poder Divino, o clérigo pode transferir algumas das magias memorizadas que possui, para outras pessoas. Apenas seres incapazes de usar magia (incluindo rangers de nível inferior ao 8º e paladinos de até 9º nível) podem ser beneficiados por este efeito, desde que possuam uma Sabedoria de, no mínimo, 9.
+
+Além das limitações anteriores, monstros sem Inteligência e seres com menos de 1 DV completo não podem ser afetados. Apenas magias divinas de teor informativo, natureza defensiva ou a Curar Ferimentos Leves podem ser transferidas. A inclusão de qualquer magia que não fuja a estes critérios neutraliza todo o processo, incluindo a transferência de magias permitidas.
+
+) da magia fornecida, funcionam de acordo com as características do clérigo que as cedeu.
+
+O clérigo que transferir suas magias fica temporariamente impedido de utilizar o mesmo número de efeitos (e dos mesmos círculos) que aquele cedido, ou seja, ele deixa de memorizar tantas magias quantas as transferidas, e nos mesmos círculos em que ocorreram as transferências (um clérigo que ceda uma de suas magias de 1º círculo tem reduzida em 1 a sua capacidade de decorar magias deste círculo).
+
+Essa redução permanece até que o receptor do efeito cedido o utilize, ou até que esse mesmo receptor venha a falecer (qualquer que seja a razão).
+
+Para estas transferências, além de seu símbolo sagrado e dos componentes materiais (se necessário) das magias a serem cedidas, o clérigo precisa de um item que represente a profissão do receptor (no caso de um ladrão, uma de suas ferramentas para abrir fechaduras, por exemplo). Esse item, assim como os componentes materiais dos efeitos cedidos, é consumido pela magia.

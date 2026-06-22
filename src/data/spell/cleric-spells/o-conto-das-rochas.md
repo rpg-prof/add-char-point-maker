@@ -1,0 +1,5 @@
+Quando o clérigo lança essa magia sobre uma área. as próprias pedras começam a falar e contam a ele quem ou o quê as tocou, além de revelar o que está coberto, oculto ou simplesmente existe por trás delas. As rochas fazem descrições completas, se assim for desejado.
+
+Observe que a perspectiva, percepção e conhecimento de uma pedra podem atrapalhar a adivinhação. Tais detalhes, se existirem, ficam a cargo do Mestre.
+
+Os componentes materiais são uma gota de mercúrio e uma pitada de barro.

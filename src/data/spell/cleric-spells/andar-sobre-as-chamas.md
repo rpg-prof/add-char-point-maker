@@ -1,0 +1,3 @@
+Pelo uso dessa magia, os seres afetados podem resistir ao contato com chamas (não mágicas) de temperatura máxima de 1.000°C (possibilitando, por exemplo, caminhadas sobre lava derretida). O efeito também confere um bônus de 2 para testes de resistência a fogo mágico, e reduz o dano causado por tais chamas pela metade, mesmo se o teste de resistência falhar. Para cada nível de experiência acima do 5°, o clérigo pode proteger uma criatura extra. Essa magia não é cumulativa com magias que ofereçam proteção similar a fogo (como, por exemplo, Resistir Calor).
+
+Os componentes materiais são, além do símbolo sagrado do clérigo (que não é consumido pela magia), pó de rubi no valor de, no mínimo, 500 po por pessoa afetada.

@@ -1,0 +1,3 @@
+Essa magia permite ao clérigo falar e entender outros idiomas (uma linguagem extra para cada 3 níveis de experiência). O clérigo, no momento em que executa este efeito, determina quais línguas deseja conhecer, e torna-se capaz de, por toda a duração, entender esta língua e talá-la com absoluta fluência, sem sotaque algum. A magia permite que o clérigo seja compreendido por todos os falantes da nova língua que consigam ouvi-lo (geralmente, num raio de 20 metros). Este efeito não torna o clérigo mais simpático aos falantes da língua adquirida.
+
+O reverso cancela Idiomas, ou confunde toda a comunicação verbal na área de efeito.

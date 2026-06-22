@@ -1,0 +1,3 @@
+Quando essa magia é lançada, o clérigo cria uma barreira invisível que ateia todos os tipos de insetos, bloqueando-as automaticamente. Insetos gigantes com DV inferior a 1/3 do nível do clérigo também são repelidos. Insetos gigantes com DV superior a 1/3 podem tentar forçar a barreira se forem agressivos, mas devem obter sucesso em um teste de resistência à magia para evitar 1d6 de dano. Este efeito atinge apenas insetos — aracnídeos, miriápodes e criaturas similares não são repelidos.
+
+O componente material deve ser um dos seguintes: vários cravos-de- defunto amassados; sete folhas de agulheiro esmagadas; um pouco de resina de cânfora, e um alho-poró amassado completamente.

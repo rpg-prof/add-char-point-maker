@@ -6,6 +6,5 @@
     "duration": "1 + 1d4 rodadas",
     "range": "10 metros/nível",
     "area": "Esfera de 2 metros de raio (mais especial)",
-    "source": "Livro do Jogador (AD&D 2ª Ed.)",
-    "description": "Com essa magia, o clérigo pode atrair um brilhante raio de luz durante cada rodada em que nenhuma atitude, além da movimentação, é tomada. O Raio de Sol parece um raio de sol natural.\n\nTodas as criaturas dentro da área de efeito de 4 metros de diâmetro devem ter sucesso em um teste de resistências magia ou serão cegadas por 1d3 rodadas, As que estiverem usando infravisão, serão cegadas por 2d6 rodadas. Componenetes: V, G, M"
+    "source": "Livro do Jogador (AD&D 2ª Ed.)"
 }

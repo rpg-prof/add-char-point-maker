@@ -1,0 +1,3 @@
+Usando essa magia, o clérigo imobiliza de um a quatro animais. ). Animais mágicos (como centauros, grifos) não são afetados. O clérigo decide quantos e quais os animais na área de efeito são atingidos pela magia. Quanto maior for o número, menor será a penalidade nos lestes de resistência.
+
+Cada animal recebe um teste, com as seguintes modificações: se apenas um é o alvo, ele sofre uma penalidade de -4; se dois são afetados, a penalidade cai para -2: se três animais são visados, a penalidade é de apenas -1, e, finalmente, se quatro animais são o alvo da magia, não há nenhuma penalidade. 600 quilos, ou, se estes animais não forem mamíferos, de até 400 quilos.

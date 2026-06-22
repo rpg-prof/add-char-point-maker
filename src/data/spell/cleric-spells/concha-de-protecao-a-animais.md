@@ -1,0 +1,3 @@
+Com essa magia, o clérigo cria um campo de força que impede a entrada de qualquer tipo de criatura viva, que seja total ou parcialmente animal (nem mágico ou extraplanar).
+
+Assim, um sprite, um gigante ou uma quimera seriam mantidos fora, mas mortos-vivos ou criaturas conjuradas poderiam passar através do escudo, do mesmo modo que monstros como Servos Aéreos, imps, quasits, golens, elementais, etc. A Concha de Proteção a Animais funciona normalmente contra híbridos, como cambions, e dura por um turno para cada nível de experiência do clérigo. Forçar a barreira contra criaturas tensionará e, por fim, arrebentará o campo de força. A magia requer o símbolo sagrado do clérigo, e um punhado de pimenta.

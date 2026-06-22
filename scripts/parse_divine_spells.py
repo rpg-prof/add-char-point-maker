@@ -335,8 +335,16 @@ def write_spell(spell, output_dir, existing_files):
     filepath = os.path.join(output_dir, filename)
     existing_files.add(filename)
 
+    description = spell.get('description', '') or ''
+    meta = {k: v for k, v in spell.items() if k != 'description'}
+
     with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(spell, f, ensure_ascii=False, indent=4)
+        json.dump(meta, f, ensure_ascii=False, indent=4)
+
+    if description.strip():
+        md_path = filepath.replace('.json', '.md')
+        with open(md_path, 'w', encoding='utf-8') as f:
+            f.write(description.strip() + '\n')
 
     return filepath
 
