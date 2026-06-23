@@ -1,0 +1,12 @@
+{
+    "name": "Ventriloquismo",
+    "costByClass": {
+        "other": 8,
+        "ladrao": 4
+    },
+    "attribute": "Inteligência",
+    "groups": [
+        "Ladrão/Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

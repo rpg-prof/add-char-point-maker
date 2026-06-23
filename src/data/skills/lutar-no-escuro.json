@@ -1,0 +1,14 @@
+{
+    "name": "Lutar no Escuro",
+    "costByClass": {
+        "other": 8,
+        "ladrao": 4,
+        "guerreiro": 4
+    },
+    "attribute": "Sabedoria/Destreza",
+    "groups": [
+        "Ladrão/Bardo",
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

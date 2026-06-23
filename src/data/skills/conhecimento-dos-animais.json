@@ -1,0 +1,12 @@
+{
+    "name": "Conhecimento dos Animais",
+    "costByClass": {
+        "other": 6,
+        "guerreiro": 3
+    },
+    "attribute": "Inteligência/Sabedoria",
+    "groups": [
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

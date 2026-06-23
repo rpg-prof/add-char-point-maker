@@ -1,0 +1,12 @@
+{
+    "name": "Correr",
+    "costByClass": {
+        "other": 4,
+        "guerreiro": 2
+    },
+    "attribute": "Força/Constituição",
+    "groups": [
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

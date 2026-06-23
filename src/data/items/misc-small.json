@@ -1,0 +1,56 @@
+[
+    {
+        "code": "bolas",
+        "name": "Boleadeira",
+        "weight": "300 a 500g",
+        "cost": "5 pp"
+    },
+    {
+        "code": "boomerang",
+        "name": "Bumerangue",
+        "weight": "600g a 1kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "staff-sling",
+        "name": "Cajado-funda",
+        "weight": "2 a 3kg",
+        "cost": "2 pp"
+    },
+    {
+        "code": "dart",
+        "name": "Dardo",
+        "weight": "150g",
+        "cost": "5 pp"
+    },
+    {
+        "code": "sling",
+        "name": "Funda",
+        "weight": "100g",
+        "cost": "5 pc"
+    },
+    {
+        "code": "gauntlet",
+        "name": "Gauntlet",
+        "weight": "500g a 1kg",
+        "cost": "3 po"
+    },
+    {
+        "code": "shuriken",
+        "name": "Shuriken",
+        "weight": "50g",
+        "cost": "5 pp"
+    },
+    {
+        "code": "brass-knuckles",
+        "name": "Soco inglês",
+        "weight": "200 a 500g",
+        "cost": "1 po"
+    },
+    {
+        "code": "blowgun",
+        "name": "Zarabatana",
+        "weight": "150 a 300g",
+        "cost": "5 po"
+    }
+]

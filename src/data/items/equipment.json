@@ -1,0 +1,487 @@
+[
+    {
+        "code": "needle-costura",
+        "name": "Agulha de costura",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pc"
+    },
+    {
+        "code": "quiver",
+        "name": "Aljava",
+        "category": "equipamento",
+        "weight": "250g",
+        "cost": "8 pp"
+    },
+    {
+        "code": "hourglass",
+        "name": "Ampulheta",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "25 po",
+        "description": "Esse pesado dispositivo é usado para marcar as horas, com uma precisão de até meia-hora. Sendo ativada por um fluxo contínuo de água. a clepsidra não é um relógio de bolso. Para funcionar, ela precisa de uma fonte de água e de uma base estável. Sendo um objeto muito incomum, é uma curiosidade para os abastados e uma ferramenta para estudantes das artes arcanas. A maior parte das pessoas não está interessada em saber as horas com exatidão."
+    },
+    {
+        "code": "ring-selo-personalizado",
+        "name": "Anel com selo personalizado",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 po"
+    },
+    {
+        "code": "hook",
+        "name": "Anzol",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 pp"
+    },
+    {
+        "code": "whistle-advertencia",
+        "name": "Apito de advertência",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "8 pp"
+    },
+    {
+        "code": "arpeu",
+        "name": "Arpéu",
+        "category": "equipamento",
+        "weight": "2kg",
+        "cost": "8 pp"
+    },
+    {
+        "code": "scale-comerciante",
+        "name": "Balança de comerciante",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "2 po",
+        "description": "Essa pequena balança vem com pratos e uma pequena variedade de pesos. Seu principal uso é pesar moedas"
+    },
+    {
+        "code": "balde",
+        "name": "Balde",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "5 pp"
+    },
+    {
+        "code": "barril-small",
+        "name": "Barril pequeno",
+        "category": "equipamento",
+        "weight": "15kg",
+        "cost": "2 po"
+    },
+    {
+        "code": "chest-grande",
+        "name": "Baú — Grande",
+        "category": "equipamento",
+        "weight": "12kg",
+        "cost": "2 po"
+    },
+    {
+        "code": "chest-small",
+        "name": "Baú — Pequeno",
+        "category": "equipamento",
+        "weight": "5kg",
+        "cost": "1 po"
+    },
+    {
+        "code": "pouch-belt-grande",
+        "name": "Bolsa de Cinto — Grande",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "1 po"
+    },
+    {
+        "code": "pouch-belt-pequena",
+        "name": "Bolsa de Cinto — Pequena",
+        "category": "equipamento",
+        "weight": "250g",
+        "cost": "7 pp"
+    },
+    {
+        "code": "cadeado-bom",
+        "name": "Cadeado bom",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "100 po",
+        "description": "Ainda são objetos muito rudimentares (a não ser os cadeados mágicos). Todos são abertos com pesadas chaves. Cadeados com segredo ainda não existem. Como todo o resto, há cadeados de boa qualidade e aqueles que não valem muito."
+    },
+    {
+        "code": "cadeado-razoavel",
+        "name": "Cadeado razoável",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "20 po",
+        "description": "Ainda são objetos muito rudimentares (a não ser os cadeados mágicos). Todos são abertos com pesadas chaves. Cadeados com segredo ainda não existem. Como todo o resto, há cadeados de boa qualidade e aqueles que não valem muito."
+    },
+    {
+        "code": "cera-lacrar-500-g",
+        "name": "Cera para lacrar, 500 g",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "1 po"
+    },
+    {
+        "code": "cera-velas-500-g",
+        "name": "Cera para velas, 500 g",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "1 po",
+        "description": "Uma lanterna com cobertura oferece iluminação por"
+    },
+    {
+        "code": "cesto-grande",
+        "name": "Cesto — Grande",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "3 pp"
+    },
+    {
+        "code": "cesto-small",
+        "name": "Cesto — Pequeno",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pc"
+    },
+    {
+        "code": "clepsidra",
+        "name": "Clepsidra",
+        "category": "equipamento",
+        "weight": "100kg",
+        "cost": "1000 po",
+        "description": "Esse pesado dispositivo é usado para marcar as horas, com uma precisão de até meia-hora. Sendo ativada por um fluxo contínuo de água. a clepsidra não é um relógio de bolso. Para funcionar, ela precisa de uma fonte de água e de uma base estável. Sendo um objeto muito incomum, é uma curiosidade para os abastados e uma ferramenta para estudantes das artes arcanas. A maior parte das pessoas não está interessada em saber as horas com exatidão."
+    },
+    {
+        "code": "coberta-inverno",
+        "name": "Coberta de inverno",
+        "category": "equipamento",
+        "weight": "1.5kg",
+        "cost": "5 pp"
+    },
+    {
+        "code": "conjunto-ferramentas-ladroes",
+        "name": "Conjunto de ferramentas para ladrões",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "30 po",
+        "description": "Uma pequena coleção de ferramentas úteis aos ladrões. O kit inclui uma ou duas chaves- mestras, compridas gazuas metálicas, uma pinça comprida, uma serra pequena e ainda um martelinho e uma cunha. Esses aparelhos, com mais algumas ferramentas corriqueiras (um pé-de-cabra, por exemplo), compõem o equipamento especial de que um ladrão precisa para levar os negócios adiante."
+    },
+    {
+        "code": "rope-15-metros-canhamo",
+        "name": "Corda, 15 metros de Cânhamo",
+        "category": "equipamento",
+        "weight": "10kg",
+        "cost": "1 po"
+    },
+    {
+        "code": "rope-15-metros-fio-seda",
+        "name": "Corda, 15 metros de Fio de seda",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10 po"
+    },
+    {
+        "code": "corrente-metro-light",
+        "name": "Corrente (por metro) — Leve",
+        "category": "equipamento",
+        "weight": "1.5kg",
+        "cost": "3 po"
+    },
+    {
+        "code": "corrente-metro-heavy",
+        "name": "Corrente (por metro) — Pesada",
+        "category": "equipamento",
+        "weight": "4.5kg",
+        "cost": "4 po"
+    },
+    {
+        "code": "escada-3-metros",
+        "name": "Escada, 3 metros",
+        "category": "equipamento",
+        "weight": "10kg",
+        "cost": "5 pc"
+    },
+    {
+        "code": "esmeril",
+        "name": "Esmeril",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "2 pc"
+    },
+    {
+        "code": "espelho-small-metal",
+        "name": "Espelho pequeno, de metal",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10 po"
+    },
+    {
+        "code": "farolete",
+        "name": "Farolete",
+        "category": "equipamento",
+        "weight": "25kg",
+        "cost": "150 po"
+    },
+    {
+        "code": "ganchos-ferro",
+        "name": "Ganchos de ferro",
+        "category": "equipamento",
+        "weight": "1kg",
+        "cost": "4 po"
+    },
+    {
+        "code": "garrafa-vidro",
+        "name": "Garrafa de vidro",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10 po"
+    },
+    {
+        "code": "giz",
+        "name": "Giz",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 pc"
+    },
+    {
+        "code": "item-sagrado-agua-benta-simbolo-divino",
+        "name": "Item sagrado (água benta, símbolo divino)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "25 po"
+    },
+    {
+        "code": "lantern-cobertura",
+        "name": "Lanterna com cobertura",
+        "category": "equipamento",
+        "weight": "1kg",
+        "cost": "7 po",
+        "description": "Uma lanterna com cobertura oferece iluminação por"
+    },
+    {
+        "code": "lantern-furta-fogo",
+        "name": "Lanterna furta-fogo",
+        "category": "equipamento",
+        "weight": "1.5kg",
+        "cost": "12 po",
+        "description": "Uma lanterna com cobertura oferece iluminação por"
+    },
+    {
+        "code": "lente-aumento",
+        "name": "Lente de aumento",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "100 po",
+        "description": "Essa lente muito simples é mais uma curiosidade do que algo útil. Não tem grande poder de aumento, já"
+    },
+    {
+        "code": "lona-metro-quadrado",
+        "name": "Lona, por metro quadrado",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "4 pp"
+    },
+    {
+        "code": "backpack",
+        "name": "Mochila",
+        "category": "equipamento",
+        "weight": "1kg",
+        "cost": "2 po"
+    },
+    {
+        "code": "waterskin-wine",
+        "name": "Odre de vinho",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "8 pp"
+    },
+    {
+        "code": "oil-frasco-fogo-grego",
+        "name": "Óleo, por frasco — Fogo grego",
+        "category": "equipamento",
+        "weight": "1kg",
+        "cost": "1 pp",
+        "description": "Fogo grego é a designação genérica dada a todos os óleos altamente inflamáveis usados em combate. (Historicamente, fogo grego era uma combinação de óleo e produtos químicos, resultando num líquido pegajoso e difícil de se apagar, uma vez que entrasse em combustão.) Por serem altamente inflamáveis, eram um pouco perigosos de se transportar. O óleo de lamparina é também usado em lanternas. Não é particularmente explosivo, mas pode ser usado para alimentar uma chama já existente."
+    },
+    {
+        "code": "oil-frasco-oil-lamparina",
+        "name": "Óleo, por frasco — Óleo para lamparina",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "6 pc",
+        "description": "Fogo grego é a designação genérica dada a todos os óleos altamente inflamáveis usados em combate. (Historicamente, fogo grego era uma combinação de óleo e produtos químicos, resultando num líquido pegajoso e difícil de se apagar, uma vez que entrasse em combustão.) Por serem altamente inflamáveis, eram um pouco perigosos de se transportar. O óleo de lamparina é também usado em lanternas. Não é particularmente explosivo, mas pode ser usado para alimentar uma chama já existente."
+    },
+    {
+        "code": "pot-ferro",
+        "name": "Panela de ferro",
+        "category": "equipamento",
+        "weight": "1kg",
+        "cost": "5 pc"
+    },
+    {
+        "code": "papel-folha",
+        "name": "Papel (por folha)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 po"
+    },
+    {
+        "code": "papiro-folha",
+        "name": "Papiro (por folha)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "8 pp"
+    },
+    {
+        "code": "pederneira-isqueiro",
+        "name": "Pederneira e isqueiro",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pp"
+    },
+    {
+        "code": "small-telescopio",
+        "name": "Pequeno telescópio",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "1000 po",
+        "description": "Como a lente de aumento, esse pequeno telescópio é mais uma curiosidade do que algo útil. Objetos observados através dele ficam um pouco mais próximos, embora nem tanto. Para melhores resultados, objetos mágicos são preferíveis. O poder de aumento de um telescópio é de duas ou três vezes. Como a lente de aumento, esse pequeno telescópio é mais uma curiosidade do que algo útil. Objetos observados através dele ficam um pouco mais próximos, embora nem tanto. Para melhores resultados, objetos mágicos são preferíveis. O poder de aumento de um telescópio é de duas ou três vezes."
+    },
+    {
+        "code": "perfume-frasco-small",
+        "name": "Perfume (frasco pequeno)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 po"
+    },
+    {
+        "code": "parchment-folha",
+        "name": "Pergaminho (por folha)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 po"
+    },
+    {
+        "code": "piton",
+        "name": "Píton",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "3 pc"
+    },
+    {
+        "code": "porta-mapas",
+        "name": "Porta-mapas",
+        "category": "equipamento",
+        "weight": "250g",
+        "cost": "8 pp"
+    },
+    {
+        "code": "porta-moedas-joias",
+        "name": "Porta-moedas (jóias)",
+        "category": "equipamento",
+        "weight": "1.5kg",
+        "cost": "1 po"
+    },
+    {
+        "code": "rede-pesca-10-metros-quadrados",
+        "name": "Rede de pesca, por 10 metros quadrados",
+        "category": "equipamento",
+        "weight": "2.5kg",
+        "cost": "4 po"
+    },
+    {
+        "code": "sabao-500-g",
+        "name": "Sabão, 500 g",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "5 pp"
+    },
+    {
+        "code": "bag-grande",
+        "name": "Saco grande",
+        "category": "equipamento",
+        "weight": "250g",
+        "cost": "2 pp"
+    },
+    {
+        "code": "bag-small",
+        "name": "Saco pequeno",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pc"
+    },
+    {
+        "code": "talha",
+        "name": "Talha",
+        "category": "equipamento",
+        "weight": "2.5kg",
+        "cost": "5 po",
+        "description": "Trata-se da versão mais comum da armadura completa, consistindo de placas de metal ajustadas ao corpo e interligadas de maneira a cobrir toda sua extensão. Inclui luvas, botas e elmo com visor. Uma grossa camada de acolchoamento é usada por baixo. O peso é distribuído igualmente pelo corpo. Além do preço, as maiores desvantagens são a falta de ventilação e o tempo gasto em vesti-la e retirá-la. (Veja a seção Colocando e Retirando a Armadura.) Cada armadura é feita sob medida por um mestre armeiro. Entretanto, pedaços avulsos encontrados em campos de batalha podem ser remodelados, de maneira a servir no novo proprietário. (A menos que tal coisa seja impossível, como um humano tentando entrar numa armadura para halfling.)"
+    },
+    {
+        "code": "tecido-10-metros-quadrados-common",
+        "name": "Tecido, 10 metros quadrados — Comum",
+        "category": "equipamento",
+        "weight": "5kg",
+        "cost": "7 po"
+    },
+    {
+        "code": "tecido-10-metros-quadrados-fino",
+        "name": "Tecido, 10 metros quadrados — Fino",
+        "category": "equipamento",
+        "weight": "5kg",
+        "cost": "50 po"
+    },
+    {
+        "code": "tecido-10-metros-quadrados-suntuoso",
+        "name": "Tecido, 10 metros quadrados — Suntuoso",
+        "category": "equipamento",
+        "weight": "5kg",
+        "cost": "100 po"
+    },
+    {
+        "code": "tent-grande",
+        "name": "Tenda — Grande",
+        "category": "equipamento",
+        "weight": "10kg",
+        "cost": "25 po"
+    },
+    {
+        "code": "tent-pavilhao",
+        "name": "Tenda — Pavilhão",
+        "category": "equipamento",
+        "weight": "25kg",
+        "cost": "100 po"
+    },
+    {
+        "code": "tent-pequena",
+        "name": "Tenda — Pequena",
+        "category": "equipamento",
+        "weight": "5kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "ink-escrever-frasco-small",
+        "name": "Tinta de escrever (frasco pequeno)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "8 po"
+    },
+    {
+        "code": "torch",
+        "name": "Tocha",
+        "category": "equipamento",
+        "weight": "500g",
+        "cost": "1 pc",
+        "description": "Uma lanterna com cobertura oferece iluminação por"
+    },
+    {
+        "code": "candle",
+        "name": "Vela",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 pc",
+        "description": "Esse navio era utilizado na Baixa Idade Média e início do Período Renascentista. Foi o tipo de embarcação que Cristóvão Colombo utilizou para chegar até as Américas. (Devem ser utilizadas somente em Campanhas situadas na Baixa Idade Média.) A embarcação possui normalmente dois ou três mastros e velas quadradas. Remos não são utilizados. Uma caravela mede, em geral, 21 metros de comprimento por 6 de largura. A tripulação varia entre trinta e quarenta homens. A capacidade de carga é de 150 a 200 toneladas."
+    }
+]

@@ -1,0 +1,11 @@
+{
+    "name": "Liderança",
+    "costByClass": {
+        "all": 3
+    },
+    "attribute": "Carisma",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

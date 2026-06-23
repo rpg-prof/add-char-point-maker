@@ -1,0 +1,14 @@
+{
+    "name": "Religião",
+    "costByClass": {
+        "other": 4,
+        "sacerdote": 2,
+        "arcano": 2
+    },
+    "attribute": "Sabedoria",
+    "groups": [
+        "Sacerdote",
+        "Mago"
+    ],
+    "penaltyNoProficiency": -6
+}

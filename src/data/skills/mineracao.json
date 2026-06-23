@@ -1,0 +1,11 @@
+{
+    "name": "Mineração",
+    "costByClass": {
+        "all": 5
+    },
+    "attribute": "Sabedoria/Força",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

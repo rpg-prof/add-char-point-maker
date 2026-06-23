@@ -1,0 +1,12 @@
+{
+    "name": "Disfarce",
+    "costByClass": {
+        "other": 8,
+        "ladrao": 4
+    },
+    "attribute": "Sabedoria/Carisma",
+    "groups": [
+        "Ladrão/Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

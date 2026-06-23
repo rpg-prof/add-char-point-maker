@@ -1,0 +1,12 @@
+{
+    "name": "Vigor",
+    "costByClass": {
+        "other": 4,
+        "guerreiro": 2
+    },
+    "attribute": "Constituição",
+    "groups": [
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

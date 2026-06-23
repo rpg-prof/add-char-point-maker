@@ -1,0 +1,26 @@
+[
+    {
+        "code": "light-crossbow",
+        "name": "Besta leve",
+        "weight": "1,2 a 1,8kg",
+        "cost": "35 po"
+    },
+    {
+        "code": "heavy-crossbow",
+        "name": "Besta Pesada",
+        "weight": "1,2 a 1,8kg",
+        "cost": "50 po"
+    },
+    {
+        "code": "repeating-crossbow",
+        "name": "Besta de repetição",
+        "weight": "2 a 2,5kg",
+        "cost": "300 po"
+    },
+    {
+        "code": "arbalest",
+        "name": "Balestra",
+        "weight": "2 a 2,5kg",
+        "cost": "100 po"
+    }
+]

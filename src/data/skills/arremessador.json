@@ -1,0 +1,12 @@
+{
+    "name": "Arremessador",
+    "costByClass": {
+        "other": 4,
+        "ladrao": 2
+    },
+    "attribute": "Destreza/Força",
+    "groups": [
+        "Ladrão/Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

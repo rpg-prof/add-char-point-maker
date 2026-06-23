@@ -1,0 +1,11 @@
+{
+    "name": "Cavalgar Criatura Alada",
+    "costByClass": {
+        "all": 4
+    },
+    "attribute": "Sabedoria/Destreza",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

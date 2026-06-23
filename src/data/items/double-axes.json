@@ -1,0 +1,26 @@
+[
+    {
+        "code": "barbarian-axe",
+        "name": "Machado bárbaro",
+        "weight": "3 a 5kg",
+        "cost": "6 po"
+    },
+    {
+        "code": "military-axe",
+        "name": "Machado militar",
+        "weight": "2,5 a 3,5kg",
+        "cost": "8 po"
+    },
+    {
+        "code": "stonecutter",
+        "name": "Stonecutter",
+        "weight": "4 a 5,5kg",
+        "cost": "8 po"
+    },
+    {
+        "code": "thornwaler",
+        "name": "Thornwaler",
+        "weight": "4 a 4,5kg",
+        "cost": "10 po"
+    }
+]

@@ -1,0 +1,11 @@
+{
+    "name": "Mergulho",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Destreza/Constituição",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

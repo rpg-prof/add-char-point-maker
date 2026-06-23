@@ -1,0 +1,91 @@
+{
+    "group-name": "Manguais",
+    "group-size-category": "M",
+    "group-cost-per-weapon": 5,
+    "group-cost-group": 15,
+    "group-cost-specialization": 10,
+    "group-penalty-no-proficiency": -3,
+    "group-penalty-similar": -1,
+    "weapons": [
+        {
+            "code": "flail",
+            "name": "Mangual",
+            "weight": "2 a 3kg",
+            "size": "50 a 70cm",
+            "type": "e",
+            "speed": "7",
+            "damagePM": "1d4+1",
+            "damageG": "1d4"
+        },
+        {
+            "code": "chain-flail",
+            "name": "Mangual de corrente",
+            "weight": "2,5 a 4kg",
+            "size": "45 a 65cm",
+            "type": "e",
+            "speed": "7",
+            "damagePM": "1d6",
+            "damageG": "1d4+1"
+        },
+        {
+            "code": "war-flail",
+            "name": "Mangual de guerra",
+            "weight": "4 a 5kg",
+            "size": "75 a 100cm",
+            "type": "e",
+            "speed": "6",
+            "damagePM": "1d6+1",
+            "damageG": "2d4"
+        },
+        {
+            "code": "double-flail",
+            "name": "Mangual duplo",
+            "weight": "3 a 4,5kg",
+            "size": "60 a 80cm",
+            "type": "e",
+            "speed": "7",
+            "damagePM": "1d6+1",
+            "damageG": "1d6+1"
+        },
+        {
+            "code": "metal-flail",
+            "name": "Mangual metalico",
+            "weight": "3 a 4kg",
+            "size": "60 a 80cm",
+            "type": "c/e",
+            "speed": "6",
+            "damagePM": "1d6+1",
+            "damageG": "1d6+1"
+        },
+        {
+            "code": "military-flail",
+            "name": "Mangual militar",
+            "weight": "4 a 5kg",
+            "size": "75 a 100cm",
+            "type": "e",
+            "speed": "6",
+            "damagePM": "1d6+1",
+            "damageG": "1d8"
+        },
+        {
+            "code": "triple-flail",
+            "name": "Mangual triplo",
+            "weight": "3,5 a 5kg",
+            "size": "50 a 70cm",
+            "type": "e",
+            "speed": "8",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        },
+        {
+            "code": "nunchaku",
+            "name": "Nunchaku",
+            "weight": "1 a 1,5kg",
+            "size": "60 a 100cm",
+            "type": "e",
+            "speed": "3",
+            "damagePM": "1d6",
+            "damageG": "1d6"
+        }
+    ]
+}

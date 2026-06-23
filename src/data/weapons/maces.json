@@ -1,0 +1,91 @@
+{
+    "group-name": "Maças e Armas de Impacto",
+    "group-size-category": "M",
+    "group-cost-per-weapon": 5,
+    "group-cost-group": 15,
+    "group-cost-specialization": 10,
+    "group-penalty-no-proficiency": -3,
+    "group-penalty-similar": -1,
+    "weapons": [
+        {
+            "code": "quarterstaff",
+            "name": "Bastão / Bordão / Cajado",
+            "weight": "2 a 3kg",
+            "size": "1,5 a 2,2m",
+            "type": "e",
+            "speed": "4",
+            "damagePM": "1d6",
+            "damageG": "1d6+1"
+        },
+        {
+            "code": "club",
+            "name": "Clava",
+            "weight": "1 a 1,5kg",
+            "size": "80 a 100cm",
+            "type": "e",
+            "speed": "4",
+            "damagePM": "1d6",
+            "damageG": "1d4"
+        },
+        {
+            "code": "stone-club",
+            "name": "Clava de pedra",
+            "weight": "1 a 1,5kg",
+            "size": "80 a 100cm",
+            "type": "e",
+            "speed": "4",
+            "damagePM": "1d4+1",
+            "damageG": "1d4"
+        },
+        {
+            "code": "spiked-club",
+            "name": "Clava-espinho",
+            "weight": "1 a 1,5kg",
+            "size": "80 a 100cm",
+            "type": "e",
+            "speed": "4",
+            "damagePM": "1d6",
+            "damageG": "1d4+1"
+        },
+        {
+            "code": "army-mace",
+            "name": "Maça de exército",
+            "weight": "1 a 1,5kg",
+            "size": "70 a 80cm",
+            "type": "e",
+            "speed": "3",
+            "damagePM": "1d6",
+            "damageG": "1d6"
+        },
+        {
+            "code": "war-mace",
+            "name": "Maça de guerra",
+            "weight": "2 a 3kg",
+            "size": "90 a 110cm",
+            "type": "e",
+            "speed": "5",
+            "damagePM": "1d8",
+            "damageG": "1d12"
+        },
+        {
+            "code": "morningstar",
+            "name": "Maça estrela (Morningstar)",
+            "weight": "3 a 5kg",
+            "size": "70 a 110cm",
+            "type": "e",
+            "speed": "7",
+            "damagePM": "2d4",
+            "damageG": "1d6+1"
+        },
+        {
+            "code": "tetsubo",
+            "name": "Tetsubo",
+            "weight": "2 a 3,5kg",
+            "size": "1,5 a 2,5m",
+            "type": "e",
+            "speed": "8",
+            "damagePM": "2d4",
+            "damageG": "2d8"
+        }
+    ]
+}

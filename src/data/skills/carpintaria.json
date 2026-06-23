@@ -1,0 +1,11 @@
+{
+    "name": "Carpintaria",
+    "costByClass": {
+        "all": 3
+    },
+    "attribute": "Força/Inteligência",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

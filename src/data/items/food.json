@@ -1,0 +1,121 @@
+[
+    {
+        "code": "lodging-monthly-room-common",
+        "name": "Acomodação em cidades (mensal) — Quarto comum",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "20 po"
+    },
+    {
+        "code": "lodging-monthly-room-poor",
+        "name": "Acomodação em cidades (mensal) — Quarto pobre",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "6 pp"
+    },
+    {
+        "code": "meat",
+        "name": "Carne para 1 refeição",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 pp"
+    },
+    {
+        "code": "beer",
+        "name": "Cerveja (5 litros)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 pp"
+    },
+    {
+        "code": "beer-light",
+        "name": "Cerveja leve (5 litros)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pc"
+    },
+    {
+        "code": "food-stable-mounts-daily",
+        "name": "Comida e estrebaria para montarias (diária)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pp"
+    },
+    {
+        "code": "feast-banquet",
+        "name": "Festim, banquete (por pessoa)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10 po"
+    },
+    {
+        "code": "latrine-monthly",
+        "name": "Latrina para aposentos (mensal)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 po"
+    },
+    {
+        "code": "honey",
+        "name": "Mel",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pp"
+    },
+    {
+        "code": "eggs-vegetables-frescas",
+        "name": "Ovos ou verduras frescas",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 pc"
+    },
+    {
+        "code": "bread",
+        "name": "Pão",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pc"
+    },
+    {
+        "code": "cheese",
+        "name": "Queijo",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "4 pp"
+    },
+    {
+        "code": "meals-diarias-good",
+        "name": "Refeições (diárias) — Boa",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pp"
+    },
+    {
+        "code": "meals-diarias-common",
+        "name": "Refeições (diárias) — Comum",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "3 pp"
+    },
+    {
+        "code": "meals-diarias-simple",
+        "name": "Refeições (diárias) — Simples",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 pp"
+    },
+    {
+        "code": "soup",
+        "name": "Sopa",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pc"
+    },
+    {
+        "code": "wine-common",
+        "name": "Vinho comum (jarro)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 pp"
+    }
+]

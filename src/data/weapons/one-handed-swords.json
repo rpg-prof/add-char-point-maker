@@ -1,0 +1,71 @@
+{
+    "group-name": "Espadas Grandes (Uma Mão)",
+    "group-size-category": "G",
+    "group-cost-per-weapon": 15,
+    "group-cost-group": 30,
+    "group-cost-specialization": 30,
+    "group-penalty-no-proficiency": -5,
+    "group-penalty-similar": -2,
+    "weapons": [
+        {
+            "code": "long-scimitar",
+            "name": "Cimitarra longa",
+            "weight": "3 a 4kg",
+            "size": "90 a 110cm",
+            "type": "c/p",
+            "speed": "5",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        },
+        {
+            "code": "barbarian-sword",
+            "name": "Espada barbara",
+            "weight": "2 a 3,2kg",
+            "size": "80 a 95cm",
+            "type": "c/p",
+            "speed": "5",
+            "damagePM": "1d8",
+            "damageG": "1d10"
+        },
+        {
+            "code": "bastard-sword-one-handed",
+            "name": "Espada bastarda (Uma mão)",
+            "weight": "4 a 6kg",
+            "size": "110 a 135cm",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "1d8",
+            "damageG": "1d12"
+        },
+        {
+            "code": "broadsword",
+            "name": "Espada larga (Broadsword)",
+            "weight": "2,5 a 3,5kg",
+            "size": "70 a 100cm",
+            "type": "c/p",
+            "speed": "5",
+            "damagePM": "2d4",
+            "damageG": "1d6+1"
+        },
+        {
+            "code": "long-sword",
+            "name": "Espada longa",
+            "weight": "2 a 3kg",
+            "size": "90 a 110cm",
+            "type": "c/p",
+            "speed": "5",
+            "damagePM": "1d8",
+            "damageG": "1d12"
+        },
+        {
+            "code": "wakizashi",
+            "name": "Wakizashi",
+            "weight": "750g a 1,2kg",
+            "size": "45 a 70cm",
+            "type": "c/p",
+            "speed": "3",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        }
+    ]
+}

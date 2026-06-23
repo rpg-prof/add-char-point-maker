@@ -1,0 +1,11 @@
+{
+    "name": "Lidar com Animais",
+    "costByClass": {
+        "all": 3
+    },
+    "attribute": "Sabedoria",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

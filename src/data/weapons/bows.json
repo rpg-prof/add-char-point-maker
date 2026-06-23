@@ -1,0 +1,51 @@
+{
+    "group-name": "Arcos",
+    "group-size-category": "G",
+    "group-cost-per-weapon": 5,
+    "group-cost-group": null,
+    "group-cost-specialization": 15,
+    "group-penalty-no-proficiency": -5,
+    "group-penalty-similar": -2,
+    "weapons": [
+        {
+            "code": "short-bow",
+            "name": "Arco Curto",
+            "weight": "750g a 1kg",
+            "size": "50 a 70cm",
+            "type": "p",
+            "speed": "7",
+            "damagePM": "1d6",
+            "damageG": "1d4"
+        },
+        {
+            "code": "long-bow",
+            "name": "Arco Longo",
+            "weight": "1,2 a 1,8kg",
+            "size": "70 a 100cm",
+            "type": "p",
+            "speed": "8",
+            "damagePM": "1d8",
+            "damageG": "1d6"
+        },
+        {
+            "code": "composite-bow",
+            "name": "Arco Composto",
+            "weight": "1,5 a 2kg",
+            "size": "60 a 80cm",
+            "type": "p",
+            "speed": "7",
+            "damagePM": "1d8",
+            "damageG": "1d6"
+        },
+        {
+            "code": "war-bow",
+            "name": "Arco de guerra",
+            "weight": "2 a 2,5kg",
+            "size": "80 a 115cm",
+            "type": "p",
+            "speed": "8",
+            "damagePM": "1d8",
+            "damageG": "1d10"
+        }
+    ]
+}

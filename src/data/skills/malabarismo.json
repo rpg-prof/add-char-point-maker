@@ -1,0 +1,12 @@
+{
+    "name": "Malabarismo",
+    "costByClass": {
+        "other": 6,
+        "ladrao": 3
+    },
+    "attribute": "Destreza",
+    "groups": [
+        "Ladrão/Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

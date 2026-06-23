@@ -1,0 +1,14 @@
+{
+    "name": "Camuflagem",
+    "costByClass": {
+        "other": 10,
+        "ladrao": 5,
+        "guerreiro": 5
+    },
+    "attribute": "Inteligência",
+    "groups": [
+        "Ladrão/Bardo",
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

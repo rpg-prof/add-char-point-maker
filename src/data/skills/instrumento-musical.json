@@ -1,0 +1,11 @@
+{
+    "name": "Instrumento Musical",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Carisma",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

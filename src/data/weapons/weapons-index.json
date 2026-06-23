@@ -1,0 +1,68 @@
+{
+  "groups": [
+    {
+      "slug": "daggers",
+      "name": "Adagas e Facas"
+    },
+    {
+      "slug": "short-swords",
+      "name": "Espadas Menores"
+    },
+    {
+      "slug": "one-handed-swords",
+      "name": "Espadas Grandes (Uma Mão)"
+    },
+    {
+      "slug": "two-handed-swords",
+      "name": "Espadas Grandes (Duas Mãos)"
+    },
+    {
+      "slug": "hand-axes",
+      "name": "Machados Menores"
+    },
+    {
+      "slug": "battle-axes",
+      "name": "Machados Grandes Simples"
+    },
+    {
+      "slug": "double-axes",
+      "name": "Machados Grandes Duplos"
+    },
+    {
+      "slug": "maces",
+      "name": "Maças e Armas de Impacto"
+    },
+    {
+      "slug": "hammers",
+      "name": "Martelos"
+    },
+    {
+      "slug": "flails",
+      "name": "Manguais"
+    },
+    {
+      "slug": "polearms",
+      "name": "Armas de Haste"
+    },
+    {
+      "slug": "whips",
+      "name": "Chicotes"
+    },
+    {
+      "slug": "misc-small",
+      "name": "Outras Armas Menores"
+    },
+    {
+      "slug": "misc-large",
+      "name": "Outras Armas Maiores"
+    },
+    {
+      "slug": "crossbows",
+      "name": "Bestas"
+    },
+    {
+      "slug": "bows",
+      "name": "Arcos"
+    }
+  ]
+}

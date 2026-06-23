@@ -1,0 +1,12 @@
+{
+    "name": "Astronomia",
+    "costByClass": {
+        "other": 4,
+        "arcano": 2
+    },
+    "attribute": "Inteligência",
+    "groups": [
+        "Mago"
+    ],
+    "penaltyNoProficiency": -6
+}

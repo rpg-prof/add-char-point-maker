@@ -1,0 +1,11 @@
+{
+    "name": "Sapataria",
+    "costByClass": {
+        "all": 3
+    },
+    "attribute": "Destreza/Inteligência",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

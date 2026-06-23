@@ -1,0 +1,38 @@
+[
+    {
+        "code": "awpike",
+        "name": "Awpike",
+        "weight": "4 a 5kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "gruufhai",
+        "name": "Gruufhai",
+        "weight": "4 a 5,5kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "crow-head-hammer",
+        "name": "Martelo cabeça de corvo",
+        "weight": "3,5 a 4,8kg",
+        "cost": "7 po"
+    },
+    {
+        "code": "double-headed-hammer",
+        "name": "Martelo de 2 Cabeças",
+        "weight": "4 a 5kg",
+        "cost": "4 po"
+    },
+    {
+        "code": "war-hammer",
+        "name": "Martelo de Guerra",
+        "weight": "2,5 a 3,5kg",
+        "cost": "2 po"
+    },
+    {
+        "code": "ritual-hammer",
+        "name": "Martelo ritual",
+        "weight": "2,5 a 4kg",
+        "cost": "7 po"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "code": "curved-battle-axe",
+        "name": "Machado batalha curvo",
+        "weight": "3 a 4kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "straight-battle-axe",
+        "name": "Machado batalha reto",
+        "weight": "3,5 a 4,5kg",
+        "cost": "6 po"
+    },
+    {
+        "code": "woodcutter-axe",
+        "name": "Machado de Lenhador",
+        "weight": "4 a 5kg",
+        "cost": "1 po"
+    },
+    {
+        "code": "molok-axe",
+        "name": "Machado Molok",
+        "weight": "3,5 a 4,5kg",
+        "cost": "10 po"
+    },
+    {
+        "code": "wavy-battle-axe",
+        "name": "Machado sinuoso",
+        "weight": "2 a 3,5kg",
+        "cost": "8 po"
+    }
+]

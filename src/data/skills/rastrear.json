@@ -1,0 +1,12 @@
+{
+    "name": "Rastrear",
+    "costByClass": {
+        "other": 8,
+        "guerreiro": 4
+    },
+    "attribute": "Sabedoria",
+    "groups": [
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

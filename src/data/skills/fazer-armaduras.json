@@ -1,0 +1,12 @@
+{
+    "name": "Fazer Armaduras",
+    "costByClass": {
+        "other": 10,
+        "guerreiro": 5
+    },
+    "attribute": "Inteligência/Força",
+    "groups": [
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

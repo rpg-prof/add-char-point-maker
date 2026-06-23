@@ -1,0 +1,11 @@
+{
+    "name": "Cavalgar Criatura Terrestre",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Sabedoria/Destreza",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

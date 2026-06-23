@@ -1,0 +1,12 @@
+{
+    "name": "Montanhismo",
+    "costByClass": {
+        "other": 8,
+        "guerreiro": 4
+    },
+    "attribute": "Força/Sabedoria",
+    "groups": [
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

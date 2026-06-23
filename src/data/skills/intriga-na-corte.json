@@ -1,0 +1,11 @@
+{
+    "name": "Intriga na Corte",
+    "costByClass": {
+        "all": 4
+    },
+    "attribute": "Sabedoria/Inteligência",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

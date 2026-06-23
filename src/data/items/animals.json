@@ -1,0 +1,247 @@
+[
+    {
+        "code": "donkey-donkey-mule",
+        "name": "Asno, jumento ou mula",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "8 po"
+    },
+    {
+        "code": "ave",
+        "name": "Ave canora",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 po"
+    },
+    {
+        "code": "goat",
+        "name": "Bode",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 po"
+    },
+    {
+        "code": "ox",
+        "name": "Boi",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "15 po"
+    },
+    {
+        "code": "camel",
+        "name": "Camelo",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "50 po"
+    },
+    {
+        "code": "dog",
+        "name": "Cão de caça",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "17 po"
+    },
+    {
+        "code": "dog-guarda",
+        "name": "Cão de guarda",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "25 po"
+    },
+    {
+        "code": "dog-war",
+        "name": "Cão de guerra",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "20 po"
+    },
+    {
+        "code": "sheep",
+        "name": "Carneiro",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "4 po"
+    },
+    {
+        "code": "horse-war-light",
+        "name": "Cavalo de guerra (leve)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "150 po"
+    },
+    {
+        "code": "horse-war-medium",
+        "name": "Cavalo de guerra (médio)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "225 po"
+    },
+    {
+        "code": "horse-war-heavy",
+        "name": "Cavalo de guerra (pesado)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "400 po"
+    },
+    {
+        "code": "horse-saddle",
+        "name": "Cavalo de sela",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "75 po"
+    },
+    {
+        "code": "horse-draft",
+        "name": "Cavalo de tração",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "200 po"
+    },
+    {
+        "code": "swan",
+        "name": "Cisne",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pp"
+    },
+    {
+        "code": "elefante",
+        "name": "Elefante",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "200 po"
+    },
+    {
+        "code": "elefante-war",
+        "name": "Elefante de guerra",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "500 po"
+    },
+    {
+        "code": "falcao-adestrado",
+        "name": "Falcão adestrado",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1000 po"
+    },
+    {
+        "code": "felinos",
+        "name": "Felinos para caça",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5000 po"
+    },
+    {
+        "code": "frango",
+        "name": "Frango",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "3 pc"
+    },
+    {
+        "code": "chicken",
+        "name": "Galinha",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 pc"
+    },
+    {
+        "code": "chicken-dangola",
+        "name": "Galinha d’Angola",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 pc"
+    },
+    {
+        "code": "goose",
+        "name": "Ganso",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pc"
+    },
+    {
+        "code": "cat",
+        "name": "Gato",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 pp"
+    },
+    {
+        "code": "javali",
+        "name": "Javali",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10 po"
+    },
+    {
+        "code": "novilho",
+        "name": "Novilho",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 po"
+    },
+    {
+        "code": "ovelha",
+        "name": "Ovelha",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 po"
+    },
+    {
+        "code": "pavao",
+        "name": "Pavão",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pp"
+    },
+    {
+        "code": "perdiz",
+        "name": "Perdiz",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pc"
+    },
+    {
+        "code": "pigeon",
+        "name": "Pombo",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 pc"
+    },
+    {
+        "code": "pigeon-correio",
+        "name": "Pombo correio",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "100 po"
+    },
+    {
+        "code": "ponei",
+        "name": "Pônei",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "30 po"
+    },
+    {
+        "code": "pig",
+        "name": "Porco",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "3 po"
+    },
+    {
+        "code": "touro",
+        "name": "Touro",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "20 po"
+    },
+    {
+        "code": "cow",
+        "name": "Vaca",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10 po"
+    }
+]

@@ -1,0 +1,12 @@
+{
+    "name": "Saltar",
+    "costByClass": {
+        "other": 4,
+        "ladrao": 2
+    },
+    "attribute": "Força/Destreza",
+    "groups": [
+        "Ladrão/Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

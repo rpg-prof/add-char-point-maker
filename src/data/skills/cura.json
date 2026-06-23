@@ -1,0 +1,12 @@
+{
+    "name": "Cura",
+    "costByClass": {
+        "other": 8,
+        "sacerdote": 4
+    },
+    "attribute": "Sabedoria/Carisma",
+    "groups": [
+        "Sacerdote"
+    ],
+    "penaltyNoProficiency": -6
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Avaliação",
+    "costByClass": {
+        "other": 4,
+        "ladrao": 2
+    },
+    "attribute": "Inteligência/Sabedoria",
+    "groups": [
+        "Ladrão/Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

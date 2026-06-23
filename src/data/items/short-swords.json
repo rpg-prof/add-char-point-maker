@@ -1,0 +1,98 @@
+[
+    {
+        "code": "short-scimitar",
+        "name": "Cimitarra curta",
+        "weight": "2 a 3kg",
+        "cost": "15 po"
+    },
+    {
+        "code": "cutlass",
+        "name": "Cutlass",
+        "weight": "1,2 a 2kg",
+        "cost": "12 po"
+    },
+    {
+        "code": "short-sword",
+        "name": "Espada curta",
+        "weight": "1,5 a 2kg",
+        "cost": "10 po"
+    },
+    {
+        "code": "assassin-sword",
+        "name": "Espada de assassinos",
+        "weight": "1,2 a 1,6kg",
+        "cost": "12 po"
+    },
+    {
+        "code": "training-sword",
+        "name": "Espada de treinamento",
+        "weight": "800g a 1,2kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "austrian-falchion",
+        "name": "Falchion austriaco",
+        "weight": "2 a 3kg",
+        "cost": "18 po"
+    },
+    {
+        "code": "italian-falchion",
+        "name": "Falchion italiano",
+        "weight": "2,5 a 3,5kg",
+        "cost": "17 po"
+    },
+    {
+        "code": "foil",
+        "name": "Florete",
+        "weight": "500g a 1kg",
+        "cost": "17 po"
+    },
+    {
+        "code": "mage-foil",
+        "name": "Florete de magos",
+        "weight": "500 a 800g",
+        "cost": "17 po"
+    },
+    {
+        "code": "machete",
+        "name": "Machete",
+        "weight": "800g a 1,4kg",
+        "cost": "3 po"
+    },
+    {
+        "code": "rapier",
+        "name": "Rapier",
+        "weight": "750g a 1,2kg",
+        "cost": "15 po"
+    },
+    {
+        "code": "dueling-rapier",
+        "name": "Rapier de duelos",
+        "weight": "750g a 1,2kg",
+        "cost": "20 po"
+    },
+    {
+        "code": "pirate-rapier",
+        "name": "Rapier de piratas",
+        "weight": "750g a 1,2kg",
+        "cost": "20 po"
+    },
+    {
+        "code": "saber",
+        "name": "Sabre",
+        "weight": "1 a 1,5kg",
+        "cost": "17 po"
+    },
+    {
+        "code": "amazon-saber",
+        "name": "Sabre de amazonas",
+        "weight": "1 a 1,2kg",
+        "cost": "20 po"
+    },
+    {
+        "code": "pirate-saber",
+        "name": "Sabre de piratas",
+        "weight": "1,2 a 1,8kg",
+        "cost": "15 po"
+    }
+]

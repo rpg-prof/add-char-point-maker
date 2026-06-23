@@ -6,9 +6,9 @@ import {
   reputations,
   generalAdvantages,
   generalDisadvantages,
-  skills,
   type AttributeName,
 } from "@/data/characterData";
+import { skills, getSkillCost } from "@/data/skills";
 import { weaponGroups, shieldProficiencies } from "@/data/weaponProficiencies";
 import {
   divineSpheres,
@@ -107,7 +107,9 @@ export function getCharacterPointBreakdown(ctx: CharacterPointContext): PointBre
 
   for (const name of ctx.selectedSkills) {
     const skill = skills.find((s) => s.name === name);
-    if (skill) pushCost(breakdown, `Perícia: ${skill.name}`, skill.cost);
+    if (skill) {
+      pushCost(breakdown, `Perícia: ${skill.name}`, getSkillCost(skill, ctx.selectedClass));
+    }
   }
 
   for (const groupName of ctx.selectedWeaponGroups) {

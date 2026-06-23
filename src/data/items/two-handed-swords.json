@@ -1,0 +1,38 @@
+[
+    {
+        "code": "claymore",
+        "name": "Claymore",
+        "weight": "4 a 8kg",
+        "cost": "25 po"
+    },
+    {
+        "code": "bastard-sword-two-handed",
+        "name": "Espada bastarda (Duas mãos)",
+        "weight": "4 a 6kg",
+        "cost": "25 po"
+    },
+    {
+        "code": "two-handed-sword",
+        "name": "Espada de duas mãos",
+        "weight": "5 a 7kg",
+        "cost": "50 po"
+    },
+    {
+        "code": "flamberge",
+        "name": "Flamberge",
+        "weight": "4 a 6kg",
+        "cost": "45 po"
+    },
+    {
+        "code": "katana",
+        "name": "Katana",
+        "weight": "1,5 a 2,5kg",
+        "cost": "100 po"
+    },
+    {
+        "code": "greatsword",
+        "name": "Montante",
+        "weight": "7 a 10kg",
+        "cost": "50 po"
+    }
+]

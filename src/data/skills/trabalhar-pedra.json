@@ -1,0 +1,11 @@
+{
+    "name": "Trabalhar Pedra",
+    "costByClass": {
+        "all": 4
+    },
+    "attribute": "Força/Sabedoria",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

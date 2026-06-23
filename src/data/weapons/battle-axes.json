@@ -1,0 +1,61 @@
+{
+    "group-name": "Machados Grandes Simples",
+    "group-size-category": "G",
+    "group-cost-per-weapon": 15,
+    "group-cost-group": 30,
+    "group-cost-specialization": 30,
+    "group-penalty-no-proficiency": -5,
+    "group-penalty-similar": -2,
+    "weapons": [
+        {
+            "code": "curved-battle-axe",
+            "name": "Machado batalha curvo",
+            "weight": "3 a 4kg",
+            "size": "50 a 70cm",
+            "type": "c",
+            "speed": "7",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        },
+        {
+            "code": "straight-battle-axe",
+            "name": "Machado batalha reto",
+            "weight": "3,5 a 4,5kg",
+            "size": "50 a 70cm",
+            "type": "c",
+            "speed": "7",
+            "damagePM": "1d6+1",
+            "damageG": "1d8+1"
+        },
+        {
+            "code": "woodcutter-axe",
+            "name": "Machado de Lenhador",
+            "weight": "4 a 5kg",
+            "size": "50 a 80cm",
+            "type": "c",
+            "speed": "8",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        },
+        {
+            "code": "molok-axe",
+            "name": "Machado Molok",
+            "weight": "3,5 a 4,5kg",
+            "size": "60 a 80cm",
+            "type": "c",
+            "speed": "7",
+            "damagePM": "2d4",
+            "damageG": "1d8+1"
+        },
+        {
+            "code": "wavy-battle-axe",
+            "name": "Machado sinuoso",
+            "weight": "2 a 3,5kg",
+            "size": "40 a 60cm",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        }
+    ]
+}

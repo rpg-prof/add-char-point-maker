@@ -1,0 +1,14 @@
+{
+    "name": "Criptografia",
+    "costByClass": {
+        "other": 6,
+        "ladrao": 3,
+        "arcano": 3
+    },
+    "attribute": "Inteligência/Sabedoria",
+    "groups": [
+        "Ladrão/Bardo",
+        "Mago"
+    ],
+    "penaltyNoProficiency": -6
+}

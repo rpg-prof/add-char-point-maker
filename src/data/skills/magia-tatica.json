@@ -1,0 +1,12 @@
+{
+    "name": "Magia Tática",
+    "costByClass": {
+        "other": 6,
+        "arcano": 3
+    },
+    "attribute": "Inteligência",
+    "groups": [
+        "Mago"
+    ],
+    "penaltyNoProficiency": -6
+}

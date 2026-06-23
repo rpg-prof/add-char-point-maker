@@ -1,0 +1,71 @@
+{
+    "group-name": "Outras Armas Maiores",
+    "group-size-category": "M",
+    "group-cost-per-weapon": 5,
+    "group-cost-group": null,
+    "group-cost-specialization": 10,
+    "group-penalty-no-proficiency": -3,
+    "group-penalty-similar": -1,
+    "weapons": [
+        {
+            "code": "ball-and-chain",
+            "name": "Corrente com bola",
+            "weight": "4 a 5kg",
+            "size": "1,3 a 1,8m",
+            "type": "e",
+            "speed": "8",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        },
+        {
+            "code": "cleaver",
+            "name": "Cutelo",
+            "weight": "300 a 500g",
+            "size": "30 a 45cm",
+            "type": "c",
+            "speed": "4",
+            "damagePM": "1d4+1",
+            "damageG": "1d4"
+        },
+        {
+            "code": "sickle",
+            "name": "Foice",
+            "weight": "2 a 3kg",
+            "size": "70 a 120cm",
+            "type": "c/p",
+            "speed": "7",
+            "damagePM": "1d8",
+            "damageG": "1d6"
+        },
+        {
+            "code": "druid-sickle",
+            "name": "Foice druídica",
+            "weight": "500g a 1,5kg",
+            "size": "20 a 35cm",
+            "type": "p/c",
+            "speed": "3",
+            "damagePM": "1d6",
+            "damageG": "1d3"
+        },
+        {
+            "code": "kama",
+            "name": "Kama",
+            "weight": "300 a 400g",
+            "size": "25 a 35cm",
+            "type": "c",
+            "speed": "3",
+            "damagePM": "1d4",
+            "damageG": "1d4"
+        },
+        {
+            "code": "pickaxe",
+            "name": "Picareta",
+            "weight": "4 a 6kg",
+            "size": "60 a 90cm",
+            "type": "c/p",
+            "speed": "6",
+            "damagePM": "1d6",
+            "damageG": "1d4+1"
+        }
+    ]
+}

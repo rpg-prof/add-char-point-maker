@@ -1,0 +1,12 @@
+{
+    "name": "Caça",
+    "costByClass": {
+        "other": 4,
+        "guerreiro": 2
+    },
+    "attribute": "Sabedoria",
+    "groups": [
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

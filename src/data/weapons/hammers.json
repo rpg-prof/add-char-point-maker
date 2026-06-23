@@ -1,0 +1,71 @@
+{
+    "group-name": "Martelos",
+    "group-size-category": "M",
+    "group-cost-per-weapon": 5,
+    "group-cost-group": 15,
+    "group-cost-specialization": 10,
+    "group-penalty-no-proficiency": -3,
+    "group-penalty-similar": -1,
+    "weapons": [
+        {
+            "code": "awpike",
+            "name": "Awpike",
+            "weight": "4 a 5kg",
+            "size": "110 a 130cm",
+            "type": "e",
+            "speed": "8",
+            "damagePM": "1d8",
+            "damageG": "1d8+1"
+        },
+        {
+            "code": "gruufhai",
+            "name": "Gruufhai",
+            "weight": "4 a 5,5kg",
+            "size": "120 a 140cm",
+            "type": "e",
+            "speed": "9",
+            "damagePM": "1d10",
+            "damageG": "1d10"
+        },
+        {
+            "code": "crow-head-hammer",
+            "name": "Martelo cabeça de corvo",
+            "weight": "3,5 a 4,8kg",
+            "size": "80 a 90cm",
+            "type": "e",
+            "speed": "7",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        },
+        {
+            "code": "double-headed-hammer",
+            "name": "Martelo de 2 Cabeças",
+            "weight": "4 a 5kg",
+            "size": "75 a 100cm",
+            "type": "e/p",
+            "speed": "6",
+            "damagePM": "1d8",
+            "damageG": "1d8+1"
+        },
+        {
+            "code": "war-hammer",
+            "name": "Martelo de Guerra",
+            "weight": "2,5 a 3,5kg",
+            "size": "70 a 80cm",
+            "type": "e",
+            "speed": "4",
+            "damagePM": "1d4",
+            "damageG": "1d4+1"
+        },
+        {
+            "code": "ritual-hammer",
+            "name": "Martelo ritual",
+            "weight": "2,5 a 4kg",
+            "size": "80 a 95cm",
+            "type": "e",
+            "speed": "5",
+            "damagePM": "1d4+1",
+            "damageG": "1d6"
+        }
+    ]
+}

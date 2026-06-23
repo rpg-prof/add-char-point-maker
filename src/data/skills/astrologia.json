@@ -1,0 +1,14 @@
+{
+    "name": "Astrologia",
+    "costByClass": {
+        "other": 6,
+        "sacerdote": 3,
+        "arcano": 3
+    },
+    "attribute": "Sabedoria/Inteligência",
+    "groups": [
+        "Sacerdote",
+        "Mago"
+    ],
+    "penaltyNoProficiency": -6
+}

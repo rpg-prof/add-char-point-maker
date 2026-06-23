@@ -1,0 +1,14 @@
+{
+    "name": "Conhecimento Místico",
+    "costByClass": {
+        "other": 6,
+        "sacerdote": 3,
+        "arcano": 3
+    },
+    "attribute": "Inteligência",
+    "groups": [
+        "Sacerdote",
+        "Mago"
+    ],
+    "penaltyNoProficiency": -6
+}

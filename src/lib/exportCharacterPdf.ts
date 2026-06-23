@@ -4,10 +4,10 @@ import {
   generalAdvantages,
   generalDisadvantages,
   reputations,
-  skills,
   socialClasses,
   type AttributeName,
 } from "@/data/characterData";
+import { skills, getSkillCost } from "@/data/skills";
 import {
   equipmentById,
   formatMoney,
@@ -15,6 +15,7 @@ import {
   getSpentCopper,
   getStartingCapitalPc,
   getTotalWeightKg,
+  type CustomInventoryItem,
   type PurchasedItems,
 } from "@/data/equipment";
 import { parseCargaKg } from "@/data/currency";
@@ -30,6 +31,7 @@ import {
   hasArtesMarciais,
   resolveCurrentHp,
   sanitizeCombatLoadout,
+  resolveWeaponById,
   type CombatLoadout,
   type WeaponAttackSlot,
 } from "@/lib/combatStats";
@@ -39,6 +41,7 @@ import {
   resolveResourceCurrent,
 } from "@/lib/combatResources";
 import { computeResistanceBreakdown } from "@/lib/resistanceStats";
+import { mergeInventory } from "@/lib/inventory";
 
 export interface ExportCharacterPdfInput {
   charName: string;
@@ -58,6 +61,9 @@ export interface ExportCharacterPdfInput {
   attributes: Record<AttributeName, number>;
   subAttributes: Record<string, number>;
   purchasedItems: PurchasedItems;
+  addedItems?: PurchasedItems;
+  customItems?: CustomInventoryItem[];
+  extraMoneyPc?: number;
   combatLoadout: CombatLoadout;
   selectedAdvantages: string[];
   selectedRaceClassAdv: string[];
@@ -92,30 +98,19 @@ function estimateTableHeight(
 function getSlotDisplayName(
   slot: WeaponAttackSlot,
   isMartialArts: boolean,
+  customItems: CustomInventoryItem[] = [],
 ): string {
   if (isMartialArts) return "Artes Marciais";
   if (slot.equipmentId) {
-    return equipmentById[slot.equipmentId]?.name ?? slot.name;
+    return resolveWeaponById(slot.equipmentId, customItems)?.name ?? slot.name;
   }
   return slot.name.trim() || "—";
 }
 
-function getSkillCost(skillName: string, characterClass: string): number {
+function getSkillCostForExport(skillName: string, characterClass: string): number {
   const skill = skills.find((s) => s.name === skillName);
   if (!skill) return 0;
-  const classToGroups: Record<string, string[]> = {
-    Guerreiro: ["Guerreiro"],
-    Paladino: ["Guerreiro"],
-    Ranger: ["Guerreiro"],
-    Ladrão: ["Ladrão/Bardo"],
-    Bardo: ["Ladrão/Bardo"],
-    Sacerdote: ["Sacerdote"],
-    Arcano: ["Mago"],
-  };
-  const all = [skill.group, ...(skill.additionalGroups || [])];
-  const match = classToGroups[characterClass] || [];
-  const isClass = skill.group === "Geral" || all.some((g) => match.includes(g));
-  return isClass ? skill.cost : skill.cost * 2;
+  return getSkillCost(skill, characterClass);
 }
 
 const GOLD: [number, number, number] = [176, 141, 76];
@@ -468,6 +463,11 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
   const margin = 36;
   let y = margin;
 
+  const addedItems = input.addedItems ?? {};
+  const customItems = input.customItems ?? [];
+  const extraMoneyPc = input.extraMoneyPc ?? 0;
+  const inventory = mergeInventory(input.purchasedItems, addedItems);
+
   drawMainPageChrome(doc, pageW, pageH);
 
   // Sequential field naming to guarantee uniqueness
@@ -735,7 +735,7 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     y += 4;
   }
 
-  const loadout = sanitizeCombatLoadout(input.combatLoadout, input.purchasedItems);
+  const loadout = sanitizeCombatLoadout(input.combatLoadout, inventory, customItems);
   const hasMagicAccess =
     Object.keys(input.divineAccess).length > 0 ||
     Object.keys(input.arcaneAccess).length > 0 ||
@@ -904,7 +904,7 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
   // ===== COMBATE (CA) =====
   const caBreakdown = computeArmorClassBreakdown({
     subAttributes: input.subAttributes,
-    purchased: input.purchasedItems,
+    purchased: inventory,
     selectedRaceClassAdv: input.selectedRaceClassAdv,
     destrezaMain: input.attributes.Destreza,
     sabedoriaMain: input.attributes.Sabedoria,
@@ -990,6 +990,7 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
       selectedRaceClassAdv: input.selectedRaceClassAdv,
       attackBaseBonus: loadout.attackBaseBonus,
       isMartialArts: isMartialArtsRow,
+      customItems,
     });
     const base = slot.baseOverride ?? attack.base;
     const forca = slot.forcaOverride ?? attack.forca;
@@ -998,7 +999,7 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     const total =
       base + forca + destreza + pericia + (slot.magiaAttack ?? attack.magia);
     return [
-      getSlotDisplayName(slot, isMartialArtsRow),
+      getSlotDisplayName(slot, isMartialArtsRow, customItems),
       isMartialArtsRow ? "—" : slot.tipo || "—",
       isMartialArtsRow ? martialArtsDamage : slot.damageSm || "—",
       isMartialArtsRow ? martialArtsDamage : slot.damageLg || "—",
@@ -1109,7 +1110,7 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     autoTable(doc, {
       startY: y,
       head: [["Perícia", "Custo"]],
-      body: sortedSkills.map((s) => [s, String(getSkillCost(s, input.selectedClass))]),
+      body: sortedSkills.map((s) => [s, String(getSkillCostForExport(s, input.selectedClass))]),
       theme: "striped",
       ...tableBase,
       columnStyles: { 1: { halign: "center", cellWidth: 60 } },
@@ -1206,32 +1207,47 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     y = (doc as any).lastAutoTable.finalY + 14;
   }
 
-  // ===== DINHEIRO & EQUIPAMENTO =====
+  // ===== INVENTÁRIO =====
   const startingPc = getStartingCapitalPc(input.selectedSocialClass, socialClasses);
   const spentPc = getSpentCopper(input.purchasedItems);
   const remainingPc = getRemainingCopper(
     input.selectedSocialClass,
     socialClasses,
     input.purchasedItems,
+    extraMoneyPc,
   );
-  const totalWeight = getTotalWeightKg(input.purchasedItems);
+  const totalWeight = getTotalWeightKg(input.purchasedItems, addedItems, customItems);
   const resistenciaValue =
     input.subAttributes["Resistência"] ?? input.attributes.Força;
   const cargaBonus =
     getSubAttributeBonuses("Resistência", resistenciaValue)["Carga Permitida"] ?? "—";
   const cargaKg = parseCargaKg(cargaBonus);
 
-  const ownedItems = Object.entries(input.purchasedItems)
+  const catalogOwnedItems = Object.entries(inventory)
     .filter(([, qty]) => qty > 0)
     .map(([id, qty]) => ({ item: equipmentById[id], qty }))
     .filter((e) => e.item)
     .sort((a, b) => a.item!.name.localeCompare(b.item!.name, "pt-BR"));
+  const ownedItems = [
+    ...catalogOwnedItems.map(({ item, qty }) => ({
+      name: item!.name,
+      qty,
+      weightKg: item!.weightKg * qty,
+    })),
+    ...customItems
+      .filter((item) => item.qty > 0)
+      .map((item) => ({
+        name: item.name,
+        qty: item.qty,
+        weightKg: item.weightKg * item.qty,
+      })),
+  ].sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
 
   const equipmentContentH =
     estimateTableHeight(1) +
     8 +
     (ownedItems.length > 0 ? estimateTableHeight(ownedItems.length) : 0);
-  beginSection("Dinheiro & Equipamento", equipmentContentH);
+  beginSection("Inventário", equipmentContentH);
 
   autoTable(doc, {
     startY: y,
@@ -1263,10 +1279,10 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
     autoTable(doc, {
       startY: y,
       head: [["Item", "Qtd.", "Peso (kg)"]],
-      body: ownedItems.map(({ item, qty }) => [
-        item!.name,
+      body: ownedItems.map(({ name, qty, weightKg }) => [
+        name,
         String(qty),
-        (item!.weightKg * qty).toFixed(2).replace(".", ","),
+        weightKg.toFixed(2).replace(".", ","),
       ]),
       theme: "striped",
       ...tableBase,

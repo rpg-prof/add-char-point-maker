@@ -1,0 +1,15 @@
+{
+    "name": "Vontade de Ferro",
+    "costByClass": {
+        "guerreiro": 2,
+        "sacerdote": 2,
+        "paladino": 2,
+        "ranger": 2,
+        "other": 6
+    },
+    "attribute": "Sabedoria/Constituição",
+    "groups": [
+        "Guerreiro", "Sacerdote", "Paladino", "Ranger"
+    ],
+    "penaltyNoProficiency": -6
+}

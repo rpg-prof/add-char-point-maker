@@ -1,0 +1,701 @@
+{
+    "by-group": {
+        "Geral": [
+            {
+                "name": "Agricultura",
+                "file": "agricultura.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Alfaiate",
+                "file": "alfaiate.json",
+                "attribute": "Destreza/Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Artesanato em Couro",
+                "file": "artesanato-em-couro.json",
+                "attribute": "Inteligência/Destreza",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Cantar",
+                "file": "cantar.json",
+                "attribute": "Carisma",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Carpintaria",
+                "file": "carpintaria.json",
+                "attribute": "Força/Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Cavalgar Criatura Alada",
+                "file": "cavalgar-criatura-alada.json",
+                "attribute": "Sabedoria/Destreza",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Cavalgar Criatura Terrestre",
+                "file": "cavalgar-criatura-terrestre.json",
+                "attribute": "Sabedoria/Destreza",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Cerâmica",
+                "file": "ceramica.json",
+                "attribute": "Destreza",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Conhecimento do Clima",
+                "file": "conhecimento-do-clima.json",
+                "attribute": "Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Cozinhar",
+                "file": "cozinhar.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Dança",
+                "file": "danca.json",
+                "attribute": "Destreza/Carisma",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Engenharia",
+                "file": "engenharia.json",
+                "attribute": "Inteligência/Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Escultor",
+                "file": "escultor.json",
+                "attribute": "Destreza/Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Etiqueta",
+                "file": "etiqueta.json",
+                "attribute": "Carisma/Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Forjaria",
+                "file": "forjaria.json",
+                "attribute": "Força/Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Heráldica",
+                "file": "heraldica.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Idiomas Modernos",
+                "file": "idiomas-modernos.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Instrumento Musical",
+                "file": "instrumento-musical.json",
+                "attribute": "Carisma",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Intriga na Corte",
+                "file": "intriga-na-corte.json",
+                "attribute": "Sabedoria/Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Jogo",
+                "file": "jogo.json",
+                "attribute": "Sabedoria/Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Leis",
+                "file": "leis.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Lidar com Animais",
+                "file": "lidar-com-animais.json",
+                "attribute": "Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Liderança",
+                "file": "lideranca.json",
+                "attribute": "Carisma",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Mãos Estáveis",
+                "file": "maos-estaveis.json",
+                "attribute": "Destreza",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Marinhagem",
+                "file": "marinhagem.json",
+                "attribute": "Sabedoria/Destreza",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Mergulho",
+                "file": "mergulho.json",
+                "attribute": "Destreza/Constituição",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Mineração",
+                "file": "mineracao.json",
+                "attribute": "Sabedoria/Força",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Natação",
+                "file": "natacao.json",
+                "attribute": "Força",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Navegação",
+                "file": "navegacao.json",
+                "attribute": "Inteligência/Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Navegador",
+                "file": "navegador.json",
+                "attribute": "Inteligência/Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Navegar Bote",
+                "file": "navegar-bote.json",
+                "attribute": "Força/Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Pesca",
+                "file": "pesca.json",
+                "attribute": "Sabedoria/Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Pintura",
+                "file": "pintura.json",
+                "attribute": "Destreza/Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Preparar Bebidas",
+                "file": "preparar-bebidas.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Preparar Fogueira",
+                "file": "preparar-fogueira.json",
+                "attribute": "Sabedoria/Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Pressentir Perigo",
+                "file": "pressentir-perigo.json",
+                "attribute": "Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Prestidigitação",
+                "file": "prestidigitacao.json",
+                "attribute": "Destreza",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Sapataria",
+                "file": "sapataria.json",
+                "attribute": "Destreza/Inteligência",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Tecelagem",
+                "file": "tecelagem.json",
+                "attribute": "Inteligência/Destreza",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Trabalhar Pedra",
+                "file": "trabalhar-pedra.json",
+                "attribute": "Força/Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Treinar Animais",
+                "file": "treinar-animais.json",
+                "attribute": "Sabedoria/Carisma",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Uso de Cordas",
+                "file": "uso-de-cordas.json",
+                "attribute": "Destreza/Sabedoria",
+                "groups": [
+                    "Geral"
+                ]
+            },
+            {
+                "name": "Vontade de Ferro",
+                "file": "vontade-de-ferro.json",
+                "attribute": "Sabedoria/Constituição",
+                "groups": [
+                    "Geral"
+                ]
+            }
+        ],
+        "Guerreiro": [
+            {
+                "name": "Caça",
+                "file": "caca.json",
+                "attribute": "Sabedoria",
+                "groups": [
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Conduzir Carruagem",
+                "file": "conduzir-carruagem.json",
+                "attribute": "Destreza/Sabedoria",
+                "groups": [
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Conhecimento dos Animais",
+                "file": "conhecimento-dos-animais.json",
+                "attribute": "Inteligência/Sabedoria",
+                "groups": [
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Correr",
+                "file": "correr.json",
+                "attribute": "Força/Constituição",
+                "groups": [
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Fabricação de Arcos e Flechas",
+                "file": "fabricacao-de-arcos-e-flechas.json",
+                "attribute": "Inteligência/Destreza",
+                "groups": [
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Fazer Armaduras",
+                "file": "fazer-armaduras.json",
+                "attribute": "Inteligência/Força",
+                "groups": [
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Forjar Armas",
+                "file": "forjar-armas.json",
+                "attribute": "Inteligência/Destreza",
+                "groups": [
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Montanhismo",
+                "file": "montanhismo.json",
+                "attribute": "Força/Sabedoria",
+                "groups": [
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Rastrear",
+                "file": "rastrear.json",
+                "attribute": "Sabedoria",
+                "groups": [
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Sobrevivência",
+                "file": "sobrevivencia.json",
+                "attribute": "Inteligência/Sabedoria",
+                "groups": [
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Vigor",
+                "file": "vigor.json",
+                "attribute": "Constituição",
+                "groups": [
+                    "Guerreiro"
+                ]
+            }
+        ],
+        "Ladrão/Bardo": [
+            {
+                "name": "Acrobacia",
+                "file": "acrobacia.json",
+                "attribute": "Destreza/Força",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Andar na Corda Bamba",
+                "file": "andar-na-corda-bamba.json",
+                "attribute": "Destreza",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Arremessador",
+                "file": "arremessador.json",
+                "attribute": "Destreza/Força",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Avaliação",
+                "file": "avaliacao.json",
+                "attribute": "Inteligência/Sabedoria",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Camuflagem",
+                "file": "camuflagem.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Ladrão/Bardo",
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Criptografia",
+                "file": "criptografia.json",
+                "attribute": "Inteligência/Sabedoria",
+                "groups": [
+                    "Ladrão/Bardo",
+                    "Mago"
+                ]
+            },
+            {
+                "name": "Disfarce",
+                "file": "disfarce.json",
+                "attribute": "Sabedoria/Carisma",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Falsificação",
+                "file": "falsificacao.json",
+                "attribute": "Destreza/Sabedoria",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Lapidação",
+                "file": "lapidacao.json",
+                "attribute": "Destreza",
+                "groups": [
+                    "Ladrão/Bardo",
+                    "Mago"
+                ]
+            },
+            {
+                "name": "Leitura de Lábios",
+                "file": "leitura-de-labios.json",
+                "attribute": "Inteligência/Sabedoria",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Luta Suja",
+                "file": "luta-suja.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Ladrão/Bardo",
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Lutar no Escuro",
+                "file": "lutar-no-escuro.json",
+                "attribute": "Sabedoria/Destreza",
+                "groups": [
+                    "Ladrão/Bardo",
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Malabarismo",
+                "file": "malabarismo.json",
+                "attribute": "Destreza",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Manha das Ruas",
+                "file": "manha-das-ruas.json",
+                "attribute": "Sabedoria/Carisma",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Preparar Armadilhas",
+                "file": "preparar-armadilhas.json",
+                "attribute": "Destreza/Sabedoria",
+                "groups": [
+                    "Ladrão/Bardo",
+                    "Guerreiro"
+                ]
+            },
+            {
+                "name": "Saltar",
+                "file": "saltar.json",
+                "attribute": "Força/Destreza",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Ventriloquismo",
+                "file": "ventriloquismo.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Ladrão/Bardo"
+                ]
+            }
+        ],
+        "Sacerdote": [
+            {
+                "name": "Astrologia",
+                "file": "astrologia.json",
+                "attribute": "Sabedoria/Inteligência",
+                "groups": [
+                    "Sacerdote",
+                    "Mago"
+                ]
+            },
+            {
+                "name": "Conhecimento Místico",
+                "file": "conhecimento-mistico.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Sacerdote",
+                    "Mago"
+                ]
+            },
+            {
+                "name": "Cura",
+                "file": "cura.json",
+                "attribute": "Sabedoria/Carisma",
+                "groups": [
+                    "Sacerdote"
+                ]
+            },
+            {
+                "name": "Herbalismo",
+                "file": "herbalismo.json",
+                "attribute": "Inteligência/Sabedoria",
+                "groups": [
+                    "Sacerdote",
+                    "Mago"
+                ]
+            },
+            {
+                "name": "História Antiga",
+                "file": "historia-antiga.json",
+                "attribute": "Sabedoria/Inteligência",
+                "groups": [
+                    "Sacerdote",
+                    "Ladrão/Bardo",
+                    "Mago"
+                ]
+            },
+            {
+                "name": "História Local",
+                "file": "historia-local.json",
+                "attribute": "Inteligência/Carisma",
+                "groups": [
+                    "Sacerdote",
+                    "Ladrão/Bardo"
+                ]
+            },
+            {
+                "name": "Idiomas Antigos",
+                "file": "idiomas-antigos.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Sacerdote",
+                    "Mago"
+                ]
+            },
+            {
+                "name": "Ler/Escrever",
+                "file": "ler-escrever.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Sacerdote",
+                    "Mago"
+                ]
+            },
+            {
+                "name": "Religião",
+                "file": "religiao.json",
+                "attribute": "Sabedoria",
+                "groups": [
+                    "Sacerdote",
+                    "Mago"
+                ]
+            }
+        ],
+        "Mago": [
+            {
+                "name": "Armadura Mental",
+                "file": "armadura-mental.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Mago"
+                ]
+            },
+            {
+                "name": "Astronomia",
+                "file": "astronomia.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Mago"
+                ]
+            },
+            {
+                "name": "Magia Tática",
+                "file": "magia-tatica.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Mago"
+                ]
+            },
+            {
+                "name": "Pesquisar",
+                "file": "pesquisar.json",
+                "attribute": "Inteligência",
+                "groups": [
+                    "Mago"
+                ]
+            }
+        ]
+    }
+}

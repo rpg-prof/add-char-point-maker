@@ -1,0 +1,12 @@
+{
+    "name": "Leitura de Lábios",
+    "costByClass": {
+        "other": 6,
+        "ladrao": 3
+    },
+    "attribute": "Inteligência/Sabedoria",
+    "groups": [
+        "Ladrão/Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

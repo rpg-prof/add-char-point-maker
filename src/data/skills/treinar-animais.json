@@ -1,0 +1,11 @@
+{
+    "name": "Treinar Animais",
+    "costByClass": {
+        "all": 4
+    },
+    "attribute": "Sabedoria/Carisma",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

@@ -1,0 +1,50 @@
+[
+    {
+        "code": "quarterstaff",
+        "name": "Bastão / Bordão / Cajado",
+        "weight": "2 a 3kg",
+        "cost": "15 pp"
+    },
+    {
+        "code": "club",
+        "name": "Clava",
+        "weight": "1 a 1,5kg",
+        "cost": "5 pp"
+    },
+    {
+        "code": "stone-club",
+        "name": "Clava de pedra",
+        "weight": "1 a 1,5kg",
+        "cost": "5 pp"
+    },
+    {
+        "code": "spiked-club",
+        "name": "Clava-espinho",
+        "weight": "1 a 1,5kg",
+        "cost": "1 po"
+    },
+    {
+        "code": "army-mace",
+        "name": "Maça de exército",
+        "weight": "1 a 1,5kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "war-mace",
+        "name": "Maça de guerra",
+        "weight": "2 a 3kg",
+        "cost": "8 po"
+    },
+    {
+        "code": "morningstar",
+        "name": "Maça estrela (Morningstar)",
+        "weight": "3 a 5kg",
+        "cost": "10 po"
+    },
+    {
+        "code": "tetsubo",
+        "name": "Tetsubo",
+        "weight": "2 a 3,5kg",
+        "cost": "5 po"
+    }
+]

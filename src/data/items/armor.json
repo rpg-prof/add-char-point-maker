@@ -1,0 +1,170 @@
+[
+    {
+        "code": "full-plate",
+        "name": "Armadura Completa",
+        "category": "armadura",
+        "weight": "32kg",
+        "cost": "10000 po",
+        "armorClass": 9,
+        "description": "Trata-se da versão mais comum da armadura completa, consistindo de placas de metal ajustadas ao corpo e interligadas de maneira a cobrir toda sua extensão. Inclui luvas, botas e elmo com visor. Uma grossa camada de acolchoamento é usada por baixo. O peso é distribuído igualmente pelo corpo. Além do preço, as maiores desvantagens são a falta de ventilação e o tempo gasto em vesti-la e retirá-la. (Veja a seção Colocando e Retirando a Armadura.) Cada armadura é feita sob medida por um mestre armeiro. Entretanto, pedaços avulsos encontrados em campos de batalha podem ser remodelados, de maneira a servir no novo proprietário. (A menos que tal coisa seja impossível, como um humano tentando entrar numa armadura para halfling.)"
+    },
+    {
+        "code": "field-plate",
+        "name": "Armadura de Batalha",
+        "category": "armadura",
+        "weight": "25kg",
+        "cost": "2000 po",
+        "armorClass": 8,
+        "description": "Trata-se da versão mais comum da armadura completa, consistindo de placas de metal ajustadas ao corpo e interligadas de maneira a cobrir toda sua extensão. Inclui luvas, botas e elmo com visor. Uma grossa camada de acolchoamento é usada por baixo. O peso é distribuído igualmente pelo corpo. Além do preço, as maiores desvantagens são a falta de ventilação e o tempo gasto em vesti-la e retirá-la. (Veja a seção Colocando e Retirando a Armadura.) Cada armadura é feita sob medida por um mestre armeiro. Entretanto, pedaços avulsos encontrados em campos de batalha podem ser remodelados, de maneira a servir no novo proprietário. (A menos que tal coisa seja impossível, como um humano tentando entrar numa armadura para halfling.)"
+    },
+    {
+        "code": "bronze-plate",
+        "name": "Armadura de Bronze",
+        "category": "armadura",
+        "weight": "25kg",
+        "cost": "400 po",
+        "armorClass": 6
+    },
+    {
+        "code": "plate-mail",
+        "name": "Armadura Simples",
+        "category": "armadura",
+        "weight": "40kg",
+        "cost": "600 po",
+        "armorClass": 7,
+        "description": "É uma combinação entre a cota de malha, ou a brigandina, com placas de metal (dragonas, cotoveleiras, manoplas, saiote e greva) recobrindo as áreas vitais. Distribui o peso igualmente pelo corpo, e a armadura é ajustada no lugar com correias e fivelas. É o tipo de proteção pesada mais comum. Armadura feita de pequenas plaquetas metálicas, costuradas sobre lona ou couro, e protegida por uma camada externa de tecido. Atrapalha um"
+    },
+    {
+        "code": "brigandine",
+        "name": "Brigandina",
+        "category": "armadura",
+        "weight": "25kg",
+        "cost": "120 po",
+        "armorClass": 4,
+        "description": "É uma combinação entre a cota de malha, ou a brigandina, com placas de metal (dragonas, cotoveleiras, manoplas, saiote e greva) recobrindo as áreas vitais. Distribui o peso igualmente pelo corpo, e a armadura é ajustada no lugar com correias e fivelas. É o tipo de proteção pesada mais comum. Armadura feita de pequenas plaquetas metálicas, costuradas sobre lona ou couro, e protegida por uma camada externa de tecido. Atrapalha um"
+    },
+    {
+        "code": "buckler",
+        "name": "Broquel",
+        "category": "armadura",
+        "weight": "1kg",
+        "cost": "1 po",
+        "armorClass": "+1",
+        "description": "Os escudos melhoram a cotação da Categoria de Armadura em 1 ponto ou mais, contra um número “X” de ataques. O escudo é útil para proteger a frente e os flancos do usuário. Ataques pela retaguarda e flancos traseiros não são bloqueados pelo escudo. (A exceção fica por conta daqueles que usam o escudo pendurado nas costas, o que, no caso. protegeria contra ataques pela retaguarda.) A referência sobre o tamanho do escudo é relativa ao tamanho do usuário. Assim, um escudo pequeno usado por um humano ofereceria a proteção de um escudo médio para um gnomo."
+    },
+    {
+        "code": "brigandine-coat",
+        "name": "Brunea",
+        "category": "armadura",
+        "weight": "20kg",
+        "cost": "120 po",
+        "armorClass": 4,
+        "description": "Trata-se de um gibão e de proteção para as pernas (talvez ainda um saiote) feitos de couro recobertos com plaquetas metálicas sobrepostas, assim como as escamas de um peixe."
+    },
+    {
+        "code": "leather-cuirass",
+        "name": "Corselete de Couro",
+        "category": "armadura",
+        "weight": "2kg",
+        "cost": "5 po",
+        "armorClass": 2,
+        "description": "Confeccionado em couro curtido, e então modelado em placas peitorais e protetores para ombros. O resto é feito de material mais flexível e macio."
+    },
+    {
+        "code": "padded-leather-cuirass",
+        "name": "Corselete de Couro Acolchoado",
+        "category": "armadura",
+        "weight": "10kg",
+        "cost": "4 po",
+        "armorClass": 2,
+        "description": "Confeccionado em couro curtido, e então modelado em placas peitorais e protetores para ombros. O resto é feito de material mais flexível e macio."
+    },
+    {
+        "code": "studded-leather-cuirass",
+        "name": "Corselete de Couro Batido",
+        "category": "armadura",
+        "weight": "6kg",
+        "cost": "20 po",
+        "armorClass": 3,
+        "description": "É uma armadura feita de couro (não se trata de couro endurecido, neste caso) e reforçada com rebites de metal costurados um perto do outro. Parece com a brigandina, porém o espaço entre os rebites é maior."
+    },
+    {
+        "code": "chain-mail",
+        "name": "Cota de Malha",
+        "category": "armadura",
+        "weight": "11kg",
+        "cost": "75 po",
+        "armorClass": 5,
+        "description": "Essa armadura é feita de anéis metálicos interligados. É usada com um gibão acolchoado por baixo, para prevenir fricções e amortecer o impacto de golpes. Várias camadas de cota são em geral colocadas sobre as áreas vitais. A malha absorve em parte o impacto dos golpes. A maior parte do peso dessa armadura é distribuído pelos ombros, o que a torna desconfortável se usada por longos períodos."
+    },
+    {
+        "code": "scale-mail",
+        "name": "Cota de Talas",
+        "category": "armadura",
+        "weight": "17kg",
+        "cost": "80 po",
+        "armorClass": 6,
+        "description": "Há controvérsias em relação à existência dessa armadura. Trata-se de uma cota feita com faixas verticais de metal, estreitas, costuradas sobre um gibão acolchoado ou de couro. Como a armadura não oferece flexibilidade, as juntas são protegidas por cota de malha."
+    },
+    {
+        "code": "body-shield",
+        "name": "Escudo Corporal",
+        "category": "armadura",
+        "weight": "10kg",
+        "cost": "10 po",
+        "armorClass": "+3/+4",
+        "description": "Os escudos melhoram a cotação da Categoria de Armadura em 1 ponto ou mais, contra um número “X” de ataques. O escudo é útil para proteger a frente e os flancos do usuário. Ataques pela retaguarda e flancos traseiros não são bloqueados pelo escudo. (A exceção fica por conta daqueles que usam o escudo pendurado nas costas, o que, no caso. protegeria contra ataques pela retaguarda.) A referência sobre o tamanho do escudo é relativa ao tamanho do usuário. Assim, um escudo pequeno usado por um humano ofereceria a proteção de um escudo médio para um gnomo."
+    },
+    {
+        "code": "medium-shield",
+        "name": "Escudo Médio",
+        "category": "armadura",
+        "weight": "5kg",
+        "cost": "7 po",
+        "armorClass": "+3",
+        "description": "Os escudos melhoram a cotação da Categoria de Armadura em 1 ponto ou mais, contra um número “X” de ataques. O escudo é útil para proteger a frente e os flancos do usuário. Ataques pela retaguarda e flancos traseiros não são bloqueados pelo escudo. (A exceção fica por conta daqueles que usam o escudo pendurado nas costas, o que, no caso. protegeria contra ataques pela retaguarda.) A referência sobre o tamanho do escudo é relativa ao tamanho do usuário. Assim, um escudo pequeno usado por um humano ofereceria a proteção de um escudo médio para um gnomo."
+    },
+    {
+        "code": "small-shield",
+        "name": "Escudo Pequeno",
+        "category": "armadura",
+        "weight": "3kg",
+        "cost": "3 po",
+        "armorClass": "+2",
+        "description": "Os escudos melhoram a cotação da Categoria de Armadura em 1 ponto ou mais, contra um número “X” de ataques. O escudo é útil para proteger a frente e os flancos do usuário. Ataques pela retaguarda e flancos traseiros não são bloqueados pelo escudo. (A exceção fica por conta daqueles que usam o escudo pendurado nas costas, o que, no caso. protegeria contra ataques pela retaguarda.) A referência sobre o tamanho do escudo é relativa ao tamanho do usuário. Assim, um escudo pequeno usado por um humano ofereceria a proteção de um escudo médio para um gnomo."
+    },
+    {
+        "code": "hide-armor",
+        "name": "Gibão de Peles",
+        "category": "armadura",
+        "weight": "8kg",
+        "cost": "15 po",
+        "armorClass": 4,
+        "description": "É uma armadura confeccionada com a pele extremamente grossa de animais, como a do elefante ou, mais normalmente, composta por várias camadas de couro sobrepostas. Trata-se de uma armadura muito restritiva, que dificulta os movimentos. É um tipo primitivo (e menos eficiente) de cota de malha, onde os anéis de metal são presos diretamente no gibão de couro, em vez de serem interligados. (Historiadores ainda debatem se esta"
+    },
+    {
+        "code": "hauberk",
+        "name": "Loriga",
+        "category": "armadura",
+        "weight": "12kg",
+        "cost": "100 po",
+        "armorClass": 3,
+        "description": "É uma armadura confeccionada com a pele extremamente grossa de animais, como a do elefante ou, mais normalmente, composta por várias camadas de couro sobrepostas. Trata-se de uma armadura muito restritiva, que dificulta os movimentos. É um tipo primitivo (e menos eficiente) de cota de malha, onde os anéis de metal são presos diretamente no gibão de couro, em vez de serem interligados. (Historiadores ainda debatem se esta"
+    },
+    {
+        "code": "splint-mail",
+        "name": "Loriga Segmentada",
+        "category": "armadura",
+        "weight": "11kg",
+        "cost": "200 po",
+        "armorClass": 6,
+        "description": "Essa armadura é feita de tiras horizontais de metal, costuradas sobre um fundo de couro e cota de malha. Habitualmente, as tiras recobrem somente as partes vitais, enquanto o couro e a cota de malha protegem as juntas. O peso é distribuído igualmente, através de correias e fivelas. Essa armadura é feita de tiras horizontais de metal, costuradas sobre um fundo de couro e cota de malha. Habitualmente, as tiras recobrem somente as partes vitais, enquanto o couro e a cota de malha protegem as juntas. O peso é distribuído igualmente, através de correias e fivelas."
+    },
+    {
+        "code": "great-helm",
+        "name": "Elmo grande",
+        "category": "armadura",
+        "weight": "5kg",
+        "cost": "30 po"
+    }
+]

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import {
   Award,
-  Coins,
+  Backpack,
   Heart,
   Scroll,
   ShieldAlert,
@@ -12,10 +12,10 @@ import {
   generalAdvantages,
   generalDisadvantages,
   reputations,
-  skills,
   socialClasses,
   type AttributeName,
 } from "@/data/characterData";
+import { skills, getSkillCost } from "@/data/skills";
 import {
   equipmentById,
   formatMoney,
@@ -23,9 +23,11 @@ import {
   getSpentCopper,
   getStartingCapitalPc,
   getTotalWeightKg,
+  type CustomInventoryItem,
   type PurchasedItems,
 } from "@/data/equipment";
 import { parseCargaKg } from "@/data/currency";
+import { mergeInventory } from "@/lib/inventory";
 import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 import { getSubAttributeBonuses, subAttributeMap } from "@/data/subAttributes";
 import { computeResistanceBreakdown } from "@/lib/resistanceStats";
@@ -49,20 +51,7 @@ function splitInTwo<T>(items: T[]): [T[], T[]] {
 function getSkillPointCost(skillName: string, characterClass: string): number {
   const skill = skills.find((s) => s.name === skillName);
   if (!skill) return 0;
-  const classToGroups: Record<string, string[]> = {
-    Guerreiro: ["Guerreiro"],
-    Paladino: ["Guerreiro"],
-    Ranger: ["Guerreiro"],
-    Ladrão: ["Ladrão/Bardo"],
-    Bardo: ["Ladrão/Bardo"],
-    Sacerdote: ["Sacerdote"],
-    Arcano: ["Mago"],
-  };
-  const allGroups = [skill.group, ...(skill.additionalGroups || [])];
-  const matchGroups = classToGroups[characterClass] || [];
-  const isClass =
-    skill.group === "Geral" || allGroups.some((g) => matchGroups.includes(g));
-  return isClass ? skill.cost : skill.cost * 2;
+  return getSkillCost(skill, characterClass);
 }
 
 interface AdvantageEntry {
@@ -81,6 +70,9 @@ export interface SummaryPanelProps {
   attributes: Record<AttributeName, number>;
   subAttributes: Record<string, number>;
   purchasedItems: PurchasedItems;
+  addedItems?: PurchasedItems;
+  customItems?: CustomInventoryItem[];
+  extraMoneyPc?: number;
   selectedAdvantages: string[];
   selectedRaceClassAdv: string[];
   selectedSkills: string[];
@@ -151,6 +143,9 @@ const SummaryPanel = ({
   attributes,
   subAttributes,
   purchasedItems,
+  addedItems = {},
+  customItems = [],
+  extraMoneyPc = 0,
   selectedAdvantages,
   selectedRaceClassAdv,
   selectedSkills,
@@ -186,14 +181,23 @@ const SummaryPanel = ({
   const cargaKg = parseCargaKg(cargaBonus);
   const startingPc = getStartingCapitalPc(selectedSocialClass, socialClasses);
   const spentPc = getSpentCopper(purchasedItems);
-  const remainingPc = getRemainingCopper(selectedSocialClass, socialClasses, purchasedItems);
-  const totalWeight = getTotalWeightKg(purchasedItems);
+  const remainingPc = getRemainingCopper(
+    selectedSocialClass,
+    socialClasses,
+    purchasedItems,
+    extraMoneyPc,
+  );
+  const inventory = mergeInventory(purchasedItems, addedItems);
+  const totalWeight = getTotalWeightKg(purchasedItems, addedItems, customItems);
   const overweight = cargaKg > 0 && totalWeight > cargaKg;
-  const ownedItems = Object.entries(purchasedItems)
+  const ownedItems = Object.entries(inventory)
     .filter(([, qty]) => qty > 0)
     .map(([id, qty]) => ({ item: equipmentById[id], qty }))
     .filter((e) => e.item)
     .sort((a, b) => a.item!.name.localeCompare(b.item!.name, "pt-BR"));
+  const customOwned = [...customItems]
+    .filter((item) => item.qty > 0)
+    .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
 
   const reputationLabel =
     reputations.find((r) => r.level === selectedReputation)?.description ?? "";
@@ -241,7 +245,7 @@ const SummaryPanel = ({
         </div>
       </div>
 
-      {/* Atributos | Perícias | Dinheiro & Equipamento */}
+      {/* Atributos | Perícias | Inventário */}
       <div className="grid grid-cols-1 md:grid-cols-[minmax(0,14rem)_1fr_1fr] gap-3 items-start">
         <div className={sectionCardCls}>
           <SectionTitle icon={<Swords className="w-4 h-4" />}>Atributos</SectionTitle>
@@ -297,8 +301,8 @@ const SummaryPanel = ({
         </div>
 
         <div className={`${sectionCardCls} h-full`}>
-          <SectionTitle icon={<Coins className="w-4 h-4" />}>
-            Dinheiro & Equipamento
+          <SectionTitle icon={<Backpack className="w-4 h-4" />}>
+            Inventário
           </SectionTitle>
           <div className="grid grid-cols-2 gap-1.5 mb-2.5">
             <div className="rounded-md border border-border/60 bg-background/40 px-2.5 py-1.5">
@@ -343,7 +347,7 @@ const SummaryPanel = ({
               </p>
             </div>
           </div>
-          {ownedItems.length > 0 ? (
+          {ownedItems.length > 0 || customOwned.length > 0 ? (
             <div className="flex flex-wrap gap-1">
               {ownedItems.map(({ item, qty }) => (
                 <span
@@ -354,9 +358,19 @@ const SummaryPanel = ({
                   {qty > 1 && <span className="text-muted-foreground"> ×{qty}</span>}
                 </span>
               ))}
+              {customOwned.map((item) => (
+                <span
+                  key={item.id}
+                  className="px-2 py-0.5 rounded-full text-[11px] font-body border bg-card border-gold/30 border-dashed"
+                  title="Item descrito pelo jogador"
+                >
+                  {item.name}
+                  {item.qty > 1 && <span className="text-muted-foreground"> ×{item.qty}</span>}
+                </span>
+              ))}
             </div>
           ) : (
-            <p className="text-xs text-muted-foreground font-body">Nenhum item comprado.</p>
+            <p className="text-xs text-muted-foreground font-body">Nenhum item no inventário.</p>
           )}
         </div>
       </div>

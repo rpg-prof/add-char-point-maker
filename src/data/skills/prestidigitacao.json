@@ -1,0 +1,11 @@
+{
+    "name": "Prestidigitação",
+    "costByClass": {
+        "all": 3
+    },
+    "attribute": "Destreza",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

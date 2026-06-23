@@ -1,0 +1,146 @@
+[
+    {
+        "code": "fishing-harpoon",
+        "name": "Arpão de pesca",
+        "weight": "1 a 1,2kg",
+        "cost": "1 po"
+    },
+    {
+        "code": "dragonlance",
+        "name": "Dragonlance",
+        "weight": "6 a 7,5kg",
+        "cost": "40 po"
+    },
+    {
+        "code": "dreizak",
+        "name": "Dreizak",
+        "weight": "2 a 2,5kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "glaive",
+        "name": "Glefe (Glaive)",
+        "weight": "2,5 a 3kg",
+        "cost": "6 po"
+    },
+    {
+        "code": "halberd",
+        "name": "Halberd Longo (Alabarda)",
+        "weight": "2,4 a 3kg",
+        "cost": "10 po"
+    },
+    {
+        "code": "kumade",
+        "name": "Kumade",
+        "weight": "1,8 a 2,5kg",
+        "cost": "20 po"
+    },
+    {
+        "code": "throwing-spear",
+        "name": "Lança de arremesso",
+        "weight": "1 a 1,2kg",
+        "cost": "8 pp"
+    },
+    {
+        "code": "hunting-spear",
+        "name": "Lança de caça",
+        "weight": "1,5 a 2kg",
+        "cost": "15 pp"
+    },
+    {
+        "code": "double-point-spear",
+        "name": "Lança de duas pontas",
+        "weight": "1,2 a 1,8kg",
+        "cost": "10 po"
+    },
+    {
+        "code": "thrust-spear",
+        "name": "Lança de golpe",
+        "weight": "2,5 a 3kg",
+        "cost": "2 po"
+    },
+    {
+        "code": "war-spear",
+        "name": "Lança de guerra",
+        "weight": "2,4 a 3kg",
+        "cost": "20 po"
+    },
+    {
+        "code": "bill-guisarme",
+        "name": "Lança de Haken (Bill)",
+        "weight": "3 a 4kg",
+        "cost": "7 po"
+    },
+    {
+        "code": "jousting-lance",
+        "name": "Lança de Justa",
+        "weight": "6 a 8kg",
+        "cost": "20 po"
+    },
+    {
+        "code": "hand-spear",
+        "name": "Lança de mão",
+        "weight": "1,2 a 2kg",
+        "cost": "8 pp"
+    },
+    {
+        "code": "blunt-hand-spear",
+        "name": "Lança de mão sem ponta",
+        "weight": "1 a 1,5kg",
+        "cost": "1 po"
+    },
+    {
+        "code": "bardiche",
+        "name": "Lança-machado (Bardiche)",
+        "weight": "3,2 a 4,5kg",
+        "cost": "7 po"
+    },
+    {
+        "code": "dragon-slayer-polearm",
+        "name": "Mata-dragão",
+        "weight": "3 a 4kg",
+        "cost": "6 po"
+    },
+    {
+        "code": "naginata",
+        "name": "Naginata (Falchard)",
+        "weight": "1,2 a 1,5kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "pailos",
+        "name": "Pailos",
+        "weight": "1,4 a 1,7kg",
+        "cost": "35 po"
+    },
+    {
+        "code": "partisan",
+        "name": "Partisan",
+        "weight": "2 a 2,5kg",
+        "cost": "10 po"
+    },
+    {
+        "code": "pike",
+        "name": "Pike",
+        "weight": "2 a 2,5kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "schnitter",
+        "name": "Schnitter",
+        "weight": "2 a 2,5kg",
+        "cost": "15 po"
+    },
+    {
+        "code": "sturmsense",
+        "name": "Sturmsense",
+        "weight": "2 a 2,5kg",
+        "cost": "20 po"
+    },
+    {
+        "code": "trident",
+        "name": "Tridente",
+        "weight": "2 a 2,5kg",
+        "cost": "15 po"
+    }
+]

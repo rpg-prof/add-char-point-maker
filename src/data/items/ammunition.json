@@ -1,0 +1,254 @@
+[
+    {
+        "code": "sling-bullet",
+        "name": "Chumbo de funda",
+        "category": "arma",
+        "weight": "250g",
+        "cost": "1 pc",
+        "weaponGroup": "espada",
+        "weaponStats": {
+            "size": "P",
+            "type": "E",
+            "speed": "-",
+            "damagePM": "1d4+1",
+            "damageG": "1d6+1"
+        }
+    },
+    {
+        "code": "crossbow-dart",
+        "name": "dardo",
+        "category": "arma",
+        "weight": "150g",
+        "cost": "5 pp",
+        "description": "Bônus ou penalidades relativas à Força não se aplicam no caso de bestas, já que essas são armas puramente mecânicas. A besta de mão é facilmente manejável com uma mão, e pode ser armada com a outra. A besta leve precisa ser apoiada contra um objeto para receber a seta, o que se faz com o auxílio de uma alavanca localizada no cabo da arma. Uma besta pesada tem uma puxada poderosa, e por isso deve ser armada com uma espécie de manivela que vem acoplada à arma. O atirador firma o pé no estribo da besta enquanto gira a manivela para armar a seta. Bestas disparam quadrelos, e cada arma deve utilizar quadrelos do tamanho adequado.",
+        "weaponGroup": "besta",
+        "weaponStats": {
+            "size": "12 a 20cm",
+            "type": "p",
+            "speed": "2",
+            "damagePM": "1d3",
+            "damageG": "1d2"
+        }
+    },
+    {
+        "code": "needle-dart",
+        "name": "Dardo agulha",
+        "category": "arma",
+        "weight": "0",
+        "cost": "2 pc",
+        "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem.",
+        "weaponGroup": "lanca",
+        "weaponStats": {
+            "size": "P",
+            "type": "P",
+            "speed": "-",
+            "damagePM": "1",
+            "damageG": "1"
+        }
+    },
+    {
+        "code": "barbed-dart",
+        "name": "Dardo farpado",
+        "category": "arma",
+        "weight": "0",
+        "cost": "1 pp",
+        "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem.",
+        "weaponGroup": "lanca",
+        "weaponStats": {
+            "size": "P",
+            "type": "P",
+            "speed": "-",
+            "damagePM": "1d3",
+            "damageG": "1d3"
+        }
+    },
+    {
+        "code": "espada-bastarda-duas-maos",
+        "name": "Espada bastarda (Com duas mãos)",
+        "category": "arma",
+        "weight": "6kg",
+        "cost": "25 po",
+        "description": "É muito parecida com a espada longa, porém possui o punho maior, e pode ser manejada com uma mão ou ambas. Em todo caso, verifique a velocidade da arma e o dano apropriado, pois esses valores mudam de acordo com a forma de utilização do item. Se a espada for empunhada com as duas mãos, o personagem deve abdicar do escudo.",
+        "weaponGroup": "espada",
+        "weaponStats": {
+            "size": "110 a 135cm",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "2d6",
+            "damageG": "1d6+1"
+        }
+    },
+    {
+        "code": "espada-bastarda-mao",
+        "name": "Espada bastarda (Com uma mão)",
+        "category": "arma",
+        "weight": "6kg",
+        "cost": "25 po",
+        "description": "É muito parecida com a espada longa, porém possui o punho maior, e pode ser manejada com uma mão ou ambas. Em todo caso, verifique a velocidade da arma e o dano apropriado, pois esses valores mudam de acordo com a forma de utilização do item. Se a espada for empunhada com as duas mãos, o personagem deve abdicar do escudo.",
+        "weaponGroup": "espada",
+        "weaponStats": {
+            "size": "110 a 135cm",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "1d8",
+            "damageG": "1d12"
+        }
+    },
+    {
+        "code": "hunting-arrow",
+        "name": "Flecha de caça",
+        "category": "arma",
+        "weight": "0",
+        "cost": "3 pp",
+        "description": "Há arcos de formas e tamanhos variados. O poder de um arco é medido pela sua puxada. Quanto maior a puxada, maior será a força necessária para se manejar o arco Desta forma, é possível que um personagem ganhe bônus no dano causado, em virtude de sua Força. (Aqui, assume-se que o personagem tenha escolhido um arco com uma grande puxada.) Da mesma forma, personagens menos fortes sofrem penalidade ao usar um arco. (Eles são obrigados a manejar um arco com uma puxada mais fraca, ou simplesmente não conseguirão esticar a corda até seu ponto máximo de tensão) Apesar disso, a puxada do arco raramente é um empecilho ao seu uso; o máximo que pode acontecer é o personagem não obter o efeito desejado. O grande teste de força de um personagem consiste em puxar a corda de um arco — a puxada do arco de um herói muito forte pode ser demais para alguém não tão poderoso (como o arco de Ulisses, na Odisséia).",
+        "weaponGroup": "arco",
+        "weaponStats": {
+            "size": "P",
+            "type": "P",
+            "speed": "-",
+            "damagePM": "1d6",
+            "damageG": "1d6"
+        }
+    },
+    {
+        "code": "war-arrow",
+        "name": "Flecha de guerra",
+        "category": "arma",
+        "weight": "0",
+        "cost": "3 pp",
+        "description": "Há arcos de formas e tamanhos variados. O poder de um arco é medido pela sua puxada. Quanto maior a puxada, maior será a força necessária para se manejar o arco Desta forma, é possível que um personagem ganhe bônus no dano causado, em virtude de sua Força. (Aqui, assume-se que o personagem tenha escolhido um arco com uma grande puxada.) Da mesma forma, personagens menos fortes sofrem penalidade ao usar um arco. (Eles são obrigados a manejar um arco com uma puxada mais fraca, ou simplesmente não conseguirão esticar a corda até seu ponto máximo de tensão) Apesar disso, a puxada do arco raramente é um empecilho ao seu uso; o máximo que pode acontecer é o personagem não obter o efeito desejado. O grande teste de força de um personagem consiste em puxar a corda de um arco — a puxada do arco de um herói muito forte pode ser demais para alguém não tão poderoso (como o arco de Ulisses, na Odisséia).",
+        "weaponGroup": "arco",
+        "weaponStats": {
+            "size": "P",
+            "type": "P",
+            "speed": "-",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        }
+    },
+    {
+        "code": "lanca-haken",
+        "name": "Lança de Haken",
+        "category": "arma",
+        "weight": "4kg",
+        "cost": "7 po",
+        "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem.",
+        "weaponGroup": "lanca",
+        "weaponStats": {
+            "size": "2,5 a 3m",
+            "type": "p",
+            "speed": "6",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        }
+    },
+    {
+        "code": "lanca-machado",
+        "name": "Lança-machado",
+        "category": "arma",
+        "weight": "4.5kg",
+        "cost": "7 po",
+        "description": "Os diferentes tipos de lança são classificados de acordo com tamanho e resistência. Cada tamanho de lança deve ser equivalente ao tamanho da montaria utilizada, ou menor Um cavaleiro, num cavalo leve de batalha, não pode utilizar uma lança de cavalaria pesada, pois o impacto arremessaria cavaleiro e montaria ao chão. Além disso, lanças pesadas e lanças de torneio são utilizadas apenas quando o cavaleiro está bem firme na sela. e usando estribos. A lança de torneio é pesada e adaptada para uso em torneios e justas, onde o intento não é ferir o oponente. A ponta da lança é cega, obtusa, para prevenir ferimentos. É evidente que, ainda assim, acidentes acontecem.",
+        "weaponGroup": "lanca",
+        "weaponStats": {
+            "size": "1,7 a 2m",
+            "type": "p/c",
+            "speed": "6",
+            "damagePM": "1d10",
+            "damageG": "1d8"
+        }
+    },
+    {
+        "code": "maca-exercito-maca-infantaria",
+        "name": "Maça de exercito / Maça de Infantaria",
+        "category": "arma",
+        "weight": "1.5kg",
+        "cost": "5 po",
+        "weaponGroup": "outras",
+        "weaponStats": {
+            "size": "70 a 80cm",
+            "type": "e",
+            "speed": "3",
+            "damagePM": "1d6",
+            "damageG": "1d6"
+        }
+    },
+    {
+        "code": "maca-war-maca-cavalaria",
+        "name": "Maça de guerra / Maça de Cavalaria",
+        "category": "arma",
+        "weight": "3kg",
+        "cost": "8 po",
+        "weaponGroup": "outras",
+        "weaponStats": {
+            "size": "90 a 110cm",
+            "type": "e",
+            "speed": "5",
+            "damagePM": "1d8",
+            "damageG": "1d12"
+        }
+    },
+    {
+        "code": "maca-estrela",
+        "name": "Maça estrela",
+        "category": "arma",
+        "weight": "5kg",
+        "cost": "10 po",
+        "weaponGroup": "outras",
+        "weaponStats": {
+            "size": "70 a 110cm",
+            "type": "e",
+            "speed": "7",
+            "damagePM": "2d4",
+            "damageG": "1d6+1"
+        }
+    },
+    {
+        "code": "hand-quarrel",
+        "name": "Quadrelo de mão",
+        "category": "arma",
+        "weight": "0",
+        "cost": "1 po",
+        "description": "Bônus ou penalidades relativas à Força não se aplicam no caso de bestas, já que essas são armas puramente mecânicas. A besta de mão é facilmente manejável com uma mão, e pode ser armada com a outra. A besta leve precisa ser apoiada contra um objeto para receber a seta, o que se faz com o auxílio de uma alavanca localizada no cabo da arma. Uma besta pesada tem uma puxada poderosa, e por isso deve ser armada com uma espécie de manivela que vem acoplada à arma. O atirador firma o pé no estribo da besta enquanto gira a manivela para armar a seta. Bestas disparam quadrelos, e cada arma deve utilizar quadrelos do tamanho adequado.",
+        "weaponGroup": "besta",
+        "weaponStats": {
+            "size": "P",
+            "type": "P",
+            "speed": "-",
+            "damagePM": "1d3",
+            "damageG": "1d2"
+        }
+    },
+    {
+        "code": "large-quarrel",
+        "name": "Quadrelo grande",
+        "category": "arma",
+        "weight": "0",
+        "cost": "2 pp",
+        "description": "Bônus ou penalidades relativas à Força não se aplicam no caso de bestas, já que essas são armas puramente mecânicas. A besta de mão é facilmente manejável com uma mão, e pode ser armada com a outra. A besta leve precisa ser apoiada contra um objeto para receber a seta, o que se faz com o auxílio de uma alavanca localizada no cabo da arma. Uma besta pesada tem uma puxada poderosa, e por isso deve ser armada com uma espécie de manivela que vem acoplada à arma. O atirador firma o pé no estribo da besta enquanto gira a manivela para armar a seta. Bestas disparam quadrelos, e cada arma deve utilizar quadrelos do tamanho adequado.",
+        "weaponGroup": "besta",
+        "weaponStats": {
+            "size": "P",
+            "type": "P",
+            "speed": "-",
+            "damagePM": "1d4+1",
+            "damageG": "1d6+1"
+        }
+    },
+    {
+        "code": "small-quarrel",
+        "name": "Quadrelo pequeno",
+        "category": "arma",
+        "weight": "0",
+        "cost": "1 pp",
+        "description": "Bônus ou penalidades relativas à Força não se aplicam no caso de bestas, já que essas são armas puramente mecânicas. A besta de mão é facilmente manejável com uma mão, e pode ser armada com a outra. A besta leve precisa ser apoiada contra um objeto para receber a seta, o que se faz com o auxílio de uma alavanca localizada no cabo da arma. Uma besta pesada tem uma puxada poderosa, e por isso deve ser armada com uma espécie de manivela que vem acoplada à arma. O atirador firma o pé no estribo da besta enquanto gira a manivela para armar a seta. Bestas disparam quadrelos, e cada arma deve utilizar quadrelos do tamanho adequado.",
+        "weaponGroup": "besta",
+        "weaponStats": {
+            "size": "P",
+            "type": "P",
+            "speed": "-",
+            "damagePM": "1d4",
+            "damageG": "1d4"
+        }
+    }
+]

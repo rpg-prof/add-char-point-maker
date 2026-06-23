@@ -1,0 +1,12 @@
+{
+    "name": "Acrobacia",
+    "costByClass": {
+        "other": 6,
+        "ladrao": 3
+    },
+    "attribute": "Destreza/Força",
+    "groups": [
+        "Ladrão/Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

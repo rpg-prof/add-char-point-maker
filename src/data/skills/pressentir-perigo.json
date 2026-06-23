@@ -1,0 +1,11 @@
+{
+    "name": "Pressentir Perigo",
+    "costByClass": {
+        "all": 4
+    },
+    "attribute": "Sabedoria",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

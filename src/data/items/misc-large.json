@@ -1,0 +1,38 @@
+[
+    {
+        "code": "ball-and-chain",
+        "name": "Corrente com bola",
+        "weight": "4 a 5kg",
+        "cost": "3 po"
+    },
+    {
+        "code": "cleaver",
+        "name": "Cutelo",
+        "weight": "300 a 500g",
+        "cost": "20 pp"
+    },
+    {
+        "code": "sickle",
+        "name": "Foice",
+        "weight": "2 a 3kg",
+        "cost": "6 pp"
+    },
+    {
+        "code": "druid-sickle",
+        "name": "Foice druídica",
+        "weight": "500g a 1,5kg",
+        "cost": "15 pp"
+    },
+    {
+        "code": "kama",
+        "name": "Kama",
+        "weight": "300 a 400g",
+        "cost": "3 po"
+    },
+    {
+        "code": "pickaxe",
+        "name": "Picareta",
+        "weight": "4 a 6kg",
+        "cost": "8 po"
+    }
+]

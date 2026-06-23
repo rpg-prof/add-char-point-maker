@@ -1,0 +1,11 @@
+{
+    "name": "Engenharia",
+    "costByClass": {
+        "all": 4
+    },
+    "attribute": "Inteligência/Sabedoria",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

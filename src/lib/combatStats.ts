@@ -6,6 +6,14 @@ import {
 } from "@/data/equipment";
 import { getSubAttributeBonuses } from "@/data/subAttributes";
 import {
+  isBodyArmor,
+  isHelmet,
+  isShield,
+  customWeaponToEquipment,
+  isCustomWeapon,
+} from "@/lib/inventory";
+import type { CustomInventoryItem } from "@/data/equipmentTypes";
+import {
   normalizeResourceCurrent,
   normalizeResourceMax,
 } from "@/lib/combatResources";
@@ -103,13 +111,15 @@ export const defaultCombatLoadout = (): CombatLoadout => ({
 });
 
 export function isShieldItem(item: EquipmentItem): boolean {
-  const id = item.id.toLowerCase();
-  const name = item.name.toLowerCase();
-  return id.startsWith("escudo") || id === "broquel" || name.includes("escudo");
+  return isShield(item);
 }
 
 export function isBodyArmorItem(item: EquipmentItem): boolean {
-  return item.category === "armadura" && !isShieldItem(item);
+  return isBodyArmor(item);
+}
+
+export function isHelmetItem(item: EquipmentItem): boolean {
+  return isHelmet(item);
 }
 
 export function getPurchasedBodyArmors(purchased: PurchasedItems): EquipmentItem[] {
@@ -132,12 +142,50 @@ export function isWeaponItem(item: EquipmentItem): boolean {
   return item.category === "arma" && item.tab === "armas";
 }
 
-export function getPurchasedWeapons(purchased: PurchasedItems): EquipmentItem[] {
-  return Object.entries(purchased)
+export function getPurchasedWeapons(
+  purchased: PurchasedItems,
+  customItems: CustomInventoryItem[] = [],
+): EquipmentItem[] {
+  return getAvailableWeapons(purchased, customItems);
+}
+
+export function getAvailableWeapons(
+  inventory: PurchasedItems,
+  customItems: CustomInventoryItem[] = [],
+): EquipmentItem[] {
+  const catalog = Object.entries(inventory)
     .filter(([, qty]) => qty > 0)
     .map(([id]) => equipmentById[id])
-    .filter((item): item is EquipmentItem => !!item && isWeaponItem(item))
-    .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+    .filter((item): item is EquipmentItem => !!item && isWeaponItem(item));
+
+  const custom = customItems
+    .filter((item) => item.qty > 0 && isCustomWeapon(item))
+    .map(customWeaponToEquipment);
+
+  return [...catalog, ...custom].sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+}
+
+export function resolveWeaponById(
+  id: string,
+  customItems: CustomInventoryItem[] = [],
+): EquipmentItem | undefined {
+  const catalog = equipmentById[id];
+  if (catalog && isWeaponItem(catalog)) return catalog;
+  const custom = customItems.find((item) => item.id === id && isCustomWeapon(item));
+  return custom ? customWeaponToEquipment(custom) : undefined;
+}
+
+function isWeaponOwned(
+  id: string,
+  inventory: PurchasedItems,
+  customItems: CustomInventoryItem[],
+): boolean {
+  if ((inventory[id] ?? 0) > 0) {
+    const catalog = equipmentById[id];
+    return !!catalog && isWeaponItem(catalog);
+  }
+  const custom = customItems.find((item) => item.id === id);
+  return !!custom && custom.qty > 0 && isCustomWeapon(custom);
 }
 
 const RANGED_AMMO_NAME_HINTS = ["flecha", "quadrelo", "virote", "chumbo de funda", "pedra de funda"];
@@ -292,6 +340,7 @@ export function computeAttackRollBreakdown(params: {
   selectedRaceClassAdv: string[];
   attackBaseBonus: number;
   isMartialArts?: boolean;
+  customItems?: CustomInventoryItem[];
 }): AttackRollBreakdown {
   const {
     slot,
@@ -301,13 +350,16 @@ export function computeAttackRollBreakdown(params: {
     selectedRaceClassAdv,
     attackBaseBonus,
     isMartialArts = false,
+    customItems = [],
   } = params;
 
   const musculosVal = subAttributes["Músculos"] ?? forcaMain;
   const precisaoVal = subAttributes["Precisão"] ?? destrezaMain;
   const equilibrioVal = subAttributes["Equilíbrio"] ?? destrezaMain;
 
-  const equipment = slot.equipmentId ? equipmentById[slot.equipmentId] : undefined;
+  const equipment = slot.equipmentId
+    ? resolveWeaponById(slot.equipmentId, customItems)
+    : undefined;
   const isRanged = isMartialArts ? false : equipment ? isRangedWeapon(equipment) : false;
   const martialArtsUsesAtaqueDestro =
     isMartialArts && selectedRaceClassAdv.includes("Ataque Destro") && !isRanged;
@@ -554,7 +606,8 @@ export function normalizeWeaponSlots(slots: WeaponAttackSlot[] | undefined): Wea
 
 export function sanitizeCombatLoadout(
   loadout: CombatLoadout,
-  purchased: PurchasedItems
+  purchased: PurchasedItems,
+  customItems: CustomInventoryItem[] = [],
 ): CombatLoadout {
   const equippedArmorId = loadout.equippedArmorId
     ? migrateEquipmentId(loadout.equippedArmorId)
@@ -576,13 +629,13 @@ export function sanitizeCombatLoadout(
 
   const weaponSlots = normalizeWeaponSlots(loadout.weaponSlots).map((slot) => {
     const equipmentId = slot.equipmentId ? migrateEquipmentId(slot.equipmentId) : null;
-    const weaponOk =
-      equipmentId &&
-      purchased[equipmentId] > 0 &&
-      equipmentById[equipmentId] &&
-      isWeaponItem(equipmentById[equipmentId]);
+    const weaponOk = equipmentId && isWeaponOwned(equipmentId, purchased, customItems);
     if (!weaponOk) {
       return { ...slot, equipmentId: null };
+    }
+    const item = resolveWeaponById(equipmentId, customItems);
+    if (item) {
+      return { ...slot, equipmentId, ...weaponSlotFromEquipment(item) };
     }
     return { ...slot, equipmentId };
   });

@@ -1,0 +1,51 @@
+{
+    "group-name": "Chicotes",
+    "group-size-category": "P",
+    "group-cost-per-weapon": 3,
+    "group-cost-group": 10,
+    "group-cost-specialization": 5,
+    "group-penalty-no-proficiency": -5,
+    "group-penalty-similar": -1,
+    "weapons": [
+        {
+            "code": "whip",
+            "name": "Chicote",
+            "weight": "400 a 800g",
+            "size": "2,5 a 3m",
+            "type": "c",
+            "speed": "8",
+            "damagePM": "1d2",
+            "damageG": "1"
+        },
+        {
+            "code": "petjat",
+            "name": "Petjat",
+            "weight": "600g a 1kg",
+            "size": "80cm a 1,2m",
+            "type": "c",
+            "speed": "7",
+            "damagePM": "1d2",
+            "damageG": "1d2"
+        },
+        {
+            "code": "chemti",
+            "name": "Chemti",
+            "weight": "1 a 1,6kg",
+            "size": "90cm a 1,6m",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "1d2",
+            "damageG": "1"
+        },
+        {
+            "code": "cat-o-nine-tails",
+            "name": "Gato de nove caudas (Scourge)",
+            "weight": "1,2 a 2kg",
+            "size": "1 a 1,4m",
+            "type": "c",
+            "speed": "8",
+            "damagePM": "1d3",
+            "damageG": "1d2"
+        }
+    ]
+}

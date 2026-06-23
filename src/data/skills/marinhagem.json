@@ -1,0 +1,11 @@
+{
+    "name": "Marinhagem",
+    "costByClass": {
+        "all": 3
+    },
+    "attribute": "Sabedoria/Destreza",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

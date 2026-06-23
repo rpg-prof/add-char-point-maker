@@ -1,0 +1,12 @@
+{
+    "name": "Forjar Armas",
+    "costByClass": {
+        "other": 10,
+        "guerreiro": 5
+    },
+    "attribute": "Inteligência/Destreza",
+    "groups": [
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

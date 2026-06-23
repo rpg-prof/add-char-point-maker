@@ -1,0 +1,51 @@
+{
+    "group-name": "Bestas",
+    "group-size-category": "M",
+    "group-cost-per-weapon": 10,
+    "group-cost-group": 20,
+    "group-cost-specialization": 20,
+    "group-penalty-no-proficiency": -4,
+    "group-penalty-similar": -1,
+    "weapons": [
+        {
+            "code": "light-crossbow",
+            "name": "Besta leve",
+            "weight": "1,2 a 1,8kg",
+            "size": "40cm",
+            "type": "p",
+            "speed": "5",
+            "damagePM": "1d4",
+            "damageG": "1d3"
+        },
+        {
+            "code": "heavy-crossbow",
+            "name": "Besta Pesada",
+            "weight": "1,2 a 1,8kg",
+            "size": "60 a 70cm",
+            "type": "p",
+            "speed": "10",
+            "damagePM": "1d4+1",
+            "damageG": "1d6+1"
+        },
+        {
+            "code": "repeating-crossbow",
+            "name": "Besta de repetição",
+            "weight": "2 a 2,5kg",
+            "size": "50 a 60cm",
+            "type": "p",
+            "speed": "7",
+            "damagePM": "1d3",
+            "damageG": "1d2"
+        },
+        {
+            "code": "arbalest",
+            "name": "Balestra",
+            "weight": "2 a 2,5kg",
+            "size": "40 a 50cm",
+            "type": "p",
+            "speed": "7",
+            "damagePM": "1d4",
+            "damageG": "1d6+1"
+        }
+    ]
+}

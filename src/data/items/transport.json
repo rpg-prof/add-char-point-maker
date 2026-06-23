@@ -1,0 +1,174 @@
+[
+    {
+        "code": "barca",
+        "name": "Barca",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "100 po"
+    },
+    {
+        "code": "barcaca",
+        "name": "Barcaça",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "500 po"
+    },
+    {
+        "code": "biga-war",
+        "name": "Biga de guerra",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "500 po"
+    },
+    {
+        "code": "biga-passeio",
+        "name": "Biga de passeio",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "200 po"
+    },
+    {
+        "code": "canoa-pequena",
+        "name": "Canoa — Pequena",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "30 po"
+    },
+    {
+        "code": "canoa-war",
+        "name": "Canoa de Guerra",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "50 po"
+    },
+    {
+        "code": "caravela",
+        "name": "Caravela",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10000 po",
+        "description": "Esse navio era utilizado na Baixa Idade Média e início do Período Renascentista. Foi o tipo de embarcação que Cristóvão Colombo utilizou para chegar até as Américas. (Devem ser utilizadas somente em Campanhas situadas na Baixa Idade Média.) A embarcação possui normalmente dois ou três mastros e velas quadradas. Remos não são utilizados. Uma caravela mede, em geral, 21 metros de comprimento por 6 de largura. A tripulação varia entre trinta e quarenta homens. A capacidade de carga é de 150 a 200 toneladas."
+    },
+    {
+        "code": "cargueiro",
+        "name": "Cargueiro",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10000 po",
+        "description": "É uma versão aprimorada do Costeiro, podendo navegar em mar aberto. Assim como o navio de cabotagem, é um veleiro, possuindo um ou dois mastros, mas conta com velas quadradas. Mede entre 22 e 27 metros de comprimento e 6 metros de largura. A tripulação varia entre dezoito e vinte homens. A capacidade de carga do cargueiro varia imensamente, mas, de modo geral, fica entre 100 e 200 toneladas."
+    },
+    {
+        "code": "cart-charrete",
+        "name": "Carroça ou charrete",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 po"
+    },
+    {
+        "code": "carriage-simple",
+        "name": "Carruagem simples",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "150 po"
+    },
+    {
+        "code": "coche-ornamentado",
+        "name": "Coche ornamentado",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "7000 po"
+    },
+    {
+        "code": "curragh",
+        "name": "Curragh",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "500 po"
+    },
+    {
+        "code": "drakkar",
+        "name": "Drakkar",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "25000 po",
+        "description": "A maior embarcação viking é conhecida como drakkar, ou navio-dragão. Construído primariamente para guerra, esse navio tem em média 30 metros de comprimento. Embora haja um mastro, a principal força motriz são remos. Usa uma tripulação de até oitenta homens nos remos e um adicional de 160 podem ser transportados para abordagens e saques. Devido ao seu tamanho descomunal, não é uma embarcação para mares turbulentos. Soma-se a isso o fato de não haver espaço suficiente para suprimentos e alojamentos (certamente não o suficiente para 240 homens), o que faz com que o drakkar precise ficar perto da costa, para que possa atracar à noite. Devido ao seu custo e uso limitado, é um navio para reis e autoridades. Não é utilizado como navio de carga."
+    },
+    {
+        "code": "dromond",
+        "name": "Dromond",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "15000 po",
+        "description": "Esse navio era a maior das gafes bizantinas. Apesar de contar com um ou dois mastros e velas triangulares, é movido por cem remos, cinqüenta de cada lado. Os remos estão divididos em fileiras superior e inferior, sendo que há um homem por remo na fileira inferior, enquanto três dividem cada remo da fileira superior. A tripulação é de aproximadamente duzentos homens."
+    },
+    {
+        "code": "galeao",
+        "name": "Galeão",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "50000 po",
+        "description": "É a maior e mais aprimorada embarcação disponível no jogo AD&D. Somente deve ser utilizada em cenários renascentistas. É um veleiro com três ou quatro mastros, medindo aproximadamente 39 metros de comprimento por 9 de largura. Transporta em média 130 homens. Apesar de possuir grande capacidade de carga (500 toneladas), o galeão é utilizado principalmente como navio de guerra (galeões de verdade possuíam canhões, coisa muito além das regras do jogo AD&D). Um galeão pode facilmente transportar algo em torno de quinhentos homens, em vez das 500 toneladas de carga, o que torna a sua captura por piratas quase impossível."
+    },
+    {
+        "code": "galeote",
+        "name": "Galeote",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10000 po",
+        "description": "É o navio de guerra padrão dos vikings. A embarcação encontra-se num meio termo entre o pequeno knarr e o poderoso drakkar. O galeote tem aproximadamente 22,5 metros de comprimento, e possui cerca de 25 remos de cada lado. Cada remo é manobrado por um só homem, e a tripulação total fica entre quarenta e cinqüenta homens. Há apenas um único mastro e a vela é quadrada. A embarcação pode transportar, ainda, um adicional de até 150 homens, além da tripulação. Um galeote pode ser utilizado como cargueiro, embora conte com a reduzida capacidade de carga de 50 toneladas. É, no entanto, um navio medianamente resistente, podendo navegar em águas turbulentas, quando necessário."
+    },
+    {
+        "code": "galera",
+        "name": "Galera",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "30000 po",
+        "description": "Construída durante a Baixa Idade Média, a galera é uma versão melhorada do dromond. É um pouco menor que este, tendo no máximo 40 metros de comprimento por 6 de largura. Sua força motriz é uma combinação de velas e remos: 140 remadores são complementados por três mastros, o que confere mais rapidez é maior capacidade de manobra. A capacidade de carga é de aproximadamente 150 toneladas. Em tempos de guerra, a proa é construída em forma de aríete e a carga é substituída per marinheiros. Assim como todas as demais galés, é uma embarcação costeira, raramente expondo-se ao mar aberto. Não resiste à tempestades violentas, tendo que aportar até que o tempo melhore,"
+    },
+    {
+        "code": "knarr",
+        "name": "Knarr",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "3000 po",
+        "description": "Esse pequeno navio era um cargueiro da região escandinava, chegando a medir 22 metros de comprimento por 6 de largura. Possui um único mastro e vela quadrada. Na ausência de vento, alguns remos na popa e proa fornecem velocidade. Carrega até catorze homens e a capacidade de carga é pequena, variando entre 10 e 50 toneladas. É um navio robusto, entretanto, podendo navegar em alto-mar, em viagens longas (apesar de não ser confortável). Possui o casco achatado, que torna possível a navegação em rios e estuários, e é facilmente atracável. Esse pequeno navio era um cargueiro da região escandinava, chegando a medir 22 metros de comprimento por 6 de largura. Possui um único mastro e vela quadrada. Na ausência de vento, alguns remos na popa e proa fornecem velocidade. Carrega até catorze homens e a capacidade de carga é pequena, variando entre 10 e 50 toneladas. É um navio robusto, entretanto, podendo navegar em alto-mar, em viagens longas (apesar de não ser confortável). Possui o casco achatado, que torna possível a navegação em rios e estuários, e é facilmente atracável."
+    },
+    {
+        "code": "liteira",
+        "name": "Liteira",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "100 po"
+    },
+    {
+        "code": "ship-cabotagem-costeiro",
+        "name": "Navio de cabotagem (costeiro)",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5000 po",
+        "description": "Também chamado de navio redondo ou de cabotagem, é um pequeno navio mercante, que navega perto da costa. E um veleiro equipado com dois mastros e velas triangulares. Mede de 18 a 21 metros de comprimento por 6 de largura. O leme fica em um dos lados do navio. A tripulação é de vinte a trinta homens, e a capacidade de carga é de aproximadamente 100 toneladas. O Navio Costeiro é lento, e não tem muita capacidade de navegação para enfrentar mares bravios; porém, pode transportar grande quantidade de carga sem necessitar de uma tripulação tão numerosa como as galeras."
+    },
+    {
+        "code": "remo-common",
+        "name": "Remo comum",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 po"
+    },
+    {
+        "code": "remo-galera",
+        "name": "Remo de galera",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10 po",
+        "description": "Construída durante a Baixa Idade Média, a galera é uma versão melhorada do dromond. É um pouco menor que este, tendo no máximo 40 metros de comprimento por 6 de largura. Sua força motriz é uma combinação de velas e remos: 140 remadores são complementados por três mastros, o que confere mais rapidez é maior capacidade de manobra. A capacidade de carga é de aproximadamente 150 toneladas. Em tempos de guerra, a proa é construída em forma de aríete e a carga é substituída per marinheiros. Assim como todas as demais galés, é uma embarcação costeira, raramente expondo-se ao mar aberto. Não resiste à tempestades violentas, tendo que aportar até que o tempo melhore,"
+    },
+    {
+        "code": "candle-velame",
+        "name": "Vela, velame",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "20 po",
+        "description": "Uma lanterna com cobertura oferece iluminação por"
+    }
+]

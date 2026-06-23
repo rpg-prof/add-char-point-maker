@@ -1,0 +1,11 @@
+{
+    "name": "Navegação",
+    "costByClass": {
+        "all": 3
+    },
+    "attribute": "Inteligência/Sabedoria",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

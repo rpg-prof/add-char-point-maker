@@ -1,0 +1,51 @@
+{
+    "group-name": "Machados Grandes Duplos",
+    "group-size-category": "G",
+    "group-cost-per-weapon": 15,
+    "group-cost-group": 30,
+    "group-cost-specialization": 30,
+    "group-penalty-no-proficiency": -5,
+    "group-penalty-similar": -2,
+    "weapons": [
+        {
+            "code": "barbarian-axe",
+            "name": "Machado bárbaro",
+            "weight": "3 a 5kg",
+            "size": "50 a 70cm",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "1d8",
+            "damageG": "1d10"
+        },
+        {
+            "code": "military-axe",
+            "name": "Machado militar",
+            "weight": "2,5 a 3,5kg",
+            "size": "45 a 60cm",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "1d8",
+            "damageG": "1d8"
+        },
+        {
+            "code": "stonecutter",
+            "name": "Stonecutter",
+            "weight": "4 a 5,5kg",
+            "size": "140 a 160cm",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "1d8+1",
+            "damageG": "1d10"
+        },
+        {
+            "code": "thornwaler",
+            "name": "Thornwaler",
+            "weight": "4 a 4,5kg",
+            "size": "120 a 150cm",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "1d8+1",
+            "damageG": "1d10"
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+[
+    {
+        "code": "dagger",
+        "name": "Adaga ou Punhal Espada",
+        "weight": "250g",
+        "cost": "2 po"
+    },
+    {
+        "code": "throwing-dagger",
+        "name": "Adaga de arremesso",
+        "weight": "200g",
+        "cost": "2 po"
+    },
+    {
+        "code": "canestro",
+        "name": "Canhestro",
+        "weight": "150g",
+        "cost": "2 po"
+    },
+    {
+        "code": "drachenzahn",
+        "name": "Drachenzahn",
+        "weight": "350g",
+        "cost": "8 po"
+    },
+    {
+        "code": "eberfaenger",
+        "name": "Eberfänger",
+        "weight": "300g",
+        "cost": "7 po"
+    },
+    {
+        "code": "knife",
+        "name": "Faca",
+        "weight": "250g",
+        "cost": "5 pp"
+    },
+    {
+        "code": "arabian-knife",
+        "name": "Faca Árabe",
+        "weight": "250g",
+        "cost": "8 pp"
+    },
+    {
+        "code": "hunting-knife",
+        "name": "Faca de caça",
+        "weight": "250g",
+        "cost": "3 pp"
+    },
+    {
+        "code": "stone-knife",
+        "name": "Faca de pedra",
+        "weight": "300g",
+        "cost": "5 pc"
+    },
+    {
+        "code": "basilisk-claw",
+        "name": "Garra de basilisco",
+        "weight": "300g",
+        "cost": "4 po"
+    },
+    {
+        "code": "jitte",
+        "name": "Jitte",
+        "weight": "100g",
+        "cost": "6 po"
+    },
+    {
+        "code": "katar",
+        "name": "Katar",
+        "weight": "150g",
+        "cost": "3 po"
+    },
+    {
+        "code": "two-point-katar",
+        "name": "Katar de duas pontas",
+        "weight": "150g",
+        "cost": "4 po"
+    },
+    {
+        "code": "main-gauche",
+        "name": "Main-gauche",
+        "weight": "100g",
+        "cost": "5 po"
+    },
+    {
+        "code": "picador",
+        "name": "Picador",
+        "weight": "100g",
+        "cost": "1 pp"
+    },
+    {
+        "code": "poniard",
+        "name": "Punhal",
+        "weight": "150g",
+        "cost": "2 po"
+    },
+    {
+        "code": "long-poniard",
+        "name": "Punhal longo",
+        "weight": "300g",
+        "cost": "3 po"
+    },
+    {
+        "code": "sai",
+        "name": "Sai",
+        "weight": "100g",
+        "cost": "8 po"
+    },
+    {
+        "code": "stiletto",
+        "name": "Stiletto",
+        "weight": "200g",
+        "cost": "5 pp"
+    },
+    {
+        "code": "waqqif",
+        "name": "Waqqif",
+        "weight": "300g",
+        "cost": "6 po"
+    }
+]

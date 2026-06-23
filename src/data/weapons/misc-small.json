@@ -1,0 +1,101 @@
+{
+    "group-name": "Outras Armas Menores",
+    "group-size-category": "P",
+    "group-cost-per-weapon": 3,
+    "group-cost-group": null,
+    "group-cost-specialization": 5,
+    "group-penalty-no-proficiency": -5,
+    "group-penalty-similar": -1,
+    "weapons": [
+        {
+            "code": "bolas",
+            "name": "Boleadeira",
+            "weight": "300 a 500g",
+            "size": "30 a 45cm",
+            "type": "e",
+            "speed": "3",
+            "damagePM": "1d4",
+            "damageG": "1d4+1"
+        },
+        {
+            "code": "boomerang",
+            "name": "Bumerangue",
+            "weight": "600g a 1kg",
+            "size": "30 a 45cm",
+            "type": "e",
+            "speed": "3",
+            "damagePM": "1d4",
+            "damageG": "1d4"
+        },
+        {
+            "code": "staff-sling",
+            "name": "Cajado-funda",
+            "weight": "2 a 3kg",
+            "size": "1,5 a 2,2m",
+            "type": "-",
+            "speed": "2",
+            "damagePM": "1",
+            "damageG": "1"
+        },
+        {
+            "code": "dart",
+            "name": "Dardo",
+            "weight": "150g",
+            "size": "12 a 20cm",
+            "type": "p",
+            "speed": "2",
+            "damagePM": "1d3",
+            "damageG": "1d2"
+        },
+        {
+            "code": "sling",
+            "name": "Funda",
+            "weight": "100g",
+            "size": "30 a 40cm",
+            "type": "-",
+            "speed": "2",
+            "damagePM": "1",
+            "damageG": "1"
+        },
+        {
+            "code": "gauntlet",
+            "name": "Gauntlet",
+            "weight": "500g a 1kg",
+            "size": "20 a 25cm",
+            "type": "e",
+            "speed": "-",
+            "damagePM": "+3",
+            "damageG": "+3"
+        },
+        {
+            "code": "shuriken",
+            "name": "Shuriken",
+            "weight": "50g",
+            "size": "7cm",
+            "type": "p",
+            "speed": "2",
+            "damagePM": "1d4",
+            "damageG": "1d4"
+        },
+        {
+            "code": "brass-knuckles",
+            "name": "Soco inglês",
+            "weight": "200 a 500g",
+            "size": "8 a 15cm",
+            "type": "e",
+            "speed": "-",
+            "damagePM": "+2",
+            "damageG": "+2"
+        },
+        {
+            "code": "blowgun",
+            "name": "Zarabatana",
+            "weight": "150 a 300g",
+            "size": "30 a 70cm",
+            "type": "p",
+            "speed": "2",
+            "damagePM": "1",
+            "damageG": "1"
+        }
+    ]
+}

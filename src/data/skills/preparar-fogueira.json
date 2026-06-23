@@ -1,0 +1,11 @@
+{
+    "name": "Preparar Fogueira",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Sabedoria/Inteligência",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

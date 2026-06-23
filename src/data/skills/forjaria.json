@@ -1,0 +1,11 @@
+{
+    "name": "Forjaria",
+    "costByClass": {
+        "all": 4
+    },
+    "attribute": "Força/Inteligência",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

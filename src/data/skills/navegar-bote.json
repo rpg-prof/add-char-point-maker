@@ -1,0 +1,11 @@
+{
+    "name": "Navegar Bote",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Força/Inteligência",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

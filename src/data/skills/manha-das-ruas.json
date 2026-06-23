@@ -1,0 +1,12 @@
+{
+    "name": "Manha das Ruas",
+    "costByClass": {
+        "other": 6,
+        "ladrao": 3
+    },
+    "attribute": "Sabedoria/Carisma",
+    "groups": [
+        "Ladrão/Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

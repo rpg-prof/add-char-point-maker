@@ -1,0 +1,54 @@
+{
+  "weaponItemFiles": [
+    "daggers.json",
+    "short-swords.json",
+    "one-handed-swords.json",
+    "two-handed-swords.json",
+    "hand-axes.json",
+    "battle-axes.json",
+    "double-axes.json",
+    "maces.json",
+    "hammers.json",
+    "flails.json",
+    "polearms.json",
+    "whips.json",
+    "misc-small.json",
+    "misc-large.json",
+    "crossbows.json",
+    "bows.json"
+  ],
+  "catalogFiles": [
+    {
+      "tab": "armaduras",
+      "file": "armor.json"
+    },
+    {
+      "tab": "equipamento",
+      "file": "equipment.json"
+    },
+    {
+      "tab": "alimentacao",
+      "file": "food.json"
+    },
+    {
+      "tab": "vestuario",
+      "file": "clothing.json"
+    },
+    {
+      "tab": "transporte",
+      "file": "transport.json"
+    },
+    {
+      "tab": "animais",
+      "file": "animals.json"
+    },
+    {
+      "tab": "montaria",
+      "file": "mount-gear.json"
+    },
+    {
+      "tab": "armas",
+      "file": "ammunition.json"
+    }
+  ]
+}

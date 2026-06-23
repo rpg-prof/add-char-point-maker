@@ -1,0 +1,14 @@
+{
+    "name": "Preparar Armadilhas",
+    "costByClass": {
+        "other": 6,
+        "ladrao": 3,
+        "guerreiro": 3
+    },
+    "attribute": "Destreza/Sabedoria",
+    "groups": [
+        "Ladrão/Bardo",
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

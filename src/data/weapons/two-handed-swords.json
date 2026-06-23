@@ -1,0 +1,71 @@
+{
+    "group-name": "Espadas Grandes (Duas Mãos)",
+    "group-size-category": "G",
+    "group-cost-per-weapon": 15,
+    "group-cost-group": 40,
+    "group-cost-specialization": 30,
+    "group-penalty-no-proficiency": -5,
+    "group-penalty-similar": -2,
+    "weapons": [
+        {
+            "code": "claymore",
+            "name": "Claymore",
+            "weight": "4 a 8kg",
+            "size": "110 a 135cm",
+            "type": "c",
+            "speed": "8",
+            "damagePM": "2d4",
+            "damageG": "2d8"
+        },
+        {
+            "code": "bastard-sword-two-handed",
+            "name": "Espada bastarda (Duas mãos)",
+            "weight": "4 a 6kg",
+            "size": "110 a 135cm",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "2d6",
+            "damageG": "1d6+1"
+        },
+        {
+            "code": "two-handed-sword",
+            "name": "Espada de duas mãos",
+            "weight": "5 a 7kg",
+            "size": "140 a 160cm",
+            "type": "c",
+            "speed": "10",
+            "damagePM": "1d10",
+            "damageG": "3d6"
+        },
+        {
+            "code": "flamberge",
+            "name": "Flamberge",
+            "weight": "4 a 6kg",
+            "size": "125 a 140cm",
+            "type": "c",
+            "speed": "8",
+            "damagePM": "1d8+1",
+            "damageG": "1d12+1"
+        },
+        {
+            "code": "katana",
+            "name": "Katana",
+            "weight": "1,5 a 2,5kg",
+            "size": "90 a 110cm",
+            "type": "c/p",
+            "speed": "4",
+            "damagePM": "1d10",
+            "damageG": "1d12"
+        },
+        {
+            "code": "greatsword",
+            "name": "Montante",
+            "weight": "7 a 10kg",
+            "size": "180 a 200cm",
+            "type": "c",
+            "speed": "12",
+            "damagePM": "1d12",
+            "damageG": "5d4"
+        }
+    ]
+}

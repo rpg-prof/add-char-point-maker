@@ -1,0 +1,211 @@
+{
+    "group-name": "Adagas e Facas",
+    "group-size-category": "P",
+    "group-cost-per-weapon": 3,
+    "group-cost-group": 10,
+    "group-cost-specialization": 5,
+    "group-penalty-no-proficiency": -5,
+    "group-penalty-similar": -1,
+    "weapons": [
+        {
+            "code": "dagger",
+            "name": "Adaga ou Punhal Espada",
+            "weight": "250g",
+            "size": "20 a 40cm",
+            "type": "p/c",
+            "speed": "4",
+            "damagePM": "1d4",
+            "damageG": "1d3"
+        },
+        {
+            "code": "throwing-dagger",
+            "name": "Adaga de arremesso",
+            "weight": "200g",
+            "size": "15 a 35cm",
+            "type": "p",
+            "speed": "3",
+            "damagePM": "1d3",
+            "damageG": "1d3"
+        },
+        {
+            "code": "canestro",
+            "name": "Canhestro",
+            "weight": "150g",
+            "size": "20 a 30cm",
+            "type": "p/c",
+            "speed": "2",
+            "damagePM": "1d3",
+            "damageG": "1d3"
+        },
+        {
+            "code": "drachenzahn",
+            "name": "Drachenzahn",
+            "weight": "350g",
+            "size": "30 a 50cm",
+            "type": "c",
+            "speed": "4",
+            "damagePM": "1d4",
+            "damageG": "1d4+1"
+        },
+        {
+            "code": "eberfaenger",
+            "name": "Eberfänger",
+            "weight": "300g",
+            "size": "25 a 35cm",
+            "type": "p/c",
+            "speed": "4",
+            "damagePM": "1d4",
+            "damageG": "1d4+1"
+        },
+        {
+            "code": "knife",
+            "name": "Faca",
+            "weight": "250g",
+            "size": "20 a 35cm",
+            "type": "p/c",
+            "speed": "3",
+            "damagePM": "1d3",
+            "damageG": "1d2"
+        },
+        {
+            "code": "arabian-knife",
+            "name": "Faca Árabe",
+            "weight": "250g",
+            "size": "30 a 50cm",
+            "type": "p/c",
+            "speed": "3",
+            "damagePM": "1d4",
+            "damageG": "1d4+1"
+        },
+        {
+            "code": "hunting-knife",
+            "name": "Faca de caça",
+            "weight": "250g",
+            "size": "20 a 50cm",
+            "type": "p/c",
+            "speed": "4",
+            "damagePM": "1d4",
+            "damageG": "1d4+1"
+        },
+        {
+            "code": "stone-knife",
+            "name": "Faca de pedra",
+            "weight": "300g",
+            "size": "20 a 35cm",
+            "type": "p/c",
+            "speed": "2",
+            "damagePM": "1d2",
+            "damageG": "1d2"
+        },
+        {
+            "code": "basilisk-claw",
+            "name": "Garra de basilisco",
+            "weight": "300g",
+            "size": "20 a 35cm",
+            "type": "p/c",
+            "speed": "4",
+            "damagePM": "1d3",
+            "damageG": "1d4+1"
+        },
+        {
+            "code": "jitte",
+            "name": "Jitte",
+            "weight": "100g",
+            "size": "10 a 20cm",
+            "type": "p",
+            "speed": "2",
+            "damagePM": "1d3",
+            "damageG": "1d2"
+        },
+        {
+            "code": "katar",
+            "name": "Katar",
+            "weight": "150g",
+            "size": "20 a 30cm",
+            "type": "p/c",
+            "speed": "3",
+            "damagePM": "1d3",
+            "damageG": "1d6"
+        },
+        {
+            "code": "two-point-katar",
+            "name": "Katar de duas pontas",
+            "weight": "150g",
+            "size": "20 a 30cm",
+            "type": "p/c",
+            "speed": "3",
+            "damagePM": "1d3+1",
+            "damageG": "1d4"
+        },
+        {
+            "code": "main-gauche",
+            "name": "Main-gauche",
+            "weight": "100g",
+            "size": "10 a 20cm",
+            "type": "p",
+            "speed": "2",
+            "damagePM": "1d4",
+            "damageG": "1d3"
+        },
+        {
+            "code": "picador",
+            "name": "Picador",
+            "weight": "100g",
+            "size": "15 a 35cm",
+            "type": "p",
+            "speed": "3",
+            "damagePM": "1d2",
+            "damageG": "1d2"
+        },
+        {
+            "code": "poniard",
+            "name": "Punhal",
+            "weight": "150g",
+            "size": "12 a 25cm",
+            "type": "p/c",
+            "speed": "3",
+            "damagePM": "1d3",
+            "damageG": "1d2"
+        },
+        {
+            "code": "long-poniard",
+            "name": "Punhal longo",
+            "weight": "300g",
+            "size": "30 a 50cm",
+            "type": "p/c",
+            "speed": "4",
+            "damagePM": "1d4",
+            "damageG": "1d4"
+        },
+        {
+            "code": "sai",
+            "name": "Sai",
+            "weight": "100g",
+            "size": "10 a 20cm",
+            "type": "p",
+            "speed": "2",
+            "damagePM": "1d3",
+            "damageG": "1d2"
+        },
+        {
+            "code": "stiletto",
+            "name": "Stiletto",
+            "weight": "200g",
+            "size": "30 a 35cm",
+            "type": "p",
+            "speed": "2",
+            "damagePM": "1d3",
+            "damageG": "1d2"
+        },
+        {
+            "code": "waqqif",
+            "name": "Waqqif",
+            "weight": "300g",
+            "size": "40 a 50cm",
+            "type": "p/c",
+            "speed": "4",
+            "damagePM": "1d4",
+            "damageG": "1d4"
+        }
+    ]
+}

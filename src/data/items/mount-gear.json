@@ -1,0 +1,137 @@
+[
+    {
+        "code": "alforje-grande",
+        "name": "Alforje — Grande",
+        "category": "equipamento",
+        "weight": "4kg",
+        "cost": "4 po"
+    },
+    {
+        "code": "alforje-small",
+        "name": "Alforje — Pequeno",
+        "category": "equipamento",
+        "weight": "2.5kg",
+        "cost": "3 po"
+    },
+    {
+        "code": "armor-horse-armor-full",
+        "name": "Armadura para cavalo — Armadura completa",
+        "category": "equipamento",
+        "weight": "40kg",
+        "cost": "2000 po",
+        "description": "Trata-se da versão mais comum da armadura completa, consistindo de placas de metal ajustadas ao corpo e interligadas de maneira a cobrir toda sua extensão. Inclui luvas, botas e elmo com visor. Uma grossa camada de acolchoamento é usada por baixo. O peso é distribuído igualmente pelo corpo. Além do preço, as maiores desvantagens são a falta de ventilação e o tempo gasto em vesti-la e retirá-la. (Veja a seção Colocando e Retirando a Armadura.) Cada armadura é feita sob medida por um mestre armeiro. Entretanto, pedaços avulsos encontrados em campos de batalha podem ser remodelados, de maneira a servir no novo proprietário. (A menos que tal coisa seja impossível, como um humano tentando entrar numa armadura para halfling.)"
+    },
+    {
+        "code": "armor-horse-brigandine-parcial",
+        "name": "Armadura para cavalo — Brigandina parcial",
+        "category": "equipamento",
+        "weight": "22kg",
+        "cost": "500 po",
+        "description": "É uma combinação entre a cota de malha, ou a brigandina, com placas de metal (dragonas, cotoveleiras, manoplas, saiote e greva) recobrindo as áreas vitais. Distribui o peso igualmente pelo corpo, e a armadura é ajustada no lugar com correias e fivelas. É o tipo de proteção pesada mais comum. Armadura feita de pequenas plaquetas metálicas, costuradas sobre lona ou couro, e protegida por uma camada externa de tecido. Atrapalha um"
+    },
+    {
+        "code": "armor-horse-brigandine-full",
+        "name": "Armadura para cavalo — Brunea completa",
+        "category": "equipamento",
+        "weight": "35kg",
+        "cost": "1000 po",
+        "description": "Trata-se de um gibão e de proteção para as pernas (talvez ainda um saiote) feitos de couro recobertos com plaquetas metálicas sobrepostas, assim como as escamas de um peixe."
+    },
+    {
+        "code": "armor-horse-brigandine-parcial-2",
+        "name": "Armadura para cavalo — Brunea parcial",
+        "category": "equipamento",
+        "weight": "25kg",
+        "cost": "500 po",
+        "description": "Trata-se de um gibão e de proteção para as pernas (talvez ainda um saiote) feitos de couro recobertos com plaquetas metálicas sobrepostas, assim como as escamas de um peixe."
+    },
+    {
+        "code": "armor-horse-cuirass-padded-parcial",
+        "name": "Armadura para cavalo — Corselete acolchoado parcial",
+        "category": "equipamento",
+        "weight": "12kg",
+        "cost": "100 po",
+        "description": "É o tipo mais simples de armadura, composto de várias camadas acolchoadas de tecido. É uma vestimenta quente, e com o tempo fica suja e encardida de suor, com piolhos e pulgas."
+    },
+    {
+        "code": "armor-horse-coat-mail",
+        "name": "Armadura para cavalo — Cota de malha",
+        "category": "equipamento",
+        "weight": "35kg",
+        "cost": "500 po",
+        "description": "Essa armadura é feita de anéis metálicos interligados. É usada com um gibão acolchoado por baixo, para prevenir fricções e amortecer o impacto de golpes. Várias camadas de cota são em geral colocadas sobre as áreas vitais. A malha absorve em parte o impacto dos golpes. A maior parte do peso dessa armadura é distribuído pelos ombros, o que a torna desconfortável se usada por longos períodos."
+    },
+    {
+        "code": "armor-horse-protecao-leather-acolchoada",
+        "name": "Armadura para cavalo — Proteção de couro ou acolchoada",
+        "category": "equipamento",
+        "weight": "12kg",
+        "cost": "150 po",
+        "description": "É o tipo mais simples de armadura, composto de várias camadas acolchoadas de tecido. É uma vestimenta quente, e com o tempo fica suja e encardida de suor, com piolhos e pulgas."
+    },
+    {
+        "code": "harness-cart",
+        "name": "Arreio para carroça",
+        "category": "equipamento",
+        "weight": "5kg",
+        "cost": "2 po"
+    },
+    {
+        "code": "cabresto",
+        "name": "Cabresto",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pc"
+    },
+    {
+        "code": "ferradura-colocacao",
+        "name": "Ferradura e colocação",
+        "category": "equipamento",
+        "weight": "5kg",
+        "cost": "1 po"
+    },
+    {
+        "code": "bridle-cabecada-redeas",
+        "name": "Freio, cabeçada e rédeas",
+        "category": "equipamento",
+        "weight": "1.5kg",
+        "cost": "1 po 5 pp"
+    },
+    {
+        "code": "junta-ox",
+        "name": "Junta (boi)",
+        "category": "equipamento",
+        "weight": "10kg",
+        "cost": "3 po"
+    },
+    {
+        "code": "manta-saddle",
+        "name": "Manta de sela",
+        "category": "equipamento",
+        "weight": "2kg",
+        "cost": "3 pp"
+    },
+    {
+        "code": "parelha-horse",
+        "name": "Parelha (cavalo)",
+        "category": "equipamento",
+        "weight": "7kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "saddle-mount",
+        "name": "Sela de Montaria",
+        "category": "equipamento",
+        "weight": "17kg",
+        "cost": "10 po",
+        "description": "Há dois tipos básicos de sela — a de viagem e a de montaria. A sela de montaria pode aparecer em inúmeras formas, mas sua principal função é carregar urna pessoa. Se a aventura desenrolar-se na Alta Idade Média, as selas provavelmente não terão estribo. Consulte o Mestre em caso de dúvida. Selas de viagem são estruturas especiais, feitas para carregar suprimentos e equipamento. O único fator limitante é o quanto a montaria agüenta transportar, independente do tamanho e conteúdo da sela de viagem. Há dois tipos básicos de sela — a de viagem e a de montaria. A sela de montaria pode aparecer em inúmeras formas, mas sua principal função é carregar urna pessoa. Se a aventura desenrolar-se na Alta Idade Média, as selas provavelmente não terão estribo. Consulte o Mestre em caso de dúvida. Selas de viagem são estruturas especiais, feitas para carregar suprimentos e equipamento. O único fator limitante é o quanto a montaria agüenta transportar, independente do tamanho e conteúdo da sela de viagem."
+    },
+    {
+        "code": "saddle-viagem",
+        "name": "Sela de Viagem",
+        "category": "equipamento",
+        "weight": "7kg",
+        "cost": "5 po",
+        "description": "Há dois tipos básicos de sela — a de viagem e a de montaria. A sela de montaria pode aparecer em inúmeras formas, mas sua principal função é carregar urna pessoa. Se a aventura desenrolar-se na Alta Idade Média, as selas provavelmente não terão estribo. Consulte o Mestre em caso de dúvida. Selas de viagem são estruturas especiais, feitas para carregar suprimentos e equipamento. O único fator limitante é o quanto a montaria agüenta transportar, independente do tamanho e conteúdo da sela de viagem. Há dois tipos básicos de sela — a de viagem e a de montaria. A sela de montaria pode aparecer em inúmeras formas, mas sua principal função é carregar urna pessoa. Se a aventura desenrolar-se na Alta Idade Média, as selas provavelmente não terão estribo. Consulte o Mestre em caso de dúvida. Selas de viagem são estruturas especiais, feitas para carregar suprimentos e equipamento. O único fator limitante é o quanto a montaria agüenta transportar, independente do tamanho e conteúdo da sela de viagem."
+    }
+]

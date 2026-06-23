@@ -1,0 +1,11 @@
+{
+    "name": "Preparar Bebidas",
+    "costByClass": {
+        "all": 3
+    },
+    "attribute": "Inteligência",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

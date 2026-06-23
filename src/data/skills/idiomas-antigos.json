@@ -1,0 +1,14 @@
+{
+    "name": "Idiomas Antigos",
+    "costByClass": {
+        "other": 8,
+        "sacerdote": 4,
+        "arcano": 4
+    },
+    "attribute": "Inteligência",
+    "groups": [
+        "Sacerdote",
+        "Mago"
+    ],
+    "penaltyNoProficiency": -6
+}

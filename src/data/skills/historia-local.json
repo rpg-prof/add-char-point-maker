@@ -1,0 +1,14 @@
+{
+    "name": "História Local",
+    "costByClass": {
+        "other": 4,
+        "sacerdote": 2,
+        "ladrao": 2
+    },
+    "attribute": "Inteligência/Carisma",
+    "groups": [
+        "Sacerdote",
+        "Ladrão/Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

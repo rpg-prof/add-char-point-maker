@@ -12,14 +12,14 @@ import {
   resolveCurrentHp,
   getPurchasedBodyArmors,
   getPurchasedShields,
-  getPurchasedWeapons,
+  getAvailableWeapons,
   weaponSlotFromEquipment,
   type CombatLoadout,
   type MagicCaBonus,
   type WeaponAttackSlot,
 } from "@/lib/combatStats";
 import { formatArmorClass } from "@/data/equipment";
-import type { PurchasedItems } from "@/data/equipment";
+import type { CustomInventoryItem, PurchasedItems } from "@/data/equipment";
 import type { AttributeName } from "@/data/characterData";
 import {
   computeSuggestedManaMax,
@@ -34,6 +34,7 @@ interface CombatPanelProps {
   subAttributes: Record<string, number>;
   attributes: Record<AttributeName, number>;
   purchased: PurchasedItems;
+  customItems?: CustomInventoryItem[];
   selectedRaceClassAdv: string[];
   selectedClass: string;
   characterLevel: number;
@@ -338,6 +339,7 @@ const CombatPanel = ({
   subAttributes,
   attributes,
   purchased,
+  customItems = [],
   selectedRaceClassAdv,
   selectedClass,
   characterLevel,
@@ -351,7 +353,10 @@ const CombatPanel = ({
 
   const bodyArmors = useMemo(() => getPurchasedBodyArmors(purchased), [purchased]);
   const shields = useMemo(() => getPurchasedShields(purchased), [purchased]);
-  const weapons = useMemo(() => getPurchasedWeapons(purchased), [purchased]);
+  const weapons = useMemo(
+    () => getAvailableWeapons(purchased, customItems),
+    [purchased, customItems],
+  );
   const artesMarciaisAtivas = hasArtesMarciais(selectedRaceClassAdv);
   const martialArtsDamage = getMartialArtsDamageByLevel(characterLevel);
 
@@ -741,6 +746,7 @@ const CombatPanel = ({
                     selectedRaceClassAdv,
                     attackBaseBonus: loadout.attackBaseBonus,
                     isMartialArts: isMartialArtsRow,
+                    customItems,
                   });
 
                   return (
@@ -911,6 +917,7 @@ const CombatPanel = ({
                     selectedRaceClassAdv,
                     attackBaseBonus: loadout.attackBaseBonus,
                     isMartialArts: isMartialArtsRow,
+                    customItems,
                   });
 
                   return (
@@ -1045,7 +1052,7 @@ const CombatPanel = ({
             </select>
             {bodyArmors.length === 0 && (
               <p className="text-xs text-muted-foreground mt-1">
-                Compre armaduras na aba Dinheiro & Equipamento.
+                Compre armaduras na aba Inventário.
               </p>
             )}
           </div>

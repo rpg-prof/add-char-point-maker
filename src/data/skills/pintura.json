@@ -1,0 +1,11 @@
+{
+    "name": "Pintura",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Destreza/Sabedoria",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

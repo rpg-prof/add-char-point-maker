@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Coins, Award, FileText, NotebookPen, BookHeart } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Award, FileText, NotebookPen, BookHeart, Backpack } from "lucide-react";
 import { exportCharacterPdf } from "@/lib/exportCharacterPdf";
 import AppLogo from "@/components/AppLogo";
 import {
@@ -20,7 +20,7 @@ import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import MagicPanel from "@/components/MagicPanel";
 import MagicAccessPanel, { type DivineAccessLevel, type ArcaneAccessLevel } from "@/components/MagicAccessPanel";
 import ResistancePanel from "@/components/ResistancePanel";
-import EquipmentShopPanel from "@/components/EquipmentShopPanel";
+import InventoryPanel from "@/components/InventoryPanel";
 import CombatPanel from "@/components/CombatPanel";
 import SummaryPanel from "@/components/SummaryPanel";
 import NotesPanel from "@/components/NotesPanel";
@@ -36,12 +36,12 @@ import {
   alignments,
   generalAdvantages,
   generalDisadvantages,
-  skills,
   type AttributeName,
 } from "@/data/characterData";
+import { skills, getSkillCost } from "@/data/skills";
 import { weaponGroups, shieldProficiencies } from "@/data/weaponProficiencies";
 import { subAttributeMap } from "@/data/subAttributes";
-import { migratePurchasedItems, type PurchasedItems } from "@/data/equipment";
+import { migratePurchasedItems, type CustomInventoryItem, type PurchasedItems } from "@/data/equipment";
 import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 import {
   getAttributeBreakdown,
@@ -50,6 +50,7 @@ import {
   GRIMOIRE_SPELL_POINT_COST,
 } from "@/lib/pointBreakdown";
 import { clampAttributesForRace } from "@/lib/clampAttributesForRace";
+import { mergeInventory, normalizeCustomItems } from "@/lib/inventory";
 import {
   defaultCombatLoadout,
   sanitizeCombatLoadout,
@@ -61,6 +62,9 @@ const CHARACTER_POINTS = 100;
 /** Máximo de pontos recuperáveis via desvantagens (inclui classe social negativa). */
 const MAX_DISADVANTAGE_POINTS = CHARACTER_POINTS;
 
+const DEFAULT_PAGE_TITLE = "AD&D 2.5 Edition - Criação de Personagens";
+const NAMED_PAGE_TITLE_SUFFIX = "AD&D 2.5 Edition - Criação de Personagem";
+
 const BASE_STEPS = [
   { label: "Identificação", icon: User, desc: "Dados básicos do personagem" },
   { label: "Atributos", icon: Shield, desc: "Distribua 75 pontos" },
@@ -68,7 +72,7 @@ const BASE_STEPS = [
   { label: "Armas", icon: Crosshair, desc: "Proficiências com armas e escudos" },
   { label: "Perícias", icon: BookOpen, desc: "Perícias comuns do personagem" },
   { label: "Resistência", icon: Heart, desc: "Valores de resistência calculados" },
-  { label: "Dinheiro & Equipamento", icon: Coins, desc: "Comprar equipamento com o capital da classe social" },
+  { label: "Inventário", icon: Backpack, desc: "Dinheiro, armas, armaduras e equipamento do personagem" },
 ];
 
 const COMBAT_STEP = { label: "Combate", icon: Swords, desc: "PV, CA, magia, Chi e ataques" };
@@ -112,6 +116,14 @@ const Index = () => {
   // Basic info
   const [charName, setCharName] = useState("");
   const [playerName, setPlayerName] = useState("");
+
+  useEffect(() => {
+    const trimmed = charName.trim();
+    document.title = trimmed
+      ? `${trimmed} - ${NAMED_PAGE_TITLE_SUFFIX}`
+      : DEFAULT_PAGE_TITLE;
+  }, [charName]);
+
   const [sexo, setSexo] = useState("");
   const [idade, setIdade] = useState("");
   const [peso, setPeso] = useState("");
@@ -172,14 +184,22 @@ const Index = () => {
   const [selectedShields, setSelectedShields] = useState<string[]>([]);
   const [grimoire, setGrimoire] = useState<string[]>([]);
   const [purchasedItems, setPurchasedItems] = useState<PurchasedItems>({});
+  const [addedItems, setAddedItems] = useState<PurchasedItems>({});
+  const [customItems, setCustomItems] = useState<CustomInventoryItem[]>([]);
+  const [extraMoneyPc, setExtraMoneyPc] = useState(0);
   const [combatLoadout, setCombatLoadout] = useState<CombatLoadout>(defaultCombatLoadout);
   const [notesItems, setNotesItems] = useState("");
   const [notesGeneral, setNotesGeneral] = useState("");
   const [characterHistory, setCharacterHistory] = useState("");
 
+  const mergedInventory = useMemo(
+    () => mergeInventory(purchasedItems, addedItems),
+    [purchasedItems, addedItems],
+  );
+
   useEffect(() => {
-    setCombatLoadout((prev) => sanitizeCombatLoadout(prev, purchasedItems));
-  }, [purchasedItems]);
+    setCombatLoadout((prev) => sanitizeCombatLoadout(prev, mergedInventory, customItems));
+  }, [mergedInventory, customItems]);
 
   // Progression system
   interface ProgressionEntry {
@@ -250,7 +270,7 @@ const Index = () => {
 
     const skillCost = selectedSkills.reduce((sum, name) => {
       const skill = skills.find((s) => s.name === name);
-      return sum + (skill?.cost ?? 0);
+      return sum + (skill ? getSkillCost(skill, selectedClass) : 0);
     }, 0);
 
     const weaponCost = selectedWeapons.reduce((sum, weaponKey) => {
@@ -537,6 +557,9 @@ const Index = () => {
       divineAccess, arcaneAccess, arcaneSpecialist,
       progressionHistory,
       purchasedItems,
+      addedItems,
+      customItems,
+      extraMoneyPc,
       combatLoadout,
       notesItems,
       notesGeneral,
@@ -549,7 +572,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems, combatLoadout, notesItems, notesGeneral, characterHistory]);
+  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems, addedItems, customItems, extraMoneyPc, combatLoadout, notesItems, notesGeneral, characterHistory]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -606,12 +629,24 @@ const Index = () => {
           ? migratePurchasedItems(data.purchasedItems)
           : {};
         setPurchasedItems(migratedPurchased);
+        setAddedItems(
+          data.addedItems ? migratePurchasedItems(data.addedItems) : {},
+        );
+        setCustomItems(normalizeCustomItems(data.customItems));
+        setExtraMoneyPc(
+          typeof data.extraMoneyPc === "number" ? data.extraMoneyPc : 0,
+        );
+        const mergedOnLoad = mergeInventory(
+          migratedPurchased,
+          data.addedItems ? migratePurchasedItems(data.addedItems) : {},
+        );
         if (data.combatLoadout) {
           setCombatLoadout(
             sanitizeCombatLoadout(
               { ...defaultCombatLoadout(), ...data.combatLoadout },
-              migratedPurchased
-            )
+              mergedOnLoad,
+              normalizeCustomItems(data.customItems),
+            ),
           );
         } else {
           setCombatLoadout(defaultCombatLoadout());
@@ -750,18 +785,20 @@ const Index = () => {
             />
           </div>
         );
-      case "Dinheiro & Equipamento":
+      case "Inventário":
         return (
-          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-            <p className="font-body text-muted-foreground text-sm">
-              Use o capital da classe social para comprar armas, armaduras e equipamento. O peso total é comparado com a
-              carga permitida (sub-atributo Resistência).
-            </p>
-            <EquipmentShopPanel
+          <div className="max-h-[55vh] overflow-y-auto pr-2">
+            <InventoryPanel
               selectedSocialClass={selectedSocialClass}
               subAttributes={subAttributes}
               purchased={purchasedItems}
+              added={addedItems}
+              customItems={customItems}
+              extraMoneyPc={extraMoneyPc}
               onPurchaseChange={setPurchasedItems}
+              onAddedChange={setAddedItems}
+              onCustomItemsChange={setCustomItems}
+              onExtraMoneyChange={setExtraMoneyPc}
             />
           </div>
         );
@@ -771,7 +808,8 @@ const Index = () => {
             <CombatPanel
               subAttributes={subAttributes}
               attributes={attributes}
-              purchased={purchasedItems}
+              purchased={mergedInventory}
+              customItems={customItems}
               selectedRaceClassAdv={selectedRaceClassAdv}
               selectedClass={selectedClass}
               characterLevel={characterLevel}
@@ -906,6 +944,9 @@ const Index = () => {
             attributes={attributes}
             subAttributes={subAttributes}
             purchasedItems={purchasedItems}
+            addedItems={addedItems}
+            customItems={customItems}
+            extraMoneyPc={extraMoneyPc}
             selectedAdvantages={selectedAdvantages}
             selectedRaceClassAdv={selectedRaceClassAdv}
             selectedSkills={selectedSkills}
@@ -986,6 +1027,9 @@ const Index = () => {
                     attributes,
                     subAttributes,
                     purchasedItems,
+                    addedItems,
+                    customItems,
+                    extraMoneyPc,
                     combatLoadout,
                     selectedAdvantages,
                     selectedRaceClassAdv,

@@ -1,0 +1,11 @@
+{
+    "name": "Pesca",
+    "costByClass": {
+        "all": 3
+    },
+    "attribute": "Sabedoria/Inteligência",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

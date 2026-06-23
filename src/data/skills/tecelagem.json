@@ -1,0 +1,11 @@
+{
+    "name": "Tecelagem",
+    "costByClass": {
+        "all": 3
+    },
+    "attribute": "Inteligência/Destreza",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

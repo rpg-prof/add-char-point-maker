@@ -1,0 +1,14 @@
+{
+    "name": "Luta Suja",
+    "costByClass": {
+        "other": 6,
+        "ladrao": 3,
+        "guerreiro": 3
+    },
+    "attribute": "Inteligência",
+    "groups": [
+        "Ladrão/Bardo",
+        "Guerreiro"
+    ],
+    "penaltyNoProficiency": -6
+}

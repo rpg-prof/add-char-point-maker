@@ -1,0 +1,11 @@
+{
+    "name": "Conhecimento do Clima",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Sabedoria",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

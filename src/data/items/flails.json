@@ -1,0 +1,50 @@
+[
+    {
+        "code": "flail",
+        "name": "Mangual",
+        "weight": "2 a 3kg",
+        "cost": "8 po"
+    },
+    {
+        "code": "chain-flail",
+        "name": "Mangual de corrente",
+        "weight": "2,5 a 4kg",
+        "cost": "10 po"
+    },
+    {
+        "code": "war-flail",
+        "name": "Mangual de guerra",
+        "weight": "4 a 5kg",
+        "cost": "15 po"
+    },
+    {
+        "code": "double-flail",
+        "name": "Mangual duplo",
+        "weight": "3 a 4,5kg",
+        "cost": "10 po"
+    },
+    {
+        "code": "metal-flail",
+        "name": "Mangual metalico",
+        "weight": "3 a 4kg",
+        "cost": "10 po"
+    },
+    {
+        "code": "military-flail",
+        "name": "Mangual militar",
+        "weight": "4 a 5kg",
+        "cost": "15 po"
+    },
+    {
+        "code": "triple-flail",
+        "name": "Mangual triplo",
+        "weight": "3,5 a 5kg",
+        "cost": "15 po"
+    },
+    {
+        "code": "nunchaku",
+        "name": "Nunchaku",
+        "weight": "1 a 1,5kg",
+        "cost": "12 po"
+    }
+]

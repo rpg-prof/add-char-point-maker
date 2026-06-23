@@ -1,0 +1,41 @@
+{
+    "group-name": "Machados Menores",
+    "group-size-category": "M",
+    "group-cost-per-weapon": 5,
+    "group-cost-group": 10,
+    "group-cost-specialization": 10,
+    "group-penalty-no-proficiency": -3,
+    "group-penalty-similar": -1,
+    "weapons": [
+        {
+            "code": "hatchet",
+            "name": "Machadinha",
+            "weight": "750g a 1,2kg",
+            "size": "30 a 45cm",
+            "type": "c",
+            "speed": "3",
+            "damagePM": "1d6",
+            "damageG": "1d6"
+        },
+        {
+            "code": "throwing-axe",
+            "name": "Machado arremesso",
+            "weight": "2 a 3kg",
+            "size": "35 a 55cm",
+            "type": "c",
+            "speed": "4",
+            "damagePM": "1d6",
+            "damageG": "1d4"
+        },
+        {
+            "code": "hand-axe",
+            "name": "Machado de Mão",
+            "weight": "2 a 3kg",
+            "size": "40 a 60cm",
+            "type": "c",
+            "speed": "6",
+            "damagePM": "1d6",
+            "damageG": "1d6"
+        }
+    ]
+}

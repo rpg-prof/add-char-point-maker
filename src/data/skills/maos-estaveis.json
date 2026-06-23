@@ -1,0 +1,16 @@
+{
+    "name": "Mãos Estáveis",
+    "costByClass": {
+        "other": 5,
+        "guerreiro": 1,
+        "ranger": 1,
+        "paladino": 1,
+        "ladrao": 1,
+        "bardo": 1
+    },
+    "attribute": "Destreza",
+    "groups": [
+        "Guerreiro", "Ranger", "Paladino", "Ladrão", "Bardo"
+    ],
+    "penaltyNoProficiency": -6
+}

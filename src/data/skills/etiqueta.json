@@ -1,0 +1,11 @@
+{
+    "name": "Etiqueta",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Carisma/Sabedoria",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

@@ -1,0 +1,1 @@
+O personagem pode costurar e desenhar roupas. Ele também pode fazer todos os tipos de trabalhos bordados e ornamentais. Embora essa perícia não exija testes, o personagem precisa de agulha e linha para trabalhar.

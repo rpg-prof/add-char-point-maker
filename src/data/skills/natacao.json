@@ -1,0 +1,11 @@
+{
+    "name": "Natação",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Força",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

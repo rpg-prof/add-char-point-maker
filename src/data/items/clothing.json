@@ -1,0 +1,191 @@
+[
+    {
+        "code": "alfinete",
+        "name": "Alfinete",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "6 po"
+    },
+    {
+        "code": "bainha-espada-boldrie-talim",
+        "name": "Bainha para espada, boldrié e talim",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "4 po"
+    },
+    {
+        "code": "bainha-knife",
+        "name": "Bainha para faca",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "3 pc"
+    },
+    {
+        "code": "boots-mount",
+        "name": "Botas de montaria",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "3 po"
+    },
+    {
+        "code": "broche-simple",
+        "name": "Broche simples",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "10 po"
+    },
+    {
+        "code": "calcas",
+        "name": "Calças",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 po"
+    },
+    {
+        "code": "calcoes",
+        "name": "Calções",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 po"
+    },
+    {
+        "code": "cloak-sem-mangas-bom-tecido",
+        "name": "Capa sem mangas de Bom tecido",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "8 pp"
+    },
+    {
+        "code": "cloak-sem-mangas-hide-finas",
+        "name": "Capa sem mangas de Peles finas",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "50 po"
+    },
+    {
+        "code": "belt",
+        "name": "Cinto",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "3 pp"
+    },
+    {
+        "code": "cinturao",
+        "name": "Cinturão",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "3 po"
+    },
+    {
+        "code": "colete",
+        "name": "Colete",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "6 pp"
+    },
+    {
+        "code": "faixa-cintura",
+        "name": "Faixa para cintura",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "2 pp"
+    },
+    {
+        "code": "hide-seda",
+        "name": "Gibão de seda",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "80 po"
+    },
+    {
+        "code": "gorro-hat",
+        "name": "Gorro, chapéu",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 pp"
+    },
+    {
+        "code": "gloves",
+        "name": "Luvas",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 po"
+    },
+    {
+        "code": "manto-ornamentos",
+        "name": "Manto com ornamentos",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "20 po"
+    },
+    {
+        "code": "manto-common",
+        "name": "Manto comum",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "9 pp"
+    },
+    {
+        "code": "mitenes",
+        "name": "Mitenes",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "3 pp"
+    },
+    {
+        "code": "normais",
+        "name": "Normais",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 po"
+    },
+    {
+        "code": "sandalias",
+        "name": "Sandálias",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "5 pc"
+    },
+    {
+        "code": "sapatos",
+        "name": "Sapatos",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 po"
+    },
+    {
+        "code": "sobretudo",
+        "name": "Sobretudo",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "6 pp"
+    },
+    {
+        "code": "tabardo",
+        "name": "Tabardo",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "6 pp"
+    },
+    {
+        "code": "toga-common",
+        "name": "Toga comum",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "8 pc"
+    },
+    {
+        "code": "tunic",
+        "name": "Túnica",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "8 pp"
+    },
+    {
+        "code": "vestido-simple",
+        "name": "Vestido simples",
+        "category": "equipamento",
+        "weight": "0",
+        "cost": "1 po 2 pp"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "code": "long-scimitar",
+        "name": "Cimitarra longa",
+        "weight": "3 a 4kg",
+        "cost": "60 po"
+    },
+    {
+        "code": "barbarian-sword",
+        "name": "Espada barbara",
+        "weight": "2 a 3,2kg",
+        "cost": "30 po"
+    },
+    {
+        "code": "bastard-sword-one-handed",
+        "name": "Espada bastarda (Uma mão)",
+        "weight": "4 a 6kg",
+        "cost": "25 po"
+    },
+    {
+        "code": "broadsword",
+        "name": "Espada larga (Broadsword)",
+        "weight": "2,5 a 3,5kg",
+        "cost": "10 po"
+    },
+    {
+        "code": "long-sword",
+        "name": "Espada longa",
+        "weight": "2 a 3kg",
+        "cost": "15 po"
+    },
+    {
+        "code": "wakizashi",
+        "name": "Wakizashi",
+        "weight": "750g a 1,2kg",
+        "cost": "50 po"
+    }
+]

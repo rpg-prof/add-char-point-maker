@@ -1,0 +1,26 @@
+[
+    {
+        "code": "whip",
+        "name": "Chicote",
+        "weight": "400 a 800g",
+        "cost": "1 pp"
+    },
+    {
+        "code": "petjat",
+        "name": "Petjat",
+        "weight": "600g a 1kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "chemti",
+        "name": "Chemti",
+        "weight": "1 a 1,6kg",
+        "cost": "5 po"
+    },
+    {
+        "code": "cat-o-nine-tails",
+        "name": "Gato de nove caudas (Scourge)",
+        "weight": "1,2 a 2kg",
+        "cost": "1 po"
+    }
+]

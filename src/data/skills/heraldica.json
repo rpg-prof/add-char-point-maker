@@ -1,0 +1,11 @@
+{
+    "name": "Heráldica",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Inteligência",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

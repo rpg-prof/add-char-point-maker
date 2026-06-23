@@ -1,0 +1,11 @@
+{
+    "name": "Dança",
+    "costByClass": {
+        "all": 2
+    },
+    "attribute": "Destreza/Carisma",
+    "groups": [
+        "Geral"
+    ],
+    "penaltyNoProficiency": -6
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Pesquisar",
+    "costByClass": {
+        "other": 2,
+        "arcano": 1
+    },
+    "attribute": "Inteligência",
+    "groups": [
+        "Mago"
+    ],
+    "penaltyNoProficiency": -6
+}

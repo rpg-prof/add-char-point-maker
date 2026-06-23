@@ -1,0 +1,4 @@
+Algumas pessoas têm uma inacreditável capacidade para
+dirigir seus esforços para ignorar a dor, ferimentos e a fadiga, que normalmente fariam outra pessoa ir ao chão. Um personagem com essa perícia ganha bônus de +1 nos testes de resistência contra magias ou efeitos que afetem a mente, incluindo encantamentos, paralisias, hipnotismo e outras magias do gênero.
+
+No entanto o personagem ainda guarda uma grande proeza: a capacidade de continuar lutando mesmo com pontos de vida negativos. A cada rodada que o personagem desejar permanecer consciente ele deve fazer um teste de resistência contra morte com uma penalidade igual ao número de pontos de vida negativos que ele possui (por exemplo:-5 pontos de vida resultam um penalidade de 5 nos testes), ele pode atacar e mover-se normalmente. Na próxima rodada seu teste é feito novamente com -5, ele não perde pontos de vida devido ao sangramento, até que caia.
