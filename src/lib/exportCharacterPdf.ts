@@ -23,6 +23,7 @@ import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 import { getSubAttributeBonuses, subAttributeMap } from "@/data/subAttributes";
 import { arcaneSpells, divineSpells, type Spell } from "@/data/spells";
 import { stripMarkdown } from "@/lib/stripMarkdown";
+import { normalizeGrimoire, type GrimoireEntry } from "@/lib/grimoire";
 import {
   computeArmorClassBreakdown,
   computeAttackRollBreakdown,
@@ -71,7 +72,7 @@ export interface ExportCharacterPdfInput {
   selectedWeapons: string[];
   selectedWeaponGroups: string[];
   selectedShields: string[];
-  grimoire: string[];
+  grimoire: GrimoireEntry[] | string[];
   divineAccess: Record<string, "minor" | "major">;
   arcaneAccess: Record<string, "access">;
   arcaneSpecialist: string | null;
@@ -215,15 +216,15 @@ type GrimoireSpellEntry = {
   isArcane: boolean;
 };
 
-function resolveGrimoireSpells(grimoire: string[]): GrimoireSpellEntry[] {
+function resolveGrimoireSpells(grimoire: GrimoireEntry[]): GrimoireSpellEntry[] {
   const allSpells = [...arcaneSpells, ...divineSpells];
   return grimoire
     .slice()
-    .sort((a, b) => a.localeCompare(b, "pt-BR"))
-    .map((name) => ({
-      name,
-      spell: allSpells.find((s) => s.name === name) ?? null,
-      isArcane: arcaneSpells.some((s) => s.name === name),
+    .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"))
+    .map((entry) => ({
+      name: entry.name,
+      spell: allSpells.find((s) => s.name === entry.name) ?? null,
+      isArcane: arcaneSpells.some((s) => s.name === entry.name),
     }));
 }
 
@@ -398,7 +399,7 @@ function drawSpellCard(
 
 function renderGrimoireSection(
   doc: jsPDF,
-  grimoire: string[],
+  grimoire: GrimoireEntry[],
   pageW: number,
   pageH: number,
   margin: number,
@@ -1380,9 +1381,10 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
   });
 
   // ===== GRIMÓRIO / LIVRO DE ORAÇÕES (final do PDF) =====
+  const grimoireEntries = normalizeGrimoire(input.grimoire);
   const grimoireStartPage =
-    input.grimoire.length > 0
-      ? renderGrimoireSection(doc, input.grimoire, pageW, pageH, margin)
+    grimoireEntries.length > 0
+      ? renderGrimoireSection(doc, grimoireEntries, pageW, pageH, margin)
       : null;
 
   // ===== FOOTER on each page =====

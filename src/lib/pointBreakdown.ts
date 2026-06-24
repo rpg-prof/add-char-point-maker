@@ -18,6 +18,9 @@ import {
 } from "@/data/magicAccess";
 import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 import type { DivineAccessLevel } from "@/components/MagicAccessPanel";
+import { GRIMOIRE_SPELL_POINT_COST, type GrimoireEntry } from "@/lib/grimoire";
+
+export { GRIMOIRE_SPELL_POINT_COST };
 
 export interface PointEntry {
   label: string;
@@ -55,9 +58,6 @@ export function getAttributeBreakdown(
   return breakdown;
 }
 
-/** Custo em pontos de personagem por magia no Grimório / Livro de Orações. */
-export const GRIMOIRE_SPELL_POINT_COST = 3;
-
 export interface CharacterPointContext {
   selectedRace: string;
   selectedClass: string;
@@ -69,7 +69,7 @@ export interface CharacterPointContext {
   selectedWeapons: string[];
   selectedWeaponGroups: string[];
   selectedShields: string[];
-  grimoire: string[];
+  grimoire: GrimoireEntry[];
   divineAccess: Record<string, DivineAccessLevel>;
   arcaneAccess: Record<string, "access">;
   arcaneSpecialist: string | null;
@@ -169,8 +169,9 @@ export function getCharacterPointBreakdown(ctx: CharacterPointContext): PointBre
     }
   }
 
-  for (const spellName of ctx.grimoire) {
-    pushCost(breakdown, `Magia: ${spellName}`, GRIMOIRE_SPELL_POINT_COST);
+  for (const entry of ctx.grimoire) {
+    if (!entry.initial) continue;
+    pushCost(breakdown, `Magia inicial: ${entry.name}`, GRIMOIRE_SPELL_POINT_COST);
   }
 
   return breakdown;

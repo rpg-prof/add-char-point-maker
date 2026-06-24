@@ -18,6 +18,7 @@ import AdvantagesPanel from "@/components/AdvantagesPanel";
 import SkillsPanel from "@/components/SkillsPanel";
 import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import MagicPanel from "@/components/MagicPanel";
+import MagicResourcePanel from "@/components/MagicResourcePanel";
 import MagicAccessPanel, { type DivineAccessLevel, type ArcaneAccessLevel } from "@/components/MagicAccessPanel";
 import ResistancePanel from "@/components/ResistancePanel";
 import InventoryPanel from "@/components/InventoryPanel";
@@ -47,8 +48,8 @@ import {
   getAttributeBreakdown,
   getCharacterPointBreakdown,
   getProgressionBreakdown,
-  GRIMOIRE_SPELL_POINT_COST,
 } from "@/lib/pointBreakdown";
+import { getGrimoirePointCost, normalizeGrimoire, type GrimoireEntry } from "@/lib/grimoire";
 import { clampAttributesForRace } from "@/lib/clampAttributesForRace";
 import { mergeInventory, normalizeCustomItems } from "@/lib/inventory";
 import {
@@ -75,7 +76,7 @@ const BASE_STEPS = [
   { label: "Inventário", icon: Backpack, desc: "Dinheiro, armas, armaduras e equipamento do personagem" },
 ];
 
-const COMBAT_STEP = { label: "Combate", icon: Swords, desc: "PV, CA, magia, Chi e ataques" };
+const COMBAT_STEP = { label: "Combate", icon: Swords, desc: "PV, CA, Chi e ataques" };
 const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
 const ADVANTAGES_STEP = {
   label: "Vantagens",
@@ -83,7 +84,7 @@ const ADVANTAGES_STEP = {
   desc: "Vantagens, desvantagens, poderes e antecedentes",
   hasSubTabs: true as const,
 };
-const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Grimório / Livro de Orações" };
+const MAGIC_STEP = { label: "Magia", icon: Sparkles, desc: "Pontos de magia, grimório e orações" };
 const HISTORY_STEP = { label: "Histórico", icon: BookHeart, desc: "Passado e história do personagem" };
 const NOTES_STEP = { label: "Anotações", icon: NotebookPen, desc: "Itens e anotações gerais" };
 const SUMMARY_STEP = { label: "Resumo", icon: Scroll, desc: "Revisão final" };
@@ -166,9 +167,9 @@ const Index = () => {
     arcaneSpecialist !== null;
 
   const STEPS = useMemo(() => {
-    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP];
+    const steps = [...BASE_STEPS, MAGIC_ACCESS_STEP, ADVANTAGES_STEP, COMBAT_STEP];
     if (hasMagicAccess) steps.push(MAGIC_STEP);
-    steps.push(COMBAT_STEP, HISTORY_STEP, NOTES_STEP, SUMMARY_STEP);
+    steps.push(HISTORY_STEP, NOTES_STEP, SUMMARY_STEP);
     return steps;
   }, [hasMagicAccess]);
 
@@ -182,7 +183,7 @@ const Index = () => {
   const [selectedWeapons, setSelectedWeapons] = useState<string[]>([]);
   const [selectedWeaponGroups, setSelectedWeaponGroups] = useState<string[]>([]);
   const [selectedShields, setSelectedShields] = useState<string[]>([]);
-  const [grimoire, setGrimoire] = useState<string[]>([]);
+  const [grimoire, setGrimoire] = useState<GrimoireEntry[]>([]);
   const [purchasedItems, setPurchasedItems] = useState<PurchasedItems>({});
   const [addedItems, setAddedItems] = useState<PurchasedItems>({});
   const [customItems, setCustomItems] = useState<CustomInventoryItem[]>([]);
@@ -307,7 +308,7 @@ const Index = () => {
         })()
       : 0;
     const magicCost = divineCost + arcaneCost + specialistCost;
-    const grimoireCost = grimoire.length * GRIMOIRE_SPELL_POINT_COST;
+    const grimoireCost = getGrimoirePointCost(grimoire);
 
     return raceCost + classCost + socialCost + reputationCost + advCost + raceClassAdvCost + skillCost + weaponCost + groupCost + shieldCost + magicCost + grimoireCost;
   }, [selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, divineAccess, arcaneAccess, arcaneSpecialist, grimoire]);
@@ -509,10 +510,8 @@ const Index = () => {
     );
   };
 
-  const handleGrimoireToggle = (spellName: string) => {
-    setGrimoire((prev) =>
-      prev.includes(spellName) ? prev.filter((n) => n !== spellName) : [...prev, spellName]
-    );
+  const handleGrimoireChange = (entries: GrimoireEntry[]) => {
+    setGrimoire(entries);
   };
 
   const handleDivineAccessChange = (sphere: string, level: DivineAccessLevel) => {
@@ -614,7 +613,7 @@ const Index = () => {
         if (data.selectedWeapons) setSelectedWeapons(data.selectedWeapons);
         if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
         if (data.selectedShields) setSelectedShields(data.selectedShields);
-        if (data.grimoire) setGrimoire(data.grimoire);
+        if (data.grimoire) setGrimoire(normalizeGrimoire(data.grimoire));
         if (data.divineAccess) setDivineAccess(data.divineAccess);
         else setDivineAccess({});
         if (data.arcaneAccess) setArcaneAccess(data.arcaneAccess);
@@ -813,8 +812,6 @@ const Index = () => {
               selectedRaceClassAdv={selectedRaceClassAdv}
               selectedClass={selectedClass}
               characterLevel={characterLevel}
-              hasMagicAccess={hasMagicAccess}
-              arcaneSpecialist={arcaneSpecialist}
               loadout={combatLoadout}
               onLoadoutChange={setCombatLoadout}
             />
@@ -899,17 +896,29 @@ const Index = () => {
         );
       case "Magia":
         return (
-          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-            <p className="font-body text-muted-foreground text-sm">
-              Selecione as magias do personagem dentro das esferas e escolas acessíveis.
-            </p>
-            <MagicPanel
-              grimoire={grimoire}
-              onGrimoireToggle={handleGrimoireToggle}
-              divineAccess={divineAccess}
-              arcaneAccess={arcaneAccess}
-              arcaneSpecialist={arcaneSpecialist}
-            />
+          <div className="max-h-[55vh] overflow-y-auto pr-2">
+            <div className="flex gap-3 items-start">
+              <div className="flex-1 min-w-0">
+                <MagicPanel
+                  grimoire={grimoire}
+                  onGrimoireChange={handleGrimoireChange}
+                  divineAccess={divineAccess}
+                  arcaneAccess={arcaneAccess}
+                  arcaneSpecialist={arcaneSpecialist}
+                />
+              </div>
+              {(hasMagicAccess || arcaneSpecialist) && (
+                <div className="w-1/4 shrink-0">
+                  <MagicResourcePanel
+                    loadout={combatLoadout}
+                    onLoadoutChange={setCombatLoadout}
+                    hasMagicAccess={hasMagicAccess}
+                    arcaneSpecialist={arcaneSpecialist}
+                    selectedRaceClassAdv={selectedRaceClassAdv}
+                  />
+                </div>
+              )}
+            </div>
           </div>
         );
       case "Histórico":

@@ -1,8 +1,9 @@
 import { Fragment, useMemo, useState } from "react";
-import { Heart, Minus, Plus, Shield, Sparkles, Swords, Trash2, Zap } from "lucide-react";
+import { Heart, Minus, Plus, Shield, Swords, Trash2, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import ResourcePoolRow from "@/components/ResourcePoolRow";
 import {
   computeArmorClassBreakdown,
   computeAttackRollBreakdown,
@@ -21,14 +22,7 @@ import {
 import { formatArmorClass } from "@/data/equipment";
 import type { CustomInventoryItem, PurchasedItems } from "@/data/equipment";
 import type { AttributeName } from "@/data/characterData";
-import {
-  computeSuggestedManaMax,
-  computeSuggestedSpecialistManaMax,
-  countSelectedAdvantage,
-  MAGIC_EXTRA_ADVANTAGE,
-  MAGIC_EXTRA_SCHOOL_ADVANTAGE,
-  resolveResourceCurrent,
-} from "@/lib/combatResources";
+import { resolveResourceCurrent } from "@/lib/combatResources";
 
 interface CombatPanelProps {
   subAttributes: Record<string, number>;
@@ -38,8 +32,6 @@ interface CombatPanelProps {
   selectedRaceClassAdv: string[];
   selectedClass: string;
   characterLevel: number;
-  hasMagicAccess: boolean;
-  arcaneSpecialist: string | null;
   loadout: CombatLoadout;
   onLoadoutChange: (loadout: CombatLoadout) => void;
 }
@@ -54,9 +46,6 @@ const hintCls =
   "text-[8px] sm:text-[9px] text-muted-foreground text-center leading-tight line-clamp-2 min-h-[1.25rem]";
 const sectionTitleCls =
   "font-display text-xs sm:text-sm tracking-widest uppercase mb-2 flex items-center justify-center gap-1.5";
-
-const resourceCardTitleCls =
-  "font-display text-[10px] sm:text-xs tracking-widest uppercase mb-3 min-h-[2.5rem] flex items-center justify-center gap-1.5 text-center leading-tight";
 
 interface CaField {
   label: string;
@@ -167,119 +156,6 @@ function HitPointsFormulaRow({
   );
 }
 
-function ResourcePoolRow({
-  max,
-  current,
-  tracksCurrent,
-  onMaxChange,
-  onAdjustMax,
-  onCurrentChange,
-  onAdjustCurrent,
-  onFollowMax,
-  hint,
-}: {
-  max: number;
-  current: number;
-  tracksCurrent: boolean;
-  onMaxChange: (value: number) => void;
-  onAdjustMax: (delta: number) => void;
-  onCurrentChange: (value: number) => void;
-  onAdjustCurrent: (delta: number) => void;
-  onFollowMax: () => void;
-  hint?: string;
-}) {
-  const controlBtnCls =
-    "w-6 h-6 shrink-0 rounded border border-border flex items-center justify-center hover:bg-muted";
-  const inputCls =
-    "w-10 sm:w-11 h-7 text-center bg-background/50 border border-border rounded px-0.5 font-display text-sm font-bold tabular-nums";
-  const controlRowCls = "flex items-center justify-center gap-0.5 h-9 sm:h-10";
-
-  return (
-    <div className="space-y-2">
-      <div className="mx-auto w-max max-w-full">
-        <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8">
-          <div className={`${labelCls} text-center`}>Máximo</div>
-          <div className={`${labelCls} text-center`}>Atuais</div>
-
-          <div className={controlRowCls}>
-            <button
-              type="button"
-              onClick={() => onAdjustMax(-1)}
-              className={controlBtnCls}
-              title="Diminuir máximo"
-            >
-              <Minus className="w-3 h-3" />
-            </button>
-            <input
-              type="number"
-              min={0}
-              value={max}
-              onChange={(e) => onMaxChange(Number(e.target.value) || 0)}
-              className={inputCls}
-            />
-            <button
-              type="button"
-              onClick={() => onAdjustMax(1)}
-              className={controlBtnCls}
-              title="Aumentar máximo"
-            >
-              <Plus className="w-3 h-3" />
-            </button>
-          </div>
-
-          <div className={controlRowCls}>
-            <button
-              type="button"
-              onClick={() => onAdjustCurrent(-1)}
-              className={controlBtnCls}
-              title="Gastar"
-            >
-              <Minus className="w-3 h-3" />
-            </button>
-            <input
-              type="number"
-              min={0}
-              value={current}
-              onChange={(e) => onCurrentChange(Number(e.target.value) || 0)}
-              className={inputCls}
-            />
-            <button
-              type="button"
-              onClick={() => onAdjustCurrent(1)}
-              className={controlBtnCls}
-              title="Recuperar"
-            >
-              <Plus className="w-3 h-3" />
-            </button>
-          </div>
-
-          <div className="min-h-[1.25rem]" aria-hidden />
-          <div className={`${hintCls} text-center max-w-[7rem] mx-auto`}>
-            de <span className="font-display text-gold font-semibold">{max}</span> máx.
-            {tracksCurrent && (
-              <>
-                {" "}
-                <button
-                  type="button"
-                  onClick={onFollowMax}
-                  className="underline hover:text-foreground"
-                >
-                  Seguir máx.
-                </button>
-              </>
-            )}
-          </div>
-        </div>
-      </div>
-      {hint && (
-        <p className="text-[10px] text-muted-foreground font-body text-center leading-snug px-1 min-h-[2rem]">
-          {hint}
-        </p>
-      )}
-    </div>
-  );
-}
-
 function CaFormulaRow({ fields }: { fields: CaField[] }) {
   return (
     <div className="overflow-x-auto pb-1">
@@ -343,8 +219,6 @@ const CombatPanel = ({
   selectedRaceClassAdv,
   selectedClass,
   characterLevel,
-  hasMagicAccess,
-  arcaneSpecialist,
   loadout,
   onLoadoutChange,
 }: CombatPanelProps) => {
@@ -447,36 +321,8 @@ const CombatPanel = ({
     setCurrentHp(base + delta);
   };
 
-  const suggestedManaMax = useMemo(
-    () => computeSuggestedManaMax(hasMagicAccess, selectedRaceClassAdv),
-    [hasMagicAccess, selectedRaceClassAdv]
-  );
-  const suggestedSpecialistManaMax = useMemo(
-    () => computeSuggestedSpecialistManaMax(arcaneSpecialist, selectedRaceClassAdv),
-    [arcaneSpecialist, selectedRaceClassAdv]
-  );
-  const extraManaCount = countSelectedAdvantage(selectedRaceClassAdv, MAGIC_EXTRA_ADVANTAGE);
-  const extraSchoolManaCount = countSelectedAdvantage(
-    selectedRaceClassAdv,
-    MAGIC_EXTRA_SCHOOL_ADVANTAGE
-  );
-
-  const maxMana = loadout.maxMana;
-  const currentMana = resolveResourceCurrent(loadout.currentMana, maxMana);
-  const maxSpecialistMana = loadout.maxSpecialistMana;
-  const currentSpecialistMana = resolveResourceCurrent(
-    loadout.currentSpecialistMana,
-    maxSpecialistMana
-  );
   const maxChi = loadout.maxChi;
   const currentChi = resolveResourceCurrent(loadout.currentChi, maxChi);
-
-  const manaHint = hasMagicAccess
-    ? `Inicial: 1${extraManaCount > 0 ? ` + ${extraManaCount} antecedente${extraManaCount > 1 ? "s" : ""} Extra` : ""} = ${suggestedManaMax} sugerido. Aumente conforme evoluir.`
-    : undefined;
-  const specialistManaHint = arcaneSpecialist
-    ? `Inicial: 1${extraSchoolManaCount > 0 ? ` + ${extraSchoolManaCount} Extra (Escola)` : ""} = ${suggestedSpecialistManaMax} sugerido para ${arcaneSpecialist}.`
-    : undefined;
   const chiHint = "Inicia em 0. Aumente conforme o personagem evoluir.";
 
   const caFields: CaField[] = [
@@ -512,14 +358,6 @@ const CombatPanel = ({
   ];
 
   const showChi = loadout.showChi;
-  const resourceCardCount =
-    (hasMagicAccess ? 1 : 0) + (arcaneSpecialist ? 1 : 0) + (showChi ? 1 : 0);
-  const resourceGridCls =
-    resourceCardCount <= 1
-      ? "grid-cols-1"
-      : resourceCardCount === 2
-        ? "grid-cols-1 md:grid-cols-2"
-        : "grid-cols-1 md:grid-cols-3";
 
   return (
     <div className="space-y-4">
@@ -580,90 +418,27 @@ const CombatPanel = ({
         </div>
       </div>
 
-      {resourceCardCount > 0 && (
+      {showChi && (
       <div className="rounded-lg border border-border bg-card/60 p-3 sm:p-4">
         <h3 className={sectionTitleCls}>
-          <Sparkles className="w-4 h-4 text-gold" />
-          Recursos
+          <Zap className="w-4 h-4 text-gold" />
+          Pontos de Chi
         </h3>
-        <div className={`grid gap-4 items-stretch ${resourceGridCls}`}>
-          {hasMagicAccess && (
-            <div className="rounded-md border border-border/60 bg-card/40 p-3 flex flex-col">
-              <h4 className={resourceCardTitleCls}>
-                <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-                Pontos de Magia
-              </h4>
-              <ResourcePoolRow
-                max={maxMana}
-                current={currentMana}
-                tracksCurrent={loadout.currentMana != null}
-                onMaxChange={(value) => update({ maxMana: Math.max(0, value) })}
-                onAdjustMax={(delta) =>
-                  update({ maxMana: Math.max(0, loadout.maxMana + delta) })
-                }
-                onCurrentChange={(value) => update({ currentMana: Math.max(0, value) })}
-                onAdjustCurrent={(delta) => {
-                  const base = resolveResourceCurrent(loadout.currentMana, maxMana);
-                  update({ currentMana: Math.max(0, base + delta) });
-                }}
-                onFollowMax={() => update({ currentMana: null })}
-                hint={manaHint}
-              />
-            </div>
-          )}
-
-          {arcaneSpecialist && (
-            <div className="rounded-md border border-border/60 bg-card/40 p-3 flex flex-col">
-              <h4 className={resourceCardTitleCls}>
-                <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
-                <span>Magia — {arcaneSpecialist}</span>
-              </h4>
-              <ResourcePoolRow
-                max={maxSpecialistMana}
-                current={currentSpecialistMana}
-                tracksCurrent={loadout.currentSpecialistMana != null}
-                onMaxChange={(value) => update({ maxSpecialistMana: Math.max(0, value) })}
-                onAdjustMax={(delta) =>
-                  update({ maxSpecialistMana: Math.max(0, loadout.maxSpecialistMana + delta) })
-                }
-                onCurrentChange={(value) =>
-                  update({ currentSpecialistMana: Math.max(0, value) })
-                }
-                onAdjustCurrent={(delta) => {
-                  const base = resolveResourceCurrent(
-                    loadout.currentSpecialistMana,
-                    maxSpecialistMana
-                  );
-                  update({ currentSpecialistMana: Math.max(0, base + delta) });
-                }}
-                onFollowMax={() => update({ currentSpecialistMana: null })}
-                hint={specialistManaHint}
-              />
-            </div>
-          )}
-
-          {showChi && (
-            <div className="rounded-md border border-border/60 bg-card/40 p-3 flex flex-col">
-              <h4 className={resourceCardTitleCls}>
-                <Zap className="w-3.5 h-3.5 text-gold shrink-0" />
-                Chi
-              </h4>
-              <ResourcePoolRow
-                max={maxChi}
-                current={currentChi}
-                tracksCurrent={loadout.currentChi != null}
-                onMaxChange={(value) => update({ maxChi: Math.max(0, value) })}
-                onAdjustMax={(delta) => update({ maxChi: Math.max(0, loadout.maxChi + delta) })}
-                onCurrentChange={(value) => update({ currentChi: Math.max(0, value) })}
-                onAdjustCurrent={(delta) => {
-                  const base = resolveResourceCurrent(loadout.currentChi, maxChi);
-                  update({ currentChi: Math.max(0, base + delta) });
-                }}
-                onFollowMax={() => update({ currentChi: null })}
-                hint={chiHint}
-              />
-            </div>
-          )}
+        <div className="max-w-sm mx-auto">
+          <ResourcePoolRow
+            max={maxChi}
+            current={currentChi}
+            tracksCurrent={loadout.currentChi != null}
+            onMaxChange={(value) => update({ maxChi: Math.max(0, value) })}
+            onAdjustMax={(delta) => update({ maxChi: Math.max(0, loadout.maxChi + delta) })}
+            onCurrentChange={(value) => update({ currentChi: Math.max(0, value) })}
+            onAdjustCurrent={(delta) => {
+              const base = resolveResourceCurrent(loadout.currentChi, maxChi);
+              update({ currentChi: Math.max(0, base + delta) });
+            }}
+            onFollowMax={() => update({ currentChi: null })}
+            hint={chiHint}
+          />
         </div>
       </div>
       )}
