@@ -50,6 +50,11 @@ import {
   getProgressionBreakdown,
 } from "@/lib/pointBreakdown";
 import { getGrimoirePointCost, normalizeGrimoire, type GrimoireEntry } from "@/lib/grimoire";
+import {
+  defaultMagicComponents,
+  normalizeMagicComponents,
+  type MagicComponentEntry,
+} from "@/lib/magicComponents";
 import { clampAttributesForRace } from "@/lib/clampAttributesForRace";
 import { mergeInventory, normalizeCustomItems } from "@/lib/inventory";
 import {
@@ -191,6 +196,9 @@ const Index = () => {
   const [combatLoadout, setCombatLoadout] = useState<CombatLoadout>(defaultCombatLoadout);
   const [notesItems, setNotesItems] = useState("");
   const [notesGeneral, setNotesGeneral] = useState("");
+  const [magicComponents, setMagicComponents] = useState<MagicComponentEntry[]>(
+    defaultMagicComponents,
+  );
   const [characterHistory, setCharacterHistory] = useState("");
 
   const mergedInventory = useMemo(
@@ -562,6 +570,7 @@ const Index = () => {
       combatLoadout,
       notesItems,
       notesGeneral,
+      magicComponents,
       characterHistory,
     };
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
@@ -571,7 +580,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems, addedItems, customItems, extraMoneyPc, combatLoadout, notesItems, notesGeneral, characterHistory]);
+  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems, addedItems, customItems, extraMoneyPc, combatLoadout, notesItems, notesGeneral, magicComponents, characterHistory]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -653,6 +662,11 @@ const Index = () => {
         if (data.notesItems !== undefined) setNotesItems(data.notesItems);
         else setNotesItems("");
         if (data.notesGeneral !== undefined) setNotesGeneral(data.notesGeneral);
+        if (data.magicComponents !== undefined) {
+          setMagicComponents(normalizeMagicComponents(data.magicComponents));
+        } else if (data.magicComponentsNotes !== undefined) {
+          setMagicComponents(normalizeMagicComponents(data.magicComponentsNotes));
+        }
         else setNotesGeneral("");
         if (data.characterHistory !== undefined) setCharacterHistory(data.characterHistory);
         else setCharacterHistory("");
@@ -915,6 +929,8 @@ const Index = () => {
                     hasMagicAccess={hasMagicAccess}
                     arcaneSpecialist={arcaneSpecialist}
                     selectedRaceClassAdv={selectedRaceClassAdv}
+                    magicComponents={magicComponents}
+                    onMagicComponentsChange={setMagicComponents}
                   />
                 </div>
               )}
@@ -1054,6 +1070,7 @@ const Index = () => {
                     characterPointsSpent,
                     notesItems,
                     notesGeneral,
+                    magicComponents,
                     characterHistory,
                   })
                 }
