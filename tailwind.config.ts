@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Cinzel', 'serif'],
-        body: ['Crimson Text', 'serif'],
+        display: ['"Libre Baskerville"', 'Georgia', 'serif'],
+        body: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
