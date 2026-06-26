@@ -1027,6 +1027,7 @@ const Index = () => {
             selectedClass={selectedClass}
             selectedSocialClass={selectedSocialClass}
             selectedReputation={selectedReputation}
+            characterLevel={characterLevel}
             attributes={attributes}
             subAttributes={subAttributes}
             purchasedItems={purchasedItems}
@@ -1036,6 +1037,17 @@ const Index = () => {
             selectedAdvantages={selectedAdvantages}
             selectedRaceClassAdv={selectedRaceClassAdv}
             selectedSkills={selectedSkills}
+            sexo={sexo}
+            idade={idade}
+            peso={peso}
+            altura={altura}
+            cabelos={cabelos}
+            olhos={olhos}
+            tendencia={tendencia}
+            combatLoadout={combatLoadout}
+            selectedWeapons={selectedWeapons}
+            selectedWeaponGroups={selectedWeaponGroups}
+            selectedShields={selectedShields}
           />
         );
       default:

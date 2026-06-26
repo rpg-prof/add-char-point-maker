@@ -2,10 +2,13 @@ import type { ReactNode } from "react";
 import {
   Backpack,
   Heart,
-  Scroll,
   ShieldAlert,
   Sparkles,
   Swords,
+  User,
+  Shield,
+  Crosshair,
+  BookOpen,
 } from "lucide-react";
 import {
   generalAdvantages,
@@ -30,28 +33,14 @@ import { mergeInventory } from "@/lib/inventory";
 import { raceClassAdvantages } from "@/data/raceClassAdvantages";
 import { getSubAttributeBonuses, subAttributeMap } from "@/data/subAttributes";
 import { computeResistanceBreakdown } from "@/lib/resistanceStats";
-
-const sectionCardCls = "rounded-lg border border-border bg-card/40 p-3";
-
-function SectionTitle({ icon, children }: { icon: ReactNode; children: ReactNode }) {
-  return (
-    <h4 className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-2 flex items-center gap-1.5">
-      <span className="text-gold">{icon}</span>
-      {children}
-    </h4>
-  );
-}
-
-function splitInTwo<T>(items: T[]): [T[], T[]] {
-  const mid = Math.ceil(items.length / 2);
-  return [items.slice(0, mid), items.slice(mid)];
-}
-
-function getSkillPointCost(skillName: string, characterClass: string): number {
-  const skill = skills.find((s) => s.name === skillName);
-  if (!skill) return 0;
-  return getSkillCost(skill, characterClass);
-}
+import {
+  computeHitPointsBreakdown,
+  computeArmorClassBreakdown,
+  type CombatLoadout,
+  defaultCombatLoadout,
+} from "@/lib/combatStats";
+import { weaponGroups } from "@/data/weaponProficiencies";
+import { shieldProficiencies } from "@/data/weaponProficiencies";
 
 interface AdvantageEntry {
   name: string;
@@ -66,6 +55,7 @@ export interface SummaryPanelProps {
   selectedClass: string;
   selectedSocialClass: string;
   selectedReputation: number;
+  characterLevel?: number;
   attributes: Record<AttributeName, number>;
   subAttributes: Record<string, number>;
   purchasedItems: PurchasedItems;
@@ -75,21 +65,131 @@ export interface SummaryPanelProps {
   selectedAdvantages: string[];
   selectedRaceClassAdv: string[];
   selectedSkills: string[];
+  // Physical description
+  sexo?: string;
+  idade?: string;
+  peso?: string;
+  altura?: string;
+  cabelos?: string;
+  olhos?: string;
+  tendencia?: string;
+  // Combat
+  combatLoadout?: CombatLoadout;
+  // Weapon proficiencies
+  selectedWeapons?: string[];
+  selectedWeaponGroups?: string[];
+  selectedShields?: string[];
 }
 
-function SkillColumn({ items, selectedClass }: { items: string[]; selectedClass: string }) {
+function splitInTwo<T>(items: T[]): [T[], T[]] {
+  const mid = Math.ceil(items.length / 2);
+  return [items.slice(0, mid), items.slice(mid)];
+}
+
+function getSkillPointCost(skillName: string, characterClass: string): number {
+  const skill = skills.find((s) => s.name === skillName);
+  if (!skill) return 0;
+  return getSkillCost(skill, characterClass);
+}
+
+function formatSigned(n: number) {
+  return n > 0 ? `+${n}` : `${n}`;
+}
+
+function SummaryCard({
+  icon,
+  title,
+  count,
+  children,
+  accent,
+}: {
+  icon: ReactNode;
+  title: string;
+  count?: number;
+  children: ReactNode;
+  accent?: "gold" | "blood";
+}) {
+  const accentBorder =
+    accent === "blood"
+      ? "border-l-blood/40"
+      : accent === "gold"
+        ? "border-l-gold/40"
+        : "";
   return (
-    <div className="space-y-1">
-      {items.map((name) => (
-        <div key={name} className="flex items-baseline gap-1.5 text-sm font-body leading-snug">
-          <span className="w-1 h-1 rounded-full bg-gold/70 shrink-0 translate-y-[-2px]" />
-          <span className="min-w-0">{name}</span>
-          <span className="ml-auto text-xs text-muted-foreground tabular-nums shrink-0">
-            {getSkillPointCost(name, selectedClass)}
+    <div
+      className={`rounded-xl border border-gold/20 bg-card/90 shadow-sm overflow-hidden border-l-[3px] ${accentBorder}`}
+    >
+      <div className="flex items-center gap-2 px-3 py-2 border-b border-gold/10 bg-gradient-to-r from-gold/[0.05] to-transparent">
+        <span className="text-gold shrink-0">{icon}</span>
+        <h4 className="font-display text-[11px] tracking-wider uppercase text-foreground flex-1 min-w-0 truncate">
+          {title}
+        </h4>
+        {count != null && count > 0 && (
+          <span className="text-[10px] font-display tabular-nums text-muted-foreground shrink-0">
+            {count}
           </span>
-        </div>
-      ))}
+        )}
+      </div>
+      <div className="p-3">{children}</div>
     </div>
+  );
+}
+
+function StatPill({
+  label,
+  value,
+  variant = "default",
+  title,
+}: {
+  label: string;
+  value: ReactNode;
+  variant?: "default" | "gold" | "danger";
+  title?: string;
+}) {
+  const valueCls =
+    variant === "gold"
+      ? "text-gold"
+      : variant === "danger"
+        ? "text-blood"
+        : "text-foreground";
+  return (
+    <div
+      className="rounded-lg border border-border/60 bg-background/50 px-2.5 py-2 min-w-0"
+      title={title}
+    >
+      <p className="font-display text-[9px] tracking-wider uppercase text-muted-foreground truncate">
+        {label}
+      </p>
+      <p className={`font-display text-sm font-bold tabular-nums leading-tight mt-0.5 ${valueCls}`}>
+        {value}
+      </p>
+    </div>
+  );
+}
+
+function EmptyNote({ children }: { children: ReactNode }) {
+  return (
+    <p className="text-xs text-muted-foreground font-body italic py-2 text-center">{children}</p>
+  );
+}
+
+function TagChip({
+  children,
+  variant = "neutral",
+}: {
+  children: ReactNode;
+  variant?: "gold" | "blood" | "neutral" | "custom";
+}) {
+  const cls = {
+    gold: "bg-gold/10 border-gold/30 text-gold-dark",
+    blood: "bg-blood/10 border-blood/30 text-blood",
+    neutral: "bg-background/60 border-border/70 text-foreground",
+    custom: "bg-background/60 border-gold/25 border-dashed text-foreground",
+  }[variant];
+  return (
+    <span className={`inline-flex items-center px-2 py-0.5 rounded-md text-[11px] font-body border ${cls}`}>
+      {children}
+    </span>
   );
 }
 
@@ -100,6 +200,7 @@ const SummaryPanel = ({
   selectedClass,
   selectedSocialClass,
   selectedReputation,
+  characterLevel = 1,
   attributes,
   subAttributes,
   purchasedItems,
@@ -109,6 +210,17 @@ const SummaryPanel = ({
   selectedAdvantages,
   selectedRaceClassAdv,
   selectedSkills,
+  sexo,
+  idade,
+  peso,
+  altura,
+  cabelos,
+  olhos,
+  tendencia,
+  combatLoadout,
+  selectedWeapons = [],
+  selectedWeaponGroups = [],
+  selectedShields = [],
 }: SummaryPanelProps) => {
   const allAdvItems = [...generalAdvantages, ...generalDisadvantages, ...raceClassAdvantages];
 
@@ -163,51 +275,191 @@ const SummaryPanel = ({
   const displayName = charName.trim() || "Personagem Sem Nome";
   const resistances = computeResistanceBreakdown({ subAttributes, selectedRaceClassAdv });
 
-  const formatSigned = (n: number) => (n > 0 ? `+${n}` : `${n}`);
+  // Combat stats
+  const loadout = combatLoadout ?? defaultCombatLoadout();
+  const hpBreakdown = computeHitPointsBreakdown({
+    subAttributes,
+    constMain: attributes.Constituição,
+    selectedClass,
+  });
+  const caBreakdown = computeArmorClassBreakdown({
+    subAttributes,
+    purchased: mergeInventory(purchasedItems, addedItems),
+    selectedRaceClassAdv,
+    destrezaMain: attributes.Destreza,
+    sabedoriaMain: attributes.Sabedoria,
+    loadout,
+  });
+  const activeWeaponSlots = loadout.weaponSlots.filter((s) => s.name.trim() !== "");
+
+  // Weapon proficiencies
+  const weaponGroupItems = selectedWeaponGroups.map((gName) => {
+    const group = weaponGroups.find((g) => g.name === gName);
+    return { name: gName, label: group ? `${gName} (grupo)` : gName };
+  });
+  const individualWeaponItems = selectedWeapons
+    .filter((wk) => {
+      const [groupName] = wk.split("::");
+      return !selectedWeaponGroups.includes(groupName);
+    })
+    .map((wk) => {
+      const [groupName, weaponCode] = wk.split("::");
+      const group = weaponGroups.find((g) => g.name === groupName);
+      const weapon = group?.weapons.find((w) => w.code === weaponCode);
+      return { key: wk, name: weapon?.name ?? weaponCode };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+  const shieldItems = selectedShields.map((sName) => {
+    const shield = shieldProficiencies.find((s) => s.name === sName);
+    return { name: sName, bonus: shield?.bonusCA ?? "" };
+  });
+  const totalWeaponProf =
+    weaponGroupItems.length + individualWeaponItems.length + shieldItems.length;
+
+  // Physical description fields
+  const physicalFacts = [
+    { label: "Tendência", value: tendencia || "—" },
+    { label: "Sexo", value: sexo || "—" },
+    { label: "Idade", value: idade || "—" },
+    { label: "Peso", value: peso || "—" },
+    { label: "Altura", value: altura || "—" },
+    { label: "Cabelos", value: cabelos || "—" },
+    { label: "Olhos", value: olhos || "—" },
+  ].filter((f) => f.value !== "—");
 
   const headerFacts = [
     { label: "Raça", value: selectedRace || "—" },
     { label: "Classe", value: selectedClass || "—" },
     { label: "Classe Social", value: selectedSocialClass || "—" },
-    { label: "Reputação", value: `Nv ${selectedReputation}`, hint: reputationLabel },
+    {
+      label: "Reputação",
+      value: `Nv. ${selectedReputation}`,
+      hint: reputationLabel,
+    },
   ];
 
   return (
     <div className="space-y-3">
       {/* Cabeçalho */}
-      <div className="dark-panel rounded-lg overflow-hidden">
-        <div className="px-4 pt-4 pb-3 border-b border-gold/20">
-          <p className="font-display text-[10px] tracking-[0.25em] uppercase text-gold/60 mb-0.5">
-            Ficha de Personagem
-          </p>
-          <h3 className="font-display text-lg md:text-xl tracking-wider text-gold leading-tight">
-            {displayName}
-          </h3>
-          {playerName.trim() && (
-            <p className="text-sm font-body text-parchment/60 mt-0.5">
-              Jogador: <span className="text-parchment/85">{playerName}</span>
+      <div className="dark-panel rounded-xl overflow-hidden border border-gold/25 shadow-sm">
+        <div className="px-4 pt-4 pb-3 flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <p className="font-display text-[10px] tracking-[0.2em] uppercase text-gold/55 mb-1">
+              Ficha de Personagem
             </p>
-          )}
+            <h3 className="font-display text-lg md:text-xl tracking-wide text-gold leading-tight truncate">
+              {displayName}
+            </h3>
+            {playerName.trim() && (
+              <p className="text-xs font-body text-parchment/55 mt-1 flex items-center gap-1.5">
+                <User className="w-3 h-3 shrink-0" />
+                <span className="truncate">{playerName}</span>
+              </p>
+            )}
+          </div>
+          <div className="shrink-0 text-right rounded-lg border border-gold/25 bg-gold/10 px-3 py-2">
+            <p className="font-display text-[9px] tracking-wider uppercase text-gold/70">Nível</p>
+            <p className="font-display text-2xl font-bold text-gold tabular-nums leading-none">
+              {characterLevel}
+            </p>
+          </div>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-gold/10">
+        <div className="gold-rule mx-4" />
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gold/10 mt-3">
           {headerFacts.map(({ label, value, hint }) => (
-            <div key={label} className="px-4 py-2.5">
-              <p className="font-display text-[10px] tracking-wider uppercase text-parchment/45">
+            <div key={label} className="bg-parchment-dark/40 px-3 py-2.5 min-w-0">
+              <p className="font-display text-[9px] tracking-wider uppercase text-parchment/45 truncate">
                 {label}
               </p>
-              <p className="font-display text-sm text-parchment/90 leading-snug" title={hint}>
+              <p
+                className="font-display text-xs text-parchment/90 leading-snug truncate mt-0.5"
+                title={hint}
+              >
                 {value}
               </p>
             </div>
           ))}
         </div>
+        {physicalFacts.length > 0 && (
+          <div className="px-4 py-2.5 flex flex-wrap gap-x-4 gap-y-1 border-t border-gold/10">
+            {physicalFacts.map(({ label, value }) => (
+              <span key={label} className="text-[11px] font-body text-parchment/60">
+                <span className="font-display tracking-wide text-parchment/40 uppercase text-[9px] mr-1">
+                  {label}:
+                </span>
+                {value}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Atributos | Perícias | Inventário */}
-      <div className="grid grid-cols-1 md:grid-cols-[minmax(0,14rem)_1fr_1fr] gap-3 items-start">
-        <div className={sectionCardCls}>
-          <SectionTitle icon={<Swords className="w-4 h-4" />}>Atributos</SectionTitle>
+      {/* Combate */}
+      <SummaryCard icon={<Swords className="w-4 h-4" />} title="Combate" accent="blood">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+          <StatPill
+            label="PV Máx."
+            value={hpBreakdown.total}
+            variant="gold"
+            title={`Base ${hpBreakdown.base} + Condicionamento (${hpBreakdown.condicionamentoValue}) ${formatSigned(hpBreakdown.condicionamentoBonus)}`}
+          />
+          <StatPill
+            label="C.A."
+            value={caBreakdown.total}
+            variant="gold"
+            title={`Base ${caBreakdown.base} + Armadura ${caBreakdown.armadura} + Destreza ${formatSigned(caBreakdown.destreza)} + Outros ${formatSigned(caBreakdown.outros)}`}
+          />
+          <StatPill
+            label="Armadura"
+            value={caBreakdown.equippedArmorName ?? "—"}
+          />
+          <StatPill
+            label="Escudo"
+            value={caBreakdown.equippedShieldName ?? "—"}
+          />
+        </div>
+        {activeWeaponSlots.length > 0 ? (
           <div className="space-y-1.5">
+            <p className="font-display text-[9px] tracking-wider uppercase text-muted-foreground mb-1">
+              Armas Equipadas
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+              {activeWeaponSlots.map((slot) => (
+                <div
+                  key={slot.id}
+                  className="flex items-center gap-2 rounded-lg border border-border/50 bg-background/40 px-2.5 py-1.5"
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className="font-body text-xs truncate">{slot.name}</p>
+                    {slot.tipo && (
+                      <p className="text-[10px] text-muted-foreground font-body">
+                        {slot.tipo}
+                        {slot.damageSm && (
+                          <span className="ml-1.5 text-foreground/60">
+                            {slot.damageSm} / {slot.damageLg}
+                          </span>
+                        )}
+                      </p>
+                    )}
+                  </div>
+                  {slot.weaponBonus !== 0 && (
+                    <span className="text-[10px] font-display tabular-nums text-gold shrink-0">
+                      {formatSigned(slot.weaponBonus)}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <EmptyNote>Nenhuma arma equipada no loadout.</EmptyNote>
+        )}
+      </SummaryCard>
+
+      {/* Atributos + Perícias */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start">
+        <SummaryCard icon={<Shield className="w-4 h-4" />} title="Atributos">
+          <div className="grid grid-cols-2 gap-2">
             {subAttributeMap.map(({ main, sub1, sub2 }) => {
               const mainVal = attributes[main as AttributeName];
               const sub1Val = subAttributes[sub1] ?? mainVal;
@@ -215,208 +467,258 @@ const SummaryPanel = ({
               return (
                 <div
                   key={main}
-                  className="rounded-md border border-border/60 bg-background/40 px-2.5 py-1.5"
+                  className="rounded-lg border border-border/50 bg-background/40 px-2.5 py-2 hover:border-gold/25 transition-colors"
                 >
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-display text-xs tracking-wide">{main}</span>
-                    <span className="font-display font-bold text-base text-gold tabular-nums leading-none">
+                  <div className="flex items-center justify-between gap-1">
+                    <span className="font-display text-[11px] tracking-wide text-foreground/90 truncate">
+                      {main}
+                    </span>
+                    <span className="font-display font-bold text-lg text-gold tabular-nums leading-none">
                       {mainVal}
                     </span>
                   </div>
-                  <div className="flex justify-between text-[11px] text-muted-foreground font-body mt-0.5">
-                    <span>
-                      {sub2} <span className="tabular-nums text-foreground/70">{sub2Val}</span>
+                  <div className="flex justify-between gap-1 mt-1 text-[10px] text-muted-foreground font-body">
+                    <span className="truncate">
+                      {sub2}{" "}
+                      <span className="tabular-nums text-foreground/65">{sub2Val}</span>
                     </span>
-                    <span>
-                      {sub1} <span className="tabular-nums text-foreground/70">{sub1Val}</span>
+                    <span className="truncate text-right">
+                      {sub1}{" "}
+                      <span className="tabular-nums text-foreground/65">{sub1Val}</span>
                     </span>
                   </div>
                 </div>
               );
             })}
           </div>
-        </div>
+        </SummaryCard>
 
-        <div className={`${sectionCardCls} h-full`}>
-          <SectionTitle icon={<Scroll className="w-4 h-4" />}>
-            Perícias
-            {sortedSkills.length > 0 && (
-              <span className="text-[10px] text-muted-foreground/70 normal-case tracking-normal">
-                ({sortedSkills.length})
-              </span>
-            )}
-          </SectionTitle>
+        <SummaryCard
+          icon={<BookOpen className="w-4 h-4" />}
+          title="Perícias"
+          count={sortedSkills.length}
+        >
           {sortedSkills.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-0.5">
-              <SkillColumn items={skillsLeft} selectedClass={selectedClass} />
-              <SkillColumn items={skillsRight} selectedClass={selectedClass} />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-0 max-h-[220px] overflow-y-auto pr-1">
+              {[skillsLeft, skillsRight].map((col, colIdx) => (
+                <div key={colIdx} className="space-y-0.5">
+                  {col.map((name) => (
+                    <div
+                      key={name}
+                      className="flex items-center gap-2 py-1 px-1.5 rounded hover:bg-background/50 text-xs font-body border-b border-border/30 last:border-0"
+                    >
+                      <span className="min-w-0 flex-1 truncate leading-snug">{name}</span>
+                      <span className="text-[10px] text-muted-foreground tabular-nums shrink-0">
+                        {getSkillPointCost(name, selectedClass)} pts
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           ) : (
-            <p className="text-xs text-muted-foreground font-body">
-              Nenhuma perícia selecionada.
-            </p>
+            <EmptyNote>Nenhuma perícia selecionada.</EmptyNote>
           )}
-        </div>
+        </SummaryCard>
+      </div>
 
-        <div className={`${sectionCardCls} h-full`}>
-          <SectionTitle icon={<Backpack className="w-4 h-4" />}>
-            Inventário
-          </SectionTitle>
-          <div className="grid grid-cols-2 gap-1.5 mb-2.5">
-            <div className="rounded-md border border-border/60 bg-background/40 px-2.5 py-1.5">
-              <p className="font-display text-[10px] tracking-wider uppercase text-muted-foreground">
-                Capital
-              </p>
-              <p className="font-display text-sm font-bold">{formatMoney(startingPc)}</p>
-            </div>
-            <div className="rounded-md border border-border/60 bg-background/40 px-2.5 py-1.5">
-              <p className="font-display text-[10px] tracking-wider uppercase text-muted-foreground">
-                Restante
-              </p>
-              <p
-                className={`font-display text-sm font-bold ${
-                  remainingPc < 0 ? "text-blood" : "text-gold"
-                }`}
-              >
-                {formatMoney(remainingPc)}
-              </p>
-            </div>
-            <div className="rounded-md border border-border/60 bg-background/40 px-2.5 py-1.5">
-              <p className="font-display text-[10px] tracking-wider uppercase text-muted-foreground">
-                Gasto
-              </p>
-              <p className="font-display text-sm font-bold">{formatMoney(spentPc)}</p>
-            </div>
-            <div className="rounded-md border border-border/60 bg-background/40 px-2.5 py-1.5">
-              <p className="font-display text-[10px] tracking-wider uppercase text-muted-foreground">
-                Peso
-              </p>
-              <p
-                className={`font-display text-sm font-bold ${overweight ? "text-blood" : ""}`}
-                title={`Resistência ${resistenciaValue} — ${cargaBonus}`}
-              >
+      {/* Proficiências com Armas */}
+      {totalWeaponProf > 0 && (
+        <SummaryCard
+          icon={<Crosshair className="w-4 h-4" />}
+          title="Proficiências com Armas"
+          count={totalWeaponProf}
+          accent="gold"
+        >
+          <div className="space-y-2">
+            {weaponGroupItems.length > 0 && (
+              <div>
+                <p className="font-display text-[9px] tracking-wider uppercase text-muted-foreground mb-1.5">
+                  Grupos
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {weaponGroupItems.map(({ name, label }) => (
+                    <TagChip key={name} variant="gold">
+                      {label}
+                    </TagChip>
+                  ))}
+                </div>
+              </div>
+            )}
+            {individualWeaponItems.length > 0 && (
+              <div>
+                <p className="font-display text-[9px] tracking-wider uppercase text-muted-foreground mb-1.5">
+                  Armas Individuais
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {individualWeaponItems.map(({ key, name }) => (
+                    <TagChip key={key} variant="neutral">
+                      {name}
+                    </TagChip>
+                  ))}
+                </div>
+              </div>
+            )}
+            {shieldItems.length > 0 && (
+              <div>
+                <p className="font-display text-[9px] tracking-wider uppercase text-muted-foreground mb-1.5">
+                  Escudos
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {shieldItems.map(({ name, bonus }) => (
+                    <TagChip key={name} variant="neutral">
+                      {name}
+                      {bonus && (
+                        <span className="opacity-60 ml-1 text-[10px]">{bonus}</span>
+                      )}
+                    </TagChip>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </SummaryCard>
+      )}
+
+      {/* Inventário */}
+      <SummaryCard
+        icon={<Backpack className="w-4 h-4" />}
+        title="Inventário"
+        count={ownedItems.length + customOwned.length}
+      >
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+          <StatPill label="Capital" value={formatMoney(startingPc)} />
+          <StatPill
+            label="Restante"
+            value={formatMoney(remainingPc)}
+            variant={remainingPc < 0 ? "danger" : "gold"}
+          />
+          <StatPill label="Gasto" value={formatMoney(spentPc)} />
+          <StatPill
+            label="Peso"
+            value={
+              <>
                 {totalWeight.toFixed(1).replace(".", ",")}
                 {cargaKg > 0 && (
                   <span className="text-muted-foreground font-normal text-xs">
                     {" "}
-                    / {cargaKg.toFixed(1).replace(".", ",")} kg
+                    / {cargaKg.toFixed(1).replace(".", ",")}
                   </span>
                 )}
-              </p>
-            </div>
-          </div>
-          {ownedItems.length > 0 || customOwned.length > 0 ? (
-            <div className="flex flex-wrap gap-1">
-              {ownedItems.map(({ item, qty }) => (
-                <span
-                  key={item!.id}
-                  className="px-2 py-0.5 rounded-full text-[11px] font-body border bg-card border-border/70"
-                >
-                  {item!.name}
-                  {qty > 1 && <span className="text-muted-foreground"> ×{qty}</span>}
-                </span>
-              ))}
-              {customOwned.map((item) => (
-                <span
-                  key={item.id}
-                  className="px-2 py-0.5 rounded-full text-[11px] font-body border bg-card border-gold/30 border-dashed"
-                  title="Item descrito pelo jogador"
-                >
-                  {item.name}
-                  {item.qty > 1 && <span className="text-muted-foreground"> ×{item.qty}</span>}
-                </span>
-              ))}
-            </div>
-          ) : (
-            <p className="text-xs text-muted-foreground font-body">Nenhum item no inventário.</p>
-          )}
+                <span className="text-muted-foreground font-normal text-xs"> kg</span>
+              </>
+            }
+            variant={overweight ? "danger" : "default"}
+            title={`Resistência ${resistenciaValue} — ${cargaBonus}`}
+          />
         </div>
-      </div>
+        {ownedItems.length > 0 || customOwned.length > 0 ? (
+          <div className="flex flex-wrap gap-1.5 max-h-[120px] overflow-y-auto pr-1">
+            {ownedItems.map(({ item, qty }) => (
+              <TagChip key={item!.id} variant="neutral">
+                {item!.name}
+                {qty > 1 && <span className="text-muted-foreground ml-1">×{qty}</span>}
+              </TagChip>
+            ))}
+            {customOwned.map((item) => (
+              <TagChip key={item.id} variant="custom">
+                {item.name}
+                {item.qty > 1 && <span className="text-muted-foreground ml-1">×{item.qty}</span>}
+              </TagChip>
+            ))}
+          </div>
+        ) : (
+          <EmptyNote>Nenhum item no inventário.</EmptyNote>
+        )}
+      </SummaryCard>
 
       {/* Resistências */}
-      <div className={sectionCardCls}>
-        <SectionTitle icon={<Heart className="w-4 h-4" />}>Resistências</SectionTitle>
+      <SummaryCard icon={<Heart className="w-4 h-4" />} title="Resistências">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
-          {resistances.map((r) => (
-            <div
-              key={r.key}
-              className="rounded-md border border-border/60 bg-background/40 px-2.5 py-2"
-              title={`Base ${r.base}% · ${r.subAttr}(${r.subVal}) ${formatSigned(r.attrMod)}%${
-                r.bonus !== 0 ? ` · Vant. ${formatSigned(r.bonus)}%` : ""
-              }`}
-            >
-              <div className="flex items-start justify-between gap-1">
-                <span className="font-display text-[11px] leading-tight text-foreground/90">
-                  {r.label}
-                </span>
-                <span
-                  className={`font-display text-base font-bold tabular-nums leading-none shrink-0 ${
-                    r.total < 0 ? "text-blood" : "text-gold"
-                  }`}
-                >
-                  {r.total}%
-                </span>
+          {resistances.map((r) => {
+            const barWidth = Math.min(100, Math.max(0, r.total));
+            const isNegative = r.total < 0;
+            return (
+              <div
+                key={r.key}
+                className="rounded-lg border border-border/50 bg-background/40 px-2.5 py-2"
+                title={`Base ${r.base}% · ${r.subAttr}(${r.subVal}) ${formatSigned(r.attrMod)}%${
+                  r.bonus !== 0 ? ` · Vant. ${formatSigned(r.bonus)}%` : ""
+                }`}
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <span className="font-display text-[10px] leading-tight text-foreground/85 line-clamp-2">
+                    {r.label}
+                  </span>
+                  <span
+                    className={`font-display text-sm font-bold tabular-nums leading-none shrink-0 ${
+                      isNegative ? "text-blood" : "text-gold"
+                    }`}
+                  >
+                    {r.total}%
+                  </span>
+                </div>
+                <div className="h-1 rounded-full bg-muted/40 mt-2 overflow-hidden">
+                  <div
+                    className={`h-full rounded-full transition-all ${
+                      isNegative ? "bg-blood/70" : "bg-gold/70"
+                    }`}
+                    style={{ width: `${barWidth}%` }}
+                  />
+                </div>
+                <p className="text-[9px] text-muted-foreground font-body mt-1 leading-tight truncate">
+                  {r.subAttr} {formatSigned(r.attrMod)}%
+                  {r.bonus !== 0 && <> · vant. {formatSigned(r.bonus)}%</>}
+                </p>
               </div>
-              <p className="text-[10px] text-muted-foreground font-body mt-1 leading-tight">
-                {r.subAttr} {formatSigned(r.attrMod)}%
-                {r.bonus !== 0 && <> · vant. {formatSigned(r.bonus)}%</>}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
-      </div>
+      </SummaryCard>
 
       {/* Vantagens + Desvantagens */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <div className={`${sectionCardCls} border-l-2 border-l-gold/50`}>
-          <SectionTitle icon={<Sparkles className="w-4 h-4" />}>
-            Vantagens
-            {advantages.length > 0 && (
-              <span className="text-[10px] text-muted-foreground/70 normal-case tracking-normal">
-                ({advantages.length})
-              </span>
-            )}
-          </SectionTitle>
+        <SummaryCard
+          icon={<Sparkles className="w-4 h-4" />}
+          title="Vantagens"
+          count={advantages.length}
+          accent="gold"
+        >
           {advantages.length > 0 ? (
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-1.5 max-h-[160px] overflow-y-auto pr-1">
               {advantages.map(({ name, cost }) => (
-                <span
-                  key={name}
-                  className="px-2 py-0.5 rounded-full text-xs font-body border bg-gold/10 border-gold/30 text-gold-dark"
-                >
-                  {name} <span className="opacity-70">({cost > 0 ? `+${cost}` : cost})</span>
-                </span>
+                <TagChip key={name} variant="gold">
+                  {name}
+                  <span className="opacity-70 ml-1 tabular-nums">
+                    ({cost > 0 ? `+${cost}` : cost})
+                  </span>
+                </TagChip>
               ))}
             </div>
           ) : (
-            <p className="text-xs text-muted-foreground font-body">Nenhuma vantagem.</p>
+            <EmptyNote>Nenhuma vantagem.</EmptyNote>
           )}
-        </div>
+        </SummaryCard>
 
-        <div className={`${sectionCardCls} border-l-2 border-l-blood/50`}>
-          <SectionTitle icon={<ShieldAlert className="w-4 h-4 text-blood" />}>
-            Desvantagens
-            {disadvantages.length > 0 && (
-              <span className="text-[10px] text-muted-foreground/70 normal-case tracking-normal">
-                ({disadvantages.length})
-              </span>
-            )}
-          </SectionTitle>
+        <SummaryCard
+          icon={<ShieldAlert className="w-4 h-4" />}
+          title="Desvantagens"
+          count={disadvantages.length}
+          accent="blood"
+        >
           {disadvantages.length > 0 ? (
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-1.5 max-h-[160px] overflow-y-auto pr-1">
               {disadvantages.map(({ name, cost }) => (
-                <span
-                  key={name}
-                  className="px-2 py-0.5 rounded-full text-xs font-body border bg-blood/10 border-blood/30 text-blood"
-                >
-                  {name} <span className="opacity-70">({cost})</span>
-                </span>
+                <TagChip key={name} variant="blood">
+                  {name}
+                  <span className="opacity-70 ml-1 tabular-nums">({cost})</span>
+                </TagChip>
               ))}
             </div>
           ) : (
-            <p className="text-xs text-muted-foreground font-body">Nenhuma desvantagem.</p>
+            <EmptyNote>Nenhuma desvantagem.</EmptyNote>
           )}
-        </div>
+        </SummaryCard>
       </div>
     </div>
   );
