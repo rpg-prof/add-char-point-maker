@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Cinzel', 'serif'],
-        body: ['Crimson Text', 'serif'],
+        display: ['"Libre Baskerville"', 'Georgia', 'serif'],
+        body: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -58,6 +58,7 @@ export default {
         gold: {
           DEFAULT: "hsl(var(--gold))",
           dark: "hsl(var(--gold-dark))",
+          glow: "hsl(var(--gold-glow))",
         },
         blood: "hsl(var(--blood))",
         ink: "hsl(var(--ink))",

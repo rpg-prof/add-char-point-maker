@@ -1,5 +1,20 @@
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
 import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Award, FileText, NotebookPen, BookHeart, Backpack } from "lucide-react";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarProvider,
+  SidebarTrigger,
+  SidebarHeader,
+  SidebarFooter,
+  
+} from "@/components/ui/sidebar";
 import { exportCharacterPdf } from "@/lib/exportCharacterPdf";
 import AppLogo from "@/components/AppLogo";
 import {
@@ -985,362 +1000,397 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen parchment-bg">
-      {/* Header */}
-      <header className="dark-panel border-b border-gold/30">
-        <div className="container max-w-6xl mx-auto px-4 py-4 space-y-3">
-          <div className="flex items-center gap-3 min-w-0">
-            <AppLogo size={44} className="shrink-0" />
-            <div className="min-w-0">
-              <h1 className="font-display text-xl md:text-2xl tracking-widest text-parchment">
-                AD&D 2.5 Edition - Criação de Personagens
-              </h1>
-              <p className="text-sm font-body">
-                <a
-                  href="http://adeide25.net.uztec.com.br/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-parchment/60 hover:text-gold hover:underline transition-colors"
-                >
-                  Sistema AD&D 2.5 - Pontos por Personagem v0.8
-                </a>
-              </p>
+    <SidebarProvider>
+      <div className="min-h-screen flex w-full parchment-bg">
+        {/* Sidebar with wizard steps */}
+        <Sidebar collapsible="icon" className="border-r border-gold/30">
+          <SidebarHeader className="dark-panel border-b border-gold/30">
+            <div className="flex items-center gap-2.5 px-2 py-2 min-w-0">
+              <AppLogo size={36} className="shrink-0" />
+              <div className="min-w-0 group-data-[collapsible=icon]:hidden">
+                <h1 className="font-display text-sm leading-tight text-gold tracking-wide truncate">
+                  AD&amp;D 2.5
+                </h1>
+                <p className="font-body text-[10px] text-parchment/60 leading-tight">
+                  Criação de Personagens
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-wrap items-center justify-end gap-2">
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept=".json"
-                onChange={handleLoad}
-                className="hidden"
-              />
-              <Button
-                size="sm"
-                onClick={() => fileInputRef.current?.click()}
-                className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider"
+          </SidebarHeader>
+          <SidebarContent className="dark-panel">
+            <SidebarGroup>
+              <SidebarGroupLabel className="font-display text-[10px] uppercase tracking-[0.18em] text-gold/70">
+                Passos
+              </SidebarGroupLabel>
+              <SidebarGroupContent>
+                <SidebarMenu>
+                  {STEPS.map((step, i) => {
+                    const StepIcon = step.icon;
+                    const isActive = i === currentStep;
+                    const isDone = i < currentStep;
+                    return (
+                      <SidebarMenuItem key={i}>
+                        <SidebarMenuButton
+                          onClick={() => setCurrentStep(i)}
+                          isActive={isActive}
+                          tooltip={step.label}
+                          className={`font-body group/step ${
+                            isActive
+                              ? "bg-gold/15 text-gold border-l-2 border-gold"
+                              : isDone
+                              ? "text-gold/70 hover:text-gold hover:bg-gold/10"
+                              : "text-parchment/55 hover:text-parchment hover:bg-parchment/5"
+                          }`}
+                        >
+                          <span className={`flex items-center justify-center w-5 h-5 rounded-full text-[9px] font-bold shrink-0 ${
+                            isActive
+                              ? "bg-gold text-parchment-dark"
+                              : isDone
+                              ? "bg-gold/30 text-gold"
+                              : "bg-parchment/10 text-parchment/50"
+                          }`}>
+                            {isDone ? <Check className="w-3 h-3" /> : i + 1}
+                          </span>
+                          <StepIcon className="w-4 h-4 shrink-0 opacity-80" />
+                          <span className="truncate text-xs tracking-wide">{step.label}</span>
+                        </SidebarMenuButton>
+                      </SidebarMenuItem>
+                    );
+                  })}
+                </SidebarMenu>
+              </SidebarGroupContent>
+            </SidebarGroup>
+          </SidebarContent>
+          <SidebarFooter className="dark-panel border-t border-gold/20">
+            <p className="text-[10px] font-body text-parchment/50 px-2 py-1 group-data-[collapsible=icon]:hidden">
+              <a
+                href="http://adeide25.net.uztec.com.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold transition-colors"
               >
-                <Upload className="w-4 h-4 mr-1" />
-                Carregar
-              </Button>
-              <Button
-                size="sm"
-                onClick={handleSave}
-                className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider"
-              >
-                <Save className="w-4 h-4 mr-1" />
-                Salvar
-              </Button>
-              <Button
-                size="sm"
-                onClick={() =>
-                  exportCharacterPdf({
-                    charName,
-                    playerName,
-                    selectedRace,
-                    selectedClass,
-                    selectedSocialClass,
-                    selectedReputation,
-                    characterLevel,
-                    sexo,
-                    idade,
-                    peso,
-                    altura,
-                    cabelos,
-                    olhos,
-                    tendencia,
-                    attributes,
-                    subAttributes,
-                    purchasedItems,
-                    addedItems,
-                    customItems,
-                    extraMoneyPc,
-                    combatLoadout,
-                    selectedAdvantages,
-                    selectedRaceClassAdv,
-                    selectedSkills,
-                    selectedWeapons,
-                    selectedWeaponGroups,
-                    selectedShields,
-                    grimoire,
-                    divineAccess,
-                    arcaneAccess,
-                    arcaneSpecialist,
-                    attributePointsSpent,
-                    characterPointsSpent,
-                    notesItems,
-                    notesGeneral,
-                    magicComponents,
-                    characterHistory,
-                  })
-                }
-                className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider"
-                title="Gerar ficha em PDF"
-              >
-                <FileText className="w-4 h-4 mr-1" />
-                PDF
-              </Button>
-              <Button
-                size="sm"
-                onClick={() => setShowEvolveDialog(true)}
-                className="bg-accent text-accent-foreground hover:bg-accent/80 font-display text-xs tracking-wider"
-              >
-                <TrendingUp className="w-4 h-4 mr-1" />
-                Evoluir
-              </Button>
-              {progressionHistory.length > 0 && (
+                Sistema AD&amp;D 2.5 — v0.8
+              </a>
+            </p>
+          </SidebarFooter>
+        </Sidebar>
+
+        {/* Main column */}
+        <div className="flex-1 flex flex-col min-w-0">
+          {/* Top action bar */}
+          <header className="dark-panel border-b border-gold/30 sticky top-0 z-20">
+            <div className="flex items-center gap-3 px-3 md:px-5 py-2.5">
+              <SidebarTrigger className="text-parchment hover:text-gold hover:bg-gold/10" />
+              <div className="gold-rule flex-1 max-w-[120px] hidden md:block" />
+              <h2 className="hidden lg:block font-display text-sm tracking-wider text-parchment/80 truncate">
+                {charName.trim() || "Personagem sem nome"}
+              </h2>
+              <div className="flex-1" />
+              <div className="flex flex-wrap items-center justify-end gap-1.5">
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept=".json"
+                  onChange={handleLoad}
+                  className="hidden"
+                />
                 <Button
                   size="sm"
-                  onClick={handleUndoEvolve}
-                  className="bg-blood/80 text-parchment hover:bg-blood font-display text-xs tracking-wider"
-                  title="Desfazer última evolução"
+                  onClick={() => fileInputRef.current?.click()}
+                  className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
                 >
-                  <Undo2 className="w-4 h-4" />
+                  <Upload className="w-3.5 h-3.5 mr-1" />
+                  <span className="hidden sm:inline">Carregar</span>
                 </Button>
-              )}
-          </div>
-        </div>
-      </header>
-
-      <main className="container max-w-6xl mx-auto px-4 py-6 space-y-6">
-        {/* Point Trackers */}
-        <div className={`grid grid-cols-1 ${totalProgressionPoints > 0 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-4 p-4 rounded-lg bg-card/80 border border-border shadow-sm`}>
-          <PointTracker
-            label="Pontos de Atributos"
-            spent={attributePointsSpent}
-            total={ATTRIBUTE_POINTS}
-            breakdown={attributeBreakdown}
-            detailsVariant="attributes"
-          />
-          <PointTracker
-            label="Pontos de Personagem"
-            spent={characterPointsSpent}
-            total={CHARACTER_POINTS}
-            breakdown={characterBreakdown}
-          />
-          {totalProgressionPoints > 0 && (
-            <PointTracker
-              label="Pontos de Progressão"
-              spent={progressionPointsSpent}
-              total={totalProgressionPoints}
-              breakdown={progressionBreakdown}
-              detailsVariant="progression"
-            />
-          )}
-        </div>
-
-        {/* Global Disadvantage Points Counter */}
-        {disadvantagePoints > 0 && (
-          <div
-            className={`flex items-center justify-between p-3 rounded-lg border ${
-              disadvantagePoints >= MAX_DISADVANTAGE_POINTS
-                ? "bg-blood/20 border-blood/50"
-                : "bg-blood/10 border-blood/30"
-            }`}
-          >
-            <div className="flex items-center gap-2">
-              <AlertTriangle className="w-5 h-5 text-blood" />
-              <span className="font-display text-sm tracking-wider text-foreground">
-                Pontos de Desvantagem
-              </span>
-            </div>
-            <span className="font-display text-lg text-blood font-bold">
-              {disadvantagePoints}
-              <span className="text-sm text-blood/70 font-normal"> / {MAX_DISADVANTAGE_POINTS}</span>
-            </span>
-          </div>
-        )}
-
-        {/* Evolve Dialog */}
-        <Dialog open={showEvolveDialog} onOpenChange={setShowEvolveDialog}>
-          <DialogContent className="dark-panel border-gold/40 sm:max-w-md">
-            <DialogHeader>
-              <DialogTitle className="font-display text-gold tracking-wider">
-                <TrendingUp className="w-5 h-5 inline mr-2" />
-                Evoluir Personagem
-              </DialogTitle>
-              <DialogDescription className="text-parchment/60">
-                Ao atingir um novo nível, o personagem recebe Nível × 10 pontos de progressão.
-              </DialogDescription>
-            </DialogHeader>
-            <div className="space-y-4 py-2">
-              <div>
-                <label className="font-display text-xs tracking-wider uppercase text-parchment/70 mb-1 block">
-                  Nível Alcançado
-                </label>
-                <input
-                  type="number"
-                  min={2}
-                  max={20}
-                  value={evolveLevel}
-                  onChange={(e) => setEvolveLevel(Math.max(2, Math.min(20, parseInt(e.target.value) || 2)))}
-                  className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body focus:outline-none focus:ring-1 focus:ring-gold"
-                />
-              </div>
-              <div className="rounded-lg border border-gold/30 bg-gold/5 p-3 text-sm">
-                <p className="text-muted-foreground">
-                  Pontos a receber: <span className="text-gold font-bold text-lg">{evolveLevel * 10}</span>
-                </p>
+                <Button
+                  size="sm"
+                  onClick={handleSave}
+                  className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
+                >
+                  <Save className="w-3.5 h-3.5 mr-1" />
+                  <span className="hidden sm:inline">Salvar</span>
+                </Button>
+                <Button
+                  size="sm"
+                  onClick={() =>
+                    exportCharacterPdf({
+                      charName,
+                      playerName,
+                      selectedRace,
+                      selectedClass,
+                      selectedSocialClass,
+                      selectedReputation,
+                      characterLevel,
+                      sexo,
+                      idade,
+                      peso,
+                      altura,
+                      cabelos,
+                      olhos,
+                      tendencia,
+                      attributes,
+                      subAttributes,
+                      purchasedItems,
+                      addedItems,
+                      customItems,
+                      extraMoneyPc,
+                      combatLoadout,
+                      selectedAdvantages,
+                      selectedRaceClassAdv,
+                      selectedSkills,
+                      selectedWeapons,
+                      selectedWeaponGroups,
+                      selectedShields,
+                      grimoire,
+                      divineAccess,
+                      arcaneAccess,
+                      arcaneSpecialist,
+                      attributePointsSpent,
+                      characterPointsSpent,
+                      notesItems,
+                      notesGeneral,
+                      magicComponents,
+                      characterHistory,
+                    })
+                  }
+                  className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
+                  title="Gerar ficha em PDF"
+                >
+                  <FileText className="w-3.5 h-3.5 mr-1" />
+                  <span className="hidden sm:inline">PDF</span>
+                </Button>
+                <Button
+                  size="sm"
+                  onClick={() => setShowEvolveDialog(true)}
+                  className="bg-gold text-parchment-dark hover:bg-gold-glow font-body text-xs font-semibold shadow-[var(--shadow-gold)]"
+                >
+                  <TrendingUp className="w-3.5 h-3.5 mr-1" />
+                  <span className="hidden sm:inline">Evoluir</span>
+                </Button>
                 {progressionHistory.length > 0 && (
-                  <p className="text-muted-foreground mt-1">
-                    Total acumulado: <span className="font-bold">{totalProgressionPoints}</span> → <span className="font-bold text-gold">{totalProgressionPoints + evolveLevel * 10}</span>
-                  </p>
+                  <Button
+                    size="sm"
+                    onClick={handleUndoEvolve}
+                    className="bg-blood/80 text-parchment hover:bg-blood font-body text-xs"
+                    title="Desfazer última evolução"
+                  >
+                    <Undo2 className="w-3.5 h-3.5" />
+                  </Button>
                 )}
               </div>
-              {progressionHistory.length > 0 && (
-                <div className="text-xs text-muted-foreground">
-                  <p className="font-display tracking-wider uppercase mb-1">Histórico:</p>
-                  {progressionHistory.map((entry, i) => (
-                    <span key={i} className="inline-block mr-2 px-1.5 py-0.5 rounded bg-gold/10 border border-gold/20 text-gold-dark">
-                      Nv.{entry.level} (+{entry.points})
-                    </span>
-                  ))}
-                </div>
+            </div>
+          </header>
+
+          <main className="flex-1 px-3 md:px-6 py-5 space-y-5 max-w-[1400px] w-full mx-auto">
+            {/* Point Trackers */}
+            <div className={`grid grid-cols-1 ${totalProgressionPoints > 0 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-4 p-4 rounded-lg gilt-card`}>
+              <PointTracker
+                label="Pontos de Atributos"
+                spent={attributePointsSpent}
+                total={ATTRIBUTE_POINTS}
+                breakdown={attributeBreakdown}
+                detailsVariant="attributes"
+              />
+              <PointTracker
+                label="Pontos de Personagem"
+                spent={characterPointsSpent}
+                total={CHARACTER_POINTS}
+                breakdown={characterBreakdown}
+              />
+              {totalProgressionPoints > 0 && (
+                <PointTracker
+                  label="Pontos de Progressão"
+                  spent={progressionPointsSpent}
+                  total={totalProgressionPoints}
+                  breakdown={progressionBreakdown}
+                  detailsVariant="progression"
+                />
               )}
             </div>
-            <DialogFooter>
-              <Button
-                variant="outline"
-                onClick={() => setShowEvolveDialog(false)}
-                className="font-display text-xs tracking-wider"
-              >
-                Cancelar
-              </Button>
-              <Button
-                onClick={handleEvolve}
-                className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
-              >
-                <TrendingUp className="w-4 h-4 mr-1" />
-                Evoluir para Nível {evolveLevel}
-              </Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
 
-        {/* Wizard Stepper */}
-        <div className="rounded-lg bg-card/80 border border-border shadow-sm overflow-hidden">
-          {/* Step Indicators */}
-          <div className="dark-panel border-b border-gold/20 px-4 py-3">
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              {STEPS.map((step, i) => {
-                const StepIcon = step.icon;
-                const isActive = i === currentStep;
-                const isDone = i < currentStep;
-                return (
-                  <button
-                    key={i}
-                    onClick={() => setCurrentStep(i)}
-                    className={`flex items-center gap-1.5 px-2 py-1.5 rounded transition-all text-xs font-display tracking-wider ${
-                      isActive
-                        ? "bg-gold/20 text-gold border border-gold/40"
-                        : isDone
-                        ? "text-gold/70 hover:text-gold hover:bg-gold/10 border border-transparent"
-                        : "text-parchment/40 hover:text-parchment/60 hover:bg-parchment/5 border border-transparent"
-                    }`}
-                  >
-                    <span className={`flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-bold ${
-                      isActive
-                        ? "bg-gold text-parchment-dark"
-                        : isDone
-                        ? "bg-gold/30 text-gold"
-                        : "bg-parchment/10 text-parchment/40"
-                    }`}>
-                      {isDone ? <Check className="w-3 h-3" /> : i + 1}
-                    </span>
-                    <span className="hidden md:inline">{step.label}</span>
-                  </button>
-                );
-              })}
-            </div>
-
-            {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs && (
-              <div className="flex flex-wrap items-center justify-center gap-1.5 mt-3 pt-3 border-t border-gold/15">
-                {ADVANTAGE_SUB_TABS.map((tab) => {
-                  const isActive = advantageSubTab === tab.id;
-                  return (
-                    <button
-                      key={tab.id}
-                      type="button"
-                      onClick={() => setAdvantageSubTab(tab.id)}
-                      className={`px-2.5 py-1 rounded text-[11px] font-display tracking-wide transition-all border ${
-                        isActive
-                          ? "bg-gold/25 text-gold border-gold/50"
-                          : "text-parchment/50 hover:text-parchment/80 hover:bg-parchment/5 border-transparent"
-                      }`}
-                    >
-                      {tab.label}
-                    </button>
-                  );
-                })}
+            {/* Global Disadvantage Points Counter */}
+            {disadvantagePoints > 0 && (
+              <div
+                className={`flex items-center justify-between p-3 rounded-lg border ${
+                  disadvantagePoints >= MAX_DISADVANTAGE_POINTS
+                    ? "bg-blood/20 border-blood/50"
+                    : "bg-blood/10 border-blood/30"
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <AlertTriangle className="w-5 h-5 text-blood" />
+                  <span className="font-display text-sm tracking-wide text-foreground">
+                    Pontos de Desvantagem
+                  </span>
+                </div>
+                <span className="font-display text-lg text-blood font-bold">
+                  {disadvantagePoints}
+                  <span className="text-sm text-blood/70 font-normal"> / {MAX_DISADVANTAGE_POINTS}</span>
+                </span>
               </div>
             )}
-          </div>
 
-          {/* Step Header */}
-          <div className="px-6 pt-5 pb-2 border-b border-border/50">
-            <div className="flex items-center gap-2">
-              {(() => {
-                const StepIcon = STEPS[currentStep].icon;
-                return <StepIcon className="w-5 h-5 text-gold" />;
-              })()}
-              <h2 className="font-display text-lg tracking-wider text-foreground">
-                {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs
-                  ? ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)?.label ?? STEPS[currentStep].label
-                  : STEPS[currentStep].label}
-              </h2>
+            {/* Evolve Dialog */}
+            <Dialog open={showEvolveDialog} onOpenChange={setShowEvolveDialog}>
+              <DialogContent className="dark-panel border-gold/40 sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle className="font-display text-gold tracking-wider">
+                    <TrendingUp className="w-5 h-5 inline mr-2" />
+                    Evoluir Personagem
+                  </DialogTitle>
+                  <DialogDescription className="text-parchment/60">
+                    Ao atingir um novo nível, o personagem recebe Nível × 10 pontos de progressão.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="space-y-4 py-2">
+                  <div>
+                    <label className="font-display text-xs tracking-wider uppercase text-parchment/70 mb-1 block">
+                      Nível Alcançado
+                    </label>
+                    <input
+                      type="number"
+                      min={2}
+                      max={20}
+                      value={evolveLevel}
+                      onChange={(e) => setEvolveLevel(Math.max(2, Math.min(20, parseInt(e.target.value) || 2)))}
+                      className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body focus:outline-none focus:ring-1 focus:ring-gold"
+                    />
+                  </div>
+                  <div className="rounded-lg border border-gold/30 bg-gold/5 p-3 text-sm">
+                    <p className="text-muted-foreground">
+                      Pontos a receber: <span className="text-gold font-bold text-lg">{evolveLevel * 10}</span>
+                    </p>
+                    {progressionHistory.length > 0 && (
+                      <p className="text-muted-foreground mt-1">
+                        Total acumulado: <span className="font-bold">{totalProgressionPoints}</span> → <span className="font-bold text-gold">{totalProgressionPoints + evolveLevel * 10}</span>
+                      </p>
+                    )}
+                  </div>
+                  {progressionHistory.length > 0 && (
+                    <div className="text-xs text-muted-foreground">
+                      <p className="font-display tracking-wider uppercase mb-1">Histórico:</p>
+                      {progressionHistory.map((entry, i) => (
+                        <span key={i} className="inline-block mr-2 px-1.5 py-0.5 rounded bg-gold/10 border border-gold/20 text-gold-dark">
+                          Nv.{entry.level} (+{entry.points})
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <DialogFooter>
+                  <Button
+                    variant="outline"
+                    onClick={() => setShowEvolveDialog(false)}
+                    className="font-display text-xs tracking-wider"
+                  >
+                    Cancelar
+                  </Button>
+                  <Button
+                    onClick={handleEvolve}
+                    className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
+                  >
+                    <TrendingUp className="w-4 h-4 mr-1" />
+                    Evoluir para Nível {evolveLevel}
+                  </Button>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+
+            {/* Step Card */}
+            <div className="rounded-xl gilt-card overflow-hidden">
+              {/* Sub-tabs for steps that have them */}
+              {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs && (
+                <div className="dark-panel border-b border-gold/20 px-4 py-2.5">
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    {ADVANTAGE_SUB_TABS.map((tab) => {
+                      const isActive = advantageSubTab === tab.id;
+                      return (
+                        <button
+                          key={tab.id}
+                          type="button"
+                          onClick={() => setAdvantageSubTab(tab.id)}
+                          className={`px-2.5 py-1 rounded text-[11px] font-body tracking-wide transition-all border ${
+                            isActive
+                              ? "bg-gold/25 text-gold border-gold/50"
+                              : "text-parchment/55 hover:text-parchment hover:bg-parchment/5 border-transparent"
+                          }`}
+                        >
+                          {tab.label}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Step Header */}
+              <div className="px-6 pt-5 pb-3 border-b border-gold/15 bg-gradient-to-b from-gold/[0.04] to-transparent">
+                <div className="flex items-center gap-2.5">
+                  {(() => {
+                    const StepIcon = STEPS[currentStep].icon;
+                    return <StepIcon className="w-5 h-5 text-gold" />;
+                  })()}
+                  <h2 className="font-display text-xl tracking-wide text-foreground">
+                    {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs
+                      ? ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)?.label ?? STEPS[currentStep].label
+                      : STEPS[currentStep].label}
+                  </h2>
+                </div>
+                <p className="text-xs text-muted-foreground font-body mt-1.5 ml-7">
+                  Passo {currentStep + 1} de {STEPS.length} —{" "}
+                  {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs
+                    ? ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)?.desc ?? STEPS[currentStep].desc
+                    : STEPS[currentStep].desc}
+                </p>
+                <div className="gold-rule mt-3" />
+              </div>
+
+              {/* Step Content */}
+              <div className="p-6">
+                {renderStepContent()}
+              </div>
+
+              {/* Navigation */}
+              <div className="px-6 py-4 border-t border-gold/15 flex items-center justify-between bg-gradient-to-t from-gold/[0.04] to-transparent">
+                <Button
+                  size="sm"
+                  onClick={goPrev}
+                  disabled={currentStep === 0}
+                  className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-body text-xs tracking-wide disabled:opacity-30"
+                >
+                  <ChevronLeft className="w-4 h-4 mr-1" />
+                  Anterior
+                </Button>
+
+                <span className="text-xs text-muted-foreground font-display">
+                  {currentStep + 1} / {STEPS.length}
+                </span>
+
+                {currentStep < STEPS.length - 1 ? (
+                  <Button
+                    size="sm"
+                    onClick={goNext}
+                    className="bg-gold text-parchment-dark hover:bg-gold-glow font-body text-xs tracking-wide font-semibold shadow-[var(--shadow-gold)]"
+                  >
+                    Próximo
+                    <ChevronRight className="w-4 h-4 ml-1" />
+                  </Button>
+                ) : (
+                  <Button
+                    size="sm"
+                    onClick={handleSave}
+                    className="bg-gold text-parchment-dark hover:bg-gold-glow font-body text-xs tracking-wide font-semibold shadow-[var(--shadow-gold)]"
+                  >
+                    <Save className="w-4 h-4 mr-1" />
+                    Salvar Personagem
+                  </Button>
+                )}
+              </div>
             </div>
-            <p className="text-xs text-muted-foreground font-body mt-1 ml-7">
-              Passo {currentStep + 1} de {STEPS.length} —{" "}
-              {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs
-                ? ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)?.desc ?? STEPS[currentStep].desc
-                : STEPS[currentStep].desc}
-            </p>
-          </div>
-
-          {/* Step Content */}
-          <div className="p-6">
-            {renderStepContent()}
-          </div>
-
-          {/* Navigation */}
-          <div className="px-6 py-4 border-t border-border/50 flex items-center justify-between">
-            <Button
-              size="sm"
-              onClick={goPrev}
-              disabled={currentStep === 0}
-              className="bg-parchment-dark text-parchment border border-gold/40 hover:bg-gold/20 font-display text-xs tracking-wider disabled:opacity-30"
-            >
-              <ChevronLeft className="w-4 h-4 mr-1" />
-              Anterior
-            </Button>
-
-            <span className="text-xs text-muted-foreground font-display">
-              {currentStep + 1} / {STEPS.length}
-            </span>
-
-            {currentStep < STEPS.length - 1 ? (
-              <Button
-                size="sm"
-                onClick={goNext}
-                className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
-              >
-                Próximo
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </Button>
-            ) : (
-              <Button
-                size="sm"
-                onClick={handleSave}
-                className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
-              >
-                <Save className="w-4 h-4 mr-1" />
-                Salvar Personagem
-              </Button>
-            )}
-          </div>
+          </main>
         </div>
-      </main>
-    </div>
+      </div>
+    </SidebarProvider>
   );
 };
 
