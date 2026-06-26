@@ -81,6 +81,7 @@ export interface ExportCharacterPdfInput {
   notesItems?: string;
   notesGeneral?: string;
   characterHistory?: string;
+  magicComponents?: unknown;
 }
 
 const formatSigned = (n: number) => (n > 0 ? `+${n}` : `${n}`);
