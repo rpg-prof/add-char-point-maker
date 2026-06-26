@@ -33,7 +33,7 @@ const RaceClassPanel = ({
     <div className="space-y-4">
       {/* Race */}
       <div>
-        <label className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-1.5 block">
+        <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1.5 block">
           Raça <span className="text-gold">{raceObj ? `(${raceObj.cost} pts)` : ""}</span>
         </label>
         <div className="grid grid-cols-3 gap-1.5">
@@ -41,7 +41,7 @@ const RaceClassPanel = ({
             <button
               key={r.name}
               onClick={() => onRaceChange(r.name)}
-              className={`px-2 py-1.5 rounded text-sm font-body border transition-all ${
+              className={`px-2 py-1.5 rounded text-xs font-body border transition-all ${
                 selectedRace === r.name
                   ? "bg-gold/20 border-gold text-foreground font-semibold"
                   : "bg-card/40 border-border hover:bg-card/80 text-muted-foreground"
@@ -56,7 +56,7 @@ const RaceClassPanel = ({
 
       {/* Class */}
       <div>
-        <label className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-1.5 block">
+        <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1.5 block">
           Classe <span className="text-gold">{classObj ? `(${classObj.cost} pts)` : ""}</span>
         </label>
         <div className="grid grid-cols-3 sm:grid-cols-5 gap-1.5">
@@ -64,7 +64,7 @@ const RaceClassPanel = ({
             <button
               key={c.name}
               onClick={() => onClassChange(c.name)}
-              className={`px-2 py-1.5 rounded text-sm font-body border transition-all ${
+              className={`px-2 py-1.5 rounded text-xs font-body border transition-all ${
                 selectedClass === c.name
                   ? "bg-gold/20 border-gold text-foreground font-semibold"
                   : "bg-card/40 border-border hover:bg-card/80 text-muted-foreground"
@@ -79,7 +79,7 @@ const RaceClassPanel = ({
 
       {/* Social Class */}
       <div>
-        <label className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-1.5 block">
+        <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1.5 block">
           Classe Social <span className="text-gold">{socialObj ? `(${socialObj.cost} pts)` : ""}</span>
         </label>
         <div className="grid grid-cols-3 gap-1.5">
@@ -95,7 +95,7 @@ const RaceClassPanel = ({
               disabled={blocked}
               title={blocked ? "Limite de pontos de desvantagem atingido" : undefined}
               onClick={() => onSocialClassChange(s.name)}
-              className={`px-2 py-1.5 rounded text-sm font-body border transition-all ${
+              className={`px-2 py-1.5 rounded text-xs font-body border transition-all ${
                 blocked
                   ? "bg-card/20 border-border/40 text-muted-foreground/40 cursor-not-allowed"
                   : selectedSocialClass === s.name
@@ -113,7 +113,7 @@ const RaceClassPanel = ({
 
       {/* Reputation */}
       <div>
-        <label className="font-display text-sm tracking-wider uppercase text-muted-foreground mb-1.5 block">
+        <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1.5 block">
           Reputação <span className="text-gold">{repObj ? `(${repObj.cost} pts)` : ""}</span>
         </label>
         <div className="grid grid-cols-5 gap-1.5">
@@ -122,7 +122,7 @@ const RaceClassPanel = ({
               key={r.level}
               onClick={() => onReputationChange(r.level)}
               title={r.description}
-              className={`px-2 py-1.5 rounded text-sm font-body border transition-all ${
+              className={`px-2 py-1.5 rounded text-xs font-body border transition-all ${
                 selectedReputation === r.level
                   ? "bg-gold/20 border-gold text-foreground font-semibold"
                   : "bg-card/40 border-border hover:bg-card/80 text-muted-foreground"

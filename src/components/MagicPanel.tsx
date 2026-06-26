@@ -162,7 +162,7 @@ const MagicPanel = ({
       <div className="panel-section">
         <div className="flex items-center gap-2 mb-3">
           <BookOpen className="w-5 h-5 text-gold" />
-          <h2 className="font-display text-lg tracking-wider uppercase text-gold">Magia</h2>
+          <h2 className="font-display text-base tracking-wider uppercase text-gold">Magia</h2>
         </div>
         <p className="text-sm text-muted-foreground font-body">
           Selecione acesso a esferas divinas ou escolas arcanas para montar o grimório ou livro de orações.
@@ -177,7 +177,7 @@ const MagicPanel = ({
         <div className="flex items-center gap-2 min-w-0">
           <BookOpen className="w-5 h-5 text-gold shrink-0" />
           <div className="min-w-0">
-            <h2 className="font-display text-lg tracking-wider uppercase text-gold">{collectionName}</h2>
+            <h2 className="font-display text-base tracking-wider uppercase text-gold">{collectionName}</h2>
             <p className="text-xs text-muted-foreground font-body mt-0.5">
               {grimoire.length} {grimoire.length === 1 ? "magia" : "magias"}
               {initialCount > 0 && (

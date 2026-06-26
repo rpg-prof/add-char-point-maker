@@ -24,7 +24,7 @@ const NotesPanel = ({
       <div className="rounded-lg border border-border bg-card/80 p-4 shadow-sm space-y-3">
         <div className="flex items-center gap-2">
           <Package className="w-4 h-4 text-gold" />
-          <h3 className="font-display text-sm tracking-wider uppercase text-foreground">
+          <h3 className="font-display text-xs tracking-wider uppercase text-foreground">
             Itens
           </h3>
         </div>
@@ -41,7 +41,7 @@ const NotesPanel = ({
       <div className="rounded-lg border border-border bg-card/80 p-4 shadow-sm space-y-3">
         <div className="flex items-center gap-2">
           <ScrollText className="w-4 h-4 text-gold" />
-          <h3 className="font-display text-sm tracking-wider uppercase text-foreground">
+          <h3 className="font-display text-xs tracking-wider uppercase text-foreground">
             Geral
           </h3>
         </div>

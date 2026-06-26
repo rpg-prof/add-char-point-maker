@@ -31,7 +31,7 @@ export default function ResourcePoolRow({
   const controlBtnCls =
     "w-6 h-6 shrink-0 rounded border border-border flex items-center justify-center hover:bg-muted";
   const inputCls =
-    "w-10 sm:w-11 h-7 text-center bg-background/50 border border-border rounded px-0.5 font-display text-sm font-bold tabular-nums";
+    "w-10 sm:w-11 h-7 text-center bg-background/50 border border-border rounded px-0.5 font-display text-xs font-bold tabular-nums";
   const controlRowCls = "flex items-center justify-center gap-0.5 h-9 sm:h-10";
 
   return (

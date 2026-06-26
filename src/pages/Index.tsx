@@ -97,7 +97,12 @@ const BASE_STEPS = [
 ];
 
 const COMBAT_STEP = { label: "Combate", icon: Swords, desc: "PV, CA, Chi e ataques" };
-const MAGIC_ACCESS_STEP = { label: "Acesso a Magias", icon: Sparkles, desc: "Escolas arcanas e esferas divinas" };
+const MAGIC_ACCESS_STEP = {
+  label: "Acesso a Magias",
+  icon: Sparkles,
+  desc: "Escolas arcanas e esferas divinas",
+  hasSubTabs: true as const,
+};
 const ADVANTAGES_STEP = {
   label: "Vantagens",
   icon: Award,
@@ -128,6 +133,21 @@ const ADVANTAGE_SUB_TABS: { id: AdvantageSubTab; label: string; desc: string }[]
   { id: "aversao", label: "Aversões", desc: "Aversões raciais e restrições de tendência" },
   { id: "poder", label: "Poderes", desc: "Poderes especiais da classe" },
   { id: "antecedente", label: "Antecedentes", desc: "Antecedentes e elementos de história" },
+];
+
+type MagicAccessSubTab = "divine" | "arcane";
+
+const MAGIC_ACCESS_SUB_TABS: { id: MagicAccessSubTab; label: string; desc: string }[] = [
+  {
+    id: "divine",
+    label: "Esferas Divinas",
+    desc: "Escolha as esferas de magia divina com acesso menor ou maior.",
+  },
+  {
+    id: "arcane",
+    label: "Escolas Arcanas",
+    desc: "Escolha escolas arcanas. Apenas uma escola pode ser de Especialista.",
+  },
 ];
 
 
@@ -194,6 +214,28 @@ const Index = () => {
   }, [hasMagicAccess]);
 
   const [advantageSubTab, setAdvantageSubTab] = useState<AdvantageSubTab>("gerais");
+  const [magicAccessSubTab, setMagicAccessSubTab] = useState<MagicAccessSubTab>("divine");
+
+  const stepSubTabs = useMemo(() => {
+    const step = STEPS[currentStep];
+    if (!step || !("hasSubTabs" in step)) return null;
+    if (step.label === "Vantagens") return ADVANTAGE_SUB_TABS;
+    if (step.label === "Acesso a Magias") return MAGIC_ACCESS_SUB_TABS;
+    return null;
+  }, [STEPS, currentStep]);
+
+  const activeStepSubTab = useMemo(() => {
+    if (!stepSubTabs) return null;
+    const step = STEPS[currentStep];
+    const id = step.label === "Vantagens" ? advantageSubTab : magicAccessSubTab;
+    return stepSubTabs.find((t) => t.id === id) ?? null;
+  }, [stepSubTabs, STEPS, currentStep, advantageSubTab, magicAccessSubTab]);
+
+  const handleStepSubTabClick = (id: string) => {
+    const step = STEPS[currentStep];
+    if (step?.label === "Vantagens") setAdvantageSubTab(id as AdvantageSubTab);
+    else if (step?.label === "Acesso a Magias") setMagicAccessSubTab(id as MagicAccessSubTab);
+  };
 
   const [selectedSocialClass, setSelectedSocialClass] = useState("Classe média baixa");
   const [selectedReputation, setSelectedReputation] = useState(0);
@@ -703,11 +745,11 @@ const Index = () => {
 
     switch (step.label) {
       case "Identificação": {
-        const inputCls = "w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold";
+        const inputCls = "w-full bg-background/50 border border-border rounded px-3 py-1.5 text-sm text-foreground font-body placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-gold";
         const labelCls = "font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block";
         return (
           <div className="space-y-6">
-            <p className="font-body text-muted-foreground text-sm">
+            <p className="font-body text-muted-foreground text-xs">
               Comece preenchendo os dados básicos do personagem.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -758,7 +800,7 @@ const Index = () => {
       case "Atributos":
         return (
           <div className="space-y-4">
-            <p className="font-body text-muted-foreground text-sm">
+            <p className="font-body text-muted-foreground text-xs">
               Distribua {ATTRIBUTE_POINTS} pontos entre os atributos. Cada um começa em 10.{" "}
               <a
                 href="http://adeide25.net.uztec.com.br/pagina/01-atributos"
@@ -781,7 +823,7 @@ const Index = () => {
       case "Raça & Classe":
         return (
           <div className="space-y-4">
-            <p className="font-body text-muted-foreground text-sm">
+            <p className="font-body text-muted-foreground text-xs">
               Escolha raça, classe, classe social e reputação. Cada opção consome pontos de personagem.
             </p>
             <RaceClassPanel
@@ -799,8 +841,8 @@ const Index = () => {
         );
       case "Resistência":
         return (
-          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-            <p className="font-body text-muted-foreground text-sm">
+          <div className="space-y-4 max-h-[62vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-xs">
               Resistências calculadas a partir do valor base + modificador da sub-habilidade + vantagens/desvantagens.
             </p>
             <ResistancePanel
@@ -815,7 +857,7 @@ const Index = () => {
         );
       case "Inventário":
         return (
-          <div className="max-h-[55vh] overflow-y-auto pr-2">
+          <div className="max-h-[62vh] overflow-y-auto pr-2">
             <InventoryPanel
               selectedSocialClass={selectedSocialClass}
               subAttributes={subAttributes}
@@ -832,7 +874,7 @@ const Index = () => {
         );
       case "Combate":
         return (
-          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+          <div className="space-y-4 max-h-[62vh] overflow-y-auto pr-2">
             <CombatPanel
               subAttributes={subAttributes}
               attributes={attributes}
@@ -861,16 +903,16 @@ const Index = () => {
 
         if (advantageSubTab === "gerais") {
           return (
-            <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-              <p className="font-body text-muted-foreground text-sm">{subTab.desc}</p>
+            <div className="space-y-4 max-h-[62vh] overflow-y-auto pr-2">
+              <p className="font-body text-muted-foreground text-xs">{subTab.desc}</p>
               <AdvantagesPanel {...panelProps} showRaceClass={false} />
             </div>
           );
         }
 
         return (
-          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-            <p className="font-body text-muted-foreground text-sm">{subTab.desc}</p>
+          <div className="space-y-4 max-h-[62vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-xs">{subTab.desc}</p>
             <AdvantagesPanel
               {...panelProps}
               showGeneral={false}
@@ -882,8 +924,8 @@ const Index = () => {
       }
       case "Perícias":
         return (
-          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-            <p className="font-body text-muted-foreground text-sm">
+          <div className="space-y-4 max-h-[62vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-xs">
               Selecione as perícias que o personagem domina.
             </p>
             <SkillsPanel
@@ -895,8 +937,8 @@ const Index = () => {
         );
       case "Armas":
         return (
-          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
-            <p className="font-body text-muted-foreground text-sm">
+          <div className="space-y-4 max-h-[62vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-xs">
               Escolha proficiências com armas individuais, grupos inteiros e escudos.
             </p>
             <WeaponProficiencyPanel
@@ -909,10 +951,13 @@ const Index = () => {
             />
           </div>
         );
-      case "Acesso a Magias":
+      case "Acesso a Magias": {
+        const subTab = MAGIC_ACCESS_SUB_TABS.find((t) => t.id === magicAccessSubTab)!;
         return (
-          <div className="space-y-4 max-h-[55vh] overflow-y-auto pr-2">
+          <div className="space-y-4 max-h-[62vh] overflow-y-auto pr-2">
+            <p className="font-body text-muted-foreground text-xs">{subTab.desc}</p>
             <MagicAccessPanel
+              section={magicAccessSubTab}
               selectedClass={selectedClass}
               selectedRace={selectedRace}
               divineAccess={divineAccess}
@@ -923,9 +968,10 @@ const Index = () => {
             />
           </div>
         );
+      }
       case "Magia":
         return (
-          <div className="max-h-[55vh] overflow-y-auto pr-2">
+          <div className="max-h-[62vh] overflow-y-auto pr-2">
             <div className="flex gap-3 items-start">
               <div className="flex-1 min-w-0">
                 <MagicPanel
@@ -954,7 +1000,7 @@ const Index = () => {
         );
       case "Histórico":
         return (
-          <div className="max-h-[55vh] overflow-y-auto pr-2">
+          <div className="max-h-[62vh] overflow-y-auto pr-2">
             <HistoryPanel
               characterHistory={characterHistory}
               onCharacterHistoryChange={setCharacterHistory}
@@ -963,7 +1009,7 @@ const Index = () => {
         );
       case "Anotações":
         return (
-          <div className="max-h-[55vh] overflow-y-auto pr-2">
+          <div className="max-h-[62vh] overflow-y-auto pr-2">
             <NotesPanel
               notesItems={notesItems}
               notesGeneral={notesGeneral}
@@ -990,8 +1036,6 @@ const Index = () => {
             selectedAdvantages={selectedAdvantages}
             selectedRaceClassAdv={selectedRaceClassAdv}
             selectedSkills={selectedSkills}
-            attributePointsSpent={attributePointsSpent}
-            characterPointsSpent={characterPointsSpent}
           />
         );
       default:
@@ -1181,9 +1225,9 @@ const Index = () => {
             </div>
           </header>
 
-          <main className="flex-1 px-3 md:px-6 py-5 space-y-5 max-w-[1400px] w-full mx-auto">
+          <main className="flex-1 px-3 md:px-6 py-3 space-y-3 max-w-[1400px] w-full mx-auto">
             {/* Point Trackers */}
-            <div className={`grid grid-cols-1 ${totalProgressionPoints > 0 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-4 p-4 rounded-lg gilt-card`}>
+            <div className={`grid grid-cols-1 ${totalProgressionPoints > 0 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-2 p-2.5 rounded-lg gilt-card`}>
               <PointTracker
                 label="Pontos de Atributos"
                 spent={attributePointsSpent}
@@ -1191,12 +1235,34 @@ const Index = () => {
                 breakdown={attributeBreakdown}
                 detailsVariant="attributes"
               />
-              <PointTracker
-                label="Pontos de Personagem"
-                spent={characterPointsSpent}
-                total={CHARACTER_POINTS}
-                breakdown={characterBreakdown}
-              />
+              <div className="flex flex-col gap-1">
+                <PointTracker
+                  label="Pontos de Personagem"
+                  spent={characterPointsSpent}
+                  total={CHARACTER_POINTS}
+                  breakdown={characterBreakdown}
+                />
+                <div
+                  className={`flex items-center justify-between gap-2 px-0.5 ${
+                    disadvantagePoints >= MAX_DISADVANTAGE_POINTS
+                      ? "text-blood"
+                      : disadvantagePoints > 0
+                        ? "text-blood/80"
+                        : "text-muted-foreground"
+                  }`}
+                >
+                  <span className="flex items-center gap-1 font-display text-[9px] tracking-wider uppercase truncate">
+                    <AlertTriangle className="w-3 h-3 shrink-0" />
+                    Desvantagens
+                  </span>
+                  <span className="font-display text-[10px] tabular-nums shrink-0">
+                    <span className={disadvantagePoints >= MAX_DISADVANTAGE_POINTS ? "font-bold" : ""}>
+                      {disadvantagePoints}
+                    </span>
+                    <span className="opacity-70"> / {MAX_DISADVANTAGE_POINTS}</span>
+                  </span>
+                </div>
+              </div>
               {totalProgressionPoints > 0 && (
                 <PointTracker
                   label="Pontos de Progressão"
@@ -1207,28 +1273,6 @@ const Index = () => {
                 />
               )}
             </div>
-
-            {/* Global Disadvantage Points Counter */}
-            {disadvantagePoints > 0 && (
-              <div
-                className={`flex items-center justify-between p-3 rounded-lg border ${
-                  disadvantagePoints >= MAX_DISADVANTAGE_POINTS
-                    ? "bg-blood/20 border-blood/50"
-                    : "bg-blood/10 border-blood/30"
-                }`}
-              >
-                <div className="flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5 text-blood" />
-                  <span className="font-display text-sm tracking-wide text-foreground">
-                    Pontos de Desvantagem
-                  </span>
-                </div>
-                <span className="font-display text-lg text-blood font-bold">
-                  {disadvantagePoints}
-                  <span className="text-sm text-blood/70 font-normal"> / {MAX_DISADVANTAGE_POINTS}</span>
-                </span>
-              </div>
-            )}
 
             {/* Evolve Dialog */}
             <Dialog open={showEvolveDialog} onOpenChange={setShowEvolveDialog}>
@@ -1258,7 +1302,7 @@ const Index = () => {
                   </div>
                   <div className="rounded-lg border border-gold/30 bg-gold/5 p-3 text-sm">
                     <p className="text-muted-foreground">
-                      Pontos a receber: <span className="text-gold font-bold text-lg">{evolveLevel * 10}</span>
+                      Pontos a receber: <span className="text-gold font-bold text-base">{evolveLevel * 10}</span>
                     </p>
                     {progressionHistory.length > 0 && (
                       <p className="text-muted-foreground mt-1">
@@ -1299,16 +1343,19 @@ const Index = () => {
             {/* Step Card */}
             <div className="rounded-xl gilt-card overflow-hidden">
               {/* Sub-tabs for steps that have them */}
-              {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs && (
+              {stepSubTabs && (
                 <div className="dark-panel border-b border-gold/20 px-4 py-2.5">
                   <div className="flex flex-wrap items-center gap-1.5">
-                    {ADVANTAGE_SUB_TABS.map((tab) => {
-                      const isActive = advantageSubTab === tab.id;
+                    {stepSubTabs.map((tab) => {
+                      const isActive =
+                        STEPS[currentStep].label === "Vantagens"
+                          ? advantageSubTab === tab.id
+                          : magicAccessSubTab === tab.id;
                       return (
                         <button
                           key={tab.id}
                           type="button"
-                          onClick={() => setAdvantageSubTab(tab.id)}
+                          onClick={() => handleStepSubTabClick(tab.id)}
                           className={`px-2.5 py-1 rounded text-[11px] font-body tracking-wide transition-all border ${
                             isActive
                               ? "bg-gold/25 text-gold border-gold/50"
@@ -1324,34 +1371,30 @@ const Index = () => {
               )}
 
               {/* Step Header */}
-              <div className="px-6 pt-5 pb-3 border-b border-gold/15 bg-gradient-to-b from-gold/[0.04] to-transparent">
+              <div className="px-4 pt-3 pb-2 border-b border-gold/15 bg-gradient-to-b from-gold/[0.04] to-transparent">
                 <div className="flex items-center gap-2.5">
                   {(() => {
                     const StepIcon = STEPS[currentStep].icon;
-                    return <StepIcon className="w-5 h-5 text-gold" />;
+                    return <StepIcon className="w-4 h-4 text-gold" />;
                   })()}
-                  <h2 className="font-display text-xl tracking-wide text-foreground">
-                    {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs
-                      ? ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)?.label ?? STEPS[currentStep].label
-                      : STEPS[currentStep].label}
+                  <h2 className="font-display text-lg tracking-wide text-foreground">
+                    {activeStepSubTab?.label ?? STEPS[currentStep].label}
                   </h2>
                 </div>
-                <p className="text-xs text-muted-foreground font-body mt-1.5 ml-7">
+                <p className="text-xs text-muted-foreground font-body mt-1 ml-6">
                   Passo {currentStep + 1} de {STEPS.length} —{" "}
-                  {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs
-                    ? ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)?.desc ?? STEPS[currentStep].desc
-                    : STEPS[currentStep].desc}
+                  {activeStepSubTab?.desc ?? STEPS[currentStep].desc}
                 </p>
-                <div className="gold-rule mt-3" />
+                <div className="gold-rule mt-2" />
               </div>
 
               {/* Step Content */}
-              <div className="p-6">
+              <div className="p-4">
                 {renderStepContent()}
               </div>
 
               {/* Navigation */}
-              <div className="px-6 py-4 border-t border-gold/15 flex items-center justify-between bg-gradient-to-t from-gold/[0.04] to-transparent">
+              <div className="px-4 py-3 border-t border-gold/15 flex items-center justify-between bg-gradient-to-t from-gold/[0.04] to-transparent">
                 <Button
                   size="sm"
                   onClick={goPrev}

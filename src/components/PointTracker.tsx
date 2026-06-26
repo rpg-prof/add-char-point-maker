@@ -23,7 +23,7 @@ const PointTracker = ({ label, spent, total, breakdown, detailsVariant }: PointT
   return (
     <>
       <div className="flex flex-col gap-1.5">
-        <div className="flex items-center justify-between font-display text-sm gap-2">
+        <div className="flex items-center justify-between font-display text-xs gap-2">
           <span className="tracking-wider uppercase truncate">{label}</span>
           <div className="flex items-center gap-2 shrink-0">
             {breakdown && (

@@ -38,8 +38,8 @@ interface CombatPanelProps {
 
 const COL_W = "w-[3rem] sm:w-[3.25rem]";
 const OP_W = "w-4 sm:w-5 shrink-0";
-const boxCls = `h-9 sm:h-10 ${COL_W} flex items-center justify-center rounded border-2 border-foreground/80 bg-card font-display text-sm sm:text-base font-bold tabular-nums shrink-0`;
-const totalBoxCls = `h-9 sm:h-10 ${COL_W} flex items-center justify-center rounded border-2 border-foreground bg-gold/15 font-display text-sm sm:text-base font-bold tabular-nums text-gold shrink-0`;
+const boxCls = `h-9 sm:h-10 ${COL_W} flex items-center justify-center rounded border-2 border-foreground/80 bg-card font-display text-xs sm:text-sm font-bold tabular-nums shrink-0`;
+const totalBoxCls = `h-9 sm:h-10 ${COL_W} flex items-center justify-center rounded border-2 border-foreground bg-gold/15 font-display text-xs sm:text-sm font-bold tabular-nums text-gold shrink-0`;
 const labelCls =
   "font-display text-[9px] sm:text-[10px] tracking-wider uppercase text-center text-muted-foreground leading-tight";
 const hintCls =

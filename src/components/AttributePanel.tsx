@@ -26,7 +26,7 @@ const btnCls =
   "w-7 h-7 rounded flex items-center justify-center bg-parchment-dark/10 border border-border hover:bg-parchment-dark/20 disabled:opacity-30 transition-colors shrink-0";
 
 const labelCls =
-  "font-display text-sm tracking-wide text-foreground truncate w-[9rem] shrink-0";
+  "font-display text-xs tracking-wide text-foreground truncate w-[9rem] shrink-0";
 
 const AttributePanel = ({
   attributes,
@@ -141,7 +141,7 @@ const AttributePanel = ({
         <button type="button" onClick={onDec} disabled={decDisabled} className={btnCls}>
           <Minus className="w-3.5 h-3.5" />
         </button>
-        <span className="font-display text-lg text-center font-bold text-foreground tabular-nums">
+        <span className="font-display text-base text-center font-bold text-foreground tabular-nums">
           {value}
         </span>
         <button type="button" onClick={onInc} disabled={incDisabled} className={btnCls}>
@@ -163,8 +163,8 @@ const AttributePanel = ({
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between gap-4">
-        <h2 className="font-display text-lg tracking-wider text-foreground">Atributos</h2>
-        <span className="font-display text-sm text-gold">Gastos: {totalCost} / 75</span>
+        <h2 className="font-display text-base tracking-wider text-foreground">Atributos</h2>
+        <span className="font-display text-xs text-gold">Gastos: {totalCost} / 75</span>
       </div>
       <p className="text-xs text-muted-foreground font-body">
         Limites min/máx conforme raça:{" "}

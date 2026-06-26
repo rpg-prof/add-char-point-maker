@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import {
-  Award,
   Backpack,
   Heart,
   Scroll,
@@ -76,8 +75,6 @@ export interface SummaryPanelProps {
   selectedAdvantages: string[];
   selectedRaceClassAdv: string[];
   selectedSkills: string[];
-  attributePointsSpent: number;
-  characterPointsSpent: number;
 }
 
 function SkillColumn({ items, selectedClass }: { items: string[]; selectedClass: string }) {
@@ -92,43 +89,6 @@ function SkillColumn({ items, selectedClass }: { items: string[]; selectedClass:
           </span>
         </div>
       ))}
-    </div>
-  );
-}
-
-function PointsBar({
-  label,
-  spent,
-  max,
-}: {
-  label: string;
-  spent: number;
-  max: number;
-}) {
-  const over = spent > max;
-  const pct = Math.min(100, Math.max(0, (spent / max) * 100));
-  return (
-    <div>
-      <div className="flex items-baseline justify-between mb-1">
-        <span className="font-display text-xs tracking-wider uppercase text-muted-foreground">
-          {label}
-        </span>
-        <span
-          className={`font-display text-sm font-bold tabular-nums ${
-            over ? "text-blood" : "text-gold"
-          }`}
-        >
-          {spent} <span className="text-muted-foreground font-normal text-xs">/ {max}</span>
-        </span>
-      </div>
-      <div className="h-2 rounded-full bg-muted/40 overflow-hidden">
-        <div
-          className={`h-full rounded-full transition-all ${
-            over ? "bg-blood" : "bg-gold/80"
-          }`}
-          style={{ width: `${pct}%` }}
-        />
-      </div>
     </div>
   );
 }
@@ -149,8 +109,6 @@ const SummaryPanel = ({
   selectedAdvantages,
   selectedRaceClassAdv,
   selectedSkills,
-  attributePointsSpent,
-  characterPointsSpent,
 }: SummaryPanelProps) => {
   const allAdvItems = [...generalAdvantages, ...generalDisadvantages, ...raceClassAdvantages];
 
@@ -222,7 +180,7 @@ const SummaryPanel = ({
           <p className="font-display text-[10px] tracking-[0.25em] uppercase text-gold/60 mb-0.5">
             Ficha de Personagem
           </p>
-          <h3 className="font-display text-xl md:text-2xl tracking-wider text-gold leading-tight">
+          <h3 className="font-display text-lg md:text-xl tracking-wider text-gold leading-tight">
             {displayName}
           </h3>
           {playerName.trim() && (
@@ -458,18 +416,6 @@ const SummaryPanel = ({
           ) : (
             <p className="text-xs text-muted-foreground font-body">Nenhuma desvantagem.</p>
           )}
-        </div>
-      </div>
-
-      {/* Total de pontos */}
-      <div className="rounded-lg border-2 border-gold/40 bg-gold/5 p-3.5">
-        <h4 className="font-display text-sm tracking-wider uppercase text-gold mb-2.5 flex items-center gap-1.5">
-          <Award className="w-4 h-4" />
-          Total de Pontos
-        </h4>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
-          <PointsBar label="Atributos" spent={attributePointsSpent} max={75} />
-          <PointsBar label="Personagem" spent={characterPointsSpent} max={100} />
         </div>
       </div>
     </div>

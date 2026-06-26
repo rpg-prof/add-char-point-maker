@@ -46,7 +46,7 @@ const ResistancePanel = ({
     <TooltipProvider delayDuration={200}>
       <div className="space-y-6">
         <div>
-          <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-3">
+          <h3 className="font-display text-xs tracking-wider uppercase text-gold mb-3">
             <Shield className="w-4 h-4 inline mr-1" />
             Resistências Calculadas
           </h3>
@@ -55,7 +55,7 @@ const ResistancePanel = ({
               <div key={r.key} className="rounded border border-border bg-card/40 px-3 py-2 flex flex-col">
                 <div className="flex items-center justify-between">
                   <span className="font-display text-sm text-foreground">{r.label}</span>
-                  <span className="font-display text-xl font-bold text-gold">{r.total}%</span>
+                  <span className="font-display text-lg font-bold text-gold">{r.total}%</span>
                 </div>
                 <div className="text-[10px] text-muted-foreground font-body mt-1">
                   Base {r.base}% · {r.subAttr}({r.subVal}) {r.attrMod >= 0 ? "+" : ""}{r.attrMod}%
@@ -70,7 +70,7 @@ const ResistancePanel = ({
         </div>
 
         <div>
-          <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-2">
+          <h3 className="font-display text-xs tracking-wider uppercase text-gold mb-2">
             Vantagens & Desvantagens de Resistência
           </h3>
           <p className="text-xs text-muted-foreground font-body mb-3">

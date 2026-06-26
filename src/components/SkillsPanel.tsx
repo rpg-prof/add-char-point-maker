@@ -55,7 +55,7 @@ const SkillsPanel = ({ selected, onToggle, characterClass }: SkillsPanelProps) =
 
           return (
             <div key={id}>
-              <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-2">
+              <h3 className="font-display text-xs tracking-wider uppercase text-gold mb-2">
                 {sectionLabel(id)}
                 <span className="ml-2 text-xs font-body normal-case tracking-normal text-muted-foreground">
                   ({sectionSkills.length})
@@ -118,7 +118,7 @@ const SkillsPanel = ({ selected, onToggle, characterClass }: SkillsPanelProps) =
           {viewingSkill && (
             <>
               <DialogHeader className="space-y-2 border-b border-gold/30 pb-3">
-                <DialogTitle className="font-display text-xl tracking-wide text-foreground pr-8">
+                <DialogTitle className="font-display text-lg tracking-wide text-foreground pr-8">
                   {viewingSkill.name}
                 </DialogTitle>
                 <DialogDescription className="font-body text-sm text-muted-foreground">

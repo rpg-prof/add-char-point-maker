@@ -224,7 +224,7 @@ const AdvantagesPanel = ({
         <>
           {/* General Advantages */}
           <div>
-            <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-2">
+            <h3 className="font-display text-xs tracking-wider uppercase text-gold mb-2">
               Vantagens Gerais
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
@@ -234,7 +234,7 @@ const AdvantagesPanel = ({
 
           {/* General Disadvantages */}
           <div>
-            <h3 className="font-display text-sm tracking-wider uppercase text-blood mb-2">
+            <h3 className="font-display text-xs tracking-wider uppercase text-blood mb-2">
               Desvantagens Gerais
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
@@ -247,7 +247,7 @@ const AdvantagesPanel = ({
       {/* Race/Class Specific */}
       {showRaceClass && (
       <div className={showGeneral ? "border-t border-border pt-4" : ""}>
-        <h3 className="font-display text-sm tracking-wider uppercase text-gold mb-3">
+        <h3 className="font-display text-xs tracking-wider uppercase text-gold mb-3">
           {raceClassHeading}
         </h3>
         <p className="text-xs text-muted-foreground mb-3 font-body">

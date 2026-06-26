@@ -686,7 +686,7 @@ const InventoryPanel = ({
           </div>
 
           <div>
-            <p className={`text-xl font-display font-bold leading-none ${remainingPc < 0 ? "text-destructive" : "text-gold"}`}>
+            <p className={`text-lg font-display font-bold leading-none ${remainingPc < 0 ? "text-destructive" : "text-gold"}`}>
               {formatMoney(remainingPc)}
             </p>
             {remainingPc >= 0 && (remainingBreakdown.po > 0 || remainingBreakdown.pp > 0 || remainingBreakdown.pc > 0) && (
@@ -748,7 +748,7 @@ const InventoryPanel = ({
           </div>
 
           <div>
-            <p className={`text-xl font-display font-bold leading-none ${overCarga ? "text-destructive" : "text-foreground"}`}>
+            <p className={`text-lg font-display font-bold leading-none ${overCarga ? "text-destructive" : "text-foreground"}`}>
               {totalWeight.toFixed(1).replace(".", ",")} kg
             </p>
             {cargaKg > 0 && (
