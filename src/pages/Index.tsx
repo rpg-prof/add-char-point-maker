@@ -13,7 +13,7 @@ import {
   SidebarTrigger,
   SidebarHeader,
   SidebarFooter,
-  useSidebar,
+  
 } from "@/components/ui/sidebar";
 import { exportCharacterPdf } from "@/lib/exportCharacterPdf";
 import AppLogo from "@/components/AppLogo";
@@ -1336,7 +1336,7 @@ const Index = () => {
                       : STEPS[currentStep].label}
                   </h2>
                 </div>
-                <p className="text-xs text-muted-foreground font-body mt-1.5 ml-7.5">
+                <p className="text-xs text-muted-foreground font-body mt-1.5 ml-7">
                   Passo {currentStep + 1} de {STEPS.length} —{" "}
                   {"hasSubTabs" in STEPS[currentStep] && STEPS[currentStep].hasSubTabs
                     ? ADVANTAGE_SUB_TABS.find((t) => t.id === advantageSubTab)?.desc ?? STEPS[currentStep].desc
