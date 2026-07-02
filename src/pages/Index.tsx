@@ -1,4 +1,5 @@
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Award, FileText, NotebookPen, BookHeart, Backpack } from "lucide-react";
 import {
   Sidebar,
@@ -1145,6 +1146,16 @@ const Index = () => {
                   onChange={handleLoad}
                   className="hidden"
                 />
+                <Button
+                  size="sm"
+                  asChild
+                  className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
+                >
+                  <Link to="/evolution">
+                    <TrendingUp className="w-3.5 h-3.5 mr-1" />
+                    <span className="hidden sm:inline">Evolução</span>
+                  </Link>
+                </Button>
                 <Button
                   size="sm"
                   onClick={() => fileInputRef.current?.click()}

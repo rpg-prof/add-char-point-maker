@@ -79,6 +79,7 @@ export interface SummaryPanelProps {
   selectedWeapons?: string[];
   selectedWeaponGroups?: string[];
   selectedShields?: string[];
+  evolutionResistanceBonus?: Record<string, number>;
 }
 
 function splitInTwo<T>(items: T[]): [T[], T[]] {
@@ -221,6 +222,7 @@ const SummaryPanel = ({
   selectedWeapons = [],
   selectedWeaponGroups = [],
   selectedShields = [],
+  evolutionResistanceBonus,
 }: SummaryPanelProps) => {
   const allAdvItems = [...generalAdvantages, ...generalDisadvantages, ...raceClassAdvantages];
 
@@ -272,7 +274,11 @@ const SummaryPanel = ({
     reputations.find((r) => r.level === selectedReputation)?.description ?? "";
 
   const displayName = charName.trim() || "Personagem Sem Nome";
-  const resistances = computeResistanceBreakdown({ subAttributes, selectedRaceClassAdv });
+  const resistances = computeResistanceBreakdown({
+    subAttributes,
+    selectedRaceClassAdv,
+    evolutionResistanceBonus,
+  });
 
   // Combat stats
   const loadout = combatLoadout ?? defaultCombatLoadout();
@@ -643,7 +649,7 @@ const SummaryPanel = ({
                 className="rounded-lg border border-border/50 bg-background/40 px-2.5 py-2"
                 title={`Base ${r.base}% · ${r.subAttr}(${r.subVal}) ${formatSigned(r.attrMod)}%${
                   r.bonus !== 0 ? ` · Vant. ${formatSigned(r.bonus)}%` : ""
-                }`}
+                }${r.evolutionBonus !== 0 ? ` · Evol. ${formatSigned(r.evolutionBonus)}%` : ""}`}
               >
                 <div className="flex items-start justify-between gap-2">
                   <span className="font-display text-[10px] leading-tight text-foreground/85 line-clamp-2">
@@ -668,6 +674,7 @@ const SummaryPanel = ({
                 <p className="text-[9px] text-muted-foreground font-body mt-1 leading-tight truncate">
                   {r.subAttr} {formatSigned(r.attrMod)}%
                   {r.bonus !== 0 && <> · vant. {formatSigned(r.bonus)}%</>}
+                  {r.evolutionBonus !== 0 && <> · evol. {formatSigned(r.evolutionBonus)}%</>}
                 </p>
               </div>
             );

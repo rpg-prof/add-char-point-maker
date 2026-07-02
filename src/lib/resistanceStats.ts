@@ -72,14 +72,16 @@ export interface ResistanceBreakdown {
   subVal: number;
   attrMod: number;
   bonus: number;
+  evolutionBonus: number;
   total: number;
 }
 
 export function computeResistanceBreakdown(params: {
   subAttributes: Record<string, number>;
   selectedRaceClassAdv: string[];
+  evolutionResistanceBonus?: Record<string, number>;
 }): ResistanceBreakdown[] {
-  const { subAttributes, selectedRaceClassAdv } = params;
+  const { subAttributes, selectedRaceClassAdv, evolutionResistanceBonus = {} } = params;
   const resistanceItems = raceClassAdvantages.filter((a) => a.category === "resistencia");
 
   const countOf = (name: string) => selectedRaceClassAdv.filter((n) => n === name).length;
@@ -94,12 +96,14 @@ export function computeResistanceBreakdown(params: {
       const b = advantageResistanceBonus(item.name, subAttributes)[def.key];
       if (b) bonus += b * count;
     }
+    const evolutionBonus = evolutionResistanceBonus[def.key] ?? 0;
     return {
       ...def,
       subVal,
       attrMod,
       bonus,
-      total: def.base + attrMod + bonus,
+      evolutionBonus,
+      total: def.base + attrMod + bonus + evolutionBonus,
     };
   });
 }

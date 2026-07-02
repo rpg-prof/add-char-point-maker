@@ -78,6 +78,7 @@ export interface ExportCharacterPdfInput {
   arcaneSpecialist: string | null;
   attributePointsSpent: number;
   characterPointsSpent: number;
+  evolutionResistanceBonus?: Record<string, number>;
   notesItems?: string;
   notesGeneral?: string;
   characterHistory?: string;
@@ -771,33 +772,67 @@ export function exportCharacterPdf(input: ExportCharacterPdfInput) {
   const resistances = computeResistanceBreakdown({
     subAttributes: input.subAttributes,
     selectedRaceClassAdv: input.selectedRaceClassAdv,
+    evolutionResistanceBonus: input.evolutionResistanceBonus,
   });
+  const hasEvoRes = resistances.some((r) => r.evolutionBonus !== 0);
   beginSection("Resistências", estimateTableHeight(resistances.length));
   autoTable(doc, {
     startY: y,
-    head: [["Resistência", "Base", "Sub-Atrib.", "Mod.", "Vantagens", "Total"]],
-    body: resistances.map((r) => [
-      r.label,
-      `${r.base}%`,
-      `${r.subAttr} (${r.subVal})`,
-      `${r.attrMod >= 0 ? "+" : ""}${r.attrMod}%`,
-      r.bonus === 0 ? "—" : `${r.bonus >= 0 ? "+" : ""}${r.bonus}%`,
-      `${r.total}%`,
-    ]),
+    head: [
+      hasEvoRes
+        ? ["Resistência", "Base", "Sub-Atrib.", "Mod.", "Vantagens", "Evol.", "Total"]
+        : ["Resistência", "Base", "Sub-Atrib.", "Mod.", "Vantagens", "Total"],
+    ],
+    body: resistances.map((r) =>
+      hasEvoRes
+        ? [
+            r.label,
+            `${r.base}%`,
+            `${r.subAttr} (${r.subVal})`,
+            `${r.attrMod >= 0 ? "+" : ""}${r.attrMod}%`,
+            r.bonus === 0 ? "—" : `${r.bonus >= 0 ? "+" : ""}${r.bonus}%`,
+            r.evolutionBonus === 0 ? "—" : `+${r.evolutionBonus}%`,
+            `${r.total}%`,
+          ]
+        : [
+            r.label,
+            `${r.base}%`,
+            `${r.subAttr} (${r.subVal})`,
+            `${r.attrMod >= 0 ? "+" : ""}${r.attrMod}%`,
+            r.bonus === 0 ? "—" : `${r.bonus >= 0 ? "+" : ""}${r.bonus}%`,
+            `${r.total}%`,
+          ],
+    ),
     theme: "striped",
     ...tableBase,
-    columnStyles: {
-      5: { halign: "right", fontStyle: "bold", textColor: GOLD },
-      1: { halign: "center" },
-      3: { halign: "center" },
-      4: { halign: "center" },
-    },
-    ...makeEditableHooks([1, 2, 3, 4, 5], {
-      1: "center",
-      3: "center",
-      4: "center",
-      5: "right",
-    }),
+    columnStyles: hasEvoRes
+      ? {
+          6: { halign: "right", fontStyle: "bold", textColor: GOLD },
+          1: { halign: "center" },
+          3: { halign: "center" },
+          4: { halign: "center" },
+          5: { halign: "center" },
+        }
+      : {
+          5: { halign: "right", fontStyle: "bold", textColor: GOLD },
+          1: { halign: "center" },
+          3: { halign: "center" },
+          4: { halign: "center" },
+        },
+    ...(hasEvoRes
+      ? makeEditableHooks([1, 2, 3, 4, 5, 6], {
+          1: "center",
+          3: "center",
+          4: "center",
+          5: "center",
+          6: "right",
+        })
+      : makeEditableHooks([1, 2, 3, 4, 5], {
+          1: "center",
+          3: "center",
+          4: "center",
+          5: "right",
+        })),
   });
   y = (doc as any).lastAutoTable.finalY + 14;
 
