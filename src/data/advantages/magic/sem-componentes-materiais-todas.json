@@ -1,0 +1,11 @@
+{
+    "name": "Sem componentes materiais (Todas)",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano",
+        "Sacerdote"
+    ],
+    "cost": 50,
+    "costOthers": null,
+    "type": "advantage"
+}

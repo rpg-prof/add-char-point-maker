@@ -1,0 +1,1 @@
+Se o personagem cometer um ato contra sua tendência perde seus "poderes" especiais à critério do mestre. Se estiver sobre forte coerção ou sem escolha ele perde apenas temporariamente até que os atos sejam corrigidos.

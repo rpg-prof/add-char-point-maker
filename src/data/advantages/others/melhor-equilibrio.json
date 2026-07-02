@@ -1,0 +1,12 @@
+{
+    "name": "Melhor equilíbrio",
+    "category": "outros",
+    "applicableRaces": [
+        "Anão",
+        "Elfo",
+        "Halfling"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage"
+}

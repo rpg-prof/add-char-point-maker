@@ -1,0 +1,13 @@
+{
+    "name": "Aversão a luz",
+    "category": "aversao",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling",
+        "Elfo-negro"
+    ],
+    "cost": -10,
+    "costOthers": -20,
+    "type": "disadvantage"
+}

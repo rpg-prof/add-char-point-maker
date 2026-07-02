@@ -1,7 +1,15 @@
 import { Check, ChevronDown, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { generalAdvantages, generalDisadvantages, type AdvantageOption } from "@/data/characterData";
-import { raceClassAdvantages, categoryLabels, type RaceClassAdvantage } from "@/data/raceClassAdvantages";
+import {
+  raceClassAdvantages,
+  categoryLabels,
+  getRaceClassAdvantageCost,
+  isRaceClassAdvantageAvailable,
+  isRaceClassAdvantageNative,
+  getProgressPointsCost,
+  type RaceClassAdvantage,
+} from "@/data/raceClassAdvantages";
 import AdvantageDescription from "@/components/AdvantageDescription";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -117,20 +125,11 @@ const AdvantagesPanel = ({
     return button;
   };
 
-  const matchesRaceOf = (item: RaceClassAdvantage) =>
-    !!item.applicableRaces?.some((r) => r === "Todas" || r === selectedRace);
-  const matchesClassOf = (item: RaceClassAdvantage) =>
-    !!item.applicableClasses?.some((c) => c === "Todas" || c === selectedClass);
+  const getItemCost = (item: RaceClassAdvantage): number =>
+    getRaceClassAdvantageCost(item, selectedRace, selectedClass);
 
-  const getItemCost = (item: RaceClassAdvantage): number => {
-    if (matchesRaceOf(item) || matchesClassOf(item)) return item.cost;
-    return item.costOthers ?? item.cost;
-  };
-
-  const isAvailable = (item: RaceClassAdvantage): boolean => {
-    if (matchesRaceOf(item) || matchesClassOf(item)) return true;
-    return item.costOthers !== null;
-  };
+  const isAvailable = (item: RaceClassAdvantage): boolean =>
+    isRaceClassAdvantageAvailable(item, selectedRace, selectedClass);
 
 
   const renderRaceClassItem = (item: RaceClassAdvantage) => {
@@ -138,7 +137,8 @@ const AdvantagesPanel = ({
     const isSelected = selectedRaceClassAdvantages.includes(item.name);
     const isAdv = item.type === "advantage";
     const cost = getItemCost(item);
-    const isNative = matchesRaceOf(item) || matchesClassOf(item);
+    const isNative = isRaceClassAdvantageNative(item, selectedRace, selectedClass);
+    const progressCost = getProgressPointsCost(item, selectedRace, selectedClass);
     const blocked =
       !isSelected &&
       item.type === "disadvantage" &&
@@ -187,6 +187,14 @@ const AdvantagesPanel = ({
             >
               {cost > 0 ? `+${cost}` : cost}
             </span>
+            {progressCost != null && (
+              <span
+                className="text-[10px] font-display tabular-nums text-blue-400/90 shrink-0"
+                title="Custo em pontos de progressão"
+              >
+                P{progressCost}
+              </span>
+            )}
           </button>
         </TooltipTrigger>
         <TooltipContent side="top" className="max-w-md text-xs font-body space-y-1">
@@ -202,6 +210,9 @@ const AdvantagesPanel = ({
             Custo p/ Classe/Raça: <span className="text-foreground font-semibold">{item.cost > 0 ? `+${item.cost}` : item.cost}</span>
             {item.costOthers !== null && (
               <> · Demais: <span className="text-foreground font-semibold">{item.costOthers > 0 ? `+${item.costOthers}` : item.costOthers}</span></>
+            )}
+            {progressCost != null && (
+              <> · Progressão: <span className="text-foreground font-semibold">{progressCost}</span></>
             )}
           </p>
           {(item.description || item.link) && (

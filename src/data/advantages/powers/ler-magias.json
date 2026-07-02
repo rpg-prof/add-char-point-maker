@@ -1,0 +1,11 @@
+{
+    "name": "Ler Magias",
+    "category": "poder",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": 5,
+    "costOthers": null,
+    "type": "advantage",
+    "progressPointsCost": 5
+}

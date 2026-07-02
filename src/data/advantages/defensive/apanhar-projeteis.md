@@ -1,0 +1,1 @@
+O personagem pode tentar capturar mísseis arremessados ou atirados contra ele. A chance base de sucesso é Destreza * 1%, mais um adicional de 2% por nível. Para ter direito a um teste, precisa estar ciente do ataque vindouro e ter pelo menos uma mão livre.

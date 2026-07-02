@@ -1,0 +1,10 @@
+{
+    "name": "Abascanto",
+    "category": "magica",
+    "applicableClasses": [
+        "Todas"
+    ],
+    "cost": 20,
+    "costOthers": null,
+    "type": "advantage"
+}

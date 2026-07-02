@@ -1,0 +1,15 @@
+{
+    "name": "Cura pelas mãos",
+    "category": "poder",
+    "applicableClasses": [
+        "Sacerdote",
+        "Paladino"
+    ],
+    "cost": 20,
+    "costOthers": 60,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 20,
+        "others": 60
+    }
+}

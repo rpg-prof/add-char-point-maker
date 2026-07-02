@@ -1,0 +1,1 @@
+O Personagem abandonou seu(a) amante ou o ex cônjuge, que procura o personagem. O amante é excentricamente persistente e excepcionalmente talentoso em perseguir, aborrecer ou constranger o personagem.

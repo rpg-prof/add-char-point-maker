@@ -1,0 +1,11 @@
+{
+    "name": "Edificar",
+    "category": "outros",
+    "applicableClasses": [
+        "Guerreiro",
+        "Ranger"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage"
+}

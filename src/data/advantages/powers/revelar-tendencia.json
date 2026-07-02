@@ -1,0 +1,14 @@
+{
+    "name": "Revelar Tendência",
+    "category": "poder",
+    "applicableClasses": [
+        "Sacerdote"
+    ],
+    "cost": 10,
+    "costOthers": 20,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 10,
+        "others": 20
+    }
+}

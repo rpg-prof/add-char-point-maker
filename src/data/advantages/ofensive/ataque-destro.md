@@ -1,0 +1,1 @@
+Usa "Ajuste Defensivo" (Destreza / Equilíbrio) no lugar de "Chance de Acertar" (Força / Músculos) - o que for maior - como bônus de ataque e no lugar de "Ajuste de Dano" (Força / Músculos) - o que for maior - como bônus de dano

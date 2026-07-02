@@ -1,0 +1,12 @@
+{
+    "name": "Bônus de combate contra inimigos grandes",
+    "category": "ofensivo",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling"
+    ],
+    "cost": 5,
+    "costOthers": null,
+    "type": "advantage"
+}

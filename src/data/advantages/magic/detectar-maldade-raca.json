@@ -1,0 +1,10 @@
+{
+    "name": "Detectar maldade (Raça)",
+    "category": "magica",
+    "applicableRaces": [
+        "Halfling"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage"
+}

@@ -1,0 +1,1 @@
++1 nas jogadas de ataque contra gnolls, ogros, meio-ogros, trolls, gigantes, etc. Quando essas criaturas atacam o personagem, recebem uma penalidade de -4 pontos em suas jogadas de ataque devido ao tamanho.

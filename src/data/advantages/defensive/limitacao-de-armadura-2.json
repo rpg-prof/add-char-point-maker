@@ -1,0 +1,10 @@
+{
+    "name": "Limitação de Armadura 2",
+    "category": "defensivo",
+    "applicableClasses": [
+        "Guerreiro"
+    ],
+    "cost": -30,
+    "costOthers": -15,
+    "type": "disadvantage"
+}

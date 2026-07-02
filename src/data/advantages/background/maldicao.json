@@ -1,0 +1,10 @@
+{
+    "name": "Maldição",
+    "category": "antecedente",
+    "applicableClasses": [
+        "Todas"
+    ],
+    "cost": -5,
+    "costOthers": null,
+    "type": "disadvantage"
+}

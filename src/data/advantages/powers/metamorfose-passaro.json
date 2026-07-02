@@ -1,0 +1,14 @@
+{
+    "name": "Metamorfose (Pássaro)",
+    "category": "poder",
+    "applicableClasses": [
+        "Sacerdote"
+    ],
+    "cost": 50,
+    "costOthers": 100,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 50,
+        "others": 100
+    }
+}

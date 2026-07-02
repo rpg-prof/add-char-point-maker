@@ -1,0 +1,10 @@
+{
+    "name": "Imperceptível",
+    "category": "outros",
+    "applicableClasses": [
+        "Ladrão"
+    ],
+    "cost": 5,
+    "costOthers": 15,
+    "type": "advantage"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Bônus de combate contra inimigos naturais",
+    "category": "ofensivo",
+    "applicableRaces": [
+        "Humano",
+        "Anão",
+        "Elfo",
+        "Gnomo",
+        "Halfling",
+        "Meio-Elfo"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

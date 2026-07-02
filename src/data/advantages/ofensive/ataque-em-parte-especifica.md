@@ -1,0 +1,1 @@
+O personagem ganha um bônus de +2 em todos os ataques em partes específicas (braços, pernas e cabeça). O bônus pode anular parcialmente as penalidades de -4 até -8 e se aplica a ataques a distância ou ataques corpo a corpo.

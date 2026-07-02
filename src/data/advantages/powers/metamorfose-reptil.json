@@ -1,0 +1,14 @@
+{
+    "name": "Metamorfose (Réptil)",
+    "category": "poder",
+    "applicableClasses": [
+        "Sacerdote"
+    ],
+    "cost": 70,
+    "costOthers": 140,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 70,
+        "others": 140
+    }
+}

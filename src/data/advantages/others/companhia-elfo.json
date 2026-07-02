@@ -1,0 +1,11 @@
+{
+    "name": "Companhia (Elfo)",
+    "category": "outros",
+    "applicableRaces": [
+        "Elfo",
+        "Meio-Elfo"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

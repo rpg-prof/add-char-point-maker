@@ -1,0 +1,14 @@
+{
+    "name": "Purificar Água",
+    "category": "poder",
+    "applicableClasses": [
+        "Sacerdote"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 5,
+        "others": 10
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Resistência ao frio",
+    "category": "resistencia",
+    "applicableClasses": [
+        "Paladino"
+    ],
+    "cost": 2,
+    "costOthers": 5,
+    "type": "advantage",
+    "maxPurchases": 2
+}

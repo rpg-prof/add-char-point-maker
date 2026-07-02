@@ -1,0 +1,11 @@
+{
+    "name": "Saúde Divina",
+    "category": "poder",
+    "applicableClasses": [
+        "Paladino"
+    ],
+    "cost": 5,
+    "costOthers": null,
+    "type": "advantage",
+    "progressPointsCost": 5
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Influenciar Reações",
+    "category": "outros",
+    "applicableClasses": [
+        "Bardo"
+    ],
+    "cost": 5,
+    "costOthers": 20,
+    "type": "advantage"
+}

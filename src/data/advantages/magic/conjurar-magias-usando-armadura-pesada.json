@@ -1,0 +1,10 @@
+{
+    "name": "Conjurar magias usando armadura pesada",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": 30,
+    "costOthers": null,
+    "type": "advantage"
+}

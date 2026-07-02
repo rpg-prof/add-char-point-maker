@@ -1,0 +1,13 @@
+{
+    "name": "Inimigo da própria raça",
+    "category": "aversao",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling",
+        "Elfo"
+    ],
+    "cost": -15,
+    "costOthers": null,
+    "type": "disadvantage"
+}

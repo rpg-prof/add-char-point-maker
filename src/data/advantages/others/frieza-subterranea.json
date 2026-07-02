@@ -1,0 +1,10 @@
+{
+    "name": "Frieza subterrânea",
+    "category": "outros",
+    "applicableRaces": [
+        "Gnomo"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage"
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Desconforto fora de seu habitat",
+    "category": "aversao",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling",
+        "Elfo"
+    ],
+    "cost": -15,
+    "costOthers": null,
+    "type": "disadvantage"
+}

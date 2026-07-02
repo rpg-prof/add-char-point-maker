@@ -1,0 +1,11 @@
+{
+    "name": "Ponto de Magia Extra",
+    "category": "antecedente",
+    "applicableClasses": [
+        "Arcano",
+        "Sacerdote"
+    ],
+    "cost": 15,
+    "costOthers": 20,
+    "type": "advantage"
+}

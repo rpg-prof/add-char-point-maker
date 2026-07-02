@@ -1,0 +1,1 @@
+O personagem possui habilidade igual no uso das duas mãos. Pode usar armas, escudo e realizar atos de força igualmente com ambas as mãos. Não sofre penalidades na primeira mão e somente -2 na outra ao lutar com duas armas.

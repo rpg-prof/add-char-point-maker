@@ -1,0 +1,10 @@
+{
+    "name": "Voto (Antecedente)",
+    "category": "antecedente",
+    "applicableClasses": [
+        "Todas"
+    ],
+    "cost": -20,
+    "costOthers": null,
+    "type": "disadvantage"
+}

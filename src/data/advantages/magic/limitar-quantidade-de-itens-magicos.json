@@ -1,0 +1,10 @@
+{
+    "name": "Limitar quantidade de itens mágicos",
+    "category": "magica",
+    "applicableClasses": [
+        "Paladino"
+    ],
+    "cost": -10,
+    "costOthers": -20,
+    "type": "disadvantage"
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Ataque Destro",
+    "category": "ofensivo",
+    "applicableClasses": [
+        "Monge"
+    ],
+    "cost": 10,
+    "costOthers": 30,
+    "type": "advantage"
+}

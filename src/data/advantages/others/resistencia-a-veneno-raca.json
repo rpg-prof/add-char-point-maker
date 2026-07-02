@@ -1,0 +1,11 @@
+{
+    "name": "Resistência à veneno (Raça)",
+    "category": "resistencia",
+    "applicableRaces": [
+        "Anão",
+        "Halfling"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

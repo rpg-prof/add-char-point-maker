@@ -1,0 +1,10 @@
+{
+    "name": "Inimigo (Antecedente)",
+    "category": "antecedente",
+    "applicableClasses": [
+        "Todas"
+    ],
+    "cost": -3,
+    "costOthers": null,
+    "type": "disadvantage"
+}

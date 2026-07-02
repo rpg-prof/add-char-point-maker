@@ -1,0 +1,10 @@
+{
+    "name": "Múltipla especialização em armas",
+    "category": "ofensivo",
+    "applicableClasses": [
+        "Guerreiro"
+    ],
+    "cost": 30,
+    "costOthers": 50,
+    "type": "advantage"
+}

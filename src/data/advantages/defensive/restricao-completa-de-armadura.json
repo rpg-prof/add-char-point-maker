@@ -1,0 +1,10 @@
+{
+    "name": "Restrição completa de Armadura",
+    "category": "defensivo",
+    "applicableClasses": [
+        "Guerreiro"
+    ],
+    "cost": -60,
+    "costOthers": -30,
+    "type": "disadvantage"
+}

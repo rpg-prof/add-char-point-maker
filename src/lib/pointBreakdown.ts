@@ -16,7 +16,7 @@ import {
   divineSphereCost,
   arcaneSchoolCost,
 } from "@/data/magicAccess";
-import { raceClassAdvantages } from "@/data/raceClassAdvantages";
+import { raceClassAdvantages, getRaceClassAdvantageCost } from "@/data/raceClassAdvantages";
 import type { DivineAccessLevel } from "@/components/MagicAccessPanel";
 import { GRIMOIRE_SPELL_POINT_COST, type GrimoireEntry } from "@/lib/grimoire";
 
@@ -99,10 +99,11 @@ export function getCharacterPointBreakdown(ctx: CharacterPointContext): PointBre
   for (const name of ctx.selectedRaceClassAdv) {
     const item = raceClassAdvantages.find((a) => a.name === name);
     if (!item) continue;
-    const matchesRace = item.applicableRaces?.includes(ctx.selectedRace);
-    const matchesClass = item.applicableClasses?.includes(ctx.selectedClass);
-    const cost = matchesRace || matchesClass ? item.cost : (item.costOthers ?? item.cost);
-    pushCost(breakdown, item.name, cost);
+    pushCost(
+      breakdown,
+      item.name,
+      getRaceClassAdvantageCost(item, ctx.selectedRace, ctx.selectedClass),
+    );
   }
 
   for (const name of ctx.selectedSkills) {

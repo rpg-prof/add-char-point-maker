@@ -1,0 +1,10 @@
+{
+    "name": "Não se adapta à cavalos",
+    "category": "aversao",
+    "applicableRaces": [
+        "Anão"
+    ],
+    "cost": -10,
+    "costOthers": -15,
+    "type": "disadvantage"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Falar com animais",
+    "category": "poder",
+    "applicableClasses": [
+        "Ranger",
+        "Sacerdote"
+    ],
+    "cost": 10,
+    "costOthers": 30,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 10,
+        "others": 30
+    }
+}

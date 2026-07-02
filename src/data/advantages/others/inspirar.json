@@ -1,0 +1,10 @@
+{
+    "name": "Inspirar",
+    "category": "outros",
+    "applicableClasses": [
+        "Bardo"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage"
+}

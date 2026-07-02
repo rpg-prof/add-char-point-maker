@@ -1,0 +1,11 @@
+{
+    "name": "Resistência à ilusões (Raça)",
+    "category": "resistencia",
+    "applicableRaces": [
+        "Gnomo",
+        "Halfling"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

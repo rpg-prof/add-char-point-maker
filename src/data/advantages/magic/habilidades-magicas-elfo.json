@@ -1,0 +1,10 @@
+{
+    "name": "Habilidades mágicas (Elfo)",
+    "category": "magica",
+    "applicableRaces": [
+        "Elfo"
+    ],
+    "cost": 25,
+    "costOthers": null,
+    "type": "advantage"
+}

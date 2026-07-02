@@ -1,0 +1,11 @@
+{
+    "name": "Ataque em parte específica",
+    "category": "ofensivo",
+    "applicableClasses": [
+        "Guerreiro",
+        "Ladrão"
+    ],
+    "cost": 5,
+    "costOthers": 15,
+    "type": "advantage"
+}

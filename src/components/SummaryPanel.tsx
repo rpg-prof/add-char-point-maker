@@ -30,7 +30,7 @@ import {
 } from "@/data/equipment";
 import { parseCargaKg } from "@/data/currency";
 import { mergeInventory } from "@/lib/inventory";
-import { raceClassAdvantages } from "@/data/raceClassAdvantages";
+import { raceClassAdvantages, getRaceClassAdvantageCost } from "@/data/raceClassAdvantages";
 import { getSubAttributeBonuses, subAttributeMap } from "@/data/subAttributes";
 import { computeResistanceBreakdown } from "@/lib/resistanceStats";
 import {
@@ -231,10 +231,9 @@ const SummaryPanel = ({
     }),
     ...selectedRaceClassAdv.map((name) => {
       const item = raceClassAdvantages.find((a) => a.name === name);
-      const matchesRace = item?.applicableRaces?.includes(selectedRace);
-      const matchesClass = item?.applicableClasses?.includes(selectedClass);
-      const cost =
-        matchesRace || matchesClass ? (item?.cost ?? 0) : (item?.costOthers ?? item?.cost ?? 0);
+      const cost = item
+        ? getRaceClassAdvantageCost(item, selectedRace, selectedClass)
+        : 0;
       return { name, cost, isAdvantage: item?.type === "advantage" };
     }),
   ];

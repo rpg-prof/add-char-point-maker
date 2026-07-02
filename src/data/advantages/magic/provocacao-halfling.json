@@ -1,0 +1,10 @@
+{
+    "name": "Provocação (Halfling)",
+    "category": "magica",
+    "applicableRaces": [
+        "Halfling"
+    ],
+    "cost": 5,
+    "costOthers": null,
+    "type": "advantage"
+}

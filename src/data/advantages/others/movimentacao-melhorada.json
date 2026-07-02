@@ -1,0 +1,10 @@
+{
+    "name": "Movimentação melhorada",
+    "category": "outros",
+    "applicableClasses": [
+        "Todas"
+    ],
+    "cost": 3,
+    "costOthers": null,
+    "type": "advantage"
+}

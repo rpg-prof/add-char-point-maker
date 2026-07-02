@@ -1,0 +1,12 @@
+{
+    "name": "Resistência à magia (Raça)",
+    "category": "resistencia",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

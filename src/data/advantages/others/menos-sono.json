@@ -1,0 +1,10 @@
+{
+    "name": "Menos sono",
+    "category": "outros",
+    "applicableClasses": [
+        "Todas"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Artes Marciais",
+    "category": "ofensivo",
+    "applicableClasses": [
+        "Monge"
+    ],
+    "cost": 15,
+    "costOthers": 50,
+    "type": "advantage"
+}

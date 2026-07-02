@@ -1,0 +1,12 @@
+{
+    "name": "Resistência a sono e feitiço (Classe)",
+    "category": "resistencia",
+    "applicableClasses": [
+        "Arcano",
+        "Paladino"
+    ],
+    "cost": 5,
+    "costOthers": 15,
+    "type": "advantage",
+    "maxPurchases": 2
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Mesclar-se às rochas",
+    "category": "magica",
+    "applicableRaces": [
+        "Anão"
+    ],
+    "cost": 40,
+    "costOthers": 60,
+    "type": "advantage"
+}

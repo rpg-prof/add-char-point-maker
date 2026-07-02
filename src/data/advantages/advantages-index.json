@@ -1,0 +1,1058 @@
+{
+    "general": {
+        "advantages": [
+            {
+                "name": "Afinado: Canto",
+                "file": "afinado-canto.json"
+            },
+            {
+                "name": "Afinado: Instrumento",
+                "file": "afinado-instrumento.json"
+            },
+            {
+                "name": "Ambidestria",
+                "file": "ambidestria.json"
+            },
+            {
+                "name": "Audição Aguçada",
+                "file": "audicao-agucada.json"
+            },
+            {
+                "name": "Bom Senso",
+                "file": "bom-senso.json"
+            },
+            {
+                "name": "Bússola Interna",
+                "file": "bussola-interna.json"
+            },
+            {
+                "name": "Cicatrização Rápida",
+                "file": "cicatrizacao-rapida.json"
+            },
+            {
+                "name": "Conhecimento Obscuro",
+                "file": "conhecimento-obscuro.json"
+            },
+            {
+                "name": "Empatia",
+                "file": "empatia.json"
+            },
+            {
+                "name": "Empatia com Animais",
+                "file": "empatia-com-animais.json"
+            },
+            {
+                "name": "Fleuma (não tem medo)",
+                "file": "fleuma-nao-tem-medo.json"
+            },
+            {
+                "name": "Habilidade Artística",
+                "file": "habilidade-artistica.json"
+            },
+            {
+                "name": "Juntas Flexíveis",
+                "file": "juntas-flexiveis.json"
+            },
+            {
+                "name": "Lábia",
+                "file": "labia.json"
+            },
+            {
+                "name": "Memória Precisa",
+                "file": "memoria-precisa.json"
+            },
+            {
+                "name": "Olfato Aguçado",
+                "file": "olfato-agucado.json"
+            },
+            {
+                "name": "Paladar Aguçado",
+                "file": "paladar-agucado.json"
+            },
+            {
+                "name": "Personificação",
+                "file": "personificacao.json"
+            },
+            {
+                "name": "Sedução",
+                "file": "seducao.json"
+            },
+            {
+                "name": "Senso do Clima",
+                "file": "senso-do-clima.json"
+            },
+            {
+                "name": "Sono Leve",
+                "file": "sono-leve.json"
+            },
+            {
+                "name": "Sorte",
+                "file": "sorte.json"
+            },
+            {
+                "name": "Tato Aguçado",
+                "file": "tato-agucado.json"
+            },
+            {
+                "name": "Vigilância",
+                "file": "vigilancia.json"
+            },
+            {
+                "name": "Visão Aguçada",
+                "file": "visao-agucada.json"
+            }
+        ],
+        "disadvantages": [
+            {
+                "name": "Alergias (Moderada)",
+                "file": "alergias-moderada.json"
+            },
+            {
+                "name": "Alergias (Severa)",
+                "file": "alergias-severa.json"
+            },
+            {
+                "name": "Altruísmo (Moderado)",
+                "file": "altruismo-moderado.json"
+            },
+            {
+                "name": "Altruísmo (Severo)",
+                "file": "altruismo-severo.json"
+            },
+            {
+                "name": "Avareza",
+                "file": "avareza.json"
+            },
+            {
+                "name": "Cleptomania (Moderada)",
+                "file": "cleptomania-moderada.json"
+            },
+            {
+                "name": "Cleptomania (Severa)",
+                "file": "cleptomania-severa.json"
+            },
+            {
+                "name": "Complexo de Culpa",
+                "file": "complexo-de-culpa.json"
+            },
+            {
+                "name": "Covardia (Moderada)",
+                "file": "covardia-moderada.json"
+            },
+            {
+                "name": "Covardia (Severa)",
+                "file": "covardia-severa.json"
+            },
+            {
+                "name": "Curiosidade (Moderada)",
+                "file": "curiosidade-moderada.json"
+            },
+            {
+                "name": "Curiosidade (Severa)",
+                "file": "curiosidade-severa.json"
+            },
+            {
+                "name": "Daltônico",
+                "file": "daltonico.json"
+            },
+            {
+                "name": "Desastrado (Moderado)",
+                "file": "desastrado-moderado.json"
+            },
+            {
+                "name": "Desastrado (Severo)",
+                "file": "desastrado-severo.json"
+            },
+            {
+                "name": "Excesso de Confiança (Moderado)",
+                "file": "excesso-de-confianca-moderado.json"
+            },
+            {
+                "name": "Excesso de Confiança (Severo)",
+                "file": "excesso-de-confianca-severo.json"
+            },
+            {
+                "name": "Fácil Contusão",
+                "file": "facil-contusao.json"
+            },
+            {
+                "name": "Fala Presa",
+                "file": "fala-presa.json"
+            },
+            {
+                "name": "Falta De Sorte",
+                "file": "falta-de-sorte.json"
+            },
+            {
+                "name": "Fanatismo",
+                "file": "fanatismo.json"
+            },
+            {
+                "name": "Honestidade Compulsiva",
+                "file": "honestidade-compulsiva.json"
+            },
+            {
+                "name": "Impulsividade (Moderada)",
+                "file": "impulsividade-moderada.json"
+            },
+            {
+                "name": "Impulsividade (Severa)",
+                "file": "impulsividade-severa.json"
+            },
+            {
+                "name": "Inimigo Poderoso",
+                "file": "inimigo-poderoso.json"
+            },
+            {
+                "name": "Mau Temperamento",
+                "file": "mau-temperamento.json"
+            },
+            {
+                "name": "Medo: Água (Moderado)",
+                "file": "medo-agua-moderado.json"
+            },
+            {
+                "name": "Medo: Água (Severo)",
+                "file": "medo-agua-severo.json"
+            },
+            {
+                "name": "Medo: Altura (Moderado)",
+                "file": "medo-altura-moderado.json"
+            },
+            {
+                "name": "Medo: Altura (Severo)",
+                "file": "medo-altura-severo.json"
+            },
+            {
+                "name": "Medo: Escuro (Moderado)",
+                "file": "medo-escuro-moderado.json"
+            },
+            {
+                "name": "Medo: Escuro (Severo)",
+                "file": "medo-escuro-severo.json"
+            },
+            {
+                "name": "Medo: Magia (Moderado)",
+                "file": "medo-magia-moderado.json"
+            },
+            {
+                "name": "Medo: Magia (Severo)",
+                "file": "medo-magia-severo.json"
+            },
+            {
+                "name": "Medo: Mortos-Vivos (Moderado)",
+                "file": "medo-mortos-vivos-moderado.json"
+            },
+            {
+                "name": "Medo: Mortos-Vivos (Severo)",
+                "file": "medo-mortos-vivos-severo.json"
+            },
+            {
+                "name": "Megalomania (Moderada)",
+                "file": "megalomania-moderada.json"
+            },
+            {
+                "name": "Megalomania (Severa)",
+                "file": "megalomania-severa.json"
+            },
+            {
+                "name": "Mentalidade de Escravo",
+                "file": "mentalidade-de-escravo.json"
+            },
+            {
+                "name": "Personalidade Irritante",
+                "file": "personalidade-irritante.json"
+            },
+            {
+                "name": "Piromania (Moderada)",
+                "file": "piromania-moderada.json"
+            },
+            {
+                "name": "Piromania (Severa)",
+                "file": "piromania-severa.json"
+            },
+            {
+                "name": "Preguiça",
+                "file": "preguica.json"
+            },
+            {
+                "name": "Sadismo",
+                "file": "sadismo.json"
+            },
+            {
+                "name": "Sono Profundo",
+                "file": "sono-profundo.json"
+            },
+            {
+                "name": "Teimosia (Moderada)",
+                "file": "teimosia-moderada.json"
+            },
+            {
+                "name": "Teimosia (Severa)",
+                "file": "teimosia-severa.json"
+            },
+            {
+                "name": "Vício (Moderado)",
+                "file": "vicio-moderado.json"
+            },
+            {
+                "name": "Vício (Severo)",
+                "file": "vicio-severo.json"
+            }
+        ]
+    },
+    "defensive": [
+        {
+            "name": "Apanhar projéteis",
+            "file": "apanhar-projeteis.json",
+            "category": "defensivo"
+        },
+        {
+            "name": "Bom de esquiva",
+            "file": "bom-de-esquiva.json",
+            "category": "defensivo"
+        },
+        {
+            "name": "Bônus defensivo subterrâneo",
+            "file": "bonus-defensivo-subterraneo.json",
+            "category": "defensivo"
+        },
+        {
+            "name": "Defesa por Sabedoria",
+            "file": "defesa-por-sabedoria.json",
+            "category": "defensivo"
+        },
+        {
+            "name": "Limitação de Armadura 1",
+            "file": "limitacao-de-armadura-1.json",
+            "category": "defensivo"
+        },
+        {
+            "name": "Limitação de Armadura 2",
+            "file": "limitacao-de-armadura-2.json",
+            "category": "defensivo"
+        },
+        {
+            "name": "Limitação de Armadura Natural",
+            "file": "limitacao-de-armadura-natural.json",
+            "category": "defensivo"
+        },
+        {
+            "name": "Pele densa",
+            "file": "pele-densa.json",
+            "category": "defensivo"
+        },
+        {
+            "name": "Pele dura",
+            "file": "pele-dura.json",
+            "category": "defensivo"
+        },
+        {
+            "name": "Restrição completa de Armadura",
+            "file": "restricao-completa-de-armadura.json",
+            "category": "defensivo"
+        }
+    ],
+    "magic": [
+        {
+            "name": "Abascanto",
+            "file": "abascanto.json",
+            "category": "magica"
+        },
+        {
+            "name": "Acesso à magias arcanas",
+            "file": "acesso-a-magias-arcanas.json",
+            "category": "magica"
+        },
+        {
+            "name": "Acesso à magias divinas",
+            "file": "acesso-a-magias-divinas.json",
+            "category": "magica"
+        },
+        {
+            "name": "Aumentar Área de Efeito",
+            "file": "aumentar-area-de-efeito.json",
+            "category": "magica"
+        },
+        {
+            "name": "Aumentar duração da magia",
+            "file": "aumentar-duracao-da-magia.json",
+            "category": "magica"
+        },
+        {
+            "name": "Aversão a itens mágicos",
+            "file": "aversao-a-itens-magicos.json",
+            "category": "magica"
+        },
+        {
+            "name": "Cativar animais (Raça)",
+            "file": "cativar-animais-raca.json",
+            "category": "magica"
+        },
+        {
+            "name": "Conjurar magias usando armadura leve",
+            "file": "conjurar-magias-usando-armadura-leve.json",
+            "category": "magica"
+        },
+        {
+            "name": "Conjurar magias usando armadura pesada",
+            "file": "conjurar-magias-usando-armadura-pesada.json",
+            "category": "magica"
+        },
+        {
+            "name": "Conter efeitos de magias de som",
+            "file": "conter-efeitos-de-magias-de-som.json",
+            "category": "magica"
+        },
+        {
+            "name": "Detectar Magia (Bardo)",
+            "file": "detectar-magia-bardo.json",
+            "category": "magica"
+        },
+        {
+            "name": "Detectar maldade (Raça)",
+            "file": "detectar-maldade-raca.json",
+            "category": "magica"
+        },
+        {
+            "name": "Falar com plantas",
+            "file": "falar-com-plantas.json",
+            "category": "magica"
+        },
+        {
+            "name": "Habilidades mágicas (Elfo)",
+            "file": "habilidades-magicas-elfo.json",
+            "category": "magica"
+        },
+        {
+            "name": "Limitar quantidade de itens mágicos",
+            "file": "limitar-quantidade-de-itens-magicos.json",
+            "category": "magica"
+        },
+        {
+            "name": "Magia Intensiva",
+            "file": "magia-intensiva.json",
+            "category": "magica"
+        },
+        {
+            "name": "Mesclar-se às rochas",
+            "file": "mesclar-se-as-rochas.json",
+            "category": "magica"
+        },
+        {
+            "name": "Movimentação na floresta",
+            "file": "movimentacao-na-floresta.json",
+            "category": "magica"
+        },
+        {
+            "name": "Penalidades para Ler Magias",
+            "file": "penalidades-para-ler-magias.json",
+            "category": "magica"
+        },
+        {
+            "name": "Pesquisador de Magias",
+            "file": "pesquisador-de-magias.json",
+            "category": "magica"
+        },
+        {
+            "name": "Provocação (Halfling)",
+            "file": "provocacao-halfling.json",
+            "category": "magica"
+        },
+        {
+            "name": "Reduzir Tempo de Conjuração",
+            "file": "reduzir-tempo-de-conjuracao.json",
+            "category": "magica"
+        },
+        {
+            "name": "Sem componentes materiais (1 Escola/Esfera)",
+            "file": "sem-componentes-materiais-1-escola-esfera.json",
+            "category": "magica"
+        },
+        {
+            "name": "Sem componentes materiais (Todas)",
+            "file": "sem-componentes-materiais-todas.json",
+            "category": "magica"
+        },
+        {
+            "name": "Uso limitado de itens mágicos",
+            "file": "uso-limitado-de-itens-magicos.json",
+            "category": "magica"
+        }
+    ],
+    "powers": [
+        {
+            "name": "Cura pelas mãos",
+            "file": "cura-pelas-maos.json",
+            "category": "poder"
+        },
+        {
+            "name": "Curar Doenças",
+            "file": "curar-doencas.json",
+            "category": "poder"
+        },
+        {
+            "name": "Detectar Magias (Mago)",
+            "file": "detectar-magias-mago.json",
+            "category": "poder"
+        },
+        {
+            "name": "Detectar Mortos Vivos",
+            "file": "detectar-mortos-vivos.json",
+            "category": "poder"
+        },
+        {
+            "name": "Detectar o Mal / Maldição",
+            "file": "detectar-o-mal-maldicao.json",
+            "category": "poder"
+        },
+        {
+            "name": "Detectar tendência oposta",
+            "file": "detectar-tendencia-oposta.json",
+            "category": "poder"
+        },
+        {
+            "name": "Falar com animais",
+            "file": "falar-com-animais.json",
+            "category": "poder"
+        },
+        {
+            "name": "Fascinação (Sacerdote)",
+            "file": "fascinacao-sacerdote.json",
+            "category": "poder"
+        },
+        {
+            "name": "Incitar a fúria",
+            "file": "incitar-a-furia.json",
+            "category": "poder"
+        },
+        {
+            "name": "Inspirar o terror",
+            "file": "inspirar-o-terror.json",
+            "category": "poder"
+        },
+        {
+            "name": "Ler Magias",
+            "file": "ler-magias.json",
+            "category": "poder"
+        },
+        {
+            "name": "Metamorfose (Mamífero)",
+            "file": "metamorfose-mamifero.json",
+            "category": "poder"
+        },
+        {
+            "name": "Metamorfose (Pássaro)",
+            "file": "metamorfose-passaro.json",
+            "category": "poder"
+        },
+        {
+            "name": "Metamorfose (Réptil)",
+            "file": "metamorfose-reptil.json",
+            "category": "poder"
+        },
+        {
+            "name": "Palavra de tranquilidade",
+            "file": "palavra-de-tranquilidade.json",
+            "category": "poder"
+        },
+        {
+            "name": "Passos sem Pegadas",
+            "file": "passos-sem-pegadas.json",
+            "category": "poder"
+        },
+        {
+            "name": "Poder da Fé: Afugentar",
+            "file": "poder-da-fe-afugentar.json",
+            "category": "poder"
+        },
+        {
+            "name": "Poder da Fé: Dominar",
+            "file": "poder-da-fe-dominar.json",
+            "category": "poder"
+        },
+        {
+            "name": "Purificar Água",
+            "file": "purificar-agua.json",
+            "category": "poder"
+        },
+        {
+            "name": "Revelar Tendência",
+            "file": "revelar-tendencia.json",
+            "category": "poder"
+        },
+        {
+            "name": "Saúde Divina",
+            "file": "saude-divina.json",
+            "category": "poder"
+        },
+        {
+            "name": "Truque Arcano",
+            "file": "truque-arcano.json",
+            "category": "poder"
+        }
+    ],
+    "aversions": [
+        {
+            "name": "Aversão a luz",
+            "file": "aversao-a-luz.json",
+            "category": "aversao"
+        },
+        {
+            "name": "Aversão a rios",
+            "file": "aversao-a-rios.json",
+            "category": "aversao"
+        },
+        {
+            "name": "Desconforto fora de seu habitat",
+            "file": "desconforto-fora-de-seu-habitat.json",
+            "category": "aversao"
+        },
+        {
+            "name": "Dificuldade em utilizar itens mágicos",
+            "file": "dificuldade-em-utilizar-itens-magicos.json",
+            "category": "aversao"
+        },
+        {
+            "name": "Inimigo da própria raça",
+            "file": "inimigo-da-propria-raca.json",
+            "category": "aversao"
+        },
+        {
+            "name": "Inimigo dos humanos",
+            "file": "inimigo-dos-humanos.json",
+            "category": "aversao"
+        },
+        {
+            "name": "Não se adapta à cavalos",
+            "file": "nao-se-adapta-a-cavalos.json",
+            "category": "aversao"
+        },
+        {
+            "name": "Necessidade de água",
+            "file": "necessidade-de-agua.json",
+            "category": "aversao"
+        },
+        {
+            "name": "Ódio a outra raça",
+            "file": "odio-a-outra-raca.json",
+            "category": "aversao"
+        },
+        {
+            "name": "Peculiaridade da raça",
+            "file": "peculiaridade-da-raca.json",
+            "category": "aversao"
+        },
+        {
+            "name": "Raça inimiga",
+            "file": "raca-inimiga.json",
+            "category": "aversao"
+        }
+    ],
+    "others": [
+        {
+            "name": "Acreditar em ilusões",
+            "file": "acreditar-em-ilusoes.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Avaliar gemas",
+            "file": "avaliar-gemas.json",
+            "category": "outros"
+        },
+        {
+            "name": "Bônus em preparar bebidas",
+            "file": "bonus-em-preparar-bebidas.json",
+            "category": "outros"
+        },
+        {
+            "name": "Bônus para Rastrear",
+            "file": "bonus-para-rastrear.json",
+            "category": "outros"
+        },
+        {
+            "name": "Cativar Animais (Classe)",
+            "file": "cativar-animais-classe.json",
+            "category": "outros"
+        },
+        {
+            "name": "Companhia (Elfo)",
+            "file": "companhia-elfo.json",
+            "category": "outros"
+        },
+        {
+            "name": "Detectar mentiras",
+            "file": "detectar-mentiras.json",
+            "category": "outros"
+        },
+        {
+            "name": "Determinar estabilidade",
+            "file": "determinar-estabilidade.json",
+            "category": "outros"
+        },
+        {
+            "name": "Determinar idade de estrutura",
+            "file": "determinar-idade-de-estrutura.json",
+            "category": "outros"
+        },
+        {
+            "name": "Edificar",
+            "file": "edificar.json",
+            "category": "outros"
+        },
+        {
+            "name": "Empatia com animais (Ranger)",
+            "file": "empatia-com-animais-ranger.json",
+            "category": "outros"
+        },
+        {
+            "name": "Encontrar túneis",
+            "file": "encontrar-tuneis.json",
+            "category": "outros"
+        },
+        {
+            "name": "Engenharia (Gnomo)",
+            "file": "engenharia-gnomo.json",
+            "category": "outros"
+        },
+        {
+            "name": "Esconder-se na mata",
+            "file": "esconder-se-na-mata.json",
+            "category": "outros"
+        },
+        {
+            "name": "Fascinar",
+            "file": "fascinar.json",
+            "category": "outros"
+        },
+        {
+            "name": "Frieza subterrânea",
+            "file": "frieza-subterranea.json",
+            "category": "outros"
+        },
+        {
+            "name": "Gíria dos Ladrões",
+            "file": "giria-dos-ladroes.json",
+            "category": "outros"
+        },
+        {
+            "name": "Identidade secreta",
+            "file": "identidade-secreta.json",
+            "category": "outros"
+        },
+        {
+            "name": "Identificação de poções",
+            "file": "identificacao-de-pocoes.json",
+            "category": "outros"
+        },
+        {
+            "name": "Imperceptível",
+            "file": "imperceptivel.json",
+            "category": "outros"
+        },
+        {
+            "name": "Influenciar Reações",
+            "file": "influenciar-reacoes.json",
+            "category": "outros"
+        },
+        {
+            "name": "Infravisão 10m",
+            "file": "infravisao-10m.json",
+            "category": "outros"
+        },
+        {
+            "name": "Infravisão 20m",
+            "file": "infravisao-20m.json",
+            "category": "outros"
+        },
+        {
+            "name": "Infravisão 30m",
+            "file": "infravisao-30m.json",
+            "category": "outros"
+        },
+        {
+            "name": "Inspirar",
+            "file": "inspirar.json",
+            "category": "outros"
+        },
+        {
+            "name": "Liderança (Classe)",
+            "file": "lideranca-classe.json",
+            "category": "outros"
+        },
+        {
+            "name": "Máquinas de guerra",
+            "file": "maquinas-de-guerra.json",
+            "category": "outros"
+        },
+        {
+            "name": "Melhor equilíbrio",
+            "file": "melhor-equilibrio.json",
+            "category": "outros"
+        },
+        {
+            "name": "Menos sono",
+            "file": "menos-sono.json",
+            "category": "outros"
+        },
+        {
+            "name": "Movimentação melhorada",
+            "file": "movimentacao-melhorada.json",
+            "category": "outros"
+        },
+        {
+            "name": "Portas secretas",
+            "file": "portas-secretas.json",
+            "category": "outros"
+        },
+        {
+            "name": "Proteção contra magias de sono e feitiço (Raça)",
+            "file": "protecao-contra-magias-de-sono-e-feitico-raca.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Proteção contra o mal",
+            "file": "protecao-contra-o-mal.json",
+            "category": "outros"
+        },
+        {
+            "name": "Resistência a ilusões (Classe)",
+            "file": "resistencia-a-ilusoes-classe.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistência à ilusões (Raça)",
+            "file": "resistencia-a-ilusoes-raca.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistência a magia (Classe)",
+            "file": "resistencia-a-magia-classe.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistência à magia (Raça)",
+            "file": "resistencia-a-magia-raca.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistência à magias de sono e feitiço (Raça)",
+            "file": "resistencia-a-magias-de-sono-e-feitico-raca.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistência a sono e feitiço (Classe)",
+            "file": "resistencia-a-sono-e-feitico-classe.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistência a veneno (Classe)",
+            "file": "resistencia-a-veneno-classe.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistência à veneno (Raça)",
+            "file": "resistencia-a-veneno-raca.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistência ao calor",
+            "file": "resistencia-ao-calor.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistência ao frio",
+            "file": "resistencia-ao-frio.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistência ao Som",
+            "file": "resistencia-ao-som.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Resistir a dreno de energia",
+            "file": "resistir-a-dreno-de-energia.json",
+            "category": "resistencia"
+        },
+        {
+            "name": "Respiração na água",
+            "file": "respiracao-na-agua.json",
+            "category": "outros"
+        },
+        {
+            "name": "Restrição de tendência de companheiros",
+            "file": "restricao-de-tendencia-de-companheiros.json",
+            "category": "outros"
+        },
+        {
+            "name": "Seguir alinhamento",
+            "file": "seguir-alinhamento.json",
+            "category": "outros"
+        },
+        {
+            "name": "Voto de Pobreza",
+            "file": "voto-de-pobreza.json",
+            "category": "outros"
+        }
+    ],
+    "background": [
+        {
+            "name": "Aliado",
+            "file": "aliado.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Amante Ciumento",
+            "file": "amante-ciumento.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Armadura Arcana",
+            "file": "armadura-arcana.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Caçado",
+            "file": "cacado.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Favor",
+            "file": "favor.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Idioma Extra Falado",
+            "file": "idioma-extra-falado.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Idioma Extra falado e escrito",
+            "file": "idioma-extra-falado-e-escrito.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Inimigo (Antecedente)",
+            "file": "inimigo-antecedente.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Item mágico comum",
+            "file": "item-magico-comum.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Item mágico incomum",
+            "file": "item-magico-incomum.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Maldição",
+            "file": "maldicao.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Pacto",
+            "file": "pacto.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Ponto de Magia Extra",
+            "file": "ponto-de-magia-extra.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Ponto de Magia Extra (Escola)",
+            "file": "ponto-de-magia-extra-escola.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Vingadora Sagrada",
+            "file": "vingadora-sagrada.json",
+            "category": "antecedente"
+        },
+        {
+            "name": "Voto (Antecedente)",
+            "file": "voto-antecedente.json",
+            "category": "antecedente"
+        }
+    ],
+    "ofensive": [
+        {
+            "name": "Artes Marciais",
+            "file": "artes-marciais.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Ataque adicional desarmado",
+            "file": "ataque-adicional-desarmado.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Ataque Destro",
+            "file": "ataque-destro.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Ataque em parte específica",
+            "file": "ataque-em-parte-especifica.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Ataque Pelas Costas",
+            "file": "ataque-pelas-costas.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Bônus com arco",
+            "file": "bonus-com-arco.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Bônus com Arma Específica da Raça",
+            "file": "bonus-com-arma-especifica-da-raca.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Bônus de combate contra inimigos grandes",
+            "file": "bonus-de-combate-contra-inimigos-grandes.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Bônus de combate contra inimigos naturais",
+            "file": "bonus-de-combate-contra-inimigos-naturais.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Especialização em armas",
+            "file": "especializacao-em-armas.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Estilo Duas Armas",
+            "file": "estilo-duas-armas.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Limitação a Armas sem corte/perfuração",
+            "file": "limitacao-a-armas-sem-corte-perfuracao.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Limitado a Armas pequenas",
+            "file": "limitado-a-armas-pequenas.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Maestria com arma",
+            "file": "maestria-com-arma.json",
+            "category": "ofensivo"
+        },
+        {
+            "name": "Múltipla especialização em armas",
+            "file": "multipla-especializacao-em-armas.json",
+            "category": "ofensivo"
+        }
+    ]
+}

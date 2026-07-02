@@ -1,0 +1,10 @@
+{
+    "name": "Fascinar",
+    "category": "outros",
+    "applicableClasses": [
+        "Bardo"
+    ],
+    "cost": 5,
+    "costOthers": 15,
+    "type": "advantage"
+}

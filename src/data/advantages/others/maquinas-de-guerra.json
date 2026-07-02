@@ -1,0 +1,12 @@
+{
+    "name": "Máquinas de guerra",
+    "category": "outros",
+    "applicableClasses": [
+        "Guerreiro",
+        "Paladino",
+        "Ranger"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage"
+}

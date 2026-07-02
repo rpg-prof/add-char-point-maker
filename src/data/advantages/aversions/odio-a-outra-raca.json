@@ -1,0 +1,15 @@
+{
+    "name": "Ódio a outra raça",
+    "category": "aversao",
+    "applicableRaces": [
+        "Humano",
+        "Anão",
+        "Elfo",
+        "Gnomo",
+        "Halfling",
+        "Meio-Elfo"
+    ],
+    "cost": -5,
+    "costOthers": null,
+    "type": "disadvantage"
+}

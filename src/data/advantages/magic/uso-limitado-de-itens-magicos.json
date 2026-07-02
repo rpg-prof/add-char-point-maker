@@ -1,0 +1,10 @@
+{
+    "name": "Uso limitado de itens mágicos",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": -30,
+    "costOthers": -10,
+    "type": "disadvantage"
+}

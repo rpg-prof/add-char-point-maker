@@ -1,0 +1,1 @@
+A raça escolhida sente desprezo pelo personagem e vai evitá-lo ao máximo. Em combate essa raça recebe +2 de bônus de ataque e dano contra o personagem. Necessariamente, a raça escolhida deve ser uma das raças validas para personagens.

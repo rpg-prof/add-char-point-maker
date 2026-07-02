@@ -1,0 +1,11 @@
+{
+    "name": "Ataque Pelas Costas",
+    "category": "ofensivo",
+    "applicableClasses": [
+        "Ladrão",
+        "Ranger"
+    ],
+    "cost": 10,
+    "costOthers": 30,
+    "type": "advantage"
+}

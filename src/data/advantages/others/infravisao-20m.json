@@ -1,0 +1,13 @@
+{
+    "name": "Infravisão 20m",
+    "category": "outros",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling",
+        "Elfo"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

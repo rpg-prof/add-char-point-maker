@@ -1,0 +1,11 @@
+{
+    "name": "Restrição de tendência de companheiros",
+    "category": "outros",
+    "applicableClasses": [
+        "Paladino",
+        "Ranger"
+    ],
+    "cost": -10,
+    "costOthers": -30,
+    "type": "disadvantage"
+}

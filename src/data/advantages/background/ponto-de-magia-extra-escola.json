@@ -1,0 +1,10 @@
+{
+    "name": "Ponto de Magia Extra (Escola)",
+    "category": "antecedente",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

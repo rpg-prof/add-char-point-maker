@@ -1,0 +1,11 @@
+{
+    "name": "Resistência a veneno (Classe)",
+    "category": "resistencia",
+    "applicableClasses": [
+        "Paladino"
+    ],
+    "cost": 2,
+    "costOthers": 5,
+    "type": "advantage",
+    "maxPurchases": 2
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Detectar o Mal / Maldição",
+    "category": "poder",
+    "applicableClasses": [
+        "Sacerdote",
+        "Paladino"
+    ],
+    "cost": 10,
+    "costOthers": 40,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 10,
+        "others": 40
+    }
+}

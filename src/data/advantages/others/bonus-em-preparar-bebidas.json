@@ -1,0 +1,10 @@
+{
+    "name": "Bônus em preparar bebidas",
+    "category": "outros",
+    "applicableRaces": [
+        "Anão"
+    ],
+    "cost": 2,
+    "costOthers": null,
+    "type": "advantage"
+}

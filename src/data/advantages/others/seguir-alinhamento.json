@@ -1,0 +1,11 @@
+{
+    "name": "Seguir alinhamento",
+    "category": "outros",
+    "applicableClasses": [
+        "Ranger",
+        "Paladino"
+    ],
+    "cost": -20,
+    "costOthers": -40,
+    "type": "disadvantage"
+}

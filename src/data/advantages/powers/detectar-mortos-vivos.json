@@ -1,0 +1,14 @@
+{
+    "name": "Detectar Mortos Vivos",
+    "category": "poder",
+    "applicableClasses": [
+        "Sacerdote"
+    ],
+    "cost": 10,
+    "costOthers": 30,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 10,
+        "others": 30
+    }
+}

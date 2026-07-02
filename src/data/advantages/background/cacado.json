@@ -1,0 +1,10 @@
+{
+    "name": "Caçado",
+    "category": "antecedente",
+    "applicableClasses": [
+        "Todas"
+    ],
+    "cost": -10,
+    "costOthers": null,
+    "type": "disadvantage"
+}

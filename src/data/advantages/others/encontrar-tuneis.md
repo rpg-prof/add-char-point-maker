@@ -1,0 +1,1 @@
+Um personagem com essa habilidade é familiarizado com minas túneis e passagens subterrâneas. Se Concentrando por uma rodada pode-se: Detectar a profundidade aproximada em relação a superfície. Detectar deslizamento/deslocamento de paredes

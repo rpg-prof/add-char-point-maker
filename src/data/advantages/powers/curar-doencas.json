@@ -1,0 +1,15 @@
+{
+    "name": "Curar Doenças",
+    "category": "poder",
+    "applicableClasses": [
+        "Sacerdote",
+        "Paladino"
+    ],
+    "cost": 20,
+    "costOthers": 40,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 20,
+        "others": 40
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Resistência a ilusões (Classe)",
+    "category": "resistencia",
+    "applicableClasses": [
+        "Todas"
+    ],
+    "cost": 5,
+    "costOthers": 5,
+    "type": "advantage",
+    "maxPurchases": 2
+}

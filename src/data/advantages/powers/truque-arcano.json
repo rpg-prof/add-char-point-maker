@@ -1,0 +1,15 @@
+{
+    "name": "Truque Arcano",
+    "category": "poder",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": 15,
+    "costOthers": 40,
+    "type": "advantage",
+    "link": "http://adeide25.net.uztec.com.br/pagina/a2-truques-arcanos",
+    "progressPointsCost": {
+        "native": 15,
+        "others": 40
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Proteção contra magias de sono e feitiço (Raça)",
+    "category": "resistencia",
+    "applicableRaces": [
+        "Elfo",
+        "Meio-Elfo"
+    ],
+    "cost": 5,
+    "costOthers": null,
+    "type": "advantage",
+    "maxPurchases": 3
+}

@@ -1,0 +1,1 @@
+O personagem aprendeu a estudar pessoas e é um excelente observador de seus hábitos e nuances de sua linguagem corporal e o que elas significam. Ele é apto a dizer quando alguém está mentindo para ele ou sendo evasivo.

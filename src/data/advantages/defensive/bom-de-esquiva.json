@@ -1,0 +1,13 @@
+{
+    "name": "Bom de esquiva",
+    "category": "defensivo",
+    "applicableClasses": [
+        "Guerreiro",
+        "Paladino",
+        "Ranger",
+        "Ladrão"
+    ],
+    "cost": 10,
+    "costOthers": 20,
+    "type": "advantage"
+}

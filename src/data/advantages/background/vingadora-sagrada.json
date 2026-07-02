@@ -1,0 +1,10 @@
+{
+    "name": "Vingadora Sagrada",
+    "category": "antecedente",
+    "applicableClasses": [
+        "Paladino"
+    ],
+    "cost": 50,
+    "costOthers": null,
+    "type": "advantage"
+}

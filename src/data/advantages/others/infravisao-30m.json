@@ -1,0 +1,12 @@
+{
+    "name": "Infravisão 30m",
+    "category": "outros",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Elfo-negro"
+    ],
+    "cost": 20,
+    "costOthers": null,
+    "type": "advantage"
+}

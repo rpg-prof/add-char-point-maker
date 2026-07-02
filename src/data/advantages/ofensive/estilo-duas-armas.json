@@ -1,0 +1,10 @@
+{
+    "name": "Estilo Duas Armas",
+    "category": "ofensivo",
+    "applicableClasses": [
+        "Ranger"
+    ],
+    "cost": 5,
+    "costOthers": 35,
+    "type": "advantage"
+}

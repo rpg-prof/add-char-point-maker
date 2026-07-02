@@ -1,0 +1,10 @@
+{
+    "name": "Aversão a itens mágicos",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": -80,
+    "costOthers": -40,
+    "type": "disadvantage"
+}

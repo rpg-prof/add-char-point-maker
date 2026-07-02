@@ -1,0 +1,14 @@
+{
+    "name": "Passos sem Pegadas",
+    "category": "poder",
+    "applicableClasses": [
+        "Ranger"
+    ],
+    "cost": 10,
+    "costOthers": 30,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 10,
+        "others": 30
+    }
+}

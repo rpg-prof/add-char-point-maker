@@ -1,0 +1,12 @@
+{
+    "name": "Determinar estabilidade",
+    "category": "outros",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage"
+}

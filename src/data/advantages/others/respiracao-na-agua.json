@@ -1,0 +1,10 @@
+{
+    "name": "Respiração na água",
+    "category": "outros",
+    "applicableRaces": [
+        "Elfo-aquático"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

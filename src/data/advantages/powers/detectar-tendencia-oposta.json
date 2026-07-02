@@ -1,0 +1,14 @@
+{
+    "name": "Detectar tendência oposta",
+    "category": "poder",
+    "applicableClasses": [
+        "Sacerdote"
+    ],
+    "cost": 5,
+    "costOthers": 20,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 5,
+        "others": 20
+    }
+}

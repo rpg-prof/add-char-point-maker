@@ -1,0 +1,10 @@
+{
+    "name": "Item mágico incomum",
+    "category": "antecedente",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": 40,
+    "costOthers": 80,
+    "type": "advantage"
+}

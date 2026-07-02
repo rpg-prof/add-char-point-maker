@@ -1,0 +1,13 @@
+{
+    "name": "Pele densa",
+    "category": "defensivo",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling",
+        "Elfo"
+    ],
+    "cost": 10,
+    "costOthers": 15,
+    "type": "advantage"
+}

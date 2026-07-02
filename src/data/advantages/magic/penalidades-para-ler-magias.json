@@ -1,0 +1,10 @@
+{
+    "name": "Penalidades para Ler Magias",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": -15,
+    "costOthers": -10,
+    "type": "disadvantage"
+}

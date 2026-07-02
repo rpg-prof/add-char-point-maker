@@ -1,0 +1,12 @@
+{
+    "name": "Aversão a rios",
+    "category": "aversao",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling"
+    ],
+    "cost": -10,
+    "costOthers": -15,
+    "type": "disadvantage"
+}

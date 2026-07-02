@@ -1,0 +1,1 @@
+O personagem pode inspirar os que o ouvem antes de entrar em batalha. Ao discursar por 3 rodadas todos os presentes ganham +1 nas jogadas de ataque +1 nos testes de resistências e +2 em todos os testes de moral.

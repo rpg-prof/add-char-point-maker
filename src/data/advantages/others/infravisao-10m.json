@@ -1,0 +1,14 @@
+{
+    "name": "Infravisão 10m",
+    "category": "outros",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling",
+        "Elfo",
+        "Meio-Elfo"
+    ],
+    "cost": 5,
+    "costOthers": null,
+    "type": "advantage"
+}

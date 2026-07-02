@@ -1,0 +1,10 @@
+{
+    "name": "Acreditar em ilusões",
+    "category": "resistencia",
+    "applicableRaces": [
+        "Elfo"
+    ],
+    "cost": -15,
+    "costOthers": -20,
+    "type": "disadvantage"
+}

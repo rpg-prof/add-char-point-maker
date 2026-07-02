@@ -1,0 +1,10 @@
+{
+    "name": "Acesso à magias divinas",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": 25,
+    "costOthers": null,
+    "type": "advantage"
+}

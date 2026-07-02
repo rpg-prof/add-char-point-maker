@@ -1,0 +1,11 @@
+{
+    "name": "Liderança (Classe)",
+    "category": "outros",
+    "applicableClasses": [
+        "Guerreiro",
+        "Paladino"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage"
+}

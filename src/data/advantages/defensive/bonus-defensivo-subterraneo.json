@@ -1,0 +1,10 @@
+{
+    "name": "Bônus defensivo subterrâneo",
+    "category": "defensivo",
+    "applicableRaces": [
+        "Gnomo"
+    ],
+    "cost": 5,
+    "costOthers": 15,
+    "type": "advantage"
+}

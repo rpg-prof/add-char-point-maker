@@ -58,7 +58,7 @@ import { skills, getSkillCost } from "@/data/skills";
 import { weaponGroups, shieldProficiencies } from "@/data/weaponProficiencies";
 import { subAttributeMap } from "@/data/subAttributes";
 import { migratePurchasedItems, type CustomInventoryItem, type PurchasedItems } from "@/data/equipment";
-import { raceClassAdvantages } from "@/data/raceClassAdvantages";
+import { raceClassAdvantages, getRaceClassAdvantageCost } from "@/data/raceClassAdvantages";
 import {
   getAttributeBreakdown,
   getCharacterPointBreakdown,
@@ -328,10 +328,7 @@ const Index = () => {
     const raceClassAdvCost = selectedRaceClassAdv.reduce((sum, name) => {
       const item = raceClassAdvantages.find((a) => a.name === name);
       if (!item) return sum;
-      const matchesRace = item.applicableRaces?.includes(selectedRace);
-      const matchesClass = item.applicableClasses?.includes(selectedClass);
-      const cost = (matchesRace || matchesClass) ? item.cost : (item.costOthers ?? item.cost);
-      return sum + cost;
+      return sum + getRaceClassAdvantageCost(item, selectedRace, selectedClass);
     }, 0);
 
     const skillCost = selectedSkills.reduce((sum, name) => {
@@ -450,9 +447,7 @@ const Index = () => {
     const raceClassDisadvCost = selectedRaceClassAdv.reduce((sum, name) => {
       const item = raceClassAdvantages.find((a) => a.name === name);
       if (!item || item.type !== "disadvantage") return sum;
-      const matchesRace = item.applicableRaces?.includes(selectedRace);
-      const matchesClass = item.applicableClasses?.includes(selectedClass);
-      const cost = (matchesRace || matchesClass) ? item.cost : (item.costOthers ?? item.cost);
+      const cost = getRaceClassAdvantageCost(item, selectedRace, selectedClass);
       return sum + Math.abs(cost);
     }, 0);
 

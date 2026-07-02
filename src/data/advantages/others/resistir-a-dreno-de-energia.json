@@ -1,0 +1,11 @@
+{
+    "name": "Resistir a dreno de energia",
+    "category": "resistencia",
+    "applicableClasses": [
+        "Sacerdote"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage",
+    "maxPurchases": 2
+}

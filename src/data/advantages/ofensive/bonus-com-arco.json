@@ -1,0 +1,10 @@
+{
+    "name": "Bônus com arco",
+    "category": "ofensivo",
+    "applicableClasses": [
+        "Ranger"
+    ],
+    "cost": 5,
+    "costOthers": 15,
+    "type": "advantage"
+}

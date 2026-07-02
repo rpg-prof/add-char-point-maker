@@ -1,0 +1,14 @@
+{
+    "name": "Metamorfose (Mamífero)",
+    "category": "poder",
+    "applicableClasses": [
+        "Sacerdote"
+    ],
+    "cost": 90,
+    "costOthers": 180,
+    "type": "advantage",
+    "progressPointsCost": {
+        "native": 90,
+        "others": 180
+    }
+}

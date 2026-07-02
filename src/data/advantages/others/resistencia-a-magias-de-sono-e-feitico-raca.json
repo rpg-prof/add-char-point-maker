@@ -1,0 +1,12 @@
+{
+    "name": "Resistência à magias de sono e feitiço (Raça)",
+    "category": "resistencia",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo",
+        "Halfling"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

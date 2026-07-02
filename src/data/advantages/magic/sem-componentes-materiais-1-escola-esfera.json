@@ -1,0 +1,11 @@
+{
+    "name": "Sem componentes materiais (1 Escola/Esfera)",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano",
+        "Sacerdote"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

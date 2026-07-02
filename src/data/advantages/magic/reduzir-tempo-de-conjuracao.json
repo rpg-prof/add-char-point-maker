@@ -1,0 +1,11 @@
+{
+    "name": "Reduzir Tempo de Conjuração",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano",
+        "Sacerdote"
+    ],
+    "cost": 5,
+    "costOthers": null,
+    "type": "advantage"
+}

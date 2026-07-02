@@ -1,0 +1,1 @@
+Ao se aproximar de animais selvagens ou treinados para atacar o animal tem que fazer um teste de Resistência contra Varinhas para conseguir atacar com uma penalidade de -1 para cada 3 níveis do personagem.

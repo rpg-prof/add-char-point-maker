@@ -1,0 +1,10 @@
+{
+    "name": "Limitado a Armas pequenas",
+    "category": "ofensivo",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": -15,
+    "costOthers": -30,
+    "type": "disadvantage"
+}

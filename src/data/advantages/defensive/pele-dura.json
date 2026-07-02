@@ -1,0 +1,10 @@
+{
+    "name": "Pele dura",
+    "category": "defensivo",
+    "applicableRaces": [
+        "Humano"
+    ],
+    "cost": 10,
+    "costOthers": 15,
+    "type": "advantage"
+}

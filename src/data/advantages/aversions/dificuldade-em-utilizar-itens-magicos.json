@@ -1,0 +1,11 @@
+{
+    "name": "Dificuldade em utilizar itens mágicos",
+    "category": "aversao",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo"
+    ],
+    "cost": -15,
+    "costOthers": -20,
+    "type": "disadvantage"
+}

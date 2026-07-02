@@ -1,0 +1,1 @@
+O personagem foi acusado de um crime e é caçado por uma autoridade. O personagem tem quer fugido depois da sentença, ou depois que já estava encarcerado. Os caçadores são organizados e determinados, e podem usar magias ou outros meios para localizar o personagem.

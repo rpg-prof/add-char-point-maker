@@ -1,0 +1,10 @@
+{
+    "name": "Pacto",
+    "category": "antecedente",
+    "applicableClasses": [
+        "Todas"
+    ],
+    "cost": -40,
+    "costOthers": null,
+    "type": "disadvantage"
+}

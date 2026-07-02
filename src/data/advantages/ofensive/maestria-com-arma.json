@@ -1,0 +1,10 @@
+{
+    "name": "Maestria com arma",
+    "category": "ofensivo",
+    "applicableClasses": [
+        "Guerreiro"
+    ],
+    "cost": 40,
+    "costOthers": 80,
+    "type": "advantage"
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Proteção contra o mal",
+    "category": "outros",
+    "applicableClasses": [
+        "Paladino"
+    ],
+    "cost": 5,
+    "costOthers": 40,
+    "type": "advantage"
+}

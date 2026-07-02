@@ -1,0 +1,10 @@
+{
+    "name": "Ataque adicional desarmado",
+    "category": "ofensivo",
+    "applicableClasses": [
+        "Monge"
+    ],
+    "cost": 15,
+    "costOthers": 40,
+    "type": "advantage"
+}

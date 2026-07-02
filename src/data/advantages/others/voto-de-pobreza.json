@@ -1,0 +1,11 @@
+{
+    "name": "Voto de Pobreza",
+    "category": "outros",
+    "applicableClasses": [
+        "Paladino",
+        "Sacerdote"
+    ],
+    "cost": -20,
+    "costOthers": -40,
+    "type": "disadvantage"
+}

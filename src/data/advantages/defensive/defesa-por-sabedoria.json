@@ -1,0 +1,10 @@
+{
+    "name": "Defesa por Sabedoria",
+    "category": "defensivo",
+    "applicableClasses": [
+        "Monge"
+    ],
+    "cost": 15,
+    "costOthers": 40,
+    "type": "advantage"
+}

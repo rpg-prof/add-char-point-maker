@@ -1,0 +1,10 @@
+{
+    "name": "Acesso à magias arcanas",
+    "category": "magica",
+    "applicableClasses": [
+        "Sacerdote"
+    ],
+    "cost": 25,
+    "costOthers": null,
+    "type": "advantage"
+}

@@ -1,0 +1,11 @@
+{
+    "name": "Encontrar túneis",
+    "category": "outros",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo"
+    ],
+    "cost": 5,
+    "costOthers": 15,
+    "type": "advantage"
+}

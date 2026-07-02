@@ -1,0 +1,11 @@
+{
+    "name": "Falar com plantas",
+    "category": "magica",
+    "applicableRaces": [
+        "Elfo",
+        "Halfling"
+    ],
+    "cost": 15,
+    "costOthers": 30,
+    "type": "advantage"
+}

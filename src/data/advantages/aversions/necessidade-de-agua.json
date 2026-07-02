@@ -1,0 +1,10 @@
+{
+    "name": "Necessidade de água",
+    "category": "aversao",
+    "applicableRaces": [
+        "Elfo-aquático"
+    ],
+    "cost": -5,
+    "costOthers": -30,
+    "type": "disadvantage"
+}

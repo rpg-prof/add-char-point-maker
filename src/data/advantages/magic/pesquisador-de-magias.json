@@ -1,0 +1,10 @@
+{
+    "name": "Pesquisador de Magias",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": 5,
+    "costOthers": null,
+    "type": "advantage"
+}

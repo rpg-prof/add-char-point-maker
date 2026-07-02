@@ -1,0 +1,11 @@
+{
+    "name": "Avaliar gemas",
+    "category": "outros",
+    "applicableRaces": [
+        "Anão",
+        "Gnomo"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage"
+}

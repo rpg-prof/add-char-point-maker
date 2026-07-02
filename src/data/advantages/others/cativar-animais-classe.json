@@ -1,0 +1,11 @@
+{
+    "name": "Cativar Animais (Classe)",
+    "category": "outros",
+    "applicableClasses": [
+        "Ranger",
+        "Bardo"
+    ],
+    "cost": 10,
+    "costOthers": 20,
+    "type": "advantage"
+}

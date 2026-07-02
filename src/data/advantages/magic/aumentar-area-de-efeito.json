@@ -1,0 +1,11 @@
+{
+    "name": "Aumentar Área de Efeito",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano",
+        "Sacerdote"
+    ],
+    "cost": 10,
+    "costOthers": null,
+    "type": "advantage"
+}

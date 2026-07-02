@@ -1,0 +1,10 @@
+{
+    "name": "Identificação de poções",
+    "category": "outros",
+    "applicableRaces": [
+        "Gnomo"
+    ],
+    "cost": 5,
+    "costOthers": 10,
+    "type": "advantage"
+}

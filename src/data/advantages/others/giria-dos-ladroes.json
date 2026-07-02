@@ -1,0 +1,10 @@
+{
+    "name": "Gíria dos Ladrões",
+    "category": "outros",
+    "applicableClasses": [
+        "Ladrão"
+    ],
+    "cost": 5,
+    "costOthers": 25,
+    "type": "advantage"
+}

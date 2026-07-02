@@ -1,0 +1,10 @@
+{
+    "name": "Armadura Arcana",
+    "category": "antecedente",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": 2,
+    "costOthers": 10,
+    "type": "advantage"
+}

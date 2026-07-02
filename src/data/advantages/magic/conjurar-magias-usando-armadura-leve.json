@@ -1,0 +1,10 @@
+{
+    "name": "Conjurar magias usando armadura leve",
+    "category": "magica",
+    "applicableClasses": [
+        "Arcano"
+    ],
+    "cost": 15,
+    "costOthers": null,
+    "type": "advantage"
+}
