@@ -86,6 +86,16 @@
             "speed": "8",
             "damagePM": "2d4",
             "damageG": "2d8"
+        },
+        {
+            "code": "chinese-stick",
+            "name": "Bastão Chines",
+            "weight": "1 a 1,4kg",
+            "size": "1,6 a 2m",
+            "type": "e",
+            "speed": "5",
+            "damagePM": "1d8",
+            "damageG": "1d8+1"
         }
     ]
 }

@@ -96,6 +96,16 @@
             "speed": "2",
             "damagePM": "1",
             "damageG": "1"
+        },
+        {
+            "code": "nunchaku",
+            "name": "Nunchaku",
+            "weight": "1 a 1,5kg",
+            "size": "60 a 100cm",
+            "type": "e",
+            "speed": "3",
+            "damagePM": "1d6",
+            "damageG": "1d6+1"
         }
     ]
 }

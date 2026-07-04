@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Award, FileText, NotebookPen, BookHeart, Backpack } from "lucide-react";
 import {
   Sidebar,
@@ -18,14 +18,6 @@ import {
 } from "@/components/ui/sidebar";
 import { exportCharacterPdf } from "@/lib/exportCharacterPdf";
 import AppLogo from "@/components/AppLogo";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-  DialogFooter,
-} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import PointTracker from "@/components/PointTracker";
 import AttributePanel from "@/components/AttributePanel";
@@ -78,6 +70,15 @@ import {
   sanitizeCombatLoadout,
   type CombatLoadout,
 } from "@/lib/combatStats";
+import {
+  defaultEvolutionProgress,
+  normalizeEvolutionProgress,
+  type EvolutionProgress,
+} from "@/lib/evolutionProgress";
+import {
+  stashCharacterForEvolution,
+  type CharacterSaveData,
+} from "@/lib/characterSave";
 
 const ATTRIBUTE_POINTS = 75;
 const CHARACTER_POINTS = 100;
@@ -275,8 +276,8 @@ const Index = () => {
     timestamp: string;
   }
   const [progressionHistory, setProgressionHistory] = useState<ProgressionEntry[]>([]);
-  const [showEvolveDialog, setShowEvolveDialog] = useState(false);
-  const [evolveLevel, setEvolveLevel] = useState(2);
+  const evolutionProgressRef = useRef<EvolutionProgress>(defaultEvolutionProgress());
+  const navigate = useNavigate();
 
   const totalProgressionPoints = useMemo(
     () => progressionHistory.reduce((sum, e) => sum + e.points, 0),
@@ -288,24 +289,93 @@ const Index = () => {
     return Math.max(...progressionHistory.map((e) => e.level));
   }, [progressionHistory]);
 
-  const handleEvolve = useCallback(() => {
-    const points = evolveLevel * 10;
-    setProgressionHistory((prev) => [
-      ...prev,
-      { level: evolveLevel, points, timestamp: new Date().toISOString() },
-    ]);
-    setShowEvolveDialog(false);
-    setEvolveLevel((prev) => prev + 1);
-  }, [evolveLevel]);
-
   const handleUndoEvolve = useCallback(() => {
     setProgressionHistory((prev) => {
       if (prev.length === 0) return prev;
       const newHistory = prev.slice(0, -1);
       return newHistory;
     });
-    setEvolveLevel((prev) => Math.max(2, prev - 1));
   }, []);
+
+  const buildCurrentCharacterSave = useCallback((): CharacterSaveData => ({
+    charName,
+    playerName,
+    sexo,
+    idade,
+    peso,
+    altura,
+    cabelos,
+    olhos,
+    tendencia,
+    attributes,
+    subAttributes,
+    selectedRace,
+    selectedClass,
+    selectedSocialClass,
+    selectedReputation,
+    selectedAdvantages,
+    selectedRaceClassAdv,
+    selectedSkills,
+    selectedWeapons,
+    selectedWeaponGroups,
+    selectedShields,
+    grimoire,
+    divineAccess,
+    arcaneAccess,
+    arcaneSpecialist,
+    progressionHistory,
+    evolutionProgress: evolutionProgressRef.current,
+    purchasedItems,
+    addedItems,
+    customItems,
+    extraMoneyPc,
+    combatLoadout,
+    notesItems,
+    notesGeneral,
+    magicComponents,
+    characterHistory,
+  }), [
+    charName,
+    playerName,
+    sexo,
+    idade,
+    peso,
+    altura,
+    cabelos,
+    olhos,
+    tendencia,
+    attributes,
+    subAttributes,
+    selectedRace,
+    selectedClass,
+    selectedSocialClass,
+    selectedReputation,
+    selectedAdvantages,
+    selectedRaceClassAdv,
+    selectedSkills,
+    selectedWeapons,
+    selectedWeaponGroups,
+    selectedShields,
+    grimoire,
+    divineAccess,
+    arcaneAccess,
+    arcaneSpecialist,
+    progressionHistory,
+    purchasedItems,
+    addedItems,
+    customItems,
+    extraMoneyPc,
+    combatLoadout,
+    notesItems,
+    notesGeneral,
+    magicComponents,
+    characterHistory,
+  ]);
+
+  const handleGoToEvolution = useCallback(() => {
+    stashCharacterForEvolution(buildCurrentCharacterSave());
+    navigate("/evolution");
+  }, [buildCurrentCharacterSave, navigate]);
 
   // Calculate attribute points spent
   const attributePointsSpent = useMemo(
@@ -608,24 +678,7 @@ const Index = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleSave = useCallback(() => {
-    const data = {
-      charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia,
-      attributes, subAttributes,
-      selectedRace, selectedClass, selectedSocialClass, selectedReputation,
-      selectedAdvantages, selectedRaceClassAdv, selectedSkills,
-      selectedWeapons, selectedWeaponGroups, selectedShields, grimoire,
-      divineAccess, arcaneAccess, arcaneSpecialist,
-      progressionHistory,
-      purchasedItems,
-      addedItems,
-      customItems,
-      extraMoneyPc,
-      combatLoadout,
-      notesItems,
-      notesGeneral,
-      magicComponents,
-      characterHistory,
-    };
+    const data = buildCurrentCharacterSave();
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -633,7 +686,7 @@ const Index = () => {
     a.download = `${charName || "personagem"}.json`;
     a.click();
     URL.revokeObjectURL(url);
-  }, [charName, playerName, sexo, idade, peso, altura, cabelos, olhos, tendencia, attributes, subAttributes, selectedRace, selectedClass, selectedSocialClass, selectedReputation, selectedAdvantages, selectedRaceClassAdv, selectedSkills, selectedWeapons, selectedWeaponGroups, selectedShields, grimoire, divineAccess, arcaneAccess, arcaneSpecialist, progressionHistory, purchasedItems, addedItems, customItems, extraMoneyPc, combatLoadout, notesItems, notesGeneral, magicComponents, characterHistory]);
+  }, [buildCurrentCharacterSave, charName]);
 
   const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -683,9 +736,10 @@ const Index = () => {
         setArcaneSpecialist(data.arcaneSpecialist ?? null);
         if (data.progressionHistory) {
           setProgressionHistory(data.progressionHistory);
-          const maxLevel = data.progressionHistory.reduce((max: number, e: ProgressionEntry) => Math.max(max, e.level), 1);
-          setEvolveLevel(maxLevel + 1);
+        } else {
+          setProgressionHistory([]);
         }
+        evolutionProgressRef.current = normalizeEvolutionProgress(data.evolutionProgress);
         const migratedPurchased = data.purchasedItems
           ? migratePurchasedItems(data.purchasedItems)
           : {};
@@ -1148,16 +1202,6 @@ const Index = () => {
                 />
                 <Button
                   size="sm"
-                  asChild
-                  className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
-                >
-                  <Link to="/evolution">
-                    <TrendingUp className="w-3.5 h-3.5 mr-1" />
-                    <span className="hidden sm:inline">Evolução</span>
-                  </Link>
-                </Button>
-                <Button
-                  size="sm"
                   onClick={() => fileInputRef.current?.click()}
                   className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
                 >
@@ -1223,7 +1267,7 @@ const Index = () => {
                 </Button>
                 <Button
                   size="sm"
-                  onClick={() => setShowEvolveDialog(true)}
+                  onClick={handleGoToEvolution}
                   className="bg-gold text-parchment-dark hover:bg-gold-glow font-body text-xs font-semibold shadow-[var(--shadow-gold)]"
                 >
                   <TrendingUp className="w-3.5 h-3.5 mr-1" />
@@ -1291,72 +1335,6 @@ const Index = () => {
                 />
               )}
             </div>
-
-            {/* Evolve Dialog */}
-            <Dialog open={showEvolveDialog} onOpenChange={setShowEvolveDialog}>
-              <DialogContent className="dark-panel border-gold/40 sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle className="font-display text-gold tracking-wider">
-                    <TrendingUp className="w-5 h-5 inline mr-2" />
-                    Evoluir Personagem
-                  </DialogTitle>
-                  <DialogDescription className="text-parchment/60">
-                    Ao atingir um novo nível, o personagem recebe Nível × 10 pontos de progressão.
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="space-y-4 py-2">
-                  <div>
-                    <label className="font-display text-xs tracking-wider uppercase text-parchment/70 mb-1 block">
-                      Nível Alcançado
-                    </label>
-                    <input
-                      type="number"
-                      min={2}
-                      max={20}
-                      value={evolveLevel}
-                      onChange={(e) => setEvolveLevel(Math.max(2, Math.min(20, parseInt(e.target.value) || 2)))}
-                      className="w-full bg-background/50 border border-border rounded px-3 py-2 text-foreground font-body focus:outline-none focus:ring-1 focus:ring-gold"
-                    />
-                  </div>
-                  <div className="rounded-lg border border-gold/30 bg-gold/5 p-3 text-sm">
-                    <p className="text-muted-foreground">
-                      Pontos a receber: <span className="text-gold font-bold text-base">{evolveLevel * 10}</span>
-                    </p>
-                    {progressionHistory.length > 0 && (
-                      <p className="text-muted-foreground mt-1">
-                        Total acumulado: <span className="font-bold">{totalProgressionPoints}</span> → <span className="font-bold text-gold">{totalProgressionPoints + evolveLevel * 10}</span>
-                      </p>
-                    )}
-                  </div>
-                  {progressionHistory.length > 0 && (
-                    <div className="text-xs text-muted-foreground">
-                      <p className="font-display tracking-wider uppercase mb-1">Histórico:</p>
-                      {progressionHistory.map((entry, i) => (
-                        <span key={i} className="inline-block mr-2 px-1.5 py-0.5 rounded bg-gold/10 border border-gold/20 text-gold-dark">
-                          Nv.{entry.level} (+{entry.points})
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-                <DialogFooter>
-                  <Button
-                    variant="outline"
-                    onClick={() => setShowEvolveDialog(false)}
-                    className="font-display text-xs tracking-wider"
-                  >
-                    Cancelar
-                  </Button>
-                  <Button
-                    onClick={handleEvolve}
-                    className="bg-gold text-parchment-dark hover:bg-gold-dark font-display text-xs tracking-wider"
-                  >
-                    <TrendingUp className="w-4 h-4 mr-1" />
-                    Evoluir para Nível {evolveLevel}
-                  </Button>
-                </DialogFooter>
-              </DialogContent>
-            </Dialog>
 
             {/* Step Card */}
             <div className="rounded-xl gilt-card overflow-hidden">

@@ -49,6 +49,7 @@ import {
   downloadCharacterSave,
   mergeEvolutionIntoCharacter,
   parseCharacterSave,
+  consumeStashedCharacterForEvolution,
   type CharacterSaveData,
 } from "@/lib/characterSave";
 import { getSkillCost, skills } from "@/data/skills";
@@ -94,6 +95,14 @@ const Evolution = () => {
       ? `${trimmed} - ${NAMED_PAGE_TITLE_SUFFIX}`
       : DEFAULT_PAGE_TITLE;
   }, [char.charName]);
+
+  useEffect(() => {
+    const stashed = consumeStashedCharacterForEvolution();
+    if (!stashed) return;
+    setChar(stashed);
+    setLoaded(true);
+    setCurrentStep(0);
+  }, []);
 
   const hasMagicAccess =
     Object.keys(char.divineAccess).length > 0 ||

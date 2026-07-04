@@ -196,6 +196,23 @@ export function parseCharacterSave(raw: unknown): CharacterSaveData | null {
   };
 }
 
+export const EVOLUTION_TRANSFER_STORAGE_KEY = "add-char-point-maker:evolution-transfer";
+
+export function stashCharacterForEvolution(data: CharacterSaveData): void {
+  sessionStorage.setItem(EVOLUTION_TRANSFER_STORAGE_KEY, JSON.stringify(data));
+}
+
+export function consumeStashedCharacterForEvolution(): CharacterSaveData | null {
+  const raw = sessionStorage.getItem(EVOLUTION_TRANSFER_STORAGE_KEY);
+  if (!raw) return null;
+  sessionStorage.removeItem(EVOLUTION_TRANSFER_STORAGE_KEY);
+  try {
+    return parseCharacterSave(JSON.parse(raw));
+  } catch {
+    return null;
+  }
+}
+
 export function downloadCharacterSave(data: CharacterSaveData): void {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
