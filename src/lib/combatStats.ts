@@ -54,6 +54,8 @@ export interface CombatLoadout {
   attackBaseBonus: number;
   magicBonuses: MagicCaBonus[];
   weaponSlots: WeaponAttackSlot[];
+  /** Domínio além da perícia, por id de equipamento. */
+  weaponMastery: Record<string, "especializacao" | "maestria">;
   /** PV atuais; null = igual ao máximo calculado. */
   currentHp: number | null;
   /** Máximo de pontos de magia (editável conforme evolução). */
@@ -100,6 +102,7 @@ export const defaultCombatLoadout = (): CombatLoadout => ({
   attackBaseBonus: 0,
   magicBonuses: [],
   weaponSlots: defaultWeaponSlots(),
+  weaponMastery: {},
   currentHp: null,
   maxMana: 0,
   currentMana: null,
@@ -109,6 +112,18 @@ export const defaultCombatLoadout = (): CombatLoadout => ({
   currentChi: null,
   showChi: false,
 });
+
+function normalizeWeaponMastery(
+  raw: CombatLoadout["weaponMastery"] | undefined,
+): Record<string, "especializacao" | "maestria"> {
+  if (!raw || typeof raw !== "object") return {};
+  const next: Record<string, "especializacao" | "maestria"> = {};
+  for (const [id, level] of Object.entries(raw)) {
+    if (!id || (level !== "especializacao" && level !== "maestria")) continue;
+    next[id] = level;
+  }
+  return next;
+}
 
 export function isShieldItem(item: EquipmentItem): boolean {
   return isShield(item);
@@ -647,6 +662,7 @@ export function sanitizeCombatLoadout(
     attackBaseBonus: loadout.attackBaseBonus ?? 0,
     magicBonuses: loadout.magicBonuses ?? [],
     weaponSlots,
+    weaponMastery: normalizeWeaponMastery(loadout.weaponMastery),
     currentHp:
       loadout.currentHp == null || Number.isNaN(loadout.currentHp)
         ? null

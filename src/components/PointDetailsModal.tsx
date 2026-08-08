@@ -31,15 +31,15 @@ function BreakdownColumn({
   variant: "positive" | "negative";
 }) {
   const isPositive = variant === "positive";
-  const valueColor = isPositive ? "text-gold" : "text-teal-300";
+  const valueColor = isPositive ? "text-gold-dark" : "text-teal-800";
   const panelClass = isPositive
-    ? "bg-gold/10 border-gold/30"
-    : "bg-teal-500/10 border-teal-400/30";
+    ? "bg-gold/10 border-gold-dark/30"
+    : "bg-teal-700/10 border-teal-700/25";
 
   return (
-    <div className={`flex flex-col gap-2 min-w-0 rounded-lg border p-3 ${panelClass}`}>
-      <div className="flex items-center justify-between border-b border-parchment/20 pb-1.5">
-        <h3 className="font-display text-xs tracking-wider uppercase text-parchment/90">
+    <div className={`flex flex-col gap-2 min-w-0 rounded-lg border p-3 bg-card ${panelClass}`}>
+      <div className="flex items-center justify-between border-b border-border pb-1.5">
+        <h3 className="font-display text-xs tracking-wider uppercase text-muted-foreground">
           {title}
         </h3>
         <span className={`font-display text-sm font-bold tabular-nums ${valueColor}`}>
@@ -48,7 +48,7 @@ function BreakdownColumn({
         </span>
       </div>
       {entries.length === 0 ? (
-        <p className="text-xs text-parchment/55 italic py-2">Nenhum</p>
+        <p className="text-xs text-muted-foreground italic py-2">Nenhum</p>
       ) : (
         <ul className="space-y-1.5 max-h-64 overflow-y-auto pr-1">
           {entries.map((entry) => (
@@ -56,7 +56,7 @@ function BreakdownColumn({
               key={entry.label}
               className="flex items-start justify-between gap-2 text-sm font-body"
             >
-              <span className="text-parchment leading-snug">{entry.label}</span>
+              <span className="text-foreground leading-snug">{entry.label}</span>
               <span className={`shrink-0 font-display font-semibold tabular-nums ${valueColor}`}>
                 {isPositive ? "+" : "−"}
                 {entry.value}
@@ -97,22 +97,24 @@ const PointDetailsModal = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="dark-panel border-gold/40 sm:max-w-2xl [&>button]:text-parchment/70 [&>button]:hover:text-parchment">
-        <DialogHeader>
-          <DialogTitle className="font-display text-gold tracking-wider">
-            {title}
-          </DialogTitle>
-          <DialogDescription className="text-parchment/80">
-            Saldo:{" "}
-            <span className={isOver ? "text-red-400 font-bold" : "text-gold font-bold"}>
-              {remaining}
-            </span>{" "}
-            <span className="text-parchment/60">/ {total}</span>
-            <span className="block mt-1 text-parchment/65 text-xs">({summary})</span>
-          </DialogDescription>
-        </DialogHeader>
+      <DialogContent className="sm:max-w-2xl">
+        <div className="px-5 pt-5 pb-3 border-b border-border bg-secondary/70 pr-12">
+          <DialogHeader>
+            <DialogTitle className="font-display tracking-wide text-base text-gold-dark">
+              {title}
+            </DialogTitle>
+            <DialogDescription className="font-body text-xs text-foreground/65 mt-1">
+              Saldo:{" "}
+              <span className={isOver ? "text-blood font-bold" : "text-gold-dark font-bold"}>
+                {remaining}
+              </span>{" "}
+              <span className="text-muted-foreground">/ {total}</span>
+              <span className="block mt-1 text-muted-foreground text-xs">({summary})</span>
+            </DialogDescription>
+          </DialogHeader>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 py-2">
+        <div className="px-5 py-4 grid grid-cols-1 sm:grid-cols-2 gap-4 bg-background">
           <BreakdownColumn
             title="Pontos Gastos"
             entries={breakdown.positive}

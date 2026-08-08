@@ -12,7 +12,11 @@ import {
   type CombatLoadout,
 } from "@/lib/combatStats";
 import { normalizeGrimoire, type GrimoireEntry } from "@/lib/grimoire";
-import { mergeInventory, normalizeCustomItems } from "@/lib/inventory";
+import {
+  mergeInventory,
+  normalizeCustomItems,
+  normalizeInventoryOrder,
+} from "@/lib/inventory";
 import {
   defaultMagicComponents,
   normalizeMagicComponents,
@@ -56,6 +60,8 @@ export interface CharacterSaveData {
   purchasedItems: PurchasedItems;
   addedItems: PurchasedItems;
   customItems: CustomInventoryItem[];
+  /** Ordem de exibição dos itens do inventário (ids de catálogo e customizados). */
+  inventoryOrder: string[];
   extraMoneyPc: number;
   combatLoadout: CombatLoadout;
   notesItems: string;
@@ -112,6 +118,7 @@ export function createEmptyCharacterSave(): CharacterSaveData {
     purchasedItems: {},
     addedItems: {},
     customItems: [],
+    inventoryOrder: [],
     extraMoneyPc: 0,
     combatLoadout: defaultCombatLoadout(),
     notesItems: "",
@@ -185,6 +192,14 @@ export function parseCharacterSave(raw: unknown): CharacterSaveData | null {
     purchasedItems: migratedPurchased,
     addedItems: migratedAdded,
     customItems,
+    inventoryOrder: normalizeInventoryOrder(
+      Array.isArray(data.inventoryOrder)
+        ? data.inventoryOrder.filter((id): id is string => typeof id === "string")
+        : [],
+      migratedPurchased,
+      migratedAdded,
+      customItems,
+    ),
     extraMoneyPc: typeof data.extraMoneyPc === "number" ? data.extraMoneyPc : 0,
     combatLoadout,
     notesItems: data.notesItems ?? "",
@@ -196,21 +211,52 @@ export function parseCharacterSave(raw: unknown): CharacterSaveData | null {
   };
 }
 
-export const EVOLUTION_TRANSFER_STORAGE_KEY = "add-char-point-maker:evolution-transfer";
+const ACTIVE_CHARACTER_STORAGE_KEY = "add-char-point-maker:active-character";
+const CHARACTER_HANDOFF_STORAGE_KEY = "add-char-point-maker:character-handoff";
 
-export function stashCharacterForEvolution(data: CharacterSaveData): void {
-  sessionStorage.setItem(EVOLUTION_TRANSFER_STORAGE_KEY, JSON.stringify(data));
+/** Mantém o personagem ativo da sessão (ficha de jogo). */
+export function setActiveCharacter(data: CharacterSaveData): void {
+  sessionStorage.setItem(ACTIVE_CHARACTER_STORAGE_KEY, JSON.stringify(data));
 }
 
-export function consumeStashedCharacterForEvolution(): CharacterSaveData | null {
-  const raw = sessionStorage.getItem(EVOLUTION_TRANSFER_STORAGE_KEY);
+export function getActiveCharacter(): CharacterSaveData | null {
+  const raw = sessionStorage.getItem(ACTIVE_CHARACTER_STORAGE_KEY);
   if (!raw) return null;
-  sessionStorage.removeItem(EVOLUTION_TRANSFER_STORAGE_KEY);
   try {
     return parseCharacterSave(JSON.parse(raw));
   } catch {
     return null;
   }
+}
+
+export function clearActiveCharacter(): void {
+  sessionStorage.removeItem(ACTIVE_CHARACTER_STORAGE_KEY);
+}
+
+/** Entrega o personagem para outra tela (edição / evolução). */
+export function stashCharacterHandoff(data: CharacterSaveData): void {
+  sessionStorage.setItem(CHARACTER_HANDOFF_STORAGE_KEY, JSON.stringify(data));
+}
+
+export function consumeCharacterHandoff(): CharacterSaveData | null {
+  const raw = sessionStorage.getItem(CHARACTER_HANDOFF_STORAGE_KEY);
+  if (!raw) return null;
+  sessionStorage.removeItem(CHARACTER_HANDOFF_STORAGE_KEY);
+  try {
+    return parseCharacterSave(JSON.parse(raw));
+  } catch {
+    return null;
+  }
+}
+
+/** @deprecated Use stashCharacterHandoff */
+export function stashCharacterForEvolution(data: CharacterSaveData): void {
+  stashCharacterHandoff(data);
+}
+
+/** @deprecated Use consumeCharacterHandoff */
+export function consumeStashedCharacterForEvolution(): CharacterSaveData | null {
+  return consumeCharacterHandoff();
 }
 
 export function downloadCharacterSave(data: CharacterSaveData): void {

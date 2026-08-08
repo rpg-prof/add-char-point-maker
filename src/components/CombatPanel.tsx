@@ -23,6 +23,15 @@ import { formatArmorClass } from "@/data/equipment";
 import type { CustomInventoryItem, PurchasedItems } from "@/data/equipment";
 import type { AttributeName } from "@/data/characterData";
 import { resolveResourceCurrent } from "@/lib/combatResources";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+const NONE_EQUIP_VALUE = "__none__";
 
 interface CombatPanelProps {
   subAttributes: Record<string, number>;
@@ -810,21 +819,27 @@ const CombatPanel = ({
             <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
               Armadura
             </label>
-            <select
-              value={loadout.equippedArmorId ?? ""}
-              onChange={(e) =>
-                update({ equippedArmorId: e.target.value || null })
+            <Select
+              value={loadout.equippedArmorId ?? NONE_EQUIP_VALUE}
+              onValueChange={(next) =>
+                update({ equippedArmorId: next === NONE_EQUIP_VALUE ? null : next })
               }
-              className="w-full bg-background/50 border border-border rounded px-3 py-2 text-sm font-body"
             >
-              <option value="">Sem armadura</option>
-              {bodyArmors.map((item) => (
-                <option key={item.id} value={item.id}>
-                  {item.name}
-                  {item.armorClass != null ? ` (${formatArmorClass(item.armorClass)})` : ""}
-                </option>
-              ))}
-            </select>
+              <SelectTrigger className="w-full bg-background/50 border-border font-body">
+                <SelectValue placeholder="Sem armadura" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value={NONE_EQUIP_VALUE} className="font-body">
+                  Sem armadura
+                </SelectItem>
+                {bodyArmors.map((item) => (
+                  <SelectItem key={item.id} value={item.id} className="font-body">
+                    {item.name}
+                    {item.armorClass != null ? ` (${formatArmorClass(item.armorClass)})` : ""}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
             {bodyArmors.length === 0 && (
               <p className="text-xs text-muted-foreground mt-1">
                 Compre armaduras na aba Inventário.
@@ -836,21 +851,27 @@ const CombatPanel = ({
             <label className="font-display text-xs tracking-wider uppercase text-muted-foreground mb-1 block">
               Escudo
             </label>
-            <select
-              value={loadout.equippedShieldId ?? ""}
-              onChange={(e) =>
-                update({ equippedShieldId: e.target.value || null })
+            <Select
+              value={loadout.equippedShieldId ?? NONE_EQUIP_VALUE}
+              onValueChange={(next) =>
+                update({ equippedShieldId: next === NONE_EQUIP_VALUE ? null : next })
               }
-              className="w-full bg-background/50 border border-border rounded px-3 py-2 text-sm font-body"
             >
-              <option value="">Sem escudo</option>
-              {shields.map((item) => (
-                <option key={item.id} value={item.id}>
-                  {item.name}
-                  {item.armorClass != null ? ` (${formatArmorClass(item.armorClass)})` : ""}
-                </option>
-              ))}
-            </select>
+              <SelectTrigger className="w-full bg-background/50 border-border font-body">
+                <SelectValue placeholder="Sem escudo" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value={NONE_EQUIP_VALUE} className="font-body">
+                  Sem escudo
+                </SelectItem>
+                {shields.map((item) => (
+                  <SelectItem key={item.id} value={item.id} className="font-body">
+                    {item.name}
+                    {item.armorClass != null ? ` (${formatArmorClass(item.armorClass)})` : ""}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
 
           <div>

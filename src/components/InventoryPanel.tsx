@@ -787,6 +787,7 @@ const InventoryPanel = ({
         onOpenChange={setPickerOpen}
         mode={pickerMode}
         mainTab={pickerMainTab}
+        onMainTabChange={setPickerMainTab}
         selectedSocialClass={selectedSocialClass}
         subAttributes={subAttributes}
         purchased={purchased}
@@ -803,7 +804,7 @@ const InventoryPanel = ({
           if (!open) { setMoneyPo(""); setMoneyPp(""); setMoneyPc(""); }
         }}
       >
-        <DialogContent className="max-w-sm bg-card border-2 border-gold-dark/40 shadow-2xl gap-0 p-0 overflow-hidden">
+        <DialogContent className="max-w-sm">
           {/* Header */}
           <div className={`px-5 pt-5 pb-3 border-b-2 border-border ${moneyDialogMode === "add" ? "bg-secondary" : "bg-red-100"}`}>
             <DialogHeader>
@@ -912,7 +913,7 @@ const InventoryPanel = ({
           }
         }}
       >
-        <DialogContent className="max-w-sm bg-card border-2 border-gold-dark/40 shadow-2xl gap-0 p-0 overflow-hidden">
+        <DialogContent className="max-w-sm">
           <div className="px-5 pt-5 pb-3 border-b-2 border-border bg-secondary">
             <DialogHeader>
               <div className="flex items-center gap-2.5">
@@ -1058,7 +1059,7 @@ const InventoryPanel = ({
           if (!open) { setCustomName(""); setCustomWeight(""); setCustomQty("1"); }
         }}
       >
-        <DialogContent className="max-w-sm bg-card border-2 border-gold-dark/40 shadow-2xl gap-0 p-0 overflow-hidden">
+        <DialogContent className="max-w-sm">
           {/* Header */}
           <div className="px-5 pt-5 pb-3 border-b-2 border-border bg-secondary">
             <DialogHeader>

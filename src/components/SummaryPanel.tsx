@@ -5,15 +5,14 @@ import {
   ShieldAlert,
   Sparkles,
   Swords,
-  User,
   Shield,
   Crosshair,
   BookOpen,
 } from "lucide-react";
+import CharacterIdentityCard from "@/components/CharacterIdentityCard";
 import {
   generalAdvantages,
   generalDisadvantages,
-  reputations,
   socialClasses,
   type AttributeName,
 } from "@/data/characterData";
@@ -270,10 +269,6 @@ const SummaryPanel = ({
     .filter((item) => item.qty > 0)
     .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
 
-  const reputationLabel =
-    reputations.find((r) => r.level === selectedReputation)?.description ?? "";
-
-  const displayName = charName.trim() || "Personagem Sem Nome";
   const resistances = computeResistanceBreakdown({
     subAttributes,
     selectedRaceClassAdv,
@@ -289,7 +284,7 @@ const SummaryPanel = ({
   });
   const caBreakdown = computeArmorClassBreakdown({
     subAttributes,
-    purchased: mergeInventory(purchasedItems, addedItems),
+    purchased: inventory,
     selectedRaceClassAdv,
     destrezaMain: attributes.Destreza,
     sabedoriaMain: attributes.Sabedoria,
@@ -308,10 +303,10 @@ const SummaryPanel = ({
       return !selectedWeaponGroups.includes(groupName);
     })
     .map((wk) => {
-      const [groupName, weaponCode] = wk.split("::");
+      const [groupName, weaponName] = wk.split("::");
       const group = weaponGroups.find((g) => g.name === groupName);
-      const weapon = group?.weapons.find((w) => w.code === weaponCode);
-      return { key: wk, name: weapon?.name ?? weaponCode };
+      const weapon = group?.weapons.find((w) => w.name === weaponName || w.code === weaponName);
+      return { key: wk, name: weapon?.name ?? weaponName };
     })
     .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
   const shieldItems = selectedShields.map((sName) => {
@@ -321,83 +316,24 @@ const SummaryPanel = ({
   const totalWeaponProf =
     weaponGroupItems.length + individualWeaponItems.length + shieldItems.length;
 
-  // Physical description fields
-  const physicalFacts = [
-    { label: "Tendência", value: tendencia || "—" },
-    { label: "Sexo", value: sexo || "—" },
-    { label: "Idade", value: idade || "—" },
-    { label: "Peso", value: peso || "—" },
-    { label: "Altura", value: altura || "—" },
-    { label: "Cabelos", value: cabelos || "—" },
-    { label: "Olhos", value: olhos || "—" },
-  ].filter((f) => f.value !== "—");
-
-  const headerFacts = [
-    { label: "Raça", value: selectedRace || "—" },
-    { label: "Classe", value: selectedClass || "—" },
-    { label: "Classe Social", value: selectedSocialClass || "—" },
-    {
-      label: "Reputação",
-      value: `Nv. ${selectedReputation}`,
-      hint: reputationLabel,
-    },
-  ];
-
   return (
     <div className="space-y-3">
-      {/* Cabeçalho */}
-      <div className="dark-panel rounded-xl overflow-hidden border border-gold/25 shadow-sm">
-        <div className="px-4 pt-4 pb-3 flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <p className="font-display text-[10px] tracking-[0.2em] uppercase text-gold/55 mb-1">
-              Ficha de Personagem
-            </p>
-            <h3 className="font-display text-lg md:text-xl tracking-wide text-gold leading-tight truncate">
-              {displayName}
-            </h3>
-            {playerName.trim() && (
-              <p className="text-xs font-body text-parchment/55 mt-1 flex items-center gap-1.5">
-                <User className="w-3 h-3 shrink-0" />
-                <span className="truncate">{playerName}</span>
-              </p>
-            )}
-          </div>
-          <div className="shrink-0 text-right rounded-lg border border-gold/25 bg-gold/10 px-3 py-2">
-            <p className="font-display text-[9px] tracking-wider uppercase text-gold/70">Nível</p>
-            <p className="font-display text-2xl font-bold text-gold tabular-nums leading-none">
-              {characterLevel}
-            </p>
-          </div>
-        </div>
-        <div className="gold-rule mx-4" />
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-gold/10 mt-3">
-          {headerFacts.map(({ label, value, hint }) => (
-            <div key={label} className="bg-parchment-dark/40 px-3 py-2.5 min-w-0">
-              <p className="font-display text-[9px] tracking-wider uppercase text-parchment/45 truncate">
-                {label}
-              </p>
-              <p
-                className="font-display text-xs text-parchment/90 leading-snug truncate mt-0.5"
-                title={hint}
-              >
-                {value}
-              </p>
-            </div>
-          ))}
-        </div>
-        {physicalFacts.length > 0 && (
-          <div className="px-4 py-2.5 flex flex-wrap gap-x-4 gap-y-1 border-t border-gold/10">
-            {physicalFacts.map(({ label, value }) => (
-              <span key={label} className="text-[11px] font-body text-parchment/60">
-                <span className="font-display tracking-wide text-parchment/40 uppercase text-[9px] mr-1">
-                  {label}:
-                </span>
-                {value}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
+      <CharacterIdentityCard
+        charName={charName}
+        playerName={playerName}
+        selectedRace={selectedRace}
+        selectedClass={selectedClass}
+        selectedSocialClass={selectedSocialClass}
+        selectedReputation={selectedReputation}
+        characterLevel={characterLevel}
+        sexo={sexo}
+        idade={idade}
+        peso={peso}
+        altura={altura}
+        cabelos={cabelos}
+        olhos={olhos}
+        tendencia={tendencia}
+      />
 
       {/* Combate */}
       <SummaryCard icon={<Swords className="w-4 h-4" />} title="Combate" accent="blood">
@@ -412,7 +348,7 @@ const SummaryPanel = ({
             label="C.A."
             value={caBreakdown.total}
             variant="gold"
-            title={`Base ${caBreakdown.base} + Armadura ${caBreakdown.armadura} + Destreza ${formatSigned(caBreakdown.destreza)} + Outros ${formatSigned(caBreakdown.outros)}`}
+            title={`Base ${caBreakdown.base} + Armadura ${caBreakdown.armadura} + Elmo ${caBreakdown.elmo} + Escudo ${caBreakdown.escudo} + Destreza ${formatSigned(caBreakdown.destreza)} + Outros ${formatSigned(caBreakdown.outros)}`}
           />
           <StatPill
             label="Armadura"

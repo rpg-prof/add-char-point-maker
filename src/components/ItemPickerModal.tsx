@@ -50,11 +50,18 @@ import { getSubAttributeBonuses } from "@/data/subAttributes";
 export type ItemPickerMode = "buy" | "add";
 export type ItemPickerMainTab = "armas" | "armaduras" | "equipamento";
 
+const MAIN_TABS: { id: ItemPickerMainTab; label: string; icon: React.ReactNode }[] = [
+  { id: "armas", label: "Armas", icon: <Swords className="w-3.5 h-3.5" /> },
+  { id: "armaduras", label: "Armaduras", icon: <Shield className="w-3.5 h-3.5" /> },
+  { id: "equipamento", label: "Equipamento", icon: <Package className="w-3.5 h-3.5" /> },
+];
+
 interface ItemPickerModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   mode: ItemPickerMode;
   mainTab: ItemPickerMainTab;
+  onMainTabChange?: (tab: ItemPickerMainTab) => void;
   selectedSocialClass: string;
   subAttributes: Record<string, number>;
   purchased: PurchasedItems;
@@ -104,6 +111,7 @@ const ItemPickerModal = ({
   onOpenChange,
   mode,
   mainTab,
+  onMainTabChange,
   selectedSocialClass,
   subAttributes,
   purchased,
@@ -111,13 +119,22 @@ const ItemPickerModal = ({
   extraMoneyPc,
   onSelectItem,
 }: ItemPickerModalProps) => {
+  const [localMainTab, setLocalMainTab] = useState<ItemPickerMainTab>(mainTab);
   const [weaponSubTab, setWeaponSubTab] = useState<WeaponGroupId>("todas");
   const [equipmentSubTab, setEquipmentSubTab] = useState<EquipmentSubTabId>("todas");
   const [search, setSearch] = useState("");
   const searchRef = useRef<HTMLInputElement>(null);
 
+  const activeMainTab = onMainTabChange ? mainTab : localMainTab;
+
+  const setMainTab = (tab: ItemPickerMainTab) => {
+    if (onMainTabChange) onMainTabChange(tab);
+    else setLocalMainTab(tab);
+  };
+
   useEffect(() => {
     if (!open) return;
+    setLocalMainTab(mainTab);
     setWeaponSubTab("todas");
     setEquipmentSubTab("todas");
     setSearch("");
@@ -153,7 +170,7 @@ const ItemPickerModal = ({
   const filteredItems = useMemo(() => {
     const q = search.trim().toLowerCase();
     const base = equipmentItems.filter((item) =>
-      itemMatchesShopView(item, mainTab, weaponSubTab, equipmentSubTab),
+      itemMatchesShopView(item, activeMainTab, weaponSubTab, equipmentSubTab),
     );
     if (!q) return base;
     return base.filter(
@@ -162,7 +179,7 @@ const ItemPickerModal = ({
         (item.section ?? "").toLowerCase().includes(q) ||
         (item.weaponGroup ?? "").toLowerCase().includes(q),
     );
-  }, [mainTab, weaponSubTab, equipmentSubTab, search]);
+  }, [activeMainTab, weaponSubTab, equipmentSubTab, search]);
 
   const handleSelect = (itemId: string) => {
     if (mode === "buy") {
@@ -308,7 +325,7 @@ const ItemPickerModal = ({
   // ─── Sidebar ──────────────────────────────────────────────────────────────
 
   const renderSidebar = () => {
-    if (mainTab === "armas") {
+    if (activeMainTab === "armas") {
       return (
         <nav className="flex flex-col gap-0.5 py-3 px-2">
           {WEAPON_SUB_TABS.map((sub) => {
@@ -342,7 +359,7 @@ const ItemPickerModal = ({
       );
     }
 
-    if (mainTab === "equipamento") {
+    if (activeMainTab === "equipamento") {
       return (
         <nav className="flex flex-col gap-0.5 py-3 px-2">
           {EQUIPMENT_SUB_TABS.map((sub) => {
@@ -392,15 +409,15 @@ const ItemPickerModal = ({
 
   const isBuy = mode === "buy";
   const activeLabel =
-    mainTab === "armas"
+    activeMainTab === "armas"
       ? WEAPON_SUB_TABS.find((t) => t.id === weaponSubTab)?.label ?? "Todas"
-      : mainTab === "equipamento"
+      : activeMainTab === "equipamento"
         ? EQUIPMENT_SUB_TABS.find((t) => t.id === equipmentSubTab)?.label ?? "Todos"
         : "Todas as proteções";
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[88vh] flex flex-col bg-card text-foreground border-2 border-gold-dark/40 shadow-2xl gap-0 p-0 overflow-hidden">
+      <DialogContent className="max-w-2xl max-h-[88vh] flex flex-col">
 
         {/* ── Cabeçalho ── */}
         <div
@@ -417,12 +434,7 @@ const ItemPickerModal = ({
           </span>
           <DialogHeader className="flex-1 space-y-0">
             <DialogTitle className="font-display tracking-wider text-base leading-none text-gold-dark">
-              {isBuy ? "Comprar" : "Adicionar"} ·{" "}
-              {mainTab === "armas"
-                ? "Armas"
-                : mainTab === "armaduras"
-                  ? "Armaduras e proteções"
-                  : "Equipamento"}
+              {isBuy ? "Comprar" : "Adicionar"} item
             </DialogTitle>
             <p className="text-xs text-foreground/70 font-body mt-1">
               {isBuy
@@ -430,6 +442,33 @@ const ItemPickerModal = ({
                 : "Item adicionado sem custo (loot, presente, etc.)."}
             </p>
           </DialogHeader>
+        </div>
+
+        {/* ── Abas principais ── */}
+        <div className="flex gap-1 px-3 py-2 border-b-2 border-border shrink-0 bg-card">
+          {MAIN_TABS.map((tab) => {
+            const active = activeMainTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => {
+                  setMainTab(tab.id);
+                  setWeaponSubTab("todas");
+                  setEquipmentSubTab("todas");
+                  setSearch("");
+                }}
+                className={`flex-1 inline-flex items-center justify-center gap-1.5 px-2 py-2 rounded-lg text-xs font-display tracking-wider uppercase transition-all ${
+                  active
+                    ? "bg-gold-dark/15 text-gold-dark border-2 border-gold-dark/45 font-semibold shadow-sm"
+                    : "text-foreground/70 border-2 border-transparent hover:bg-secondary hover:text-foreground"
+                }`}
+              >
+                {tab.icon}
+                <span className="truncate">{tab.label}</span>
+              </button>
+            );
+          })}
         </div>
 
         {/* ── Corpo: sidebar + conteúdo ── */}

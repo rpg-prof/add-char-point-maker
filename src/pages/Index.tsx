@@ -1,6 +1,6 @@
 import { useState, useMemo, useRef, useCallback, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Shield, Swords, Scroll, BookOpen, User, Crosshair, Save, Upload, ChevronLeft, ChevronRight, Check, Sparkles, TrendingUp, Undo2, Heart, AlertTriangle, Award, FileText, NotebookPen, BookHeart, Backpack } from "lucide-react";
+import { Shield, Swords, Scroll, BookOpen, User, Crosshair, ChevronLeft, ChevronRight, Check, Sparkles, Heart, AlertTriangle, Award, NotebookPen, BookHeart, Backpack, ArrowLeft } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -16,7 +16,6 @@ import {
   SidebarFooter,
   
 } from "@/components/ui/sidebar";
-import { exportCharacterPdf } from "@/lib/exportCharacterPdf";
 import AppLogo from "@/components/AppLogo";
 import { Button } from "@/components/ui/button";
 import PointTracker from "@/components/PointTracker";
@@ -55,7 +54,6 @@ import { raceClassAdvantages, getRaceClassAdvantageCost } from "@/data/raceClass
 import {
   getAttributeBreakdown,
   getCharacterPointBreakdown,
-  getProgressionBreakdown,
 } from "@/lib/pointBreakdown";
 import { getGrimoirePointCost, normalizeGrimoire, type GrimoireEntry } from "@/lib/grimoire";
 import {
@@ -76,7 +74,8 @@ import {
   type EvolutionProgress,
 } from "@/lib/evolutionProgress";
 import {
-  stashCharacterForEvolution,
+  consumeCharacterHandoff,
+  setActiveCharacter,
   type CharacterSaveData,
 } from "@/lib/characterSave";
 
@@ -277,25 +276,11 @@ const Index = () => {
   }
   const [progressionHistory, setProgressionHistory] = useState<ProgressionEntry[]>([]);
   const evolutionProgressRef = useRef<EvolutionProgress>(defaultEvolutionProgress());
+  const inventoryOrderRef = useRef<string[]>([]);
   const navigate = useNavigate();
 
-  const totalProgressionPoints = useMemo(
-    () => progressionHistory.reduce((sum, e) => sum + e.points, 0),
-    [progressionHistory]
-  );
-
-  const characterLevel = useMemo(() => {
-    if (progressionHistory.length === 0) return 1;
-    return Math.max(...progressionHistory.map((e) => e.level));
-  }, [progressionHistory]);
-
-  const handleUndoEvolve = useCallback(() => {
-    setProgressionHistory((prev) => {
-      if (prev.length === 0) return prev;
-      const newHistory = prev.slice(0, -1);
-      return newHistory;
-    });
-  }, []);
+  /** Edição/criação trata sempre o 1º nível; progressão fica na tela de evolução. */
+  const characterLevel = 1;
 
   const buildCurrentCharacterSave = useCallback((): CharacterSaveData => ({
     charName,
@@ -328,6 +313,7 @@ const Index = () => {
     purchasedItems,
     addedItems,
     customItems,
+    inventoryOrder: inventoryOrderRef.current,
     extraMoneyPc,
     combatLoadout,
     notesItems,
@@ -372,9 +358,73 @@ const Index = () => {
     characterHistory,
   ]);
 
-  const handleGoToEvolution = useCallback(() => {
-    stashCharacterForEvolution(buildCurrentCharacterSave());
-    navigate("/evolution");
+  const applyCharacterSave = useCallback((data: CharacterSaveData) => {
+    setCharName(data.charName);
+    setPlayerName(data.playerName);
+    setSexo(data.sexo);
+    setIdade(data.idade);
+    setPeso(data.peso);
+    setAltura(data.altura);
+    setCabelos(data.cabelos);
+    setOlhos(data.olhos);
+    setTendencia(data.tendencia);
+    const loadedRace = data.selectedRace || "Humano";
+    const clamped = clampAttributesForRace(
+      data.attributes,
+      data.subAttributes,
+      loadedRace,
+    );
+    setAttributes(clamped.attributes);
+    setSubAttributes(clamped.subAttributes);
+    setSelectedRace(loadedRace);
+    setSelectedClass(data.selectedClass);
+    setSelectedSocialClass(data.selectedSocialClass);
+    setSelectedReputation(data.selectedReputation);
+    setSelectedAdvantages(data.selectedAdvantages);
+    setSelectedRaceClassAdv(
+      data.selectedRaceClassAdv.filter((n) => n !== "Magia Anotada"),
+    );
+    setSelectedSkills(data.selectedSkills);
+    setSelectedWeapons(data.selectedWeapons);
+    setSelectedWeaponGroups(data.selectedWeaponGroups);
+    setSelectedShields(data.selectedShields);
+    setGrimoire(normalizeGrimoire(data.grimoire));
+    setDivineAccess(data.divineAccess ?? {});
+    setArcaneAccess(data.arcaneAccess ?? {});
+    setArcaneSpecialist(data.arcaneSpecialist ?? null);
+    setProgressionHistory(data.progressionHistory ?? []);
+    evolutionProgressRef.current = normalizeEvolutionProgress(data.evolutionProgress);
+    inventoryOrderRef.current = data.inventoryOrder ?? [];
+    const migratedPurchased = migratePurchasedItems(data.purchasedItems ?? {});
+    const migratedAdded = migratePurchasedItems(data.addedItems ?? {});
+    const customs = normalizeCustomItems(data.customItems);
+    setPurchasedItems(migratedPurchased);
+    setAddedItems(migratedAdded);
+    setCustomItems(customs);
+    setExtraMoneyPc(typeof data.extraMoneyPc === "number" ? data.extraMoneyPc : 0);
+    setCombatLoadout(
+      sanitizeCombatLoadout(
+        { ...defaultCombatLoadout(), ...data.combatLoadout },
+        mergeInventory(migratedPurchased, migratedAdded),
+        customs,
+      ),
+    );
+    setNotesItems(data.notesItems ?? "");
+    setNotesGeneral(data.notesGeneral ?? "");
+    setMagicComponents(normalizeMagicComponents(data.magicComponents));
+    setCharacterHistory(data.characterHistory ?? "");
+    setCurrentStep(0);
+  }, []);
+
+  useEffect(() => {
+    const handoff = consumeCharacterHandoff();
+    if (handoff) applyCharacterSave(handoff);
+  }, [applyCharacterSave]);
+
+  const handleFinish = useCallback(() => {
+    const data = buildCurrentCharacterSave();
+    setActiveCharacter(data);
+    navigate("/play");
   }, [buildCurrentCharacterSave, navigate]);
 
   // Calculate attribute points spent
@@ -490,18 +540,6 @@ const Index = () => {
     () => getCharacterPointBreakdown(characterPointContext),
     [characterPointContext]
   );
-
-  const progressionBreakdown = useMemo(
-    () =>
-      getProgressionBreakdown(
-        characterBreakdown,
-        characterPointsSpent,
-        progressionHistory
-      ),
-    [characterBreakdown, characterPointsSpent, progressionHistory]
-  );
-
-  const progressionPointsSpent = Math.max(0, characterPointsSpent - CHARACTER_POINTS);
 
   // Calculate total points gained from disadvantages (for display/limiting)
   const disadvantagePoints = useMemo(() => {
@@ -674,117 +712,6 @@ const Index = () => {
       });
     }
   };
-
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleSave = useCallback(() => {
-    const data = buildCurrentCharacterSave();
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `${charName || "personagem"}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  }, [buildCurrentCharacterSave, charName]);
-
-  const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      try {
-        const data = JSON.parse(ev.target?.result as string);
-        if (data.charName !== undefined) setCharName(data.charName);
-        if (data.playerName !== undefined) setPlayerName(data.playerName);
-        if (data.sexo !== undefined) setSexo(data.sexo);
-        if (data.idade !== undefined) setIdade(data.idade);
-        if (data.peso !== undefined) setPeso(data.peso);
-        if (data.altura !== undefined) setAltura(data.altura);
-        if (data.cabelos !== undefined) setCabelos(data.cabelos);
-        if (data.olhos !== undefined) setOlhos(data.olhos);
-        if (data.tendencia !== undefined) setTendencia(data.tendencia);
-        const loadedRace = data.selectedRace ?? "Humano";
-        const loadedAttrs = data.attributes;
-        const loadedSubs = data.subAttributes ?? {};
-        if (loadedAttrs) {
-          const clamped = clampAttributesForRace(loadedAttrs, loadedSubs, loadedRace);
-          setAttributes(clamped.attributes);
-          setSubAttributes(clamped.subAttributes);
-        } else if (data.subAttributes) {
-          setSubAttributes(data.subAttributes);
-        }
-        if (data.selectedRace) setSelectedRace(loadedRace);
-        if (data.selectedClass) setSelectedClass(data.selectedClass);
-        if (data.selectedSocialClass) setSelectedSocialClass(data.selectedSocialClass);
-        if (typeof data.selectedReputation === "number") setSelectedReputation(data.selectedReputation);
-        if (data.selectedAdvantages) setSelectedAdvantages(data.selectedAdvantages);
-        if (data.selectedRaceClassAdv) {
-          setSelectedRaceClassAdv(
-            data.selectedRaceClassAdv.filter((n: string) => n !== "Magia Anotada")
-          );
-        }
-        if (data.selectedSkills) setSelectedSkills(data.selectedSkills);
-        if (data.selectedWeapons) setSelectedWeapons(data.selectedWeapons);
-        if (data.selectedWeaponGroups) setSelectedWeaponGroups(data.selectedWeaponGroups);
-        if (data.selectedShields) setSelectedShields(data.selectedShields);
-        if (data.grimoire) setGrimoire(normalizeGrimoire(data.grimoire));
-        if (data.divineAccess) setDivineAccess(data.divineAccess);
-        else setDivineAccess({});
-        if (data.arcaneAccess) setArcaneAccess(data.arcaneAccess);
-        else setArcaneAccess({});
-        setArcaneSpecialist(data.arcaneSpecialist ?? null);
-        if (data.progressionHistory) {
-          setProgressionHistory(data.progressionHistory);
-        } else {
-          setProgressionHistory([]);
-        }
-        evolutionProgressRef.current = normalizeEvolutionProgress(data.evolutionProgress);
-        const migratedPurchased = data.purchasedItems
-          ? migratePurchasedItems(data.purchasedItems)
-          : {};
-        setPurchasedItems(migratedPurchased);
-        setAddedItems(
-          data.addedItems ? migratePurchasedItems(data.addedItems) : {},
-        );
-        setCustomItems(normalizeCustomItems(data.customItems));
-        setExtraMoneyPc(
-          typeof data.extraMoneyPc === "number" ? data.extraMoneyPc : 0,
-        );
-        const mergedOnLoad = mergeInventory(
-          migratedPurchased,
-          data.addedItems ? migratePurchasedItems(data.addedItems) : {},
-        );
-        if (data.combatLoadout) {
-          setCombatLoadout(
-            sanitizeCombatLoadout(
-              { ...defaultCombatLoadout(), ...data.combatLoadout },
-              mergedOnLoad,
-              normalizeCustomItems(data.customItems),
-            ),
-          );
-        } else {
-          setCombatLoadout(defaultCombatLoadout());
-        }
-        if (data.notesItems !== undefined) setNotesItems(data.notesItems);
-        else setNotesItems("");
-        if (data.notesGeneral !== undefined) setNotesGeneral(data.notesGeneral);
-        if (data.magicComponents !== undefined) {
-          setMagicComponents(normalizeMagicComponents(data.magicComponents));
-        } else if (data.magicComponentsNotes !== undefined) {
-          setMagicComponents(normalizeMagicComponents(data.magicComponentsNotes));
-        }
-        else setNotesGeneral("");
-        if (data.characterHistory !== undefined) setCharacterHistory(data.characterHistory);
-        else setCharacterHistory("");
-        setCurrentStep(0);
-      } catch {
-        alert("Arquivo JSON inválido.");
-      }
-    };
-    reader.readAsText(file);
-    e.target.value = "";
-  }, []);
 
   const goNext = () => setCurrentStep((s) => Math.min(STEPS.length - 1, s + 1));
   const goPrev = () => setCurrentStep((s) => Math.max(0, s - 1));
@@ -1169,14 +1096,9 @@ const Index = () => {
           </SidebarContent>
           <SidebarFooter className="dark-panel border-t border-gold/20">
             <p className="text-[10px] font-body text-parchment/50 px-2 py-1 group-data-[collapsible=icon]:hidden">
-              <a
-                href="http://adeide25.net.uztec.com.br/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gold transition-colors"
-              >
-                Sistema AD&amp;D 2.5 — v0.8
-              </a>
+              <Link to="/" className="hover:text-gold transition-colors">
+                ← Início
+              </Link>
             </p>
           </SidebarFooter>
         </Sidebar>
@@ -1192,104 +1114,20 @@ const Index = () => {
                 {charName.trim() || "Personagem sem nome"}
               </h2>
               <div className="flex-1" />
-              <div className="flex flex-wrap items-center justify-end gap-1.5">
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept=".json"
-                  onChange={handleLoad}
-                  className="hidden"
-                />
-                <Button
-                  size="sm"
-                  onClick={() => fileInputRef.current?.click()}
-                  className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
-                >
-                  <Upload className="w-3.5 h-3.5 mr-1" />
-                  <span className="hidden sm:inline">Carregar</span>
-                </Button>
-                <Button
-                  size="sm"
-                  onClick={handleSave}
-                  className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
-                >
-                  <Save className="w-3.5 h-3.5 mr-1" />
-                  <span className="hidden sm:inline">Salvar</span>
-                </Button>
-                <Button
-                  size="sm"
-                  onClick={() =>
-                    exportCharacterPdf({
-                      charName,
-                      playerName,
-                      selectedRace,
-                      selectedClass,
-                      selectedSocialClass,
-                      selectedReputation,
-                      characterLevel,
-                      sexo,
-                      idade,
-                      peso,
-                      altura,
-                      cabelos,
-                      olhos,
-                      tendencia,
-                      attributes,
-                      subAttributes,
-                      purchasedItems,
-                      addedItems,
-                      customItems,
-                      extraMoneyPc,
-                      combatLoadout,
-                      selectedAdvantages,
-                      selectedRaceClassAdv,
-                      selectedSkills,
-                      selectedWeapons,
-                      selectedWeaponGroups,
-                      selectedShields,
-                      grimoire,
-                      divineAccess,
-                      arcaneAccess,
-                      arcaneSpecialist,
-                      attributePointsSpent,
-                      characterPointsSpent,
-                      notesItems,
-                      notesGeneral,
-                      magicComponents,
-                      characterHistory,
-                    })
-                  }
-                  className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
-                  title="Gerar ficha em PDF"
-                >
-                  <FileText className="w-3.5 h-3.5 mr-1" />
-                  <span className="hidden sm:inline">PDF</span>
-                </Button>
-                <Button
-                  size="sm"
-                  onClick={handleGoToEvolution}
-                  className="bg-gold text-parchment-dark hover:bg-gold-glow font-body text-xs font-semibold shadow-[var(--shadow-gold)]"
-                >
-                  <TrendingUp className="w-3.5 h-3.5 mr-1" />
-                  <span className="hidden sm:inline">Evoluir</span>
-                </Button>
-                {progressionHistory.length > 0 && (
-                  <Button
-                    size="sm"
-                    onClick={handleUndoEvolve}
-                    className="bg-blood/80 text-parchment hover:bg-blood font-body text-xs"
-                    title="Desfazer última evolução"
-                  >
-                    <Undo2 className="w-3.5 h-3.5" />
-                  </Button>
-                )}
-              </div>
+              <Button
+                size="sm"
+                onClick={handleFinish}
+                className="bg-gold text-parchment-dark hover:bg-gold-glow font-body text-xs font-semibold shadow-[var(--shadow-gold)]"
+              >
+                <ArrowLeft className="w-3.5 h-3.5 mr-1" />
+                Voltar à Ficha
+              </Button>
             </div>
           </header>
 
           <main className="flex-1 px-3 md:px-6 py-3 space-y-3 max-w-[1400px] w-full mx-auto">
             {/* Point Trackers */}
-            <div className={`grid grid-cols-1 ${totalProgressionPoints > 0 ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-2 p-2.5 rounded-lg gilt-card`}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 p-2.5 rounded-lg gilt-card">
               <PointTracker
                 label="Pontos de Atributos"
                 spent={attributePointsSpent}
@@ -1325,15 +1163,6 @@ const Index = () => {
                   </span>
                 </div>
               </div>
-              {totalProgressionPoints > 0 && (
-                <PointTracker
-                  label="Pontos de Progressão"
-                  spent={progressionPointsSpent}
-                  total={totalProgressionPoints}
-                  breakdown={progressionBreakdown}
-                  detailsVariant="progression"
-                />
-              )}
             </div>
 
             {/* Step Card */}
@@ -1417,11 +1246,11 @@ const Index = () => {
                 ) : (
                   <Button
                     size="sm"
-                    onClick={handleSave}
+                    onClick={handleFinish}
                     className="bg-gold text-parchment-dark hover:bg-gold-glow font-body text-xs tracking-wide font-semibold shadow-[var(--shadow-gold)]"
                   >
-                    <Save className="w-4 h-4 mr-1" />
-                    Salvar Personagem
+                    <ArrowLeft className="w-4 h-4 mr-1" />
+                    Voltar à Ficha
                   </Button>
                 )}
               </div>

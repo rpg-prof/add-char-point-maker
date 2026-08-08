@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   User,
   TrendingUp,
@@ -10,12 +10,10 @@ import {
   Crosshair,
   Heart,
   Scroll,
-  Save,
-  Upload,
   ChevronLeft,
   ChevronRight,
   Check,
-  FileText,
+  ArrowLeft,
 } from "lucide-react";
 import {
   Sidebar,
@@ -43,13 +41,12 @@ import SkillsPanel from "@/components/SkillsPanel";
 import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import EvolutionResistancePanel from "@/components/EvolutionResistancePanel";
 import SummaryPanel from "@/components/SummaryPanel";
-import { exportCharacterPdf } from "@/lib/exportCharacterPdf";
 import {
   createEmptyCharacterSave,
-  downloadCharacterSave,
+  getActiveCharacter,
   mergeEvolutionIntoCharacter,
-  parseCharacterSave,
-  consumeStashedCharacterForEvolution,
+  consumeCharacterHandoff,
+  setActiveCharacter,
   type CharacterSaveData,
 } from "@/lib/characterSave";
 import { getSkillCost, skills } from "@/data/skills";
@@ -82,10 +79,10 @@ const STEPS = [
 ];
 
 const Evolution = () => {
+  const navigate = useNavigate();
   const [loaded, setLoaded] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [char, setChar] = useState<CharacterSaveData>(() => createEmptyCharacterSave());
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const evolution = char.evolutionProgress ?? defaultEvolutionProgress();
 
@@ -97,12 +94,15 @@ const Evolution = () => {
   }, [char.charName]);
 
   useEffect(() => {
-    const stashed = consumeStashedCharacterForEvolution();
-    if (!stashed) return;
-    setChar(stashed);
+    const incoming = consumeCharacterHandoff() ?? getActiveCharacter();
+    if (!incoming) {
+      navigate("/", { replace: true });
+      return;
+    }
+    setChar(incoming);
     setLoaded(true);
     setCurrentStep(0);
-  }, []);
+  }, [navigate]);
 
   const hasMagicAccess =
     Object.keys(char.divineAccess).length > 0 ||
@@ -159,31 +159,10 @@ const Evolution = () => {
     setChar((prev) => ({ ...prev, evolutionProgress: next }));
   }, []);
 
-  const handleLoad = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      try {
-        const parsed = parseCharacterSave(JSON.parse(ev.target?.result as string));
-        if (!parsed) {
-          alert("Arquivo JSON inválido.");
-          return;
-        }
-        setChar(parsed);
-        setLoaded(true);
-        setCurrentStep(0);
-      } catch {
-        alert("Arquivo JSON inválido.");
-      }
-    };
-    reader.readAsText(file);
-    e.target.value = "";
-  }, []);
-
-  const handleSave = useCallback(() => {
-    downloadCharacterSave(char);
-  }, [char]);
+  const handleReturnToPlay = useCallback(() => {
+    setActiveCharacter(char);
+    navigate("/play");
+  }, [char, navigate]);
 
   const handleEvolve = useCallback((level: number) => {
     setChar((prev) => ({
@@ -325,29 +304,13 @@ const Evolution = () => {
   const renderStepContent = () => {
     if (!loaded) {
       return (
-        <div className="flex flex-col items-center justify-center py-16 gap-4 text-center">
-          <Upload className="w-12 h-12 text-gold/60" />
-          <h2 className="font-display text-lg text-foreground tracking-wide">
-            Carregue um personagem
-          </h2>
-          <p className="font-body text-sm text-muted-foreground max-w-md">
-            Importe o arquivo JSON exportado na criação de personagem para evoluir
-            com pontos de progressão.
+        <div className="flex flex-col items-center justify-center py-16 gap-3 text-center">
+          <p className="font-body text-sm text-muted-foreground">
+            Abrindo personagem…
           </p>
-          <Button
-            onClick={() => fileInputRef.current?.click()}
-            className="bg-gold text-parchment-dark hover:bg-gold-glow font-body"
-          >
-            <Upload className="w-4 h-4 mr-2" />
-            Selecionar arquivo JSON
-          </Button>
-          <p className="text-xs text-muted-foreground">
-            Ou{" "}
-            <Link to="/" className="text-gold hover:underline">
-              crie um personagem
-            </Link>{" "}
-            primeiro.
-          </p>
+          <Link to="/" className="text-gold hover:underline text-xs font-body">
+            Voltar ao início
+          </Link>
         </div>
       );
     }
@@ -567,9 +530,7 @@ const Evolution = () => {
           </SidebarContent>
           <SidebarFooter className="dark-panel border-t border-gold/20">
             <p className="text-[10px] font-body text-parchment/50 px-2 py-1 group-data-[collapsible=icon]:hidden">
-              <Link to="/" className="hover:text-gold transition-colors">
-                ← Criação de Personagens
-              </Link>
+              Evolução de Personagem
             </p>
           </SidebarFooter>
         </Sidebar>
@@ -583,85 +544,16 @@ const Evolution = () => {
                 {char.charName.trim() || "Evolução de Personagem"}
               </h2>
               <div className="flex-1" />
-              <div className="flex flex-wrap items-center justify-end gap-1.5">
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept=".json"
-                  onChange={handleLoad}
-                  className="hidden"
-                />
+              {loaded && (
                 <Button
                   size="sm"
-                  onClick={() => fileInputRef.current?.click()}
-                  className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
+                  onClick={handleReturnToPlay}
+                  className="bg-gold text-parchment-dark hover:bg-gold-glow font-body text-xs font-semibold shadow-[var(--shadow-gold)]"
                 >
-                  <Upload className="w-3.5 h-3.5 mr-1" />
-                  <span className="hidden sm:inline">Carregar</span>
+                  <ArrowLeft className="w-3.5 h-3.5 mr-1" />
+                  Voltar à Ficha
                 </Button>
-                {loaded && (
-                  <>
-                    <Button
-                      size="sm"
-                      onClick={handleSave}
-                      className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
-                    >
-                      <Save className="w-3.5 h-3.5 mr-1" />
-                      <span className="hidden sm:inline">Salvar</span>
-                    </Button>
-                    <Button
-                      size="sm"
-                      onClick={() => {
-                        const merged = mergeEvolutionIntoCharacter(char);
-                        exportCharacterPdf({
-                          charName: merged.charName,
-                          playerName: merged.playerName,
-                          selectedRace: merged.selectedRace,
-                          selectedClass: merged.selectedClass,
-                          selectedSocialClass: merged.selectedSocialClass,
-                          selectedReputation: merged.selectedReputation,
-                          characterLevel,
-                          sexo: merged.sexo,
-                          idade: merged.idade,
-                          peso: merged.peso,
-                          altura: merged.altura,
-                          cabelos: merged.cabelos,
-                          olhos: merged.olhos,
-                          tendencia: merged.tendencia,
-                          attributes: merged.attributes,
-                          subAttributes: merged.subAttributes,
-                          purchasedItems: merged.purchasedItems,
-                          addedItems: merged.addedItems,
-                          customItems: merged.customItems,
-                          extraMoneyPc: merged.extraMoneyPc,
-                          combatLoadout: merged.combatLoadout,
-                          selectedAdvantages: merged.selectedAdvantages,
-                          selectedRaceClassAdv: merged.selectedRaceClassAdv,
-                          selectedSkills: merged.selectedSkills,
-                          selectedWeapons: merged.selectedWeapons,
-                          selectedWeaponGroups: merged.selectedWeaponGroups,
-                          selectedShields: merged.selectedShields,
-                          grimoire: merged.grimoire,
-                          divineAccess: merged.divineAccess,
-                          arcaneAccess: merged.arcaneAccess,
-                          arcaneSpecialist: merged.arcaneSpecialist,
-                          attributePointsSpent: 0,
-                          characterPointsSpent: 0,
-                          evolutionResistanceBonus: evolutionResistanceBonuses,
-                          notesItems: merged.notesItems,
-                          notesGeneral: merged.notesGeneral,
-                          magicComponents: merged.magicComponents,
-                          characterHistory: merged.characterHistory,
-                        });
-                      }}
-                      className="bg-transparent text-parchment border border-gold/40 hover:bg-gold/15 hover:text-gold font-body text-xs"
-                    >
-                      <FileText className="w-3.5 h-3.5 mr-1" />
-                      <span className="hidden sm:inline">PDF</span>
-                    </Button>
-                  </>
-                )}
-              </div>
+              )}
             </div>
           </header>
 
@@ -723,11 +615,11 @@ const Evolution = () => {
                   ) : (
                     <Button
                       size="sm"
-                      onClick={handleSave}
+                      onClick={handleReturnToPlay}
                       className="bg-gold text-parchment-dark hover:bg-gold-glow font-body text-xs tracking-wide font-semibold shadow-[var(--shadow-gold)]"
                     >
-                      <Save className="w-4 h-4 mr-1" />
-                      Salvar Personagem
+                      <Check className="w-4 h-4 mr-1" />
+                      Concluir e Ir à Ficha
                     </Button>
                   )}
                 </div>

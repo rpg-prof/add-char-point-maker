@@ -90,7 +90,7 @@ const SpellPickerModal = ({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[88vh] flex flex-col bg-card border-2 border-gold-dark/40 shadow-2xl gap-0 p-0 overflow-hidden">
+      <DialogContent className="max-w-2xl max-h-[88vh] flex flex-col">
         <div className="px-5 pt-5 pb-3 border-b-2 border-border bg-secondary shrink-0">
           <DialogHeader>
             <DialogTitle className="font-display tracking-wide text-base text-gold-dark">
