@@ -17,6 +17,15 @@ export default {
         display: ['"Libre Baskerville"', 'Georgia', 'serif'],
         body: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
       },
+      // Escala tipográfica da ficha (10 / 12 / 14 / 16 / 20). Degraus curtos
+      // para números e rótulos ficarem próximos sem saltos bruscos.
+      fontSize: {
+        micro: ["0.625rem", { lineHeight: "1.2" }],
+        meta: ["0.75rem", { lineHeight: "1.35" }],
+        field: ["0.875rem", { lineHeight: "1.4" }],
+        stat: ["1rem", { lineHeight: "1.15" }],
+        hero: ["1.25rem", { lineHeight: "1.1" }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

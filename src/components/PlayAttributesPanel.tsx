@@ -8,7 +8,7 @@ interface PlayAttributesPanelProps {
 
 const PlayAttributesPanel = ({ attributes, subAttributes }: PlayAttributesPanelProps) => {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
+    <div className="space-y-1">
       {subAttributeMap.map(({ main, sub1, sub2 }) => {
         const mainVal = attributes[main as AttributeName];
         const sub1Val = subAttributes[sub1] ?? mainVal;
@@ -16,23 +16,25 @@ const PlayAttributesPanel = ({ attributes, subAttributes }: PlayAttributesPanelP
         return (
           <div
             key={main}
-            className="rounded-lg border border-border/60 bg-background/50 px-3 py-2.5 hover:border-gold/30 transition-colors"
+            className="rounded-md border border-border/55 bg-gradient-to-r from-background/70 to-background/30 px-2.5 py-1.5"
           >
-            <div className="flex items-center justify-between gap-2">
-              <span className="font-display text-xs tracking-wide text-foreground truncate">{main}</span>
-              <span className="font-display text-xl font-bold text-gold tabular-nums leading-none">
+            <div className="flex items-center justify-between gap-2 leading-none">
+              <span className="font-display text-meta tracking-wider uppercase text-foreground/90 truncate">
+                {main}
+              </span>
+              <span className="font-display text-stat font-bold text-gold tabular-nums">
                 {mainVal}
               </span>
             </div>
-            <div className="mt-2 space-y-1">
-              <div className="flex items-center justify-between gap-2 text-[11px] font-body">
-                <span className="text-muted-foreground truncate">{sub2}</span>
-                <span className="tabular-nums text-foreground/80 font-medium">{sub2Val}</span>
-              </div>
-              <div className="flex items-center justify-between gap-2 text-[11px] font-body">
-                <span className="text-muted-foreground truncate">{sub1}</span>
-                <span className="tabular-nums text-foreground/80 font-medium">{sub1Val}</span>
-              </div>
+            <div className="mt-1 grid grid-cols-2 gap-1 text-micro font-body text-muted-foreground leading-tight">
+              <span className="truncate">
+                {sub2}{" "}
+                <span className="tabular-nums text-foreground/75 font-medium">{sub2Val}</span>
+              </span>
+              <span className="truncate text-right">
+                {sub1}{" "}
+                <span className="tabular-nums text-foreground/75 font-medium">{sub1Val}</span>
+              </span>
             </div>
           </div>
         );

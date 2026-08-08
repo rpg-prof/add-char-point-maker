@@ -30,7 +30,7 @@ const PlayPowersPanel = ({
 
   if (powers.length === 0) {
     return (
-      <p className="text-sm text-muted-foreground font-body py-2 text-center">
+      <p className="text-field text-muted-foreground font-body py-2 text-center">
         Nenhum poder especial.
       </p>
     );
@@ -41,10 +41,10 @@ const PlayPowersPanel = ({
       {powers.map(({ name, level }) => (
         <span
           key={name}
-          className="inline-flex items-center gap-1.5 rounded-md border border-gold/30 bg-gold/10 px-2.5 py-1 text-xs font-body text-foreground"
+          className="inline-flex items-center gap-1.5 rounded-md border border-gold/30 bg-gold/10 px-2.5 py-1 text-meta font-body text-foreground"
         >
           {name}
-          <span className="font-display text-[10px] text-gold-dark tabular-nums">
+          <span className="font-display text-micro text-gold-dark tabular-nums">
             Nv. {level}
           </span>
         </span>

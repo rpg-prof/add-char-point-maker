@@ -26,6 +26,8 @@ export interface EvolutionProgress {
   resistanceByLevel: Record<string, Record<number, number>>;
   /** Bônus de teste de perícia (+1 por compra). */
   skillBonuses: Record<string, number>;
+  /** Nível de cada perícia comum (nome → nível; base 1). */
+  skillLevels: Record<string, number>;
   spokenLanguages: number;
   writtenLanguages: number;
   arcaneManaPurchased: number;
@@ -61,6 +63,7 @@ export const defaultEvolutionProgress = (): EvolutionProgress => ({
   hpByLevel: {},
   resistanceByLevel: {},
   skillBonuses: {},
+  skillLevels: {},
   spokenLanguages: 0,
   writtenLanguages: 0,
   arcaneManaPurchased: 0,
@@ -84,6 +87,7 @@ export function normalizeEvolutionProgress(raw: unknown): EvolutionProgress {
     hpByLevel: data.hpByLevel ?? {},
     resistanceByLevel: data.resistanceByLevel ?? {},
     skillBonuses: data.skillBonuses ?? {},
+    skillLevels: data.skillLevels ?? {},
     evolutionSkills: data.evolutionSkills ?? [],
     evolutionWeapons: data.evolutionWeapons ?? [],
     evolutionWeaponGroups: data.evolutionWeaponGroups ?? [],
@@ -348,6 +352,16 @@ export function mergePowerLevels(
     merged[name] = Math.max(merged[name] ?? 0, level);
   }
   return merged;
+}
+
+/** Nível de uma perícia comum (mínimo 1). */
+export function getSkillLevel(
+  skillName: string,
+  skillLevels?: Record<string, number> | null,
+): number {
+  const level = skillLevels?.[skillName];
+  if (level == null || !Number.isFinite(level)) return 1;
+  return Math.max(1, Math.floor(level));
 }
 
 export function nextEvolveLevel(history: ProgressionEntry[]): number {

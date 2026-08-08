@@ -163,7 +163,7 @@ const PlayWeaponsPanel = ({
     <div className="space-y-4">
       {hasProficiencies && (
         <div className="rounded-lg border border-border/60 bg-background/40 px-3 py-2.5 space-y-2">
-          <p className="font-display text-[10px] tracking-wider uppercase text-muted-foreground flex items-center gap-1.5">
+          <p className="font-display text-micro tracking-wider uppercase text-muted-foreground flex items-center gap-1.5">
             <Crosshair className="w-3.5 h-3.5 text-gold" />
             Perícias com armas
           </p>
@@ -172,7 +172,7 @@ const PlayWeaponsPanel = ({
               {weaponGroupItems.map(({ name, label }) => (
                 <span
                   key={name}
-                  className="inline-flex rounded-md border border-gold/30 bg-gold/10 px-2 py-0.5 text-[11px] font-body"
+                  className="inline-flex rounded-md border border-gold/30 bg-gold/10 px-2 py-0.5 text-meta font-body"
                 >
                   {label}
                 </span>
@@ -184,7 +184,7 @@ const PlayWeaponsPanel = ({
               {individualWeaponItems.map(({ key, name }) => (
                 <span
                   key={key}
-                  className="inline-flex rounded-md border border-border bg-card px-2 py-0.5 text-[11px] font-body"
+                  className="inline-flex rounded-md border border-border bg-card px-2 py-0.5 text-meta font-body"
                 >
                   {name}
                 </span>
@@ -196,7 +196,7 @@ const PlayWeaponsPanel = ({
               {shieldItems.map(({ name, bonus }) => (
                 <span
                   key={name}
-                  className="inline-flex rounded-md border border-border bg-card px-2 py-0.5 text-[11px] font-body"
+                  className="inline-flex rounded-md border border-border bg-card px-2 py-0.5 text-meta font-body"
                 >
                   {name}
                   {bonus && <span className="text-muted-foreground ml-1">{bonus}</span>}
@@ -207,7 +207,7 @@ const PlayWeaponsPanel = ({
         </div>
       )}
 
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] font-body text-muted-foreground">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-meta font-body text-muted-foreground">
         <span>Base de ataque {formatSigned(loadout.attackBaseBonus)}</span>
         {slots.specialization > 0 && (
           <span>
@@ -224,22 +224,22 @@ const PlayWeaponsPanel = ({
       {artesMarciais && (
         <div className="rounded-lg border border-gold/25 bg-gold/5 px-3 py-2.5 grid grid-cols-1 sm:grid-cols-[minmax(0,1.4fr)_7rem_6rem_minmax(0,1fr)_5.5rem] gap-2 items-center">
           <div className="min-w-0">
-            <p className="font-body text-sm font-medium text-foreground">Artes Marciais</p>
-            <p className="text-[10px] text-muted-foreground font-display tracking-wider uppercase mt-0.5">
+            <p className="font-body text-field font-medium text-foreground">Artes Marciais</p>
+            <p className="text-micro text-muted-foreground font-display tracking-wider uppercase mt-0.5">
               Desarmado
             </p>
           </div>
           <div>
-            <p className="font-display text-[9px] tracking-wider uppercase text-muted-foreground">
+            <p className="font-display text-micro tracking-wider uppercase text-muted-foreground">
               Domínio
             </p>
-            <p className="text-xs font-body text-gold-dark font-semibold">Perícia</p>
+            <p className="text-meta font-body text-gold-dark font-semibold">Perícia</p>
           </div>
           <div>
-            <p className="font-display text-[9px] tracking-wider uppercase text-muted-foreground">
+            <p className="font-display text-micro tracking-wider uppercase text-muted-foreground">
               Ataque
             </p>
-            <p className="font-display text-sm font-bold tabular-nums text-foreground">
+            <p className="font-display text-field font-bold tabular-nums text-foreground">
               {formatSigned(
                 computeAttackRollBreakdown({
                   slot: createEmptyWeaponSlot(0),
@@ -254,10 +254,10 @@ const PlayWeaponsPanel = ({
             </p>
           </div>
           <div className="sm:col-span-2">
-            <p className="font-display text-[9px] tracking-wider uppercase text-muted-foreground">
+            <p className="font-display text-micro tracking-wider uppercase text-muted-foreground">
               Dano
             </p>
-            <p className="text-xs font-body tabular-nums">
+            <p className="text-meta font-body tabular-nums">
               {martialArtsDamage}
               {(() => {
                 const atk = computeAttackRollBreakdown({
@@ -277,13 +277,13 @@ const PlayWeaponsPanel = ({
       )}
 
       {rows.length === 0 ? (
-        <p className="text-sm text-muted-foreground font-body py-4 text-center flex flex-col items-center gap-2">
+        <p className="text-field text-muted-foreground font-body py-4 text-center flex flex-col items-center gap-2">
           <Swords className="w-6 h-6 opacity-40" />
           Nenhuma arma no inventário.
         </p>
       ) : (
         <div className="space-y-2">
-          <div className="hidden sm:grid grid-cols-[minmax(0,1.4fr)_8.5rem_4.5rem_5rem_minmax(0,1.2fr)] gap-2 px-2.5 text-[10px] font-display tracking-wider uppercase text-muted-foreground">
+          <div className="hidden sm:grid grid-cols-[minmax(0,1.4fr)_8.5rem_4.5rem_5rem_minmax(0,1.2fr)] gap-2 px-2.5 text-micro font-display tracking-wider uppercase text-muted-foreground">
             <span>Arma</span>
             <span>Domínio</span>
             <span className="text-center">Ataque</span>
@@ -316,16 +316,16 @@ const PlayWeaponsPanel = ({
                 className="grid grid-cols-1 sm:grid-cols-[minmax(0,1.4fr)_8.5rem_4.5rem_5rem_minmax(0,1.2fr)] gap-2 items-center rounded-lg border border-border bg-card px-2.5 py-2"
               >
                 <div className="min-w-0">
-                  <p className="font-body text-sm text-foreground truncate">{row.item.name}</p>
+                  <p className="font-body text-field text-foreground truncate">{row.item.name}</p>
                   {!row.match.proficient && (
-                    <p className="text-[10px] text-blood/80 font-body">
+                    <p className="text-micro text-blood/80 font-body">
                       Penalidade {row.match.penaltyNoProficiency}
                     </p>
                   )}
                 </div>
 
                 <div>
-                  <p className="sm:hidden font-display text-[9px] tracking-wider uppercase text-muted-foreground mb-0.5">
+                  <p className="sm:hidden font-display text-micro tracking-wider uppercase text-muted-foreground mb-0.5">
                     Domínio
                   </p>
                   {canSpecialize || canMaster ? (
@@ -335,23 +335,23 @@ const PlayWeaponsPanel = ({
                         setMastery(row.item.id, next as WeaponExpertiseLevel)
                       }
                     >
-                      <SelectTrigger className="h-8 text-xs font-body border-border/70">
+                      <SelectTrigger className="h-8 text-meta font-body border-border/70">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="nenhuma" disabled={row.match.proficient} className="text-xs">
+                        <SelectItem value="nenhuma" disabled={row.match.proficient} className="text-meta">
                           Sem perícia
                         </SelectItem>
-                        <SelectItem value="pericia" disabled={!row.match.proficient} className="text-xs">
+                        <SelectItem value="pericia" disabled={!row.match.proficient} className="text-meta">
                           Perícia
                         </SelectItem>
                         {specializeAvailable && (
-                          <SelectItem value="especializacao" className="text-xs">
+                          <SelectItem value="especializacao" className="text-meta">
                             Especialização
                           </SelectItem>
                         )}
                         {masteryAvailable && (
-                          <SelectItem value="maestria" className="text-xs">
+                          <SelectItem value="maestria" className="text-meta">
                             Maestria
                           </SelectItem>
                         )}
@@ -359,7 +359,7 @@ const PlayWeaponsPanel = ({
                     </Select>
                   ) : (
                     <span
-                      className={`inline-flex text-xs font-body font-medium px-2 py-1 rounded border ${
+                      className={`inline-flex text-meta font-body font-medium px-2 py-1 rounded border ${
                         row.level === "nenhuma"
                           ? "border-blood/30 text-blood bg-blood/5"
                           : "border-gold/30 text-gold-dark bg-gold/10"
@@ -371,11 +371,11 @@ const PlayWeaponsPanel = ({
                 </div>
 
                 <div className="text-left sm:text-center">
-                  <p className="sm:hidden font-display text-[9px] tracking-wider uppercase text-muted-foreground">
+                  <p className="sm:hidden font-display text-micro tracking-wider uppercase text-muted-foreground">
                     Ataque
                   </p>
                   <p
-                    className="font-display text-sm font-bold tabular-nums"
+                    className="font-display text-field font-bold tabular-nums"
                     title={`Base ${formatSigned(row.attack.base)} · Força ${formatSigned(row.attack.forca)} · Des ${formatSigned(row.attack.destreza)} · Perícia ${formatSigned(row.attack.pericia)}`}
                   >
                     {formatSigned(row.attack.total)}
@@ -383,17 +383,17 @@ const PlayWeaponsPanel = ({
                 </div>
 
                 <div className="text-left sm:text-center">
-                  <p className="sm:hidden font-display text-[9px] tracking-wider uppercase text-muted-foreground">
+                  <p className="sm:hidden font-display text-micro tracking-wider uppercase text-muted-foreground">
                     Tipo
                   </p>
-                  <p className="text-xs font-body uppercase text-muted-foreground">{row.tipo}</p>
+                  <p className="text-meta font-body uppercase text-muted-foreground">{row.tipo}</p>
                 </div>
 
                 <div>
-                  <p className="sm:hidden font-display text-[9px] tracking-wider uppercase text-muted-foreground">
+                  <p className="sm:hidden font-display text-micro tracking-wider uppercase text-muted-foreground">
                     Dano
                   </p>
-                  <p className="text-xs font-body tabular-nums text-foreground">
+                  <p className="text-meta font-body tabular-nums text-foreground">
                     {formatDamage(row.damageSm, row.damageBonus)}
                     <span className="text-muted-foreground mx-1">·</span>
                     {formatDamage(row.damageLg, row.damageBonus)}

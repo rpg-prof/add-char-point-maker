@@ -9,6 +9,40 @@ interface PlayAdvantagesPanelProps {
   selectedRaceClassAdv: string[];
   selectedRace: string;
   selectedClass: string;
+  /** Coluna estreita: vantagens e desvantagens empilhadas. */
+  compact?: boolean;
+}
+
+function EntryList({
+  items,
+  emptyLabel,
+  costAccent,
+}: {
+  items: { name: string; cost: number }[];
+  emptyLabel: string;
+  costAccent: string;
+}) {
+  if (items.length === 0) {
+    return <p className="text-meta text-muted-foreground font-body px-2.5 py-1.5">{emptyLabel}</p>;
+  }
+
+  return (
+    <ul className="divide-y divide-border/35">
+      {items.map(({ name, cost }) => (
+        <li
+          key={name}
+          className="flex items-baseline justify-between gap-2 px-2.5 py-1.5"
+        >
+          <span className="min-w-0 flex-1 text-meta font-body leading-snug text-foreground">
+            {name}
+          </span>
+          <span className={`shrink-0 text-meta font-display tabular-nums ${costAccent}`}>
+            {cost > 0 ? `+${cost}` : cost}
+          </span>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 const PlayAdvantagesPanel = ({
@@ -16,6 +50,7 @@ const PlayAdvantagesPanel = ({
   selectedRaceClassAdv,
   selectedRace,
   selectedClass,
+  compact = false,
 }: PlayAdvantagesPanelProps) => {
   const allItems = [...generalAdvantages, ...generalDisadvantages, ...raceClassAdvantages];
 
@@ -51,51 +86,43 @@ const PlayAdvantagesPanel = ({
   const disadvantages = entries.filter((e) => !e.isAdvantage);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-      <div className="rounded-lg border border-gold/25 bg-gold/5 p-3">
-        <p className="font-display text-[10px] tracking-wider uppercase text-gold-dark mb-2">
+    <div
+      className={
+        compact ? "flex flex-col gap-2" : "grid grid-cols-1 md:grid-cols-2 gap-3"
+      }
+    >
+      <div
+        className={`rounded-lg border border-gold/25 bg-gold/5 overflow-hidden ${
+          compact ? "" : "p-0"
+        }`}
+      >
+        <p
+          className={`font-display text-micro tracking-wider uppercase text-gold-dark ${
+            compact ? "px-2.5 pt-2 pb-1" : "px-3 pt-2.5 pb-1"
+          }`}
+        >
           Vantagens ({advantages.length})
         </p>
-        {advantages.length > 0 ? (
-          <div className="flex flex-wrap gap-1.5">
-            {advantages.map(({ name, cost }) => (
-              <span
-                key={name}
-                className="inline-flex items-center rounded-md border border-gold/30 bg-background/60 px-2 py-1 text-xs font-body"
-              >
-                {name}
-                <span className="ml-1 text-[10px] text-muted-foreground tabular-nums">
-                  ({cost > 0 ? `+${cost}` : cost})
-                </span>
-              </span>
-            ))}
-          </div>
-        ) : (
-          <p className="text-xs text-muted-foreground font-body">Nenhuma vantagem.</p>
-        )}
+        <EntryList
+          items={advantages}
+          emptyLabel="Nenhuma vantagem."
+          costAccent="text-gold-dark"
+        />
       </div>
 
-      <div className="rounded-lg border border-blood/25 bg-blood/5 p-3">
-        <p className="font-display text-[10px] tracking-wider uppercase text-blood mb-2">
+      <div className="rounded-lg border border-blood/25 bg-blood/5 overflow-hidden">
+        <p
+          className={`font-display text-micro tracking-wider uppercase text-blood ${
+            compact ? "px-2.5 pt-2 pb-1" : "px-3 pt-2.5 pb-1"
+          }`}
+        >
           Desvantagens ({disadvantages.length})
         </p>
-        {disadvantages.length > 0 ? (
-          <div className="flex flex-wrap gap-1.5">
-            {disadvantages.map(({ name, cost }) => (
-              <span
-                key={name}
-                className="inline-flex items-center rounded-md border border-blood/30 bg-background/60 px-2 py-1 text-xs font-body"
-              >
-                {name}
-                <span className="ml-1 text-[10px] text-muted-foreground tabular-nums">
-                  ({cost})
-                </span>
-              </span>
-            ))}
-          </div>
-        ) : (
-          <p className="text-xs text-muted-foreground font-body">Nenhuma desvantagem.</p>
-        )}
+        <EntryList
+          items={disadvantages}
+          emptyLabel="Nenhuma desvantagem."
+          costAccent="text-blood"
+        />
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import { useMemo, useState, type ReactNode } from "react";
 import {
   ChevronDown,
   ChevronUp,
-  FlaskConical,
   GripVertical,
   Heart,
   Minus,
@@ -13,6 +12,7 @@ import {
   ShoppingBag,
   Sparkles,
   Wallet,
+  Wind,
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -47,7 +47,7 @@ import ItemPickerModal, {
 } from "@/components/ItemPickerModal";
 import NotesPanel from "@/components/NotesPanel";
 import { formatMoney, getRemainingCopper } from "@/data/equipment";
-import { COPPER_PER_GOLD, COPPER_PER_SILVER, copperToBreakdown } from "@/data/currency";
+import { COPPER_PER_GOLD, COPPER_PER_SILVER } from "@/data/currency";
 import { socialClasses } from "@/data/characterData";
 import type { CharacterSaveData } from "@/lib/characterSave";
 import {
@@ -98,10 +98,15 @@ function formatWeightKg(weightKg: number, qty: number): string {
 interface PlaySessionPanelProps {
   char: CharacterSaveData;
   onChange: (char: CharacterSaveData) => void;
+  /** Coluna estreita: PV/Magia/Dinheiro/botões empilhados. */
+  compact?: boolean;
 }
 
 const actionBtnCls =
   "h-auto py-2.5 px-3 flex flex-col items-center gap-1 bg-card border border-border hover:border-gold-dark/50 hover:bg-secondary text-foreground font-body";
+
+const actionBtnCompactCls =
+  "h-auto py-2 px-2 flex flex-col items-center gap-0.5 bg-card border border-border hover:border-gold-dark/50 hover:bg-secondary text-foreground font-body w-full";
 
 function ModalShell({
   icon,
@@ -128,12 +133,12 @@ function ModalShell({
             </span>
             <div className="min-w-0 flex-1">
               <div className="flex items-start justify-between gap-2">
-                <DialogTitle className="font-display tracking-wide text-base text-gold-dark">
+                <DialogTitle className="font-display tracking-wide text-field text-gold-dark">
                   {title}
                 </DialogTitle>
                 {headerAction}
               </div>
-              <DialogDescription className="font-body text-xs text-foreground/65 mt-1">
+              <DialogDescription className="font-body text-meta text-foreground/65 mt-1">
                 {description}
               </DialogDescription>
             </div>
@@ -171,14 +176,14 @@ function AdjustRow({
   return (
     <div className="rounded-lg border border-border bg-card px-3 py-3 space-y-2 shadow-sm">
       <div className="flex items-center justify-between gap-2">
-        <span className="font-display text-xs tracking-wider uppercase text-muted-foreground">
+        <span className="font-display text-micro tracking-wider uppercase text-muted-foreground">
           {label}
         </span>
-        <span className={`font-display text-lg font-bold tabular-nums ${accentCls}`}>
+        <span className={`font-display text-stat font-bold tabular-nums ${accentCls}`}>
           {value}
-          <span className="text-muted-foreground text-sm font-normal"> / {max}</span>
+          <span className="text-muted-foreground text-field font-normal"> / {max}</span>
           {overMax && (
-            <span className="ml-1 text-[10px] font-body font-normal text-emerald-700">
+            <span className="ml-1 text-micro font-body font-normal text-emerald-700">
               acima do máx.
             </span>
           )}
@@ -200,7 +205,7 @@ function AdjustRow({
           min={0}
           value={value}
           onChange={(e) => onSet(Math.max(0, Math.floor(Number(e.target.value) || 0)))}
-          className="w-16 h-9 text-center bg-card border-2 border-border rounded-lg font-display text-sm font-bold tabular-nums text-foreground focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold-dark"
+          className="w-16 h-9 text-center bg-card border-2 border-border rounded-lg font-display text-field font-bold tabular-nums text-foreground focus:outline-none focus:ring-2 focus:ring-gold/30 focus:border-gold-dark"
         />
         <Button
           type="button"
@@ -216,7 +221,7 @@ function AdjustRow({
   );
 }
 
-const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
+const PlaySessionPanel = ({ char, onChange, compact = false }: PlaySessionPanelProps) => {
   const [modal, setModal] = useState<ModalId>(null);
   const [pickerOpen, setPickerOpen] = useState(false);
   const [pickerMode, setPickerMode] = useState<ItemPickerMode>("add");
@@ -316,7 +321,6 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
     char.purchasedItems,
     char.extraMoneyPc,
   );
-  const remainingBreakdown = copperToBreakdown(remainingPc);
 
   const openMoneyDialog = (mode: "add" | "remove") => {
     setMoneyDialogMode(mode);
@@ -528,161 +532,206 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
 
   const hpRatio = maxHp > 0 ? currentHp / maxHp : 0;
   const hpPct = Math.min(100, Math.max(0, hpRatio * 100));
-  const manaPct = maxMana > 0 ? Math.min(100, Math.max(0, (currentMana / maxMana) * 100)) : 0;
   const hpFillCls = hpBarColor(hpRatio);
-  const actionCols = hasMagic
-    ? "grid-cols-2 sm:grid-cols-4"
-    : "grid-cols-3";
+  const showSpecialist = Boolean(char.arcaneSpecialist && maxSpecialistMana > 0);
+  const showResources = hasMagic || showSpecialist || showChi;
 
-  return (
-    <div className="space-y-3">
-      {/* Status rápido */}
-      <div
-        className={`grid grid-cols-1 gap-2 ${
-          hasMagic ? "sm:grid-cols-3" : "sm:grid-cols-2"
-        }`}
-      >
-        <button
-          type="button"
-          onClick={() => setModal("hp")}
-          className="rounded-lg border border-border/70 bg-card/40 px-3 py-2.5 text-left hover:border-gold/40 transition-colors"
-        >
-          <div className="flex items-center justify-between gap-2 mb-1.5">
-            <span className="font-display text-[10px] tracking-wider uppercase text-muted-foreground flex items-center gap-1">
-              <Heart className="w-3.5 h-3.5 text-blood" />
-              Pontos de Vida
+  const resourceRows: { key: string; label: string; current: number; max: number }[] = [];
+  if (hasMagic) {
+    resourceRows.push({
+      key: "mana",
+      label: compact ? "Magia" : "Pontos de Magia",
+      current: currentMana,
+      max: maxMana,
+    });
+  }
+  if (showSpecialist && char.arcaneSpecialist) {
+    resourceRows.push({
+      key: "specialist",
+      label: compact ? char.arcaneSpecialist : `Escola: ${char.arcaneSpecialist}`,
+      current: currentSpecialistMana,
+      max: maxSpecialistMana,
+    });
+  }
+  if (showChi) {
+    resourceRows.push({
+      key: "chi",
+      label: "Chi",
+      current: currentChi,
+      max: maxChi,
+    });
+  }
+
+  const hpCard = (
+    <button
+      type="button"
+      onClick={() => setModal("hp")}
+      className={`rounded-lg border border-border/70 bg-card/40 text-left hover:border-gold/40 transition-colors w-full ${
+        compact ? "px-2.5 py-2" : "px-3 py-2.5"
+      }`}
+    >
+      <div className="flex items-center justify-between gap-2 mb-1.5">
+        <span className="font-display text-micro tracking-wider uppercase text-muted-foreground flex items-center gap-1">
+          <Heart className="w-3.5 h-3.5 text-blood shrink-0" />
+          {compact ? "PV" : "Pontos de Vida"}
+        </span>
+        <span className="font-display text-field font-bold tabular-nums text-foreground">
+          {currentHp}/{maxHp}
+        </span>
+      </div>
+      <div className="h-1.5 rounded-full bg-muted/50 overflow-hidden">
+        <div
+          className={`h-full rounded-full transition-all ${hpFillCls}`}
+          style={{ width: `${hpPct}%` }}
+        />
+      </div>
+    </button>
+  );
+
+  const resourcesCard = showResources ? (
+    <button
+      type="button"
+      onClick={() => setModal("mana")}
+      className={`rounded-lg border border-border/70 bg-card/40 text-left hover:border-gold/40 transition-colors w-full ${
+        compact ? "px-2.5 py-2" : "px-3 py-2.5"
+      }`}
+    >
+      <div className="flex items-center gap-1 mb-1.5">
+        <Sparkles className="w-3.5 h-3.5 text-gold shrink-0" />
+        <span className="font-display text-micro tracking-wider uppercase text-muted-foreground">
+          Recursos
+        </span>
+      </div>
+      <div className="space-y-1">
+        {resourceRows.map((row) => (
+          <div key={row.key} className="flex items-center justify-between gap-2 leading-tight">
+            <span
+              className="text-meta font-body text-foreground/80 truncate min-w-0"
+              title={row.label}
+            >
+              {row.label}
             </span>
-            <span className="font-display text-sm font-bold tabular-nums text-foreground">
-              {currentHp}/{maxHp}
+            <span className="font-display text-meta font-bold tabular-nums text-gold-dark shrink-0">
+              {row.current}/{row.max}
             </span>
           </div>
-          <div className="h-1.5 rounded-full bg-muted/50 overflow-hidden">
-            <div
-              className={`h-full rounded-full transition-all ${hpFillCls}`}
-              style={{ width: `${hpPct}%` }}
-            />
-          </div>
-        </button>
+        ))}
+      </div>
+    </button>
+  ) : null;
 
-        {hasMagic && (
+  const moneyCard = (
+    <div
+      className={`rounded-lg border border-gold/30 bg-gold/5 w-full ${
+        compact ? "px-2.5 py-2" : "px-3 py-2.5"
+      }`}
+    >
+      <div className="flex items-center justify-between gap-2 mb-1.5">
+        <span className="font-display text-micro tracking-wider uppercase text-muted-foreground flex items-center gap-1">
+          <Wallet className="w-3.5 h-3.5 text-gold shrink-0" />
+          Dinheiro
+        </span>
+        <div className="flex gap-1">
           <button
             type="button"
-            onClick={() => setModal("mana")}
-            className="rounded-lg border border-border/70 bg-card/40 px-3 py-2.5 text-left hover:border-gold/40 transition-colors"
+            onClick={() => openMoneyDialog("add")}
+            className="h-6 w-6 inline-flex items-center justify-center rounded border border-gold/40 bg-gold/15 text-gold-dark hover:bg-gold/25"
+            title="Achar dinheiro"
+            aria-label="Achar dinheiro"
           >
-            <div className="flex items-center justify-between gap-2 mb-1.5">
-              <span className="font-display text-[10px] tracking-wider uppercase text-muted-foreground flex items-center gap-1">
-                <Sparkles className="w-3.5 h-3.5 text-gold" />
-                Pontos de Magia
-              </span>
-              <span className="font-display text-sm font-bold tabular-nums text-gold-dark">
-                {currentMana}/{maxMana}
-              </span>
-            </div>
-            <div className="h-1.5 rounded-full bg-muted/50 overflow-hidden">
-              <div
-                className="h-full rounded-full bg-gold-dark/80 transition-all"
-                style={{ width: `${manaPct}%` }}
-              />
-            </div>
+            <Plus className="w-3 h-3" />
           </button>
-        )}
-
-        <div className="rounded-lg border border-gold/30 bg-gold/5 px-3 py-2.5">
-          <div className="flex items-center justify-between gap-2 mb-1.5">
-            <span className="font-display text-[10px] tracking-wider uppercase text-muted-foreground flex items-center gap-1">
-              <Wallet className="w-3.5 h-3.5 text-gold" />
-              Dinheiro
-            </span>
-            <div className="flex gap-1">
-              <button
-                type="button"
-                onClick={() => openMoneyDialog("add")}
-                className="h-6 w-6 inline-flex items-center justify-center rounded border border-gold/40 bg-gold/15 text-gold-dark hover:bg-gold/25"
-                title="Achar dinheiro"
-                aria-label="Achar dinheiro"
-              >
-                <Plus className="w-3 h-3" />
-              </button>
-              <button
-                type="button"
-                onClick={() => openMoneyDialog("remove")}
-                disabled={remainingPc <= 0}
-                className="h-6 w-6 inline-flex items-center justify-center rounded border border-border text-muted-foreground hover:bg-muted disabled:opacity-30"
-                title="Gastar dinheiro"
-                aria-label="Gastar dinheiro"
-              >
-                <Minus className="w-3 h-3" />
-              </button>
-            </div>
-          </div>
-          <p
-            className={`font-display text-sm font-bold tabular-nums leading-none ${
-              remainingPc < 0 ? "text-destructive" : "text-gold-dark"
-            }`}
+          <button
+            type="button"
+            onClick={() => openMoneyDialog("remove")}
+            disabled={remainingPc <= 0}
+            className="h-6 w-6 inline-flex items-center justify-center rounded border border-border text-muted-foreground hover:bg-muted disabled:opacity-30"
+            title="Gastar dinheiro"
+            aria-label="Gastar dinheiro"
           >
-            {formatMoney(remainingPc)}
-          </p>
-          {(remainingBreakdown.po > 0 ||
-            remainingBreakdown.pp > 0 ||
-            remainingBreakdown.pc > 0) && (
-            <div className="flex gap-1 mt-1.5 flex-wrap">
-              {remainingBreakdown.po > 0 && (
-                <span className="text-[9px] font-display px-1 py-0.5 rounded bg-amber-400/10 text-amber-700 border border-amber-400/25">
-                  {remainingBreakdown.po} po
-                </span>
-              )}
-              {remainingBreakdown.pp > 0 && (
-                <span className="text-[9px] font-display px-1 py-0.5 rounded bg-slate-400/10 text-slate-600 border border-slate-400/25">
-                  {remainingBreakdown.pp} pp
-                </span>
-              )}
-              {remainingBreakdown.pc > 0 && (
-                <span className="text-[9px] font-display px-1 py-0.5 rounded bg-orange-700/10 text-orange-700 border border-orange-700/25">
-                  {remainingBreakdown.pc} pc
-                </span>
-              )}
-            </div>
-          )}
+            <Minus className="w-3 h-3" />
+          </button>
         </div>
       </div>
+      <p
+        className={`font-display text-field font-bold tabular-nums ${
+          remainingPc < 0 ? "text-destructive" : "text-gold-dark"
+        }`}
+      >
+        {formatMoney(remainingPc)}
+      </p>
+    </div>
+  );
 
-      {/* Ações de sessão */}
-      <div className={`grid ${actionCols} gap-2`}>
-        <Button type="button" variant="outline" className={actionBtnCls} onClick={() => setModal("hp")}>
-          <Heart className="w-4 h-4 text-blood" />
-          <span className="text-[11px] leading-tight">PV</span>
-        </Button>
-        {hasMagic && (
-          <Button
-            type="button"
-            variant="outline"
-            className={actionBtnCls}
-            onClick={() => setModal("mana")}
+  return (
+    <div
+      className={
+        compact
+          ? "flex flex-col gap-2 h-full min-h-0"
+          : "space-y-3"
+      }
+    >
+      {compact ? (
+        <>
+          <div className="flex flex-col gap-2">
+            {hpCard}
+            {resourcesCard}
+          </div>
+          {moneyCard}
+          <div className="grid grid-cols-1 gap-1.5 mt-auto">
+            <Button
+              type="button"
+              variant="outline"
+              className={actionBtnCompactCls}
+              onClick={() => setModal("inventory")}
+            >
+              <Package className="w-3.5 h-3.5 text-gold" />
+              <span className="text-meta leading-tight">Inventário</span>
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              className={actionBtnCompactCls}
+              onClick={() => setModal("notes")}
+            >
+              <NotebookPen className="w-3.5 h-3.5 text-gold" />
+              <span className="text-meta leading-tight">Anotações</span>
+            </Button>
+          </div>
+        </>
+      ) : (
+        <>
+          <div
+            className={`grid grid-cols-1 gap-2 ${
+              showResources ? "sm:grid-cols-3" : "sm:grid-cols-2"
+            }`}
           >
-            <FlaskConical className="w-4 h-4 text-gold" />
-            <span className="text-[11px] leading-tight">Magia</span>
-          </Button>
-        )}
-        <Button
-          type="button"
-          variant="outline"
-          className={actionBtnCls}
-          onClick={() => setModal("inventory")}
-        >
-          <Package className="w-4 h-4 text-gold" />
-          <span className="text-[11px] leading-tight">Inventário</span>
-        </Button>
-        <Button
-          type="button"
-          variant="outline"
-          className={actionBtnCls}
-          onClick={() => setModal("notes")}
-        >
-          <NotebookPen className="w-4 h-4 text-gold" />
-          <span className="text-[11px] leading-tight">Anotações</span>
-        </Button>
-      </div>
+            {hpCard}
+            {resourcesCard}
+            {moneyCard}
+          </div>
+          <div className="grid grid-cols-2 gap-2">
+            <Button
+              type="button"
+              variant="outline"
+              className={actionBtnCls}
+              onClick={() => setModal("inventory")}
+            >
+              <Package className="w-4 h-4 text-gold" />
+              <span className="text-meta leading-tight">Inventário</span>
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              className={actionBtnCls}
+              onClick={() => setModal("notes")}
+            >
+              <NotebookPen className="w-4 h-4 text-gold" />
+              <span className="text-meta leading-tight">Anotações</span>
+            </Button>
+          </div>
+        </>
+      )}
 
       {/* Modal PV */}
       <Dialog open={modal === "hp"} onOpenChange={(open) => !open && setModal(null)}>
@@ -737,7 +786,7 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
             />
           )}
           {!hasMagic && !showChi && (
-            <p className="text-sm text-muted-foreground font-body">
+            <p className="text-field text-muted-foreground font-body">
               Este personagem não possui pontos de magia ou Chi.
             </p>
           )}
@@ -765,7 +814,7 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-56">
-                <DropdownMenuLabel className="font-display text-xs tracking-wider uppercase text-muted-foreground">
+                <DropdownMenuLabel className="font-display text-micro tracking-wider uppercase text-muted-foreground">
                   Adicionar item
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
@@ -789,12 +838,12 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
         >
           <div className="overflow-y-auto max-h-[55vh] -mx-1 px-1">
             {inventoryRows.length === 0 ? (
-              <p className="text-sm text-muted-foreground font-body py-6 text-center">
+              <p className="text-field text-muted-foreground font-body py-6 text-center">
                 Nenhum item no inventário. Use o + para ganhar ou comprar.
               </p>
             ) : (
               <div className="space-y-2">
-                <div className="hidden sm:grid grid-cols-[1.75rem_minmax(0,1fr)_7.5rem_4.5rem_4.25rem_2rem] gap-2 px-2.5 text-[10px] font-display tracking-wider uppercase text-muted-foreground">
+                <div className="hidden sm:grid grid-cols-[1.75rem_minmax(0,1fr)_7.5rem_4.5rem_4.25rem_2rem] gap-2 px-2.5 text-micro font-display tracking-wider uppercase text-muted-foreground">
                   <span />
                   <span>Descrição</span>
                   <span className="text-center">Quantidade</span>
@@ -828,10 +877,10 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
                     </button>
 
                     <div className="min-w-0">
-                      <div className="font-body text-sm text-foreground truncate">
+                      <div className="font-body text-field text-foreground truncate">
                         {row.name}
                       </div>
-                      <div className="text-[10px] text-muted-foreground mt-0.5">
+                      <div className="text-micro text-muted-foreground mt-0.5">
                         {row.kind === "custom" ? "Customizado · " : ""}
                         <span className="sm:hidden">
                           Peso: {formatWeightKg(row.weightKg, row.qty)}
@@ -864,7 +913,7 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
                           if (row.kind === "catalog") setCatalogQuantity(row.id, next);
                           else setCustomQuantity(row.id, next);
                         }}
-                        className="w-12 h-7 text-center bg-background border border-border rounded font-display text-xs font-bold tabular-nums focus:outline-none focus:ring-2 focus:ring-gold/30"
+                        className="w-12 h-7 text-center bg-background border border-border rounded font-display text-meta font-bold tabular-nums focus:outline-none focus:ring-2 focus:ring-gold/30"
                         aria-label={`Quantidade de ${row.name}`}
                       />
                       <Button
@@ -883,7 +932,7 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
                       </Button>
                     </div>
 
-                    <div className="hidden sm:block text-right font-body text-xs tabular-nums text-muted-foreground">
+                    <div className="hidden sm:block text-right font-body text-meta tabular-nums text-muted-foreground">
                       {formatWeightKg(row.weightKg, row.qty)}
                     </div>
 
@@ -1029,13 +1078,13 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
                 </span>
                 <div>
                   <DialogTitle
-                    className={`font-display tracking-wide text-base ${
+                    className={`font-display tracking-wide text-field ${
                       moneyDialogMode === "add" ? "text-gold-dark" : "text-destructive"
                     }`}
                   >
                     {moneyDialogMode === "add" ? "Achar dinheiro" : "Gastar dinheiro"}
                   </DialogTitle>
-                  <DialogDescription className="font-body text-xs text-foreground/70 mt-0.5">
+                  <DialogDescription className="font-body text-meta text-foreground/70 mt-0.5">
                     {moneyDialogMode === "add"
                       ? "Informe o valor encontrado (loot, pagamento, etc.)."
                       : `Disponível: ${formatMoney(remainingPc)}. Informe o valor gasto.`}
@@ -1074,7 +1123,7 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
               ).map(({ label, val, set, badge, ring }) => (
                 <label key={label} className="space-y-1.5">
                   <span
-                    className={`inline-block text-[11px] font-display font-bold tracking-wider px-2 py-0.5 rounded border ${badge}`}
+                    className={`inline-block text-micro font-display font-bold tracking-wider px-2 py-0.5 rounded border ${badge}`}
                   >
                     {label}
                   </span>
@@ -1084,7 +1133,7 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
                     value={val}
                     onChange={(e) => set(e.target.value)}
                     placeholder="0"
-                    className={`w-full px-2 py-2.5 rounded-lg border-2 border-border bg-card text-sm font-display font-semibold text-center text-foreground focus:outline-none focus:ring-2 ${ring}`}
+                    className={`w-full px-2 py-2.5 rounded-lg border-2 border-border bg-card text-field font-display font-semibold text-center text-foreground focus:outline-none focus:ring-2 ${ring}`}
                   />
                 </label>
               ))}
@@ -1100,7 +1149,7 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
               const after = isRemove ? remainingPc - previewPc : remainingPc + previewPc;
               return (
                 <div className="rounded-lg border-2 border-border bg-secondary px-3 py-3 space-y-2">
-                  <div className="flex justify-between items-center text-sm font-body text-foreground/80">
+                  <div className="flex justify-between items-center text-field font-body text-foreground/80">
                     <span>{isRemove ? "Valor a gastar" : "Valor a receber"}</span>
                     <span
                       className={`font-display font-bold ${
@@ -1112,7 +1161,7 @@ const PlaySessionPanel = ({ char, onChange }: PlaySessionPanelProps) => {
                     </span>
                   </div>
                   <div className="h-px bg-border" />
-                  <div className="flex justify-between items-center text-sm font-body text-foreground/80">
+                  <div className="flex justify-between items-center text-field font-body text-foreground/80">
                     <span>Saldo resultante</span>
                     <span
                       className={`font-display font-bold ${
