@@ -5,6 +5,7 @@ import {
   FileText,
   Heart,
   Home as HomeIcon,
+  KeyRound,
   Package,
   Pencil,
   Save,
@@ -24,6 +25,7 @@ import PlayPowersPanel from "@/components/PlayPowersPanel";
 import PlayResistancesPanel from "@/components/PlayResistancesPanel";
 import PlaySessionPanel from "@/components/PlaySessionPanel";
 import PlaySkillsPanel from "@/components/PlaySkillsPanel";
+import PlayThiefTalentsPanel from "@/components/PlayThiefTalentsPanel";
 import PlayWeaponsPanel from "@/components/PlayWeaponsPanel";
 import { Button } from "@/components/ui/button";
 import {
@@ -40,6 +42,7 @@ import {
   getEvolutionResistanceBonuses,
 } from "@/lib/evolutionProgress";
 import { defaultCombatLoadout } from "@/lib/combatStats";
+import { classHasThiefTalents } from "@/data/thiefTalents";
 
 const DEFAULT_PAGE_TITLE = "AD&D 2.5 Edition - Ficha de Personagem";
 const NAMED_PAGE_TITLE_SUFFIX = "AD&D 2.5 Edition - Ficha";
@@ -380,6 +383,22 @@ const Play = () => {
                 skillLevels={char.evolutionProgress?.skillLevels}
               />
             </PlaySection>
+
+            {classHasThiefTalents(displayChar.selectedClass) ? (
+              <PlaySection
+                dense
+                icon={<KeyRound className="w-3.5 h-3.5" />}
+                title="Talentos de ladrão"
+              >
+                <PlayThiefTalentsPanel
+                  selectedClass={displayChar.selectedClass}
+                  selectedRace={displayChar.selectedRace}
+                  subAttributes={displayChar.subAttributes}
+                  selectedAdvantages={displayChar.selectedAdvantages}
+                  purchasedBonuses={char.evolutionProgress?.thiefTalentBonuses}
+                />
+              </PlaySection>
+            ) : null}
           </div>
 
           <div className="w-full lg:w-[13.5rem] lg:shrink-0 min-w-0 space-y-3 md:space-y-4">

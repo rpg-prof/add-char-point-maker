@@ -28,6 +28,8 @@ export interface EvolutionProgress {
   skillBonuses: Record<string, number>;
   /** Nível de cada perícia comum (nome → nível; base 1). */
   skillLevels: Record<string, number>;
+  /** Percentuais comprados em talentos ladinos (chave → %). */
+  thiefTalentBonuses: Record<string, number>;
   spokenLanguages: number;
   writtenLanguages: number;
   arcaneManaPurchased: number;
@@ -64,6 +66,7 @@ export const defaultEvolutionProgress = (): EvolutionProgress => ({
   resistanceByLevel: {},
   skillBonuses: {},
   skillLevels: {},
+  thiefTalentBonuses: {},
   spokenLanguages: 0,
   writtenLanguages: 0,
   arcaneManaPurchased: 0,
@@ -88,6 +91,7 @@ export function normalizeEvolutionProgress(raw: unknown): EvolutionProgress {
     resistanceByLevel: data.resistanceByLevel ?? {},
     skillBonuses: data.skillBonuses ?? {},
     skillLevels: data.skillLevels ?? {},
+    thiefTalentBonuses: data.thiefTalentBonuses ?? {},
     evolutionSkills: data.evolutionSkills ?? [],
     evolutionWeapons: data.evolutionWeapons ?? [],
     evolutionWeaponGroups: data.evolutionWeaponGroups ?? [],
