@@ -8,7 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import type { AttributeName } from "@/data/characterData";
-import type { CustomInventoryItem, PurchasedItems } from "@/data/equipment";
+import type { CustomInventoryItem, EquipmentItem, PurchasedItems } from "@/data/equipment";
 import { weaponGroups, shieldProficiencies } from "@/data/weaponProficiencies";
 import {
   computeAttackRollBreakdown,
@@ -18,6 +18,7 @@ import {
   hasArtesMarciais,
   weaponSlotFromEquipment,
   type CombatLoadout,
+  type WeaponAttackSlot,
 } from "@/lib/combatStats";
 import { mergeInventory } from "@/lib/inventory";
 import {
@@ -28,6 +29,25 @@ import {
   weaponExpertiseLabel,
   type WeaponExpertiseLevel,
 } from "@/lib/weaponPlayStats";
+
+function equipmentFromManualSlot(slot: WeaponAttackSlot): EquipmentItem {
+  const name = slot.name.trim();
+  return {
+    id: slot.id,
+    name,
+    category: "arma",
+    tab: "armas",
+    pricePc: 0,
+    weightKg: 0,
+    weaponStats: {
+      size: "",
+      type: slot.tipo,
+      speed: "",
+      damagePM: slot.damageSm || slot.damageLg || "—",
+      damageG: slot.damageLg || slot.damageSm || "—",
+    },
+  };
+}
 
 function formatSigned(n: number) {
   return n > 0 ? `+${n}` : `${n}`;
@@ -71,10 +91,39 @@ const PlayWeaponsPanel = ({
   onLoadoutChange,
 }: PlayWeaponsPanelProps) => {
   const inventory = mergeInventory(purchasedItems, addedItems);
-  const weapons = useMemo(
+  const inventoryWeapons = useMemo(
     () => getAvailableWeapons(inventory, customItems),
     [inventory, customItems],
   );
+
+  const weapons = useMemo(() => {
+    const ownedNames = new Set(
+      inventoryWeapons.map((w) => w.name.trim().toLowerCase()).filter(Boolean),
+    );
+
+    // Armas digitadas no Combate ("Arma personalizada") que não estão no inventário.
+    const fromManualSlots = loadout.weaponSlots
+      .filter((slot) => {
+        if (slot.equipmentId) return false;
+        const name = slot.name.trim();
+        return name.length > 0 && !ownedNames.has(name.toLowerCase());
+      })
+      .map(equipmentFromManualSlot);
+
+    return [...inventoryWeapons, ...fromManualSlots].sort((a, b) =>
+      a.name.localeCompare(b.name, "pt-BR"),
+    );
+  }, [inventoryWeapons, loadout.weaponSlots]);
+
+  const manualWeaponIds = useMemo(() => {
+    const ids = new Set<string>();
+    for (const slot of loadout.weaponSlots) {
+      if (slot.equipmentId) continue;
+      if (!slot.name.trim()) continue;
+      ids.add(slot.id);
+    }
+    return ids;
+  }, [loadout.weaponSlots]);
 
   const weaponGroupItems = selectedWeaponGroups.map((gName) => {
     const group = weaponGroups.find((g) => g.name === gName);
@@ -123,16 +172,46 @@ const PlayWeaponsPanel = ({
   };
 
   const rows = weapons.map((item) => {
-    const match = matchWeaponProficiency(item, selectedWeapons, selectedWeaponGroups);
+    const isManual = manualWeaponIds.has(item.id);
+    const match = isManual
+      ? {
+          proficient: true,
+          group: null,
+          weaponName: item.name,
+          penaltyNoProficiency: 0,
+        }
+      : matchWeaponProficiency(item, selectedWeapons, selectedWeaponGroups);
     const level = resolveWeaponExpertiseLevel(match.proficient, masteryMap[item.id]);
     const expertise = getWeaponExpertiseBonuses(level);
     const proficiencyAttack = match.proficient ? 0 : match.penaltyNoProficiency;
 
-    const slot = {
-      ...createEmptyWeaponSlot(0),
+    const loadoutSlot = loadout.weaponSlots.find(
+      (s) =>
+        s.id === item.id ||
+        s.equipmentId === item.id ||
+        (!s.equipmentId &&
+          s.name.trim().toLowerCase() === item.name.trim().toLowerCase()),
+    );
+
+    const slot: WeaponAttackSlot = {
+      ...(loadoutSlot ?? createEmptyWeaponSlot(0)),
       ...weaponSlotFromEquipment(item),
+      id: item.id,
       periciaOverride: proficiencyAttack + expertise.attack,
-      magiaAttack: 0,
+      ...(loadoutSlot && !loadoutSlot.equipmentId
+        ? {
+            equipmentId: null,
+            name: loadoutSlot.name,
+            tipo: loadoutSlot.tipo || item.weaponStats?.type || "",
+            damageSm: loadoutSlot.damageSm || item.weaponStats?.damagePM || "",
+            damageLg: loadoutSlot.damageLg || item.weaponStats?.damageG || "",
+            weaponBonus: loadoutSlot.weaponBonus,
+            magiaAttack: loadoutSlot.magiaAttack,
+            forcaOverride: loadoutSlot.forcaOverride,
+            destrezaOverride: loadoutSlot.destrezaOverride,
+            baseOverride: loadoutSlot.baseOverride,
+          }
+        : { magiaAttack: loadoutSlot?.magiaAttack ?? 0 }),
     };
 
     const attack = computeAttackRollBreakdown({
@@ -153,9 +232,9 @@ const PlayWeaponsPanel = ({
       level,
       attack,
       damageBonus,
-      damageSm: item.weaponStats?.damagePM ?? "—",
-      damageLg: item.weaponStats?.damageG ?? "—",
-      tipo: item.weaponStats?.type ?? "—",
+      damageSm: slot.damageSm || item.weaponStats?.damagePM || "—",
+      damageLg: slot.damageLg || item.weaponStats?.damageG || "—",
+      tipo: slot.tipo || item.weaponStats?.type || "—",
     };
   });
 
