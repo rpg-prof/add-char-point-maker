@@ -9,6 +9,7 @@ import {
   Package,
   PackagePlus,
   Plus,
+  BookOpen,
   ShoppingBag,
   Sparkles,
   Wallet,
@@ -56,6 +57,7 @@ import {
   type CombatLoadout,
 } from "@/lib/combatStats";
 import { resolveResourceCurrent } from "@/lib/combatResources";
+import { chiPointsForLevel } from "@/data/characterEvolution";
 import {
   buildInventoryEntries,
   ensureInventoryOrderId,
@@ -100,6 +102,9 @@ interface PlaySessionPanelProps {
   onChange: (char: CharacterSaveData) => void;
   /** Coluna estreita: PV/Magia/Dinheiro/botões empilhados. */
   compact?: boolean;
+  /** Se definido, mostra botão do grimório/livro de orações ao lado do inventário. */
+  grimoireLabel?: string | null;
+  onOpenGrimoire?: () => void;
 }
 
 const actionBtnCls =
@@ -221,7 +226,13 @@ function AdjustRow({
   );
 }
 
-const PlaySessionPanel = ({ char, onChange, compact = false }: PlaySessionPanelProps) => {
+const PlaySessionPanel = ({
+  char,
+  onChange,
+  compact = false,
+  grimoireLabel = null,
+  onOpenGrimoire,
+}: PlaySessionPanelProps) => {
   const [modal, setModal] = useState<ModalId>(null);
   const [pickerOpen, setPickerOpen] = useState(false);
   const [pickerMode, setPickerMode] = useState<ItemPickerMode>("add");
@@ -235,9 +246,12 @@ const PlaySessionPanel = ({ char, onChange, compact = false }: PlaySessionPanelP
   const [moneyPc, setMoneyPc] = useState("");
 
   const loadout = char.combatLoadout;
+  const evo = char.evolutionProgress;
   const hasMagic =
     Object.keys(char.divineAccess).length > 0 ||
     Object.keys(char.arcaneAccess).length > 0 ||
+    Object.keys(evo?.evolutionDivineAccess ?? {}).length > 0 ||
+    Object.keys(evo?.evolutionArcaneAccess ?? {}).length > 0 ||
     char.arcaneSpecialist !== null;
 
   const maxHp = useMemo(() => {
@@ -254,14 +268,22 @@ const PlaySessionPanel = ({ char, onChange, compact = false }: PlaySessionPanelP
   }, [char]);
 
   const currentHp = resolveCurrentHp(loadout.currentHp, maxHp);
-  const maxMana = loadout.maxMana;
+
+  const maxMana =
+    (loadout.maxMana ?? 0) +
+    (evo?.arcaneManaPurchased ?? 0) +
+    (evo?.divineManaPurchased ?? 0);
   const currentMana = resolveResourceCurrent(loadout.currentMana, maxMana);
-  const maxSpecialistMana = loadout.maxSpecialistMana;
+
+  const maxSpecialistMana =
+    (loadout.maxSpecialistMana ?? 0) + (evo?.specialistManaPurchased ?? 0);
   const currentSpecialistMana = resolveResourceCurrent(
     loadout.currentSpecialistMana,
     maxSpecialistMana,
   );
-  const maxChi = loadout.maxChi;
+
+  const evoChiMax = evo && evo.chiLevel > 1 ? chiPointsForLevel(evo.chiLevel) : 0;
+  const maxChi = Math.max(loadout.maxChi ?? 0, evoChiMax);
   const currentChi = resolveResourceCurrent(loadout.currentChi, maxChi);
   const showChi = loadout.showChi || maxChi > 0;
 
@@ -678,7 +700,7 @@ const PlaySessionPanel = ({ char, onChange, compact = false }: PlaySessionPanelP
             {resourcesCard}
           </div>
           {moneyCard}
-          <div className="grid grid-cols-1 gap-1.5 mt-auto">
+          <div className={`grid gap-1.5 mt-auto ${grimoireLabel ? "grid-cols-2" : "grid-cols-1"}`}>
             <Button
               type="button"
               variant="outline"
@@ -688,10 +710,24 @@ const PlaySessionPanel = ({ char, onChange, compact = false }: PlaySessionPanelP
               <Package className="w-3.5 h-3.5 text-gold" />
               <span className="text-meta leading-tight">Inventário</span>
             </Button>
+            {grimoireLabel && onOpenGrimoire && (
+              <Button
+                type="button"
+                variant="outline"
+                className={actionBtnCompactCls}
+                onClick={onOpenGrimoire}
+                title={grimoireLabel}
+              >
+                <BookOpen className="w-3.5 h-3.5 text-gold" />
+                <span className="text-meta leading-tight truncate max-w-full px-0.5">
+                  {grimoireLabel === "Livro de Orações" ? "Orações" : grimoireLabel.includes("/") ? "Magias" : "Grimório"}
+                </span>
+              </Button>
+            )}
             <Button
               type="button"
               variant="outline"
-              className={actionBtnCompactCls}
+              className={`${actionBtnCompactCls}${grimoireLabel ? " col-span-2" : ""}`}
               onClick={() => setModal("notes")}
             >
               <NotebookPen className="w-3.5 h-3.5 text-gold" />
@@ -710,7 +746,11 @@ const PlaySessionPanel = ({ char, onChange, compact = false }: PlaySessionPanelP
             {resourcesCard}
             {moneyCard}
           </div>
-          <div className="grid grid-cols-2 gap-2">
+          <div
+            className={`grid gap-2 ${
+              grimoireLabel ? "grid-cols-3" : "grid-cols-2"
+            }`}
+          >
             <Button
               type="button"
               variant="outline"
@@ -720,6 +760,24 @@ const PlaySessionPanel = ({ char, onChange, compact = false }: PlaySessionPanelP
               <Package className="w-4 h-4 text-gold" />
               <span className="text-meta leading-tight">Inventário</span>
             </Button>
+            {grimoireLabel && onOpenGrimoire && (
+              <Button
+                type="button"
+                variant="outline"
+                className={actionBtnCls}
+                onClick={onOpenGrimoire}
+                title={grimoireLabel}
+              >
+                <BookOpen className="w-4 h-4 text-gold" />
+                <span className="text-meta leading-tight">
+                  {grimoireLabel === "Livro de Orações"
+                    ? "Orações"
+                    : grimoireLabel.includes("/")
+                      ? "Magias"
+                      : "Grimório"}
+                </span>
+              </Button>
+            )}
             <Button
               type="button"
               variant="outline"

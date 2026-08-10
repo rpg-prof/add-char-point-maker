@@ -27,6 +27,7 @@ import PlaySessionPanel from "@/components/PlaySessionPanel";
 import PlaySkillsPanel from "@/components/PlaySkillsPanel";
 import PlayThiefTalentsPanel from "@/components/PlayThiefTalentsPanel";
 import PlayWeaponsPanel from "@/components/PlayWeaponsPanel";
+import PlayGrimoireModal from "@/components/PlayGrimoireModal";
 import { Button } from "@/components/ui/button";
 import {
   downloadCharacterSave,
@@ -42,7 +43,7 @@ import {
   getEvolutionResistanceBonuses,
 } from "@/lib/evolutionProgress";
 import { defaultCombatLoadout } from "@/lib/combatStats";
-import { classHasThiefTalents } from "@/data/thiefTalents";
+import { shouldShowThiefTalents } from "@/data/thiefTalents";
 
 const DEFAULT_PAGE_TITLE = "AD&D 2.5 Edition - Ficha de Personagem";
 const NAMED_PAGE_TITLE_SUFFIX = "AD&D 2.5 Edition - Ficha";
@@ -96,6 +97,7 @@ const Play = () => {
   const navigate = useNavigate();
   const [char, setChar] = useState<CharacterSaveData | null>(() => getActiveCharacter());
   const [armorEditOpen, setArmorEditOpen] = useState(false);
+  const [grimoireOpen, setGrimoireOpen] = useState(false);
 
   useEffect(() => {
     if (!char) {
@@ -137,6 +139,29 @@ const Play = () => {
   );
 
   const loadout = displayChar?.combatLoadout ?? defaultCombatLoadout();
+
+  const hasMagicAccess = Boolean(
+    displayChar &&
+      (Object.keys(displayChar.divineAccess).length > 0 ||
+        Object.keys(displayChar.arcaneAccess).length > 0 ||
+        displayChar.arcaneSpecialist !== null),
+  );
+
+  const hasArcaneAccess = Boolean(
+    displayChar &&
+      (Object.keys(displayChar.arcaneAccess).length > 0 ||
+        displayChar.arcaneSpecialist !== null),
+  );
+  const hasDivineAccess = Boolean(
+    displayChar && Object.keys(displayChar.divineAccess).length > 0,
+  );
+
+  const grimoireTitle =
+    hasArcaneAccess && !hasDivineAccess
+      ? "Grimório"
+      : hasDivineAccess && !hasArcaneAccess
+        ? "Livro de Orações"
+        : "Grimório / Livro de Orações";
 
   const handleSave = useCallback(() => {
     if (!char) return;
@@ -384,7 +409,10 @@ const Play = () => {
               />
             </PlaySection>
 
-            {classHasThiefTalents(displayChar.selectedClass) ? (
+            {shouldShowThiefTalents(
+              displayChar.selectedClass,
+              char.evolutionProgress?.thiefTalentBonuses,
+            ) ? (
               <PlaySection
                 dense
                 icon={<KeyRound className="w-3.5 h-3.5" />}
@@ -408,7 +436,13 @@ const Play = () => {
               title="Sessão"
               bodyClassName="flex flex-col"
             >
-              <PlaySessionPanel char={char} onChange={updateChar} compact />
+              <PlaySessionPanel
+                char={char}
+                onChange={updateChar}
+                compact
+                grimoireLabel={hasMagicAccess ? grimoireTitle : null}
+                onOpenGrimoire={() => setGrimoireOpen(true)}
+              />
             </PlaySection>
 
             <PlaySection
@@ -427,6 +461,19 @@ const Play = () => {
           </div>
         </div>
       </main>
+
+      {hasMagicAccess && (
+        <PlayGrimoireModal
+          open={grimoireOpen}
+          onOpenChange={setGrimoireOpen}
+          title={grimoireTitle}
+          grimoire={displayChar.grimoire}
+          magicComponents={char.magicComponents}
+          onMagicComponentsChange={(magicComponents) =>
+            updateChar({ ...char, magicComponents })
+          }
+        />
+      )}
     </div>
   );
 };

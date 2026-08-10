@@ -1,18 +1,20 @@
 import { Minus, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
+  arcaneManaUnitCost,
+  divineManaUnitCost,
   EVOLUTION_COSTS,
   getMagicCircleAccess,
-  MAX_CHI_LEVEL,
+  magicLevelUpgradeCost,
+  magicLevelUpgradeMultiplier,
   MAX_MAGIC_LEVEL,
-  scaledLevelUpgradeCost,
 } from "@/data/characterEvolution";
 import type { EvolutionProgress } from "@/lib/evolutionProgress";
 
 interface EvolutionMagicPanelProps {
+  selectedClass: string;
   progress: EvolutionProgress;
   availablePoints: number;
-  hasMagicAccess: boolean;
   hasArcaneAccess: boolean;
   hasDivineAccess: boolean;
   arcaneSpecialist: string | null;
@@ -23,9 +25,9 @@ const rowCls =
   "flex items-center justify-between gap-3 rounded-lg border border-border/60 bg-card/30 px-3 py-2.5";
 
 const EvolutionMagicPanel = ({
+  selectedClass,
   progress,
   availablePoints,
-  hasMagicAccess,
   hasArcaneAccess,
   hasDivineAccess,
   arcaneSpecialist,
@@ -39,25 +41,27 @@ const EvolutionMagicPanel = ({
     action();
   };
 
+  const hasMagicAccess = hasArcaneAccess || hasDivineAccess;
+
   if (!hasMagicAccess) {
     return (
       <p className="font-body text-muted-foreground text-sm">
-        Este personagem não possui acesso a magia. Nenhuma progressão mágica disponível.
+        Compre acesso a uma escola ou esfera no passo Acesso à Magia para liberar nível e
+        pontos de magia.
       </p>
     );
   }
 
-  const magicUpgradeCost = scaledLevelUpgradeCost(progress.magicLevel, 5);
-  const chiUpgradeCost = scaledLevelUpgradeCost(progress.chiLevel, 5);
-
-  const arcaneUnit = arcaneSpecialist
-    ? EVOLUTION_COSTS.arcaneSpecialistMana
-    : EVOLUTION_COSTS.arcaneMana;
+  const magicMult = magicLevelUpgradeMultiplier(selectedClass);
+  const magicUpgradeCost = magicLevelUpgradeCost(progress.magicLevel, selectedClass);
+  const arcaneUnit = arcaneManaUnitCost(selectedClass);
+  const divineUnit = divineManaUnitCost(selectedClass);
+  const specialistUnit = EVOLUTION_COSTS.arcaneSpecialistMana;
 
   return (
     <div className="space-y-4">
       <p className="font-body text-muted-foreground text-xs">
-        Nível de magia: nível anterior × 5 (acesso a círculos a cada 2 níveis).
+        Nível de magia: nível anterior × {magicMult} (círculos a cada 2 níveis).
         Pontos de magia só podem ser comprados ao alcançar um novo nível.
       </p>
 
@@ -68,7 +72,8 @@ const EvolutionMagicPanel = ({
               Nível de Magia
             </div>
             <div className="text-[11px] text-muted-foreground font-body">
-              Nv. {progress.magicLevel}/{MAX_MAGIC_LEVEL} · Círculo {getMagicCircleAccess(progress.magicLevel)}°
+              Nv. {progress.magicLevel}/{MAX_MAGIC_LEVEL} · Círculo{" "}
+              {getMagicCircleAccess(progress.magicLevel)}°
               {progress.magicLevel < MAX_MAGIC_LEVEL && (
                 <> · Próximo: {magicUpgradeCost} PP</>
               )}
@@ -117,7 +122,6 @@ const EvolutionMagicPanel = ({
               </div>
               <div className="text-[11px] text-muted-foreground font-body">
                 +{progress.arcaneManaPurchased} · {arcaneUnit} PP cada
-                {arcaneSpecialist && " (escola especialista)"}
               </div>
             </div>
             <div className="flex items-center gap-1">
@@ -160,7 +164,7 @@ const EvolutionMagicPanel = ({
                 Pontos Escola Especialista
               </div>
               <div className="text-[11px] text-muted-foreground font-body">
-                +{progress.specialistManaPurchased} · {EVOLUTION_COSTS.arcaneSpecialistMana} PP cada
+                +{progress.specialistManaPurchased} · {specialistUnit} PP cada
               </div>
             </div>
             <div className="flex items-center gap-1">
@@ -170,7 +174,9 @@ const EvolutionMagicPanel = ({
                 className="h-7 w-7"
                 onClick={() =>
                   progress.specialistManaPurchased > 0 &&
-                  update({ specialistManaPurchased: progress.specialistManaPurchased - 1 })
+                  update({
+                    specialistManaPurchased: progress.specialistManaPurchased - 1,
+                  })
                 }
                 disabled={progress.specialistManaPurchased <= 0}
               >
@@ -184,11 +190,13 @@ const EvolutionMagicPanel = ({
                 variant="outline"
                 className="h-7 w-7"
                 onClick={() =>
-                  trySpend(EVOLUTION_COSTS.arcaneSpecialistMana, () =>
-                    update({ specialistManaPurchased: progress.specialistManaPurchased + 1 }),
+                  trySpend(specialistUnit, () =>
+                    update({
+                      specialistManaPurchased: progress.specialistManaPurchased + 1,
+                    }),
                   )
                 }
-                disabled={availablePoints < EVOLUTION_COSTS.arcaneSpecialistMana}
+                disabled={availablePoints < specialistUnit}
               >
                 <Plus className="w-3 h-3" />
               </Button>
@@ -203,7 +211,7 @@ const EvolutionMagicPanel = ({
                 Pontos de Magia Divina
               </div>
               <div className="text-[11px] text-muted-foreground font-body">
-                +{progress.divineManaPurchased} · {EVOLUTION_COSTS.divineMana} PP cada
+                +{progress.divineManaPurchased} · {divineUnit} PP cada
               </div>
             </div>
             <div className="flex items-center gap-1">
@@ -227,60 +235,17 @@ const EvolutionMagicPanel = ({
                 variant="outline"
                 className="h-7 w-7"
                 onClick={() =>
-                  trySpend(EVOLUTION_COSTS.divineMana, () =>
+                  trySpend(divineUnit, () =>
                     update({ divineManaPurchased: progress.divineManaPurchased + 1 }),
                   )
                 }
-                disabled={availablePoints < EVOLUTION_COSTS.divineMana}
+                disabled={availablePoints < divineUnit}
               >
                 <Plus className="w-3 h-3" />
               </Button>
             </div>
           </div>
         )}
-
-        <div className={rowCls}>
-          <div>
-            <div className="font-display text-xs tracking-wider uppercase text-foreground">
-              Nível de Chi
-            </div>
-            <div className="text-[11px] text-muted-foreground font-body">
-              Nv. {progress.chiLevel}/{MAX_CHI_LEVEL}
-              {progress.chiLevel < MAX_CHI_LEVEL && <> · Próximo: {chiUpgradeCost} PP</>}
-            </div>
-          </div>
-          <div className="flex items-center gap-1">
-            <Button
-              size="icon"
-              variant="outline"
-              className="h-7 w-7"
-              onClick={() =>
-                progress.chiLevel > 1 && update({ chiLevel: progress.chiLevel - 1 })
-              }
-              disabled={progress.chiLevel <= 1}
-            >
-              <Minus className="w-3 h-3" />
-            </Button>
-            <span className="w-8 text-center font-display font-bold tabular-nums">
-              {progress.chiLevel}
-            </span>
-            <Button
-              size="icon"
-              variant="outline"
-              className="h-7 w-7"
-              onClick={() =>
-                trySpend(chiUpgradeCost, () =>
-                  update({ chiLevel: progress.chiLevel + 1 }),
-                )
-              }
-              disabled={
-                progress.chiLevel >= MAX_CHI_LEVEL || availablePoints < chiUpgradeCost
-              }
-            >
-              <Plus className="w-3 h-3" />
-            </Button>
-          </div>
-        </div>
       </div>
     </div>
   );

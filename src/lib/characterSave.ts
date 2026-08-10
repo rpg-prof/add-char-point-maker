@@ -28,6 +28,7 @@ import {
   normalizeEvolutionProgress,
   type EvolutionProgress,
 } from "@/lib/evolutionProgress";
+import { chiPointsForLevel } from "@/data/characterEvolution";
 
 export interface CharacterSaveData {
   charName: string;
@@ -289,6 +290,10 @@ export function mergeEvolutionIntoCharacter(data: CharacterSaveData): CharacterS
     loadout.maxSpecialistMana =
       (loadout.maxSpecialistMana ?? 0) + evo.specialistManaPurchased;
   }
+  if (evo.chiLevel > 1) {
+    loadout.maxChi = Math.max(loadout.maxChi ?? 0, chiPointsForLevel(evo.chiLevel));
+    loadout.showChi = true;
+  }
 
   return {
     ...data,
@@ -297,6 +302,14 @@ export function mergeEvolutionIntoCharacter(data: CharacterSaveData): CharacterS
     selectedWeaponGroups: mergedGroups,
     selectedShields: mergedShields,
     selectedRaceClassAdv: mergedAdv,
+    divineAccess: {
+      ...data.divineAccess,
+      ...evo.evolutionDivineAccess,
+    },
+    arcaneAccess: {
+      ...data.arcaneAccess,
+      ...evo.evolutionArcaneAccess,
+    },
     combatLoadout: loadout,
   };
 }

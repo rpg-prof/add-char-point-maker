@@ -1,5 +1,6 @@
 import {
   classHasThiefTalents,
+  shouldShowThiefTalents,
   THIEF_TALENT_CAP,
   THIEF_TALENT_RACIAL,
   THIEF_TALENTS,
@@ -71,7 +72,11 @@ export function computeThiefTalentBreakdown(params: {
   /** Pontos percentuais comprados / distribuídos por talento. */
   purchasedBonuses?: Record<string, number> | null;
 }): ThiefTalentBreakdown[] | null {
-  if (!classHasThiefTalents(params.selectedClass)) return null;
+  if (
+    !shouldShowThiefTalents(params.selectedClass, params.purchasedBonuses)
+  ) {
+    return null;
+  }
 
   const racialMap = THIEF_TALENT_RACIAL[params.selectedRace] ?? {};
   const purchased = params.purchasedBonuses ?? {};

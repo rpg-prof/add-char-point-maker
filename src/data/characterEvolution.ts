@@ -128,6 +128,8 @@ export function getXpClassGroup(className: string): XpClassGroup {
     case "Paladino":
       return "rangerPaladino";
     case "Mago":
+    case "Arcano":
+    case "Monge":
       return "mago";
     case "Sacerdote":
       return "sacerdote";
@@ -149,6 +151,27 @@ export function progressionPointsForLevel(level: number): number {
   return level >= 2 ? level * 10 : 0;
 }
 
+/** Homens de Armas: Guerreiro, Paladino, Ranger. */
+export function isWeaponManClass(className: string): boolean {
+  return className === "Guerreiro" || className === "Paladino" || className === "Ranger";
+}
+
+export function isFullCasterClass(className: string): boolean {
+  return (
+    className === "Arcano" ||
+    className === "Mago" ||
+    className === "Sacerdote"
+  );
+}
+
+export function isPartialCasterClass(className: string): boolean {
+  return (
+    className === "Paladino" ||
+    className === "Bardo" ||
+    className === "Ranger"
+  );
+}
+
 export const EVOLUTION_COSTS = {
   hpPerPoint: 2,
   maxHpPerLevel: 12,
@@ -156,25 +179,69 @@ export const EVOLUTION_COSTS = {
   maxResistancePercentPerLevel: 5,
   spokenLanguage: 3,
   writtenLanguage: 5,
+  /** Magia arcana (Arcano). */
   arcaneMana: 7,
+  /** Magia arcana na escola especialista. */
   arcaneSpecialistMana: 5,
+  /** Magia divina (Sacerdote). */
   divineMana: 5,
+  /** Magia arcana (Bardo). */
+  bardArcaneMana: 10,
+  /** Magia divina (Paladino / Ranger). */
+  halfCasterDivineMana: 7,
+  /** Magia arcana ou divina (demais classes). */
+  otherMana: 15,
+  /** Homens de Armas. Demais classes pagam o dobro. */
   attacksPerRoundLevel: 80,
   backstabLevel: 40,
 } as const;
 
+/** Multiplicador do nível de magia: ×5 / ×7 / ×10 conforme a classe. */
+export function magicLevelUpgradeMultiplier(className: string): number {
+  if (isFullCasterClass(className)) return 5;
+  if (isPartialCasterClass(className)) return 7;
+  return 10;
+}
+
+/** Custo por ponto de magia arcana (pool geral), conforme a classe. */
+export function arcaneManaUnitCost(className: string): number {
+  if (className === "Arcano" || className === "Mago") return EVOLUTION_COSTS.arcaneMana;
+  if (className === "Bardo") return EVOLUTION_COSTS.bardArcaneMana;
+  return EVOLUTION_COSTS.otherMana;
+}
+
+/** Custo por ponto de magia divina, conforme a classe. */
+export function divineManaUnitCost(className: string): number {
+  if (className === "Sacerdote") return EVOLUTION_COSTS.divineMana;
+  if (className === "Paladino" || className === "Ranger") {
+    return EVOLUTION_COSTS.halfCasterDivineMana;
+  }
+  return EVOLUTION_COSTS.otherMana;
+}
+
 /** Custo para subir base de ataque do nível atual para o próximo. */
-export function attackBaseUpgradeCost(currentLevel: number): number {
-  return Math.max(currentLevel, 1) * 3;
+export function attackBaseUpgradeCost(
+  currentLevel: number,
+  className = "",
+): number {
+  const base = Math.max(currentLevel, 1) * 3;
+  return isWeaponManClass(className) ? base : base * 2;
 }
 
 /** Custo cumulativo para atingir base de ataque `targetLevel` a partir de 0. */
-export function attackBaseTotalCost(targetLevel: number): number {
+export function attackBaseTotalCost(targetLevel: number, className = ""): number {
   let total = 0;
   for (let level = 0; level < targetLevel; level++) {
-    total += attackBaseUpgradeCost(level);
+    total += attackBaseUpgradeCost(level, className);
   }
   return total;
+}
+
+/** Custo por nível de quantidade de ataques por rodada. */
+export function attacksPerRoundUpgradeCost(className: string): number {
+  return isWeaponManClass(className)
+    ? EVOLUTION_COSTS.attacksPerRoundLevel
+    : EVOLUTION_COSTS.attacksPerRoundLevel * 2;
 }
 
 /** Custo para subir nível de magia ou Chi. */
@@ -182,21 +249,37 @@ export function scaledLevelUpgradeCost(currentLevel: number, multiplier = 5): nu
   return currentLevel * multiplier;
 }
 
-export function magicLevelTotalCost(targetLevel: number): number {
+export function magicLevelUpgradeCost(
+  currentLevel: number,
+  className: string,
+): number {
+  return scaledLevelUpgradeCost(
+    currentLevel,
+    magicLevelUpgradeMultiplier(className),
+  );
+}
+
+export function magicLevelTotalCost(targetLevel: number, className = ""): number {
   let total = 0;
   for (let level = 1; level < targetLevel; level++) {
-    total += scaledLevelUpgradeCost(level, 5);
+    total += magicLevelUpgradeCost(level, className);
   }
   return total;
 }
 
+/** Pontos de Chi máximos por nível (nv. 1 = 0; +2 por nível). */
+export function chiPointsForLevel(chiLevel: number): number {
+  if (chiLevel <= 1) return 0;
+  return (chiLevel - 1) * 2;
+}
+
 export function getMagicCircleAccess(magicLevel: number): number {
   if (magicLevel <= 1) return 1;
-  return Math.ceil(magicLevel / 2);
+  return Math.min(9, Math.ceil(magicLevel / 2));
 }
 
 export const MAX_ATTACK_BASE_LEVEL = 20;
-export const MAX_MAGIC_LEVEL = 17;
+export const MAX_MAGIC_LEVEL = 20;
 export const MAX_CHI_LEVEL = 20;
 export const MAX_ATTACKS_PER_ROUND_LEVEL = 4;
 export const MAX_CHARACTER_LEVEL = 20;

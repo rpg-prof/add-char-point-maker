@@ -1,10 +1,24 @@
 import {
+  arcaneManaUnitCost,
   attackBaseTotalCost,
+  attacksPerRoundUpgradeCost,
+  divineManaUnitCost,
   EVOLUTION_COSTS,
   magicLevelTotalCost,
   progressionPointsForLevel,
   scaledLevelUpgradeCost,
 } from "@/data/characterEvolution";
+import { getChiTechniqueCost, findChiTechnique } from "@/data/chiTechniques";
+import {
+  getThiefTalentCostPerPercent,
+  THIEF_TALENTS,
+} from "@/data/thiefTalents";
+import {
+  arcaneSchools,
+  arcaneSchoolCost,
+  divineSpheres,
+  divineSphereCost,
+} from "@/data/magicAccess";
 import { RESISTANCE_DEFS } from "@/lib/resistanceStats";
 import { getProgressPointsCost, raceClassAdvantages } from "@/data/raceClassAdvantages";
 import { getSkillCost, skills } from "@/data/skills";
@@ -30,6 +44,12 @@ export interface EvolutionProgress {
   skillLevels: Record<string, number>;
   /** Percentuais comprados em talentos ladinos (chave → %). */
   thiefTalentBonuses: Record<string, number>;
+  /** Técnicas de Chi adquiridas com pontos de progressão. */
+  chiTechniques: string[];
+  /** Esferas divinas compradas na evolução. */
+  evolutionDivineAccess: Record<string, "minor" | "major">;
+  /** Escolas arcanas compradas na evolução (sem especialização). */
+  evolutionArcaneAccess: Record<string, "access">;
   spokenLanguages: number;
   writtenLanguages: number;
   arcaneManaPurchased: number;
@@ -67,6 +87,9 @@ export const defaultEvolutionProgress = (): EvolutionProgress => ({
   skillBonuses: {},
   skillLevels: {},
   thiefTalentBonuses: {},
+  chiTechniques: [],
+  evolutionDivineAccess: {},
+  evolutionArcaneAccess: {},
   spokenLanguages: 0,
   writtenLanguages: 0,
   arcaneManaPurchased: 0,
@@ -92,12 +115,40 @@ export function normalizeEvolutionProgress(raw: unknown): EvolutionProgress {
     skillBonuses: data.skillBonuses ?? {},
     skillLevels: data.skillLevels ?? {},
     thiefTalentBonuses: data.thiefTalentBonuses ?? {},
+    chiTechniques: data.chiTechniques ?? [],
+    evolutionDivineAccess: data.evolutionDivineAccess ?? {},
+    evolutionArcaneAccess: data.evolutionArcaneAccess ?? {},
     evolutionSkills: data.evolutionSkills ?? [],
     evolutionWeapons: data.evolutionWeapons ?? [],
     evolutionWeaponGroups: data.evolutionWeaponGroups ?? [],
     evolutionShields: data.evolutionShields ?? [],
     evolutionRaceClassAdv: data.evolutionRaceClassAdv ?? [],
   };
+}
+
+/**
+ * Remove nível/pontos de magia quando não há mais acesso correspondente.
+ * Sem nenhum acesso: zera nível de magia e todos os pontos comprados.
+ */
+export function sanitizeMagicProgressAfterAccessChange(
+  progress: EvolutionProgress,
+  opts: {
+    hasArcaneAccess: boolean;
+    hasDivineAccess: boolean;
+  },
+): EvolutionProgress {
+  const next = { ...progress };
+  if (!opts.hasArcaneAccess) {
+    next.arcaneManaPurchased = 0;
+    next.specialistManaPurchased = 0;
+  }
+  if (!opts.hasDivineAccess) {
+    next.divineManaPurchased = 0;
+  }
+  if (!opts.hasArcaneAccess && !opts.hasDivineAccess) {
+    next.magicLevel = 1;
+  }
+  return next;
 }
 
 export function totalProgressionPoints(history: ProgressionEntry[]): number {
@@ -140,15 +191,15 @@ export function getEvolutionSpendBreakdown(
     pushPositive(
       breakdown,
       `Base de Ataque (nv. ${progress.attackBaseLevel})`,
-      attackBaseTotalCost(progress.attackBaseLevel),
+      attackBaseTotalCost(progress.attackBaseLevel, ctx.selectedClass),
     );
   }
 
-  if (progress.magicLevel > 1) {
+  if (progress.magicLevel > 1 && (ctx.hasArcaneAccess || ctx.hasDivineAccess)) {
     pushPositive(
       breakdown,
       `Nível de Magia (nv. ${progress.magicLevel})`,
-      magicLevelTotalCost(progress.magicLevel),
+      magicLevelTotalCost(progress.magicLevel, ctx.selectedClass),
     );
   }
 
@@ -164,7 +215,7 @@ export function getEvolutionSpendBreakdown(
     pushPositive(
       breakdown,
       `Ataques/Rodada (nv. ${progress.attacksPerRoundLevel})`,
-      progress.attacksPerRoundLevel * EVOLUTION_COSTS.attacksPerRoundLevel,
+      progress.attacksPerRoundLevel * attacksPerRoundUpgradeCost(ctx.selectedClass),
     );
   }
 
@@ -214,28 +265,45 @@ export function getEvolutionSpendBreakdown(
     );
   }
 
-  if (progress.arcaneManaPurchased > 0) {
-    const unit = ctx.arcaneSpecialist
-      ? EVOLUTION_COSTS.arcaneSpecialistMana
-      : EVOLUTION_COSTS.arcaneMana;
+  if (progress.arcaneManaPurchased > 0 && ctx.hasArcaneAccess) {
+    const unit = arcaneManaUnitCost(ctx.selectedClass);
     pushPositive(
       breakdown,
       `Pontos de Magia Arcana (+${progress.arcaneManaPurchased})`,
       progress.arcaneManaPurchased * unit,
     );
   }
-  if (progress.divineManaPurchased > 0) {
+  if (progress.divineManaPurchased > 0 && ctx.hasDivineAccess) {
+    const unit = divineManaUnitCost(ctx.selectedClass);
     pushPositive(
       breakdown,
       `Pontos de Magia Divina (+${progress.divineManaPurchased})`,
-      progress.divineManaPurchased * EVOLUTION_COSTS.divineMana,
+      progress.divineManaPurchased * unit,
     );
   }
-  if (progress.specialistManaPurchased > 0) {
+  if (progress.specialistManaPurchased > 0 && ctx.hasArcaneAccess) {
     pushPositive(
       breakdown,
       `Pontos Escola Especialista (+${progress.specialistManaPurchased})`,
       progress.specialistManaPurchased * EVOLUTION_COSTS.arcaneSpecialistMana,
+    );
+  }
+
+  for (const [name, level] of Object.entries(progress.evolutionDivineAccess)) {
+    const sphere = divineSpheres.find((s) => s.name === name);
+    if (!sphere || (level !== "minor" && level !== "major")) continue;
+    const cost = divineSphereCost(sphere, level, ctx.selectedClass);
+    const levelLabel = level === "minor" ? "menor" : "maior";
+    pushPositive(breakdown, `Esfera Divina: ${name} (${levelLabel})`, cost);
+  }
+
+  for (const name of Object.keys(progress.evolutionArcaneAccess)) {
+    const school = arcaneSchools.find((s) => s.name === name);
+    if (!school) continue;
+    pushPositive(
+      breakdown,
+      `Escola Arcana: ${name}`,
+      arcaneSchoolCost(school, ctx.selectedClass, ctx.selectedRace),
     );
   }
 
@@ -295,6 +363,27 @@ export function getEvolutionSpendBreakdown(
       total += lv * mult;
     }
     if (total > 0) pushPositive(breakdown, `${powerName} (nv. ${level})`, total);
+  }
+
+  for (const name of progress.chiTechniques) {
+    const tech = findChiTechnique(name);
+    if (!tech) continue;
+    pushPositive(
+      breakdown,
+      `Técnica de Chi: ${name}`,
+      getChiTechniqueCost(tech, ctx.selectedClass),
+    );
+  }
+
+  for (const talent of THIEF_TALENTS) {
+    const bought = progress.thiefTalentBonuses[talent.key] ?? 0;
+    if (bought <= 0) continue;
+    const unit = getThiefTalentCostPerPercent(talent, ctx.selectedClass);
+    pushPositive(
+      breakdown,
+      `Talento: ${talent.label} (+${bought}%)`,
+      bought * unit,
+    );
   }
 
   return breakdown;

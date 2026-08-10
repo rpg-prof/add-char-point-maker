@@ -4,12 +4,15 @@ import {
   User,
   TrendingUp,
   Swords,
+  KeyRound,
   Sparkles,
+  Wind,
   Award,
   BookOpen,
   Crosshair,
   Heart,
   Scroll,
+  Fingerprint,
   ChevronLeft,
   ChevronRight,
   Check,
@@ -35,8 +38,11 @@ import PointTracker from "@/components/PointTracker";
 import CharacterOverviewPanel from "@/components/CharacterOverviewPanel";
 import EvolutionLevelPanel from "@/components/EvolutionLevelPanel";
 import EvolutionCombatPanel from "@/components/EvolutionCombatPanel";
+import EvolutionMagicAccessPanel from "@/components/EvolutionMagicAccessPanel";
 import EvolutionMagicPanel from "@/components/EvolutionMagicPanel";
+import EvolutionChiPanel from "@/components/EvolutionChiPanel";
 import EvolutionPowersPanel from "@/components/EvolutionPowersPanel";
+import EvolutionThiefTalentsPanel from "@/components/EvolutionThiefTalentsPanel";
 import SkillsPanel from "@/components/SkillsPanel";
 import WeaponProficiencyPanel from "@/components/WeaponProficiencyPanel";
 import EvolutionResistancePanel from "@/components/EvolutionResistancePanel";
@@ -51,6 +57,7 @@ import {
 } from "@/lib/characterSave";
 import { getSkillCost, skills } from "@/data/skills";
 import { weaponGroups, shieldProficiencies } from "@/data/weaponProficiencies";
+import { classHasThiefTalents } from "@/data/thiefTalents";
 import {
   characterLevelFromHistory,
   createProgressionEntry,
@@ -70,8 +77,11 @@ const STEPS = [
   { label: "Personagem", icon: User, desc: "Visão geral do personagem carregado" },
   { label: "Nível", icon: TrendingUp, desc: "Subir de nível e pontos de progressão" },
   { label: "Combate", icon: Swords, desc: "PV, base de ataque e ataques/rodada" },
-  { label: "Magia", icon: Sparkles, desc: "Nível de magia, pontos de magia e Chi" },
+  { label: "Acesso à Magia", icon: KeyRound, desc: "Escolas e esferas" },
+  { label: "Pontos de Magia", icon: Sparkles, desc: "Nível e pontos de magia" },
+  { label: "Chi", icon: Wind, desc: "Nível de Chi e técnicas" },
   { label: "Poderes", icon: Award, desc: "Poderes de classe" },
+  { label: "Talentos", icon: Fingerprint, desc: "Talentos ladinos" },
   { label: "Perícias", icon: BookOpen, desc: "Novas perícias e bônus" },
   { label: "Armas", icon: Crosshair, desc: "Proficiências com armas" },
   { label: "Resistência", icon: Heart, desc: "Melhorar resistências" },
@@ -104,14 +114,13 @@ const Evolution = () => {
     setCurrentStep(0);
   }, [navigate]);
 
-  const hasMagicAccess =
-    Object.keys(char.divineAccess).length > 0 ||
-    Object.keys(char.arcaneAccess).length > 0 ||
-    char.arcaneSpecialist !== null;
-
   const hasArcaneAccess =
-    Object.keys(char.arcaneAccess).length > 0 || char.arcaneSpecialist !== null;
-  const hasDivineAccess = Object.keys(char.divineAccess).length > 0;
+    Object.keys(char.arcaneAccess).length > 0 ||
+    Object.keys(evolution.evolutionArcaneAccess).length > 0 ||
+    char.arcaneSpecialist !== null;
+  const hasDivineAccess =
+    Object.keys(char.divineAccess).length > 0 ||
+    Object.keys(evolution.evolutionDivineAccess).length > 0;
 
   const characterLevel = useMemo(
     () => characterLevelFromHistory(char.progressionHistory),
@@ -349,21 +358,44 @@ const Evolution = () => {
         return (
           <EvolutionCombatPanel
             characterLevel={characterLevel}
+            selectedClass={char.selectedClass}
             progress={evolution}
             availablePoints={availablePoints}
             hasBackstabAdvantage={characterHasBackstab}
             onChange={setEvolution}
           />
         );
-      case "Magia":
+      case "Acesso à Magia":
         return (
-          <EvolutionMagicPanel
+          <EvolutionMagicAccessPanel
+            selectedClass={char.selectedClass}
+            selectedRace={char.selectedRace}
             progress={evolution}
             availablePoints={availablePoints}
-            hasMagicAccess={hasMagicAccess}
+            creationDivineAccess={char.divineAccess}
+            creationArcaneAccess={char.arcaneAccess}
+            arcaneSpecialist={char.arcaneSpecialist}
+            onChange={setEvolution}
+          />
+        );
+      case "Pontos de Magia":
+        return (
+          <EvolutionMagicPanel
+            selectedClass={char.selectedClass}
+            progress={evolution}
+            availablePoints={availablePoints}
             hasArcaneAccess={hasArcaneAccess}
             hasDivineAccess={hasDivineAccess}
             arcaneSpecialist={char.arcaneSpecialist}
+            onChange={setEvolution}
+          />
+        );
+      case "Chi":
+        return (
+          <EvolutionChiPanel
+            selectedClass={char.selectedClass}
+            progress={evolution}
+            availablePoints={availablePoints}
             onChange={setEvolution}
           />
         );
@@ -377,6 +409,24 @@ const Evolution = () => {
             availablePoints={availablePoints}
             onChange={setEvolution}
           />
+        );
+      case "Talentos":
+        return classHasThiefTalents(char.selectedClass) ||
+          Object.values(evolution.thiefTalentBonuses).some((n) => n > 0) ? (
+          <EvolutionThiefTalentsPanel
+            selectedClass={char.selectedClass}
+            selectedRace={char.selectedRace}
+            subAttributes={char.subAttributes}
+            selectedAdvantages={char.selectedAdvantages}
+            progress={evolution}
+            availablePoints={availablePoints}
+            onChange={setEvolution}
+          />
+        ) : (
+          <p className="font-body text-muted-foreground text-sm">
+            Esta classe não usa a tabela de talentos ladinos. Ladrão, Bardo e Ranger
+            podem evoluir esses percentuais aqui.
+          </p>
         );
       case "Perícias":
         return (

@@ -14,6 +14,8 @@ export type ThiefTalentKey =
   | "ouvirRuidos"
   | "subornar";
 
+export type ThiefTalentCostGroup = "ladrao" | "ranger" | "bardo" | "outras";
+
 export interface ThiefTalentDef {
   key: ThiefTalentKey;
   label: string;
@@ -26,6 +28,8 @@ export interface ThiefTalentDef {
   subAttr?: "Precisão" | "Equilíbrio";
   /** Campo da tabela do sub-atributo. */
   subAttrField?: "furtarBolsos" | "abrirFechaduras" | "moverSilencio" | "escalarMuros";
+  /** Custo em PP por +1%, por grupo de classe. */
+  costPerPercent: Record<ThiefTalentCostGroup, number>;
 }
 
 export const THIEF_TALENTS: ThiefTalentDef[] = [
@@ -35,26 +39,59 @@ export const THIEF_TALENTS: ThiefTalentDef[] = [
     base: 10,
     subAttr: "Precisão",
     subAttrField: "abrirFechaduras",
+    costPerPercent: { ladrao: 2, ranger: 10, bardo: 10, outras: 10 },
   },
-  { key: "acharArmadilhas", label: "Achar/Desarmar Armadilhas", base: 5 },
-  { key: "arteDaFuga", label: "Arte da Fuga", base: 10 },
-  { key: "decifrarEscrita", label: "Decifrar Escrita", base: 0 },
-  { key: "detectarIlusao", label: "Detectar Ilusão", base: 10 },
-  { key: "detectarMagia", label: "Detectar Magia", base: 5 },
+  {
+    key: "acharArmadilhas",
+    label: "Achar/Desarmar Armadilhas",
+    base: 5,
+    costPerPercent: { ladrao: 2, ranger: 5, bardo: 10, outras: 10 },
+  },
+  {
+    key: "arteDaFuga",
+    label: "Arte da Fuga",
+    base: 10,
+    costPerPercent: { ladrao: 2, ranger: 10, bardo: 10, outras: 10 },
+  },
+  {
+    key: "decifrarEscrita",
+    label: "Decifrar Escrita",
+    base: 0,
+    costPerPercent: { ladrao: 2, ranger: 10, bardo: 5, outras: 10 },
+  },
+  {
+    key: "detectarIlusao",
+    label: "Detectar Ilusão",
+    base: 10,
+    costPerPercent: { ladrao: 2, ranger: 10, bardo: 10, outras: 10 },
+  },
+  {
+    key: "detectarMagia",
+    label: "Detectar Magia",
+    base: 5,
+    costPerPercent: { ladrao: 2, ranger: 10, bardo: 10, outras: 10 },
+  },
   {
     key: "escalarMuros",
     label: "Escalar Muros",
     base: 60,
     subAttr: "Equilíbrio",
     subAttrField: "escalarMuros",
+    costPerPercent: { ladrao: 2, ranger: 4, bardo: 2, outras: 10 },
   },
-  { key: "esconderSombras", label: "Esconder-se nas Sombras", base: 5 },
+  {
+    key: "esconderSombras",
+    label: "Esconder-se nas Sombras",
+    base: 5,
+    costPerPercent: { ladrao: 2, ranger: 5, bardo: 10, outras: 10 },
+  },
   {
     key: "furtarBolsos",
     label: "Furtar Bolsos",
     base: 15,
     subAttr: "Precisão",
     subAttrField: "furtarBolsos",
+    costPerPercent: { ladrao: 2, ranger: 10, bardo: 6, outras: 10 },
   },
   {
     key: "moverSilencio",
@@ -62,9 +99,20 @@ export const THIEF_TALENTS: ThiefTalentDef[] = [
     base: 10,
     subAttr: "Equilíbrio",
     subAttrField: "moverSilencio",
+    costPerPercent: { ladrao: 2, ranger: 5, bardo: 10, outras: 10 },
   },
-  { key: "ouvirRuidos", label: "Ouvir Ruídos", base: 15 },
-  { key: "subornar", label: "Subornar", base: 5 },
+  {
+    key: "ouvirRuidos",
+    label: "Ouvir Ruídos",
+    base: 15,
+    costPerPercent: { ladrao: 2, ranger: 4, bardo: 2, outras: 10 },
+  },
+  {
+    key: "subornar",
+    label: "Subornar",
+    base: 5,
+    costPerPercent: { ladrao: 2, ranger: 10, bardo: 10, outras: 10 },
+  },
 ];
 
 /** Ajustes raciais (AD&D 2e / tabela padrão, nomes da ficha). */
@@ -109,9 +157,39 @@ export const THIEF_TALENT_RACIAL: Record<
   },
 };
 
-/** Classes que possuem a tabela de talentos ladinos na ficha. */
+export function getThiefTalentCostGroup(className: string): ThiefTalentCostGroup {
+  switch (className) {
+    case "Ladrão":
+      return "ladrao";
+    case "Ranger":
+      return "ranger";
+    case "Bardo":
+      return "bardo";
+    default:
+      return "outras";
+  }
+}
+
+/** Custo em PP para +1% no talento, conforme a classe. */
+export function getThiefTalentCostPerPercent(
+  talent: Pick<ThiefTalentDef, "costPerPercent">,
+  className: string,
+): number {
+  return talent.costPerPercent[getThiefTalentCostGroup(className)];
+}
+
+/** Classes com tabela nativa de talentos ladinos na ficha. */
 export function classHasThiefTalents(className: string): boolean {
-  return className === "Ladrão" || className === "Bardo";
+  return className === "Ladrão" || className === "Bardo" || className === "Ranger";
+}
+
+/** Exibe a tabela se a classe a possui ou se já comprou percentuais. */
+export function shouldShowThiefTalents(
+  className: string,
+  purchasedBonuses?: Record<string, number> | null,
+): boolean {
+  if (classHasThiefTalents(className)) return true;
+  return Object.values(purchasedBonuses ?? {}).some((n) => n > 0);
 }
 
 /** Teto usual de talentos ladinos (inclui ajustes). */

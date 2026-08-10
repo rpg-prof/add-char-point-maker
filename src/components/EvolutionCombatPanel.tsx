@@ -2,7 +2,9 @@ import { Minus, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   attackBaseUpgradeCost,
+  attacksPerRoundUpgradeCost,
   EVOLUTION_COSTS,
+  isWeaponManClass,
   MAX_ATTACK_BASE_LEVEL,
   MAX_ATTACKS_PER_ROUND_LEVEL,
 } from "@/data/characterEvolution";
@@ -11,6 +13,7 @@ import { getHpPurchasedAtLevel } from "@/lib/evolutionProgress";
 
 interface EvolutionCombatPanelProps {
   characterLevel: number;
+  selectedClass: string;
   progress: EvolutionProgress;
   availablePoints: number;
   hasBackstabAdvantage: boolean;
@@ -22,6 +25,7 @@ const rowCls =
 
 const EvolutionCombatPanel = ({
   characterLevel,
+  selectedClass,
   progress,
   availablePoints,
   hasBackstabAdvantage,
@@ -37,6 +41,12 @@ const EvolutionCombatPanel = ({
 
   const hpThisLevel = getHpPurchasedAtLevel(progress, characterLevel);
   const hpCost = EVOLUTION_COSTS.hpPerPoint;
+  const attackUpgradeCost = attackBaseUpgradeCost(
+    progress.attackBaseLevel,
+    selectedClass,
+  );
+  const attacksRoundCost = attacksPerRoundUpgradeCost(selectedClass);
+  const weaponMan = isWeaponManClass(selectedClass);
 
   const addHp = () => {
     if (hpThisLevel >= EVOLUTION_COSTS.maxHpPerLevel) return;
@@ -60,8 +70,7 @@ const EvolutionCombatPanel = ({
 
   const upgradeAttackBase = () => {
     if (progress.attackBaseLevel >= MAX_ATTACK_BASE_LEVEL) return;
-    const cost = attackBaseUpgradeCost(progress.attackBaseLevel);
-    trySpend(cost, () =>
+    trySpend(attackUpgradeCost, () =>
       update({ attackBaseLevel: progress.attackBaseLevel + 1 }),
     );
   };
@@ -73,7 +82,7 @@ const EvolutionCombatPanel = ({
 
   const upgradeAttacksPerRound = () => {
     if (progress.attacksPerRoundLevel >= MAX_ATTACKS_PER_ROUND_LEVEL) return;
-    trySpend(EVOLUTION_COSTS.attacksPerRoundLevel, () =>
+    trySpend(attacksRoundCost, () =>
       update({ attacksPerRoundLevel: progress.attacksPerRoundLevel + 1 }),
     );
   };
@@ -100,7 +109,8 @@ const EvolutionCombatPanel = ({
     <div className="space-y-4">
       <p className="font-body text-muted-foreground text-xs">
         Compre pontos de vida, base de ataque e ataques por rodada com pontos de progressão.
-        PV: 2 PP/ponto (máx. 12/nível). Base de ataque: nível anterior × 3.
+        PV: 2 PP/ponto (máx. 12/nível). Base de ataque: nível anterior × 3
+        {weaponMan ? " (Homens de Armas)" : " × 2 (demais classes)"}.
       </p>
 
       <div className="space-y-2">
@@ -141,7 +151,7 @@ const EvolutionCombatPanel = ({
             <div className="text-[11px] text-muted-foreground font-body">
               Nível {progress.attackBaseLevel}/{MAX_ATTACK_BASE_LEVEL}
               {progress.attackBaseLevel < MAX_ATTACK_BASE_LEVEL && (
-                <> · Próximo: {attackBaseUpgradeCost(progress.attackBaseLevel)} PP</>
+                <> · Próximo: {attackUpgradeCost} PP</>
               )}
             </div>
           </div>
@@ -159,7 +169,7 @@ const EvolutionCombatPanel = ({
               onClick={upgradeAttackBase}
               disabled={
                 progress.attackBaseLevel >= MAX_ATTACK_BASE_LEVEL ||
-                availablePoints < attackBaseUpgradeCost(progress.attackBaseLevel)
+                availablePoints < attackUpgradeCost
               }
             >
               <Plus className="w-3 h-3" />
@@ -173,7 +183,8 @@ const EvolutionCombatPanel = ({
               Ataques por Rodada
             </div>
             <div className="text-[11px] text-muted-foreground font-body">
-              Nível {progress.attacksPerRoundLevel}/{MAX_ATTACKS_PER_ROUND_LEVEL} · {EVOLUTION_COSTS.attacksPerRoundLevel} PP/nível
+              Nível {progress.attacksPerRoundLevel}/{MAX_ATTACKS_PER_ROUND_LEVEL} · {attacksRoundCost} PP/nível
+              {!weaponMan && " (demais classes)"}
             </div>
           </div>
           <div className="flex items-center gap-1">
@@ -190,7 +201,7 @@ const EvolutionCombatPanel = ({
               onClick={upgradeAttacksPerRound}
               disabled={
                 progress.attacksPerRoundLevel >= MAX_ATTACKS_PER_ROUND_LEVEL ||
-                availablePoints < EVOLUTION_COSTS.attacksPerRoundLevel
+                availablePoints < attacksRoundCost
               }
             >
               <Plus className="w-3 h-3" />
